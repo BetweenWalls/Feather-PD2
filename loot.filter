@@ -517,12 +517,12 @@ ItemDisplay[NMAG CLVL>14 (BOW OR XBOW) !ZON (SOCK=5 OR (SOCK=0 ILVL>40 SUP (lbw 
 ItemDisplay[NMAG CLVL>14 DAGGER !THROWING (SOCK=2 OR (SOCK=0 (ILVL<26 OR bld OR 9bl OR 7bl)))]: {%NAME%}									// 2-socket daggers & daggers that can only get up to 2 sockets (only available Runewords is Strength)
 
 // Hidden: Regular non-class throwable weapons worth less than 5000 gold per inventory space - level 50
-ItemDisplay[NMAG CLVL>49 ((PRICE<10000 THROWING !SPEAR !bal !9b8 !7b8) OR (PRICE<15000 (jav OR pil OR ssp OR 9ja OR 9pi OR 9s9 OR 7ja OR 7pi OR 7s7)) OR (PRICE<20000 (glv OR tsp OR 9gl OR 9ts OR 7gl OR 7ts)) OR (PRICE<30000 (bal OR 9b8 OR 7b8)))]:
+ItemDisplay[NMAG CLVL>49 ((PRICE<10000 (tkf OR tax OR bkf OR 9tk OR 9ta OR 9bk OR 7tk OR 7ta OR 7bk)) OR (PRICE<15000 (jav OR pil OR ssp OR 9ja OR 9pi OR 9s9 OR 7ja OR 7pi OR 7s7)) OR (PRICE<20000 (glv OR tsp OR 9gl OR 9ts OR 7gl OR 7ts)) OR (PRICE<30000 (bal OR 9b8 OR 7b8)))]:
 
-// Hidden: Worst non-class items at each tier (excluding any ethereal, superior, or 4+ socket items) - levels 40, 60, 80		...socketable armors incapable of 3os (after upgrades), medium/heavy armors (except Sacred Armor line), high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
-ItemDisplay[NMAG NORM CLVL>39 !(ETH OR ED>0 OR SOCK>3) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR fld OR plt OR gth OR ful) OR (buc OR sml OR lrg OR tow OR gts) OR (hax OR lax OR clb OR spc OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR kri OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]:
-ItemDisplay[NMAG EXC CLVL>59  !(ETH OR ED>0 OR SOCK>3) ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xld OR xlt OR xth OR xul) OR (xuc OR xml OR xrg OR xow OR xts) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9kr OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]:
-ItemDisplay[NMAG ELT CLVL>79  !(ETH OR ED>0 OR SOCK>3) ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR uld OR ult OR uth OR uul) OR (uuc OR uml OR urg OR uow OR uts) OR (7ha OR 7la OR 7cl OR 7sp OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7kr OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx))]:
+// Hidden: Worst non-class items at each tier (excluding any ethereal, superior, or 3+ socket items) - levels 40, 60, 80		...socketable armors incapable of 3os (after upgrades), medium/heavy armors (except Sacred Armor line), high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
+ItemDisplay[NMAG NORM CLVL>39 !(ETH OR ED>0 OR SOCK>2) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR fld OR plt OR gth OR ful) OR (buc OR sml OR lrg OR tow OR gts) OR (hax OR lax OR clb OR spc OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR kri OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]:
+ItemDisplay[NMAG EXC CLVL>59  !(ETH OR ED>0 OR SOCK>2) ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xld OR xlt OR xth OR xul) OR (xuc OR xml OR xrg OR xow OR xts) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9kr OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]:
+ItemDisplay[NMAG ELT CLVL>79  !(ETH OR ED>0 OR SOCK>2) ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR uld OR ult OR uth OR uul) OR (uuc OR uml OR urg OR uow OR uts) OR (7ha OR 7la OR 7cl OR 7sp OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7kr OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx))]:
 
 // Modification: Superior/Sockets
 ItemDisplay[ED=15 NMAG]: %NAME% %BLUE%+15{%NAME%}%CONTINUE%
@@ -562,6 +562,9 @@ ItemDisplay[NMAG ILVL>9 DRU (SK221=0 SK222=0 SK223=0 SK224=0 SK225=0 SK226=0 SK2
 ItemDisplay[NMAG ILVL>9 (WAND OR NEC) (SK66=0 SK67=0 SK68=0 SK69=0 SK70=0 SK71=0 SK72=0 SK73=0 SK74=0 SK75=0 SK76=0 SK77=0 SK78=0 SK79=0 SK80=0 SK81=0 SK82=0 SK83=0 SK84=0 SK85=0 SK86=0 SK87=0 SK88=0 SK89=0 SK90=0 SK91=0 SK92=0 SK93=0 SK94=0 SK95=0)]: {%NAME%}										// Necromancer	Shields & Wands
 ItemDisplay[NMAG ILVL>9 SCEPTER !((SOCK>3 !ETH) OR (7ws ETH (SOCK>4 OR SOCK=0))) (SK96=0 SK97=0 SK98=0 SK99=0 SK100=0 SK101=0 SK102=0 SK103=0 SK104=0 SK105=0 SK106=0 SK107=0 SK108=0 SK109=0 SK110=0 SK111=0 SK112=0 SK113=0 SK114=0 SK115=0 SK116=0 SK117=0 SK118=0 SK119=0 SK120=0 SK121=0 SK122=0 SK123=0 SK124=0 SK125=0)]: {%NAME%}	// Paladin	Scepters	...except: 4+ socket non-eth, 5-socket-capable eth elite
 ItemDisplay[NMAG ILVL>9 (SOR OR (STAFF !(ETH (6cs OR 6bs OR 6ws) (SOCK=0 OR SOCK>3)))) (SK36=0 SK37=0 SK38=0 SK39=0 SK40=0 SK41=0 SK42=0 SK43=0 SK44=0 SK45=0 SK46=0 SK47=0 SK48=0 SK49=0 SK50=0 SK51=0 SK52=0 SK53=0 SK54=0 SK55=0 SK56=0 SK57=0 SK58=0 SK59=0 SK60=0 SK61=0 SK62=0 SK63=0 SK64=0 SK65=0)]: {%NAME%}				// Sorceress	Orbs & Staves	...except: 4+ socket-capable eth elite
+
+// Hidden: 1-socket items - level 90
+ItemDisplay[NMAG SOCK=1 CLVL>89]: {%NAME%}
 
 // Modification: Pointmod Details
 //    Amplitude  (value of highest pointmod, if above +1)
@@ -657,3 +660,4 @@ ItemDisplay[NMAG RES>19]: %NAME% %BLUE%20+ Res{%NAME%}%WHITE%
 ItemDisplay[NMAG RES>14]: %NAME% %BLUE%15+ Res{%NAME%}%WHITE%
 ItemDisplay[NMAG RES>9]: %NAME% %BLUE%10+ Res{%NAME%}%WHITE%
 ItemDisplay[NMAG RES>4]: %NAME% %BLUE%5+ Res{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN]: %NAME%{%NAME%}%WHITE%
