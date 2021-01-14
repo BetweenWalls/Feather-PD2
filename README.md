@@ -27,6 +27,6 @@ This is a minimally-strict filter that includes many quality-of-life features. V
 * some of the worst equipment bases as the character levels up
 
 ## Installation
-Download **loot.filter** and save it to your *Diablo II\ProjectD2* folder.
+Download **loot.filter** and save it to your *Diablo II\ProjectD2* folder. Once in-game, enable *Advanced Item Display* from the **Settings** menu, as well as the options regarding *Notifications*.
 
 Note that the file uses ANSI encoding, which is needed for certain characters to display correctly.
