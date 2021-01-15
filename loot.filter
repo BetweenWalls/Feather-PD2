@@ -21,28 +21,28 @@ ItemDisplay[((GOLD<10000 CLVL>94) OR (GOLD<5000 CLVL>89) OR (GOLD<3000 CLVL>79) 
 ItemDisplay[GOLD>0]: %NAME%
 
 // Rejuvenation
-ItemDisplay[rvs]:	%PURPLE%= %WHITE%r-{%WHITE%Rejuvenation Potion%NL%}		// Rejuvenation
-ItemDisplay[rvl]:	%PURPLE%= %WHITE%R{%WHITE%Full Rejuvenation Potion%NL%}		// Full Rejuvenation
+ItemDisplay[rvs]:	%PURPLE%= %WHITE%r-{%WHITE%Rejuvenation Potion}			// Rejuvenation
+ItemDisplay[rvl]:	%PURPLE%= %WHITE%R{%WHITE%Full Rejuvenation Potion}		// Full Rejuvenation
 // Healing & Mana
-ItemDisplay[hp5]:	%RED%= %WHITE%H{%WHITE%Super Healing Potion%NL%}		// Super Healing
-ItemDisplay[mp5]:	%BLUE%= %WHITE%M{%WHITE%Super Mana Potion%NL%}			// Super Mana
-ItemDisplay[hp4]:	%RED%= %WHITE%H-{%WHITE%Greater Healing Potion%NL%}%CONTINUE%	// Greater Healing
-ItemDisplay[mp4]:	%BLUE%= %WHITE%M-{%WHITE%Greater Mana Potion%NL%}%CONTINUE%	// Greater Mana
-ItemDisplay[hp3]:	%RED%= %GRAY%H³{%WHITE%Healing Potion%NL%}%CONTINUE%		// Healing
-ItemDisplay[mp3]:	%BLUE%= %GRAY%M³{%WHITE%Mana Potion%NL%}%CONTINUE%		// Mana
-ItemDisplay[hp2]:	%RED%= %GRAY%h²{%WHITE%Lesser Healing Potion%NL%}%CONTINUE%	// Lesser Healing
-ItemDisplay[mp2]:	%BLUE%= %GRAY%m²{%WHITE%Lesser Mana Potion%NL%}%CONTINUE%	// Lesser Mana
-ItemDisplay[hp1]:	%RED%= %GRAY%h¹{%WHITE%Minor Healing Potion%NL%}%CONTINUE%	// Minor Healing
-ItemDisplay[mp1]:	%BLUE%= %GRAY%m¹{%WHITE%Minor Mana Potion%NL%}%CONTINUE%	// Minor Mana
+ItemDisplay[hp5]:	%RED%= %WHITE%H{%WHITE%Super Healing Potion}			// Super Healing
+ItemDisplay[mp5]:	%BLUE%= %WHITE%M{%WHITE%Super Mana Potion}			// Super Mana
+ItemDisplay[hp4]:	%RED%= %WHITE%H-{%WHITE%Greater Healing Potion}%CONTINUE%	// Greater Healing
+ItemDisplay[mp4]:	%BLUE%= %WHITE%M-{%WHITE%Greater Mana Potion}%CONTINUE%		// Greater Mana
+ItemDisplay[hp3]:	%RED%= %GRAY%H³{%WHITE%Healing Potion}%CONTINUE%		// Healing
+ItemDisplay[mp3]:	%BLUE%= %GRAY%M³{%WHITE%Mana Potion}%CONTINUE%			// Mana
+ItemDisplay[hp2]:	%RED%= %GRAY%h²{%WHITE%Lesser Healing Potion}%CONTINUE%		// Lesser Healing
+ItemDisplay[mp2]:	%BLUE%= %GRAY%m²{%WHITE%Lesser Mana Potion}%CONTINUE%		// Lesser Mana
+ItemDisplay[hp1]:	%RED%= %GRAY%h¹{%WHITE%Minor Healing Potion}%CONTINUE%		// Minor Healing
+ItemDisplay[mp1]:	%BLUE%= %GRAY%m¹{%WHITE%Minor Mana Potion}%CONTINUE%		// Minor Mana
 // Throwing
-ItemDisplay[opl]:	%DARK_GREEN%= %GRAY%f¹{%WHITE%Fulminating Potion%NL%}%CONTINUE%	// Fulminating
-ItemDisplay[opm]:	%DARK_GREEN%= %GRAY%f²{%WHITE%Exploding Potion%NL%}%CONTINUE%	// Exploding
-ItemDisplay[ops]:	%DARK_GREEN%= %GRAY%f³{%WHITE%Oil Potion%NL%}%CONTINUE%		// Oil
-ItemDisplay[gpl]:	%DARK_GREEN%= %GRAY%p¹{%WHITE%Strangling Potion%NL%}%CONTINUE%	// Strangling
-ItemDisplay[gpm]:	%DARK_GREEN%= %GRAY%p²{%WHITE%Choking Potion%NL%}%CONTINUE%	// Choking
-ItemDisplay[gps]:	%DARK_GREEN%= %GRAY%p³{%WHITE%Rancid Potion%NL%}%CONTINUE%	// Rancid
+ItemDisplay[opl]:	%DARK_GREEN%= %GRAY%f¹{%WHITE%Fulminating Potion}%CONTINUE%	// Fulminating
+ItemDisplay[opm]:	%DARK_GREEN%= %GRAY%f²{%WHITE%Exploding Potion}%CONTINUE%	// Exploding
+ItemDisplay[ops]:	%DARK_GREEN%= %GRAY%f³{%WHITE%Oil Potion}%CONTINUE%		// Oil
+ItemDisplay[gpl]:	%DARK_GREEN%= %GRAY%p¹{%WHITE%Strangling Potion}%CONTINUE%	// Strangling
+ItemDisplay[gpm]:	%DARK_GREEN%= %GRAY%p²{%WHITE%Choking Potion}%CONTINUE%		// Choking
+ItemDisplay[gps]:	%DARK_GREEN%= %GRAY%p³{%WHITE%Rancid Potion}%CONTINUE%		// Rancid
 // Misc
-ItemDisplay[yps]:	%DARK_GREEN%= %GRAY%A{%WHITE%Antidote Potion}%CONTINUE%		// Antidote
+ItemDisplay[yps]:	%DARK_GREEN%= %GRAY%a{%WHITE%Antidote Potion}%CONTINUE%		// Antidote
 ItemDisplay[wms]:	%YELLOW%= %GRAY%t{%WHITE%Thawing Potion}%CONTINUE%		// Thawing
 ItemDisplay[vps]:	%WHITE%= %GRAY%s{%WHITE%Stamina Potion}%CONTINUE%		// Stamina
 
@@ -284,7 +284,7 @@ ItemDisplay[RARE (amu OR rin) !ID]:	  %NAME%  %WHITE%																											
 //-¦ General Equipment ¦-------------------------------------------------------------------------------------------------
 // +-------------------+
 // Catchall - Non-Equipment
-ItemDisplay[!(ARMOR OR WEAPON OR CRAFT OR SET OR (UNI (amu OR rin OR jew OR cm1 OR cm2 OR cm3)))]: %NAME%{%NAME%}%WHITE%	// displays most non-equipment items as normal
+ItemDisplay[!(ARMOR OR (WEAPON !(opl OR opm OR ops OR gpl OR gpm OR gps)) OR CRAFT OR SET OR (UNI (amu OR rin OR jew OR cm1 OR cm2 OR cm3)))]: %NAME%{%NAME%}%WHITE%	// displays most non-equipment items as normal
 
 // Modification: Sockets (non-regular items)
 ItemDisplay[!NMAG SOCK>0]: %NAME% %GRAY%[%SOCKETS%]%CONTINUE%
@@ -508,21 +508,40 @@ ItemDisplay[NMAG MACE !fla !9fl !7fl SOCK=4]: %NAME%{%GOLD%Famine, Phoenix, Hand
 ItemDisplay[NMAG MACE !fla !9fl !7fl SOCK=5]: %NAME%{%GOLD%Beast, Doom, Eternity%NL%%WHITE%Runewords: %GOLD%Honor, Call to Arms,}%CONTINUE%								// Mace (Hammer) 5s
 ItemDisplay[NMAG MACE SOCK=6]: %NAME%{%WHITE%Runewords: %GOLD%Silence, Last Wish, Breath of the Dying}%CONTINUE%											// Mace (Hammer) 6s
 
+// Descriptions for item prices
+ItemDisplay[NMAG SOCK>1 !((CHEST SOCK=3) OR (SOR SOCK=2))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%NAME%}%CONTINUE%	// appends price (for items with Runeword descriptions)
+ItemDisplay[NMAG (SOCK<2 OR (SOR SOCK=2))]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%				// appends price (for items without Runeword descriptions)
+
+// Descriptions for Maximum Possible Sockets (if lower than usual)						// also includes price
+ItemDisplay[NMAG SOCK=0 (wnd OR ywn OR 9wn OR buc OR xuc)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 1}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 (ktr OR wrb OR 9ar OR ci0 OR ci1 OR bhm OR xh9 OR spk OR xpk OR bsh OR xsh OR qui OR xui OR lea OR xea OR hla OR xla OR stu OR xtu OR scl OR chn OR spl OR fld OR plt)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 2}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 (rng OR xng OR brs OR xrs OR ltp OR xtp OR xcl OR xhn OR xpl OR xld OR xlt OR kit OR xit OR tow OR xow OR gts OR xts)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 3}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 ILVL<26 CIRC]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 1}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 ILVL>25 ILVL<41 (ci2 OR ci3)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 2}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 ILVL<41 (msk OR xsk OR usk OR ghm OR xhm OR uhm OR crn OR xrn OR urn OR uh9)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 2}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 ILVL<26 (DRU OR BAR OR (clw OR 9lw OR 7lw OR btl OR 9tw OR 7tw OR skr OR 9qr OR 7qr OR 9ar OR 7ar OR 7wb) OR (kri OR 9kr OR 7kr) OR (ob5 OR oba OR obf))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 2}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 ILVL<41 (uit OR uow OR uts)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 3}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 ILVL<26 (DIN OR (gth OR xth OR ful OR xul OR aar OR xar OR (CHEST ELT)) OR (SWORD !(ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR 2hs OR 92h OR 72h)) OR (fla OR 9fl OR 7fl OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR gma OR 9gm OR 7gm) OR (SPEAR !THROWING !spr !9sr !7sr) OR (POLEARM !bar !9b7 !7o7) OR (BOW !sbw !8sb !6sb) OR (XBOW !lxb !8lx !6lx) OR (wsp OR 9ws OR 7ws))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 3}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 ILVL>25 ILVL<41 ((fla OR 9fl OR 7fl OR mau OR 9m9 OR 7m7 OR gma OR 9gm OR 7gm) OR (crs OR 9cr OR 7cr OR flb OR 9fb OR 7fb OR gsd OR 9gd OR 7gd) OR (SPEAR !THROWING !spr !9sr !7sr !tri !9tr !7tr) OR (POLEARM !bar !9b7 !7o7 !vou !9vo !7vo) OR (BOW !(sbw OR 8sb OR 6sb OR hbw OR 8hb OR 6hb OR cbw OR 8cb OR 6cb)) OR (hxb OR 8hx OR 6hx OR rxb OR 8rx OR 6rx))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 4}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 ILVL<26 (AXE !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR lax OR 9la OR 7la))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 4}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 ILVL>25 ILVL<41 (mpi OR 9mp OR 7mp OR wax OR 9wa OR 7wa OR gax OR 9ga OR 7ga OR gix OR 9gi OR 7gi)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 5}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 ILVL<26 (wst OR 8ws OR 6ws)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 5}%CONTINUE%
+
 // Hidden: Regular non-class items with little or no runeword useability - level 15
-ItemDisplay[NMAG CLVL>14 (GLOVES OR BOOTS OR BELT)]:																// gloves, boots, belts
-ItemDisplay[NMAG CLVL>14 ((SOCK=1 !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER)) OR (dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR buc OR xuc))]:	// 1-socket items & items that can only get 1 socket (daggers, shields)
-ItemDisplay[NMAG CLVL>14 THROWING !ZON NORM]:																	// normal throwable weapons
-ItemDisplay[NMAG CLVL>14 INF !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER)]: {%NAME%}								// inferior items
-ItemDisplay[NMAG CLVL>14 (BOW OR XBOW) !ZON (SOCK=5 OR (SOCK=0 ILVL>40 SUP (lbw OR 8lb OR 6lb OR sbb OR 8s8 OR 6s7 OR swb OR 8sw OR 6sw OR rxb OR 8rx OR 6rx)))]: {%NAME%}	// 5-socket bows & bows that can only get 5 sockets (only available Runeword is Call to Arms)
-ItemDisplay[NMAG CLVL>14 DAGGER !THROWING (SOCK=2 OR (SOCK=0 (ILVL<26 OR bld OR 9bl OR 7bl)))]: {%NAME%}									// 2-socket daggers & daggers that can only get up to 2 sockets (only available Runewords is Strength)
+ItemDisplay[NMAG CLVL>14 (GLOVES OR BOOTS OR BELT)]: {%NAME%}																// gloves, boots, belts
+ItemDisplay[NMAG CLVL>14 ((SOCK=1 !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER)) OR (dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR buc OR xuc))]: {%NAME%}	// 1-socket items & items that can only get 1 socket (daggers, shields)
+ItemDisplay[NMAG CLVL>14 THROWING !ZON NORM]: {%NAME%}																	// normal throwable weapons
+ItemDisplay[NMAG CLVL>14 INF !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER)]: {%NAME%}									// inferior items
+ItemDisplay[NMAG CLVL>14 (BOW OR XBOW) !ZON (SOCK=5 OR (SOCK=0 ILVL>40 SUP (lbw OR 8lb OR 6lb OR sbb OR 8s8 OR 6s7 OR swb OR 8sw OR 6sw OR rxb OR 8rx OR 6rx)))]: {%NAME%}		// 5-socket bows & bows that can only get 5 sockets (only available Runeword is Call to Arms)
+ItemDisplay[NMAG CLVL>14 DAGGER !THROWING (SOCK=2 OR (SOCK=0 (ILVL<26 OR bld OR 9bl OR 7bl)))]: {%NAME%}										// 2-socket daggers & daggers that can only get up to 2 sockets (only available Runewords is Strength)
 
 // Hidden: Regular non-class throwable weapons worth less than 5000 gold per inventory space - level 50
-ItemDisplay[NMAG CLVL>49 ((PRICE<10000 (tkf OR tax OR bkf OR 9tk OR 9ta OR 9bk OR 7tk OR 7ta OR 7bk)) OR (PRICE<15000 (jav OR pil OR ssp OR 9ja OR 9pi OR 9s9 OR 7ja OR 7pi OR 7s7)) OR (PRICE<20000 (glv OR tsp OR 9gl OR 9ts OR 7gl OR 7ts)) OR (PRICE<30000 (bal OR 9b8 OR 7b8)))]:
+ItemDisplay[NMAG CLVL>49 ((PRICE<10000 (tkf OR tax OR bkf OR 9tk OR 9ta OR 9bk OR 7tk OR 7ta OR 7bk)) OR (PRICE<15000 (jav OR pil OR ssp OR 9ja OR 9pi OR 9s9 OR 7ja OR 7pi OR 7s7)) OR (PRICE<20000 (glv OR tsp OR 9gl OR 9ts OR 7gl OR 7ts)) OR (PRICE<30000 (bal OR 9b8 OR 7b8)))]: {%NAME%}
 
 // Hidden: Worst non-class items at each tier (excluding any ethereal, superior, or 3+ socket items) - levels 40, 60, 80		...socketable armors incapable of 3os (after upgrades), medium/heavy armors (except Sacred Armor line), high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
-ItemDisplay[NMAG NORM CLVL>39 !(ETH OR ED>0 OR SOCK>2) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR fld OR plt OR gth OR ful) OR (buc OR sml OR lrg OR tow OR gts) OR (hax OR lax OR clb OR spc OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR kri OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]:
-ItemDisplay[NMAG EXC CLVL>59  !(ETH OR ED>0 OR SOCK>2) ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xld OR xlt OR xth OR xul) OR (xuc OR xml OR xrg OR xow OR xts) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9kr OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]:
-ItemDisplay[NMAG ELT CLVL>79  !(ETH OR ED>0 OR SOCK>2) ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR uld OR ult OR uth OR uul) OR (uuc OR uml OR urg OR uow OR uts) OR (7ha OR 7la OR 7cl OR 7sp OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7kr OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx))]:
+ItemDisplay[NMAG NORM CLVL>39 !(ETH OR ED>0 OR SOCK>2) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR fld OR plt OR gth OR ful) OR (buc OR sml OR lrg OR tow OR gts) OR (hax OR lax OR clb OR spc OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR kri OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]: {%NAME%}
+ItemDisplay[NMAG EXC CLVL>59  !(ETH OR ED>0 OR SOCK>2) ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xld OR xlt OR xth OR xul) OR (xuc OR xml OR xrg OR xow OR xts) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9kr OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]: {%NAME%}
+ItemDisplay[NMAG ELT CLVL>79  !(ETH OR ED>0 OR SOCK>2) ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR uld OR ult OR uth OR uul) OR (uuc OR uml OR urg OR uow OR uts) OR (7ha OR 7la OR 7cl OR 7sp OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7kr OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx))]: {%NAME%}
 
 // Modification: Superior/Sockets
 ItemDisplay[ED=15 NMAG]: %NAME% %BLUE%+15{%NAME%}%CONTINUE%
@@ -537,10 +556,6 @@ ItemDisplay[ED=7 NMAG]: %NAME% %BLUE%+7{%NAME%}%CONTINUE%
 ItemDisplay[ED=6 NMAG]: %NAME% %BLUE%+6{%NAME%}%CONTINUE%
 ItemDisplay[ED=5 NMAG]: %NAME% %BLUE%+5{%NAME%}%CONTINUE%
 ItemDisplay[NMAG SOCK>0]: %NAME% %GRAY%[%SOCKETS%]{%NAME%}%CONTINUE%
-
-// Descriptions for item prices
-ItemDisplay[NMAG SOCK>1 !((CHEST SOCK=3) OR (SOR SOCK=2))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%NAME%}%CONTINUE%	// appends price (for items with Runeword descriptions)
-ItemDisplay[NMAG (SOCK<2 OR (SOR SOCK=2))]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%				// appends price (for items without Runeword descriptions)
 
 // Show ilvl for 0-socket swords that will get 4-sockets via Larzuk's quest (Spirit RW) - until level 50
 ItemDisplay[NMAG SOCK=0 ILVL>25 ((crs ILVL<41) OR (bsd OR lsd)) CLVL<50]: %NAME% %GRAY%[l%ILVL%]{%NAME%}%WHITE%
@@ -637,6 +652,9 @@ ItemDisplay[NMAG ZON (TABSK0>2 OR TABSK2>2)]: %NAME% %TAN%+3{%NAME%}%WHITE%
 ItemDisplay[NMAG ZON (TABSK0>1 OR TABSK2>1)]: %NAME% %TAN%+2{%NAME%}%WHITE%
 ItemDisplay[NMAG ZON]: %NAME%{%NAME%}%WHITE%
 
+Hidden: Unworthy Paladin shields - level 80
+ItemDisplay[NMAG DIN (RES<16 AR<61 SOCK<3) CLVL>79]: {%NAME%}	// shields below 30 ED or 15 all res, unless they have 3-4 sockets
+
 // Paladin Shields
 //    0-socket text divider
 ItemDisplay[NMAG DIN ED>0 SOCK=0]: %NAME% %GRAY%­{%NAME%}%CONTINUE%
@@ -653,11 +671,39 @@ ItemDisplay[NMAG RES=43]: %NAME% %BLUE%+43 Res{%NAME%}%WHITE%
 ItemDisplay[NMAG RES=42]: %NAME% %BLUE%+42 Res{%NAME%}%WHITE%
 ItemDisplay[NMAG RES=41]: %NAME% %BLUE%+41 Res{%NAME%}%WHITE%
 ItemDisplay[NMAG RES=40]: %NAME% %BLUE%+40 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES>34]: %NAME% %BLUE%35+ Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES>29]: %NAME% %BLUE%30+ Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES>24]: %NAME% %BLUE%25+ Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES>19]: %NAME% %BLUE%20+ Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES>14]: %NAME% %BLUE%15+ Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES>9]: %NAME% %BLUE%10+ Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES>4]: %NAME% %BLUE%5+ Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=39]: %NAME% %BLUE%+39 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=38]: %NAME% %BLUE%+38 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=37]: %NAME% %BLUE%+37 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=36]: %NAME% %BLUE%+36 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=35]: %NAME% %BLUE%+35 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=34]: %NAME% %BLUE%+34 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=33]: %NAME% %BLUE%+33 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=32]: %NAME% %BLUE%+32 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=31]: %NAME% %BLUE%+31 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=30]: %NAME% %BLUE%+30 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=29]: %NAME% %BLUE%+29 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=28]: %NAME% %BLUE%+28 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=27]: %NAME% %BLUE%+27 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=26]: %NAME% %BLUE%+26 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=25]: %NAME% %BLUE%+25 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=24]: %NAME% %BLUE%+24 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=23]: %NAME% %BLUE%+23 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=22]: %NAME% %BLUE%+22 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=21]: %NAME% %BLUE%+21 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=20]: %NAME% %BLUE%+20 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=19]: %NAME% %BLUE%+19 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=18]: %NAME% %BLUE%+18 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=17]: %NAME% %BLUE%+17 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=16]: %NAME% %BLUE%+16 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=15]: %NAME% %BLUE%+15 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=14]: %NAME% %BLUE%+14 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=13]: %NAME% %BLUE%+13 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=12]: %NAME% %BLUE%+12 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=11]: %NAME% %BLUE%+11 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=10]: %NAME% %BLUE%+10 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=9]: %NAME% %BLUE%+9 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=8]: %NAME% %BLUE%+8 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=7]: %NAME% %BLUE%+7 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=6]: %NAME% %BLUE%+6 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=5]: %NAME% %BLUE%+5 Res{%NAME%}%WHITE%
 ItemDisplay[NMAG DIN]: %NAME%{%NAME%}%WHITE%
