@@ -1,12 +1,12 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	14 JAN 2021
+//		Date Updated:	16 JAN 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
 //	All hidden items are preceded by "hidden" and a short description
 //	Highlighting is done primarily with spaces and tabs, which can be seen in Notepad++ by selecting "View" -> "Show Symbol" -> "Show White Space and TAB"
-//	This file was created in Notepad++, and may display incorrectly with other programs or settings  (8-space tabs, ANSI encoding, Courier New, no line wrapping)
+//	This file was created in Notepad++, and may display incorrectly with other programs or settings  (ANSI encoding, 8-space tabs, Courier New, no line wrapping)
 //	See the PD2 Wiki for filter syntax and codes: https://projectdiablo2.miraheze.org/wiki/Item_Filtering
 //	To simulate different items, checkout Filterbird: https://betweenwalls.github.io/filterbird/?v=PD2
 //-----------------------------------------------------------------------------------------------------------------------
@@ -94,9 +94,9 @@ ItemDisplay[pk3]:	%MAP-60%  %NAME%  {%GRAY%(Izual / Nihlathak)}%WHITE%		// Key o
 ItemDisplay[wss]:	%RED%%MAP-50%Worldstone Shard%CONTINUE%				// Worldstone Shard
 ItemDisplay[lbox]:	%RED%%BORDER-50%Larzuk's Puzzlebox%CONTINUE%			// Larzuk's Puzzlebox
 ItemDisplay[dcma]:	%MAP-60%  %NAME%  {%GOLD%Diablo Walks the Earth}%WHITE%															// Vision of Terror	(DClone)
-ItemDisplay[dcso]:	%MAP-60%  %NAME%  {%GOLD%%QTY%%ALVL% Stones of Jordan Sold to Merchants%NL%%GRAY%(Diablo / Baal)}%WHITE%								// Prime Evil Soul	(DClone ingredient)
-ItemDisplay[dcho]:	%MAP-60%  %NAME%  {%GOLD%%QTY%%ALVL% Stones of Jordan Sold to Merchants%NL%%GRAY%(Uber Tristram)}%WHITE%								// Black Soulstone	(DClone ingredient)
-ItemDisplay[dcbl]:	%MAP-60%  %NAME%  {%GOLD%%QTY%%ALVL% Stones of Jordan Sold to Merchants%NL%%GRAY%(Map Bosses)}%WHITE%									// Pure Demonic Essence	(DClone ingredient)
+ItemDisplay[dcso]:	%MAP-60%  %NAME%  {%GOLD%1%QTY%0 Stones of Jordan Sold to Merchants%NL%%GRAY%(Diablo / Baal)}%WHITE%									// Prime Evil Soul	(DClone ingredient)
+ItemDisplay[dcho]:	%MAP-60%  %NAME%  {%GOLD%1%QTY%0 Stones of Jordan Sold to Merchants%NL%%GRAY%(Uber Tristram)}%WHITE%									// Black Soulstone	(DClone ingredient)
+ItemDisplay[dcbl]:	%MAP-60%  %NAME%  {%GOLD%1%QTY%0 Stones of Jordan Sold to Merchants%NL%%GRAY%(Map Bosses)}%WHITE%									// Pure Demonic Essence	(DClone ingredient)
 // Map Orbs
 ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%Raises Map Rarity from Common to Magic}%WHITE%										// Arcane Orb		(Common -> Magic)
 ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE%+%NL%%BLUE%Raises Map Rarity from Common to Rare}%WHITE%			// Zakarum Orb		(Common -> Rare)
@@ -115,14 +115,14 @@ ItemDisplay[isc]:	%RED%- %WHITE%Identify						// Scroll of Identify
 //ItemDisplay[tbk]:	%NAME%								// Tome of Town Portal
 //ItemDisplay[ibk]:	%NAME%								// Tome of Identify
 ItemDisplay[key]:	%GRAY%%NAME%%WHITE%						// Key
-ItemDisplay[leg SOCK>0 NMAG]: %WHITE%%NAME% %GRAY%[%SOCKETS%]
-ItemDisplay[leg]:	%NAME%								// Wirt's Leg
+ItemDisplay[leg SOCK>0]: %NAME% %GRAY%[%SOCKETS%]%CONTINUE%
+ItemDisplay[leg NMAG (DIFF=0 OR (DIFF=1 ILVL>30) OR (DIFF=2 ILVL>60))]: %WHITE%%NAME%	// Wirt's Leg
 //ItemDisplay[ear]:	%GRAY%%NAME%%WHITE%						// Player Ear
 //ItemDisplay[std]:	%NAME%%WHITE%							// Standard of Heroes
 
 ItemDisplay[QTY>1 (tes OR ceh OR bet OR fed OR wss OR lbox)]:	%NAME% %WHITE%×%QTY%{%NAME%}%CONTINUE%	// Quantity (for "renamed" items)
 ItemDisplay[(tes OR ceh OR bet OR fed OR wss)]:			  %NAME%  {%NAME%}%WHITE%		// Highlighting x2 (for "renamed" items)
-ItemDisplay[lbox]:						    %NAME%    {%NAME%}%WHITE%		// Highlighting x4 (for "renamed" items)
+ItemDisplay[lbox]:						        %NAME%        {%NAME%}%WHITE%	// Highlighting x8 (for "renamed" items)
 
 
 // +------+
@@ -171,7 +171,7 @@ ItemDisplay[RUNE>0]: %NAME% %TAN%(%WHITE%%RUNENUM%%TAN%)%WHITE%%CONTINUE%	// app
 ItemDisplay[RUNE>0 QTY>1]: %NAME% %WHITE%×%QTY%%CONTINUE%			// appends quantity
 
 // Descriptions for Stacked Runes (Socketed Effects)
-ItemDisplay[r01s]: %NAME%{%WHITE%Others: +15 Defense, +1 toLight Radius%NL%Weapon: +50 to Attack Rating, +1 to Light Radius%NL%}%CONTINUE%
+ItemDisplay[r01s]: %NAME%{%WHITE%Others: +15 Defense, +1 to Light Radius%NL%Weapon: +50 to Attack Rating, +1 to Light Radius%NL%}%CONTINUE%
 ItemDisplay[r02s]: %NAME%{%WHITE%Shield: +7% Increased Blocking Chance%NL%Armors: 15% Slower Stamina Drain%NL%Weapon: +75% Damage & +50 Attack Rating vs. Undead%NL%}%CONTINUE%
 ItemDisplay[r03s]: %NAME%{%WHITE% +2 to Mana after each Kill %NL%}%CONTINUE%
 ItemDisplay[r04s]: %NAME%{%WHITE%Others: +30 Defense vs. Missile%NL%Weapon: Knockback%NL%}%CONTINUE%
@@ -284,7 +284,7 @@ ItemDisplay[RARE (amu OR rin) !ID]:		  %NAME%  %WHITE%																										
 //-¦ General Equipment ¦-------------------------------------------------------------------------------------------------
 // +-------------------+
 // Catchall - Non-Equipment
-ItemDisplay[!(ARMOR OR (WEAPON !(opl OR opm OR ops OR gpl OR gpm OR gps)) OR CRAFT OR SET OR (UNI (amu OR rin OR jew OR cm1 OR cm2 OR cm3)))]: %NAME%{%NAME%}%WHITE%	// displays most non-equipment items as normal
+ItemDisplay[!(ARMOR OR (WEAPON !(leg OR opl OR opm OR ops OR gpl OR gpm OR gps)) OR CRAFT OR SET OR (UNI (amu OR rin OR jew OR cm1 OR cm2 OR cm3)))]: %NAME%{%NAME%}%WHITE%	// displays most non-equipment items as normal
 
 // Modification: Sockets (non-regular items)
 ItemDisplay[!NMAG SOCK>0]: %NAME% %GRAY%[%SOCKETS%]%CONTINUE%
@@ -296,8 +296,8 @@ ItemDisplay[RARE ETH]: %YELLOW%%NAME%%CONTINUE%
 ItemDisplay[CRAFT ETH]: %ORANGE%%NAME%%CONTINUE%
 ItemDisplay[NMAG !ETH]: %WHITE%%NAME%%CONTINUE%
 ItemDisplay[NMAG ETH]: %GRAY%%NAME%%CONTINUE%
-ItemDisplay[!NMAG ETH (REPAIR>0 OR (UNI (THROWING OR xla OR xpl OR uul OR uvb OR 9la OR 7sp OR 9cr OR 9st OR 7gd OR 7b7 OR 7p7 OR 9gm OR 7gm OR 7wh OR 7ba OR 7bl OR 7cs)))]: %GRAY%>>> %NAME%%CONTINUE%	// Ethereal (unbreakable)
-ItemDisplay[!NMAG ETH !(REPAIR>0 OR (UNI (THROWING OR xla OR xpl OR uul OR uvb OR 9la OR 7sp OR 9cr OR 9st OR 7gd OR 7b7 OR 7p7 OR 9gm OR 7gm OR 7wh OR 7ba OR 7bl OR 7cs)))]: %GRAY%eth %NAME%%CONTINUE%	// Ethereal (not unbreakable)
+ItemDisplay[!NMAG ETH (REPAIR>0 OR 7cr OR (UNI (THROWING OR xla OR xpl OR uul OR uvb OR 9la OR 7sp OR 9cr OR 9st OR 7gd OR 7b7 OR 7p7 OR 9gm OR 7gm OR 7wh OR 7ba OR 7bl OR 7cs)))]: %GRAY%>>> %NAME%%CONTINUE%	// Ethereal (unbreakable)
+ItemDisplay[!NMAG ETH !(REPAIR>0 OR 7cr OR (UNI (THROWING OR xla OR xpl OR uul OR uvb OR 9la OR 7sp OR 9cr OR 9st OR 7gd OR 7b7 OR 7p7 OR 9gm OR 7gm OR 7wh OR 7ba OR 7bl OR 7cs)))]: %GRAY%eth %NAME%%CONTINUE%	// Ethereal (not unbreakable)
 
 
 // +------------------------------------------------------+
@@ -319,7 +319,7 @@ ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 (xh9 OR xuc OR xpk OR xsh OR xui O
 ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 ((WEAPON NORM !WAND !SOR) OR wnd OR ywn OR ktr OR wrb)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%9%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%							// Upgrade Weapon (Normal)
 ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 ((WEAPON EXC !WAND !SOR) OR 9wn OR 9wb)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%19%TAN%)%GRAY%+%TAN%(%WHITE%22%TAN%)}%CONTINUE%									// Upgrade Weapon (Exceptional)
 ItemDisplay[CRAFT ID (ILVL<71 OR (amu ILVL<90) OR (rin (ILVL<78 OR ILVL>85)) OR (WEAPON ILVL<77) OR (CHEST ILVL<74))]: %NAME% %GRAY%[l%ILVL%]{%NAME%}%WHITE%																			// shows ilvl if it's not the best for crafting
-ItemDisplay[RARE ID (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt OR xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu OR (WEAPON !ELT !WAND !SOR) OR wnd OR ywn OR ktr OR wrb OR 9wn OR 9wb)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%NAME%}%WHITE%	// appends price to rares with upgrade recipes
+ItemDisplay[RARE ID (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt OR xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu OR (WEAPON !ELT !WAND !SOR) OR wnd OR ywn OR ktr OR wrb OR 9wn OR 9wb)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%NAME%}%WHITE%	// shows price for rares with upgrade recipes
 ItemDisplay[RARE ID]: %NAME%{%DARK_GREEN%$%PRICE%}%WHITE%																															// shows price for other rares
 ItemDisplay[(RARE OR CRAFT) ID]: %NAME%{%NAME%}%WHITE%
 
@@ -462,7 +462,7 @@ ItemDisplay[NMAG SHIELD SOCK=3]: %NAME%{%GOLD%Sanctuary, Dragon, Dream%NL%%WHITE
 ItemDisplay[NMAG SHIELD !DIN SOCK=4]: %NAME%{%WHITE%Runewords: %GOLD%Spirit, Phoenix}%CONTINUE%														// Shield 4s
 ItemDisplay[NMAG DIN SOCK=4]: %NAME%{%WHITE%Runewords: %GOLD%Spirit, Exile, Phoenix}%CONTINUE%														// Shield (Paladin) 4s
 ItemDisplay[NMAG WAND SOCK=2]: %NAME%{%WHITE%Runewords: %GOLD%Strength, White}%CONTINUE%														// Wand			
-ItemDisplay[NMAG SOR SOCK=3]: %NAME%{%WHITE%Runewords: %GOLD%Malice, Venom, (Plague)}%CONTINUE%														// Orb
+ItemDisplay[NMAG SOR SOCK=3]: %NAME%{%WHITE%Runewords: %GOLD%Venom, (Plague)}%CONTINUE%															// Orb
 ItemDisplay[NMAG SIN SOCK=2]: %NAME%{%WHITE%Runewords: %GOLD%Strength}%CONTINUE%															// Claw 2s
 ItemDisplay[NMAG SIN SOCK=3]: %NAME%{%GOLD%Chaos, (Wind), Fury, (Plague)%NL%%WHITE%Runewords: %GOLD%Malice, (Pattern), Venom,}%CONTINUE%								// Claw 3s		...differences: Pattern (new, Tal+Ort+Tir)
 ItemDisplay[NMAG SCEPTER SOCK=2]: %NAME%{%WHITE%Runewords: %GOLD%Strength}%CONTINUE%															// Scepter 2s
@@ -535,7 +535,7 @@ ItemDisplay[NMAG CLVL>14 (BOW OR XBOW) !ZON (SOCK=5 OR (SOCK=0 ILVL>40 SUP (lbw 
 ItemDisplay[NMAG CLVL>14 DAGGER !THROWING (SOCK=2 OR (SOCK=0 (ILVL<26 OR bld OR 9bl OR 7bl)))]: {%NAME%}										// 2-socket daggers & daggers that can only get up to 2 sockets (only available Runewords is Strength)
 
 // Hidden: Regular non-class throwable weapons worth less than 5000 gold per inventory space - level 50
-ItemDisplay[NMAG CLVL>49 ((PRICE<10000 (tkf OR tax OR bkf OR 9tk OR 9ta OR 9bk OR 7tk OR 7ta OR 7bk)) OR (PRICE<15000 (jav OR pil OR ssp OR 9ja OR 9pi OR 9s9 OR 7ja OR 7pi OR 7s7)) OR (PRICE<20000 (glv OR tsp OR 9gl OR 9ts OR 7gl OR 7ts)) OR (PRICE<30000 (bal OR 9b8 OR 7b8)))]: {%NAME%}
+ItemDisplay[NMAG CLVL>49 THROWING !ZON (ETH OR !(7tk OR 7ta OR 7bk))]: {%NAME%}
 
 // Hidden: Worst non-class items at each tier (excluding any ethereal, superior, or 3+ socket items) - levels 40, 60, 80		...socketable armors incapable of 3os (after upgrades), medium/heavy armors (except Sacred Armor line), high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
 ItemDisplay[NMAG NORM CLVL>39 !(ETH OR ED>0 OR SOCK>2) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR fld OR plt OR gth OR ful) OR (buc OR sml OR lrg OR tow OR gts) OR (hax OR lax OR clb OR spc OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR kri OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]: {%NAME%}
@@ -649,57 +649,57 @@ ItemDisplay[NMAG ZON (TABSK0>1 OR TABSK2>1)]: %NAME% %TAN%+2{%NAME%}%WHITE%
 ItemDisplay[NMAG ZON]: %NAME%{%NAME%}%WHITE%
 
 Hidden: Unworthy Paladin shields - level 80
-ItemDisplay[NMAG DIN (RES<16 AR<61 SOCK<3) CLVL>79]: {%NAME%}	// shields below 30 ED or 15 all res, unless they have 3-4 sockets
+ItemDisplay[NMAG DIN (RES<16 AR<61 SOCK<3) CLVL>79]: {%NAME%}	// shields below 30 enhanced damage or 15 all resistance, unless they have 3-4 sockets
 
 // Paladin Shields
 //    0-socket text divider
 ItemDisplay[NMAG DIN ED>0 SOCK=0]: %NAME% %GRAY%­{%NAME%}%CONTINUE%
 //    Enhanced Damage
-ItemDisplay[NMAG AR>100]: %NAME% %BLUE%51+{%NAME%}%WHITE%
-ItemDisplay[NMAG AR>80]: %NAME% %BLUE%41+{%NAME%}%WHITE%
-ItemDisplay[NMAG AR>60]: %NAME% %BLUE%31+{%NAME%}%WHITE%
-ItemDisplay[NMAG AR>30]: %NAME% %BLUE%21+{%NAME%}%WHITE%
-ItemDisplay[NMAG AR>14]: %NAME% %BLUE%10+{%NAME%}%WHITE%
+ItemDisplay[NMAG AR>100]: %NAME% %BLUE%+51-65{%NAME%}%WHITE%
+ItemDisplay[NMAG AR>80]: %NAME% %BLUE%+41-50{%NAME%}%WHITE%
+ItemDisplay[NMAG AR>60]: %NAME% %BLUE%+31-40{%NAME%}%WHITE%
+ItemDisplay[NMAG AR>30]: %NAME% %BLUE%+21-30{%NAME%}%WHITE%
+ItemDisplay[NMAG AR>14]: %NAME% %BLUE%+10-20{%NAME%}%WHITE%
 //    Resistances
-ItemDisplay[NMAG RES>44]: %NAME% %BLUE%+45 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=44]: %NAME% %BLUE%+44 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=43]: %NAME% %BLUE%+43 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=42]: %NAME% %BLUE%+42 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=41]: %NAME% %BLUE%+41 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=40]: %NAME% %BLUE%+40 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=39]: %NAME% %BLUE%+39 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=38]: %NAME% %BLUE%+38 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=37]: %NAME% %BLUE%+37 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=36]: %NAME% %BLUE%+36 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=35]: %NAME% %BLUE%+35 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=34]: %NAME% %BLUE%+34 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=33]: %NAME% %BLUE%+33 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=32]: %NAME% %BLUE%+32 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=31]: %NAME% %BLUE%+31 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=30]: %NAME% %BLUE%+30 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=29]: %NAME% %BLUE%+29 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=28]: %NAME% %BLUE%+28 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=27]: %NAME% %BLUE%+27 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=26]: %NAME% %BLUE%+26 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=25]: %NAME% %BLUE%+25 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=24]: %NAME% %BLUE%+24 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=23]: %NAME% %BLUE%+23 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=22]: %NAME% %BLUE%+22 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=21]: %NAME% %BLUE%+21 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=20]: %NAME% %BLUE%+20 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=19]: %NAME% %BLUE%+19 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=18]: %NAME% %BLUE%+18 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=17]: %NAME% %BLUE%+17 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=16]: %NAME% %BLUE%+16 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=15]: %NAME% %BLUE%+15 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=14]: %NAME% %BLUE%+14 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=13]: %NAME% %BLUE%+13 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=12]: %NAME% %BLUE%+12 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=11]: %NAME% %BLUE%+11 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=10]: %NAME% %BLUE%+10 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=9]: %NAME% %BLUE%+9 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=8]: %NAME% %BLUE%+8 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=7]: %NAME% %BLUE%+7 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=6]: %NAME% %BLUE%+6 Res{%NAME%}%WHITE%
-ItemDisplay[NMAG RES=5]: %NAME% %BLUE%+5 Res{%NAME%}%WHITE%
+ItemDisplay[NMAG RES>44]: %NAME% %BLUE%+45{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=44]: %NAME% %BLUE%+44{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=43]: %NAME% %BLUE%+43{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=42]: %NAME% %BLUE%+42{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=41]: %NAME% %BLUE%+41{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=40]: %NAME% %BLUE%+40{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=39]: %NAME% %BLUE%+39{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=38]: %NAME% %BLUE%+38{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=37]: %NAME% %BLUE%+37{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=36]: %NAME% %BLUE%+36{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=35]: %NAME% %BLUE%+35{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=34]: %NAME% %BLUE%+34{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=33]: %NAME% %BLUE%+33{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=32]: %NAME% %BLUE%+32{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=31]: %NAME% %BLUE%+31{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=30]: %NAME% %BLUE%+30{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=29]: %NAME% %BLUE%+29{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=28]: %NAME% %BLUE%+28{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=27]: %NAME% %BLUE%+27{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=26]: %NAME% %BLUE%+26{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=25]: %NAME% %BLUE%+25{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=24]: %NAME% %BLUE%+24{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=23]: %NAME% %BLUE%+23{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=22]: %NAME% %BLUE%+22{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=21]: %NAME% %BLUE%+21{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=20]: %NAME% %BLUE%+20{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=19]: %NAME% %BLUE%+19{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=18]: %NAME% %BLUE%+18{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=17]: %NAME% %BLUE%+17{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=16]: %NAME% %BLUE%+16{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=15]: %NAME% %BLUE%+15{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=14]: %NAME% %BLUE%+14{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=13]: %NAME% %BLUE%+13{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=12]: %NAME% %BLUE%+12{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=11]: %NAME% %BLUE%+11{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=10]: %NAME% %BLUE%+10{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=9]: %NAME% %BLUE%+9{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=8]: %NAME% %BLUE%+8{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=7]: %NAME% %BLUE%+7{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=6]: %NAME% %BLUE%+6{%NAME%}%WHITE%
+ItemDisplay[NMAG RES=5]: %NAME% %BLUE%+5{%NAME%}%WHITE%
 ItemDisplay[NMAG DIN]: %NAME%{%NAME%}%WHITE%

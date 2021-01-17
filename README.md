@@ -1,19 +1,23 @@
 # Feather-PD2
 Lootfilter for Project Diablo II
 
-This is a minimally-strict filter that includes many quality-of-life features. Very few items are hidden.
+This is a minimally-strict filter that includes many quality-of-life features. Very few items are hidden, but enough is hidden that the onscreen-item-limit rarely comes into play (even in maps).
 
 ## Features
 * mostly follows classic style (it still looks like D2)
 * non-equipment more clearly distinguished from equipment (gems, jewels, charms)
-* unique/set items highlighted based on their usefulness
-* natural sockets shown for unidentified unique/set items
-* regular items displayed with amount of skills and highest skill value
-* enhanced damage/defense shown for superior items
-* shopping for valuable items made easier
-* descriptions for upgrading/crafting recipes and possible runewords where appropriate
-* descriptions for stacked gems/runes showing effects-when-socketed
+* items highlighted based on their usefulness
 * notifications for valuable items
+* unidentified unique/set items displayed with sockets (if applicable)
+* regular items displayed with amount of skills and highest skill value
+* superior items displayed with enhanced damage/defense
+* shopping for valuable items made easier
+* descriptions for socketed effects on stacked gems/runes
+* descriptions for upgrading recipes where appropriate
+* descriptions for crafting recipes
+* descriptions for possible runewords
+* descriptions for maximum possible sockets on 0-socket regular items (if lower than usual)
+* descriptions for item price on regular/magic/rare items
 
 ### Hidden Items:
 * smaller gold piles
