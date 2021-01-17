@@ -29,6 +29,14 @@ This is a minimally-strict filter that includes many quality-of-life features. V
 ## Installation
 Download **loot.filter** and save it to your *Diablo II\ProjectD2* folder.
 
-Once in-game, enable the *Advanced Item Display* option from the *Settings* menu, as well as any desired notification options.
+Once in-game, enable these options from the *Settings* menu:
+* Advanced Item Display
+* Item Drop Notifications
+* Item Close Notifications
+* Item Detailed Notifications
 
-Note that the file uses ANSI encoding, which is needed for certain characters to display correctly.
+If you copy/paste the filter's text instead of downloading the file, some characters may be displayed incorrectly.
+
+Different ways to download a file from Github:
+* click the green **Code** button, select [**Download ZIP**](https://github.com/BetweenWalls/Feather-PD2/archive/main.zip), choose where to save, press **Save**, extract the desired file from the ZIP archive
+* [select](https://github.com/BetweenWalls/Feather-PD2/blob/main/loot.filter) the desired file from the list, right-click **Raw**, select **Save link as**, choose where to save, press **Save**
