@@ -319,9 +319,9 @@ ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 (bhm OR ci0 OR ci1 OR buc OR spk O
 ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 (xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%CONTINUE%							// Upgrade Armor (Exceptional)
 ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 ((WEAPON NORM !WAND !SOR) OR wnd OR ywn OR ktr OR wrb)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%9%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%							// Upgrade Weapon (Normal)
 ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 ((WEAPON EXC !WAND !SOR) OR 9wn OR 9wb)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%19%TAN%)%GRAY%+%TAN%(%WHITE%22%TAN%)}%CONTINUE%									// Upgrade Weapon (Exceptional)
-ItemDisplay[CRAFT ID (ILVL<71 OR (amu ILVL<90) OR (rin (ILVL<78 OR ILVL>85)) OR (WEAPON ILVL<77) OR (CHEST ILVL<74))]: %NAME% %GRAY%[l%ILVL%]{%NAME%}%WHITE%																			// shows ilvl if it's not the best for crafting
-ItemDisplay[RARE ID (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt OR xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu OR (WEAPON !ELT !WAND !SOR) OR wnd OR ywn OR ktr OR wrb OR 9wn OR 9wb)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%NAME%}%WHITE%	// shows price for rares with upgrade recipes
-ItemDisplay[RARE ID]: %NAME%{%DARK_GREEN%$%PRICE%}%WHITE%																															// shows price for other rares
+ItemDisplay[CRAFT ID (ILVL<71 OR (amu ILVL<90) OR (rin (ILVL<78 OR ILVL>85)) OR (WEAPON ILVL<77) OR (CHEST ILVL<74))]: %NAME% %GRAY%[l%ILVL%]{%NAME%}%WHITE%																					// shows ilvl if it's not the best for crafting
+ItemDisplay[RARE ID ILVL>40 SOCK=0 (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt OR xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu OR (WEAPON !ELT !WAND !SOR) OR wnd OR ywn OR ktr OR wrb OR 9wn OR 9wb)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%NAME%}%WHITE%	// shows price for rares with upgrade recipes
+ItemDisplay[RARE ID]: %NAME%{%DARK_GREEN%$%PRICE%}%WHITE%																																	// shows price for other rares
 ItemDisplay[(RARE OR CRAFT) ID]: %NAME%{%NAME%}%WHITE%
 
 
@@ -358,6 +358,7 @@ ItemDisplay[MAG ID WEAPON !(POLEARM OR (SPEAR !THROWING)) TABSK34>2]: %NAME% %OR
 ItemDisplay[MAG ID MACE TABSK40>2]: %NAME% %TAN%+3 Summoning														// Clubs with +3 Summoning
 
 // Crafting Recipes
+ItemDisplay[MAG ID ILVL>43 ILVL<72 ((ARMOR !CIRC) OR (WEAPON !(SIN (NORM OR 9ar OR 9wb OR 9xf))))]: %NAME% %GRAY%[l%ILVL%]%CONTINUE%					// appends ilvl if it's below 72
 ItemDisplay[MAG ID ILVL>43 WEAPON !(SIN (NORM OR 9ar OR 9wb OR 9xf))]:	%NAME%{%DARK_GREEN%$%PRICE%%NL%%ORANGE%[%RED%@%ORANGE%]%GRAY%+%TAN%(%WHITE%9%TAN%) %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%3%TAN%)  %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%3%TAN%) %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%12%TAN%)}%WHITE%
 ItemDisplay[MAG ID ILVL>43 SHIELD]:	%NAME%{%DARK_GREEN%$%PRICE%%NL%%ORANGE%[%RED%@%ORANGE%]%GRAY%+%TAN%(%WHITE%6%TAN%) %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%5%TAN%)  %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%5%TAN%) %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%4%TAN%)}%WHITE%
 ItemDisplay[MAG ID ILVL>43 HELM]:	%NAME%{%DARK_GREEN%$%PRICE%%NL%%ORANGE%[%RED%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%) %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%4%TAN%)  %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%6%TAN%) %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%6%TAN%)}%WHITE%
@@ -644,7 +645,7 @@ ItemDisplay[NMAG STAFF (SOCK=2 OR (SOCK=0 (sst OR 8ss))) (SK36>2 OR SK37>2 OR SK
 // Catchall - Pointmod Items
 ItemDisplay[NMAG !(ZON OR DIN)]: %NAME%{%NAME%}%WHITE%
 
-Hidden: Unworthy non-pointmod class items - level 80
+// Hidden: Unworthy non-pointmod class items - level 80
 ItemDisplay[NMAG DIN (RES<16 AR<61 SOCK<3) CLVL>79]: {%NAME%}			// shields below 30 enhanced damage or 15 all resistance, unless they have 3-4 sockets
 ItemDisplay[NMAG BOW ZON CLVL>79 (SOCK=5 OR (SOCK=0 ILVL>40 SUP))]: {%NAME%}	// 5-socket bows & bows that can only get 5 sockets (only available Runeword is Call to Arms)
 
