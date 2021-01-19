@@ -1,7 +1,7 @@
 # Feather-PD2
 Lootfilter for Project Diablo II
 
-This is a minimally-strict filter that includes many quality-of-life features. Very few items are hidden, but enough is hidden that the onscreen-item-limit rarely comes into play (even in maps).
+This is a minimally-strict filter that includes many quality-of-life features. Few items are hidden, but enough is hidden that the onscreen-item-limit rarely comes into play.
 
 ## Features
 * mostly follows classic style (it still looks like D2)

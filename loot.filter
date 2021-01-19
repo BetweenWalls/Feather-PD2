@@ -308,6 +308,7 @@ ItemDisplay[!NMAG ETH !(REPAIR>0 OR 7cr OR (UNI (THROWING OR xla OR xpl OR uul O
 ItemDisplay[RW]: %NAME%%WHITE%
 
 // Unique/Set Items
+ItemDisplay[UNI ID rin LIFE=20 REPLIFE>4]: Ring%NL%Manald Heal%WHITE%		// uses the vanilla name for "The Eye of Mordini"
 ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%13%TAN%)}%WHITE%		// Upgrade Armor (Normal)
 ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 (xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%20%TAN%)}%WHITE%								// Upgrade Armor (Exceptional)
 ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 ((WEAPON NORM !WAND !SOR) OR wnd OR ywn OR ktr OR wrb)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%12%TAN%)}%WHITE%								// Upgrade Weapon (Normal)
@@ -458,7 +459,7 @@ ItemDisplay[MAG]: %NAME%%WHITE%
 ItemDisplay[NMAG (HELM OR CIRC) SOCK=2]: %NAME%{%WHITE%Runewords: %GOLD%Nadir, Lore}%CONTINUE%														// Helm 2s
 ItemDisplay[NMAG (HELM OR CIRC) SOCK=3]: %NAME%{%WHITE%Runewords: %GOLD%Radiance, Delirium, Dream}%CONTINUE%												// Helm 3s
 ItemDisplay[NMAG CHEST SOCK=2]: %NAME%{%WHITE%Runewords: %GOLD%Stealth, Smoke, Prudence}%CONTINUE%													// Armor 2s
-ItemDisplay[NMAG CHEST SOCK=3]: %NAME%{%GOLD%Gloom, Bone, Rain, Dragon, Enigma%NL%Wealth, (Principle), Enlightenment, Duress,%NL%%WHITE%RWs: %GOLD%Peace, Myth, Lionheart, Treachery,}%WHITE%		// Armor 3s		...differences: Principle (Ral+Gul+Eld -> Ral+Pul+Eld)
+ItemDisplay[NMAG CHEST SOCK=3]: %NAME%{%GOLD%Gloom, Bone, Rain, Dragon, Enigma%NL%Wealth, (Principle), Enlightenment, Duress,%NL%%WHITE%RWs: %GOLD%Peace, Myth, Lionheart, Treachery,}%CONTINUE%	// Armor 3s		...differences: Principle (Ral+Gul+Eld -> Ral+Pul+Eld)
 ItemDisplay[NMAG CHEST SOCK=4]: %NAME%{%GOLD%Bramble, Chains of Honor%NL%%WHITE%Runewords: %GOLD%Stone, Fortitude,}%CONTINUE%										// Armor 4s
 ItemDisplay[NMAG SHIELD SOCK=2]: %NAME%{%WHITE%Runewords: %GOLD%Rhyme, Splendor}%CONTINUE%														// Shield 2s
 ItemDisplay[NMAG SHIELD SOCK=3]: %NAME%{%GOLD%Sanctuary, Dragon, Dream%NL%%WHITE%Runewords: %GOLD%Ancient's Pledge,}%CONTINUE%										// Shield 3s
@@ -544,6 +545,9 @@ ItemDisplay[NMAG CLVL>49 THROWING !ZON (ETH OR !(7tk OR 7ta OR 7bk))]: {%NAME%}
 ItemDisplay[NMAG NORM CLVL>39 !(ETH OR ED>0 OR SOCK>2) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR fld OR plt OR gth OR ful) OR (buc OR sml OR lrg OR tow OR gts) OR (hax OR lax OR clb OR spc OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR kri OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]: {%NAME%}
 ItemDisplay[NMAG EXC CLVL>59  !(ETH OR ED>0 OR SOCK>2) ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xld OR xlt OR xth OR xul) OR (xuc OR xml OR xrg OR xow OR xts) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9kr OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]: {%NAME%}
 ItemDisplay[NMAG ELT CLVL>79  !(ETH OR ED>0 OR SOCK>2) ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR uld OR ult OR uth OR uul) OR (uuc OR uml OR urg OR uow OR uts) OR (7ha OR 7la OR 7cl OR 7sp OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7kr OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx))]: {%NAME%}
+
+// Hidden: Non-class items at each tier (excluding any that are ethereal, superior, socketed, or elite) - level 95
+//ItemDisplay[NMAG CLVL>94 !ETH ED=0 SOCK=0 !(ELT !THROWING) !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER)]: {%NAME%}
 
 // Modification: Superior/Sockets
 ItemDisplay[ED=15 NMAG]: %NAME% %BLUE%+15{%NAME%}%CONTINUE%
