@@ -3,6 +3,8 @@ Lootfilter for Project Diablo II
 
 This is a minimally-strict filter that includes many quality-of-life features. Few items are hidden, but enough is hidden that the onscreen-item-limit rarely comes into play.
 
+If you prefer to see fewer items, some rules are included that, when enabled, will increase the filter's strictness substantially for higher level characters.
+
 ## Features
 * mostly follows classic style (it still looks like D2)
 * non-equipment more clearly distinguished from equipment (gems, jewels, charms)

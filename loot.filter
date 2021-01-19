@@ -78,14 +78,14 @@ ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key OR RUNE>0)]: %NAME
 //ItemDisplay[(bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2)]: %NAME%	// non-equipment
 
 // Endgame Quest Items
-ItemDisplay[tes]:	%MAP-60%Essence of Suffering{%GRAY%(Andariel & Duriel)}%CONTINUE%
-ItemDisplay[ceh]:	%MAP-60%Essence of Hatred{%GRAY%(Mephisto)}%CONTINUE%
-ItemDisplay[bet]:	%MAP-60%Essence of Terror{%GRAY%(Diablo)}%CONTINUE%
-ItemDisplay[fed]:	%MAP-60%Essence of Destruction{%GRAY%(Baal)}%CONTINUE%
+ItemDisplay[tes]:	%ORANGE%%MAP%Essence of Suffering{%GRAY%(Andariel & Duriel)}%CONTINUE%
+ItemDisplay[ceh]:	%ORANGE%%MAP%Essence of Hatred{%GRAY%(Mephisto)}%CONTINUE%
+ItemDisplay[bet]:	%ORANGE%%MAP%Essence of Terror{%GRAY%(Diablo)}%CONTINUE%
+ItemDisplay[fed]:	%ORANGE%%MAP%Essence of Destruction{%GRAY%(Baal)}%CONTINUE%
 //ItemDisplay[toa]:	%NAME%%WHITE%							// Token of Absolution
-ItemDisplay[pk1]:	%MAP-60%  %NAME%  {%GRAY%(Countess / Blood Raven)}%WHITE%	// Key of Terror
-ItemDisplay[pk2]:	%MAP-60%  %NAME%  {%GRAY%(Summoner / Bloodwitch)}%WHITE%	// Key of Hatred
-ItemDisplay[pk3]:	%MAP-60%  %NAME%  {%GRAY%(Izual / Nihlathak)}%WHITE%		// Key of Destruction
+ItemDisplay[pk1]:	%ORANGE%%MAP%  %NAME%  {%GRAY%(Countess / Blood Raven)}%WHITE%	// Key of Terror
+ItemDisplay[pk2]:	%ORANGE%%MAP%  %NAME%  {%GRAY%(Summoner / Bloodwitch)}%WHITE%	// Key of Hatred
+ItemDisplay[pk3]:	%ORANGE%%MAP%  %NAME%  {%GRAY%(Izual / Nihlathak)}%WHITE%	// Key of Destruction
 //ItemDisplay[dhn]:	%NAME%{%GRAY%(Lilith)}%WHITE%					// Diablo's Horn
 //ItemDisplay[bey]:	%NAME%{%GRAY%(Duriel)}%WHITE%					// Baal's Eye
 //ItemDisplay[mbr]:	%NAME%{%GRAY%(Izual)}%WHITE%					// Mephisto's Brain
@@ -411,9 +411,9 @@ ItemDisplay[(UNI OR SET)]: %NAME%%WHITE%
 //-¦ Rare Items  (unidentified) ¦----------------------------------------------------------------------------------------
 // +----------------------------+
 // Hidden: Worst non-class items at each tier (excluding any eth weapons) - levels 40, 60, 80				...socketable armors incapable of 3os (after upgrades), medium/heavy armors (except Sacred Armor line), high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
-ItemDisplay[RARE NORM CLVL>39 !(ETH WEAPON) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR fld OR plt OR gth OR ful) OR (buc OR sml OR lrg OR tow OR gts) OR (hax OR lax OR clb OR spc OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR kri OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]:
-ItemDisplay[RARE EXC CLVL>59  !(ETH WEAPON) ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xld OR xlt OR xth OR xul) OR (xuc OR xml OR xrg OR xow OR xts) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9kr OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]:
-ItemDisplay[RARE ELT CLVL>79  !(ETH WEAPON) ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR uld OR ult OR uth OR uul) OR (uuc OR uml OR urg OR uow OR uts) OR (7ha OR 7la OR 7cl OR 7sp OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7kr OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx))]:
+//ItemDisplay[RARE NORM CLVL>39 !(ETH WEAPON) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR fld OR plt OR gth OR ful) OR (buc OR sml OR lrg OR tow OR gts) OR (hax OR lax OR clb OR spc OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR kri OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]:
+//ItemDisplay[RARE EXC CLVL>59  !(ETH WEAPON) ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xld OR xlt OR xth OR xul) OR (xuc OR xml OR xrg OR xow OR xts) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9kr OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]:
+//ItemDisplay[RARE ELT CLVL>79  !(ETH WEAPON) ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR uld OR ult OR uth OR uul) OR (uuc OR uml OR urg OR uow OR uts) OR (7ha OR 7la OR 7cl OR 7sp OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7kr OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx))]:
 
 // Hidden: Claws that don't appear with pointmods - level 50
 //ItemDisplay[RARE SIN (NORM OR 9ar OR 9wb OR 9xf) CLVL>49]:
@@ -436,9 +436,9 @@ ItemDisplay[MAG NORM CLVL>39 ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng O
 ItemDisplay[MAG EXC CLVL>59  ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xld OR xlt OR xth OR xul) OR (xuc OR xml OR xrg OR xow OR xts) OR (xmg OR xtg OR xhg) OR (xmb OR xtb OR xhb) OR (zmb OR ztb OR zhb) OR (ETH ARMOR !(DRU OR BAR OR NEC OR DIN)) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9kr OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx) OR (!ETH THROWING !ZON))]:
 ItemDisplay[MAG ELT CLVL>79  ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR uld OR ult OR uth OR uul) OR (uuc OR uml OR urg OR uow OR uts) OR (umg OR utg OR uhg) OR (umb OR utb OR uhb) OR (umc OR utc OR uhc) OR (ETH ARMOR !(DRU OR BAR OR NEC OR DIN)) OR (7ha OR 7la OR 7cl OR 7sp OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7kr OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx) OR (!ETH THROWING !ZON))]:
 
-// Hidden: Worst class items (claws, staves) and (scepters, claws, wands, orbs) - levels 40, 60
+// Hidden: Worst class items (claws, staves) and (scepters, claws, wands, orbs) - levels 40, 80
 ItemDisplay[MAG CLVL>39 ((ktr OR wrb OR axf OR ces OR clw OR btl OR skr OR 9ar OR 9wb OR 9xf) OR (sst OR lst OR cst OR bst OR 8ss OR 8ls OR 8cs OR 8bs OR 6ss OR 6ls OR 6cs OR 6bs))]:				// claws incapable of pointmods, staves incapable of 6-sockets
-//ItemDisplay[MAG CLVL>59 ((scp OR gsc OR 9sc OR 9qs OR 7sc OR 7qs) OR (9cs OR 7xf OR 7cs) OR (wnd OR ywn OR 9wn) OR (ob1 OR ob2 OR ob3 OR ob4 OR ob6 OR ob7 OR ob8 OR ob9 OR obb OR obc OR obd OR obe))]:	// scepters incapable of 4-sockets, claws incapable of 3-sockets, wands incapable of 2-sockets (sans upgrades), orbs incapable of 3-sockets
+//ItemDisplay[MAG CLVL>79 ((scp OR gsc OR 9sc OR 9qs OR 7sc OR 7qs) OR (9cs OR 7xf OR 7cs) OR (wnd OR ywn OR 9wn) OR (ob1 OR ob2 OR ob3 OR ob4 OR ob6 OR ob7 OR ob8 OR ob9 OR obb OR obc OR obd OR obe))]:	// scepters incapable of 4-sockets, claws incapable of 3-sockets, wands incapable of 2-sockets (sans upgrades), orbs incapable of 3-sockets
 
 // Hidden: Unworthy non-class items - level 90
 ItemDisplay[MAG CLVL>89 CHEST !(ltp OR xtp OR utp)]:								// body armor except "Archon Plate" line
@@ -446,6 +446,9 @@ ItemDisplay[MAG CLVL>89 SHIELD !(DIN OR NEC OR bsh OR xsh OR ush)]:						// shie
 ItemDisplay[MAG CLVL>89 HELM !(DRU OR BAR OR bhm OR xh9 OR uh9)]:						// helms except "Bone Visage" line
 ItemDisplay[MAG CLVL>89 !ELT !ETH WEAPON !(BOW OR XBOW OR STAFF OR WAND OR SCEPTER OR SIN OR SOR OR ZON)]:	// non-elite non-eth weapons (if they can be ethereal)
 ItemDisplay[MAG CLVL>89 !ELT (BOW OR XBOW) !ZON]:								// non-elite bows/crossbows
+
+// Hidden: Non-class items that aren't ethereal & elite (except Phase Blade line) - level 95
+//ItemDisplay[MAG CLVL>94 !(ETH ELT) !crs !9cr !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER)]: {%NAME%}
 
 // Catchall
 ItemDisplay[MAG ETH (crs OR 9cr)]:	  %NAME%  %WHITE%							// Highlighting for: eth Crystal Sword and eth Dimensional Blade
@@ -546,8 +549,8 @@ ItemDisplay[NMAG NORM CLVL>39 !(ETH OR ED>0 OR SOCK>2) ((cap OR skp OR hlm OR fh
 ItemDisplay[NMAG EXC CLVL>59  !(ETH OR ED>0 OR SOCK>2) ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xld OR xlt OR xth OR xul) OR (xuc OR xml OR xrg OR xow OR xts) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9kr OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]: {%NAME%}
 ItemDisplay[NMAG ELT CLVL>79  !(ETH OR ED>0 OR SOCK>2) ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR uld OR ult OR uth OR uul) OR (uuc OR uml OR urg OR uow OR uts) OR (7ha OR 7la OR 7cl OR 7sp OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7kr OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx))]: {%NAME%}
 
-// Hidden: Non-class items at each tier (excluding any that are ethereal, superior, socketed, or elite) - level 95
-//ItemDisplay[NMAG CLVL>94 !ETH ED=0 SOCK=0 !(ELT !THROWING) !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER)]: {%NAME%}
+// Hidden: Non-class items that aren't ethereal, superior, socketed, or elite armor - level 95
+//ItemDisplay[NMAG CLVL>94 !ETH ED=0 SOCK=0 !(ELT ARMOR) !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER)]: {%NAME%}
 
 // Modification: Superior/Sockets
 ItemDisplay[ED=15 NMAG]: %NAME% %BLUE%+15{%NAME%}%CONTINUE%
