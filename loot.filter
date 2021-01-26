@@ -129,8 +129,7 @@ ItemDisplay[lbox]:						        %NAME%        {%NAME%}%WHITE%	// Highlighting x8
 //-¦ Gems ¦--------------------------------------------------------------------------------------------------------------
 // +------+
 // Hidden: Chipped, Flawed & standard gems - levels 30, 40, 60
-ItemDisplay[((GEMLEVEL=1 CLVL>29) OR (GEMLEVEL=2 CLVL>39) OR (GEMLEVEL=3 CLVL>59))]:	// no other conditions
-//ItemDisplay[((GEMLEVEL=1 !skc CLVL>29) OR (GEMLEVEL=2 !skf CLVL>39))]:		// don't hide Chipped/Flawed skulls (for recharging items) or standard gems (for creating Full Rejuvenation potions)
+ItemDisplay[((GEMLEVEL=1 CLVL>29) OR (GEMLEVEL=2 CLVL>39) OR (GEMLEVEL=3 CLVL>59))]:
 
 // Descriptions for Stacked Gems (Socketed Effects)
 ItemDisplay[gzvs]: %NAME%{%WHITE%Shield: +24 Defense%NL%Armors: +8 to Strength%NL%Weapon: +100 to Attack Rating%NL%}%CONTINUE%
@@ -518,7 +517,13 @@ ItemDisplay[NMAG MACE SOCK=6]: %NAME%{%WHITE%Runewords: %GOLD%Silence, Last Wish
 ItemDisplay[NMAG SOCK>1 !((CHEST SOCK=3) OR (SOR SOCK=2))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%NAME%}%CONTINUE%	// appends price (for items with Runeword descriptions)
 ItemDisplay[NMAG (SOCK<2 OR (SOR SOCK=2))]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%				// appends price (for items without Runeword descriptions)
 
-// Descriptions for Maximum Possible Sockets (if lower than usual)						// also includes price
+// Descriptions for Socketing Recipes
+ItemDisplay[NMAG SOCK=0 !INF !SUP HELM !DRU !BAR]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 !INF !SUP CHEST]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%YELLOW%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 !INF !SUP SHIELD !NEC]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%RED%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 !INF !SUP WEAPON !THROWING !SIN !SOR !WAND]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%
+
+// Descriptions for Maximum Possible Sockets (if lower than usual)
 ItemDisplay[NMAG SOCK=0 (wnd OR ywn OR 9wn OR buc OR xuc)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 1}%CONTINUE%																		// low tier	1s
 ItemDisplay[NMAG SOCK=0 (ktr OR wrb OR 9ar OR ci0 OR ci1 OR bhm OR xh9 OR spk OR xpk OR bsh OR xsh OR qui OR xui OR lea OR xea OR hla OR xla OR stu OR xtu OR scl OR chn OR spl OR fld OR plt)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 2}%CONTINUE%	// low tier	2s
 ItemDisplay[NMAG SOCK=0 (rng OR xng OR brs OR xrs OR ltp OR xtp OR xcl OR xhn OR xpl OR xld OR xlt OR kit OR xit OR tow OR xow OR gts OR xts)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 3}%CONTINUE%							// low tier	3s
@@ -532,6 +537,10 @@ ItemDisplay[NMAG SOCK=0 ILVL>25 ILVL<41 ((fla OR 9fl OR 7fl OR mau OR 9m9 OR 7m7
 ItemDisplay[NMAG SOCK=0 ILVL<26 (AXE !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR lax OR 9la OR 7la))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 4}%CONTINUE%												// ilvl (1-25)	4s
 ItemDisplay[NMAG SOCK=0 ILVL>25 ILVL<41 (mpi OR 9mp OR 7mp OR wax OR 9wa OR 7wa OR gax OR 9ga OR 7ga OR gix OR 9gi OR 7gi)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 5}%CONTINUE%									// ilvl (26-40)	5s
 ItemDisplay[NMAG SOCK=0 ILVL<26 (wst OR 8ws OR 6ws)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 5}%CONTINUE%																		// ilvl (1-25)	5s
+
+// Descriptions for Reforging Recipes
+ItemDisplay[NMAG INF SOCK=0 ARMOR]: %NAME%{%NAME%%NL%%WHITE%Reforging Recipe: %ORANGE%[%DARK_GREEN%*%ORANGE%]%GRAY%+%TAN%(%WHITE%1%TAN%)}%CONTINUE%
+ItemDisplay[NMAG INF SOCK=0 WEAPON]: %NAME%{%NAME%%NL%%WHITE%Reforging Recipe: %ORANGE%[%DARK_GREEN%*%ORANGE%]%GRAY%+%TAN%(%WHITE%2%TAN%)}%CONTINUE%
 
 // Modification: Superior/Sockets
 ItemDisplay[ED=15 NMAG]: %NAME% %BLUE%+15{%NAME%}%CONTINUE%
