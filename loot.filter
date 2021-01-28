@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	25 JAN 2021
+//		Date Updated:	27 JAN 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -254,9 +254,9 @@ ItemDisplay[(RUNE=22 OR RUNE=23)]:	   %NAME%{%NAME%}%MAP-60%
 //-¦ Jewels & Charms ¦---------------------------------------------------------------------------------------------------
 // +-----------------+
 // Modification
-ItemDisplay[jew MAG]: %ORANGE%(%DARK_GREEN%O%ORANGE%) %BLUE%%NAME%%WHITE%%CONTINUE%
-ItemDisplay[jew RARE]: %ORANGE%(%DARK_GREEN%O%ORANGE%) %YELLOW%%NAME%%WHITE%%CONTINUE%
-ItemDisplay[jew UNI]: %ORANGE%(%DARK_GREEN%O%ORANGE%) %GOLD%%NAME%%WHITE%%CONTINUE%
+ItemDisplay[jew MAG]:	{}%ORANGE%{%DARK_GREEN%O%ORANGE%} %BLUE%%NAME%%WHITE%%CONTINUE%
+ItemDisplay[jew RARE]:	{}%ORANGE%{%DARK_GREEN%O%ORANGE%} %YELLOW%%NAME%%WHITE%%CONTINUE%
+ItemDisplay[jew UNI]:	{}%ORANGE%{%DARK_GREEN%O%ORANGE%} %GOLD%%NAME%%WHITE%%CONTINUE%
 ItemDisplay[(cm1 OR cm2 OR cm3) MAG]: %PURPLE%%NAME%%WHITE%%CONTINUE%
 
 // Show ilvl for Charm rerolling
@@ -296,8 +296,8 @@ ItemDisplay[RARE ETH]: %YELLOW%%NAME%%CONTINUE%
 ItemDisplay[CRAFT ETH]: %ORANGE%%NAME%%CONTINUE%
 ItemDisplay[NMAG !ETH]: %WHITE%%NAME%%CONTINUE%
 ItemDisplay[NMAG ETH]: %GRAY%%NAME%%CONTINUE%
-ItemDisplay[!NMAG ETH (REPAIR>0 OR 7cr OR (UNI (THROWING OR xla OR xpl OR uul OR uvb OR 9la OR 7sp OR 9cr OR 9st OR 7gd OR 7b7 OR 7p7 OR 9gm OR 7gm OR 7wh OR 7ba OR 7bl OR 7cs)))]: %GRAY%>>> %NAME%%CONTINUE%	// Ethereal (unbreakable)
-ItemDisplay[!NMAG ETH !(REPAIR>0 OR 7cr OR (UNI (THROWING OR xla OR xpl OR uul OR uvb OR 9la OR 7sp OR 9cr OR 9st OR 7gd OR 7b7 OR 7p7 OR 9gm OR 7gm OR 7wh OR 7ba OR 7bl OR 7cs)))]: %GRAY%eth %NAME%%CONTINUE%	// Ethereal (not unbreakable)
+ItemDisplay[!NMAG ETH  (REPAIR>0 OR THROWING OR 7cr OR (UNI ((7ba LVLREQ=74) OR (7bl LVLREQ=66) OR 7cs)) OR (UNI !ID (xla OR xpl OR uul OR uvb OR 9la OR 7sp OR 9cr OR 9st OR 7gd OR 7b7 OR 7p7 OR 9gm OR 7gm OR 7wh OR 7ba OR 7bl)))]: %GRAY%>>> %NAME%%CONTINUE%	// Ethereal (unbreakable)
+ItemDisplay[!NMAG ETH !(REPAIR>0 OR THROWING OR 7cr OR (UNI ((7ba LVLREQ=74) OR (7bl LVLREQ=66) OR 7cs)) OR (UNI !ID (xla OR xpl OR uul OR uvb OR 9la OR 7sp OR 9cr OR 9st OR 7gd OR 7b7 OR 7p7 OR 9gm OR 7gm OR 7wh OR 7ba OR 7bl)))]: %GRAY%eth %NAME%%CONTINUE%	// Ethereal (not unbreakable)
 
 
 // +------------------------------------------------------+
@@ -310,18 +310,18 @@ ItemDisplay[RW]: %NAME%%WHITE%
 ItemDisplay[UNI ID rin LIFE=20 REPLIFE>4]: Ring%NL%Manald Heal%WHITE%		// uses the vanilla name for "The Eye of Mordini"
 ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%13%TAN%)}%WHITE%		// Upgrade Armor (Normal)
 ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 (xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%20%TAN%)}%WHITE%								// Upgrade Armor (Exceptional)
-ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 ((WEAPON NORM !WAND !SOR) OR wnd OR ywn OR ktr OR wrb)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%12%TAN%)}%WHITE%								// Upgrade Weapon (Normal)
-ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 ((WEAPON EXC !WAND !SOR) OR 9wn OR 9wb)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%17%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%WHITE%										// Upgrade Weapon (Exceptional)
+ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 ((WEAPON NORM !WAND !SOR) OR wnd OR ywn) !hdm !msf !g33 !qf1 !hfh]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%12%TAN%)}%WHITE%							// Upgrade Weapon (Normal)
+ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 ((WEAPON EXC !WAND !SOR) OR 9wn)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%17%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%WHITE%											// Upgrade Weapon (Exceptional)
 ItemDisplay[(UNI OR SET) ID]: %NAME%%WHITE%
 
 // Rare/Crafted Items
 ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%	// Upgrade Armor (Normal)
 ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 (xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%CONTINUE%							// Upgrade Armor (Exceptional)
-ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 ((WEAPON NORM !WAND !SOR) OR wnd OR ywn OR ktr OR wrb)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%9%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%							// Upgrade Weapon (Normal)
-ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 ((WEAPON EXC !WAND !SOR) OR 9wn OR 9wb)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%19%TAN%)%GRAY%+%TAN%(%WHITE%22%TAN%)}%CONTINUE%									// Upgrade Weapon (Exceptional)
-ItemDisplay[CRAFT ID (ILVL<71 OR (amu ILVL<90) OR (rin (ILVL<78 OR ILVL>85)) OR (WEAPON ILVL<77) OR (CHEST ILVL<74))]: %NAME% %GRAY%[l%ILVL%]{%NAME%}%WHITE%																					// shows ilvl if it's not the best for crafting
-ItemDisplay[RARE ID ILVL>40 SOCK=0 (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt OR xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu OR (WEAPON !ELT !WAND !SOR) OR wnd OR ywn OR ktr OR wrb OR 9wn OR 9wb)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%NAME%}%WHITE%	// shows price for rares with upgrade recipes
-ItemDisplay[RARE ID]: %NAME%{%DARK_GREEN%$%PRICE%}%WHITE%																																	// shows price for other rares
+ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 ((WEAPON NORM !WAND !SOR) OR wnd OR ywn)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%9%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%									// Upgrade Weapon (Normal)
+ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 ((WEAPON EXC !WAND !SOR) OR 9wn)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%19%TAN%)%GRAY%+%TAN%(%WHITE%22%TAN%)}%CONTINUE%										// Upgrade Weapon (Exceptional)
+ItemDisplay[CRAFT ID (ILVL<71 OR (amu ILVL<90) OR (rin (ILVL<78 OR ILVL>85)) OR (WEAPON ILVL<77) OR (CHEST ILVL<74))]: %NAME% %GRAY%[l%ILVL%]{%NAME%}%WHITE%																		// shows ilvl if it's not the best for crafting
+ItemDisplay[RARE ID ILVL>40 SOCK=0 (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt OR xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu OR (WEAPON !ELT !WAND !SOR) OR wnd OR ywn OR 9wn)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%NAME%}%WHITE%	// shows price for rares with upgrade recipes
+ItemDisplay[RARE ID]: %NAME%{%DARK_GREEN%$%PRICE%}%WHITE%																														// shows price for other rares
 ItemDisplay[(RARE OR CRAFT) ID]: %NAME%{%NAME%}%WHITE%
 
 
@@ -417,10 +417,11 @@ ItemDisplay[(UNI OR SET)]: %NAME%%WHITE%
 //ItemDisplay[RARE SIN (NORM OR 9ar OR 9wb OR 9xf) CLVL>49]:	// Level 50 - Hides claws that don't appear with pointmods
 
 // Highlighting
-ItemDisplay[RARE ((ci0 ILVL>86) OR (ci1 ILVL>81) OR (ci2 ILVL>76) OR (ci3 ILVL>71) OR ((DRU OR BAR) ILVL>49))]:	 %NAME% %WHITE%							// +2-skill-capable Circlets, Class Helms
-ItemDisplay[RARE ((GLOVES ILVL>42) OR (BOOTS ILVL>36))]:	 %NAME% %WHITE%													// gloves, boots
-//ItemDisplay[RARE ILVL>55 (rxb OR 8rx OR 6rx OR crs OR 9cr OR 7cr OR mpi OR 9mp OR 7mp OR wsc OR 9wc OR 7wc OR wsp OR 9ws OR 7ws OR gax OR 9ga OR 7ga)]:	 %NAME% %WHITE%	// highest-IAS-capable weapons
-ItemDisplay[RARE SIN ILVL>49 !(NORM OR 9ar OR 9wb OR 9xf)]:	 %NAME% %WHITE%													// +2-skill-capable katars
+ItemDisplay[RARE ((GLOVES ILVL>42) OR (BOOTS ILVL>36))]:	 %NAME% %WHITE%											// gloves, boots
+ItemDisplay[RARE ((ci0 ILVL>86) OR (ci1 ILVL>81) OR (ci2 ILVL>76) OR (ci3 ILVL>71))]:	 %NAME% %WHITE%								// +2-skill-capable circlets
+ItemDisplay[RARE (DRU OR BAR) ILVL>49]:	 %NAME% %WHITE%														// +2-skill-capable class helms
+ItemDisplay[RARE SIN ILVL>49 !(NORM OR 9ar OR 9wb OR 9xf)]:	 %NAME% %WHITE%											// +2-skill-capable katars
+ItemDisplay[RARE ILVL>55 (rxb OR 8rx OR 6rx OR crs OR 9cr OR 7cr OR gax OR 9ga OR 7ga OR wsc OR 9wc OR 7wc OR brn OR 9br OR 7br)]:	 %NAME% %WHITE%		// highest-IAS-capable weapon lines
 
 // Catchall
 ItemDisplay[RARE]: %NAME%%WHITE%
@@ -517,11 +518,11 @@ ItemDisplay[NMAG MACE SOCK=6]: %NAME%{%WHITE%Runewords: %GOLD%Silence, Last Wish
 ItemDisplay[NMAG SOCK>1 !((CHEST SOCK=3) OR (SOR SOCK=2))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%NAME%}%CONTINUE%	// appends price (for items with Runeword descriptions)
 ItemDisplay[NMAG (SOCK<2 OR (SOR SOCK=2))]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%				// appends price (for items without Runeword descriptions)
 
-// Descriptions for Socketing Recipes
-ItemDisplay[NMAG SOCK=0 !INF !SUP HELM !DRU !BAR]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%
-ItemDisplay[NMAG SOCK=0 !INF !SUP CHEST]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%YELLOW%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%
-ItemDisplay[NMAG SOCK=0 !INF !SUP SHIELD !NEC]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%RED%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%
-ItemDisplay[NMAG SOCK=0 !INF !SUP WEAPON !THROWING !SIN !SOR !WAND]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%
+// Descriptions for Socketing Recipes (for 4-socket-capable armors and 5-socket-capable weapons)
+//ItemDisplay[NMAG SOCK=0 ILVL>40 !INF !SUP HELM !ETH (DRU OR BAR)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 ILVL>40 !INF !SUP CHEST (ELT OR gth OR xth OR ful OR xul OR aar OR xar)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%YELLOW%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 ILVL>40 !INF !SUP !ETH DIN]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%RED%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 ILVL>40 !INF !SUP ((AXE !(THROWING OR hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR lax OR 9la OR 7la)) OR (fla OR 9fl OR 7fl OR mau OR 9m9 OR 7m7 OR gma OR 9gm OR 7gm) OR (crs OR 9cr OR 7cr OR flb OR 9fb OR 7fb OR gsd OR 9gd OR 7gd) OR (SPEAR !(THROWING OR spr OR 9sr OR 7sr OR tri OR 9tr OR 7tr)) OR (POLEARM !bar !9b7 !7o7 !vou !9vo !7vo) OR (BOW !(sbw OR 8sb OR 6sb OR hbw OR 8hb OR 6hb OR cbw OR 8cb OR 6cb)) OR (hxb OR 8hx OR 6hx OR rxb OR 8rx OR 6rx) OR (wst OR 8ws OR 6ws) OR (wsp OR 9ws OR 7ws))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%
 
 // Descriptions for Maximum Possible Sockets (if lower than usual)
 ItemDisplay[NMAG SOCK=0 (wnd OR ywn OR 9wn OR buc OR xuc)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 1}%CONTINUE%																		// low tier	1s
@@ -534,7 +535,7 @@ ItemDisplay[NMAG SOCK=0 ILVL<26 (DRU OR BAR OR (clw OR 9lw OR 7lw OR btl OR 9tw 
 ItemDisplay[NMAG SOCK=0 ILVL<41 (uit OR uow OR uts)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 3}%CONTINUE%																		// ilvl (1-40)	3s
 ItemDisplay[NMAG SOCK=0 ILVL<26 (DIN OR (gth OR xth OR ful OR xul OR aar OR xar OR (CHEST ELT)) OR (SWORD !(ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR wsd OR 9wd OR 7wd OR 2hs OR 92h OR 72h)) OR (fla OR 9fl OR 7fl OR whm OR 9wh OR 7wh OR mau OR 9m9 OR 7m7 OR gma OR 9gm OR 7gm) OR (SPEAR !THROWING !spr !9sr !7sr) OR (POLEARM !bar !9b7 !7o7) OR (BOW !sbw !8sb !6sb) OR (XBOW !lxb !8lx !6lx) OR (wsp OR 9ws OR 7ws))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 3}%CONTINUE%	// ilvl (1-25)	3s
 ItemDisplay[NMAG SOCK=0 ILVL>25 ILVL<41 ((fla OR 9fl OR 7fl OR mau OR 9m9 OR 7m7 OR gma OR 9gm OR 7gm) OR (crs OR 9cr OR 7cr OR flb OR 9fb OR 7fb OR gsd OR 9gd OR 7gd) OR (SPEAR !THROWING !spr !9sr !7sr !tri !9tr !7tr) OR (POLEARM !bar !9b7 !7o7 !vou !9vo !7vo) OR (BOW !(sbw OR 8sb OR 6sb OR hbw OR 8hb OR 6hb OR cbw OR 8cb OR 6cb)) OR (hxb OR 8hx OR 6hx OR rxb OR 8rx OR 6rx))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 4}%CONTINUE%										// ilvl (26-40)	4s
-ItemDisplay[NMAG SOCK=0 ILVL<26 (AXE !(hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR lax OR 9la OR 7la))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 4}%CONTINUE%												// ilvl (1-25)	4s
+ItemDisplay[NMAG SOCK=0 ILVL<26 (AXE !(THROWING OR hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR lax OR 9la OR 7la))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 4}%CONTINUE%											// ilvl (1-25)	4s
 ItemDisplay[NMAG SOCK=0 ILVL>25 ILVL<41 (mpi OR 9mp OR 7mp OR wax OR 9wa OR 7wa OR gax OR 9ga OR 7ga OR gix OR 9gi OR 7gi)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 5}%CONTINUE%									// ilvl (26-40)	5s
 ItemDisplay[NMAG SOCK=0 ILVL<26 (wst OR 8ws OR 6ws)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 5}%CONTINUE%																		// ilvl (1-25)	5s
 
@@ -587,8 +588,8 @@ ItemDisplay[NMAG !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAN
 // +---------------------+
 //-¦ Regular Class Items ¦-----------------------------------------------------------------------------------------------
 // +---------------------+
-// Hidden: 1-socket items - level 90
-ItemDisplay[NMAG SOCK=1 CLVL>89]: {%NAME%}
+// Hidden: 1-socket items worth less than 10000 per inventory space - level 90
+ItemDisplay[NMAG SOCK=1 CLVL>89 !((PRICE>19999 (WP12 OR (CL6 !ob5 !oba !obf))) OR (PRICE>29999 (sst OR 8ss OR 6ss OR (SCEPTER !wsp !9ws !7ws) OR SIN OR ob5 OR oba OR obf)))]: {%NAME%}
 
 // Hidden: Unworthy non-pointmod class items - level 80
 ItemDisplay[NMAG DIN (RES<16 AR<61 SOCK<3) CLVL>79]: {%NAME%}		// shields below 30 enhanced damage or 15 all resistance, unless they have 3-4 sockets

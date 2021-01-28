@@ -29,7 +29,7 @@ If you prefer to see fewer items, some rules are included that, when enabled, wi
 * arrows/bolts
 * regular items that have zero use for runewords
 * regular skill-capable items without skills
-* some of the worst equipment bases as the character levels up
+* some of the worst regular/magic equipment bases
 
 ## Installation
 Download **loot.filter** and save it to your *Diablo II\ProjectD2* folder.
