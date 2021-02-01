@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	31 JAN 2021
+//		Date Updated:	1 FEB 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -93,10 +93,10 @@ ItemDisplay[pk3]:	%ORANGE%%MAP%  %NAME%  {%GRAY%(Izual / Nihlathak)}%WHITE%	// K
 // PD2 Items
 ItemDisplay[wss]:	%RED%%MAP-50%Worldstone Shard%CONTINUE%				// Worldstone Shard
 ItemDisplay[lbox]:	%RED%%BORDER-50%Larzuk's Puzzlebox%CONTINUE%			// Larzuk's Puzzlebox
-ItemDisplay[dcma]:	%MAP-60%  %NAME%  {%GOLD%Diablo Walks the Earth}%WHITE%															// Vision of Terror	(DClone)
-ItemDisplay[dcso]:	%MAP-60%  %NAME%  {%GOLD%1%QTY%0 Stones of Jordan Sold to Merchants%NL%%GRAY%(Diablo / Baal)}%WHITE%									// Prime Evil Soul	(DClone ingredient)
-ItemDisplay[dcho]:	%MAP-60%  %NAME%  {%GOLD%1%QTY%0 Stones of Jordan Sold to Merchants%NL%%GRAY%(Uber Tristram)}%WHITE%									// Black Soulstone	(DClone ingredient)
-ItemDisplay[dcbl]:	%MAP-60%  %NAME%  {%GOLD%1%QTY%0 Stones of Jordan Sold to Merchants%NL%%GRAY%(Map Bosses)}%WHITE%									// Pure Demonic Essence	(DClone ingredient)
+ItemDisplay[dcma]:	%MAP-60%  %NAME%  {%GOLD%Diablo Walks the Earth}%WHITE%							// Vision of Terror	(DClone)
+ItemDisplay[dcso]:	%MAP-60%  %NAME%  {%GOLD%1%QTY%0 Stones of Jordan Sold to Merchants%NL%%GRAY%(Diablo / Baal)}%WHITE%	// Prime Evil Soul	(DClone ingredient)
+ItemDisplay[dcho]:	%MAP-60%  %NAME%  {%GOLD%1%QTY%0 Stones of Jordan Sold to Merchants%NL%%GRAY%(Uber Tristram)}%WHITE%	// Black Soulstone	(DClone ingredient)
+ItemDisplay[dcbl]:	%MAP-60%  %NAME%  {%GOLD%1%QTY%0 Stones of Jordan Sold to Merchants%NL%%GRAY%(Map Bosses)}%WHITE%	// Pure Demonic Essence	(DClone ingredient)
 // Map Orbs
 ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%Raises Map Rarity from Common to Magic}%WHITE%										// Arcane Orb		(Common -> Magic)
 ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE%+%NL%%BLUE%Raises Map Rarity from Common to Rare}%WHITE%			// Zakarum Orb		(Common -> Rare)
@@ -104,9 +104,12 @@ ItemDisplay[upma]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ P%GRAY%.%WHITE%S
 ItemDisplay[scou]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ %ORANGE%Hel Rune%NL%%BLUE%Lowers Map Rarity to Common}%WHITE%								// Orb of Destruction	(Magic/Rare -> Common)
 ItemDisplay[rera]:	%NAME%{%GOLD%Orb %WHITE%+ %YELLOW%Map %WHITE%+ P%GRAY%.%WHITE%Gem + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE%+%NL%%BLUE%Rerolls Rare Map Affixes}%WHITE%		// Horadrim Orb		(Reroll Rare)
 // Maps
-ItemDisplay[(t16 OR t17 OR t18) NMAG]:	%WHITE%Map Scroll%NL%%DARK_GREEN%%MAP%%NAME%%WHITE%
-ItemDisplay[(t16 OR t17 OR t18) MAG]:	%BLUE%Map Scroll%NL%%DARK_GREEN%%MAP%%DOT-97%%NAME%%WHITE%
-ItemDisplay[(t16 OR t17 OR t18) RARE]:	%YELLOW%Map Scroll%NL%%DARK_GREEN%%MAP%%DOT-6D%%NAME%%WHITE%
+//ItemDisplay[t16]:	%NAME%{%WHITE%Opens a portal to the once-great capitol city of Kehjistan}%CONTINUE%			// T1 Ruins of Viz-Jun
+//ItemDisplay[t17]:	%NAME%{%WHITE%Opens a portal to the flooded catacombs beneath Travincal}%CONTINUE%			// T3 River of Blood
+//ItemDisplay[t18]:	%NAME%{%WHITE%Opens a portal to the fiery river of the Underworld}%CONTINUE%				// T2 Phlegethon
+ItemDisplay[(t16 OR t17 OR t18) NMAG]:	%WHITE%Map Scroll%NL%%DARK_GREEN%%MAP%%NAME%{%NAME%}%WHITE%				// maps - regular
+ItemDisplay[(t16 OR t17 OR t18) MAG]:	%BLUE%Map Scroll%NL%%DARK_GREEN%%MAP%%DOT-97%%NAME%{%NAME%}%WHITE%			// maps - magic
+ItemDisplay[(t16 OR t17 OR t18) RARE]:	%YELLOW%Map Scroll%NL%%DARK_GREEN%%MAP%%DOT-6D%%NAME%{%NAME%}%WHITE%			// maps - rare
 
 // Miscellaneous
 ItemDisplay[tsc]:	%BLUE%­ %WHITE%Portal						// Scroll of Town Portal
@@ -391,13 +394,13 @@ ItemDisplay[SET xar]: %NAME% %GRAY%[2-3]%CONTINUE%								// 2-3s	Griswold's Hea
 ItemDisplay[UNI 72a]: %NAME% %GRAY%[3-5]%CONTINUE%								// 3-5s	Rune Master
 
 // Highlighting - Uniques				...reference table of highlights: https://docs.google.com/spreadsheets/d/1-vKTxRlgTxat3_INgrwa3YVMC3A3yJSMZw3uvD8YBoo/edit#gid=1932056366
-ItemDisplay[UNI ((ETH (xh9 OR usk OR 7gd)) OR (!ETH (jew OR cm1 OR cm2 OR xh9 OR uap OR usk OR ci3 OR baa OR dra OR xea OR ulc OR 6lw OR 7gw OR obf OR obc OR (uar ILVL>86) OR (7gm ILVL>84) OR 7cr OR uhm OR urn)))]:	         %BORDER-53%%NAME%         %WHITE%												// Highlighting - 9 spaces
-ItemDisplay[UNI ((ETH (7gw OR obc OR obf OR 6ws OR xhn OR uar)) OR (!ETH ((amu ILVL>84) OR (rin ILVL>83) OR pa9 OR xtb OR zhb OR nea OR ulm OR bae OR 6ws OR uui OR uit OR 7gd)))]:	       %BORDER-53%%NAME%       %WHITE%																	// Highlighting - 7 spaces
-ItemDisplay[UNI ((ETH (ama OR (7wh ILVL>82) OR 7s8 OR (7gm ILVL>84))) OR (!ETH ((amu ILVL>79) OR (rin ILVL>65) OR cm3 OR dre OR uld OR ama OR (7wh ILVL>82) OR oba OR bac OR (uar ILVL<87) OR xvb OR 6sw OR xhn OR xhb)))]:	     %MAP-53%%NAME%     %WHITE%													// Highlighting - 5 spaces
-ItemDisplay[UNI ((ETH (uvb OR 7pa)) OR (!ETH ((amu ILVL>72) OR (rin ILVL>38) OR tgl OR xmb OR zlb OR zvb OR umc OR 7kr OR 7s8 OR (7fl ILVL>85) OR (7gm ILVL<85) OR xrs OR upl OR xar OR xsh OR uvb OR ztb OR 7wa)))]:	    %MAP-53%%NAME%    %WHITE%														// Highlighting - 4 spaces
-ItemDisplay[UNI ((ETH (oba OR 7bk OR ulc OR xrs OR bae OR 9gm OR 7ws OR amf OR ci3 OR 7kr)) OR (!ETH ((amu ILVL>57) OR xhm OR utu OR uhb OR 9ws OR 7ws OR amf OR 6l7 OR 8hx OR 7gi OR am7 OR xtp OR (7fl ILVL<86) OR 8lw OR 7bk OR nef OR xpl OR ci2 OR drb OR drd OR xlt OR uts OR pac OR hgl OR xlg OR umb OR xth)))]:	   %DOT-53%%NAME%   %WHITE%	// Highlighting - 3 spaces
-ItemDisplay[UNI ((ETH (uap OR baa OR dra OR uui OR dgr OR uhm OR 9fc OR utu OR (7gm ILVL<85) OR xpl OR 9ws OR xlt OR 7m7 OR 7ts OR 6cs OR 7cs OR ulm OR dre OR xea OR pa9 OR nea OR xtb OR 7wa OR 7gi OR 7p7 OR 7s7 OR 7gl OR 8ls OR 7bw)) OR (!ETH (nee OR umg OR uvc OR 8lb OR 9fc OR 7pa OR pae OR dgr OR 9bs OR (7wh ILVL<83) OR tbl OR mgl OR xhl OR uh9 OR bad OR plt OR ltp OR xui OR xow OR xts OR upk OR uow OR uvg OR uhg OR 92a OR 9ga OR 7mp OR 7m7 OR (7sc ILVL>79) OR 9ls OR 7gs OR 7b7 OR 7ts OR 8cb OR amb OR 8rx OR 6cs OR 9tw OR 7lw OR aar OR xvg OR xmg OR lbt OR tbt OR xlb OR 7ga OR 9gm OR 7dg OR 8ls OR 7bw)))]:	  %DOT-53%%NAME%  %WHITE%		// Highlighting - 2 spaces
-ItemDisplay[UNI ((ETH (9cr OR 9tk OR xkp OR xlm OR xrn OR bac OR xhb OR ztb OR 7sp OR 9ta OR 9wn OR 9bw OR 9bs OR 7fl OR umb OR xhm OR (7wh ILVL<83) OR 9st OR zvb OR zhb OR uhb OR xmb OR nef OR upk OR upl OR uul OR xvb OR 7bl OR 7ta OR 7b8 OR bwn OR 9yw OR 9gw OR uh9 OR zlb OR umc OR 72a)) OR (!ETH (amu OR rin OR skp OR xap OR xkp OR xlm OR xsk OR xrn OR stu OR vgl OR xtg OR lbl OR 9gi OR mau OR 9sp OR 9m9 OR 7sp OR 9sb OR 7wc OR 7sr OR am9 OR 8ws OR 9wn OR 9bw OR 7wb OR 9gs OR 7ls OR 7b7 OR gma OR 9fl OR 9qs OR 9cr OR 9kr OR 9s8 OR 7bt OR 9pa OR 92h OR gsd OR 9gw OR 7p7 OR 7br OR cap OR bhm OR crn OR scl OR spl OR xng OR uul OR kit OR xuc OR ush OR lgl OR xhg OR vbt OR hbt OR vbl OR hbl OR zmb OR 9ma OR (7sc ILVL<80) OR 9wc OR amd OR 7s7 OR bwn OR 9yw OR gth OR xld OR tow OR xrg OR uml OR 9wh)))]:	 %NAME% %WHITE%		// Highlighting - 1 space
+ItemDisplay[UNI ((ETH (xh9 OR usk OR 7gd)) OR (!ETH (jew OR cm1 OR cm2 OR (uar ILVL>86) OR (7gm ILVL>84) OR xh9 OR uap OR usk OR ci3 OR baa OR dra OR xea OR ulc OR 6lw OR 7gw OR obf OR obc OR 7cr OR uhm OR urn)))]:	         %BORDER-53%%NAME%         %WHITE%		// Highlighting - 9 spaces
+ItemDisplay[UNI ((ETH (7gw OR obc OR obf OR 6ws OR xhn OR uar OR 7wa)) OR (!ETH ((amu ILVL>84) OR (rin ILVL>83) OR pa9 OR xtb OR zhb OR nea OR ulm OR bae OR 6ws OR uui OR uit OR 7gd)))]:	       %BORDER-53%%NAME%       %WHITE%						// Highlighting - 7 spaces
+ItemDisplay[UNI ((ETH (ama OR (7wh ILVL>82) OR (7gm ILVL>84) OR 7s8 OR xrs)) OR (!ETH ((amu ILVL>79) OR (rin ILVL>65) OR cm3 OR (7wh ILVL>82) OR (uar ILVL<87) OR dre OR uld OR ama OR oba OR bac OR xvb OR 6sw OR xhn OR xhb)))]:	     %MAP-53%%NAME%     %WHITE%		// Highlighting - 5 spaces
+ItemDisplay[UNI ((ETH (uvb OR (uhm ILVL>76) OR 7pa OR 9bs)) OR (!ETH ((amu ILVL>72) OR (rin ILVL>38) OR (7gm ILVL<85) OR tgl OR xmb OR zlb OR zvb OR umc OR 7kr OR 7s8 OR xrs OR upl OR xar OR xsh OR uvb OR ztb OR 7wa)))]:	    %MAP-53%%NAME%    %WHITE%			// Highlighting - 4 spaces
+ItemDisplay[UNI ((ETH (oba OR (7fl ILVL>85) OR 7bk OR ulc OR bae OR 9gm OR 7ws OR amf OR ci3 OR 7kr OR xtg OR uvg OR uvc OR xpl OR xld OR utu OR 9bs)) OR (!ETH ((amu ILVL>57) OR (7fl ILVL>85) OR xhm OR utu OR uhb OR 9ws OR 7ws OR amf OR 6l7 OR 8hx OR 7gi OR am7 OR xtp OR 8lw OR 7bk OR nef OR xpl OR ci2 OR drb OR drd OR uts OR pac OR hgl OR xlg OR umb OR xth)))]:	   %DOT-53%%NAME%   %WHITE%		// Highlighting - 3 spaces
+ItemDisplay[UNI ((ETH (uap OR (uhm ILVL<77) OR (7gm ILVL<85) OR (7wh ILVL<83) OR (7fl ILVL<86) OR baa OR dra OR uui OR dgr OR 9fc OR 9ws OR xlt OR 7m7 OR 7ts OR 6cs OR 7cs OR ulm OR dre OR xea OR pa9 OR nea OR xtb OR 7gi OR 7p7 OR 7s7 OR 7gl OR 8ls OR 7bw OR xsh OR xmg OR lbt OR tbt OR xlb OR xhb OR umb OR zlb OR zhb OR umc OR xrn OR rng OR scl OR gth OR ltp OR xui OR xul OR upl OR uul OR 7b8 OR 9ta OR 7ha)) OR (!ETH (nee OR (7wh ILVL<83) OR (7fl ILVL<86) OR (7sc ILVL>79) OR umg OR uvc OR 8lb OR 9fc OR 7pa OR pae OR dgr OR tbl OR mgl OR xhl OR uh9 OR bad OR plt OR ltp OR xui OR xow OR xts OR upk OR uow OR uvg OR uhg OR 92a OR 9ga OR 7mp OR 7m7 OR 9ls OR 7gs OR 7b7 OR 7ts OR 8cb OR amb OR 8rx OR 6cs OR 9tw OR 7lw OR aar OR xvg OR xmg OR lbt OR tbt OR xlb OR 7ga OR 9gm OR 7dg OR 8ls OR 7bw OR xtg OR xrn OR xlt OR xld OR xul OR 9ax)))]:	  %DOT-53%%NAME%  %WHITE%		// Highlighting - 2 spaces
+ItemDisplay[UNI ((ETH (9cr OR 9tk OR xkp OR xlm OR bac OR ztb OR 7sp OR 9wn OR 9bw OR xhm OR 9st OR zvb OR uhb OR xmb OR nef OR upk OR xvb OR 7bl OR 7ta OR bwn OR 9yw OR 9gw OR uh9 OR 72a OR uow OR tgl OR xlg OR xvg OR uhg OR stu OR brs OR plt OR fld OR aar OR xla OR xcl OR xth OR xar OR xtp)) OR (!ETH (amu OR rin OR (7sc ILVL<80) OR skp OR xap OR xkp OR xlm OR xsk OR stu OR vgl OR lbl OR 9gi OR mau OR 9sp OR 9m9 OR 7sp OR 9sb OR 7wc OR 7sr OR am9 OR 8ws OR 9wn OR 9bw OR 7wb OR 9gs OR 7ls OR 7b7 OR gma OR 9fl OR 9qs OR 9cr OR 9kr OR 9s8 OR 7bt OR 9pa OR 92h OR gsd OR 9gw OR 7p7 OR 7br OR cap OR bhm OR crn OR scl OR spl OR xng OR uul OR kit OR xuc OR ush OR lgl OR xhg OR vbt OR hbt OR vbl OR hbl OR zmb OR 9ma OR 9wc OR amd OR 7s7 OR bwn OR 9yw OR gth OR tow OR xrg OR uml OR 9wh OR rng)))]:	 %NAME% %WHITE%		// Highlighting - 1 space
 // Highlighting - Sets
 ItemDisplay[SET (uar OR uth)]:	         %BORDER-84%%NAME%         %WHITE%																			// Highlighting - 9 spaces
 ItemDisplay[SET ((amu ILVL>25) OR xhm OR xtb OR xmg OR 7m7)]:	    %MAP-84%%NAME%    %WHITE%																	// Highlighting - 4 spaces
