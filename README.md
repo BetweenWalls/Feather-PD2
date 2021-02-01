@@ -26,7 +26,7 @@ Nothing is hidden at level 1 - items become hidden as the character levels up.
 * some of the worst regular/magic equipment bases
 
 ## Installation
-Download [**loot.filter**](https://github.com/BetweenWalls/Feather-PD2/blob/main/loot.filter) (right-click **Raw** & select **Save link as**) and save it to your *Diablo II\ProjectD2* folder.
+Download [**loot.filter**](https://github.com/BetweenWalls/Feather-PD2/blob/main/loot.filter) (right-click [**Raw**](https://raw.githubusercontent.com/BetweenWalls/Feather-PD2/main/loot.filter) & select **Save link as**) and save it to your *Diablo II\ProjectD2* folder.
 
 Once in-game, enable these options from the *Settings* menu:
 * Advanced Item Display
@@ -34,7 +34,7 @@ Once in-game, enable these options from the *Settings* menu:
 * Item Close Notifications
 * Item Detailed Notifications
 
-If you copy/paste the filter's *raw text*, some characters may be displayed incorrectly - the file uses ANSI encoding instead of standard UTF-8 encoding. Either download the file normally, or copy/paste the [*encoded text*](https://github.com/BetweenWalls/Feather-PD2/blob/main/loot.filter) into a file that uses ANSI encoding.
+If you copy/paste the filter's *raw text*, some characters may be displayed incorrectly - the file uses ANSI encoding instead of standard UTF-8 encoding. Either download the file normally, [download everything](https://github.com/BetweenWalls/Feather-PD2/archive/main.zip) and extract the file, or copy/paste the [*encoded text*](https://github.com/BetweenWalls/Feather-PD2/blob/main/loot.filter) into a file that uses ANSI encoding.
 <!--## Images
 ![_](/images/regular_items.png)
 ![_](/images/runes.png)
