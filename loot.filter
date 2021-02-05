@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	1 FEB 2021
+//		Date Updated:	4 FEB 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -16,7 +16,7 @@
 // +------------------+
 //-¦ Gold and Potions ¦--------------------------------------------------------------------------------------------------
 // +------------------+
-// Hidden: smaller gold piles - levels 5, 10, 20, 30, 50, 70, 80, 90
+// Hidden: smaller gold piles - levels 5, 10, 20, 30, 50, 70, 80, 90, 95
 ItemDisplay[((GOLD<10000 CLVL>94) OR (GOLD<5000 CLVL>89) OR (GOLD<3000 CLVL>79) OR (GOLD<1800 CLVL>69) OR (GOLD<1200 CLVL>49) OR (GOLD<600 CLVL>29) OR (GOLD<300 CLVL>19) OR (GOLD<100 CLVL>9) OR (GOLD<30 CLVL>4))]:
 ItemDisplay[GOLD>0]: %NAME%
 
@@ -385,6 +385,7 @@ ItemDisplay[SET ult]: %DARK_GREEN%Naj's %GREEN%%NAME%%CONTINUE%
 
 // Shared Bases (other than Amulet/Ring)
 ItemDisplay[((UNI ((uhm ILVL>76) OR (7fl ILVL>85) OR (7sc ILVL>79) OR (7wh ILVL>82) OR (7cr ILVL>86) OR (uar ILVL>86 !ETH) OR (7gm ILVL>84 !ETH))) OR (SET ((cap ILVL>19) OR (tbl ILVL>20) OR (crn ILVL>22) OR (tgl ILVL>20) OR (mbl ILVL>27) OR (vbt ((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))))))]: %NAME% %DARK_GREEN%<%WHITE%½%DARK_GREEN%*%WHITE%½%DARK_GREEN%>%CONTINUE%
+
 // Natural Sockets
 ItemDisplay[((UNI (9fc OR 7o7 OR 6hx OR xml OR xng OR 8s8)) OR (SET ba5))]: %NAME% %GRAY%[2]%CONTINUE%		// 2s	Blade of Ali Baba, Bonehew, Hellrack, Moser's Blessed Circle, Spirit Forge, Witchwild String, Immortal King's Will
 ItemDisplay[UNI 9st]: %NAME% %GRAY%[3]%CONTINUE%								// 3s	Hone Sundan
@@ -394,19 +395,19 @@ ItemDisplay[SET xar]: %NAME% %GRAY%[2-3]%CONTINUE%								// 2-3s	Griswold's Hea
 ItemDisplay[UNI 72a]: %NAME% %GRAY%[3-5]%CONTINUE%								// 3-5s	Rune Master
 
 // Highlighting - Uniques				...reference table of highlights: https://docs.google.com/spreadsheets/d/1-vKTxRlgTxat3_INgrwa3YVMC3A3yJSMZw3uvD8YBoo/edit#gid=1932056366
-ItemDisplay[UNI ((ETH (xh9 OR usk OR 7gd)) OR (!ETH (jew OR cm1 OR cm2 OR (uar ILVL>86) OR (7gm ILVL>84) OR xh9 OR uap OR usk OR ci3 OR baa OR dra OR xea OR ulc OR 6lw OR 7gw OR obf OR obc OR 7cr OR uhm OR urn)))]:	         %BORDER-53%%NAME%         %WHITE%		// Highlighting - 9 spaces
-ItemDisplay[UNI ((ETH (7gw OR obc OR obf OR 6ws OR xhn OR uar OR 7wa)) OR (!ETH ((amu ILVL>84) OR (rin ILVL>83) OR pa9 OR xtb OR zhb OR nea OR ulm OR bae OR 6ws OR uui OR uit OR 7gd)))]:	       %BORDER-53%%NAME%       %WHITE%						// Highlighting - 7 spaces
-ItemDisplay[UNI ((ETH (ama OR (7wh ILVL>82) OR (7gm ILVL>84) OR 7s8 OR xrs)) OR (!ETH ((amu ILVL>79) OR (rin ILVL>65) OR cm3 OR (7wh ILVL>82) OR (uar ILVL<87) OR dre OR uld OR ama OR oba OR bac OR xvb OR 6sw OR xhn OR xhb)))]:	     %MAP-53%%NAME%     %WHITE%		// Highlighting - 5 spaces
-ItemDisplay[UNI ((ETH (uvb OR (uhm ILVL>76) OR 7pa OR 9bs)) OR (!ETH ((amu ILVL>72) OR (rin ILVL>38) OR (7gm ILVL<85) OR tgl OR xmb OR zlb OR zvb OR umc OR 7kr OR 7s8 OR xrs OR upl OR xar OR xsh OR uvb OR ztb OR 7wa)))]:	    %MAP-53%%NAME%    %WHITE%			// Highlighting - 4 spaces
-ItemDisplay[UNI ((ETH (oba OR (7fl ILVL>85) OR 7bk OR ulc OR bae OR 9gm OR 7ws OR amf OR ci3 OR 7kr OR xtg OR uvg OR uvc OR xpl OR xld OR utu OR 9bs)) OR (!ETH ((amu ILVL>57) OR (7fl ILVL>85) OR xhm OR utu OR uhb OR 9ws OR 7ws OR amf OR 6l7 OR 8hx OR 7gi OR am7 OR xtp OR 8lw OR 7bk OR nef OR xpl OR ci2 OR drb OR drd OR uts OR pac OR hgl OR xlg OR umb OR xth)))]:	   %DOT-53%%NAME%   %WHITE%		// Highlighting - 3 spaces
-ItemDisplay[UNI ((ETH (uap OR (uhm ILVL<77) OR (7gm ILVL<85) OR (7wh ILVL<83) OR (7fl ILVL<86) OR baa OR dra OR uui OR dgr OR 9fc OR 9ws OR xlt OR 7m7 OR 7ts OR 6cs OR 7cs OR ulm OR dre OR xea OR pa9 OR nea OR xtb OR 7gi OR 7p7 OR 7s7 OR 7gl OR 8ls OR 7bw OR xsh OR xmg OR lbt OR tbt OR xlb OR xhb OR umb OR zlb OR zhb OR umc OR xrn OR rng OR scl OR gth OR ltp OR xui OR xul OR upl OR uul OR 7b8 OR 9ta OR 7ha)) OR (!ETH (nee OR (7wh ILVL<83) OR (7fl ILVL<86) OR (7sc ILVL>79) OR umg OR uvc OR 8lb OR 9fc OR 7pa OR pae OR dgr OR tbl OR mgl OR xhl OR uh9 OR bad OR plt OR ltp OR xui OR xow OR xts OR upk OR uow OR uvg OR uhg OR 92a OR 9ga OR 7mp OR 7m7 OR 9ls OR 7gs OR 7b7 OR 7ts OR 8cb OR amb OR 8rx OR 6cs OR 9tw OR 7lw OR aar OR xvg OR xmg OR lbt OR tbt OR xlb OR 7ga OR 9gm OR 7dg OR 8ls OR 7bw OR xtg OR xrn OR xlt OR xld OR xul OR 9ax)))]:	  %DOT-53%%NAME%  %WHITE%		// Highlighting - 2 spaces
-ItemDisplay[UNI ((ETH (9cr OR 9tk OR xkp OR xlm OR bac OR ztb OR 7sp OR 9wn OR 9bw OR xhm OR 9st OR zvb OR uhb OR xmb OR nef OR upk OR xvb OR 7bl OR 7ta OR bwn OR 9yw OR 9gw OR uh9 OR 72a OR uow OR tgl OR xlg OR xvg OR uhg OR stu OR brs OR plt OR fld OR aar OR xla OR xcl OR xth OR xar OR xtp)) OR (!ETH (amu OR rin OR (7sc ILVL<80) OR skp OR xap OR xkp OR xlm OR xsk OR stu OR vgl OR lbl OR 9gi OR mau OR 9sp OR 9m9 OR 7sp OR 9sb OR 7wc OR 7sr OR am9 OR 8ws OR 9wn OR 9bw OR 7wb OR 9gs OR 7ls OR 7b7 OR gma OR 9fl OR 9qs OR 9cr OR 9kr OR 9s8 OR 7bt OR 9pa OR 92h OR gsd OR 9gw OR 7p7 OR 7br OR cap OR bhm OR crn OR scl OR spl OR xng OR uul OR kit OR xuc OR ush OR lgl OR xhg OR vbt OR hbt OR vbl OR hbl OR zmb OR 9ma OR 9wc OR amd OR 7s7 OR bwn OR 9yw OR gth OR tow OR xrg OR uml OR 9wh OR rng)))]:	 %NAME% %WHITE%		// Highlighting - 1 space
+ItemDisplay[UNI ((ETH (xh9 OR usk OR 7gd)) OR (!ETH (jew OR cm1 OR cm2 OR (uar ILVL>86) OR (7gm ILVL>84) OR xh9 OR uap OR usk OR ci3 OR baa OR dra OR xea OR ulc OR 6lw OR 7gw OR obf OR obc OR 7cr OR uhm OR urn)))]:	         %BORDER-53%%NAME%         %WHITE%			// Highlighting - 9 spaces
+ItemDisplay[UNI ((ETH (7gw OR obc OR obf OR 6ws OR xhn OR uar OR 7wa)) OR (!ETH ((amu ILVL>84) OR (rin ILVL>83) OR pa9 OR xtb OR zhb OR nea OR ulm OR bae OR 6ws OR uui OR uit OR 7gd)))]:	       %BORDER-53%%NAME%       %WHITE%							// Highlighting - 7 spaces
+ItemDisplay[UNI ((ETH (ama OR (7wh ILVL>82) OR (7gm ILVL>84) OR 7s8 OR xrs)) OR (!ETH ((amu ILVL>79) OR (rin ILVL>65) OR cm3 OR (7wh ILVL>82) OR (uar ILVL<87) OR dre OR uld OR oba OR bac OR xvb OR 6sw OR xhn OR xhb)))]:	     %MAP-53%%NAME%     %WHITE%				// Highlighting - 5 spaces
+ItemDisplay[UNI ((ETH (amf OR (uhm ILVL>76) OR oba OR uvb OR 7pa OR 9bs)) OR (!ETH ((amu ILVL>72) OR (rin ILVL>38) OR (7gm ILVL<85) OR tgl OR xmb OR zlb OR zvb OR umc OR 7kr OR 7s8 OR xrs OR upl OR xar OR xsh OR uvb OR ztb OR 7wa OR ama)))]:	    %MAP-53%%NAME%    %WHITE%	// Highlighting - 4 spaces
+ItemDisplay[UNI ((ETH (ci3 OR (7fl ILVL>85) OR 7bk OR ulc OR bae OR 9gm OR 7ws OR 7kr OR xtg OR uvg OR uvc OR xpl OR xld OR utu OR 9bs OR 8ls OR 7gi)) OR (!ETH ((amu ILVL>57) OR (7fl ILVL>85) OR xhm OR utu OR uhb OR 9ws OR 7ws OR amf OR 6l7 OR 8hx OR 7gi OR am7 OR xtp OR 8lw OR nef OR xpl OR ci2 OR drb OR drd OR uts OR pac OR hgl OR xlg OR umb OR xth OR uvg)))]:	   %DOT-53%%NAME%   %WHITE%		// Highlighting - 3 spaces
+ItemDisplay[UNI ((ETH (uap OR (uhm ILVL<77) OR (7gm ILVL<85) OR (7wh ILVL<83) OR (7fl ILVL<86) OR baa OR dra OR uui OR dgr OR 9fc OR 9ws OR xlt OR 7m7 OR 7ts OR 6cs OR 7cs OR ulm OR dre OR xea OR pa9 OR nea OR xtb OR 7p7 OR 7s7 OR 7gl OR 7bw OR xsh OR xmg OR lbt OR tbt OR xlb OR xhb OR umb OR zlb OR zhb OR umc OR xrn OR rng OR scl OR gth OR ltp OR xui OR xul OR upl OR uul OR 7b8 OR 9ta OR 7ha OR 7ga OR 9tw OR 7lw)) OR (!ETH (nee OR (7wh ILVL<83) OR (7fl ILVL<86) OR (7sc ILVL>79) OR umg OR uvc OR 8lb OR 9fc OR 7pa OR pae OR dgr OR tbl OR mgl OR xhl OR uh9 OR bad OR plt OR ltp OR xui OR xow OR xts OR upk OR uow OR uhg OR 92a OR 9ga OR 7mp OR 7m7 OR 9ls OR 7gs OR 7b7 OR 7ts OR 8cb OR amb OR 8rx OR 6cs OR 9tw OR 7lw OR aar OR xvg OR xmg OR lbt OR tbt OR xlb OR 7ga OR 9gm OR 7dg OR 8ls OR 7bw OR xtg OR xrn OR xlt OR xld OR xul OR 9ax OR 7bk)))]:	  %DOT-53%%NAME%  %WHITE%		// Highlighting - 2 spaces
+ItemDisplay[UNI ((ETH (9cr OR 9tk OR xkp OR xlm OR bac OR ztb OR 7sp OR 9wn OR 9bw OR xhm OR 9st OR zvb OR uhb OR xmb OR nef OR upk OR xvb OR 7bl OR 7ta OR bwn OR 9yw OR 9gw OR uh9 OR 72a OR uow OR tgl OR xlg OR xvg OR uhg OR stu OR brs OR plt OR fld OR aar OR xla OR xcl OR xth OR xar OR xtp OR uts OR 7wb)) OR (!ETH (amu OR rin OR (7sc ILVL<80) OR skp OR xap OR xkp OR xlm OR xsk OR stu OR vgl OR lbl OR 9gi OR mau OR 9sp OR 9m9 OR 7sp OR 9sb OR 7wc OR 7sr OR am9 OR 8ws OR 9wn OR 9bw OR 7wb OR 9gs OR 7ls OR 7b7 OR gma OR 9fl OR 9qs OR 9cr OR 9kr OR 9s8 OR 7bt OR 9pa OR 92h OR gsd OR 9gw OR 7p7 OR 7br OR cap OR bhm OR crn OR scl OR spl OR xng OR uul OR kit OR xuc OR ush OR lgl OR xhg OR vbt OR hbt OR vbl OR hbl OR zmb OR 9ma OR 9wc OR amd OR 7s7 OR bwn OR 9yw OR gth OR tow OR xrg OR uml OR 9wh OR rng)))]:	 %NAME% %WHITE%		// Highlighting - 1 space
 // Highlighting - Sets
-ItemDisplay[SET (uar OR uth)]:	         %BORDER-84%%NAME%         %WHITE%																			// Highlighting - 9 spaces
-ItemDisplay[SET ((amu ILVL>25) OR xhm OR xtb OR xmg OR 7m7)]:	    %MAP-84%%NAME%    %WHITE%																	// Highlighting - 4 spaces
-ItemDisplay[SET (7qr OR (rin ILVL>59) OR xap OR ulg OR dr8 OR uul OR xar OR amc OR uld OR oba OR ne9)]:	   %DOT-84%%NAME%   %WHITE%												// Highlighting - 3 spaces
-ItemDisplay[SET (ult OR xhb OR ci3 OR zvb OR xmb OR utc OR xsk OR (vbt ((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))) OR uts OR urn OR ucl OR xul OR stu OR paf OR ba5)]:	  %DOT-84%%NAME%  %WHITE%	// Highlighting - 2 spaces
-ItemDisplay[SET ((amu ILVL>16) OR xhl OR 6cs OR 7gd OR zhb OR xhg OR xtg OR xh9 OR uh9 OR vbt OR 7ws OR zmb OR dgr OR bwn OR 7ls OR ci0 OR xrs OR xvg OR uui OR xlb OR 9mt)]:	 %NAME% %WHITE%					// Highlighting - 1 space
+ItemDisplay[SET (uar OR uth)]:	         %BORDER-84%%NAME%         %WHITE%																					// Highlighting - 9 spaces
+ItemDisplay[SET ((amu ILVL>25) OR xhm OR xtb OR xmg OR 7m7)]:	    %MAP-84%%NAME%    %WHITE%																			// Highlighting - 4 spaces
+ItemDisplay[SET (7qr OR xap OR ulg OR dr8 OR uul OR xar OR amc OR uld OR oba OR ne9)]:	   %DOT-84%%NAME%   %WHITE%																// Highlighting - 3 spaces
+ItemDisplay[SET ((rin ILVL>59) OR ult OR xhb OR ci3 OR zvb OR xmb OR utc OR xsk OR (vbt ((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))) OR uts OR urn OR ucl OR xul OR stu OR paf OR ba5)]:	  %DOT-84%%NAME%  %WHITE%	// Highlighting - 2 spaces
+ItemDisplay[SET ((amu ILVL>16) OR xhl OR 6cs OR 7gd OR zhb OR xhg OR xtg OR xh9 OR uh9 OR vbt OR 7ws OR zmb OR dgr OR bwn OR 7ls OR ci0 OR xrs OR xvg OR uui OR xlb OR 9mt)]:	 %NAME% %WHITE%							// Highlighting - 1 space
 
 // Catchall - Unique/Set Items
 ItemDisplay[(UNI OR SET)]: %NAME%%WHITE%
@@ -420,7 +421,7 @@ ItemDisplay[(UNI OR SET)]: %NAME%%WHITE%
 //ItemDisplay[RARE NORM CLVL>39 !(ETH WEAPON) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR fld OR plt OR gth OR ful) OR (buc OR sml OR lrg OR tow OR gts) OR (hax OR lax OR clb OR spc OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR kri OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]:	// Level 40 - Hides worst non-class normal items:	...socketable armors incapable of 3os (after upgrades), medium/heavy armors (except Sacred Armor line), high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each  (eth weapons excluded)
 //ItemDisplay[RARE EXC CLVL>59  !(ETH WEAPON) ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xld OR xlt OR xth OR xul) OR (xuc OR xml OR xrg OR xow OR xts) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9kr OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]:	// Level 60 - Hides worst non-class exceptional items:	...socketable armors incapable of 3os (after upgrades), medium/heavy armors (except Sacred Armor line), high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each  (eth weapons excluded)
 //ItemDisplay[RARE ELT CLVL>79  !(ETH WEAPON) ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR uld OR ult OR uth OR uul) OR (uuc OR uml OR urg OR uow OR uts) OR (7ha OR 7la OR 7cl OR 7sp OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7kr OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx))]:	// Level 80 - Hides worst non-class elite items:	...socketable armors incapable of 3os (after upgrades), medium/heavy armors (except Sacred Armor line), high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each  (eth weapons excluded)
-//ItemDisplay[RARE SIN (NORM OR 9ar OR 9wb OR 9xf) CLVL>49]:	// Level 50 - Hides claws that don't appear with pointmods
+//ItemDisplay[RARE SIN (NORM OR 9ar OR 9wb OR 9xf) CLVL>49]:		// Level 50 - Hides claws that don't appear with pointmods
 
 // Highlighting
 ItemDisplay[RARE ((GLOVES ILVL>42) OR (BOOTS ILVL>36))]:	 %NAME% %WHITE%											// gloves, boots
@@ -440,6 +441,7 @@ ItemDisplay[RARE]: %NAME%%WHITE%
 // .......................................................
 //ItemDisplay[MAG CLVL>79 ((ETH (DRU OR BAR OR DIN OR NEC)) OR (scp OR gsc OR 9sc OR 9qs OR 7sc OR 7qs) OR (9cs OR 7xf OR 7cs) OR (wnd OR ywn OR 9wn) OR (SOR !ob5 !oba !obf))]:	// Level 80 - Hides less-than-ideal class items: eth armor, scepters incapable of 4-sockets, claws incapable of 3-sockets, wands incapable of 2-sockets (sans upgrades), orbs incapable of 3-sockets
 //ItemDisplay[MAG CLVL>94 WEAPON !(ETH (ELT OR crs OR 9cr)) !(SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER)]:										// Level 95 - Hides non-class items except eth elites and eth Phase Blade line
+//ItemDisplay[MAG CLVL>89 !ELT (GLOVES OR BOOTS OR BELT)]:																// Level 90 - Hides non-elite gloves/boots/belts
 
 // Hidden: Unworthy non-class items - level 90
 ItemDisplay[MAG CLVL>89 CHEST !(ltp OR xtp OR utp)]:								// body armor except "Archon Plate" line
@@ -453,8 +455,8 @@ ItemDisplay[MAG NORM CLVL>39 ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng O
 ItemDisplay[MAG EXC CLVL>59  ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xld OR xlt OR xth OR xul) OR (xuc OR xml OR xrg OR xow OR xts) OR (xmg OR xtg OR xhg) OR (xmb OR xtb OR xhb) OR (zmb OR ztb OR zhb) OR (ETH ARMOR !(DRU OR BAR OR DIN OR NEC)) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9kr OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx) OR (!ETH THROWING !ZON))]:
 ItemDisplay[MAG ELT CLVL>79  ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR uld OR ult OR uth OR uul) OR (uuc OR uml OR urg OR uow OR uts) OR (umg OR utg OR uhg) OR (umb OR utb OR uhb) OR (umc OR utc OR uhc) OR (ETH ARMOR !(DRU OR BAR OR DIN OR NEC)) OR (7ha OR 7la OR 7cl OR 7sp OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7kr OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx) OR (!ETH THROWING !ZON))]:
 
-// Hidden: Worst class items (claws incapable of pointmods, staves incapable of 6 sockets) - level 40
-ItemDisplay[MAG CLVL>39 ((ktr OR wrb OR axf OR ces OR clw OR btl OR skr OR 9ar OR 9wb OR 9xf) OR (sst OR lst OR cst OR bst OR 8ss OR 8ls OR 8cs OR 8bs OR 6ss OR 6ls OR 6cs OR 6bs))]:
+// Hidden: Worst class items (claws incapable of pointmods, non-eth staves incapable of 6 sockets) - level 40
+ItemDisplay[MAG CLVL>39 ((SIN (NORM OR 9ar OR 9wb OR 9xf)) OR (STAFF !ETH !(wst OR 8ws OR 6ws)))]:
 
 // Catchall
 ItemDisplay[MAG ETH (crs OR 9cr)]:	  %NAME%  %WHITE%							// Highlighting for: eth Crystal Sword and eth Dimensional Blade
@@ -525,17 +527,11 @@ ItemDisplay[NMAG SOCK>1 !((CHEST SOCK=3) OR (SOR SOCK=2))]: %NAME%{%DARK_GREEN%$
 ItemDisplay[NMAG (SOCK<2 OR (SOR SOCK=2))]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%				// appends price (for items without Runeword descriptions)
 
 // Descriptions for Socketing Recipes (for 4-socket-capable armors and 5-socket-capable weapons)
-//ItemDisplay[NMAG SOCK=0 ILVL>40 !INF !SUP HELM !ETH (DRU OR BAR)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%
 ItemDisplay[NMAG SOCK=0 ILVL>40 !INF !SUP CHEST (ELT OR gth OR xth OR ful OR xul OR aar OR xar)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%YELLOW%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%
 ItemDisplay[NMAG SOCK=0 ILVL>40 !INF !SUP !ETH DIN]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%RED%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%
 ItemDisplay[NMAG SOCK=0 ILVL>40 !INF !SUP ((AXE !(THROWING OR hax OR 9ha OR 7ha OR axe OR 9ax OR 7ax OR lax OR 9la OR 7la)) OR (fla OR 9fl OR 7fl OR mau OR 9m9 OR 7m7 OR gma OR 9gm OR 7gm) OR (crs OR 9cr OR 7cr OR flb OR 9fb OR 7fb OR gsd OR 9gd OR 7gd) OR (SPEAR !(THROWING OR spr OR 9sr OR 7sr OR tri OR 9tr OR 7tr)) OR (POLEARM !bar !9b7 !7o7 !vou !9vo !7vo) OR (BOW !(sbw OR 8sb OR 6sb OR hbw OR 8hb OR 6hb OR cbw OR 8cb OR 6cb)) OR (hxb OR 8hx OR 6hx OR rxb OR 8rx OR 6rx) OR (wst OR 8ws OR 6ws) OR (wsp OR 9ws OR 7ws))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Socketing Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%
 
 // Descriptions for Maximum Possible Sockets (if lower than usual)
-//ItemDisplay[NMAG SOCK=0 (dgr OR 9dg OR 7dg OR dir OR 9di OR 7di)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 1}%CONTINUE%																																									// 1s
-//ItemDisplay[NMAG SOCK=0 (NEC OR axf OR 9xf OR 7xf OR ces OR 9cs OR 7cs OR scp OR 9sc OR 7sc OR sst OR 8ss OR 6ss OR cap OR xap OR uap OR skp OR xkp OR ukp OR hlm OR xlm OR ulm OR fhl OR xhl OR uhl OR hax OR 9ha OR 7ha OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR mac OR 9ma OR 7ma OR ssd OR 9ss OR 7ss OR scm OR 9sm OR 7sm OR sbr OR 9sb OR 7sb OR flc OR 9fc OR 7fc OR bld OR 9bl OR 7bl)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 2}%CONTINUE%	// 2s
-//ItemDisplay[NMAG SOCK=0 (lst OR 8ls OR 6ls OR lrg OR xrg OR urg OR upk OR ush OR 2hs OR 92h OR 72h OR spr OR 9sr OR 7sr OR bar OR 9b7 OR 7o7 OR sbw OR 9sb OR 7sb OR lxb OR 8lx OR 6lx)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 3}%CONTINUE%																											// 3s
-//ItemDisplay[NMAG SOCK=0 (axe OR 9ax OR 7ax OR lax OR 9la OR 7la OR whm OR 9wh OR 7wh OR bsd OR 9bs OR 7bs OR lsd OR 9ls OR 7ls OR tri OR 9tr OR 7tr OR vou OR 9vo OR 7vo OR hbw OR 8hb OR 6hb OR cbw OR 8cb OR 6cb OR mxb OR 8mx OR 6mx)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 4}%CONTINUE%																				// 4s
-//ItemDisplay[NMAG SOCK=0 ((BOW ZON) OR 2ax OR 92a OR 72a OR bax OR 9ba OR 7ba OR btx OR 9bt OR 7bt OR fla OR 9fl OR 7fl OR flb OR 9fb OR 7fb OR brn OR 9br OR 7br OR scy OR 9s8 OR 7s8 OR pax OR 9pa OR 7pa OR lbw OR 8lb OR 6lb OR sbb OR 8s8 OR 6s7 OR swb OR 8sw OR 6sw OR rxb OR 8rx OR 6rx)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 5}%CONTINUE%														// 5s
 ItemDisplay[NMAG SOCK=0 (axf OR 9xf OR 7xf OR ces OR 9cs OR 7cs OR scp OR 9sc OR 7sc)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 2}%CONTINUE%														// 2s (class weapons only)
 ItemDisplay[NMAG SOCK=0 (lst OR 8ls OR 6ls)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 3}%CONTINUE%																			// 3s (class weapons only)
 ItemDisplay[NMAG SOCK=0 (wnd OR ywn OR 9wn OR buc OR xuc)]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Maximum Sockets: 1}%CONTINUE%																		// low tier	1s
@@ -588,7 +584,7 @@ ItemDisplay[NMAG CLVL>14 INF !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR 
 ItemDisplay[NMAG CLVL>14 (BOW OR XBOW) !ZON (SOCK=5 OR (SOCK=0 ILVL>40 SUP (lbw OR 8lb OR 6lb OR sbb OR 8s8 OR 6s7 OR swb OR 8sw OR 6sw OR rxb OR 8rx OR 6rx)))]: {%NAME%}		// 5-socket bows & bows that can only get 5 sockets (only available Runeword is Call to Arms)
 ItemDisplay[NMAG CLVL>14 DAGGER !THROWING (SOCK=2 OR (SOCK=0 (ILVL<26 OR bld OR 9bl OR 7bl)))]: {%NAME%}										// 2-socket daggers & daggers that can only get up to 2 sockets (only available Runewords is Strength)
 
-// Hidden: Worst non-class normal/exceptional items (excluding any with at least 2 of: ethereal, superior, or 3+ sockets) - level 90	...socketable armors incapable of 3os (after upgrades), medium/heavy armors (except Sacred Armor line), high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
+// Hidden: Worst non-class normal/exceptional items (excluding any with at least 2 of: ethereal, superior, 3+ sockets) - level 90	...socketable armors incapable of 3os (after upgrades), medium/heavy armors (except Sacred Armor line), high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
 ItemDisplay[NMAG NORM CLVL>89 !((ETH (ED>0 OR SOCK>2)) OR (ED>0 SOCK>2)) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR fld OR plt OR gth OR ful) OR (buc OR sml OR lrg OR tow OR gts) OR (hax OR lax OR clb OR spc OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR kri OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]: {%NAME%}
 ItemDisplay[NMAG EXC CLVL>89  !((ETH (ED>0 OR SOCK>2)) OR (ED>0 SOCK>2)) ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xld OR xlt OR xth OR xul) OR (xuc OR xml OR xrg OR xow OR xts) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9kr OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]: {%NAME%}
 
@@ -613,13 +609,15 @@ ItemDisplay[NMAG !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAN
 // +---------------------+
 //-¦ Regular Class Items ¦-----------------------------------------------------------------------------------------------
 // +---------------------+
-// Hidden: 1-socket items worth less than 10000 per inventory space (excluding merchant items) - level 90
-ItemDisplay[NMAG SOCK=1 CLVL>89 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14))) !((PRICE>19999 (WP12 OR (CL6 !ob5 !oba !obf))) OR (PRICE>29999 (sst OR 8ss OR 6ss OR (SCEPTER !wsp !9ws !7ws) OR SIN OR ob5 OR oba OR obf)))]: {%NAME%}
+// Hidden: 1-socket items smaller than 4 inventory spaces, all 1-socket items (excluding merchant items) - levels 30, 90
+ItemDisplay[NMAG SOCK=1 CLVL>29 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14))) !(WAND OR sst OR 8ss OR 6ss OR (SCEPTER !wsp !9ws !7ws) OR SIN OR SOR)]: {%NAME%}
+ItemDisplay[NMAG SOCK=1 CLVL>89 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14)))]: {%NAME%}
 
 // Hidden: Unworthy non-pointmod class items - level 80
-ItemDisplay[NMAG DIN (RES<16 AR<61 SOCK<3) CLVL>79]: {%NAME%}		// shields below 30 enhanced damage or 15 all resistance, unless they have 3-4 sockets
-ItemDisplay[NMAG BOW ZON SOCK=5 CLVL>79]: {%NAME%}			// 5-socket bows (only available Runeword is Call to Arms)
-ItemDisplay[NMAG THROWING ZON CLVL>79]: {%NAME%}			// javelins
+ItemDisplay[NMAG DIN (RES<16 AR<61 SOCK<3) CLVL>79]: {%NAME%}				// shields below 30 enhanced damage or 15 all resistance, unless they have 3-4 sockets
+ItemDisplay[NMAG BOW ZON SOCK=5 CLVL>79]: {%NAME%}					// 5-socket bows (only available Runeword is Call to Arms)
+ItemDisplay[NMAG THROWING ZON CLVL>79]: {%NAME%}					// javelins
+//ItemDisplay[NMAG SOR !((SOCK=0 OR SOCK=3) (ob5 OR oba OR obf)) CLVL>79]: {%NAME%}	// orbs incapable of 3-sockets
 
 // Hidden: Skill-Capable Items without skills  (ilvl 10+)
 ItemDisplay[NMAG ILVL>9 SIN !(SOCK>1 !ETH ILVL<67) !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14))) (SK251=0 SK252=0 SK253=0 SK254=0 SK255=0 SK256=0 SK257=0 SK258=0 SK259=0 SK260=0 SK261=0 SK262=0 SK263=0 SK264=0 SK265=0 SK266=0 SK267=0 SK268=0 SK269=0 SK270=0 SK271=0 SK272=0 SK273=0 SK274=0 SK275=0 SK276=0 SK277=0 SK278=0 SK279=0 SK280=0)]: {%NAME%}				// Assassin	Claws		...except: merchant items, 2+ socket non-eth from normal/nightmare
