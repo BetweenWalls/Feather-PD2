@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	15 FEB 2021
+//		Date Updated:	18 FEB 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -399,8 +399,8 @@ ItemDisplay[UNI ((ETH (7gw OR obc OR obf OR 6ws OR xhn OR uar OR 7wa)) OR (!ETH 
 ItemDisplay[UNI ((ETH (ama OR (7wh ILVL>82) OR (7gm ILVL>84) OR 7s8 OR xrs)) OR (!ETH ((amu ILVL>79) OR (rin ILVL>65) OR cm3 OR (7wh ILVL>82) OR (uar ILVL<87) OR dre OR uld OR oba OR bac OR xvb OR 6sw OR xhn OR xhb)))]:	     %MAP-53%%NAME%     %WHITE%				// Highlighting - 5 spaces
 ItemDisplay[UNI ((ETH (amf OR (uhm ILVL>76) OR oba OR uvb OR 7pa OR 9bs OR 7kr)) OR (!ETH ((amu ILVL>72) OR (rin ILVL>38) OR (7gm ILVL<85) OR tgl OR xmb OR zlb OR zvb OR umc OR 7s8 OR xrs OR upl OR xar OR xsh OR uvb OR ztb OR 7wa OR ama)))]:	    %MAP-53%%NAME%    %WHITE%	// Highlighting - 4 spaces
 ItemDisplay[UNI ((ETH (ci3 OR (7fl ILVL>85) OR 7bk OR ulc OR bae OR 9gm OR 7ws OR xtg OR uvg OR uvc OR xpl OR xld OR utu OR 9bs OR 8ls OR 7gi)) OR (!ETH ((amu ILVL>57) OR (7fl ILVL>85) OR xhm OR utu OR uhb OR 9ws OR 7ws OR amf OR 6l7 OR 8hx OR 7gi OR am7 OR xtp OR 8lw OR nef OR xpl OR ci2 OR drb OR drd OR uts OR pac OR hgl OR xlg OR umb OR xth OR uvg OR 7kr)))]:	   %DOT-53%%NAME%   %WHITE%		// Highlighting - 3 spaces
-ItemDisplay[UNI ((ETH (uap OR (uhm ILVL<77) OR (7gm ILVL<85) OR (7wh ILVL<83) OR (7fl ILVL<86) OR 7sc OR baa OR dra OR uui OR dgr OR 9fc OR 9ws OR xlt OR 7m7 OR 7ts OR 6cs OR 7cs OR ulm OR dre OR xea OR pa9 OR nea OR xtb OR 7p7 OR 7s7 OR 7gl OR 7bw OR xsh OR xmg OR lbt OR tbt OR xlb OR xhb OR umb OR zlb OR zhb OR umc OR xrn OR rng OR scl OR gth OR ltp OR xui OR xul OR upl OR uul OR 7b8 OR 9ta OR 7ha OR 7ga OR 9tw OR 7lw OR 9cr OR 7gs OR 7mp OR 9ga OR 92a OR 7wb)) OR (!ETH (nee OR (7wh ILVL<83) OR (7fl ILVL<86) OR 7sc OR umg OR uvc OR 8lb OR 9fc OR 7pa OR pae OR dgr OR tbl OR mgl OR xhl OR uh9 OR bad OR plt OR ltp OR xui OR xow OR xts OR upk OR uow OR uhg OR 92a OR 9ga OR 7mp OR 7m7 OR 9ls OR 7gs OR 7b7 OR 7ts OR 8cb OR amb OR 8rx OR 6cs OR 9tw OR 7lw OR aar OR xvg OR xmg OR lbt OR tbt OR xlb OR 7ga OR 9gm OR 7dg OR 8ls OR 7bw OR xtg OR xrn OR xlt OR xld OR xul OR 9ax OR 7bk)))]:	  %DOT-53%%NAME%  %WHITE%		// Highlighting - 2 spaces
-ItemDisplay[UNI ((ETH (9tk OR xkp OR xlm OR bac OR ztb OR 7sp OR 9wn OR 9bw OR xhm OR 9st OR zvb OR uhb OR xmb OR nef OR upk OR xvb OR 7bl OR 7ta OR bwn OR 9yw OR 9gw OR uh9 OR 72a OR uow OR tgl OR xlg OR xvg OR uhg OR stu OR brs OR plt OR fld OR aar OR xla OR xcl OR xth OR xar OR xtp OR uts OR 9ma OR 9sp OR gma OR mau OR 9fl OR 9wh OR 9m9 OR 7bt OR 9gi OR 9qs OR gsd OR 9sb OR 9ls OR 92h OR 9gs OR 7ls OR 9kr OR 9s8 OR 9pa OR 9wc OR 7sr OR 7br OR am9 OR amd OR 8ws)) OR (!ETH (amu OR rin OR skp OR xap OR xkp OR xlm OR xsk OR stu OR vgl OR lbl OR 9gi OR mau OR 9sp OR 9m9 OR 7sp OR 9sb OR 7wc OR 7sr OR am9 OR 8ws OR 9wn OR 9bw OR 7wb OR 9gs OR 7ls OR 7b7 OR gma OR 9fl OR 9qs OR 9cr OR 9kr OR 9s8 OR 7bt OR 9pa OR 92h OR gsd OR 9gw OR 7p7 OR 7br OR cap OR bhm OR crn OR scl OR spl OR xng OR uul OR kit OR xuc OR ush OR lgl OR xhg OR vbt OR hbt OR vbl OR hbl OR zmb OR 9ma OR 9wc OR amd OR 7s7 OR bwn OR 9yw OR gth OR tow OR xrg OR uml OR 9wh OR rng)))]:	 %NAME% %WHITE%		// Highlighting - 1 space
+ItemDisplay[UNI ((ETH (uap OR (uhm ILVL<77) OR (7gm ILVL<85) OR (7wh ILVL<83) OR (7fl ILVL<86) OR 7sc OR baa OR dra OR uui OR dgr OR 9fc OR 9ws OR xlt OR 7m7 OR 7ts OR 6cs OR 7cs OR ulm OR dre OR xea OR pa9 OR nea OR xtb OR 7p7 OR 7s7 OR 7gl OR 7bw OR xsh OR xmg OR lbt OR tbt OR xlb OR xhb OR umb OR zlb OR zhb OR umc OR xrn OR rng OR scl OR gth OR ltp OR xui OR xul OR upl OR uul OR 7b8 OR 9ta OR 7ha OR 7ga OR 9tw OR 7lw OR 9cr OR 7gs OR 7mp OR 9ga OR 92a OR 7wb OR 9st)) OR (!ETH (nee OR (7wh ILVL<83) OR (7fl ILVL<86) OR 7sc OR umg OR uvc OR 8lb OR 9fc OR 7pa OR pae OR dgr OR tbl OR mgl OR xhl OR uh9 OR bad OR plt OR ltp OR xui OR xow OR xts OR upk OR uow OR uhg OR 92a OR 9ga OR 7mp OR 7m7 OR 9ls OR 7gs OR 7b7 OR 7ts OR 8cb OR amb OR 8rx OR 6cs OR 9tw OR 7lw OR aar OR xvg OR xmg OR lbt OR tbt OR xlb OR 7ga OR 9gm OR 7dg OR 8ls OR 7bw OR xtg OR xrn OR xlt OR xld OR xul OR 9ax OR 7bk)))]:	  %DOT-53%%NAME%  %WHITE%		// Highlighting - 2 spaces
+ItemDisplay[UNI ((ETH (9tk OR xkp OR xlm OR bac OR ztb OR 7sp OR 9wn OR 9bw OR xhm OR zvb OR uhb OR xmb OR nef OR upk OR xvb OR 7bl OR 7ta OR bwn OR 9yw OR 9gw OR uh9 OR 72a OR uow OR tgl OR xlg OR xvg OR uhg OR stu OR brs OR plt OR fld OR aar OR xla OR xcl OR xth OR xar OR xtp OR uts OR 9ma OR 9sp OR gma OR mau OR 9fl OR 9wh OR 9m9 OR 7bt OR 9gi OR 9qs OR gsd OR 9sb OR 9ls OR 92h OR 9gs OR 7ls OR 9kr OR 9s8 OR 9pa OR 9wc OR 7sr OR 7br OR am9 OR amd OR 8ws)) OR (!ETH (amu OR rin OR skp OR xap OR xkp OR xlm OR xsk OR stu OR vgl OR lbl OR 9gi OR mau OR 9sp OR 9m9 OR 7sp OR 9sb OR 7wc OR 7sr OR am9 OR 8ws OR 9wn OR 9bw OR 7wb OR 9gs OR 7ls OR 7b7 OR gma OR 9fl OR 9qs OR 9cr OR 9kr OR 9s8 OR 7bt OR 9pa OR 92h OR gsd OR 9gw OR 7p7 OR 7br OR cap OR bhm OR crn OR scl OR spl OR xng OR uul OR kit OR xuc OR ush OR lgl OR xhg OR vbt OR hbt OR vbl OR hbl OR zmb OR 9ma OR 9wc OR amd OR 7s7 OR bwn OR 9yw OR gth OR tow OR xrg OR uml OR 9wh OR rng)))]:	 %NAME% %WHITE%		// Highlighting - 1 space
 // Highlighting - Sets
 ItemDisplay[SET (uar OR uth)]:	         %BORDER-84%%NAME%         %WHITE%																						// Highlighting - 9 spaces
 ItemDisplay[SET ((amu ILVL>25) OR xhm OR xtb OR xmg OR 7m7)]:	    %MAP-84%%NAME%    %WHITE%																				// Highlighting - 4 spaces
@@ -439,7 +439,7 @@ ItemDisplay[RARE]: %NAME%%WHITE%
 // ... Add custom rules for unidentified magic items here:
 // .......................................................
 //ItemDisplay[MAG CLVL>79 ((ETH (DRU OR BAR OR DIN OR NEC)) OR (scp OR gsc OR 9sc OR 9qs OR 7sc OR 7qs) OR (9cs OR 7xf OR 7cs) OR (wnd OR ywn OR 9wn) OR (SOR !ob5 !oba !obf))]:	// Level 80 - Hides less-than-ideal class items: eth armor, scepters incapable of 4-sockets, claws incapable of 3-sockets, wands incapable of 2-sockets (sans upgrades), orbs incapable of 3-sockets
-//ItemDisplay[MAG CLVL>94 WEAPON !(ETH (ELT OR crs OR 9cr)) !(SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER)]:										// Level 95 - Hides non-class items except eth elites and eth Phase Blade line
+//ItemDisplay[MAG CLVL>89 WEAPON !ETH !(SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER)]:												// Level 90 - Hides non-class non-eth weapons
 //ItemDisplay[MAG CLVL>89 !ELT (GLOVES OR BOOTS OR BELT)]:																// Level 90 - Hides non-elite gloves/boots/belts
 
 // Hidden: Unworthy non-class items - level 90
@@ -465,6 +465,9 @@ ItemDisplay[MAG]: %NAME%%WHITE%
 // +---------------+
 //-¦ Regular Items ¦-----------------------------------------------------------------------------------------------------
 // +---------------+
+// Gambling Items
+ItemDisplay[NMAG !ID]: %NAME%
+
 // Descriptions for available Runewords																					// ...Major Differences: Plague (new RW for all 3-socket weapons, Cham+Fal+Um), Wind (changed from 2-socket to 3-socket melee weapons, Sur+Sur+El)
 ItemDisplay[NMAG (HELM OR CIRC) SOCK=2]: %NAME%{%WHITE%Runewords: %GOLD%Nadir, Lore}%CONTINUE%														// Helm 2s
 ItemDisplay[NMAG (HELM OR CIRC) SOCK=3]: %NAME%{%WHITE%Runewords: %GOLD%Radiance, Delirium, Dream}%CONTINUE%												// Helm 3s
@@ -597,7 +600,7 @@ ItemDisplay[NMAG ELT CLVL>79  !(ETH OR ED>0 OR SOCK>2) ((uap OR ukp OR ulm OR uh
 
 // Highlighting
 ItemDisplay[NMAG CHEST (DEF>799 OR (DEF>749 FRW=-5) OR (DEF>699 FRW=0))]:	 %NAME%{%NAME%}%WHITE% 					// eth body armor with high defense (heavy 800+, medium 750+, light 700+)
-ItemDisplay[NMAG ELT ETH ED>0 (AXE OR MACE OR SWORD OR POLEARM OR SPEAR) !THROWING]:	 %NAME%{%NAME%}%WHITE% 				// sup & eth non-class elite melee weapons
+ItemDisplay[NMAG ELT ETH ED>0 (AXE OR MACE OR SWORD OR POLEARM OR SPEAR) !THROWING !ZON]:	 %NAME%{%NAME%}%WHITE% 			// sup & eth non-class elite melee weapons
 ItemDisplay[NMAG (((7s8 OR 7wc) ETH SOCK>3 SOCK<6) OR ((((7wa OR 7cr) (ETH OR ED>0)) OR (7gd ETH)) SOCK=5))]:	 %NAME%{%NAME%}%WHITE% 	// 4-5s eth Thresher, 4-5s eth Giant Thresher, 5s sup/eth Berserker Axe, 5s sup Phase Blade, 5s eth Colossus Blade
 ItemDisplay[NMAG ED=0 !ETH ((usk DEF>151) OR (uh9 DEF>154) OR (uui DEF>461) OR (uea DEF>464) OR (ula DEF>468) OR (utu DEF>475) OR (urs DEF>495) OR (utp DEF>518) OR (uar DEF>594) OR (uit DEF>147) OR (upk DEF>162) OR (ush DEF>172))]:	 %NAME%{%NAME%}%WHITE% 	// good elite armor with top 5% defense
 
