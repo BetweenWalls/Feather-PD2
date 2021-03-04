@@ -14,7 +14,7 @@ If you prefer to see fewer items, some rules are included that, when enabled, wi
 * shopping for valuable items made easier
 * descriptions for socketed effects on stacked gems/runes
 * descriptions for possible runewords
-* descriptions for crafting/upgrading/socketing/reforging recipes where appropriate
+* descriptions for craft/upgrade/socket/reforge/repair recipes where appropriate
 * descriptions for maximum possible sockets where appropriate
 * descriptions for item price on regular/magic/rare items
 
