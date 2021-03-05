@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	3 MAR 2021
+//		Date Updated:	5 MAR 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -104,13 +104,13 @@ ItemDisplay[upma]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ P%GRAY%.%WHITE%S
 ItemDisplay[scou]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ %ORANGE%Hel Rune%NL%%BLUE%Lowers Map Rarity to Common}%WHITE%								// Orb of Destruction	(Magic/Rare -> Common)
 ItemDisplay[rera]:	%NAME%{%GOLD%Orb %WHITE%+ %YELLOW%Map %WHITE%+ P%GRAY%.%WHITE%Gem + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE%+%NL%%BLUE%Rerolls Rare Map Affixes}%WHITE%		// Horadrim Orb		(Reroll Rare)
 // Maps
-ItemDisplay[(t01 OR t02 OR t03 OR t04 OR t05 OR t06 OR t07 OR t08 OR t09 OR t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t19 OR t20 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29)]:	 %GRAY%%NL%%TAN%%MAP%%NAME%%CONTINUE%	// unknown maps
-ItemDisplay[t16]:	 %GRAY%(t1)%NL%%TAN%%MAP%%NAME%%CONTINUE%								// maps - T1 (Ruins of Viz-Jun)
-ItemDisplay[t18]:	 %GRAY%(t2)%NL%%TAN%%MAP%%NAME%%CONTINUE%								// maps - T2 (Phlegethon)
-ItemDisplay[t17]:	 %GRAY%(t3)%NL%%TAN%%MAP%%NAME%%CONTINUE%								// maps - T3 (River of Blood)
-ItemDisplay[(t01 OR t02 OR t03 OR t04 OR t05 OR t06 OR t07 OR t08 OR t09 OR t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t20 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29) NMAG]:	%WHITE%Map Scroll%NAME%{%NAME%}%WHITE%		// maps - regular
-ItemDisplay[(t01 OR t02 OR t03 OR t04 OR t05 OR t06 OR t07 OR t08 OR t09 OR t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t20 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29) MAG]:	%BLUE%Map Scroll%NAME%%DOT-97%{%NAME%}%WHITE%	// maps - magic
-ItemDisplay[(t01 OR t02 OR t03 OR t04 OR t05 OR t06 OR t07 OR t08 OR t09 OR t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t20 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29) RARE]:	%YELLOW%Map Scroll%NAME%%DOT-6D%{%NAME%}%WHITE%	// maps - rare
+ItemDisplay[(t11 OR t12 OR t13 OR t15 OR t14 OR t16)]:	 %GRAY%(t1)%NL%%TAN%%MAP%%NAME%%CONTINUE%	// maps - T1 (Ruins of Viz-Jun)
+ItemDisplay[(t21 OR t22 OR t23 OR t18)]:		 %GRAY%(t2)%NL%%TAN%%MAP%%NAME%%CONTINUE%	// maps - T2 (Phlegethon)
+ItemDisplay[(t31 OR t32 OR t33 OR t34 OR t17)]:		 %GRAY%(t3)%NL%%TAN%%MAP%%NAME%%CONTINUE%	// maps - T3 (River of Blood)
+ItemDisplay[(t41 OR t42)]:				 %GRAY%(t3)%NL%%TAN%%MAP%%NAME%%CONTINUE%	// maps - T4
+ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t21 OR t22 OR t23 OR t31 OR t32 OR t33 OR t34 OR t41 OR t42 OR t16 OR t17 OR t18) NMAG]:	%WHITE%Map Scroll%NAME%{%NAME%}%WHITE%		// maps - regular
+ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t21 OR t22 OR t23 OR t31 OR t32 OR t33 OR t34 OR t41 OR t42 OR t16 OR t17 OR t18) MAG]:		%BLUE%Map Scroll%NAME%%DOT-97%{%NAME%}%WHITE%	// maps - magic
+ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t21 OR t22 OR t23 OR t31 OR t32 OR t33 OR t34 OR t41 OR t42 OR t16 OR t17 OR t18) RARE]:	%YELLOW%Map Scroll%NAME%%DOT-6D%{%NAME%}%WHITE%	// maps - rare
 
 // Miscellaneous
 ItemDisplay[tsc]:	%BLUE%­ %WHITE%Portal						// Scroll of Town Portal
@@ -593,7 +593,7 @@ ItemDisplay[NMAG CLVL>14 ((SOCK=1 !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZO
 ItemDisplay[NMAG CLVL>14 THROWING !ZON NORM]: {%NAME%}																	// normal throwable weapons
 ItemDisplay[NMAG CLVL>14 INF !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER)]: {%NAME%}									// inferior items
 ItemDisplay[NMAG CLVL>14 (BOW OR XBOW) !ZON (SOCK=5 OR (SOCK=0 ILVL>40 SUP (lbw OR 8lb OR 6lb OR sbb OR 8s8 OR 6s7 OR swb OR 8sw OR 6sw OR rxb OR 8rx OR 6rx)))]: {%NAME%}		// 5-socket bows & bows that can only get 5 sockets (only available Runeword is Call to Arms)
-ItemDisplay[NMAG CLVL>14 DAGGER !THROWING (SOCK=2 OR (SOCK=0 (ILVL<26 OR bld OR 9bl OR 7bl)))]: {%NAME%}										// 2-socket daggers & daggers that can only get up to 2 sockets (only available Runewords is Strength)
+//ItemDisplay[NMAG CLVL>14 DAGGER !THROWING (SOCK=2 OR (SOCK=0 (ILVL<26 OR bld OR 9bl OR 7bl)))]: {%NAME%}										// 2-socket daggers & daggers that can only get up to 2 sockets (only available Runewords is Strength)
 
 // Hidden: Worst non-class normal/exceptional items (excluding any with at least 2 of: ethereal, superior, 3+ sockets) - level 90	...socketable armors incapable of 3os (after upgrades), medium/heavy armors (except Sacred Armor line), high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
 ItemDisplay[NMAG NORM CLVL>89 !((ETH (ED>0 OR SOCK>2)) OR (ED>0 SOCK>2)) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR fld OR plt OR gth OR ful OR stu) OR (buc OR sml OR lrg OR tow OR gts) OR (hax OR lax OR clb OR spc OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]: {%NAME%}
