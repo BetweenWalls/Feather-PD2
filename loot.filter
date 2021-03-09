@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	5 MAR 2021
+//		Date Updated:	8 MAR 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -103,14 +103,15 @@ ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%
 ItemDisplay[upma]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ P%GRAY%.%WHITE%Skull + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE%+%NL%%BLUE%Raises Map Rarity from Magic to Rare}%WHITE%	// Angelic Orb		(Magic -> Rare)
 ItemDisplay[scou]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ %ORANGE%Hel Rune%NL%%BLUE%Lowers Map Rarity to Common}%WHITE%								// Orb of Destruction	(Magic/Rare -> Common)
 ItemDisplay[rera]:	%NAME%{%GOLD%Orb %WHITE%+ %YELLOW%Map %WHITE%+ P%GRAY%.%WHITE%Gem + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE%+%NL%%BLUE%Rerolls Rare Map Affixes}%WHITE%		// Horadrim Orb		(Reroll Rare)
+ItemDisplay[upmp]:	%NAME%{Combines three maps to create one of a higher tier}%WHITE%													// Cartographer's Orb
 // Maps
-ItemDisplay[(t11 OR t12 OR t13 OR t15 OR t14 OR t16)]:	 %GRAY%(t1)%NL%%TAN%%MAP%%NAME%%CONTINUE%	// maps - T1 (Ruins of Viz-Jun)
-ItemDisplay[(t21 OR t22 OR t23 OR t18)]:		 %GRAY%(t2)%NL%%TAN%%MAP%%NAME%%CONTINUE%	// maps - T2 (Phlegethon)
-ItemDisplay[(t31 OR t32 OR t33 OR t34 OR t17)]:		 %GRAY%(t3)%NL%%TAN%%MAP%%NAME%%CONTINUE%	// maps - T3 (River of Blood)
-ItemDisplay[(t41 OR t42)]:				 %GRAY%(t3)%NL%%TAN%%MAP%%NAME%%CONTINUE%	// maps - T4
-ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t21 OR t22 OR t23 OR t31 OR t32 OR t33 OR t34 OR t41 OR t42 OR t16 OR t17 OR t18) NMAG]:	%WHITE%Map Scroll%NAME%{%NAME%}%WHITE%		// maps - regular
-ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t21 OR t22 OR t23 OR t31 OR t32 OR t33 OR t34 OR t41 OR t42 OR t16 OR t17 OR t18) MAG]:		%BLUE%Map Scroll%NAME%%DOT-97%{%NAME%}%WHITE%	// maps - magic
-ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t21 OR t22 OR t23 OR t31 OR t32 OR t33 OR t34 OR t41 OR t42 OR t16 OR t17 OR t18) RARE]:	%YELLOW%Map Scroll%NAME%%DOT-6D%{%NAME%}%WHITE%	// maps - rare
+ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19)]: %GRAY%(t1)%NL%%TAN%%MAP%%NAME%%CONTINUE%	// maps - T1 (Ruins of Viz-Jun, Horazon's Memory, Bastion Keep)
+ItemDisplay[(t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29)]: %GRAY%(t2)%NL%%TAN%%MAP%%NAME%%CONTINUE%	// maps - T2 (Torajan Jungle, Throne of Insanity, Blood Moon, Phlegethon)
+ItemDisplay[(t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39)]: %GRAY%(t3)%NL%%TAN%%MAP%%NAME%%CONTINUE%	// maps - T3 (Arreat Battlefield, Ancestral Trial, Sewers of Harrogath, Cathedral of Light, River of Blood, Tomb of Zultan Kulle)
+ItemDisplay[(t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %GRAY%(t3)%NL%%TAN%%MAP%%NAME%%CONTINUE%	// maps - T4
+ItemDisplay[NMAG (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %WHITE%Map Scroll%NAME%{%NAME%}%WHITE%		// maps - regular
+ItemDisplay[MAG  (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %BLUE%Map Scroll%NAME%%DOT-97%{%NAME%}%WHITE%	// maps - magic
+ItemDisplay[RARE (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %YELLOW%Map Scroll%NAME%%DOT-6D%{%NAME%}%WHITE%	// maps - rare
 
 // Miscellaneous
 ItemDisplay[tsc]:	%BLUE%­ %WHITE%Portal						// Scroll of Town Portal
@@ -171,6 +172,7 @@ ItemDisplay[GEMTYPE=7]: %ORANGE%[%GRAY%%NAME%{%NAME%}
 // Modification
 ItemDisplay[RUNE>0]: %NAME% %TAN%(%WHITE%%RUNENUM%%TAN%)%WHITE%%CONTINUE%	// appends rune number
 ItemDisplay[RUNE>0 QTY>1]: %NAME% %WHITE%×%QTY%%CONTINUE%			// appends quantity
+ItemDisplay[RUNE>0 RUNE<15 (CLVL<70 OR DIFF<2)]: %NAME%%PX-60%%CONTINUE%	// notifications for low runes when in Normal/Nightmare or below level 70
 
 // Descriptions for Stacked Runes (Socketed Effects)
 ItemDisplay[r01s]: %NAME%{%WHITE%Others: +15 Defense, +1 to Light Radius%NL%Weapon: +50 to Attack Rating, +1 to Light Radius%NL%}%CONTINUE%
@@ -303,9 +305,9 @@ ItemDisplay[!NMAG ETH  (REPAIR>0 OR STAT152>0 OR THROWING OR 7cr OR (UNI ((7ba L
 ItemDisplay[!NMAG ETH !(REPAIR>0 OR STAT152>0 OR THROWING OR 7cr OR (UNI ((7ba LVLREQ=74) OR (7bl LVLREQ=66) OR 7cs)) OR (UNI !ID (xla OR xpl OR uul OR uvb OR 9la OR 7sp OR 9cr OR 9st OR 7gd OR 7b7 OR 7p7 OR 7wh OR 7ba OR 7bl)))]: %GRAY%eth %NAME%%CONTINUE%	// Ethereal (not unbreakable)
 
 // Modification: Repair Recipe
-ItemDisplay[STAT73>0 STAT72<2 REPAIR=0 !ETH ARMOR]: %NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%8%TAN%)}%WHITE%
-ItemDisplay[STAT73>0 STAT72<2 REPAIR=0 !ETH WEAPON]: %NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%9%TAN%)}%WHITE%
-ItemDisplay[STAT73>0 STAT72<2 REPAIR=0 ETH]: %NAME%{%WHITE%Repair Recipe: %ORANGE%[%GRAY%@%ORANGE%]%GRAY%+%TAN%(%WHITE%33%TAN%)}%WHITE%
+ItemDisplay[STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) !ETH ARMOR]: %NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%8%TAN%)}%WHITE%
+ItemDisplay[STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) !ETH WEAPON]: %NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%9%TAN%)}%WHITE%
+ItemDisplay[STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) ETH]: %NAME%{%WHITE%Repair Recipe: %ORANGE%[%GRAY%@%ORANGE%]%GRAY%+%TAN%(%WHITE%33%TAN%)}%WHITE%
 
 
 // +------------------------------------------------------+
@@ -625,7 +627,7 @@ ItemDisplay[NMAG SOCK=1 CLVL>29 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14))
 ItemDisplay[NMAG SOCK=1 CLVL>89 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14)))]: {%NAME%}
 
 // Hidden: Unworthy class items - level 80
-ItemDisplay[NMAG DIN (RES<16 AR<61 SOCK<3) CLVL>79]: {%NAME%}				// shields below 30 enhanced damage or 15 all resistance, unless they have 3-4 sockets
+ItemDisplay[NMAG DIN (RES<15 STAT17<30 SOCK<3) CLVL>79]: {%NAME%}			// shields below 30 enhanced damage or 15 all resistance, unless they have 3-4 sockets
 ItemDisplay[NMAG BOW ZON SOCK=5 CLVL>79]: {%NAME%}					// 5-socket bows (only available Runeword is Call to Arms)
 ItemDisplay[NMAG THROWING ZON CLVL>79 TABSK2<3]: {%NAME%}				// javelins without +3 skills
 //ItemDisplay[NMAG SOR !((SOCK=0 OR SOCK=3) (ob5 OR oba OR obf)) CLVL>79]: {%NAME%}	// orbs incapable of 3-sockets
@@ -711,6 +713,33 @@ ItemDisplay[NMAG ZON]: %NAME%{%NAME%}%WHITE%
 // Modification: Paladin Shields
 //    0-socket text divider
 ItemDisplay[NMAG DIN ED>0 SOCK=0]: %NAME% %GRAY%­{%NAME%}%CONTINUE%
+//    Resistances
+ItemDisplay[NMAG DIN RES=30]: %NAME% %BLUE%+30{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=29]: %NAME% %BLUE%+29{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=28]: %NAME% %BLUE%+28{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=27]: %NAME% %BLUE%+27{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=26]: %NAME% %BLUE%+26{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=25]: %NAME% %BLUE%+25{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=24]: %NAME% %BLUE%+24{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=23]: %NAME% %BLUE%+23{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=22]: %NAME% %BLUE%+22{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=21]: %NAME% %BLUE%+21{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=20]: %NAME% %BLUE%+20{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=19]: %NAME% %BLUE%+19{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=18]: %NAME% %BLUE%+18{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=17]: %NAME% %BLUE%+17{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=16]: %NAME% %BLUE%+16{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=15]: %NAME% %BLUE%+15{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=14]: %NAME% %BLUE%+14{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=13]: %NAME% %BLUE%+13{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=12]: %NAME% %BLUE%+12{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=11]: %NAME% %BLUE%+11{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=10]: %NAME% %BLUE%+10{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=9]: %NAME% %BLUE%+9{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=8]: %NAME% %BLUE%+8{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=7]: %NAME% %BLUE%+7{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=6]: %NAME% %BLUE%+6{%NAME%}%WHITE%
+ItemDisplay[NMAG DIN RES=5]: %NAME% %BLUE%+5{%NAME%}%WHITE%
 //    Enhanced Damage
 ItemDisplay[NMAG DIN STAT17=65]: %NAME% %BLUE%+65{%NAME%}%CONTINUE%
 ItemDisplay[NMAG DIN STAT17=64]: %NAME% %BLUE%+64{%NAME%}%CONTINUE%
@@ -876,46 +905,4 @@ ItemDisplay[NMAG DIN AR=18]: %NAME%/+18{%NAME%}%WHITE%
 ItemDisplay[NMAG DIN AR=17]: %NAME%/+17{%NAME%}%WHITE%
 ItemDisplay[NMAG DIN AR=16]: %NAME%/+16{%NAME%}%WHITE%
 ItemDisplay[NMAG DIN AR=15]: %NAME%/+15{%NAME%}%WHITE%
-//    Resistances
-ItemDisplay[NMAG DIN RES=45]: %NAME% %BLUE%+45{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=44]: %NAME% %BLUE%+44{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=43]: %NAME% %BLUE%+43{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=42]: %NAME% %BLUE%+42{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=41]: %NAME% %BLUE%+41{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=40]: %NAME% %BLUE%+40{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=39]: %NAME% %BLUE%+39{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=38]: %NAME% %BLUE%+38{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=37]: %NAME% %BLUE%+37{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=36]: %NAME% %BLUE%+36{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=35]: %NAME% %BLUE%+35{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=34]: %NAME% %BLUE%+34{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=33]: %NAME% %BLUE%+33{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=32]: %NAME% %BLUE%+32{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=31]: %NAME% %BLUE%+31{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=30]: %NAME% %BLUE%+30{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=29]: %NAME% %BLUE%+29{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=28]: %NAME% %BLUE%+28{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=27]: %NAME% %BLUE%+27{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=26]: %NAME% %BLUE%+26{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=25]: %NAME% %BLUE%+25{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=24]: %NAME% %BLUE%+24{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=23]: %NAME% %BLUE%+23{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=22]: %NAME% %BLUE%+22{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=21]: %NAME% %BLUE%+21{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=20]: %NAME% %BLUE%+20{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=19]: %NAME% %BLUE%+19{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=18]: %NAME% %BLUE%+18{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=17]: %NAME% %BLUE%+17{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=16]: %NAME% %BLUE%+16{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=15]: %NAME% %BLUE%+15{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=14]: %NAME% %BLUE%+14{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=13]: %NAME% %BLUE%+13{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=12]: %NAME% %BLUE%+12{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=11]: %NAME% %BLUE%+11{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=10]: %NAME% %BLUE%+10{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=9]: %NAME% %BLUE%+9{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=8]: %NAME% %BLUE%+8{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=7]: %NAME% %BLUE%+7{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=6]: %NAME% %BLUE%+6{%NAME%}%WHITE%
-ItemDisplay[NMAG DIN RES=5]: %NAME% %BLUE%+5{%NAME%}%WHITE%
 ItemDisplay[NMAG DIN]: %NAME%{%NAME%}%WHITE%
