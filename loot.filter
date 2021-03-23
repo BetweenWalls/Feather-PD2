@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	21 MAR 2021
+//		Date Updated:	23 MAR 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -17,7 +17,7 @@
 //-¦ Gold and Potions ¦--------------------------------------------------------------------------------------------------
 // +------------------+
 // Hidden: smaller gold piles - levels 5, 10, 20, 30, 50, 70, 80, 90, 95
-ItemDisplay[((GOLD<10000 CLVL>94) OR (GOLD<5000 CLVL>89) OR (GOLD<3000 CLVL>79) OR (GOLD<1800 CLVL>69) OR (GOLD<1200 CLVL>49) OR (GOLD<600 CLVL>29) OR (GOLD<300 CLVL>19) OR (GOLD<100 CLVL>9) OR (GOLD<30 CLVL>4))]:
+ItemDisplay[((GOLD<7000 CLVL>94) OR (GOLD<4000 CLVL>89) OR (GOLD<2500 CLVL>79) OR (GOLD<1800 CLVL>69) OR (GOLD<1200 CLVL>49) OR (GOLD<600 CLVL>29) OR (GOLD<300 CLVL>19) OR (GOLD<100 CLVL>9) OR (GOLD<30 CLVL>4))]:
 ItemDisplay[GOLD>0]: %NAME%
 
 // Rejuvenation
@@ -267,7 +267,7 @@ ItemDisplay[jew]:	{}%ORANGE%{%DARK_GREEN%O%ORANGE%} %NAME%%CONTINUE%	// prepends
 ItemDisplay[(cm1 OR cm2 OR cm3) MAG]: %PURPLE%%NAME%%CONTINUE%			// sets charm color
 
 // Highlighting
-ItemDisplay[jew RARE !ID]:								  %DOT-6D%%NAME%%WHITE%  				// jewels (unid rare)
+ItemDisplay[jew RARE !ID]:								  %DOT-6D%%NAME%{%NAME%}%WHITE%  			// jewels (unid rare)
 ItemDisplay[(cm1 OR cm3) MAG (ILVL>90 OR (cm1 (ILVL=47 OR (ILVL>56 ILVL<63))))]:	  %NAME%{%WHITE%Item Level: %TAN%%ILVL%}%WHITE%  	// charms (best ilvl for rerolling)
 ItemDisplay[((cm1 ILVL>46) OR (cm3 ILVL>49)) MAG]:					 %NAME%{%WHITE%Item Level: %ILVL%}%WHITE% 		// charms (okay ilvl for rerolling)
 
@@ -315,7 +315,7 @@ ItemDisplay[STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) ETH]: %NAME%{%WHITE%Repai
 //-¦ Runeword/Unique/Set/Rare/Crafted Items  (identified) ¦--------------------------------------------------------------
 // +------------------------------------------------------+
 // Runewords
-ItemDisplay[RW]: %NAME%%WHITE%
+ItemDisplay[RW]: %NAME%{%NAME%}%WHITE%
 
 // Unique/Set Items
 ItemDisplay[UNI ID rin LIFE=20 REPLIFE>4]: Ring%NL%Manald Heal%WHITE%		// uses the classic name for "The Eye of Mordini"
@@ -323,7 +323,7 @@ ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 (bhm OR ci0 OR ci1 OR buc OR spk OR b
 ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 (xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%20%TAN%)}%WHITE%									// Upgrade Armor (Exceptional)
 ItemDisplay[(UNI OR SET) ID ILVL>40 ((WEAPON NORM !WAND !SOR) OR ((wnd OR ywn) SOCK=0)) !hdm !msf !g33 !qf1 !hfh]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%12%TAN%)}%WHITE%							// Upgrade Weapon (Normal)
 ItemDisplay[(UNI OR SET) ID ILVL>40 ((WEAPON EXC !WAND !SOR) OR (9wn SOCK=0))]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%17%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%WHITE%											// Upgrade Weapon (Exceptional)
-ItemDisplay[(UNI OR SET) ID]: %NAME%%WHITE%
+ItemDisplay[(UNI OR SET) ID]: %NAME%{%NAME%}%WHITE%
 
 // Rare/Crafted Items
 ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 LVLREQ<91 (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%	// Upgrade Armor (Normal)
@@ -630,7 +630,7 @@ ItemDisplay[NMAG SOCK=1 CLVL>29 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14))
 ItemDisplay[NMAG SOCK=1 CLVL>89 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14)))]: {%NAME%}
 
 // Hidden: Unworthy class items - level 80
-ItemDisplay[NMAG DIN (RES<15 STAT17<30 SOCK<3) CLVL>79]: {%NAME%}			// shields below 30 enhanced damage or 15 all resistance, unless they have 3-4 sockets
+ItemDisplay[NMAG DIN (RES<15 STAT18<30 SOCK<3) CLVL>79]: {%NAME%}			// shields below 30 enhanced damage or 15 all resistance, unless they have 3-4 sockets
 ItemDisplay[NMAG BOW ZON SOCK=5 CLVL>79]: {%NAME%}					// 5-socket bows (only available Runeword is Call to Arms)
 ItemDisplay[NMAG THROWING ZON CLVL>79 TABSK2<3]: {%NAME%}				// javelins without +3 skills
 //ItemDisplay[NMAG SOR !((SOCK=0 OR SOCK=3) (ob5 OR oba OR obf)) CLVL>79]: {%NAME%}	// orbs incapable of 3-sockets
@@ -759,62 +759,62 @@ ItemDisplay[NMAG DIN RES=7]: %NAME% %BLUE%+7{%NAME%}%WHITE%
 ItemDisplay[NMAG DIN RES=6]: %NAME% %BLUE%+6{%NAME%}%WHITE%
 ItemDisplay[NMAG DIN RES=5]: %NAME% %BLUE%+5{%NAME%}%WHITE%
 //    Enhanced Damage
-ItemDisplay[NMAG DIN STAT17=65]: %NAME% %BLUE%+65{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=64]: %NAME% %BLUE%+64{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=63]: %NAME% %BLUE%+63{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=62]: %NAME% %BLUE%+62{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=61]: %NAME% %BLUE%+61{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=60]: %NAME% %BLUE%+60{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=59]: %NAME% %BLUE%+59{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=58]: %NAME% %BLUE%+58{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=57]: %NAME% %BLUE%+57{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=56]: %NAME% %BLUE%+56{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=55]: %NAME% %BLUE%+55{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=54]: %NAME% %BLUE%+54{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=53]: %NAME% %BLUE%+53{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=52]: %NAME% %BLUE%+52{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=51]: %NAME% %BLUE%+51{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=50]: %NAME% %BLUE%+50{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=49]: %NAME% %BLUE%+49{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=48]: %NAME% %BLUE%+48{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=47]: %NAME% %BLUE%+47{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=46]: %NAME% %BLUE%+46{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=45]: %NAME% %BLUE%+45{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=44]: %NAME% %BLUE%+44{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=43]: %NAME% %BLUE%+43{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=42]: %NAME% %BLUE%+42{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=41]: %NAME% %BLUE%+41{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=40]: %NAME% %BLUE%+40{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=39]: %NAME% %BLUE%+39{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=38]: %NAME% %BLUE%+38{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=37]: %NAME% %BLUE%+37{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=36]: %NAME% %BLUE%+36{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=35]: %NAME% %BLUE%+35{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=34]: %NAME% %BLUE%+34{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=33]: %NAME% %BLUE%+33{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=32]: %NAME% %BLUE%+32{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=31]: %NAME% %BLUE%+31{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=30]: %NAME% %BLUE%+30{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=29]: %NAME% %BLUE%+29{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=28]: %NAME% %BLUE%+28{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=27]: %NAME% %BLUE%+27{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=26]: %NAME% %BLUE%+26{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=25]: %NAME% %BLUE%+25{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=24]: %NAME% %BLUE%+24{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=23]: %NAME% %BLUE%+23{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=22]: %NAME% %BLUE%+22{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=21]: %NAME% %BLUE%+21{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=20]: %NAME% %BLUE%+20{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=19]: %NAME% %BLUE%+19{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=18]: %NAME% %BLUE%+18{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=17]: %NAME% %BLUE%+17{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=16]: %NAME% %BLUE%+16{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=15]: %NAME% %BLUE%+15{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=14]: %NAME% %BLUE%+14{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=13]: %NAME% %BLUE%+13{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=12]: %NAME% %BLUE%+12{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=11]: %NAME% %BLUE%+11{%NAME%}%CONTINUE%
-ItemDisplay[NMAG DIN STAT17=10]: %NAME% %BLUE%+10{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=65]: %NAME% %BLUE%+65{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=64]: %NAME% %BLUE%+64{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=63]: %NAME% %BLUE%+63{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=62]: %NAME% %BLUE%+62{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=61]: %NAME% %BLUE%+61{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=60]: %NAME% %BLUE%+60{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=59]: %NAME% %BLUE%+59{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=58]: %NAME% %BLUE%+58{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=57]: %NAME% %BLUE%+57{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=56]: %NAME% %BLUE%+56{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=55]: %NAME% %BLUE%+55{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=54]: %NAME% %BLUE%+54{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=53]: %NAME% %BLUE%+53{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=52]: %NAME% %BLUE%+52{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=51]: %NAME% %BLUE%+51{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=50]: %NAME% %BLUE%+50{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=49]: %NAME% %BLUE%+49{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=48]: %NAME% %BLUE%+48{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=47]: %NAME% %BLUE%+47{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=46]: %NAME% %BLUE%+46{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=45]: %NAME% %BLUE%+45{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=44]: %NAME% %BLUE%+44{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=43]: %NAME% %BLUE%+43{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=42]: %NAME% %BLUE%+42{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=41]: %NAME% %BLUE%+41{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=40]: %NAME% %BLUE%+40{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=39]: %NAME% %BLUE%+39{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=38]: %NAME% %BLUE%+38{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=37]: %NAME% %BLUE%+37{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=36]: %NAME% %BLUE%+36{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=35]: %NAME% %BLUE%+35{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=34]: %NAME% %BLUE%+34{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=33]: %NAME% %BLUE%+33{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=32]: %NAME% %BLUE%+32{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=31]: %NAME% %BLUE%+31{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=30]: %NAME% %BLUE%+30{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=29]: %NAME% %BLUE%+29{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=28]: %NAME% %BLUE%+28{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=27]: %NAME% %BLUE%+27{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=26]: %NAME% %BLUE%+26{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=25]: %NAME% %BLUE%+25{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=24]: %NAME% %BLUE%+24{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=23]: %NAME% %BLUE%+23{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=22]: %NAME% %BLUE%+22{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=21]: %NAME% %BLUE%+21{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=20]: %NAME% %BLUE%+20{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=19]: %NAME% %BLUE%+19{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=18]: %NAME% %BLUE%+18{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=17]: %NAME% %BLUE%+17{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=16]: %NAME% %BLUE%+16{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=15]: %NAME% %BLUE%+15{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=14]: %NAME% %BLUE%+14{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=13]: %NAME% %BLUE%+13{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=12]: %NAME% %BLUE%+12{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=11]: %NAME% %BLUE%+11{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN STAT18=10]: %NAME% %BLUE%+10{%NAME%}%CONTINUE%
 //	Attack Rating
 ItemDisplay[NMAG DIN AR=121]: %NAME%/+121{%NAME%}%WHITE%
 ItemDisplay[NMAG DIN AR=120]: %NAME%/+120{%NAME%}%WHITE%
