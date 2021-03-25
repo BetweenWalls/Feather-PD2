@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	23 MAR 2021
+//		Date Updated:	24 MAR 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -278,7 +278,7 @@ ItemDisplay[jew]:	{}%ORANGE%{%DARK_GREEN%O%ORANGE%} %NAME%%CONTINUE%	// prepends
 ItemDisplay[(cm1 OR cm2 OR cm3) MAG]: %PURPLE%%NAME%%CONTINUE%			// sets charm color
 
 // Highlighting
-ItemDisplay[jew RARE !ID]:								  %DOT-6D%%NAME%{%NAME%}%WHITE%  			// jewels (unid rare)
+ItemDisplay[jew RARE !ID]:								  %DOT-6D%%NAME%{%NAME%}%WHITE%  			// unid rare jewels (also notifies)
 ItemDisplay[(cm1 OR cm3) MAG (ILVL>90 OR (cm1 (ILVL=47 OR (ILVL>56 ILVL<63))))]:	  %NAME%{%WHITE%Item Level: %TAN%%ILVL%}%WHITE%  	// charms (best ilvl for rerolling)
 ItemDisplay[((cm1 ILVL>46) OR (cm3 ILVL>49)) MAG]:					 %NAME%{%WHITE%Item Level: %ILVL%}%WHITE% 		// charms (okay ilvl for rerolling)
 
@@ -293,8 +293,8 @@ ItemDisplay[(aqv OR cqv) CLVL>4]:
 ItemDisplay[MAG amu ID ILVL>81 LVLREQ<45 PRICE>9000]:		%NAME% %GRAY%[l%ILVL%]{%DARK_GREEN%$%PRICE%}%WHITE%																										// shows price for high-price amulets (except those that require level 45+, notably +3 skill amulets)
 ItemDisplay[MAG amu ID ILVL>81 !(LVLREQ>44 PRICE>9000)]:	%NAME% %GRAY%[l%ILVL%]{%ORANGE%[%RED%@%ORANGE%]%GRAY%+%TAN%(%WHITE%11%TAN%)  %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)  %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%10%TAN%)  %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%10%TAN%)}%WHITE%	// crafting recipes for amulets (not shown on amulets that require level 45+, notably +3 skill amulets)
 ItemDisplay[MAG rin ID ILVL>61]:				%NAME% %GRAY%[l%ILVL%]{%ORANGE%[%RED%@%ORANGE%]%GRAY%+%TAN%(%WHITE%12%TAN%)  %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%11%TAN%)  %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%11%TAN%)  %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%11%TAN%)}%WHITE%	// crafting recipes for rings
-ItemDisplay[MAG amu !ID ILVL>89]:				 %NAME% %WHITE%																															// highlight unid ilvl 90+ amulets
-ItemDisplay[RARE (amu OR rin) !ID]:				  %NAME%  %WHITE%																														// highlight rare jewelry
+ItemDisplay[MAG amu !ID ILVL>89]:	 %NAME% %WHITE%			// highlight unid ilvl 90+ amulets
+ItemDisplay[RARE (amu OR rin) !ID]:	%DOT-6D%  %NAME%  %WHITE%	// highlight unid rare jewelry (and notify)
 
 
 // +-------------------+
@@ -448,11 +448,11 @@ ItemDisplay[(UNI OR SET)]: %NAME%%WHITE%
 //ItemDisplay[RARE SIN (NORM OR 9ar OR 9wb OR 9xf) CLVL>49]:		// Level 50 - Hides claws that don't appear with pointmods
 
 // Highlighting
-ItemDisplay[RARE ((GLOVES ILVL>42) OR (BOOTS ILVL>36))]:	 %NAME% %WHITE%											// gloves, boots
-ItemDisplay[RARE ((ci0 ILVL>86) OR (ci1 ILVL>81) OR (ci2 ILVL>76) OR (ci3 ILVL>71))]:	%DOT-6D% %NAME% %WHITE%							// +2-skill-capable circlets
-ItemDisplay[RARE (DRU OR BAR) ILVL>49]:	 %NAME% %WHITE%														// +2-skill-capable class helms
-ItemDisplay[RARE SIN ILVL>49 !(NORM OR 9ar OR 9wb OR 9xf)]:	 %NAME% %WHITE%											// +2-skill-capable katars
-ItemDisplay[RARE ILVL>55 (rxb OR 8rx OR 6rx OR crs OR 9cr OR 7cr OR gax OR 9ga OR 7ga OR wsc OR 9wc OR 7wc OR brn OR 9br OR 7br)]:	 %NAME% %WHITE%		// highest-IAS-capable weapon lines
+ItemDisplay[RARE !ID ((GLOVES ILVL>42) OR (BOOTS ILVL>36))]:	 %NAME% %WHITE%											// gloves, boots
+ItemDisplay[RARE !ID ((ci0 ILVL>86) OR (ci1 ILVL>81) OR (ci2 ILVL>76) OR (ci3 ILVL>71))]:	%DOT-6D% %NAME% %WHITE%						// +2-skill-capable circlets (also notifies)
+ItemDisplay[RARE !ID (DRU OR BAR) ILVL>49]:	 %NAME% %WHITE%													// +2-skill-capable class helms
+ItemDisplay[RARE !ID SIN ILVL>49 !(NORM OR 9ar OR 9wb OR 9xf)]:	 %NAME% %WHITE%											// +2-skill-capable katars
+ItemDisplay[RARE !ID ILVL>55 (rxb OR 8rx OR 6rx OR crs OR 9cr OR 7cr OR gax OR 9ga OR 7ga OR wsc OR 9wc OR 7wc OR brn OR 9br OR 7br)]:	 %NAME% %WHITE%		// highest-IAS-capable weapon lines
 
 // Catchall
 ItemDisplay[RARE]: %NAME%%WHITE%
@@ -600,9 +600,6 @@ ItemDisplay[NMAG DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14)) !(DRU OR BAR OR 
 // ......................................................
 //ItemDisplay[NMAG ED=0 SOCK=0 !ETH !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER) !((usk DEF>151) OR (uh9 DEF>154) OR (uui DEF>461) OR (uea DEF>464) OR (ula DEF>468) OR (utu DEF>475) OR (urs DEF>495) OR (utp DEF>518) OR (uar DEF>594) OR (uit DEF>147) OR (upk DEF>162) OR (ush DEF>172)) CLVL>94]:	{%NAME%}	// Level 95 - Hides non-class plain white items (not eth/ed/sock) except good elite armor with top 5% defense
 
-// Hidden: Regular non-class throwable weapons worth less than 5000 gold per inventory space - level 50
-ItemDisplay[NMAG CLVL>49 THROWING !ZON (ETH OR !(7tk OR 7ta OR 7bk))]: {%NAME%}
-
 // Hidden: Regular non-class items with little or no runeword useability - level 15
 ItemDisplay[NMAG CLVL>14 (GLOVES OR BOOTS OR BELT)]: {%NAME%}																// gloves, boots, belts
 ItemDisplay[NMAG CLVL>14 ((SOCK=1 !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER)) OR (dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR buc OR xuc))]: {%NAME%}	// 1-socket items & items that can only get 1 socket (daggers, shields)
@@ -610,6 +607,12 @@ ItemDisplay[NMAG CLVL>14 THROWING !ZON NORM]: {%NAME%}																	// normal
 ItemDisplay[NMAG CLVL>14 INF !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER)]: {%NAME%}									// inferior items
 ItemDisplay[NMAG CLVL>14 (BOW OR XBOW) !ZON (SOCK=5 OR (SOCK=0 ILVL>40 SUP (lbw OR 8lb OR 6lb OR sbb OR 8s8 OR 6s7 OR swb OR 8sw OR 6sw OR rxb OR 8rx OR 6rx)))]: {%NAME%}		// 5-socket bows & bows that can only get 5 sockets (only available Runeword is Call to Arms)
 //ItemDisplay[NMAG CLVL>14 DAGGER !THROWING (SOCK=2 OR (SOCK=0 (ILVL<26 OR bld OR 9bl OR 7bl)))]: {%NAME%}										// 2-socket daggers & daggers that can only get up to 2 sockets (only available Runewords is Strength)
+
+// Hidden: Regular non-class throwable weapons worth less than 5000 gold per inventory space - level 50
+ItemDisplay[NMAG CLVL>49 THROWING !ZON (ETH OR !(7tk OR 7ta OR 7bk))]: {%NAME%}
+
+// Hidden: Regular non-class normal/exceptional plain items in high level areas - level 90
+ItemDisplay[NMAG ED=0 SOCK=0 !ETH !ELT ILVL>89 !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER) CLVL>89]: {%NAME%}
 
 // Hidden: Worst non-class normal/exceptional items (excluding any with at least 2 of: ethereal, superior, 3+ sockets) - level 90	...socketable armors incapable of 3os (after upgrades), medium/heavy armors (except Sacred Armor line), high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
 ItemDisplay[NMAG NORM CLVL>89 !((ETH (ED>0 OR SOCK>2)) OR (ED>0 SOCK>2)) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR fld OR plt OR gth OR ful OR stu) OR (buc OR sml OR lrg OR tow OR gts) OR (hax OR lax OR clb OR spc OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]: {%NAME%}
@@ -621,7 +624,7 @@ ItemDisplay[NMAG ELT CLVL>89 !(ETH ED>0) (7ha OR 7cl OR 7sp OR 7ma OR 7ss OR 7sm
 // Hidden: Worst non-class items at each tier (excluding any ethereal, superior, or 3+ socket items) - levels 40, 60, 80		...socketable armors incapable of 3os (after upgrades), medium/heavy armors (except Sacred Armor line), high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
 ItemDisplay[NMAG NORM CLVL>39 !(ETH OR ED>0 OR SOCK>2) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR fld OR plt OR gth OR ful OR stu) OR (buc OR sml OR lrg OR tow OR gts) OR (hax OR lax OR clb OR spc OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]: {%NAME%}
 ItemDisplay[NMAG EXC CLVL>59  !(ETH OR ED>0 OR SOCK>2) ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xld OR xlt OR xth OR xul OR xtu) OR (xuc OR xml OR xrg OR xow OR xts) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]: {%NAME%}
-ItemDisplay[NMAG ELT CLVL>79  !(ETH OR ED>0 OR SOCK>2) ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR uld OR ult OR uth OR uul OR utu) OR (uuc OR uml OR urg OR uow OR uts) OR (7ha OR 7la OR 7cl OR 7sp OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx)) !(uap SOCK=2)]: {%NAME%}
+ItemDisplay[NMAG ELT CLVL>79  !(ETH OR ED>0 OR SOCK>2) ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR uld OR ult OR uth OR uul OR utu) OR (uuc OR uml OR urg OR uow OR uts) OR (7ha OR 7la OR 7cl OR 7sp OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx)) !(uap SOCK=2) !(DEF>479)]: {%NAME%}		// excludes 2-socket Shako, armor with 480+ defense
 
 // Highlighting
 ItemDisplay[NMAG CHEST (DEF>799 OR (DEF>749 FRW=-5) OR (DEF>699 FRW=0))]:	 %NAME%{%NAME%}%WHITE% 					// eth body armor with high defense (heavy 800+, medium 750+, light 700+)

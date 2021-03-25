@@ -26,7 +26,7 @@ Nothing is hidden at level 1 - items become hidden as the character levels up.
 * some of the worst regular/magic equipment bases
 
 ## Installation
-This filter is included in the launcher. To install manually, download [**loot.filter**](https://github.com/BetweenWalls/Feather-PD2/blob/main/loot.filter) (right-click [**Raw**](https://raw.githubusercontent.com/BetweenWalls/Feather-PD2/main/loot.filter) & select **Save link as**) and save it to *Diablo II\ProjectD2*. In order to access it from the launcher, save it to *Diablo II\ProjectD2\filters\local* instead.
+This filter is included in the [launcher](https://github.com/Project-Diablo-2/LootFilters#project-diablo-2-loot-filters). To install manually, download [**loot.filter**](https://github.com/BetweenWalls/Feather-PD2/blob/main/loot.filter) (right-click [**Raw**](https://raw.githubusercontent.com/BetweenWalls/Feather-PD2/main/loot.filter) & select **Save link as**) and save it to *Diablo II\ProjectD2*. In order to access it from the launcher, save it to *Diablo II\ProjectD2\filters\local* instead.
 
 Once in-game, enable these options from the *Settings* menu:
 * Advanced Item Display
