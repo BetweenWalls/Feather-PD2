@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	27 MAR 2021
+//		Date Updated:	30 MAR 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -333,7 +333,6 @@ ItemDisplay[STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) ETH]: %NAME%{%WHITE%Repai
 ItemDisplay[RW]: %NAME%{%NAME%}%WHITE%
 
 // Unique/Set Items
-ItemDisplay[UNI ID rin LIFE=20 REPLIFE>4]: Ring%NL%Manald Heal%WHITE%		// uses the classic name for "The Eye of Mordini"
 ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%13%TAN%)}%WHITE%			// Upgrade Armor (Normal)
 ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 (xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%20%TAN%)}%WHITE%									// Upgrade Armor (Exceptional)
 ItemDisplay[(UNI OR SET) ID ILVL>40 ((WEAPON NORM !WAND !SOR) OR ((wnd OR ywn) SOCK=0)) !hdm !msf !g33 !qf1 !hfh]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%12%TAN%)}%WHITE%							// Upgrade Weapon (Normal)
