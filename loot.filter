@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	30 MAR 2021
+//		Date Updated:	8 JUNE 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -18,6 +18,8 @@
 // +------------------+
 // Hidden: smaller gold piles - levels 5, 10, 20, 30, 50, 70, 80, 90, 95
 ItemDisplay[((GOLD<7000 CLVL>94) OR (GOLD<4000 CLVL>89) OR (GOLD<2500 CLVL>79) OR (GOLD<1800 CLVL>69) OR (GOLD<1200 CLVL>49) OR (GOLD<600 CLVL>29) OR (GOLD<300 CLVL>19) OR (GOLD<100 CLVL>9) OR (GOLD<30 CLVL>4))]:
+
+// Gold
 ItemDisplay[GOLD>0]: %NAME%
 
 // Rejuvenation
@@ -80,21 +82,21 @@ ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key OR RUNE>0)]: %NAME
 //ItemDisplay[(bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2)]: %NAME%	// non-equipment
 
 // Endgame Quest Items
-ItemDisplay[tes]:	%DOT-60%%ORANGE%  %NAME%  {%GRAY%(Andariel & Duriel)}%WHITE%
-ItemDisplay[ceh]:	%DOT-60%%ORANGE%  %NAME%  {%GRAY%(Mephisto)}%WHITE%
-ItemDisplay[bet]:	%DOT-60%%ORANGE%  %NAME%  {%GRAY%(Diablo)}%WHITE%
-ItemDisplay[fed]:	%DOT-60%%ORANGE%  %NAME%  {%GRAY%(Baal)}%WHITE%
-//ItemDisplay[toa]:	%NAME%%WHITE%								// Token of Absolution
-ItemDisplay[pk1]:	%DOT-60%%ORANGE%  %NAME%  {%GRAY%(Countess / Blood Raven)}%WHITE%	// Key of Terror
-ItemDisplay[pk2]:	%DOT-60%%ORANGE%  %NAME%  {%GRAY%(Summoner / Bloodwitch)}%WHITE%	// Key of Hatred
-ItemDisplay[pk3]:	%DOT-60%%ORANGE%  %NAME%  {%GRAY%(Izual / Nihlathak)}%WHITE%		// Key of Destruction
-ItemDisplay[dhn]:	%DOT-60%%ORANGE%  %NAME%  %WHITE%					// Diablo's Horn	(Lilith)
-ItemDisplay[bey]:	%DOT-60%%ORANGE%  %NAME%  %WHITE%					// Baal's Eye		(Uber Duriel)
-ItemDisplay[mbr]:	%DOT-60%%ORANGE%  %NAME%  %WHITE%					// Mephisto's Brain	(Uber Izual)
+ItemDisplay[tes]:	%DOT-60%%ORANGE%  %NAME%  {%GRAY%(Andariel & Duriel)}%WHITE%					// Twisted Essence of Suffering
+ItemDisplay[ceh]:	%DOT-60%%ORANGE%  %NAME%  {%GRAY%(Mephisto)}%WHITE%						// Charged Essence of Hatred
+ItemDisplay[bet]:	%DOT-60%%ORANGE%  %NAME%  {%GRAY%(Diablo)}%WHITE%						// Burning Essence of Terror
+ItemDisplay[fed]:	%DOT-60%%ORANGE%  %NAME%  {%GRAY%(Baal)}%WHITE%							// Festering Essence of Destruction
+ItemDisplay[toa]:	%DOT-60%  Token of Absolution  {%WHITE%Right-click to reset Stat/Skill Points}%WHITE%		// Token of Absolution
+ItemDisplay[pk1]:	%DOT-60%%ORANGE%  %NAME%  {%GRAY%(Countess / Blood Raven)}%WHITE%				// Key of Terror
+ItemDisplay[pk2]:	%DOT-60%%ORANGE%  %NAME%  {%GRAY%(Summoner / Bloodwitch)}%WHITE%				// Key of Hatred
+ItemDisplay[pk3]:	%DOT-60%%ORANGE%  %NAME%  {%GRAY%(Izual / Nihlathak)}%WHITE%					// Key of Destruction
+ItemDisplay[dhn]:	%DOT-60%%ORANGE%  %NAME%  %WHITE%								// Diablo's Horn	(Lilith)
+ItemDisplay[bey]:	%DOT-60%%ORANGE%  %NAME%  %WHITE%								// Baal's Eye		(Uber Duriel)
+ItemDisplay[mbr]:	%DOT-60%%ORANGE%  %NAME%  %WHITE%								// Mephisto's Brain	(Uber Izual)
 
 // PD2 Items
-ItemDisplay[wss]:	%DOT-50%  %NAME%  %WHITE%						// Worldstone Shard
-ItemDisplay[lbox]:	%BORDER-50%        %NAME%        %WHITE%				// Larzuk's Puzzlebox
+ItemDisplay[wss]:	%DOT-50%  %NAME%  %WHITE%									// Worldstone Shard
+ItemDisplay[lbox]:	%BORDER-50%        %NAME%        %WHITE%							// Larzuk's Puzzlebox
 ItemDisplay[dcma]:	%MAP-60%  %NAME%  {%GOLD%Diablo Walks the Earth}%WHITE%						// Vision of Terror	(DClone)
 ItemDisplay[dcso]:	%MAP-60%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Diablo / Baal)}%WHITE%	// Prime Evil Soul	(DClone ingredient)
 ItemDisplay[dcho]:	%MAP-60%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Uber Tristram)}%WHITE%	// Black Soulstone	(DClone ingredient)
@@ -374,15 +376,18 @@ ItemDisplay[MAG ID (SOR OR STAFF) (CLSK1>0 OR TABSK8>0) ((SK36>2 OR SK37>2 OR SK
 ItemDisplay[MAG ID (SOR OR STAFF) (CLSK1>0 OR TABSK9>0) ((SK38>2 OR SK42>2 OR SK43>2 OR SK48>2 OR SK49>2 OR SK53>2 OR SK54>2 OR SK57>2 OR SK58>2 OR SK63>2) OR (TABSK9>2 (SK38>0 OR SK42>0 OR SK43>0 OR SK48>0 OR SK49>0 OR SK53>0 OR SK54>0 OR SK57>0 OR SK58>0 OR SK63>0)) OR ((CLSK1>1 OR TABSK9>1) (SK38>1 OR SK42>1 OR SK43>1 OR SK48>1 OR SK49>1 OR SK53>1 OR SK54>1 OR SK57>1 OR SK58>1 OR SK63>1)))]: %NAME% %ORANGE%4+ (Lightning)
 ItemDisplay[MAG ID (SOR OR STAFF) (CLSK1>0 OR TABSK10>0) ((SK39>2 OR SK40>2 OR SK44>2 OR SK45>2 OR SK50>2 OR SK55>2 OR SK59>2 OR SK60>2 OR SK64>2 OR SK65>2) OR (TABSK10>2 (SK39>0 OR SK40>0 OR SK44>0 OR SK45>0 OR SK50>0 OR SK55>0 OR SK59>0 OR SK60>0 OR SK64>0 OR SK65>0)) OR ((CLSK1>1 OR TABSK10>1) (SK39>1 OR SK40>1 OR SK44>1 OR SK45>1 OR SK50>1 OR SK55>1 OR SK59>1 OR SK60>1 OR SK64>1 OR SK65>1)))]: %NAME% %ORANGE%4+ (Cold)
 
-// Other Skillmod Items
+// Other Items
 ItemDisplay[MAG ID GLOVES (TABSK0>2 OR TABSK2>2 OR TABSK50>2) IAS>10]: %NAME% %ORANGE%+3										// Gloves: +3/20
 ItemDisplay[MAG ID GLOVES ((TABSK0>2 OR TABSK2>2) OR ((TABSK0>1 OR TABSK1>2 OR TABSK2>1) IAS>0) OR ((TABSK0>0 OR TABSK1>1 OR TABSK2>0) IAS>10))]: %NAME% %TAN%+		// Gloves: close to +3/20
 ItemDisplay[MAG ID WEAPON !(POLEARM OR (SPEAR !THROWING)) TABSK34>2]: %NAME% %ORANGE%+3 Warcries									// 1-Handed Weapons with +3 Warcries
 ItemDisplay[MAG ID SIN TABSK48>2]: %NAME% %TAN%+3 Traps															// Claws with +3 Traps
 ItemDisplay[MAG ID MACE TABSK40>2]: %NAME% %TAN%+3 Summoning														// Clubs with +3 Summoning
-ItemDisplay[MAG ID WAND CHSK91>0]: %NAME% %GREEN%(Lower Resist)														// Wands with Lower Resist charges
-ItemDisplay[MAG ID WAND CHSK82>0]: %NAME% %GREEN%(Life Tap)														// Wands with Life Tap charges
-ItemDisplay[MAG ID STAFF CHSK54>0 DIFF=0]: %NAME% %GREEN%(Teleport)													// Staves with Teleport charges (normal difficulty)
+//ItemDisplay[MAG ID WAND CHSK91>0]: %NAME% %GREEN%(Lower Resist)														// Wands with Lower Resist charges
+//ItemDisplay[MAG ID WAND CHSK82>0]: %NAME% %GREEN%(Life Tap)														// Wands with Life Tap charges
+//ItemDisplay[MAG ID STAFF CHSK54>0 DIFF=0]: %NAME% %GREEN%(Teleport)													// Staves with Teleport charges (normal difficulty)
+ItemDisplay[MAG ID (uit OR PAL) SOCK=4 (FBR>0 OR FHR>10 OR LIFE>40)]: %NAME% %TAN%+											// Jeweller's Monarch of Deflecting (JMoD) and similar
+ItemDisplay[MAG ID CHEST SOCK=4 LIFE>80]: %NAME% %TAN%+															// Jeweller's Armor of the Whale
+ItemDisplay[MAG ID CIRC SOCK=3 (FRW>20 OR STAT34>15)]: %NAME% %TAN%+													// Artisan's Circlet of Speed/Life Everlasting
 
 // Merchant Items
 ItemDisplay[MAG ID DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14) OR (ILVL=28 CLVL>22) OR (ILVL=36 CLVL>30) OR (ILVL=45 CLVL>39))]: %NAME%%GRAY%
@@ -642,9 +647,9 @@ ItemDisplay[NMAG !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAN
 // +---------------------+
 //-¦ Regular Class Items ¦-----------------------------------------------------------------------------------------------
 // +---------------------+
-// Hidden: 1-socket items larger than 3 inventory spaces, all 1-socket items (excluding merchant items) - levels 30, 90
+// Hidden: 1-socket items larger than 3 inventory spaces, all 1-socket items (excluding merchant items) - levels 30, 80
 ItemDisplay[NMAG SOCK=1 CLVL>29 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14))) !(WAND OR sst OR 8ss OR 6ss OR (SCEPTER !wsp !9ws !7ws) OR SIN OR SOR)]: {%NAME%}
-ItemDisplay[NMAG SOCK=1 CLVL>89 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14)))]: {%NAME%}
+ItemDisplay[NMAG SOCK=1 CLVL>79 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14)))]: {%NAME%}
 
 // Hidden: Unworthy class items - level 80
 ItemDisplay[NMAG DIN (RES<15 STAT18<30 SOCK<3) CLVL>79]: {%NAME%}			// shields below 30 enhanced damage or 15 all resistance, unless they have 3-4 sockets
