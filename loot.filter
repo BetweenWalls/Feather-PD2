@@ -385,7 +385,7 @@ ItemDisplay[MAG ID MACE TABSK40>2]: %NAME% %TAN%+3 Summoning														// Clu
 //ItemDisplay[MAG ID WAND CHSK91>0]: %NAME% %GREEN%(Lower Resist)														// Wands with Lower Resist charges
 //ItemDisplay[MAG ID WAND CHSK82>0]: %NAME% %GREEN%(Life Tap)														// Wands with Life Tap charges
 //ItemDisplay[MAG ID STAFF CHSK54>0 DIFF=0]: %NAME% %GREEN%(Teleport)													// Staves with Teleport charges (normal difficulty)
-ItemDisplay[MAG ID (uit OR PAL) SOCK=4 (FBR>0 OR FHR>10 OR LIFE>40)]: %NAME% %TAN%+											// Jeweller's Monarch of Deflecting (JMoD) and similar
+ItemDisplay[MAG ID (uit OR DIN) SOCK=4 (FBR>0 OR FHR>10 OR LIFE>40)]: %NAME% %TAN%+											// Jeweller's Monarch of Deflecting (JMoD) and similar
 ItemDisplay[MAG ID CHEST SOCK=4 LIFE>80]: %NAME% %TAN%+															// Jeweller's Armor of the Whale
 ItemDisplay[MAG ID CIRC SOCK=3 (FRW>20 OR STAT34>15)]: %NAME% %TAN%+													// Artisan's Circlet of Speed/Life Everlasting
 
