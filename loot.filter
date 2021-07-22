@@ -947,36 +947,3 @@ ItemDisplay[NMAG DIN AR=17]: %NAME%/+17{%NAME%}%WHITE%
 ItemDisplay[NMAG DIN AR=16]: %NAME%/+16{%NAME%}%WHITE%
 ItemDisplay[NMAG DIN AR=15]: %NAME%/+15{%NAME%}%WHITE%
 ItemDisplay[NMAG DIN]: %NAME%{%NAME%}%WHITE%
-
-/*
-// TODO: remove after verifying correct implementation
-
-1 -> 2 sockets
-9dg 7dg		Poignard	Bone Knife
-9di 7di		Rondel		Mithril Point
-
-2 -> 3 sockets
-9ha 7ha		Hatchet		Tomahawk
-9cl 7cl		Cudgel		Truncheon
-9ma 7ma		Flanged Mace	Reinforced Mace
-9sc 7sc		Rune Scepter	Mighty Scepter
-8ss		Jo Staff
-9ss 7ss		Gladius		Falcata
-9sm 7sm		Cutlass		Ataghan
-9sb 7sb		Shamshir	Elegant Blade
-9fc 7fc		Tulwar		Hydra Edge
-9wb		Wrist Spike
-9xf 7xf		Fascia		War Fist
-9cs 7cs		Hand Scythe	Battle Cestus
-
-4 -> 5 sockets
-9la		Military Axe
-
-3 -> 4 sockets
-9b7 7o7		Lochaber Axe	Ogre Axe
-8sb 6sb		Edge Bow	Spider Bow
-8lx 6lx		Arbalest	Pellet Bow
-
-5 -> 6 sockets
-6lb				Shadow Bow
-*/
