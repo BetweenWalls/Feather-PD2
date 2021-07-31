@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	28 JULY 2021
+//		Date Updated:	31 JULY 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -324,17 +324,17 @@ ItemDisplay[STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) ETH]: %NAME%{%WHITE%Repai
 ItemDisplay[RW]: %NAME%{%NAME%}%WHITE%
 
 // Unique/Set Items
-ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%13%TAN%)}%WHITE%			// Upgrade Armor (Normal)
-ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 (xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%20%TAN%)}%WHITE%									// Upgrade Armor (Exceptional)
-ItemDisplay[(UNI OR SET) ID ILVL>40 ((WEAPON NORM !WAND !SOR) OR ((wnd OR ywn) SOCK=0)) !hdm !msf !g33 !qf1 !hfh]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%12%TAN%)}%WHITE%							// Upgrade Weapon (Normal)
-ItemDisplay[(UNI OR SET) ID ILVL>40 ((WEAPON EXC !WAND !SOR) OR (9wn SOCK=0))]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%17%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%WHITE%											// Upgrade Weapon (Exceptional)
+ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt OR (NORM (BELT OR NEC)))]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%13%TAN%)}%WHITE%			// Upgrade Armor (Normal)
+ItemDisplay[(UNI OR SET) ID ILVL>40 SOCK=0 (xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%20%TAN%)}%WHITE%												// Upgrade Armor (Exceptional)
+ItemDisplay[(UNI OR SET) ID ILVL>40 ((WEAPON NORM !WAND !SOR) OR ((wnd OR ywn) SOCK=0)) !hdm !msf !g33 !qf1 !hfh]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%12%TAN%)}%WHITE%										// Upgrade Weapon (Normal)
+ItemDisplay[(UNI OR SET) ID ILVL>40 ((WEAPON EXC !WAND !SOR) OR (9wn SOCK=0))]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%17%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%WHITE%														// Upgrade Weapon (Exceptional)
 ItemDisplay[(UNI OR SET) ID]: %NAME%{%NAME%}%WHITE%
 
 // Rare/Crafted Items
-ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 LVLREQ<91 (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%	// Upgrade Armor (Normal)
-ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 LVLREQ<91 (xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%CONTINUE%							// Upgrade Armor (Exceptional)
-ItemDisplay[(RARE OR CRAFT) ID ILVL>40 LVLREQ<91 ((WEAPON NORM !WAND !SOR) OR ((wnd OR ywn) SOCK=0))]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%9%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%								// Upgrade Weapon (Normal)
-ItemDisplay[(RARE OR CRAFT) ID ILVL>40 LVLREQ<91 ((WEAPON EXC !WAND !SOR) OR (9wn SOCK=0))]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%19%TAN%)%GRAY%+%TAN%(%WHITE%22%TAN%)}%CONTINUE%										// Upgrade Weapon (Exceptional)
+ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 LVLREQ<91 (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt OR (NORM (BELT OR NEC)))]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%	// Upgrade Armor (Normal)
+ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 LVLREQ<91 (xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu)]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%CONTINUE%										// Upgrade Armor (Exceptional)
+ItemDisplay[(RARE OR CRAFT) ID ILVL>40 LVLREQ<91 ((WEAPON NORM !WAND !SOR) OR ((wnd OR ywn) SOCK=0))]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%9%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%											// Upgrade Weapon (Normal)
+ItemDisplay[(RARE OR CRAFT) ID ILVL>40 LVLREQ<91 ((WEAPON EXC !WAND !SOR) OR (9wn SOCK=0))]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%19%TAN%)%GRAY%+%TAN%(%WHITE%22%TAN%)}%CONTINUE%													// Upgrade Weapon (Exceptional)
 ItemDisplay[CRAFT ID (ILVL<71 OR (amu ILVL<90) OR (rin ILVL<78) OR (WEAPON ILVL<77) OR (CHEST ILVL<74))]: %NAME% %GRAY%[l%ILVL%]{%NAME%}%WHITE%																						// shows ilvl if it's not the best for crafting
 ItemDisplay[RARE ID ILVL>40 LVLREQ<91 ((SOCK=0 (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt OR xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu OR wnd OR ywn OR 9wn)) OR (WEAPON !ELT !WAND !SOR))]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%NAME%}%WHITE%	// shows price for rares with upgrade recipes
 ItemDisplay[RARE ID]: %NAME%{%DARK_GREEN%$%PRICE%}%WHITE%																																// shows price for other rares
