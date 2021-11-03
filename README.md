@@ -25,7 +25,7 @@ This is a minimally-strict filter that includes many quality-of-life features. F
 Nothing is hidden at level 1 - items become hidden as the character levels up.
 
 ## Installation
-This filter is included in the [launcher](https://github.com/Project-Diablo-2/LootFilters#project-diablo-2-loot-filters). To install manually, download [**loot.filter**](https://github.com/BetweenWalls/Feather-PD2/blob/main/loot.filter) (right-click [**Raw**](https://raw.githubusercontent.com/BetweenWalls/Feather-PD2/main/loot.filter) & select **Save link as**) and save it to *Diablo II\ProjectD2*. In order to access it from the launcher, save it to *Diablo II\ProjectD2\filters\local* instead.
+This filter is included in the [launcher](https://github.com/Project-Diablo-2/LootFilters#project-diablo-2-loot-filters). To use a local version that will preserve your own changes, either copy the file from *Diablo II\ProjectD2\filters\online\BetweenWalls* to *Diablo II\ProjectD2\filters\local* or download [**feather.filter**](https://github.com/BetweenWalls/Feather-PD2/blob/main/feather.filter) (right-click [**Raw**](https://raw.githubusercontent.com/BetweenWalls/Feather-PD2/main/feather.filter) & select **Save link as**) and save it to *Diablo II\ProjectD2\filters\local*. Local filters are selected from the launcher in the same way that others are.
 
 Once in-game, enable these options from the *Settings* menu:
 * Advanced Item Display
@@ -35,11 +35,16 @@ Once in-game, enable these options from the *Settings* menu:
 
 I also recommend disabling the "Show iLvl" option. It can be toggled with a hotkey if you come across any items that don't already have that info shown by the filter.
 
-If you copy/paste the filter's *raw text*, some characters may be displayed incorrectly - the file uses ANSI encoding instead of standard UTF-8 encoding. Either download the file normally, [download everything](https://github.com/BetweenWalls/Feather-PD2/archive/main.zip) and extract the file, or copy/paste the [*encoded text*](https://github.com/BetweenWalls/Feather-PD2/blob/main/loot.filter) into a file that uses ANSI encoding.
+If you copy/paste the filter's *raw text*, some characters may be displayed incorrectly - the file uses ANSI encoding instead of standard UTF-8 encoding. Either download the file normally, [download everything](https://github.com/BetweenWalls/Feather-PD2/archive/main.zip) and extract the file, or copy/paste the [*encoded text*](https://github.com/BetweenWalls/Feather-PD2/blob/main/feather.filter) into a file that uses ANSI encoding.
 
 <!-- ## Images & More Details
 ![_](/images/regular_items.png)
 ![_](/images/runes.png)
 ![_](/images/unidentified_highlighting.png)
 
-If you prefer to see fewer items, some rules are included that, when enabled, will increase the filter's strictness substantially for higher level characters. -->
+If you prefer to see fewer items, some rules are included that, when enabled, will increase the filter's strictness substantially for higher level characters.
+
+## Feedback
+Feel free to leave feedback in PD2's #lootfilter discord channel. You can also reach me directly in discord (@BetweenWalls#2390) or in reddit ([BetweenWalls](https://www.reddit.com/message/compose/?to=BetweenWalls&subject=Feather-PD2)).
+
+-->
