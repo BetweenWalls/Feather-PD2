@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	30 NOVEMBER 2021
+//		Date Updated:	4 DECEMBER 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -81,10 +81,6 @@ ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key OR RUNE>0)]: %NAME
 // Quest Items
 //ItemDisplay[(hdm OR msf OR vip OR hst OR g33 OR qf1 OR qf2 OR hfh)]: %NAME%							// equipment
 //ItemDisplay[(bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2)]: %NAME%	// non-equipment
-ItemDisplay[ass]: Book of Skill{%WHITE%Right Click to learn skill of your choice}
-ItemDisplay[xyz]: Potion of Life{%WHITE%Right Click to permanently add 20 to life}
-ItemDisplay[ice]: Malah's Potion{%WHITE%Keep it to thaw Anya}
-ItemDisplay[tr2]: Scroll of Resistance{%WHITE%Right Click to Cast}
 
 // Endgame Quest Items
 ItemDisplay[tes]:	%DOT-60%%ORANGE%  %NAME%  {%GRAY%(Andariel & Duriel)}%WHITE%					// Twisted Essence of Suffering
@@ -152,20 +148,20 @@ ItemDisplay[std]:	%DOT-53% %NAME% {Adds Heroic bonuses to Maps & Dungeons}%WHITE
 ItemDisplay[((GEMLEVEL=1 CLVL>29) OR (GEMLEVEL=2 CLVL>39) OR (GEMLEVEL=3 CLVL>59))]:
 
 // Descriptions for Stacked Gems (Socketed Effects)
-ItemDisplay[gzvs]: %NAME%{%WHITE%Shield: +24 Defense%NL%Armors: +8 to Strength%NL%Weapon: +100 to Attack Rating%NL%}%CONTINUE%
-ItemDisplay[gpvs]: %NAME%{%WHITE%Shield: +30 Defense%NL%Armors: +10 to Strength%NL%Weapon: +150 to Attack Rating%NL%}%CONTINUE%
-ItemDisplay[glws]: %NAME%{%WHITE%Shield: All Resistances +14%NL%Armors: +80 to Attack Rating%NL%Weapon: +54% Damage to Undead%NL%}%CONTINUE%
-ItemDisplay[gpws]: %NAME%{%WHITE%Shield: All Resistances +19%NL%Armors: +100 to Attack Rating%NL%Weapon: +68% Damage to Undead%NL%}%CONTINUE%
-ItemDisplay[glgs]: %NAME%{%WHITE%Shield: Poison Resist +28%%NL%Armors: +8 to Dexterity%NL%Weapon: +60 poison damage over 6 seconds%NL%}%CONTINUE%
-ItemDisplay[gpgs]: %NAME%{%WHITE%Shield: Poison Resist +40%%NL%Armors: +10 to Dexterity%NL%Weapon: +100 poison damage over 7 seconds%NL%}%CONTINUE%
-ItemDisplay[glrs]: %NAME%{%WHITE%Shield: Fire Resist +28%%NL%Armors: +31 to Life%NL%Weapon: Adds 10-16 fire damage%NL%}%CONTINUE%
-ItemDisplay[gprs]: %NAME%{%WHITE%Shield: Fire Resist +40%%NL%Armors: +38 to Life%NL%Weapon: Adds 15-20 fire damage%NL%}%CONTINUE%
-ItemDisplay[glbs]: %NAME%{%WHITE%Shield: Cold Resist +28%%NL%Armors: +31 to Mana%NL%Weapon: Adds 6-10 cold damage%NL%}%CONTINUE%
-ItemDisplay[gpbs]: %NAME%{%WHITE%Shield: Cold Resist +40%%NL%Armors: +38 to Mana%NL%Weapon: Adds 10-14 cold damage%NL%}%CONTINUE%
-ItemDisplay[glys]: %NAME%{%WHITE%Shield: Lightning Resist +28%%NL%Armors: 20% Better Chance of Getting Magic Items%NL%Weapon: Adds 1-30 lightning damage%NL%}%CONTINUE%
-ItemDisplay[gpys]: %NAME%{%WHITE%Shield: Lightning Resist +40%%NL%Armors: 24% Better Chance of Getting Magic Items%NL%Weapon: Adds 1-40 lightning damage%NL%}%CONTINUE%
-ItemDisplay[skls]: %NAME%{%WHITE%Shield: Attacker Takes Damage of 16%NL%Armors: Regenerate Mana 12%, Replenish Life +4%NL%Weapon: 3% Life & 3% Mana stolen per hit%NL%}%CONTINUE%
-ItemDisplay[skzs]: %NAME%{%WHITE%Shield: Attacker Takes Damage of 20%NL%Armors: Regenerate Mana 19%, Replenish Life +5%NL%Weapon: 4% Life & 3% Mana stolen per hit%NL%}%CONTINUE%
+ItemDisplay[gzvs]: %NAME%{%WHITE%Shields: +24 Defense%NL%Armors: +8 to Strength%NL%Weapons: +100 to Attack Rating%NL%}%CONTINUE%
+ItemDisplay[gpvs]: %NAME%{%WHITE%Shields: +30 Defense%NL%Armors: +10 to Strength%NL%Weapons: +150 to Attack Rating%NL%}%CONTINUE%
+ItemDisplay[glws]: %NAME%{%WHITE%Shields: All Resistances +14%NL%Armors: +80 to Attack Rating%NL%Weapons: +54% Damage to Undead%NL%}%CONTINUE%
+ItemDisplay[gpws]: %NAME%{%WHITE%Shields: All Resistances +19%NL%Armors: +100 to Attack Rating%NL%Weapons: +68% Damage to Undead%NL%}%CONTINUE%
+ItemDisplay[glgs]: %NAME%{%WHITE%Shields: Poison Resist +28%%NL%Armors: +8 to Dexterity%NL%Weapons: +60 poison damage over 6 seconds%NL%}%CONTINUE%
+ItemDisplay[gpgs]: %NAME%{%WHITE%Shields: Poison Resist +40%%NL%Armors: +10 to Dexterity%NL%Weapons: +100 poison damage over 7 seconds%NL%}%CONTINUE%
+ItemDisplay[glrs]: %NAME%{%WHITE%Shields: Fire Resist +28%%NL%Armors: +31 to Life%NL%Weapons: Adds 10-16 fire damage%NL%}%CONTINUE%
+ItemDisplay[gprs]: %NAME%{%WHITE%Shields: Fire Resist +40%%NL%Armors: +38 to Life%NL%Weapons: Adds 15-20 fire damage%NL%}%CONTINUE%
+ItemDisplay[glbs]: %NAME%{%WHITE%Shields: Cold Resist +28%%NL%Armors: +31 to Mana%NL%Weapons: Adds 6-10 cold damage%NL%}%CONTINUE%
+ItemDisplay[gpbs]: %NAME%{%WHITE%Shields: Cold Resist +40%%NL%Armors: +38 to Mana%NL%Weapons: Adds 10-14 cold damage%NL%}%CONTINUE%
+ItemDisplay[glys]: %NAME%{%WHITE%Shields: Lightning Resist +28%%NL%Armors: 20% Better Chance of Getting Magic Items%NL%Weapons: Adds 1-30 lightning damage%NL%}%CONTINUE%
+ItemDisplay[gpys]: %NAME%{%WHITE%Shields: Lightning Resist +40%%NL%Armors: 24% Better Chance of Getting Magic Items%NL%Weapons: Adds 1-40 lightning damage%NL%}%CONTINUE%
+ItemDisplay[skls]: %NAME%{%WHITE%Shields: Attacker Takes Damage of 16%NL%Armors: Regenerate Mana 12%, Replenish Life +4%NL%Weapons: 3% Life stolen per hit, 3% Mana stolen per hit%NL%}%CONTINUE%
+ItemDisplay[skzs]: %NAME%{%WHITE%Shields: Attacker Takes Damage of 20%NL%Armors: Regenerate Mana 19%, Replenish Life +5%NL%Weapons: 4% Life stolen per hit, 3% Mana stolen per hit%NL%}%CONTINUE%
 
 // Gem Icons (Colors & Quality Differentiation)
 ItemDisplay[GEMLEVEL=1]: *%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
@@ -191,38 +187,38 @@ ItemDisplay[RUNE>0 QTY>1]: %NAME% %WHITE%×%QTY%%CONTINUE%			// appends quantity
 ItemDisplay[RUNE>0 RUNE<10 (CLVL<70 OR DIFF<2)]: %PX-60%%NAME%%CONTINUE%	// notifications for lowest runes when in Normal/Nightmare or below level 70
 
 // Descriptions for Stacked Runes (Socketed Effects)
-ItemDisplay[r01s]: %NAME%{%WHITE%Others: +15 Defense, +1 to Light Radius%NL%Weapon: +50 to Attack Rating, +1 to Light Radius%NL%}%CONTINUE%
-ItemDisplay[r02s]: %NAME%{%WHITE%Shield: +7% Increased Blocking Chance%NL%Armors: 15% Slower Stamina Drain%NL%Weapon: +75% Damage & +50 Attack Rating vs. Undead%NL%}%CONTINUE%
+ItemDisplay[r01s]: %NAME%{%WHITE%Others: +15 Defense, +1 to Light Radius%NL%Weapons: +50 to Attack Rating, +1 to Light Radius%NL%}%CONTINUE%
+ItemDisplay[r02s]: %NAME%{%WHITE%Shields: +7% Increased Chance of Blocking%NL%Armors: 15% Slower Stamina Drain%NL%Weapons: +75% Damage to Undead, +50 to Attack Rating against Undead%NL%}%CONTINUE%
 ItemDisplay[r03s]: %NAME%{%WHITE% +2 to Mana after each Kill %NL%}%CONTINUE%
-ItemDisplay[r04s]: %NAME%{%WHITE%Others: +30 Defense vs. Missile%NL%Weapon: Knockback%NL%}%CONTINUE%
-ItemDisplay[r05s]: %NAME%{%WHITE%Others: Regenerate Mana 15%%NL%Weapon: -25% Target Defense%NL%}%CONTINUE%
-ItemDisplay[r06s]: %NAME%{%WHITE%Others: 15% Damage Taken Gained as Mana when Hit%NL%Weapon: +9 to Maximum Damage%NL%}%CONTINUE%
-ItemDisplay[r07s]: %NAME%{%WHITE%Shield: Poison Resist +35%%NL%Armors: Poison Resist +30%%NL%Weapon: +75 poison damage over 5 seconds%NL%}%CONTINUE%
-ItemDisplay[r08s]: %NAME%{%WHITE%Shield: Fire Resist +35%%NL%Armors: Fire Resist +30%%NL%Weapon: Adds 5-30 fire damage%NL%}%CONTINUE%
-ItemDisplay[r09s]: %NAME%{%WHITE%Shield: Lightning Resist +35%%NL%Armors: Lightning Resist +30%%NL%Weapon: Adds 1-50 lightning damage%NL%}%CONTINUE%
-ItemDisplay[r10s]: %NAME%{%WHITE%Shield: Cold Resist +35%%NL%Armors: Cold Resist +30%%NL%Weapon: Adds 3-14 cold damage%NL%}%CONTINUE%
-ItemDisplay[r11s]: %NAME%{%WHITE%Others: Attacker Takes Damage of 14%NL%Weapon: 7% Life stolen per hit%NL%}%CONTINUE%
-ItemDisplay[r12s]: %NAME%{%WHITE%Others: Physical Damage Taken Reduced by 7%NL%Weapon: +9 to Minimum Damage%NL%}%CONTINUE%
-ItemDisplay[r13s]: %NAME%{%WHITE%Shield: +20% Faster Block Rate%NL%Armors: +20% Faster Hit Recovery%NL%Weapon: +20% Increased Attack Speed%NL%}%CONTINUE%
-ItemDisplay[r14s]: %NAME%{%WHITE%Others: Replenish Life +10%NL%Weapon: +25% Enhanced Damage%NL%}%CONTINUE%
-ItemDisplay[r15s]: %NAME%{%WHITE%Others: Requirements -15%%NL%Weapon: Requirements -20%%NL%}%CONTINUE%
+ItemDisplay[r04s]: %NAME%{%WHITE%Others: +30 Defense vs. Missile%NL%Weapons: Knockback%NL%}%CONTINUE%
+ItemDisplay[r05s]: %NAME%{%WHITE%Others: Regenerate Mana 15%%NL%Weapons: -25% Target Defense%NL%}%CONTINUE%
+ItemDisplay[r06s]: %NAME%{%WHITE%Others: 15% Damage Taken Gained as Mana when Hit%NL%Weapons: +9 to Maximum Damage%NL%}%CONTINUE%
+ItemDisplay[r07s]: %NAME%{%WHITE%Shields: Poison Resist +35%%NL%Armors: Poison Resist +30%%NL%Weapons: +75 poison damage over 5 seconds%NL%}%CONTINUE%
+ItemDisplay[r08s]: %NAME%{%WHITE%Shields: Fire Resist +35%%NL%Armors: Fire Resist +30%%NL%Weapons: Adds 5-30 fire damage%NL%}%CONTINUE%
+ItemDisplay[r09s]: %NAME%{%WHITE%Shields: Lightning Resist +35%%NL%Armors: Lightning Resist +30%%NL%Weapons: Adds 1-50 lightning damage%NL%}%CONTINUE%
+ItemDisplay[r10s]: %NAME%{%WHITE%Shields: Cold Resist +35%%NL%Armors: Cold Resist +30%%NL%Weapons: Adds 3-14 cold damage%NL%}%CONTINUE%
+ItemDisplay[r11s]: %NAME%{%WHITE%Others: Attacker Takes Damage of 14%NL%Weapons: 7% Life stolen per hit%NL%}%CONTINUE%
+ItemDisplay[r12s]: %NAME%{%WHITE%Others: Physical Damage Taken Reduced by 7%NL%Weapons: +9 to Minimum Damage%NL%}%CONTINUE%
+ItemDisplay[r13s]: %NAME%{%WHITE%Shields: +20% Faster Block Rate%NL%Armors: +20% Faster Hit Recovery%NL%Weapons: +20% Increased Attack Speed%NL%}%CONTINUE%
+ItemDisplay[r14s]: %NAME%{%WHITE%Others: Replenish Life +10%NL%Weapons: +25% Enhanced Damage%NL%}%CONTINUE%
+ItemDisplay[r15s]: %NAME%{%WHITE%Others: Requirements -15%%NL%Weapons: Requirements -20%%NL%}%CONTINUE%
 ItemDisplay[r16s]: %NAME%{%WHITE% +10 to Vitality %NL%}%CONTINUE%
 ItemDisplay[r17s]: %NAME%{%WHITE% +10 to Energy %NL%}%CONTINUE%
 ItemDisplay[r18s]: %NAME%{%WHITE% +10 to Dexterity %NL%}%CONTINUE%
 ItemDisplay[r19s]: %NAME%{%WHITE% +10 to Strength %NL%}%CONTINUE%
-ItemDisplay[r20s]: %NAME%{%WHITE%Others: 50% Extra Gold from Monsters%NL%Weapon: 75% Extra Gold from Monsters%NL%}%CONTINUE%
-ItemDisplay[r21s]: %NAME%{%WHITE%Others: +30% Enhanced Defense%NL%Weapon: +75% Damage & +100 Attack Rating vs. Demons%NL%}%CONTINUE%
-ItemDisplay[r22s]: %NAME%{%WHITE%Shield: All Resistances +22%NL%Armors: All Resistances +15%NL%Weapon: 25% Chance of Open Wounds%NL%}%CONTINUE%
-ItemDisplay[r23s]: %NAME%{%WHITE%Others: Magic Damage Taken Reduced by 7%NL%Weapon: Prevent Monster Heal%NL%}%CONTINUE%
-ItemDisplay[r24s]: %NAME%{%WHITE%Others: 25% Better Chance of Getting Magic Items%NL%Weapon: 30% Better Chance of Getting Magic Items%NL%}%CONTINUE%
-ItemDisplay[r25s]: %NAME%{%WHITE%Others: +4% to Maximum Poison Resist%NL%Weapon: 20% Bonus to Attack Rating%NL%}%CONTINUE%
-ItemDisplay[r26s]: %NAME%{%WHITE%Others: +4% to Maximum Fire Resist%NL%Weapon: 7% Mana stolen per hit%NL%}%CONTINUE%
-ItemDisplay[r27s]: %NAME%{%WHITE%Others: +4% to Maximum Cold Resist%NL%Weapon: +50% Enhanced Damage%NL%}%CONTINUE%
-ItemDisplay[r28s]: %NAME%{%WHITE%Others: +4% to Maximum Lightning Resist%NL%Weapon: 20% Deadly Strike%NL%}%CONTINUE%
-ItemDisplay[r29s]: %NAME%{%WHITE%Shield: +50 to Mana%NL%Armors: Increase Maximum Mana 5%%NL%Weapon: +4 Life after Each Kill%NL%}%CONTINUE%
-ItemDisplay[r30s]: %NAME%{%WHITE%Others: Physical Damage Taken Reduced by 4%%NL%Weapon: 20% Chance of Crushing Blow%NL%}%CONTINUE%
-ItemDisplay[r31s]: %NAME%{%WHITE%Shield: +50 to Life%NL%Armors: Increase Maximum Life 5%%NL%Weapon: Ignore Target's Defense%NL%}%CONTINUE%
-ItemDisplay[r32s]: %NAME%{%WHITE%Others: Cannot Be Frozen%NL%Weapon: Freezes target +3%NL%}%CONTINUE%
+ItemDisplay[r20s]: %NAME%{%WHITE%Others: 50% Extra Gold from Monsters%NL%Weapons: 75% Extra Gold from Monsters%NL%}%CONTINUE%
+ItemDisplay[r21s]: %NAME%{%WHITE%Others: +30% Enhanced Defense%NL%Weapons: +75% Damage & +100 Attack Rating vs. Demons%NL%}%CONTINUE%
+ItemDisplay[r22s]: %NAME%{%WHITE%Shields: All Resistances +22%NL%Armors: All Resistances +15%NL%Weapons: 25% Chance of Open Wounds%NL%}%CONTINUE%
+ItemDisplay[r23s]: %NAME%{%WHITE%Others: Magic Damage Taken Reduced by 7%NL%Weapons: Prevent Monster Heal%NL%}%CONTINUE%
+ItemDisplay[r24s]: %NAME%{%WHITE%Others: 25% Better Chance of Getting Magic Items%NL%Weapons: 30% Better Chance of Getting Magic Items%NL%}%CONTINUE%
+ItemDisplay[r25s]: %NAME%{%WHITE%Others: +4% to Maximum Poison Resist%NL%Weapons: 20% Bonus to Attack Rating%NL%}%CONTINUE%
+ItemDisplay[r26s]: %NAME%{%WHITE%Others: +4% to Maximum Fire Resist%NL%Weapons: 7% Mana stolen per hit%NL%}%CONTINUE%
+ItemDisplay[r27s]: %NAME%{%WHITE%Others: +4% to Maximum Cold Resist%NL%Weapons: +50% Enhanced Damage%NL%}%CONTINUE%
+ItemDisplay[r28s]: %NAME%{%WHITE%Others: +4% to Maximum Lightning Resist%NL%Weapons: 20% Deadly Strike%NL%}%CONTINUE%
+ItemDisplay[r29s]: %NAME%{%WHITE%Shields: +50 to Mana%NL%Armors: Increase Maximum Mana 5%%NL%Weapons: +4 Life after Each Kill%NL%}%CONTINUE%
+ItemDisplay[r30s]: %NAME%{%WHITE%Others: Physical Damage Taken Reduced by 4%%NL%Weapons: 20% Chance of Crushing Blow%NL%}%CONTINUE%
+ItemDisplay[r31s]: %NAME%{%WHITE%Shields: +50 to Life%NL%Armors: Increase Maximum Life 5%%NL%Weapons: Ignore Target's Defense%NL%}%CONTINUE%
+ItemDisplay[r32s]: %NAME%{%WHITE%Others: Cannot Be Frozen%NL%Weapons: Freezes target +3%NL%}%CONTINUE%
 ItemDisplay[r33s]: %NAME%{%WHITE% Indestructible %NL%}%CONTINUE%
 
 // Highlighting: Individual Rules					...notifications for runes #10 and higher
@@ -296,12 +292,12 @@ ItemDisplay[MAG ((cm1 ILVL>46) OR (cm2 ILVL>41) OR (cm3 ILVL>49))]:			%NAME%{%WH
 // Hidden: Arrows/Bolts - level 5
 ItemDisplay[NMAG (aqv OR cqv) CLVL>4]:
 
-ItemDisplay[RARE (aqv OR cqv) !ID]:	%DOT-6D% %NAME% %WHITE%		// highlight unid rare quivers (with notifications)
+ItemDisplay[RARE (aqv OR cqv) !ID (CLVL<75 OR AMAZON)]:	%DOT-6D% %NAME% %WHITE%		// highlight unid rare quivers for amazons and characters below level 75 (with notifications)
 
 // Jewelry
-ItemDisplay[MAG rin ID ILVL>61]:			%NAME% %GRAY%[l%ILVL%]{%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%11%TAN%)%NL%%WHITE%Craft Rec: %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%17%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%15%TAN%),}%WHITE%	// crafting recipes for rings
-ItemDisplay[MAG amu ID ILVL>81 PRICE<9001]:		%NAME% %GRAY%[l%ILVL%]{%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%10%TAN%)%NL%%WHITE%Craft Rec: %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%18%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%14%TAN%),}%WHITE%	// crafting recipes for amulets (not shown on amulets that may be valuable)
-ItemDisplay[MAG amu ID !(LVLREQ>44 PRICE>9000)]:	%NAME% %GRAY%[l%ILVL%]{%DARK_GREEN%$%PRICE%}%WHITE%		// shows price for amulets (except high-price amulets that require level 45+ such as amulets with +3 skills)
+ItemDisplay[MAG rin ID ILVL>61]:			%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%15%TAN%), %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%17%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%WHITE%	// crafting recipes for rings
+ItemDisplay[MAG amu ID ILVL>81 PRICE<9001]:		%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%14%TAN%), %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%18%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%WHITE%	// crafting recipes for amulets (not shown on amulets that may be valuable)
+ItemDisplay[MAG amu ID !(LVLREQ>44 PRICE>9000)]:	%NAME%{%DARK_GREEN%$%PRICE%}%WHITE%		// shows price for amulets (except high-price amulets that require level 45+ such as amulets with +3 skills)
 ItemDisplay[MAG amu !ID ILVL>89]:	 %NAME% %WHITE%			// highlight unid ilvl 90+ amulets
 ItemDisplay[RARE (amu OR rin) !ID]:	%DOT-6D%  %NAME%  %WHITE%	// highlight unid rare jewelry (also adds notifications)
 
@@ -346,18 +342,14 @@ ItemDisplay[(UNI OR SET) ID ILVL>40 WEAPON EXC !SOR !(WAND !(9wn SOCK=0))]: %NAM
 ItemDisplay[(UNI OR SET) ID]: %NAME%{%NAME%}%WHITE%
 
 // Rare/Crafted Items
-ItemDisplay[RARE ID]: %NAME%{%DARK_GREEN%$%PRICE%%NL%}%CONTINUE%															// adds price to rares
-ItemDisplay[RARE ID CIRC ILVL>71 STAT360=0]: %NAME%{%NAME%%WHITE%Item Level: %ILVL%%NL%}%CONTINUE%											// adds item level to rare circlets
-ItemDisplay[CRAFT (ILVL<71 OR (amu ILVL<90) OR (rin ILVL<78) OR (WEAPON ILVL<77) OR ((CHEST OR SHIELD) ILVL<85) OR (DRU ILVL<75))]: %NAME%{%WHITE%Item Level: %ILVL%%NL%}%WHITE%	// adds item level to crafted items if it's less than ideal
-ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 ARMOR NORM (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt OR (BELT !hbl) OR NEC)]: %NAME%{%NAME%%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%WHITE%		// Upgrade Armor (Normal)
-ItemDisplay[(RARE OR CRAFT) ID ILVL>40 SOCK=0 ARMOR EXC (xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu)]: %NAME%{%NAME%%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%WHITE%										// Upgrade Armor (Exceptional)
-ItemDisplay[(RARE OR CRAFT) ID ILVL>40 WEAPON NORM !SOR !(WAND !((wnd OR ywn) SOCK=0))]: %NAME%{%NAME%%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%9%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%WHITE%														// Upgrade Weapon (Normal)
-ItemDisplay[(RARE OR CRAFT) ID ILVL>40 WEAPON EXC !SOR !(WAND !(9wn SOCK=0))]: %NAME%{%NAME%%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%19%TAN%)%GRAY%+%TAN%(%WHITE%22%TAN%)}%WHITE%															// Upgrade Weapon (Exceptional)
-// some rules need to essentially be duplicated to avoid a blank line since not all items include descriptions
-ItemDisplay[RARE ID CIRC ILVL>71 STAT360=0]: %NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%}%WHITE%										// displays remaining rare circlets with price and ilvl
-ItemDisplay[CRAFT ID (ILVL<71 OR (amu ILVL<90) OR (rin ILVL<78) OR (WEAPON ILVL<77) OR ((CHEST OR SHIELD) ILVL<85) OR (DRU ILVL<75))]: %NAME%{%WHITE%Item Level: %ILVL%}%WHITE%		// displays remaining crafted items with ilvl (if it's less than ideal)
-ItemDisplay[RARE ID]: %NAME%{%DARK_GREEN%$%PRICE%}%WHITE%																// displays remaining rares with price
-ItemDisplay[CRAFT ID]: %NAME%{}%WHITE%																			// displays remaining crafted items without descriptions 
+ItemDisplay[(RARE OR CRAFT) ID]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%																// adds price
+ItemDisplay[RARE ID CIRC ILVL>71 STAT360=0]: %NAME%{%NAME%%NL%%WHITE%Item Level: %ILVL%}%CONTINUE%												// adds item level to rare circlets
+ItemDisplay[CRAFT (ILVL<71 OR (amu ILVL<90) OR (rin ILVL<78) OR (WEAPON ILVL<77) OR ((CHEST OR SHIELD) ILVL<85) OR (DRU ILVL<75))]: %NAME%{%NAME%%NL%%WHITE%Item Level: %ILVL%}%WHITE%		// adds item level to crafted items if it's less than ideal
+ItemDisplay[(RARE OR CRAFT) ID ILVL>40 ARMOR NORM SOCK=0 (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR fld OR plt OR (BELT !hbl) OR NEC)]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%WHITE%		// Upgrade Armor (Normal)
+ItemDisplay[(RARE OR CRAFT) ID ILVL>40 ARMOR EXC SOCK=0 (xh9 OR xuc OR xpk OR xsh OR xui OR xea OR xla OR xtu)]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%WHITE%											// Upgrade Armor (Exceptional)
+ItemDisplay[(RARE OR CRAFT) ID ILVL>40 WEAPON NORM !SOR !(WAND !((wnd OR ywn) SOCK=0))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%9%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%WHITE%														// Upgrade Weapon (Normal)
+ItemDisplay[(RARE OR CRAFT) ID ILVL>40 WEAPON EXC !SOR !(WAND !(9wn SOCK=0))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%19%TAN%)%GRAY%+%TAN%(%WHITE%22%TAN%)}%WHITE%															// Upgrade Weapon (Exceptional)
+ItemDisplay[(RARE OR CRAFT) ID]: %NAME%{%NAME%}%WHITE%
 
 
 // +---------------------------+
@@ -390,28 +382,24 @@ ItemDisplay[MAG ID GLOVES ((TABSK0>2 OR TABSK2>2) OR ((TABSK0>1 OR TABSK1>2 OR T
 ItemDisplay[MAG ID WEAPON !(POLEARM OR (SPEAR !THROWING)) TABSK34>2]: %NAME% %ORANGE%+3 Warcries									// 1-Handed Weapons with +3 Warcries
 ItemDisplay[MAG ID SIN TABSK48>2]: %NAME% %TAN%+3 Traps															// Claws with +3 Traps
 ItemDisplay[MAG ID MACE TABSK40>2]: %NAME% %TAN%+3 Summoning														// Clubs with +3 Summoning
-//ItemDisplay[MAG ID WAND CHSK91>0]: %NAME% %GREEN%(Lower Resist)													// Wands with Lower Resist charges
-//ItemDisplay[MAG ID WAND CHSK82>0]: %NAME% %GREEN%(Life Tap)														// Wands with Life Tap charges
+ItemDisplay[MAG ID WAND CHSK91>0]: %NAME% %GREEN%(Lower Resist)														// Wands with Lower Resist charges
+ItemDisplay[MAG ID WAND CHSK82>0]: %NAME% %GREEN%(Life Tap)														// Wands with Life Tap charges
 ItemDisplay[MAG ID STAFF CHSK54>0 DIFF<2]: %NAME% %GREEN%(Teleport)													// Staves with Teleport charges (normal/nightmare difficulty)
 ItemDisplay[MAG ID SHIELD SOCK=4 (FBR>0 OR FHR>10 OR LIFE>40)]: %NAME% %TAN%+												// Jeweller's Monarch of Deflecting (JMoD) and similar
 ItemDisplay[MAG ID CHEST SOCK=4 LIFE>80]: %NAME% %TAN%+															// Jeweller's Armor of the Whale
 ItemDisplay[MAG ID CIRC SOCK=3 (FRW>20 OR STAT34>15)]: %NAME% %TAN%+													// Artisan's Circlet of Speed/Life Everlasting
 
-// Merchant Items
-ItemDisplay[MAG ID DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14) OR (ILVL=28 CLVL>22) OR (ILVL=36 CLVL>30) OR (ILVL=45 CLVL>39))]: %NAME%%GRAY%
-ItemDisplay[MAG ID ((ILVL=6 CLVL=1) OR (ILVL=7 CLVL=2) OR (ILVL=8 CLVL=3) OR (ILVL=9 CLVL=4) OR (ILVL=10 CLVL=5) OR (ILVL=11 CLVL=6) OR (ILVL=12 CLVL=7) OR (ILVL=13 CLVL=8) OR (ILVL=14 CLVL=9) OR (ILVL=15 CLVL=10) OR (ILVL=16 CLVL=11) OR (ILVL=17 CLVL=12) OR (ILVL=18 CLVL=13) OR (ILVL=19 CLVL=14) OR (ILVL=20 CLVL=15) OR (ILVL=21 CLVL=16) OR (ILVL=22 CLVL=17) OR (ILVL=23 CLVL=18) OR (ILVL=24 CLVL=19) OR (ILVL=25 CLVL=20) OR (ILVL=26 CLVL=21) OR (ILVL=27 CLVL=22) OR (ILVL=28 CLVL=23) OR (ILVL=29 CLVL=24) OR (ILVL=30 CLVL=25) OR (ILVL=31 CLVL=26) OR (ILVL=32 CLVL=27) OR (ILVL=33 CLVL=28) OR (ILVL=34 CLVL=29) OR (ILVL=35 CLVL=30) OR (ILVL=36 CLVL=31) OR (ILVL=37 CLVL=32) OR (ILVL=38 CLVL=33) OR (ILVL=39 CLVL=34) OR (ILVL=40 CLVL=35) OR (ILVL=41 CLVL=36) OR (ILVL=42 CLVL=37) OR (ILVL=43 CLVL=38) OR (ILVL=44 CLVL=39) OR (ILVL=45 CLVL=40))]: %NAME%%GRAY%
-ItemDisplay[MAG ID DIFF>0 ((ILVL=46 CLVL=41) OR (ILVL=47 CLVL=42) OR (ILVL=48 CLVL=43) OR (ILVL=49 CLVL=44) OR (ILVL=50 CLVL=45) OR (ILVL=51 CLVL=46) OR (ILVL=52 CLVL=47) OR (ILVL=53 CLVL=48) OR (ILVL=54 CLVL=49) OR (ILVL=55 CLVL=50) OR (ILVL=56 CLVL=51) OR (ILVL=57 CLVL=52) OR (ILVL=58 CLVL=53) OR (ILVL=59 CLVL=54) OR (ILVL=60 CLVL=55) OR (ILVL=61 CLVL=56) OR (ILVL=62 CLVL=57) OR (ILVL=63 CLVL=58) OR (ILVL=64 CLVL=59) OR (ILVL=65 CLVL=60) OR (ILVL=66 CLVL=61) OR (ILVL=67 CLVL=62) OR (ILVL=68 CLVL=63) OR (ILVL=69 CLVL=64) OR (ILVL=70 CLVL=65) OR (ILVL=71 CLVL=66) OR (ILVL=72 CLVL=67) OR (ILVL=73 CLVL=68) OR (ILVL=74 CLVL=69) OR (ILVL=75 CLVL=70) OR (ILVL=76 CLVL=71) OR (ILVL=77 CLVL=72) OR (ILVL=78 CLVL=73) OR (ILVL=79 CLVL=74) OR (ILVL=80 CLVL=75) OR (ILVL=81 CLVL=76) OR (ILVL=82 CLVL=77) OR (ILVL=83 CLVL=78) OR (ILVL=84 CLVL=79) OR (ILVL=85 CLVL=80) OR (ILVL=86 CLVL=81) OR (ILVL=87 CLVL=82) OR (ILVL=88 CLVL=83) OR (ILVL=89 CLVL=84) OR (ILVL=90 CLVL=85) OR (ILVL=91 CLVL=86) OR (ILVL=92 CLVL=87) OR (ILVL=93 CLVL=88) OR (ILVL=94 CLVL=89) OR (ILVL=95 CLVL=90) OR (ILVL=96 CLVL=91) OR (ILVL=97 CLVL=92) OR (ILVL=98 CLVL=93) OR (ILVL=99 CLVL>93))]: %NAME%%GRAY%
+ItemDisplay[MAG SHOP]: %NAME%%GRAY%		// prevents crafting recipes from being shown on merchant items
 
 // Crafting Recipes
-ItemDisplay[MAG ID ILVL>35 ILVL<72 ((ARMOR !CIRC) OR WEAPON)]: %NAME% %GRAY%[l%ILVL%]%CONTINUE%		// appends ilvl if it's below 72
-ItemDisplay[MAG ID ILVL>35 WEAPON !(BOW OR XBOW)]:	%NAME%{%DARK_GREEN%$%PRICE%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%3%TAN%)%NL%%WHITE%Crafting Recipes: %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%13%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%13%TAN%),}%WHITE%
-ItemDisplay[MAG ID ILVL>35 (BOW OR XBOW)]:		%NAME%{%DARK_GREEN%$%PRICE%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%12%TAN%)%NL%%WHITE%CR: %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%13%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%13%TAN%),}%WHITE%
-ItemDisplay[MAG ID ILVL>35 SHIELD]:			%NAME%{%DARK_GREEN%$%PRICE%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%4%TAN%)%NL%%WHITE%CR: %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%14%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%12%TAN%),}%WHITE%
-ItemDisplay[MAG ID ILVL>35 HELM]:			%NAME%{%DARK_GREEN%$%PRICE%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%6%TAN%)%NL%%WHITE%CR: %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%17%TAN%),}%WHITE%
-ItemDisplay[MAG ID ILVL>35 CHEST]:			%NAME%{%DARK_GREEN%$%PRICE%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%5%TAN%)%NL%%WHITE%CR: %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%2%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%3%TAN%),}%WHITE%
-ItemDisplay[MAG ID ILVL>35 GLOVES]:			%NAME%{%DARK_GREEN%$%PRICE%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%8%TAN%)%NL%%WHITE%CR: %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%15%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%16%TAN%),}%WHITE%
-ItemDisplay[MAG ID ILVL>35 BOOTS]:			%NAME%{%DARK_GREEN%$%PRICE%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%9%TAN%)%NL%%WHITE%CR: %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%16%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%1%TAN%),}%WHITE%
-ItemDisplay[MAG ID ILVL>35 BELT]:			%NAME%{%DARK_GREEN%$%PRICE%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%7%TAN%)%NL%%WHITE%CR: %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%1%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%2%TAN%),}%WHITE%
+ItemDisplay[MAG ID ILVL>35 WEAPON !(BOW OR XBOW)]:	%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%13%TAN%), %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%13%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%WHITE%
+ItemDisplay[MAG ID ILVL>35 (BOW OR XBOW)]:		%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%13%TAN%),%ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%13%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%WHITE%
+ItemDisplay[MAG ID ILVL>35 SHIELD]:			%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%14%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%WHITE%
+ItemDisplay[MAG ID ILVL>35 HELM]:			%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%17%TAN%), %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%3%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%WHITE%
+ItemDisplay[MAG ID ILVL>35 CHEST]:			%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%2%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%WHITE%
+ItemDisplay[MAG ID ILVL>35 GLOVES]:			%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%16%TAN%), %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%15%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%WHITE%
+ItemDisplay[MAG ID ILVL>35 BOOTS]:			%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%1%TAN%), %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%16%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%WHITE%
+ItemDisplay[MAG ID ILVL>35 BELT]:			%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%2%TAN%), %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%1%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%WHITE%
 
 // Catchall - Identified Magic Items
 ItemDisplay[MAG ID]: %NAME%{%DARK_GREEN%$%PRICE%}%WHITE%
@@ -615,7 +603,7 @@ ItemDisplay[ED=5 NMAG]: %NAME% %BLUE%+5{%NAME%}%CONTINUE%
 ItemDisplay[NMAG SOCK>0]: %NAME% %GRAY%[%SOCKETS%]{%NAME%}%CONTINUE%
 
 // Forces regular merchant items to be displayed
-ItemDisplay[NMAG DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14)) !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp)]: %NAME%{%NAME%}%WHITE%
+ItemDisplay[NMAG SHOP !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp)]: %NAME%{%NAME%}%WHITE%
 
 // ... Add custom rules for regular non-class items here:
 // ......................................................
@@ -627,7 +615,7 @@ ItemDisplay[NMAG DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14)) !(DRU OR BAR OR 
 ItemDisplay[NMAG CLVL>14 (GLOVES OR BOOTS OR BELT)]: {%NAME%}																// gloves, boots, belts
 ItemDisplay[NMAG CLVL>14 ((SOCK=1 !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp)) OR (dgr OR dir OR buc OR xuc))]: {%NAME%}	// 1-socket items & items that can only get 1 socket (daggers, shields)
 ItemDisplay[NMAG CLVL>14 THROWING !ZON NORM]: {%NAME%}																	// normal throwable weapons
-ItemDisplay[NMAG CLVL>14 INF !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp)]: {%NAME%}				// inferior items
+ItemDisplay[NMAG CLVL>14 INF !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR utp)]: {%NAME%}			// inferior items (except Archon Plate)
 ItemDisplay[NMAG CLVL>14 (BOW OR XBOW) !ZON (SOCK=5 OR (SOCK=0 ILVL>40 SUP (lbw OR 8lb OR sbb OR 8s8 OR 6s7 OR swb OR 8sw OR 6sw OR rxb OR 8rx OR 6rx)))]: {%NAME%}			// 5-socket bows & bows that can only get 5 sockets (only available Runeword is Call to Arms)
 //ItemDisplay[NMAG CLVL>14 DAGGER !THROWING (SOCK=2 OR (SOCK=0 (ILVL<26 OR bld OR 9bl OR 7bl)))]: {%NAME%}										// 2-socket daggers & daggers that can only get up to 2 sockets (only available Runewords are Strength/Wind)
 
