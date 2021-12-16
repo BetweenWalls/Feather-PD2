@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	11 DECEMBER 2021
+//		Date Updated:	16 DECEMBER 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -100,12 +100,12 @@ ItemDisplay[wss]:	%DOT-50%  %NAME%  %WHITE%									// Worldstone Shard
 ItemDisplay[lbox]:	%BORDER-50%        %NAME%        %WHITE%							// Larzuk's Puzzlebox
 ItemDisplay[ubtm]:	%MAP-60%  %NAME%  {%GOLD%The Fall of Tristram}%WHITE%						// Pandemonium Talisman (Uber Tristram)
 ItemDisplay[dcma]:	%MAP-60%  %NAME%  {%GOLD%Diablo Walks the Earth}%WHITE%						// Vision of Terror	(DClone)
-ItemDisplay[rtma]:	%MAP-60%  %NAME%  %WHITE%									// Voidstone		(Rathma)
-ItemDisplay[dcso]:	%MAP-60%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Diablo / Baal)}%WHITE%	// Prime Evil Soul	(DClone ingredient)
+ItemDisplay[rtma]:	%MAP-60%  %NAME%  {%GOLD%Rathma Awaits You}%WHITE%						// Voidstone		(Rathma)
+ItemDisplay[dcso]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Diablo / Baal)}%WHITE%		// Prime Evil Soul	(DClone/Rathma ingredient)
 ItemDisplay[dcho]:	%MAP-60%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Uber Tristram)}%WHITE%	// Black Soulstone	(DClone ingredient)
 ItemDisplay[dcbl]:	%MAP-60%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Map Bosses)}%WHITE%	// Pure Demonic Essence	(DClone ingredient)
-ItemDisplay[rtmo]:	%MAP-60%  %NAME%  %WHITE%									// Trang-Oul's Jawbone	(Rathma ingredient)
-ItemDisplay[rtmv]:	%MAP-60%  %NAME%  %WHITE%									// ?			(Rathma ingredient)
+ItemDisplay[rtmo]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Level 85+ areas)}%WHITE%		// Trang-Oul's Jawbone	(Rathma ingredient)
+ItemDisplay[rtmv]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Shadow of Mendeln)}%WHITE%		// Splinter of the Void (Rathma ingredient)
 ItemDisplay[cwss]:	%MAP-50%    %NAME%    %WHITE%									// Tainted Worldstone Shard
 ItemDisplay[(rtp OR rid)]: %MAP%%NAME%											// Infinite Tomes
 // Map Orbs
@@ -123,7 +123,7 @@ ItemDisplay[RARE (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR
 ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19)]:	%MAP-77%%DOT-53%%NAME% %DARK_GREEN%(%GOLD%T1%DARK_GREEN%){%NAME%}%CONTINUE%		// maps - T1 (Ruins of Viz-Jun, Horazon's Memory, Bastion Keep)
 ItemDisplay[(t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29)]:	%MAP-77%%DOT-53%%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%){%NAME%}%CONTINUE%		// maps - T2 (Phlegethon, Torajan Jungle, Arreat Battlefield, Tomb of Zultan Kulle, Sewers of Harrogath)
 ItemDisplay[(t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39)]:	%MAP-77%%DOT-53%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%){%NAME%}%CONTINUE%		// maps - T3 (River of Blood, Throne of Insanity, Reziarfg's Lair, Ancestral Trial, Blood Moon, Fall of Caldeum, Pandemonium Citadel, Canyon of Sescheron, Kehjistan Marketplace)
-ItemDisplay[(t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]:	%MAP-77%%DOT-53%%PX-50%%NAME% %DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%){%NAME%}%CONTINUE%	// dungeons  (Cathedral of Light)
+ItemDisplay[(t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]:	%MAP-77%%DOT-53%%PX-50%%NAME% %DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%){%NAME%}%CONTINUE%	// dungeons  (Cathedral of Light, Plains of Torment)
 ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19) !(RARE ID)]:	 %NAME% %WHITE%		// maps - T1 highlighting
 ItemDisplay[(t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29) !(RARE ID)]:	  %NAME%  %WHITE%	// maps - T2 highlighting
 ItemDisplay[(t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39) !(RARE ID)]:	   %NAME%   %WHITE%	// maps - T3 highlighting
@@ -308,10 +308,10 @@ ItemDisplay[RARE (amu OR rin) !ID]:	%DOT-6D%  %NAME%  %WHITE%	// highlight unid 
 //-¦ General Equipment ¦-------------------------------------------------------------------------------------------------
 // +-------------------+
 // Catchall - Non-Equipment
-ItemDisplay[!(ARMOR OR (WEAPON !(leg OR opl OR opm OR ops OR gpl OR gpm OR gps)) OR ((amu OR rin) (UNI OR SET OR CRAFT)) OR ((jew OR cm1 OR cm2 OR cm3) UNI))]: %NAME%{%NAME%}%WHITE%	// displays most non-equipment items as normal
+ItemDisplay[!(ARMOR OR (WEAPON !(leg OR opl OR opm OR ops OR gpl OR gpm OR gps)) OR ((amu OR rin) (UNI OR SET OR CRAFT)) OR ((jew OR cm1 OR cm2 OR cm3) UNI) OR ram)]: %NAME%{%NAME%}%WHITE%	// displays most non-equipment items as normal
 
 // Modification: Sockets (non-regular items)
-ItemDisplay[!NMAG SOCK>0 !rar !rbe]: %NAME% %GRAY%[%SOCKETS%]%CONTINUE%
+ItemDisplay[!NMAG SOCK>0]: %NAME% %GRAY%[%SOCKETS%]%CONTINUE%
 
 // Modification: Ethereal
 ItemDisplay[STAT73>0 STAT72=0]: %RED%%NAME%%CONTINUE%		// broken items are red
@@ -340,79 +340,791 @@ ItemDisplay[RW]: %NAME%{%NAME%}%WHITE%
 ItemDisplay[ID (RARE OR CRAFT OR ((WEAPON !(ELT OR SOR OR WAND OR hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh)) OR lbl OR vbl OR mbl OR tbl))]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%
 
 // Descriptions for Maximum Corruptable Sockets
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 (buc OR xuc OR dgr OR dir OR wnd OR ywn OR 9wn)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 1}%CONTINUE%																																																						// 1s (all ilvls)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 (cap OR skp OR hlm OR fhl OR bhm OR xap OR xkp OR xlm OR xhl OR xh9 OR uap OR ukp OR ulm OR uhl OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR xui OR xea OR xla OR xtu OR sml OR spk OR bsh OR xml OR xpk OR xsh OR uuc OR uml OR (NEC NORM) OR hax OR clb OR spc OR mac OR 9sp OR 7sp OR ssd OR scm OR sbr OR flc OR bld OR 9dg OR 9di OR 9bl OR 7dg OR 7di OR 7bl OR sst OR (WAND !wnd !ywn !9wn) OR scp OR ktr OR wrb OR axf OR ces OR (SOR !ob5 !oba !obf))]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 2}%CONTINUE%	// 2s (all ilvls)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 (rng OR brs OR ltp OR gth OR ful OR aar OR (CHEST !NORM !xui !xea !xla !xtu) OR lrg OR kit OR tow OR gts OR xrg OR xit OR xow OR xts OR urg OR upk OR uit OR ush OR uow OR uts OR DIN OR 9ha OR 7ha OR mst OR 9cl OR 9ma OR 9mt OR 7cl OR 7ma OR 7mt OR wsd OR 2hs OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR spr OR 9sr OR 7sr OR bar OR sbw OR lxb OR lst OR 8ss OR 8ls OR 6ss OR 6ls OR gsc OR 9sc OR 9qs OR 7sc OR 7qs OR qf1 OR qf2)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 3}%CONTINUE%	// 3s (all ilvls)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 (axe OR 2ax OR mpi OR wax OR 9ax OR 92a OR 9mp OR 9wa OR 7ax OR 72a OR 7mp OR 7wa OR lax OR cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 4}%CONTINUE%																																											// 4s (all ilvls)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL<26 CIRC]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 1}%CONTINUE%																																																										// 1s (ilvl 1-25)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL<26 (msk OR ghm OR crn OR xsk OR xhm OR xrn OR usk OR uh9 OR uhm OR urn OR DRU OR BAR OR (NEC !NORM) OR kri OR 9kr OR 7kr OR (SIN !ktr !wrb !axf !ces) OR ob5 OR oba OR obf)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 2}%CONTINUE%																																					// 2s (ilvl 1-25)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (msk OR ghm OR crn OR xsk OR xhm OR xrn OR usk OR uh9 OR uhm OR urn OR CIRC)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 2}%CONTINUE%																																																// 2s (ilvl 26-40)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>40 (ci0 OR ci1)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 2}%CONTINUE%																																																									// 2s (ilvl 41+)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL<26 (fla OR whm OR mau OR gma OR 9fl OR 9wh OR 9m9 OR 9gm OR 7fl OR 7wh OR 7m7 OR 7gm OR crs OR bsd OR lsd OR 9cr OR 9bs OR 9ls OR 7cr OR 7bs OR 7ls OR (SWORD 2H !2hs !92h !72h) OR (SPEAR !spr !9sr !7sr) OR (POLEARM !bar) OR (BOW !sbw) OR (XBOW !lxb) OR wsp OR 9ws OR 7ws OR (ZON !THROWING) OR hfh)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 3}%CONTINUE%																						// 3s (ilvl 1-25)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (DRU OR BAR OR (NEC !NORM) OR kri OR 9kr OR 7kr OR (SIN !ktr !wrb !axf !ces) OR ob5 OR oba OR obf)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 3}%CONTINUE%																																													// 3s (ilvl 26-40)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>40 (msk OR ghm OR crn OR xsk OR xhm OR xrn OR usk OR uh9 OR uhm OR urn OR ci2 OR ci3 OR DRU OR BAR OR (NEC !NORM) OR kri OR 9kr OR 7kr OR (SIN !ktr !wrb !axf !ces) OR ob5 OR oba OR obf)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 3}%CONTINUE%																																				// 3s (ilvl 41+)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL<26 (AXE 2H !lax)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 4}%CONTINUE%																																																									// 4s (ilvl 1-25)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (fla OR whm OR mau OR gma OR 9fl OR 9wh OR 9m9 OR 9gm OR 7fl OR 7wh OR 7m7 OR 7gm OR crs OR bsd OR lsd OR 9cr OR 9bs OR 9ls OR 7cr OR 7bs OR 7ls OR (SWORD 2H !2hs !92h !72h) OR (SPEAR !spr !9sr !7sr) OR (POLEARM !bar) OR (BOW !sbw) OR (XBOW !lxb) OR (ZON !THROWING) OR hfh)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 4}%CONTINUE%																							// 4s (ilvl 26-40)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>40 (fla OR whm OR 9fl OR 9wh OR 7fl OR 7wh OR crs OR bsd OR lsd OR clm OR gis OR bsw OR 9cr OR 9bs OR 9ls OR 9cm OR 9gs OR 9b9 OR 7cr OR 7bs OR 7ls OR 7cm OR 7gs OR 7b7 OR tri OR 9tr OR 7tr OR vou OR 9b7 OR 9vo OR 7o7 OR 7vo OR hbw OR cbw OR 8sb OR 8hb OR 8cb OR 6sb OR 6hb OR 6cb OR mxb OR 8lx OR 8mx OR 6lx OR 6mx OR hfh)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 4}%CONTINUE%																		// 4s (ilvl 41+)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL<26 (wst OR 8ws OR 6ws)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 5}%CONTINUE%																																																								// 5s (ilvl 1-25)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 ((AXE 2H !lax) OR wsp OR 9ws OR 7ws)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 5}%CONTINUE%																																																					// 5s (ilvl 26-40)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>40 (bax OR btx OR 9la OR 9ba OR 9bt OR 7la OR 7ba OR 7bt OR flb OR 9fb OR 7fb OR brn OR 9br OR 7br OR scy OR pax OR 9s8 OR 9pa OR 7s8 OR 7pa OR lbw OR sbb OR swb OR 8lb OR 8s8 OR 8sw OR 6s7 OR 6sw OR rxb OR 8rx OR 6rx OR wsp OR 9ws OR 7ws OR (ZON BOW))]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 5}%CONTINUE%																											// 5s (ilvl 41+)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (wst OR 8ws OR 6ws)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 6}%CONTINUE%																																																							// 6s (ilvl 26-40)
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>40 (gax OR gix OR 9ga OR 9gi OR 7ga OR 7gi OR (MACE 2H) OR gsd OR 9gd OR 7gd OR spt OR pik OR 9st OR 9p9 OR 7st OR 7p7 OR hal OR wsc OR 9h9 OR 9wc OR 7h7 OR 7wc OR lbb OR lwb OR 8l8 OR 8lw OR 6lb OR 6l7 OR 6lw OR hxb OR 8hx OR 6hx OR wst OR 8ws OR 6ws OR (ZON SPEAR !THROWING))]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 6}%CONTINUE%																								// 6s (ilvl 41+)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 (buc OR xuc OR dgr OR dir OR wnd OR ywn OR 9wn)]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 1}%CONTINUE%																																																						// 1s (all ilvls)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 (cap OR skp OR hlm OR fhl OR bhm OR xap OR xkp OR xlm OR xhl OR xh9 OR uap OR ukp OR ulm OR uhl OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR xui OR xea OR xla OR xtu OR sml OR spk OR bsh OR xml OR xpk OR xsh OR uuc OR uml OR (NEC NORM) OR hax OR clb OR spc OR mac OR 9sp OR 7sp OR ssd OR scm OR sbr OR flc OR bld OR 9dg OR 9di OR 9bl OR 7dg OR 7di OR 7bl OR sst OR (WAND !wnd !ywn !9wn) OR scp OR ktr OR wrb OR axf OR ces OR (SOR !ob5 !oba !obf))]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 2}%CONTINUE%	// 2s (all ilvls)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 (rng OR brs OR ltp OR gth OR ful OR aar OR (CHEST !NORM !xui !xea !xla !xtu) OR lrg OR kit OR tow OR gts OR xrg OR xit OR xow OR xts OR urg OR upk OR uit OR ush OR uow OR uts OR DIN OR 9ha OR 7ha OR mst OR 9cl OR 9ma OR 9mt OR 7cl OR 7ma OR 7mt OR wsd OR 2hs OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR spr OR 9sr OR 7sr OR bar OR sbw OR lxb OR lst OR 8ss OR 8ls OR 6ss OR 6ls OR gsc OR 9sc OR 9qs OR 7sc OR 7qs OR qf1 OR qf2)]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 3}%CONTINUE%	// 3s (all ilvls)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 (axe OR 2ax OR mpi OR wax OR 9ax OR 92a OR 9mp OR 9wa OR 7ax OR 72a OR 7mp OR 7wa OR lax OR cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs)]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 4}%CONTINUE%																																											// 4s (all ilvls)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL<26 CIRC]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 1}%CONTINUE%																																																										// 1s (ilvl 1-25)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL<26 (msk OR ghm OR crn OR xsk OR xhm OR xrn OR usk OR uh9 OR uhm OR urn OR DRU OR BAR OR (NEC !NORM) OR kri OR 9kr OR 7kr OR (SIN !ktr !wrb !axf !ces) OR ob5 OR oba OR obf)]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 2}%CONTINUE%																																					// 2s (ilvl 1-25)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (msk OR ghm OR crn OR xsk OR xhm OR xrn OR usk OR uh9 OR uhm OR urn OR CIRC)]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 2}%CONTINUE%																																																// 2s (ilvl 26-40)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>40 (ci0 OR ci1)]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 2}%CONTINUE%																																																									// 2s (ilvl 41+)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL<26 (fla OR whm OR mau OR gma OR 9fl OR 9wh OR 9m9 OR 9gm OR 7fl OR 7wh OR 7m7 OR 7gm OR crs OR bsd OR lsd OR 9cr OR 9bs OR 9ls OR 7cr OR 7bs OR 7ls OR (SWORD 2H !2hs !92h !72h) OR (SPEAR !spr !9sr !7sr) OR (POLEARM !bar) OR (BOW !sbw) OR (XBOW !lxb) OR wsp OR 9ws OR 7ws OR (ZON !THROWING) OR hfh)]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 3}%CONTINUE%																						// 3s (ilvl 1-25)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (DRU OR BAR OR (NEC !NORM) OR kri OR 9kr OR 7kr OR (SIN !ktr !wrb !axf !ces) OR ob5 OR oba OR obf)]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 3}%CONTINUE%																																													// 3s (ilvl 26-40)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>40 (msk OR ghm OR crn OR xsk OR xhm OR xrn OR usk OR uh9 OR uhm OR urn OR ci2 OR ci3 OR DRU OR BAR OR (NEC !NORM) OR kri OR 9kr OR 7kr OR (SIN !ktr !wrb !axf !ces) OR ob5 OR oba OR obf)]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 3}%CONTINUE%																																				// 3s (ilvl 41+)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL<26 (AXE 2H !lax)]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 4}%CONTINUE%																																																									// 4s (ilvl 1-25)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (fla OR whm OR mau OR gma OR 9fl OR 9wh OR 9m9 OR 9gm OR 7fl OR 7wh OR 7m7 OR 7gm OR crs OR bsd OR lsd OR 9cr OR 9bs OR 9ls OR 7cr OR 7bs OR 7ls OR (SWORD 2H !2hs !92h !72h) OR (SPEAR !spr !9sr !7sr) OR (POLEARM !bar) OR (BOW !sbw) OR (XBOW !lxb) OR (ZON !THROWING) OR hfh)]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 4}%CONTINUE%																							// 4s (ilvl 26-40)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>40 (fla OR whm OR 9fl OR 9wh OR 7fl OR 7wh OR crs OR bsd OR lsd OR clm OR gis OR bsw OR 9cr OR 9bs OR 9ls OR 9cm OR 9gs OR 9b9 OR 7cr OR 7bs OR 7ls OR 7cm OR 7gs OR 7b7 OR tri OR 9tr OR 7tr OR vou OR 9b7 OR 9vo OR 7o7 OR 7vo OR hbw OR cbw OR 8sb OR 8hb OR 8cb OR 6sb OR 6hb OR 6cb OR mxb OR 8lx OR 8mx OR 6lx OR 6mx OR hfh)]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 4}%CONTINUE%																		// 4s (ilvl 41+)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL<26 (wst OR 8ws OR 6ws)]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 5}%CONTINUE%																																																								// 5s (ilvl 1-25)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 ((AXE 2H !lax) OR wsp OR 9ws OR 7ws)]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 5}%CONTINUE%																																																					// 5s (ilvl 26-40)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>40 (bax OR btx OR 9la OR 9ba OR 9bt OR 7la OR 7ba OR 7bt OR flb OR 9fb OR 7fb OR brn OR 9br OR 7br OR scy OR pax OR 9s8 OR 9pa OR 7s8 OR 7pa OR lbw OR sbb OR swb OR 8lb OR 8s8 OR 8sw OR 6s7 OR 6sw OR rxb OR 8rx OR 6rx OR wsp OR 9ws OR 7ws OR (ZON BOW))]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 5}%CONTINUE%																											// 5s (ilvl 41+)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (wst OR 8ws OR 6ws)]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 6}%CONTINUE%																																																							// 6s (ilvl 26-40)
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 ILVL>40 (gax OR gix OR 9ga OR 9gi OR 7ga OR 7gi OR (MACE 2H) OR gsd OR 9gd OR 7gd OR spt OR pik OR 9st OR 9p9 OR 7st OR 7p7 OR hal OR wsc OR 9h9 OR 9wc OR 7h7 OR 7wc OR lbb OR lwb OR 8l8 OR 8lw OR 6lb OR 6l7 OR 6lw OR hxb OR 8hx OR 6hx OR wst OR 8ws OR 6ws OR (ZON SPEAR !THROWING))]: %NAME%{%NAME%%NL%%WHITE%Max Corruptable Sockets: 6}%CONTINUE%																								// 6s (ilvl 41+)
 ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 (qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR xui OR xea OR xla OR xtu OR buc OR xuc OR spk OR xpk OR bsh OR xsh OR hax OR clb OR mac OR ssd OR scm OR sbr OR flc OR dgr OR dir OR sst OR wnd OR ywn OR 9wn OR scp OR (ILVL>25 ((NEC NORM) OR lax OR bar OR sbw OR lxb OR ktr OR wrb OR axf OR ces)) OR (ILVL>40 (bhm OR xh9 OR ci0 OR ci1)))]: %NAME%{%NAME% %GRAY%(upgrade for +1)}%CONTINUE%																// Items that can gain more sockets if upgraded first
 
-// Descriptions for Maximum Corruptable Sockets (nearly identical lines just to prevent so many unique/set items from having price... this will get cleaned up in the future)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 (buc OR xuc OR dgr OR dir OR wnd OR ywn OR 9wn)]: %NAME%{%WHITE%Maximum Sockets: 1}%CONTINUE%																																																							// 1s (all ilvls)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 (cap OR skp OR hlm OR fhl OR bhm OR xap OR xkp OR xlm OR xhl OR xh9 OR uap OR ukp OR ulm OR uhl OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR xui OR xea OR xla OR xtu OR sml OR spk OR bsh OR xml OR xpk OR xsh OR uuc OR uml OR (NEC NORM) OR hax OR clb OR spc OR mac OR 9sp OR 7sp OR ssd OR scm OR sbr OR flc OR bld OR 9dg OR 9di OR 9bl OR 7dg OR 7di OR 7bl OR sst OR (WAND !wnd !ywn !9wn) OR scp OR ktr OR wrb OR axf OR ces OR (SOR !ob5 !oba !obf))]: %NAME%{%WHITE%Maximum Sockets: 2}%CONTINUE%			// 2s (all ilvls)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 (rng OR brs OR ltp OR gth OR ful OR aar OR (CHEST !NORM !xui !xea !xla !xtu) OR lrg OR kit OR tow OR gts OR xrg OR xit OR xow OR xts OR urg OR upk OR uit OR ush OR uow OR uts OR DIN OR 9ha OR 7ha OR mst OR 9cl OR 9ma OR 9mt OR 7cl OR 7ma OR 7mt OR wsd OR 2hs OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR spr OR 9sr OR 7sr OR bar OR sbw OR lxb OR lst OR 8ss OR 8ls OR 6ss OR 6ls OR gsc OR 9sc OR 9qs OR 7sc OR 7qs OR qf1 OR qf2)]: %NAME%{%WHITE%Maximum Sockets: 3}%CONTINUE%		// 3s (all ilvls)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 (axe OR 2ax OR mpi OR wax OR 9ax OR 92a OR 9mp OR 9wa OR 7ax OR 72a OR 7mp OR 7wa OR lax OR cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs)]: %NAME%{%WHITE%Maximum Sockets: 4}%CONTINUE%																																													// 4s (all ilvls)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL<26 CIRC]: %NAME%{%WHITE%Maximum Sockets: 1}%CONTINUE%																																																												// 1s (ilvl 1-25)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL<26 (msk OR ghm OR crn OR xsk OR xhm OR xrn OR usk OR uh9 OR uhm OR urn OR DRU OR BAR OR (NEC !NORM) OR kri OR 9kr OR 7kr OR (SIN !ktr !wrb !axf !ces) OR ob5 OR oba OR obf)]: %NAME%{%WHITE%Maximum Sockets: 2}%CONTINUE%																																							// 2s (ilvl 1-25)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (msk OR ghm OR crn OR xsk OR xhm OR xrn OR usk OR uh9 OR uhm OR urn OR CIRC)]: %NAME%{%WHITE%Maximum Sockets: 2}%CONTINUE%																																																		// 2s (ilvl 26-40)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>40 (ci0 OR ci1)]: %NAME%{%WHITE%Maximum Sockets: 2}%CONTINUE%																																																											// 2s (ilvl 41+)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL<26 (fla OR whm OR mau OR gma OR 9fl OR 9wh OR 9m9 OR 9gm OR 7fl OR 7wh OR 7m7 OR 7gm OR crs OR bsd OR lsd OR 9cr OR 9bs OR 9ls OR 7cr OR 7bs OR 7ls OR (SWORD 2H !2hs !92h !72h) OR (SPEAR !spr !9sr !7sr) OR (POLEARM !bar) OR (BOW !sbw) OR (XBOW !lxb) OR wsp OR 9ws OR 7ws OR (ZON !THROWING) OR hfh)]: %NAME%{%WHITE%Maximum Sockets: 3}%CONTINUE%																							// 3s (ilvl 1-25)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (DRU OR BAR OR (NEC !NORM) OR kri OR 9kr OR 7kr OR (SIN !ktr !wrb !axf !ces) OR ob5 OR oba OR obf)]: %NAME%{%WHITE%Maximum Sockets: 3}%CONTINUE%																																															// 3s (ilvl 26-40)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>40 (msk OR ghm OR crn OR xsk OR xhm OR xrn OR usk OR uh9 OR uhm OR urn OR ci2 OR ci3 OR DRU OR BAR OR (NEC !NORM) OR kri OR 9kr OR 7kr OR (SIN !ktr !wrb !axf !ces) OR ob5 OR oba OR obf)]: %NAME%{%WHITE%Maximum Sockets: 3}%CONTINUE%																																					// 3s (ilvl 41+)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL<26 (AXE 2H !lax)]: %NAME%{%WHITE%Maximum Sockets: 4}%CONTINUE%																																																										// 4s (ilvl 1-25)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (fla OR whm OR mau OR gma OR 9fl OR 9wh OR 9m9 OR 9gm OR 7fl OR 7wh OR 7m7 OR 7gm OR crs OR bsd OR lsd OR 9cr OR 9bs OR 9ls OR 7cr OR 7bs OR 7ls OR (SWORD 2H !2hs !92h !72h) OR (SPEAR !spr !9sr !7sr) OR (POLEARM !bar) OR (BOW !sbw) OR (XBOW !lxb) OR (ZON !THROWING) OR hfh)]: %NAME%{%WHITE%Maximum Sockets: 4}%CONTINUE%																									// 4s (ilvl 26-40)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>40 (fla OR whm OR 9fl OR 9wh OR 7fl OR 7wh OR crs OR bsd OR lsd OR clm OR gis OR bsw OR 9cr OR 9bs OR 9ls OR 9cm OR 9gs OR 9b9 OR 7cr OR 7bs OR 7ls OR 7cm OR 7gs OR 7b7 OR tri OR 9tr OR 7tr OR vou OR 9b7 OR 9vo OR 7o7 OR 7vo OR hbw OR cbw OR 8sb OR 8hb OR 8cb OR 6sb OR 6hb OR 6cb OR mxb OR 8lx OR 8mx OR 6lx OR 6mx OR hfh)]: %NAME%{%WHITE%Maximum Sockets: 4}%CONTINUE%																				// 4s (ilvl 41+)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL<26 (wst OR 8ws OR 6ws)]: %NAME%{%WHITE%Maximum Sockets: 5}%CONTINUE%																																																										// 5s (ilvl 1-25)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 ((AXE 2H !lax) OR wsp OR 9ws OR 7ws)]: %NAME%{%WHITE%Maximum Sockets: 5}%CONTINUE%																																																							// 5s (ilvl 26-40)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>40 (bax OR btx OR 9la OR 9ba OR 9bt OR 7la OR 7ba OR 7bt OR flb OR 9fb OR 7fb OR brn OR 9br OR 7br OR scy OR pax OR 9s8 OR 9pa OR 7s8 OR 7pa OR lbw OR sbb OR swb OR 8lb OR 8s8 OR 8sw OR 6s7 OR 6sw OR rxb OR 8rx OR 6rx OR wsp OR 9ws OR 7ws OR (ZON BOW))]: %NAME%{%WHITE%Maximum Sockets: 5}%CONTINUE%																													// 5s (ilvl 41+)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (wst OR 8ws OR 6ws)]: %NAME%{%WHITE%Maximum Sockets: 6}%CONTINUE%																																																									// 6s (ilvl 26-40)
-ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>40 (gax OR gix OR 9ga OR 9gi OR 7ga OR 7gi OR (MACE 2H) OR gsd OR 9gd OR 7gd OR spt OR pik OR 9st OR 9p9 OR 7st OR 7p7 OR hal OR wsc OR 9h9 OR 9wc OR 7h7 OR 7wc OR lbb OR lwb OR 8l8 OR 8lw OR 6lb OR 6l7 OR 6lw OR hxb OR 8hx OR 6hx OR wst OR 8ws OR 6ws OR (ZON SPEAR !THROWING))]: %NAME%{%WHITE%Maximum Sockets: 6}%CONTINUE%																										// 6s (ilvl 41+)
+// Descriptions for Maximum Corruptable Sockets					...these are nearly identical lines just to prevent so many unique/set items from having price, TODO: optimize with less duplicated code
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 (buc OR xuc OR dgr OR dir OR wnd OR ywn OR 9wn)]: %NAME%{%WHITE%Max Corruptable Sockets: 1}%CONTINUE%																																																							// 1s (all ilvls)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 (cap OR skp OR hlm OR fhl OR bhm OR xap OR xkp OR xlm OR xhl OR xh9 OR uap OR ukp OR ulm OR uhl OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR xui OR xea OR xla OR xtu OR sml OR spk OR bsh OR xml OR xpk OR xsh OR uuc OR uml OR (NEC NORM) OR hax OR clb OR spc OR mac OR 9sp OR 7sp OR ssd OR scm OR sbr OR flc OR bld OR 9dg OR 9di OR 9bl OR 7dg OR 7di OR 7bl OR sst OR (WAND !wnd !ywn !9wn) OR scp OR ktr OR wrb OR axf OR ces OR (SOR !ob5 !oba !obf))]: %NAME%{%WHITE%Max Corruptable Sockets: 2}%CONTINUE%			// 2s (all ilvls)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 (rng OR brs OR ltp OR gth OR ful OR aar OR (CHEST !NORM !xui !xea !xla !xtu) OR lrg OR kit OR tow OR gts OR xrg OR xit OR xow OR xts OR urg OR upk OR uit OR ush OR uow OR uts OR DIN OR 9ha OR 7ha OR mst OR 9cl OR 9ma OR 9mt OR 7cl OR 7ma OR 7mt OR wsd OR 2hs OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR spr OR 9sr OR 7sr OR bar OR sbw OR lxb OR lst OR 8ss OR 8ls OR 6ss OR 6ls OR gsc OR 9sc OR 9qs OR 7sc OR 7qs OR qf1 OR qf2)]: %NAME%{%WHITE%Max Corruptable Sockets: 3}%CONTINUE%		// 3s (all ilvls)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 (axe OR 2ax OR mpi OR wax OR 9ax OR 92a OR 9mp OR 9wa OR 7ax OR 72a OR 7mp OR 7wa OR lax OR cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs)]: %NAME%{%WHITE%Max Corruptable Sockets: 4}%CONTINUE%																																													// 4s (all ilvls)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL<26 CIRC]: %NAME%{%WHITE%Max Corruptable Sockets: 1}%CONTINUE%																																																												// 1s (ilvl 1-25)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL<26 (msk OR ghm OR crn OR xsk OR xhm OR xrn OR usk OR uh9 OR uhm OR urn OR DRU OR BAR OR (NEC !NORM) OR kri OR 9kr OR 7kr OR (SIN !ktr !wrb !axf !ces) OR ob5 OR oba OR obf)]: %NAME%{%WHITE%Max Corruptable Sockets: 2}%CONTINUE%																																							// 2s (ilvl 1-25)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (msk OR ghm OR crn OR xsk OR xhm OR xrn OR usk OR uh9 OR uhm OR urn OR CIRC)]: %NAME%{%WHITE%Max Corruptable Sockets: 2}%CONTINUE%																																																		// 2s (ilvl 26-40)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>40 (ci0 OR ci1)]: %NAME%{%WHITE%Max Corruptable Sockets: 2}%CONTINUE%																																																											// 2s (ilvl 41+)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL<26 (fla OR whm OR mau OR gma OR 9fl OR 9wh OR 9m9 OR 9gm OR 7fl OR 7wh OR 7m7 OR 7gm OR crs OR bsd OR lsd OR 9cr OR 9bs OR 9ls OR 7cr OR 7bs OR 7ls OR (SWORD 2H !2hs !92h !72h) OR (SPEAR !spr !9sr !7sr) OR (POLEARM !bar) OR (BOW !sbw) OR (XBOW !lxb) OR wsp OR 9ws OR 7ws OR (ZON !THROWING) OR hfh)]: %NAME%{%WHITE%Max Corruptable Sockets: 3}%CONTINUE%																							// 3s (ilvl 1-25)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (DRU OR BAR OR (NEC !NORM) OR kri OR 9kr OR 7kr OR (SIN !ktr !wrb !axf !ces) OR ob5 OR oba OR obf)]: %NAME%{%WHITE%Max Corruptable Sockets: 3}%CONTINUE%																																															// 3s (ilvl 26-40)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>40 (msk OR ghm OR crn OR xsk OR xhm OR xrn OR usk OR uh9 OR uhm OR urn OR ci2 OR ci3 OR DRU OR BAR OR (NEC !NORM) OR kri OR 9kr OR 7kr OR (SIN !ktr !wrb !axf !ces) OR ob5 OR oba OR obf)]: %NAME%{%WHITE%Max Corruptable Sockets: 3}%CONTINUE%																																					// 3s (ilvl 41+)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL<26 (AXE 2H !lax)]: %NAME%{%WHITE%Max Corruptable Sockets: 4}%CONTINUE%																																																										// 4s (ilvl 1-25)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (fla OR whm OR mau OR gma OR 9fl OR 9wh OR 9m9 OR 9gm OR 7fl OR 7wh OR 7m7 OR 7gm OR crs OR bsd OR lsd OR 9cr OR 9bs OR 9ls OR 7cr OR 7bs OR 7ls OR (SWORD 2H !2hs !92h !72h) OR (SPEAR !spr !9sr !7sr) OR (POLEARM !bar) OR (BOW !sbw) OR (XBOW !lxb) OR (ZON !THROWING) OR hfh)]: %NAME%{%WHITE%Max Corruptable Sockets: 4}%CONTINUE%																									// 4s (ilvl 26-40)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>40 (fla OR whm OR 9fl OR 9wh OR 7fl OR 7wh OR crs OR bsd OR lsd OR clm OR gis OR bsw OR 9cr OR 9bs OR 9ls OR 9cm OR 9gs OR 9b9 OR 7cr OR 7bs OR 7ls OR 7cm OR 7gs OR 7b7 OR tri OR 9tr OR 7tr OR vou OR 9b7 OR 9vo OR 7o7 OR 7vo OR hbw OR cbw OR 8sb OR 8hb OR 8cb OR 6sb OR 6hb OR 6cb OR mxb OR 8lx OR 8mx OR 6lx OR 6mx OR hfh)]: %NAME%{%WHITE%Max Corruptable Sockets: 4}%CONTINUE%																				// 4s (ilvl 41+)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL<26 (wst OR 8ws OR 6ws)]: %NAME%{%WHITE%Max Corruptable Sockets: 5}%CONTINUE%																																																										// 5s (ilvl 1-25)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 ((AXE 2H !lax) OR wsp OR 9ws OR 7ws)]: %NAME%{%WHITE%Max Corruptable Sockets: 5}%CONTINUE%																																																							// 5s (ilvl 26-40)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>40 (bax OR btx OR 9la OR 9ba OR 9bt OR 7la OR 7ba OR 7bt OR flb OR 9fb OR 7fb OR brn OR 9br OR 7br OR scy OR pax OR 9s8 OR 9pa OR 7s8 OR 7pa OR lbw OR sbb OR swb OR 8lb OR 8s8 OR 8sw OR 6s7 OR 6sw OR rxb OR 8rx OR 6rx OR wsp OR 9ws OR 7ws OR (ZON BOW))]: %NAME%{%WHITE%Max Corruptable Sockets: 5}%CONTINUE%																													// 5s (ilvl 41+)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (wst OR 8ws OR 6ws)]: %NAME%{%WHITE%Max Corruptable Sockets: 6}%CONTINUE%																																																									// 6s (ilvl 26-40)
+ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 ILVL>40 (gax OR gix OR 9ga OR 9gi OR 7ga OR 7gi OR (MACE 2H) OR gsd OR 9gd OR 7gd OR spt OR pik OR 9st OR 9p9 OR 7st OR 7p7 OR hal OR wsc OR 9h9 OR 9wc OR 7h7 OR 7wc OR lbb OR lwb OR 8l8 OR 8lw OR 6lb OR 6l7 OR 6lw OR hxb OR 8hx OR 6hx OR wst OR 8ws OR 6ws OR (ZON SPEAR !THROWING))]: %NAME%{%WHITE%Max Corruptable Sockets: 6}%CONTINUE%																										// 6s (ilvl 41+)
 ItemDisplay[(UNI OR SET) ID SOCK=0 STAT360=0 (qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR xui OR xea OR xla OR xtu OR buc OR xuc OR spk OR xpk OR bsh OR xsh OR hax OR clb OR mac OR ssd OR scm OR sbr OR flc OR dgr OR dir OR sst OR wnd OR ywn OR 9wn OR scp OR (ILVL>25 ((NEC NORM) OR lax OR bar OR sbw OR lxb OR ktr OR wrb OR axf OR ces)) OR (ILVL>40 (bhm OR xh9 OR ci0 OR ci1)))]: %NAME%{%NAME% %GRAY%(upgrade for +1)}%CONTINUE%																	// Items that can gain more sockets if upgraded first
-
-// Descriptions for Assassin Kick Damage on Set Boots
-ItemDisplay[SET lbt ID ASSASSIN]: %NAME%{%WHITE%Kick Damage: 3 to 8}%CONTINUE%
-ItemDisplay[SET vbt ID ASSASSIN]: %NAME%{%WHITE%Kick Damage: 4 to 10}%CONTINUE%
-ItemDisplay[SET mbt ID ASSASSIN]: %NAME%{%WHITE%Kick Damage: 6 to 12}%CONTINUE%
-ItemDisplay[SET tbt ID ASSASSIN]: %NAME%{%WHITE%Kick Damage: 8 to 16}%CONTINUE%
-ItemDisplay[SET hbt ID ASSASSIN]: %NAME%{%WHITE%Kick Damage: 10 to 20}%CONTINUE%
-ItemDisplay[SET xlb ID ASSASSIN]: %NAME%{%WHITE%Kick Damage: 26 to 46}%CONTINUE%
-ItemDisplay[SET xvb ID ASSASSIN]: %NAME%{%WHITE%Kick Damage: 28 to 50}%CONTINUE%
-ItemDisplay[SET xmb ID ASSASSIN]: %NAME%{%WHITE%Kick Damage: 23 to 52}%CONTINUE%
-ItemDisplay[SET xtb ID ASSASSIN]: %NAME%{%WHITE%Kick Damage: 37 to 64}%CONTINUE%
-ItemDisplay[SET xhb ID ASSASSIN]: %NAME%{%WHITE%Kick Damage: 39 to 80}%CONTINUE%
-ItemDisplay[SET ulb ID ASSASSIN]: %NAME%{%WHITE%Kick Damage: 65 to 100}%CONTINUE%
-ItemDisplay[SET uvb ID ASSASSIN]: %NAME%{%WHITE%Kick Damage: 60 to 110}%CONTINUE%
-ItemDisplay[SET umb ID ASSASSIN]: %NAME%{%WHITE%Kick Damage: 69 to 118}%CONTINUE%
-ItemDisplay[SET utb ID ASSASSIN]: %NAME%{%WHITE%Kick Damage: 50 to 145}%CONTINUE%
-ItemDisplay[SET uhb ID ASSASSIN]: %NAME%{%WHITE%Kick Damage: 83 to 149}%CONTINUE%
 
 // Descriptions for item level on select rare/crafted items
 ItemDisplay[RARE ID CIRC ILVL>71 STAT360=0]: %NAME%{%NAME%%NL%%WHITE%Item Level: %ILVL%}%CONTINUE%												// adds item level to rare circlets
 ItemDisplay[CRAFT (ILVL<71 OR (amu ILVL<90) OR (rin ILVL<78) OR (WEAPON ILVL<77) OR ((CHEST OR SHIELD) ILVL<85) OR (DRU ILVL<75))]: %NAME%{%NAME%%NL%%WHITE%Item Level: %ILVL%}%WHITE%		// adds item level to crafted items if it's less than ideal
 
 // Upgrading Recipes
-ItemDisplay[(UNI OR SET) ID ARMOR NORM SOCK=0 (qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR buc OR spk OR bsh OR (BELT !hbl) OR (ILVL>25 NEC) OR (ILVL>40 (bhm OR ci0 OR ci1)))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%13%TAN%)}%CONTINUE%									// Upgrade Unique/Set Armor (Normal)
-ItemDisplay[(UNI OR SET) ID ARMOR EXC SOCK=0 (xui OR xea OR xla OR xtu OR xuc OR xpk OR xsh OR (ILVL>40 xh9))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%20%TAN%)}%CONTINUE%																				// Upgrade Unique/Set Armor (Exceptional)
+ItemDisplay[(UNI OR SET) ID ARMOR NORM SOCK=0 (qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR buc OR spk OR bsh OR (BELT !hbl) OR (ILVL>25 NEC) OR (ILVL>40 (bhm OR ci0 OR ci1)) OR (BOOTS ASSASSIN) OR (SHIELD !NEC PALADIN))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%13%TAN%)}%CONTINUE%				// Upgrade Unique/Set Armor (Normal)
+ItemDisplay[(UNI OR SET) ID ARMOR EXC SOCK=0 (xui OR xea OR xla OR xtu OR xuc OR xpk OR xsh OR (ILVL>40 xh9) OR (BOOTS ASSASSIN) OR (SHIELD !NEC PALADIN))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%20%TAN%)}%CONTINUE%														// Upgrade Unique/Set Armor (Exceptional)
 ItemDisplay[(UNI OR SET) ID WEAPON NORM ((ILVL>40 (!SOR !WAND !hdm !msf !g33 !qf1 !hfh)) OR (SOCK=0 (hax OR clb OR mac OR ssd OR scm OR sbr OR flc OR dgr OR dir OR sst OR wnd OR ywn OR scp OR (ILVL>25 (lax OR bar OR sbw OR lxb OR ktr OR wrb OR axf OR ces)))))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%12%TAN%)}%CONTINUE%	// Upgrade Unique/Set Weapon (Normal)
 ItemDisplay[(UNI OR SET) ID WEAPON EXC ((ILVL>40 (!SOR !WAND)) OR (SOCK=0 9wn))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%17%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%CONTINUE%																								// Upgrade Unique/Set Weapon (Exceptional)
-ItemDisplay[(RARE OR CRAFT) ID ARMOR NORM SOCK=0 (qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR buc OR spk OR bsh OR (BELT !hbl) OR (ILVL>25 NEC) OR (ILVL>40 (bhm OR ci0 OR ci1)))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%									// Upgrade Rare/Crafted Armor (Normal)
-ItemDisplay[(RARE OR CRAFT) ID ARMOR EXC SOCK=0 (xui OR xea OR xla OR xtu OR xuc OR xpk OR xsh OR (ILVL>40 xh9))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%CONTINUE%																			// Upgrade Rare/Crafted Armor (Exceptional)
+ItemDisplay[(RARE OR CRAFT) ID ARMOR NORM SOCK=0 (qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR buc OR spk OR bsh OR (BELT !hbl) OR (ILVL>25 NEC) OR (ILVL>40 (bhm OR ci0 OR ci1)) OR (BOOTS ASSASSIN) OR (SHIELD !NEC PALADIN))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%			// Upgrade Rare/Crafted Armor (Normal)
+ItemDisplay[(RARE OR CRAFT) ID ARMOR EXC SOCK=0 (xui OR xea OR xla OR xtu OR xuc OR xpk OR xsh OR (ILVL>40 xh9) OR (BOOTS ASSASSIN) OR (SHIELD !NEC PALADIN))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%CONTINUE%														// Upgrade Rare/Crafted Armor (Exceptional)
 ItemDisplay[(RARE OR CRAFT) ID WEAPON NORM ((ILVL>40 (!SOR !WAND !hdm !msf !g33 !qf1 !hfh)) OR (SOCK=0 (hax OR clb OR mac OR ssd OR scm OR sbr OR flc OR dgr OR dir OR sst OR wnd OR ywn OR scp OR (ILVL>25 (lax OR bar OR sbw OR lxb OR ktr OR wrb OR axf OR ces)))))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%9%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%	// Upgrade Rare/Crafted Weapon (Normal)
 ItemDisplay[(RARE OR CRAFT) ID WEAPON EXC ((ILVL>40 (!SOR !WAND)) OR (SOCK=0 9wn))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%19%TAN%)%GRAY%+%TAN%(%WHITE%22%TAN%)}%CONTINUE%																							// Upgrade Rare/Crafted Weapon (Exceptional)
+
+ItemDisplay[(UNI OR SET) ID NORM ((BELT !hbl) OR (BOOTS ASSASSIN))]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%13%TAN%)}%CONTINUE%		// Overrides socketing recipe description for belts/boots (removes price)	...having separate rules for just these isn't ideal, TODO: optimize?
+ItemDisplay[(UNI OR SET) ID EXC BOOTS ASSASSIN]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%20%TAN%)}%CONTINUE%				// Overrides socketing recipe description for boots
+ItemDisplay[(UNI OR SET) ID NORM THROWING]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%12%TAN%)}%CONTINUE%					// Overrides socketing recipe description for throwing weapons (norm, removes price)
+ItemDisplay[(UNI OR SET) ID EXC THROWING]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%@%ORANGE%]%GRAY%+%TAN%(%WHITE%17%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%CONTINUE%					// Overrides socketing recipe description for throwing weapons (exceptional, removes price)
+
+// Descriptions for Upgraded Item Requirements (non-eth normal armor)				...these rules take up way too much space, TODO: optimize from ~700 lines to ~70?
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 cap]: %NAME%{%NAME% %GRAY%(Str: 20)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 skp]: %NAME%{%NAME% %GRAY%(Str: 43)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 hlm]: %NAME%{%NAME% %GRAY%(Str: 59)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 fhl]: %NAME%{%NAME% %GRAY%(Str: 82)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 msk]: %NAME%{%NAME% %GRAY%(Str: 55)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 bhm ILVL>40]: %NAME%{%NAME% %GRAY%(Str: 58)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ghm]: %NAME%{%NAME% %GRAY%(Str: 115)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 crn]: %NAME%{%NAME% %GRAY%(Str: 103)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 qui]: %NAME%{%NAME% %GRAY%(Str: 38)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 lea]: %NAME%{%NAME% %GRAY%(Str: 43)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 hla]: %NAME%{%NAME% %GRAY%(Str: 50)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 stu]: %NAME%{%NAME% %GRAY%(Str: 61)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 rng]: %NAME%{%NAME% %GRAY%(Str: 74)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 scl]: %NAME%{%NAME% %GRAY%(Str: 86)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 chn]: %NAME%{%NAME% %GRAY%(Str: 92)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 brs]: %NAME%{%NAME% %GRAY%(Str: 65)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 spl]: %NAME%{%NAME% %GRAY%(Str: 97)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 plt]: %NAME%{%NAME% %GRAY%(Str: 118)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 fld]: %NAME%{%NAME% %GRAY%(Str: 103)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 gth]: %NAME%{%NAME% %GRAY%(Str: 125)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ltp]: %NAME%{%NAME% %GRAY%(Str: 55)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ful]: %NAME%{%NAME% %GRAY%(Str: 140)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 aar]: %NAME%{%NAME% %GRAY%(Str: 170)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 buc]: %NAME%{%NAME% %GRAY%(Str: 38)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 sml PALADIN]: %NAME%{%NAME% %GRAY%(Str: 53)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 lrg PALADIN]: %NAME%{%NAME% %GRAY%(Str: 71)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 spk]: %NAME%{%NAME% %GRAY%(Str: 65)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 kit PALADIN]: %NAME%{%NAME% %GRAY%(Str: 91)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 bsh]: %NAME%{%NAME% %GRAY%(Str: 58)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 tow PALADIN]: %NAME%{%NAME% %GRAY%(Str: 133)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 gts PALADIN]: %NAME%{%NAME% %GRAY%(Str: 110)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 lgl]: %NAME%{%NAME% %GRAY%(Str: 20)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 vgl]: %NAME%{%NAME% %GRAY%(Str: 20)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 mgl]: %NAME%{%NAME% %GRAY%(Str: 58)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 tgl]: %NAME%{%NAME% %GRAY%(Str: 88)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 hgl]: %NAME%{%NAME% %GRAY%(Str: 110)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 lbt ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 20)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 vbt ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 47)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 mbt ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 65)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 tbt ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 95)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 hbt ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 125)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 lbl]: %NAME%{%NAME% %GRAY%(Str: 20)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 vbl]: %NAME%{%NAME% %GRAY%(Str: 20)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 mbl]: %NAME%{%NAME% %GRAY%(Str: 58)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 tbl]: %NAME%{%NAME% %GRAY%(Str: 88)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 hbl]: %NAME%{%NAME% %GRAY%(Str: 110)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 (ci0 OR ci1) ILVL>40]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 dr1]: %NAME%{%NAME% %GRAY%(Str: 44)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 dr2]: %NAME%{%NAME% %GRAY%(Str: 50)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 dr3]: %NAME%{%NAME% %GRAY%(Str: 56)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 dr4]: %NAME%{%NAME% %GRAY%(Str: 62)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 dr5]: %NAME%{%NAME% %GRAY%(Str: 65)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ba1]: %NAME%{%NAME% %GRAY%(Str: 58)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ba2]: %NAME%{%NAME% %GRAY%(Str: 73)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ba3]: %NAME%{%NAME% %GRAY%(Str: 88)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ba4]: %NAME%{%NAME% %GRAY%(Str: 103)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ba5]: %NAME%{%NAME% %GRAY%(Str: 118)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 pa1 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 44)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 pa2 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 59)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 pa3 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 69)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 pa4 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 89)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 pa5 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 114)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ne1 ILVL>25]: %NAME%{%NAME% %GRAY%(Str: 38)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ne2 ILVL>25]: %NAME%{%NAME% %GRAY%(Str: 41)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ne3 ILVL>25]: %NAME%{%NAME% %GRAY%(Str: 47)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ne4 ILVL>25]: %NAME%{%NAME% %GRAY%(Str: 50)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ne5 ILVL>25]: %NAME%{%NAME% %GRAY%(Str: 58)}%CONTINUE%
+
+// Descriptions for Upgraded Item Requirements (non-eth exceptional armor)
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xap]: %NAME%{%NAME% %GRAY%(Str: 50)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xkp]: %NAME%{%NAME% %GRAY%(Str: 84)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xlm]: %NAME%{%NAME% %GRAY%(Str: 109)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xhl]: %NAME%{%NAME% %GRAY%(Str: 142)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xsk]: %NAME%{%NAME% %GRAY%(Str: 102)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xh9 ILVL>40]: %NAME%{%NAME% %GRAY%(Str: 106)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xhm]: %NAME%{%NAME% %GRAY%(Str: 192)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xrn]: %NAME%{%NAME% %GRAY%(Str: 174)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xui]: %NAME%{%NAME% %GRAY%(Str: 77)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xea]: %NAME%{%NAME% %GRAY%(Str: 84)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xla]: %NAME%{%NAME% %GRAY%(Str: 95)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xtu]: %NAME%{%NAME% %GRAY%(Str: 111)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xng]: %NAME%{%NAME% %GRAY%(Str: 131)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xcl]: %NAME%{%NAME% %GRAY%(Str: 149)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xhn]: %NAME%{%NAME% %GRAY%(Str: 158)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xrs]: %NAME%{%NAME% %GRAY%(Str: 118)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xpl]: %NAME%{%NAME% %GRAY%(Str: 165)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xlt]: %NAME%{%NAME% %GRAY%(Str: 196)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xld]: %NAME%{%NAME% %GRAY%(Str: 174)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xth]: %NAME%{%NAME% %GRAY%(Str: 208)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xtp]: %NAME%{%NAME% %GRAY%(Str: 103)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xul]: %NAME%{%NAME% %GRAY%(Str: 230)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xar]: %NAME%{%NAME% %GRAY%(Str: 232)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xuc]: %NAME%{%NAME% %GRAY%(Str: 77)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xml PALADIN]: %NAME%{%NAME% %GRAY%(Str: 100)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xrg PALADIN]: %NAME%{%NAME% %GRAY%(Str: 127)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xpk]: %NAME%{%NAME% %GRAY%(Str: 118)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xit PALADIN]: %NAME%{%NAME% %GRAY%(Str: 156)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xsh]: %NAME%{%NAME% %GRAY%(Str: 106)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xow PALADIN]: %NAME%{%NAME% %GRAY%(Str: 219)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xts PALADIN]: %NAME%{%NAME% %GRAY%(Str: 185)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xlg]: %NAME%{%NAME% %GRAY%(Str: 50)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xvg]: %NAME%{%NAME% %GRAY%(Str: 50)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xmg]: %NAME%{%NAME% %GRAY%(Str: 106)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xtg]: %NAME%{%NAME% %GRAY%(Str: 151)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xhg]: %NAME%{%NAME% %GRAY%(Str: 185)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xlb ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 50)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xvb ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 91)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xmb ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 118)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xtb ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 163)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 xhb ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 208)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 zlb]: %NAME%{%NAME% %GRAY%(Str: 50)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 zvb]: %NAME%{%NAME% %GRAY%(Str: 50)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 zmb]: %NAME%{%NAME% %GRAY%(Str: 106)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ztb]: %NAME%{%NAME% %GRAY%(Str: 151)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 zhb]: %NAME%{%NAME% %GRAY%(Str: 185)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ci2]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 dr6]: %NAME%{%NAME% %GRAY%(Str: 86)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 dr7]: %NAME%{%NAME% %GRAY%(Str: 95)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 dr8]: %NAME%{%NAME% %GRAY%(Str: 104)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 dr9]: %NAME%{%NAME% %GRAY%(Str: 113)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 dra]: %NAME%{%NAME% %GRAY%(Str: 118)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ba6]: %NAME%{%NAME% %GRAY%(Str: 106)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ba7]: %NAME%{%NAME% %GRAY%(Str: 129)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ba8]: %NAME%{%NAME% %GRAY%(Str: 151)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ba9]: %NAME%{%NAME% %GRAY%(Str: 174)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 baa]: %NAME%{%NAME% %GRAY%(Str: 196)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 pa6 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 86)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 pa7 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 109)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 pa8 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 124)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 pa9 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 142)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 paa PALADIN]: %NAME%{%NAME% %GRAY%(Str: 148)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ne6]: %NAME%{%NAME% %GRAY%(Str: 77)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ne7]: %NAME%{%NAME% %GRAY%(Str: 82)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ne8]: %NAME%{%NAME% %GRAY%(Str: 91)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 ne9]: %NAME%{%NAME% %GRAY%(Str: 95)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 SOCK=0 nea]: %NAME%{%NAME% %GRAY%(Str: 106)}%CONTINUE%
+
+// Descriptions for Upgraded Item Requirements (non-eth normal weapons)
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR SOCK=0) hax]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 axe]: %NAME%{%NAME% %GRAY%(Str: 68)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 2ax]: %NAME%{%NAME% %GRAY%(Str: 85)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 mpi]: %NAME%{%NAME% %GRAY%(Str: 94, Dex: 70)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 wax]: %NAME%{%NAME% %GRAY%(Str: 121)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) lax]: %NAME%{%NAME% %GRAY%(Str: 73)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 bax]: %NAME%{%NAME% %GRAY%(Str: 92)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 btx]: %NAME%{%NAME% %GRAY%(Str: 101)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 gax]: %NAME%{%NAME% %GRAY%(Str: 115, Dex: 79)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 gix]: %NAME%{%NAME% %GRAY%(Str: 125)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR SOCK=0) clb]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 spc]: %NAME%{%NAME% %GRAY%(Str: 30)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR SOCK=0) mac]: %NAME%{%NAME% %GRAY%(Str: 61)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 mst]: %NAME%{%NAME% %GRAY%(Str: 74)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 fla]: %NAME%{%NAME% %GRAY%(Str: 82, Dex: 73)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 whm]: %NAME%{%NAME% %GRAY%(Str: 100)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 mau]: %NAME%{%NAME% %GRAY%(Str: 124)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 gma]: %NAME%{%NAME% %GRAY%(Str: 169)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR SOCK=0) ssd]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR SOCK=0) scm]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 52)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR SOCK=0) sbr]: %NAME%{%NAME% %GRAY%(Str: 58, Dex: 58)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR SOCK=0) flc]: %NAME%{%NAME% %GRAY%(Str: 70, Dex: 42)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 crs]: %NAME%{%NAME% %GRAY%(Str: 85, Dex: 60)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 bsd]: %NAME%{%NAME% %GRAY%(Str: 92, Dex: 43)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 lsd]: %NAME%{%NAME% %GRAY%(Str: 103, Dex: 79)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 wsd]: %NAME%{%NAME% %GRAY%(Str: 127, Dex: 88)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 2hs]: %NAME%{%NAME% %GRAY%(Str: 73, Dex: 61)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 clm]: %NAME%{%NAME% %GRAY%(Str: 91, Dex: 20)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 gis]: %NAME%{%NAME% %GRAY%(Str: 104, Dex: 71)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 bsw]: %NAME%{%NAME% %GRAY%(Str: 113, Dex: 20)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 flb]: %NAME%{%NAME% %GRAY%(Str: 125, Dex: 94)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 gsd]: %NAME%{%NAME% %GRAY%(Str: 170, Dex: 110)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR SOCK=0) dgr]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR SOCK=0) dir]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 58)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 kri]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 88)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 bld]: %NAME%{%NAME% %GRAY%(Str: 47, Dex: 97)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 tkf]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 52)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 tax]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 80)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 bkf]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 97)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 bal]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 106)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 jav]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 pil]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 88)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 ssp]: %NAME%{%NAME% %GRAY%(Str: 80, Dex: 80)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 glv]: %NAME%{%NAME% %GRAY%(Str: 98, Dex: 73)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 tsp]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 118)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 spr]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 tri]: %NAME%{%NAME% %GRAY%(Str: 77, Dex: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 brn]: %NAME%{%NAME% %GRAY%(Str: 80, Dex: 95)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 spt]: %NAME%{%NAME% %GRAY%(Str: 101)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 pik]: %NAME%{%NAME% %GRAY%(Str: 110, Dex: 88)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) bar]: %NAME%{%NAME% %GRAY%(Str: 80)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 vou]: %NAME%{%NAME% %GRAY%(Str: 95)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 scy]: %NAME%{%NAME% %GRAY%(Str: 82, Dex: 82)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 pax]: %NAME%{%NAME% %GRAY%(Str: 113, Dex: 67)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 hal]: %NAME%{%NAME% %GRAY%(Str: 133, Dex: 91)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 wsc]: %NAME%{%NAME% %GRAY%(Str: 140, Dex: 140)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) sbw]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 43)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 hbw]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 62)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 lbw]: %NAME%{%NAME% %GRAY%(Str: 53, Dex: 49)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 cbw]: %NAME%{%NAME% %GRAY%(Str: 58, Dex: 73)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 sbb]: %NAME%{%NAME% %GRAY%(Str: 65, Dex: 80)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 lbb]: %NAME%{%NAME% %GRAY%(Str: 80, Dex: 95)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 swb]: %NAME%{%NAME% %GRAY%(Str: 73, Dex: 103)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 lwb]: %NAME%{%NAME% %GRAY%(Str: 95, Dex: 118)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) lxb]: %NAME%{%NAME% %GRAY%(Str: 52, Dex: 61)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 mxb]: %NAME%{%NAME% %GRAY%(Str: 80, Dex: 70)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 hxb]: %NAME%{%NAME% %GRAY%(Str: 110, Dex: 80)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 rxb]: %NAME%{%NAME% %GRAY%(Str: 80, Dex: 95)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR SOCK=0) sst]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 lst]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 cst]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 bst]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 wst]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 wnd SOCK=0]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ywn SOCK=0]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 bwn]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 gwn]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR SOCK=0) scp]: %NAME%{%NAME% %GRAY%(Str: 58)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 gsc]: %NAME%{%NAME% %GRAY%(Str: 76)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 wsp]: %NAME%{%NAME% %GRAY%(Str: 103)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) ktr]: %NAME%{%NAME% %GRAY%(Str: 57, Dex: 57)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) wrb]: %NAME%{%NAME% %GRAY%(Str: 66, Dex: 66)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) axf]: %NAME%{%NAME% %GRAY%(Str: 69, Dex: 69)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) ces]: %NAME%{%NAME% %GRAY%(Str: 73, Dex: 73)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 clw]: %NAME%{%NAME% %GRAY%(Str: 76, Dex: 76)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 btl]: %NAME%{%NAME% %GRAY%(Str: 79, Dex: 79)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 skr]: %NAME%{%NAME% %GRAY%(Str: 82, Dex: 82)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ob1]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ob2]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ob3]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ob4]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ob5]: %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 am1]: %NAME%{%NAME% %GRAY%(Str: 56, Dex: 77)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 am2]: %NAME%{%NAME% %GRAY%(Str: 73, Dex: 110)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 am3]: %NAME%{%NAME% %GRAY%(Str: 101, Dex: 80)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 am4]: %NAME%{%NAME% %GRAY%(Str: 115, Dex: 98)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 am5]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 109)}%CONTINUE%
+
+// Descriptions for Upgraded Item Requirements (non-eth exceptional weapons)
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9ha]: %NAME%{%NAME% %GRAY%(Str: 125, Dex: 67)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9ax]: %NAME%{%NAME% %GRAY%(Str: 115, Dex: 83)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 92a]: %NAME%{%NAME% %GRAY%(Str: 145, Dex: 45)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9mp]: %NAME%{%NAME% %GRAY%(Str: 133, Dex: 54)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9wa]: %NAME%{%NAME% %GRAY%(Str: 138, Dex: 59)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9la]: %NAME%{%NAME% %GRAY%(Str: 196)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9ba]: %NAME%{%NAME% %GRAY%(Str: 166, Dex: 65)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9bt]: %NAME%{%NAME% %GRAY%(Str: 189, Dex: 33)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9ga]: %NAME%{%NAME% %GRAY%(Str: 167, Dex: 59)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9gi]: %NAME%{%NAME% %GRAY%(Str: 164, Dex: 55)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9cl]: %NAME%{%NAME% %GRAY%(Str: 88, Dex: 43)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9sp]: %NAME%{%NAME% %GRAY%(Str: 133)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9ma]: %NAME%{%NAME% %GRAY%(Str: 145, Dex: 46)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9mt]: %NAME%{%NAME% %GRAY%(Str: 153, Dex: 44)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9fl]: %NAME%{%NAME% %GRAY%(Str: 125, Dex: 77)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9wh]: %NAME%{%NAME% %GRAY%(Str: 189)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9m9]: %NAME%{%NAME% %GRAY%(Str: 225)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9gm]: %NAME%{%NAME% %GRAY%(Str: 253)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9ss]: %NAME%{%NAME% %GRAY%(Str: 150, Dex: 88)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9sm]: %NAME%{%NAME% %GRAY%(Str: 138, Dex: 95)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9sb]: %NAME%{%NAME% %GRAY%(Str: 109, Dex: 122)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9fc]: %NAME%{%NAME% %GRAY%(Str: 142, Dex: 105)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9cr]: %NAME%{%NAME% %GRAY%(Str: 25, Dex: 136)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9bs]: %NAME%{%NAME% %GRAY%(Str: 142, Dex: 112)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9ls]: %NAME%{%NAME% %GRAY%(Str: 99, Dex: 109)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9wd]: %NAME%{%NAME% %GRAY%(Str: 147, Dex: 124)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 92h]: %NAME%{%NAME% %GRAY%(Str: 175, Dex: 100)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9cm]: %NAME%{%NAME% %GRAY%(Str: 171, Dex: 104)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9gs]: %NAME%{%NAME% %GRAY%(Str: 185, Dex: 87)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9b9]: %NAME%{%NAME% %GRAY%(Str: 163, Dex: 103)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9fb]: %NAME%{%NAME% %GRAY%(Str: 182, Dex: 95)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9gd]: %NAME%{%NAME% %GRAY%(Str: 189, Dex: 110)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9dg]: %NAME%{%NAME% %GRAY%(Str: 38, Dex: 75)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9di]: %NAME%{%NAME% %GRAY%(Str: 55, Dex: 98)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9kr]: %NAME%{%NAME% %GRAY%(Str: 42, Dex: 86)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9bl]: %NAME%{%NAME% %GRAY%(Str: 65, Dex: 67)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9tk]: %NAME%{%NAME% %GRAY%(Str: 48, Dex: 141)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9ta]: %NAME%{%NAME% %GRAY%(Str: 88, Dex: 108)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9bk]: %NAME%{%NAME% %GRAY%(Str: 45, Dex: 142)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9b8]: %NAME%{%NAME% %GRAY%(Str: 96, Dex: 122)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9ja]: %NAME%{%NAME% %GRAY%(Str: 98, Dex: 123)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9pi]: %NAME%{%NAME% %GRAY%(Str: 118, Dex: 112)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9s9]: %NAME%{%NAME% %GRAY%(Str: 127, Dex: 95)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9gl]: %NAME%{%NAME% %GRAY%(Str: 89, Dex: 137)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9ts]: %NAME%{%NAME% %GRAY%(Str: 76, Dex: 145)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9sr]: %NAME%{%NAME% %GRAY%(Str: 155, Dex: 120)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9tr]: %NAME%{%NAME% %GRAY%(Str: 168, Dex: 97)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9br]: %NAME%{%NAME% %GRAY%(Str: 132, Dex: 134)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9st]: %NAME%{%NAME% %GRAY%(Str: 122, Dex: 163)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9p9]: %NAME%{%NAME% %GRAY%(Str: 165, Dex: 106)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9b7]: %NAME%{%NAME% %GRAY%(Str: 195, Dex: 75)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9vo]: %NAME%{%NAME% %GRAY%(Str: 210, Dex: 55)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9s8]: %NAME%{%NAME% %GRAY%(Str: 152, Dex: 118)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9pa]: %NAME%{%NAME% %GRAY%(Str: 165, Dex: 103)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9h9]: %NAME%{%NAME% %GRAY%(Str: 179, Dex: 99)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9wc]: %NAME%{%NAME% %GRAY%(Str: 188, Dex: 140)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8sb]: %NAME%{%NAME% %GRAY%(Str: 64, Dex: 143)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8hb]: %NAME%{%NAME% %GRAY%(Str: 76, Dex: 119)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8lb]: %NAME%{%NAME% %GRAY%(Str: 52, Dex: 188)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8cb]: %NAME%{%NAME% %GRAY%(Str: 121, Dex: 107)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8s8]: %NAME%{%NAME% %GRAY%(Str: 89, Dex: 132)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8l8]: %NAME%{%NAME% %GRAY%(Str: 97, Dex: 121)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8sw]: %NAME%{%NAME% %GRAY%(Str: 72, Dex: 146)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8lw]: %NAME%{%NAME% %GRAY%(Str: 134, Dex: 167)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8lx]: %NAME%{%NAME% %GRAY%(Str: 83, Dex: 155)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8mx]: %NAME%{%NAME% %GRAY%(Str: 117, Dex: 105)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8hx]: %NAME%{%NAME% %GRAY%(Str: 163, Dex: 77)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8rx]: %NAME%{%NAME% %GRAY%(Str: 141, Dex: 98)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8ss]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8ls]: %NAME%{%NAME% %GRAY%(Str: 63, Dex: 35)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8cs]: %NAME%{%NAME% %GRAY%(Str: 44, Dex: 37)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8bs]: %NAME%{%NAME% %GRAY%(Str: 52, Dex: 27)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 8ws]: %NAME%{%NAME% %GRAY%(Str: 34)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 9wn SOCK=0]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 9yw]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 9bw]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 9gw]: %NAME%{%NAME% %GRAY%(Str: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9sc]: %NAME%{%NAME% %GRAY%(Str: 125, Dex: 65)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9qs]: %NAME%{%NAME% %GRAY%(Str: 108, Dex: 69)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9ws]: %NAME%{%NAME% %GRAY%(Str: 97, Dex: 70)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9ar]: %NAME%{%NAME% %GRAY%(Str: 99, Dex: 99)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9wb]: %NAME%{%NAME% %GRAY%(Str: 105, Dex: 105)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9xf]: %NAME%{%NAME% %GRAY%(Str: 108, Dex: 108)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9cs]: %NAME%{%NAME% %GRAY%(Str: 110, Dex: 110)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9lw]: %NAME%{%NAME% %GRAY%(Str: 113, Dex: 113)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9tw]: %NAME%{%NAME% %GRAY%(Str: 115, Dex: 115)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 9qr]: %NAME%{%NAME% %GRAY%(Str: 118, Dex: 118)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ob6]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ob7]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ob8]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ob9]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 oba]: %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 am6]: %NAME%{%NAME% %GRAY%(Str: 87, Dex: 187)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 am7]: %NAME%{%NAME% %GRAY%(Str: 108, Dex: 152)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 am8]: %NAME%{%NAME% %GRAY%(Str: 114, Dex: 142)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 am9]: %NAME%{%NAME% %GRAY%(Str: 132, Dex: 149)}%CONTINUE%
+ItemDisplay[!NMAG !MAG !ETH ID STAT91=0 ILVL>40 ama]: %NAME%{%NAME% %GRAY%(Str: 107, Dex: 151)}%CONTINUE%
+// Descriptions for Upgraded Item Requirements (ethereal normal armor)
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 cap]: %NAME%{%NAME% %GRAY%(Str: 10)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 skp]: %NAME%{%NAME% %GRAY%(Str: 33)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 hlm]: %NAME%{%NAME% %GRAY%(Str: 49)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 fhl]: %NAME%{%NAME% %GRAY%(Str: 72)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 msk]: %NAME%{%NAME% %GRAY%(Str: 45)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 bhm ILVL>40]: %NAME%{%NAME% %GRAY%(Str: 48)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ghm]: %NAME%{%NAME% %GRAY%(Str: 105)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 crn]: %NAME%{%NAME% %GRAY%(Str: 93)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 qui]: %NAME%{%NAME% %GRAY%(Str: 28)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 lea]: %NAME%{%NAME% %GRAY%(Str: 33)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 hla]: %NAME%{%NAME% %GRAY%(Str: 40)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 stu]: %NAME%{%NAME% %GRAY%(Str: 51)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 rng]: %NAME%{%NAME% %GRAY%(Str: 64)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 scl]: %NAME%{%NAME% %GRAY%(Str: 76)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 chn]: %NAME%{%NAME% %GRAY%(Str: 82)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 brs]: %NAME%{%NAME% %GRAY%(Str: 55)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 spl]: %NAME%{%NAME% %GRAY%(Str: 87)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 plt]: %NAME%{%NAME% %GRAY%(Str: 108)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 fld]: %NAME%{%NAME% %GRAY%(Str: 93)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 gth]: %NAME%{%NAME% %GRAY%(Str: 115)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ltp]: %NAME%{%NAME% %GRAY%(Str: 45)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ful]: %NAME%{%NAME% %GRAY%(Str: 130)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 aar]: %NAME%{%NAME% %GRAY%(Str: 160)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 buc]: %NAME%{%NAME% %GRAY%(Str: 28)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 sml PALADIN]: %NAME%{%NAME% %GRAY%(Str: 43)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 lrg PALADIN]: %NAME%{%NAME% %GRAY%(Str: 61)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 spk]: %NAME%{%NAME% %GRAY%(Str: 55)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 kit PALADIN]: %NAME%{%NAME% %GRAY%(Str: 81)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 bsh]: %NAME%{%NAME% %GRAY%(Str: 48)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 tow PALADIN]: %NAME%{%NAME% %GRAY%(Str: 123)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 gts PALADIN]: %NAME%{%NAME% %GRAY%(Str: 100)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 lgl]: %NAME%{%NAME% %GRAY%(Str: 10)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 vgl]: %NAME%{%NAME% %GRAY%(Str: 10)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 mgl]: %NAME%{%NAME% %GRAY%(Str: 48)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 tgl]: %NAME%{%NAME% %GRAY%(Str: 78)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 hgl]: %NAME%{%NAME% %GRAY%(Str: 100)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 lbt ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 10)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 vbt ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 37)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 mbt ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 55)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 tbt ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 85)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 hbt ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 115)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 lbl]: %NAME%{%NAME% %GRAY%(Str: 10)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 vbl]: %NAME%{%NAME% %GRAY%(Str: 10)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 mbl]: %NAME%{%NAME% %GRAY%(Str: 48)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 tbl]: %NAME%{%NAME% %GRAY%(Str: 78)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 hbl]: %NAME%{%NAME% %GRAY%(Str: 100)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 (ci0 OR ci1) ILVL>40]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 dr1]: %NAME%{%NAME% %GRAY%(Str: 34)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 dr2]: %NAME%{%NAME% %GRAY%(Str: 40)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 dr3]: %NAME%{%NAME% %GRAY%(Str: 46)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 dr4]: %NAME%{%NAME% %GRAY%(Str: 52)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 dr5]: %NAME%{%NAME% %GRAY%(Str: 55)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ba1]: %NAME%{%NAME% %GRAY%(Str: 48)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ba2]: %NAME%{%NAME% %GRAY%(Str: 63)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ba3]: %NAME%{%NAME% %GRAY%(Str: 78)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ba4]: %NAME%{%NAME% %GRAY%(Str: 93)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ba5]: %NAME%{%NAME% %GRAY%(Str: 108)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 pa1 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 34)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 pa2 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 49)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 pa3 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 59)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 pa4 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 79)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 pa5 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 104)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ne1 ILVL>25]: %NAME%{%NAME% %GRAY%(Str: 28)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ne2 ILVL>25]: %NAME%{%NAME% %GRAY%(Str: 31)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ne3 ILVL>25]: %NAME%{%NAME% %GRAY%(Str: 37)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ne4 ILVL>25]: %NAME%{%NAME% %GRAY%(Str: 40)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ne5 ILVL>25]: %NAME%{%NAME% %GRAY%(Str: 48)}%CONTINUE%
+
+// Descriptions for Upgraded Item Requirements (ethereal exceptional armor)
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xap]: %NAME%{%NAME% %GRAY%(Str: 40)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xkp]: %NAME%{%NAME% %GRAY%(Str: 74)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xlm]: %NAME%{%NAME% %GRAY%(Str: 99)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xhl]: %NAME%{%NAME% %GRAY%(Str: 132)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xsk]: %NAME%{%NAME% %GRAY%(Str: 92)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xh9 ILVL>40]: %NAME%{%NAME% %GRAY%(Str: 96)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xhm]: %NAME%{%NAME% %GRAY%(Str: 182)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xrn]: %NAME%{%NAME% %GRAY%(Str: 164)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xui]: %NAME%{%NAME% %GRAY%(Str: 67)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xea]: %NAME%{%NAME% %GRAY%(Str: 74)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xla]: %NAME%{%NAME% %GRAY%(Str: 85)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xtu]: %NAME%{%NAME% %GRAY%(Str: 101)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xng]: %NAME%{%NAME% %GRAY%(Str: 121)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xcl]: %NAME%{%NAME% %GRAY%(Str: 139)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xhn]: %NAME%{%NAME% %GRAY%(Str: 148)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xrs]: %NAME%{%NAME% %GRAY%(Str: 108)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xpl]: %NAME%{%NAME% %GRAY%(Str: 155)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xlt]: %NAME%{%NAME% %GRAY%(Str: 186)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xld]: %NAME%{%NAME% %GRAY%(Str: 164)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xth]: %NAME%{%NAME% %GRAY%(Str: 198)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xtp]: %NAME%{%NAME% %GRAY%(Str: 93)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xul]: %NAME%{%NAME% %GRAY%(Str: 220)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xar]: %NAME%{%NAME% %GRAY%(Str: 222)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xuc]: %NAME%{%NAME% %GRAY%(Str: 67)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xml PALADIN]: %NAME%{%NAME% %GRAY%(Str: 90)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xrg PALADIN]: %NAME%{%NAME% %GRAY%(Str: 117)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xpk]: %NAME%{%NAME% %GRAY%(Str: 108)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xit PALADIN]: %NAME%{%NAME% %GRAY%(Str: 146)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xsh]: %NAME%{%NAME% %GRAY%(Str: 96)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xow PALADIN]: %NAME%{%NAME% %GRAY%(Str: 209)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xts PALADIN]: %NAME%{%NAME% %GRAY%(Str: 175)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xlg]: %NAME%{%NAME% %GRAY%(Str: 40)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xvg]: %NAME%{%NAME% %GRAY%(Str: 40)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xmg]: %NAME%{%NAME% %GRAY%(Str: 96)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xtg]: %NAME%{%NAME% %GRAY%(Str: 141)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xhg]: %NAME%{%NAME% %GRAY%(Str: 175)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xlb ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 40)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xvb ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 81)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xmb ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 108)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xtb ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 153)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 xhb ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 198)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 zlb]: %NAME%{%NAME% %GRAY%(Str: 40)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 zvb]: %NAME%{%NAME% %GRAY%(Str: 40)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 zmb]: %NAME%{%NAME% %GRAY%(Str: 96)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ztb]: %NAME%{%NAME% %GRAY%(Str: 141)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 zhb]: %NAME%{%NAME% %GRAY%(Str: 175)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ci2]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 dr6]: %NAME%{%NAME% %GRAY%(Str: 76)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 dr7]: %NAME%{%NAME% %GRAY%(Str: 85)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 dr8]: %NAME%{%NAME% %GRAY%(Str: 94)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 dr9]: %NAME%{%NAME% %GRAY%(Str: 103)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 dra]: %NAME%{%NAME% %GRAY%(Str: 108)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ba6]: %NAME%{%NAME% %GRAY%(Str: 96)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ba7]: %NAME%{%NAME% %GRAY%(Str: 119)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ba8]: %NAME%{%NAME% %GRAY%(Str: 141)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ba9]: %NAME%{%NAME% %GRAY%(Str: 164)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 baa]: %NAME%{%NAME% %GRAY%(Str: 186)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 pa6 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 76)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 pa7 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 99)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 pa8 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 114)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 pa9 PALADIN]: %NAME%{%NAME% %GRAY%(Str: 132)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 paa PALADIN]: %NAME%{%NAME% %GRAY%(Str: 138)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ne6]: %NAME%{%NAME% %GRAY%(Str: 67)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ne7]: %NAME%{%NAME% %GRAY%(Str: 72)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ne8]: %NAME%{%NAME% %GRAY%(Str: 81)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 ne9]: %NAME%{%NAME% %GRAY%(Str: 85)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 SOCK=0 nea]: %NAME%{%NAME% %GRAY%(Str: 96)}%CONTINUE%
+
+// Descriptions for Upgraded Item Requirements (ethereal normal weapons)
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR SOCK=0) hax]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 axe]: %NAME%{%NAME% %GRAY%(Str: 58)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 2ax]: %NAME%{%NAME% %GRAY%(Str: 75)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 mpi]: %NAME%{%NAME% %GRAY%(Str: 84, Dex: 60)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 wax]: %NAME%{%NAME% %GRAY%(Str: 111)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) lax]: %NAME%{%NAME% %GRAY%(Str: 63)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 bax]: %NAME%{%NAME% %GRAY%(Str: 82)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 btx]: %NAME%{%NAME% %GRAY%(Str: 91)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 gax]: %NAME%{%NAME% %GRAY%(Str: 105, Dex: 69)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 gix]: %NAME%{%NAME% %GRAY%(Str: 115)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR SOCK=0) clb]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 spc]: %NAME%{%NAME% %GRAY%(Str: 20)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR SOCK=0) mac]: %NAME%{%NAME% %GRAY%(Str: 51)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 mst]: %NAME%{%NAME% %GRAY%(Str: 64)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 fla]: %NAME%{%NAME% %GRAY%(Str: 72, Dex: 63)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 whm]: %NAME%{%NAME% %GRAY%(Str: 90)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 mau]: %NAME%{%NAME% %GRAY%(Str: 114)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 gma]: %NAME%{%NAME% %GRAY%(Str: 159)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR SOCK=0) ssd]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR SOCK=0) scm]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 42)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR SOCK=0) sbr]: %NAME%{%NAME% %GRAY%(Str: 48, Dex: 48)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR SOCK=0) flc]: %NAME%{%NAME% %GRAY%(Str: 60, Dex: 32)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 crs]: %NAME%{%NAME% %GRAY%(Str: 75, Dex: 50)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 bsd]: %NAME%{%NAME% %GRAY%(Str: 82, Dex: 33)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 lsd]: %NAME%{%NAME% %GRAY%(Str: 93, Dex: 69)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 wsd]: %NAME%{%NAME% %GRAY%(Str: 117, Dex: 78)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 2hs]: %NAME%{%NAME% %GRAY%(Str: 63, Dex: 51)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 clm]: %NAME%{%NAME% %GRAY%(Str: 81, Dex: 10)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 gis]: %NAME%{%NAME% %GRAY%(Str: 94, Dex: 61)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 bsw]: %NAME%{%NAME% %GRAY%(Str: 103, Dex: 10)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 flb]: %NAME%{%NAME% %GRAY%(Str: 115, Dex: 84)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 gsd]: %NAME%{%NAME% %GRAY%(Str: 160, Dex: 100)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR SOCK=0) dgr]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR SOCK=0) dir]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 48)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 kri]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 78)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 bld]: %NAME%{%NAME% %GRAY%(Str: 37, Dex: 87)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 tkf]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 42)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 tax]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 70)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 bkf]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 87)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 bal]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 96)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 jav]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 pil]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 78)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 ssp]: %NAME%{%NAME% %GRAY%(Str: 70, Dex: 70)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 glv]: %NAME%{%NAME% %GRAY%(Str: 88, Dex: 63)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 tsp]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 108)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 spr]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 tri]: %NAME%{%NAME% %GRAY%(Str: 67, Dex: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 brn]: %NAME%{%NAME% %GRAY%(Str: 70, Dex: 85)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 spt]: %NAME%{%NAME% %GRAY%(Str: 91)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 pik]: %NAME%{%NAME% %GRAY%(Str: 100, Dex: 78)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) bar]: %NAME%{%NAME% %GRAY%(Str: 70)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 vou]: %NAME%{%NAME% %GRAY%(Str: 85)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 scy]: %NAME%{%NAME% %GRAY%(Str: 72, Dex: 72)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 pax]: %NAME%{%NAME% %GRAY%(Str: 103, Dex: 57)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 hal]: %NAME%{%NAME% %GRAY%(Str: 123, Dex: 81)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 wsc]: %NAME%{%NAME% %GRAY%(Str: 130, Dex: 130)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) sbw]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 33)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 hbw]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 52)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 lbw]: %NAME%{%NAME% %GRAY%(Str: 43, Dex: 39)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 cbw]: %NAME%{%NAME% %GRAY%(Str: 48, Dex: 63)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 sbb]: %NAME%{%NAME% %GRAY%(Str: 55, Dex: 70)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 lbb]: %NAME%{%NAME% %GRAY%(Str: 70, Dex: 85)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 swb]: %NAME%{%NAME% %GRAY%(Str: 63, Dex: 93)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 lwb]: %NAME%{%NAME% %GRAY%(Str: 85, Dex: 108)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) lxb]: %NAME%{%NAME% %GRAY%(Str: 42, Dex: 51)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 mxb]: %NAME%{%NAME% %GRAY%(Str: 70, Dex: 60)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 hxb]: %NAME%{%NAME% %GRAY%(Str: 100, Dex: 70)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 rxb]: %NAME%{%NAME% %GRAY%(Str: 70, Dex: 85)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR SOCK=0) sst]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 lst]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 cst]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 bst]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 wst]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 wnd SOCK=0]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ywn SOCK=0]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 bwn]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 gwn]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR SOCK=0) scp]: %NAME%{%NAME% %GRAY%(Str: 48)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 gsc]: %NAME%{%NAME% %GRAY%(Str: 66)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 wsp]: %NAME%{%NAME% %GRAY%(Str: 93)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) ktr]: %NAME%{%NAME% %GRAY%(Str: 47, Dex: 47)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) wrb]: %NAME%{%NAME% %GRAY%(Str: 56, Dex: 56)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) axf]: %NAME%{%NAME% %GRAY%(Str: 59, Dex: 59)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 (ILVL>40 OR (SOCK=0 ILVL>25)) ces]: %NAME%{%NAME% %GRAY%(Str: 63, Dex: 63)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 clw]: %NAME%{%NAME% %GRAY%(Str: 66, Dex: 66)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 btl]: %NAME%{%NAME% %GRAY%(Str: 69, Dex: 69)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 skr]: %NAME%{%NAME% %GRAY%(Str: 72, Dex: 72)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ob1]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ob2]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ob3]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ob4]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ob5]: %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 am1]: %NAME%{%NAME% %GRAY%(Str: 46, Dex: 67)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 am2]: %NAME%{%NAME% %GRAY%(Str: 63, Dex: 100)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 am3]: %NAME%{%NAME% %GRAY%(Str: 91, Dex: 70)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 am4]: %NAME%{%NAME% %GRAY%(Str: 105, Dex: 88)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 am5]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 99)}%CONTINUE%
+
+// Descriptions for Upgraded Item Requirements (ethereal exceptional weapons)
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9ha]: %NAME%{%NAME% %GRAY%(Str: 115, Dex: 57)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9ax]: %NAME%{%NAME% %GRAY%(Str: 105, Dex: 73)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 92a]: %NAME%{%NAME% %GRAY%(Str: 135, Dex: 35)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9mp]: %NAME%{%NAME% %GRAY%(Str: 123, Dex: 44)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9wa]: %NAME%{%NAME% %GRAY%(Str: 128, Dex: 49)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9la]: %NAME%{%NAME% %GRAY%(Str: 186)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9ba]: %NAME%{%NAME% %GRAY%(Str: 156, Dex: 55)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9bt]: %NAME%{%NAME% %GRAY%(Str: 179, Dex: 23)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9ga]: %NAME%{%NAME% %GRAY%(Str: 157, Dex: 49)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9gi]: %NAME%{%NAME% %GRAY%(Str: 154, Dex: 45)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9cl]: %NAME%{%NAME% %GRAY%(Str: 78, Dex: 33)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9sp]: %NAME%{%NAME% %GRAY%(Str: 123)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9ma]: %NAME%{%NAME% %GRAY%(Str: 135, Dex: 36)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9mt]: %NAME%{%NAME% %GRAY%(Str: 143, Dex: 34)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9fl]: %NAME%{%NAME% %GRAY%(Str: 115, Dex: 67)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9wh]: %NAME%{%NAME% %GRAY%(Str: 179)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9m9]: %NAME%{%NAME% %GRAY%(Str: 215)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9gm]: %NAME%{%NAME% %GRAY%(Str: 243)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9ss]: %NAME%{%NAME% %GRAY%(Str: 140, Dex: 78)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9sm]: %NAME%{%NAME% %GRAY%(Str: 128, Dex: 85)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9sb]: %NAME%{%NAME% %GRAY%(Str: 99, Dex: 112)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9fc]: %NAME%{%NAME% %GRAY%(Str: 132, Dex: 95)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9cr]: %NAME%{%NAME% %GRAY%(Str: 15, Dex: 126)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9bs]: %NAME%{%NAME% %GRAY%(Str: 132, Dex: 102)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9ls]: %NAME%{%NAME% %GRAY%(Str: 89, Dex: 99)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9wd]: %NAME%{%NAME% %GRAY%(Str: 137, Dex: 114)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 92h]: %NAME%{%NAME% %GRAY%(Str: 165, Dex: 90)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9cm]: %NAME%{%NAME% %GRAY%(Str: 161, Dex: 94)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9gs]: %NAME%{%NAME% %GRAY%(Str: 175, Dex: 77)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9b9]: %NAME%{%NAME% %GRAY%(Str: 153, Dex: 93)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9fb]: %NAME%{%NAME% %GRAY%(Str: 172, Dex: 85)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9gd]: %NAME%{%NAME% %GRAY%(Str: 179, Dex: 100)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9dg]: %NAME%{%NAME% %GRAY%(Str: 28, Dex: 65)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9di]: %NAME%{%NAME% %GRAY%(Str: 45, Dex: 88)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9kr]: %NAME%{%NAME% %GRAY%(Str: 32, Dex: 76)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9bl]: %NAME%{%NAME% %GRAY%(Str: 55, Dex: 57)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9tk]: %NAME%{%NAME% %GRAY%(Str: 38, Dex: 131)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9ta]: %NAME%{%NAME% %GRAY%(Str: 78, Dex: 98)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9bk]: %NAME%{%NAME% %GRAY%(Str: 35, Dex: 132)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9b8]: %NAME%{%NAME% %GRAY%(Str: 86, Dex: 112)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9ja]: %NAME%{%NAME% %GRAY%(Str: 88, Dex: 113)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9pi]: %NAME%{%NAME% %GRAY%(Str: 108, Dex: 102)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9s9]: %NAME%{%NAME% %GRAY%(Str: 117, Dex: 85)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9gl]: %NAME%{%NAME% %GRAY%(Str: 79, Dex: 127)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9ts]: %NAME%{%NAME% %GRAY%(Str: 66, Dex: 135)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9sr]: %NAME%{%NAME% %GRAY%(Str: 145, Dex: 110)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9tr]: %NAME%{%NAME% %GRAY%(Str: 158, Dex: 87)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9br]: %NAME%{%NAME% %GRAY%(Str: 122, Dex: 124)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9st]: %NAME%{%NAME% %GRAY%(Str: 112, Dex: 153)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9p9]: %NAME%{%NAME% %GRAY%(Str: 155, Dex: 96)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9b7]: %NAME%{%NAME% %GRAY%(Str: 185, Dex: 65)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9vo]: %NAME%{%NAME% %GRAY%(Str: 200, Dex: 45)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9s8]: %NAME%{%NAME% %GRAY%(Str: 142, Dex: 108)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9pa]: %NAME%{%NAME% %GRAY%(Str: 155, Dex: 93)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9h9]: %NAME%{%NAME% %GRAY%(Str: 169, Dex: 89)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9wc]: %NAME%{%NAME% %GRAY%(Str: 178, Dex: 130)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8sb]: %NAME%{%NAME% %GRAY%(Str: 54, Dex: 133)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8hb]: %NAME%{%NAME% %GRAY%(Str: 66, Dex: 109)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8lb]: %NAME%{%NAME% %GRAY%(Str: 42, Dex: 178)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8cb]: %NAME%{%NAME% %GRAY%(Str: 111, Dex: 97)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8s8]: %NAME%{%NAME% %GRAY%(Str: 79, Dex: 122)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8l8]: %NAME%{%NAME% %GRAY%(Str: 87, Dex: 111)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8sw]: %NAME%{%NAME% %GRAY%(Str: 62, Dex: 136)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8lw]: %NAME%{%NAME% %GRAY%(Str: 124, Dex: 157)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8lx]: %NAME%{%NAME% %GRAY%(Str: 73, Dex: 145)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8mx]: %NAME%{%NAME% %GRAY%(Str: 107, Dex: 95)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8hx]: %NAME%{%NAME% %GRAY%(Str: 153, Dex: 67)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8rx]: %NAME%{%NAME% %GRAY%(Str: 131, Dex: 88)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8ss]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8ls]: %NAME%{%NAME% %GRAY%(Str: 53, Dex: 25)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8cs]: %NAME%{%NAME% %GRAY%(Str: 34, Dex: 27)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8bs]: %NAME%{%NAME% %GRAY%(Str: 42, Dex: 17)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 8ws]: %NAME%{%NAME% %GRAY%(Str: 24)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 9wn SOCK=0]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 9yw]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 9bw]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 9gw]: %NAME%{%NAME% %GRAY%(Str: 15)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9sc]: %NAME%{%NAME% %GRAY%(Str: 115, Dex: 55)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9qs]: %NAME%{%NAME% %GRAY%(Str: 98, Dex: 59)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9ws]: %NAME%{%NAME% %GRAY%(Str: 87, Dex: 60)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9ar]: %NAME%{%NAME% %GRAY%(Str: 89, Dex: 89)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9wb]: %NAME%{%NAME% %GRAY%(Str: 95, Dex: 95)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9xf]: %NAME%{%NAME% %GRAY%(Str: 98, Dex: 98)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9cs]: %NAME%{%NAME% %GRAY%(Str: 100, Dex: 100)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9lw]: %NAME%{%NAME% %GRAY%(Str: 103, Dex: 103)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9tw]: %NAME%{%NAME% %GRAY%(Str: 105, Dex: 105)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 9qr]: %NAME%{%NAME% %GRAY%(Str: 108, Dex: 108)}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ob6]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ob7]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ob8]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ob9]: %NAME%{%NAME%}%CONTINUE%
+//ItemDisplay[!NMAG !MAG ETH ID STAT91=0 oba]: %NAME%{%NAME%}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 am6]: %NAME%{%NAME% %GRAY%(Str: 77, Dex: 177)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 am7]: %NAME%{%NAME% %GRAY%(Str: 98, Dex: 142)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 am8]: %NAME%{%NAME% %GRAY%(Str: 104, Dex: 132)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 am9]: %NAME%{%NAME% %GRAY%(Str: 122, Dex: 139)}%CONTINUE%
+ItemDisplay[!NMAG !MAG ETH ID STAT91=0 ILVL>40 ama]: %NAME%{%NAME% %GRAY%(Str: 97, Dex: 141)}%CONTINUE%
+
+// Descriptions for Upgraded Item Requirements (unique/set items with altered requirements)
+ItemDisplay[SET ID STAT91=-50 SOCK=0 chn]: %NAME%{%NAME% %GRAY%(Str: 46)}%CONTINUE%			// Cathan's Mesh (normal)
+//ItemDisplay[SET ID STAT91=-50 SOCK=0 xhn]: %NAME%{%NAME% %GRAY%(Str: 79)}%CONTINUE%			// Cathan's Mesh (exceptional)
+//ItemDisplay[SET ID STAT91=-20 SOCK=0 xrs]: %NAME%{%NAME% %GRAY%(Str: 95)}%CONTINUE%			// Haemosu's Adamant
+//ItemDisplay[SET ID STAT91=-20 SOCK=0 zmb]: %NAME%{%NAME% %GRAY%(Str: 85)}%CONTINUE%			// Tal Rasha's Fine-Spun Cloth
+//ItemDisplay[SET ID STAT91=-40 SOCK=0 xul]: %NAME%{%NAME% %GRAY%(Str: 138)}%CONTINUE%			// Trang-Oul's Scales
+ItemDisplay[UNI !ETH ID STAT91=-10 SOCK=0 fld]: %NAME%{%NAME% %GRAY%(Str: 93)}%CONTINUE%		// Rockfleece (normal)
+ItemDisplay[UNI ETH ID STAT91=-10 SOCK=0 fld]: %NAME%{%NAME% %GRAY%(Str: 83)}%CONTINUE%			// Rockfleece (normal, eth)
+//ItemDisplay[UNI !ETH ID STAT91=-10 SOCK=0 xld]: %NAME%{%NAME% %GRAY%(Str: 157)}%CONTINUE%		// Rockfleece (exceptional)
+//ItemDisplay[UNI ETH ID STAT91=-10 SOCK=0 xld]: %NAME%{%NAME% %GRAY%(Str: 147)}%CONTINUE%		// Rockfleece (exceptional, eth)
+//ItemDisplay[UNI !ETH ID STAT91=-15 SOCK=0 xar]: %NAME%{%NAME% %GRAY%(Str: 198)}%CONTINUE%		// Corpsemourn
+//ItemDisplay[UNI ETH ID STAT91=-15 SOCK=0 xar]: %NAME%{%NAME% %GRAY%(Str: 188)}%CONTINUE%		// Corpsemourn (eth)
+ItemDisplay[UNI !ETH ID STAT91=-25 SOCK=0 xhb ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 156)}%CONTINUE%	// Gore Rider
+ItemDisplay[UNI ETH ID STAT91=-25 SOCK=0 xhb ASSASSIN]: %NAME%{%NAME% %GRAY%(Str: 146)}%CONTINUE%	// Gore Rider (eth)
+ItemDisplay[UNI !ETH ID STAT91=20 ILVL>40 gix]: %NAME%{%NAME% %GRAY%(Str: 150)}%CONTINUE%		// Humongous (normal)
+ItemDisplay[UNI ETH ID STAT91=20 ILVL>40 gix]: %NAME%{%NAME% %GRAY%(Str: 140)}%CONTINUE%		// Humongous (normal, eth)
+ItemDisplay[UNI !ETH ID STAT91=20 ILVL>40 9gi]: %NAME%{%NAME% %GRAY%(Str: 196, Dex: 66)}%CONTINUE%	// Humongous (exceptional)
+ItemDisplay[UNI ETH ID STAT91=20 ILVL>40 9gi]: %NAME%{%NAME% %GRAY%(Str: 186, Dex: 56)}%CONTINUE%	// Humongous (exceptional, eth)
+ItemDisplay[UNI !ETH ID STAT91=-60 ILVL>40 9ba]: %NAME%{%NAME% %GRAY%(Str: 67, Dex: 26)}%CONTINUE%	// Spellsteel
+ItemDisplay[UNI ETH ID STAT91=-60 ILVL>40 9ba]: %NAME%{%NAME% %GRAY%(Str: 57, Dex: 16)}%CONTINUE%	// Spellsteel (eth)
+ItemDisplay[UNI !ETH ID STAT91=-50 ILVL>40 gma]: %NAME%{%NAME% %GRAY%(Str: 85)}%CONTINUE%		// Steeldriver (normal)
+ItemDisplay[UNI ETH ID STAT91=-50 ILVL>40 gma]: %NAME%{%NAME% %GRAY%(Str: 75)}%CONTINUE%		// Steeldriver (normal, eth)
+ItemDisplay[UNI !ETH ID STAT91=-50 ILVL>40 9gm]: %NAME%{%NAME% %GRAY%(Str: 127)}%CONTINUE%		// Steeldriver (exceptional)
+ItemDisplay[UNI ETH ID STAT91=-50 ILVL>40 9gm]: %NAME%{%NAME% %GRAY%(Str: 117)}%CONTINUE%		// Steeldriver (exceptional, eth)
+ItemDisplay[UNI !ETH ID STAT91=-30 ILVL>40 9cm]: %NAME%{%NAME% %GRAY%(Str: 120, Dex: 73)}%CONTINUE%	// Bing Sz Wang
+ItemDisplay[UNI ETH ID STAT91=-30 ILVL>40 9cm]: %NAME%{%NAME% %GRAY%(Str: 110, Dex: 63)}%CONTINUE%	// Bing Sz Wang (eth)
+ItemDisplay[UNI !ETH ID STAT91=-50 ILVL>40 9gd]: %NAME%{%NAME% %GRAY%(Str: 95, Dex: 55)}%CONTINUE%	// Swordguard
+ItemDisplay[UNI ETH ID STAT91=-50 ILVL>40 9gd]: %NAME%{%NAME% %GRAY%(Str: 85, Dex: 45)}%CONTINUE%	// Swordguard (eth)
+ItemDisplay[UNI !ETH ID STAT91=-20 ILVL>40 9br]: %NAME%{%NAME% %GRAY%(Str: 106, Dex: 108)}%CONTINUE%	// Soulfeast Tine
+ItemDisplay[UNI ETH ID STAT91=-20 ILVL>40 9br]: %NAME%{%NAME% %GRAY%(Str: 96, Dex: 98)}%CONTINUE%	// Soulfeast Tine (eth)
+ItemDisplay[UNI !ETH ID STAT91=-25 ILVL>40 9vo]: %NAME%{%NAME% %GRAY%(Str: 158, Dex: 42)}%CONTINUE%	// Blackleach Blade
+ItemDisplay[UNI ETH ID STAT91=-25 ILVL>40 9vo]: %NAME%{%NAME% %GRAY%(Str: 148, Dex: 32)}%CONTINUE%	// Blackleach Blade (eth)
+ItemDisplay[UNI !ETH ID STAT91=-50 ILVL>40 9wc]: %NAME%{%NAME% %GRAY%(Str: 94, Dex: 70)}%CONTINUE%	// Grim's Burning Dead
+ItemDisplay[UNI ETH ID STAT91=-50 ILVL>40 9wc]: %NAME%{%NAME% %GRAY%(Str: 84, Dex: 60)}%CONTINUE%	// Grim's Burning Dead (eth)
+ItemDisplay[UNI ID STAT91=-60 ILVL>40 8mx]: %NAME%{%NAME% %GRAY%(Str: 47, Dex: 42)}%CONTINUE%		// Pus Spitter
+
+// Descriptions for Assassin Kick Damage on Set Boots
+ItemDisplay[SET lbt ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 3 to 8}%CONTINUE%
+ItemDisplay[SET vbt ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 4 to 10}%CONTINUE%
+ItemDisplay[SET mbt ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 6 to 12}%CONTINUE%
+ItemDisplay[SET tbt ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 8 to 16}%CONTINUE%
+ItemDisplay[SET hbt ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 10 to 20}%CONTINUE%
+ItemDisplay[SET xlb ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 26 to 46}%CONTINUE%
+ItemDisplay[SET xvb ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 28 to 50}%CONTINUE%
+ItemDisplay[SET xmb ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 23 to 52}%CONTINUE%
+ItemDisplay[SET xtb ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 37 to 64}%CONTINUE%
+ItemDisplay[SET xhb ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 39 to 80}%CONTINUE%
+ItemDisplay[SET ulb ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 65 to 100}%CONTINUE%
+ItemDisplay[SET uvb ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 60 to 110}%CONTINUE%
+ItemDisplay[SET umb ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 69 to 118}%CONTINUE%
+ItemDisplay[SET utb ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 50 to 145}%CONTINUE%
+ItemDisplay[SET uhb ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 83 to 149}%CONTINUE%
 
 // Catchall
 ItemDisplay[(UNI OR SET OR RARE OR CRAFT) ID]: %NAME%{%NAME%}%WHITE%
@@ -804,7 +1516,7 @@ ItemDisplay[NMAG SIN !(ktr OR wrb OR axf OR ces) (SOCK>2 OR SOCK=0) (SK262>2 OR 
 ItemDisplay[NMAG BAR !SOCK=1 (SK140>2 OR SK147>2 OR SK151>2 OR SK152>2 OR SK149>2 OR SK154>2)]:	  %NAME%  {%NAME%}%WHITE%												// Barbarian	helms
 ItemDisplay[NMAG (DRU OR 9cl OR 7cl) !SOCK=1 (SK226>2 OR SK227>2 OR SK236>2 OR SK237>2 OR SK240>2 OR SK244>2 OR SK245>2 OR SK247>2 OR SK249>2 OR SK250>2)]:	  %NAME%  {%NAME%}%WHITE%				// Druid	pelts/clubs
 ItemDisplay[NMAG (NEC OR (WAND !(wnd OR ywn OR 9wn))) !SOCK=1 (SK67>2 OR SK69>2 OR SK73>2 OR SK75>2 OR SK79>2 OR SK83>2 OR SK84>2 OR SK85>2 OR SK92>2 OR SK94>2)]:	  %NAME%  {%NAME%}%WHITE%			// Necromancer	wands/shields
-ItemDisplay[NMAG SCEPTER (SOCK>2 OR (SOCK=0 !scp)) (SK117>2 OR SK112>2 OR SK121>2 OR (SOCK=4 (SK118>2 OR (ELT (SK106>2 OR SK107>2 OR SK123>2 OR SK125>2)))))]:	  %NAME%  {%NAME%}%WHITE%				// Paladin	scepters
+ItemDisplay[NMAG SCEPTER (SOCK>2 OR (SOCK=0 !scp)) (SK117>2 OR SK112>2 OR SK121>2 OR (SOCK=4 (DIFF<2 OR SK118>2 OR (ELT (SK106>2 OR SK107>2 OR SK123>2 OR SK125>2)))))]:	  %NAME%  {%NAME%}%WHITE%		// Paladin	scepters
 ItemDisplay[NMAG SOR (SOCK>2 OR (SOCK=0 (ob5 OR oba OR obf))) (SK38>2 OR SK40>2 OR SK44>2 OR SK48>2 OR SK50>2 OR SK52>2 OR SK53>2 OR SK57>2 OR SK58>2 OR SK60>2 OR SK62>2 OR SK64>2)]:	  %NAME%  {%NAME%}%WHITE%	// Sorceress	orbs
 ItemDisplay[NMAG STAFF (SOCK=4 OR (SOCK=0 (cst OR 8cs OR 6cs OR bst OR 8bs OR 6bs)) OR SOCK=5) (SK58>2 OR (SK58>1 (SK50>0 OR SK60>0)))]:	  %NAME%  {%NAME%}%WHITE%						// Sorceress	staves (for Memory & Call to Arms)
 ItemDisplay[NMAG STAFF (SOCK=2 OR (SOCK=0 sst)) (SK36>2 OR SK37>2 OR SK41>2 OR SK46>2 OR SK47>2 OR SK51>2 OR SK52>2 OR (SK52>1 SK61>0))]:	  %NAME%  {%NAME%}%WHITE%						// Sorceress	staves (for Leaf)
