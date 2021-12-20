@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	17 DECEMBER 2021
+//		Date Updated:	19 DECEMBER 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -104,8 +104,9 @@ ItemDisplay[rtma]:	%MAP-60%  %NAME%  {%GOLD%Rathma Awaits You}%WHITE%						// Vo
 ItemDisplay[dcso]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Diablo / Baal)}%WHITE%		// Prime Evil Soul	(DClone/Rathma ingredient)
 ItemDisplay[dcho]:	%MAP-60%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Uber Tristram)}%WHITE%	// Black Soulstone	(DClone ingredient)
 ItemDisplay[dcbl]:	%MAP-60%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Map Bosses)}%WHITE%	// Pure Demonic Essence	(DClone ingredient)
-ItemDisplay[rtmo]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Level 85+ areas)}%WHITE%		// Trang-Oul's Jawbone	(Rathma ingredient)
 ItemDisplay[rtmv]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Shadow of Mendeln)}%WHITE%		// Splinter of the Void (Rathma ingredient)
+ItemDisplay[rtmo]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Level 85+ Undead)}%WHITE%		// Trang-Oul's Jawbone	(Rathma ingredient)
+ItemDisplay[rtmf]:	%MAP-60%  %NAME%  {%GOLD%Fragment of Trang-Oul's Jawbone}%WHITE%				// Ancient Bone Fragment
 ItemDisplay[cwss]:	%MAP-50%    %NAME%    %WHITE%									// Tainted Worldstone Shard
 ItemDisplay[(rtp OR rid)]: %MAP%%NAME%											// Infinite Tomes
 // Map Orbs
@@ -1399,7 +1400,7 @@ ItemDisplay[NMAG CLVL>14 (GLOVES OR BOOTS OR BELT)]: {%NAME%}																		/
 ItemDisplay[NMAG CLVL>14 ((SOCK=1 !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp)) OR (dgr OR dir OR buc OR xuc))]: {%NAME%}	// 1-socket items & items that can only get 1 socket (daggers, shields)
 ItemDisplay[NMAG CLVL>14 THROWING !ZON NORM]: {%NAME%}																			// normal throwable weapons
 ItemDisplay[NMAG CLVL>14 INF SOCK=0 !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp OR utp)]: {%NAME%}				// inferior items (except Archon Plate)
-ItemDisplay[NMAG CLVL>14 (BOW OR XBOW) !ZON (SOCK=5 OR (SOCK=0 ILVL>40 SUP (lbw OR 8lb OR sbb OR 8s8 OR 6s7 OR swb OR 8sw OR 6sw OR rxb OR 8rx OR 6rx)))]: {%NAME%}					// 5-socket bows & bows that can only get 5 sockets (only available Runeword is Call to Arms)
+ItemDisplay[NMAG CLVL>14 (BOW OR XBOW) !ZON (SOCK=5 OR (SOCK=0 ILVL>40 SUP ED<15 (lbw OR 8lb OR sbb OR 8s8 OR 6s7 OR swb OR 8sw OR 6sw OR rxb OR 8rx OR 6rx)))]: {%NAME%}				// 5-socket bows & bows that can only get 5 sockets (only available Runeword is Call to Arms)
 //ItemDisplay[NMAG CLVL>14 DAGGER !THROWING (SOCK=2 OR (SOCK=0 (ILVL<26 OR bld OR 9bl OR 7bl)))]: {%NAME%}												// 2-socket daggers & daggers that can only get up to 2 sockets (only available Runewords are Strength/Wind)
 
 // Hidden: Regular non-class throwable weapons - level 50, 80
@@ -1414,7 +1415,7 @@ ItemDisplay[NMAG NORM CLVL>89 !((ETH (ED>0 OR SOCK>2)) OR (ED>0 SOCK>2)) ((cap O
 ItemDisplay[NMAG EXC CLVL>89  !((ETH (ED>0 OR SOCK>2)) OR (ED>0 SOCK>2)) ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xtu OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xth OR xul) OR (xuc OR xml OR xrg OR xpk OR xit OR xow OR xts) OR (9ha OR 9la OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]: {%NAME%}
 ItemDisplay[NMAG ELT CLVL>89  !((ETH (ED>0 OR SOCK>1)) OR (ED>0 SOCK>1)) (7ha OR 7ma OR 7ss OR 7sm OR 7sb OR 7fc OR 7dg OR 7di OR 7bl)]: {%NAME%}	// only hides elite weapons that were incapable of more than 2 sockets in vanilla (excluding those with 2 sockets instead of 3 sockets)
 
-// Hidden: Worst non-class items at each tier (excluding any ethereal, superior, or 3+ socket items) - levels 40, 60, 80		...socketable armors incapable of 3os (after upgrades), strictly-worse armors, high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
+// Hidden: Worst non-class plain items at each tier (excluding any ethereal, superior, or 3+ socket items) - levels 40, 60, 80		...socketable armors incapable of 3os (after upgrades), strictly-worse armors, high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
 ItemDisplay[NMAG NORM CLVL>39 !(ETH OR ED>0 OR SOCK>2) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ful) OR (buc OR sml OR lrg OR spk OR kit OR tow OR gts) OR (hax OR lax OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb)) !(stu OR brs)]: {%NAME%}		// also excludes Studded Leather, Breast Plate
 ItemDisplay[NMAG EXC CLVL>59  !(ETH OR ED>0 OR SOCK>2) ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xtu OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xth OR xul) OR (xuc OR xml OR xrg OR xpk OR xit OR xow OR xts) OR (9ha OR 9la OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]: {%NAME%}
 ItemDisplay[NMAG ELT CLVL>79  !(ETH OR ED>0 OR SOCK>2) ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (utu OR ung OR ucl OR uhn OR urs OR upl OR ult OR uld OR uth OR uul) OR (uuc OR uml OR urg OR upk OR uit OR uow OR uts) OR (7ha OR 7la OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx)) !(uap OR ult OR uth OR uul OR urg OR uit OR uow OR uts) !(DEF>479)]: {%NAME%}		// also excludes Shako, Hellforge Plate, Lacquered Plate, Shadow Plate, Hyperion, 4-socket-capable shields, armor with 480+ defense
