@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	19 DECEMBER 2021
+//		Date Updated:	29 DECEMBER 2021
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -291,8 +291,12 @@ ItemDisplay[MAG ((cm1 ILVL>46) OR (cm2 ILVL>41) OR (cm3 ILVL>49))]:			%NAME%{%WH
 // +-------------------------+
 //-¦ Amulets, Rings, Quivers ¦-------------------------------------------------------------------------------------------
 // +-------------------------+
-// Hidden: Arrows/Bolts - level 5
+// Hidden: Regular Arrows/Bolts - level 5
 ItemDisplay[NMAG (aqv OR cqv) CLVL>4]:
+
+// Hidden: Magic Arrows/Bolts - level 80, 90
+ItemDisplay[MAG (aqv OR cqv) !ID CLVL>79 !AMAZON]:				// level 80 - hides unid magic arrows for non-amazons
+ItemDisplay[MAG (aqv OR cqv) !ID CLVL>89]:					// level 90 - hides unid magic arrows for all characters
 
 // Highlighting for Quivers
 ItemDisplay[RARE (aqv OR cqv) !ID AMAZON]:	%DOT-6D% %NAME% %WHITE%		// highlight unid rare quivers for amazons (with notifications)
@@ -1159,7 +1163,7 @@ ItemDisplay[MAG ID (SOR OR STAFF) (CLSK1>0 OR TABSK10>0) ((SK39>2 OR SK40>2 OR S
 // Other Items
 ItemDisplay[MAG ID GLOVES (TABSK0>2 OR TABSK2>2 OR TABSK50>2) IAS>10]: %NAME% %ORANGE%+3										// Gloves: +3/20
 ItemDisplay[MAG ID GLOVES ((TABSK0>2 OR TABSK2>2) OR ((TABSK0>1 OR TABSK1>2 OR TABSK2>1) IAS>0) OR ((TABSK0>0 OR TABSK1>1 OR TABSK2>0) IAS>10))]: %NAME% %TAN%+		// Gloves: close to +3/20
-ItemDisplay[MAG ID WEAPON !(POLEARM OR (SPEAR !THROWING)) TABSK34>2]: %NAME% %ORANGE%+3 Warcries									// 1-Handed Weapons with +3 Warcries
+ItemDisplay[MAG ID WEAPON 1H TABSK34>2]: %NAME% %ORANGE%+3 Warcries													// 1-Handed Weapons with +3 Warcries
 ItemDisplay[MAG ID SIN TABSK48>2]: %NAME% %TAN%+3 Traps															// Claws with +3 Traps
 ItemDisplay[MAG ID MACE TABSK40>2]: %NAME% %TAN%+3 Summoning														// Clubs with +3 Summoning
 ItemDisplay[MAG ID WAND CHSK91>0]: %NAME% %GREEN%(Lower Resist)														// Wands with Lower Resist charges
