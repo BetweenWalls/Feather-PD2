@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	8 JANUARY 2022
+//		Date Updated:	10 JANUARY 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -113,7 +113,7 @@ ItemDisplay[(rtp OR rid)]: %MAP%%NAME%											// Infinite Tomes
 ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%Raises Map Rarity from Common to Magic}%WHITE%										// Arcane Orb		(Common -> Magic)
 ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE%+%NL%%BLUE%Raises Map Rarity from Common to Rare}%WHITE%			// Zakarum Orb		(Common -> Rare)
 ItemDisplay[upma]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ P%GRAY%.%WHITE%Skull + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE%+%NL%%BLUE%Raises Map Rarity from Magic to Rare}%WHITE%	// Angelic Orb		(Magic -> Rare)
-ItemDisplay[scou]:	%NAME%{%GRAY%(no rune required for rare maps)%NL%%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ %ORANGE%Hel Rune%NL%%BLUE%Lowers Map Rarity to Common}%WHITE%			// Orb of Destruction	(Magic/Rare -> Common)
+ItemDisplay[scou]:	%NAME%{%GRAY%(no rune required for T3 maps)%NL%%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ %ORANGE%Hel Rune%NL%%BLUE%Lowers Map Rarity to Common}%WHITE%			// Orb of Destruction	(Magic/Rare -> Common)
 ItemDisplay[rera]:	%NAME%{%GOLD%Orb %WHITE%+ %YELLOW%Map %WHITE%+ P%GRAY%.%WHITE%Gem + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE%+%NL%%BLUE%Rerolls Rare Map Affixes}%WHITE%		// Horadrim Orb		(Reroll Rare)
 ItemDisplay[upmp]:	%NAME%{Combines three maps to create one of a higher tier}%WHITE%													// Cartographer's Orb
 ItemDisplay[scrb]:	%BORDER-53%    %NAME%    {Transforms a %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%map into a %DARK_GREEN%(%TAN%Dungeon%DARK_GREEN%)}%WHITE%				// Horadrim Scarab
