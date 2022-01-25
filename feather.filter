@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	17 JANUARY 2022
+//		Date Updated:	25 JANUARY 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -105,7 +105,7 @@ ItemDisplay[dcso]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%GOLD%Stone
 ItemDisplay[dcho]:	%MAP-60%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Uber Tristram)}%WHITE%	// Black Soulstone	(DClone ingredient)
 ItemDisplay[dcbl]:	%MAP-60%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Map Bosses)}%WHITE%	// Pure Demonic Essence	(DClone ingredient)
 ItemDisplay[rtmv]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Shadow of Mendeln)}%WHITE%		// Splinter of the Void (Rathma ingredient)
-ItemDisplay[rtmo]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Level 85+ Undead)}%WHITE%		// Trang-Oul's Jawbone	(Rathma ingredient)
+ItemDisplay[rtmo]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Undead Enemies)}%WHITE%		// Trang-Oul's Jawbone	(Rathma ingredient)
 ItemDisplay[rtmf]:	%MAP-60%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone}%WHITE%				// Ancient Bone Fragments
 ItemDisplay[cwss]:	%MAP-50%    %NAME%    %WHITE%									// Tainted Worldstone Shard
 ItemDisplay[(rtp OR rid)]: %MAP%%NAME%											// Infinite Tomes
