@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	25 JANUARY 2022
+//		Date Updated:	29 JANUARY 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -1370,8 +1370,8 @@ ItemDisplay[NMAG SOCK=0 !INF !SUP ILVL>25 WEAPON !(THROWING OR WAND OR SOR OR (D
 
 // Descriptions for Maximum Possible Sockets
 ItemDisplay[NMAG SOCK=0 (buc OR xuc OR dgr OR dir OR wnd OR ywn OR 9wn)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 1}%CONTINUE%																																																						// 1s (all ilvls)
-ItemDisplay[NMAG SOCK=0 (cap OR skp OR hlm OR fhl OR bhm OR xap OR xkp OR xlm OR xhl OR xh9 OR uap OR ukp OR ulm OR uhl OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR xui OR xea OR xla OR xtu OR sml OR spk OR bsh OR xml OR xpk OR xsh OR uuc OR uml OR (NEC NORM) OR hax OR clb OR spc OR mac OR 9sp OR 7sp OR ssd OR scm OR sbr OR flc OR bld OR 9dg OR 9di OR 9bl OR 7dg OR 7di OR 7bl OR sst OR (WAND !wnd !ywn !9wn) OR scp OR ktr OR wrb OR axf OR ces OR (SOR !ob5 !oba !obf))]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 2}%CONTINUE%	// 2s (all ilvls)
-ItemDisplay[NMAG SOCK=0 (rng OR brs OR ltp OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xtp OR lrg OR kit OR tow OR gts OR xrg OR xit OR xow OR xts OR urg OR upk OR ush OR 9ha OR 7ha OR mst OR 9cl OR 9ma OR 9mt OR 7cl OR 7ma OR 7mt OR wsd OR 2hs OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR spr OR 9sr OR 7sr OR bar OR sbw OR lxb OR lst OR 8ss OR 8ls OR 6ss OR 6ls OR gsc OR 9sc OR 9qs OR 7sc OR 7qs)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 3}%CONTINUE%						// 3s (all ilvls)
+ItemDisplay[NMAG SOCK=0 (cap OR skp OR hlm OR fhl OR bhm OR xap OR xkp OR xlm OR xhl OR xh9 OR uap OR ukp OR ulm OR uhl OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR xui OR xea OR xla OR xtu OR sml OR spk OR bsh OR xml OR xpk OR xsh OR uuc OR uml OR (NEC NORM) OR hax OR clb OR spc OR mac OR ssd OR scm OR sbr OR flc OR bld OR 9dg OR 9di OR 9bl OR 7dg OR 7di OR 7bl OR sst OR (WAND !wnd !ywn !9wn) OR scp OR ktr OR wrb OR axf OR ces OR (SOR !ob5 !oba !obf))]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 2}%CONTINUE%			// 2s (all ilvls)
+ItemDisplay[NMAG SOCK=0 (rng OR brs OR ltp OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xtp OR lrg OR kit OR tow OR gts OR xrg OR xit OR xow OR xts OR urg OR upk OR ush OR 9ha OR 7ha OR mst OR 9cl OR 9sp OR 9ma OR 9mt OR 7cl OR 7sp OR 7ma OR 7mt OR wsd OR 2hs OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR spr OR 9sr OR 7sr OR bar OR sbw OR lxb OR lst OR 8ss OR 8ls OR 6ss OR 6ls OR gsc OR 9sc OR 9qs OR 7sc OR 7qs)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 3}%CONTINUE%					// 3s (all ilvls)
 ItemDisplay[NMAG SOCK=0 (axe OR 9ax OR 7ax OR lax OR cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 4}%CONTINUE%																																																			// 4s (all ilvls)
 ItemDisplay[NMAG SOCK=0 ILVL<26 CIRC]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 1}%CONTINUE%																																																										// 1s (ilvl 1-25)
 ItemDisplay[NMAG SOCK=0 ILVL<26 (msk OR ghm OR crn OR xsk OR xhm OR xrn OR usk OR uh9 OR uhm OR urn OR DRU OR BAR OR (NEC !NORM) OR kri OR 9kr OR 7kr OR (SIN !ktr !wrb !axf !ces) OR ob5 OR oba OR obf)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 2}%CONTINUE%																																					// 2s (ilvl 1-25)
