@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	29 JANUARY 2022
+//		Date Updated:	31 JANUARY 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -1366,7 +1366,7 @@ ItemDisplay[NMAG INF SOCK=0 ILVL>25 WEAPON !(THROWING OR DAGGER OR (hax OR 9ha O
 ItemDisplay[NMAG SOCK=0 !INF !SUP ILVL>25 (HELM OR CIRC) (DRU OR BAR OR (ILVL>40 (ci2 OR ci3 OR msk OR xsk OR usk OR ghm OR xhm OR uhm OR crn OR xrn OR urn OR uh9)))]: %NAME%{%NAME%%NL%%WHITE%Socketing Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%
 ItemDisplay[NMAG SOCK=0 !INF !SUP ILVL>25 CHEST (ELT OR gth OR xth OR ful OR xul OR aar OR xar OR rng OR xng OR brs OR xrs OR ltp OR xtp OR xcl OR xhn OR xpl OR xlt OR xld)]: %NAME%{%NAME%%NL%%WHITE%Socketing Recipe: %ORANGE%[%YELLOW%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%
 ItemDisplay[NMAG SOCK=0 !INF !SUP ILVL>25 SHIELD (DIN OR (NEC !NORM) OR upk OR ush OR lrg OR xrg OR urg OR kit OR xit OR uit OR tow OR xow OR uow OR gts OR xts OR uts)]: %NAME%{%NAME%%NL%%WHITE%Socketing Recipe: %ORANGE%[%RED%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%
-ItemDisplay[NMAG SOCK=0 !INF !SUP ILVL>25 WEAPON !(THROWING OR WAND OR SOR OR (DAGGER !kri !9kr !7kr) OR hax OR clb OR mac OR spc OR 9sp OR 7sp OR ssd OR scm OR sbr OR flc OR sst OR scp OR ktr OR wrb OR axf OR ces)]: %NAME%{%NAME%%NL%%WHITE%Socketing Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 !INF !SUP ILVL>25 WEAPON !(THROWING OR WAND OR SOR OR (DAGGER !kri !9kr !7kr) OR hax OR clb OR mac OR spc OR ssd OR scm OR sbr OR flc OR sst OR scp OR ktr OR wrb OR axf OR ces)]: %NAME%{%NAME%%NL%%WHITE%Socketing Recipe: %ORANGE%[%PURPLE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%
 
 // Descriptions for Maximum Possible Sockets
 ItemDisplay[NMAG SOCK=0 (buc OR xuc OR dgr OR dir OR wnd OR ywn OR 9wn)]: %NAME%{%NAME%%NL%%WHITE%Maximum Sockets: 1}%CONTINUE%																																																						// 1s (all ilvls)
@@ -1425,7 +1425,7 @@ ItemDisplay[NMAG CLVL>49 THROWING !ZON (ETH OR !(7tk OR 7ta OR 7bk))]: {%NAME%}	
 ItemDisplay[NMAG CLVL>79 THROWING !ZON]: {%NAME%}					// all non-class throwable weapons
 
 // Hidden: Regular non-class normal/exceptional plain items in high level areas (T3 maps) - level 90
-ItemDisplay[NMAG ED=0 SOCK=0 !ETH !ELT ILVL>88 CLVL>89 !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR spc OR 9sp)]: {%NAME%}
+ItemDisplay[NMAG ED=0 SOCK=0 !ETH !ELT ILVL>88 CLVL>89 !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp)]: {%NAME%}
 
 // Hidden: Worst non-class items (excluding any with at least 2 of: ethereal, superior, 3+ sockets) - level 90				...socketable armors incapable of 3os (after upgrades), strictly-worse armors, high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
 ItemDisplay[NMAG NORM CLVL>89 !((ETH (ED>0 OR SOCK>2)) OR (ED>0 SOCK>2)) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ful) OR (buc OR sml OR lrg OR spk OR kit OR tow OR gts) OR (hax OR lax OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb)) !(stu OR brs)]: {%NAME%}
@@ -1441,7 +1441,7 @@ ItemDisplay[NMAG ELT CLVL>79  !(ETH OR ED>0 OR SOCK>2) ((uap OR ukp OR ulm OR uh
 ItemDisplay[NMAG !RW !ETH ((SOCK=5 ED>0 7cr) OR (SOCK=4 ED>0 6rx) OR (SOCK=4 ED>0 6hx) OR (SOCK=3 ED>0 utp))]:	%DOT-20%  %NAME%{%NAME%}  %WHITE%	// adds notifications for valuable non-eth bases: sup 5s Phase Blade, sup 4s Demon Crossbow, sup 4s Colossus Crossbow, sup 3s Archon Plate
 ItemDisplay[NMAG !RW ETH (((SOCK=2 OR SOCK=5) 7wa) OR (SOCK=5 ED>0 72a) OR (SOCK>4 7gi) OR ((SOCK=4 OR SOCK=6) 7p7) OR ((SOCK=0 OR SOCK=4) ED>0 7tr) OR (SOCK=4 ED>0 7br) OR ((SOCK=4 OR SOCK=5) 7s8) OR (SOCK=4 7wc) OR ((SOCK=2 OR SOCK>4) 7gm) OR (SOCK=2 ED>0 7m7))]:	%DOT-1D%  %NAME%{%NAME%}  %WHITE%	// adds notifications for valuable eth bases: 2/5s Berserker Axe, sup 5s Ettin Axe, 5/6s Glorious Axe, 4/6s War Pike, sup 0/4s Stygian Pike, sup 4s Mancatcher, 4/5s Thresher, 4s Giant Thresher, 2/5/6s Thunder Maul, sup 2s Ogre Maul
 ItemDisplay[NMAG CHEST ((DEF>749 !(utp OR urs OR ula OR uea OR uui)) OR (DEF>699 (utp OR urs OR ula OR uea OR uui)))]:	 %NAME% {%NAME%}%WHITE%		// eth body armor with high defense ("light" 700+, others 750+)
-ItemDisplay[NMAG ELT ETH ED>0 (AXE OR MACE OR SWORD OR POLEARM OR SPEAR) !THROWING !ZON]:	 %NAME% {%NAME%}%WHITE%					// sup & eth non-class elite melee weapons
+ItemDisplay[NMAG ELT ETH ED>0 (AXE OR MACE OR SWORD OR POLEARM OR SPEAR) !THROWING !ZON !7cl !7sp]:	 %NAME% {%NAME%}%WHITE%					// sup & eth non-class elite melee weapons
 ItemDisplay[NMAG (((7s8 OR 7wc) ETH SOCK>3 SOCK<6) OR ((((7wa OR 7cr) (ETH OR ED>0)) OR (7gd ETH)) SOCK=5))]:	 %NAME% {%NAME%}%WHITE%			// 4-5s eth Thresher, 4-5s eth Giant Thresher, 5s sup/eth Berserker Axe, 5s sup Phase Blade, 5s eth Colossus Blade
 ItemDisplay[NMAG !SUP !ETH ((usk DEF>151) OR (uh9 DEF>154) OR (uui DEF>461) OR (uea DEF>464) OR (ula DEF>468) OR (utu DEF>475) OR (urs DEF>495) OR (utp DEF>518) OR (uar DEF>594) OR (uit DEF>147) OR (upk DEF>162) OR (ush DEF>172))]:	 %NAME% {%NAME%}%WHITE%	// good elite armor with top 5% defense
 
