@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather-Craft-League" Item Filter for Project Diablo II (modification of "Feather" for the S4 mini-season)
-//		Date Updated:	27 MARCH 2022
+//		Date Updated:	28 MARCH 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -1179,19 +1179,18 @@ ItemDisplay[RARE]: %NAME%%WHITE%
 //ItemDisplay[MAG CLVL>79 ETH ARMOR !(DRU OR BAR OR DIN OR NEC)]:															// Level 80 - Hides non-class eth armors
 //ItemDisplay[MAG !ID ETH THROWING !ZON ILVL>43]:	%DOT-97%  %NAME%  %WHITE%		// adds notifications for eth throwing weapons
 
+// ... (lines disabled for craft league)
 // Hidden: Unworthy non-class items - level 90
-ItemDisplay[MAG CLVL>89 CHEST !(qui OR xui OR uui OR ltp OR xtp OR utp OR aar OR xar OR uar OR uui OR uea OR (ETH (uth OR uul)))]:			// body armor except "Dusk Shroud", "Archon Plate", & "Sacred Armor" lines, Wyrmhide, Scarab Husk, eth Lacquered Plate, eth Shadow Plate
-ItemDisplay[MAG CLVL>89 SHIELD !(DIN OR NEC OR bsh OR xsh OR ush OR urg OR upk)]:									// shields except "Troll Nest" line, Hyperion
-ItemDisplay[MAG CLVL>89 !ELT !ETH WEAPON !(BOW OR XBOW OR STAFF OR WAND OR SCEPTER OR SIN OR SOR OR ZON OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp)]:	// non-elite non-eth weapons (if they can be ethereal)
-ItemDisplay[MAG CLVL>89 !ELT (BOW OR XBOW) !ZON]:													// non-elite bows/crossbows
-
+//ItemDisplay[MAG CLVL>89 CHEST !(qui OR xui OR uui OR ltp OR xtp OR utp OR aar OR xar OR uar OR uui OR uea OR (ETH (uth OR uul)))]:			// body armor except "Dusk Shroud", "Archon Plate", & "Sacred Armor" lines, Wyrmhide, Scarab Husk, eth Lacquered Plate, eth Shadow Plate
+//ItemDisplay[MAG CLVL>89 SHIELD !(DIN OR NEC OR bsh OR xsh OR ush OR urg OR upk)]:									// shields except "Troll Nest" line, Hyperion
+//ItemDisplay[MAG CLVL>89 !ELT !ETH WEAPON !(BOW OR XBOW OR STAFF OR WAND OR SCEPTER OR SIN OR SOR OR ZON OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp)]:	// non-elite non-eth weapons (if they can be ethereal)
+//ItemDisplay[MAG CLVL>89 !ELT (BOW OR XBOW) !ZON]:													// non-elite bows/crossbows
 // Hidden: Worst non-class items at each tier - levels 40, 60, 80				...socketable armors incapable of 3os (after upgrades), strictly-worse armors, high strength-requirement helms, final 3 lines of gloves/boots/belts		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each, non-ethereal throwable weapons
-ItemDisplay[MAG NORM CLVL>39 ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ful) OR (buc OR sml OR lrg OR spk OR kit OR tow OR gts) OR (mgl OR tgl OR hgl) OR (mbt OR tbt OR hbt) OR (mbl OR tbl OR hbl) OR (hax OR lax OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb) OR (!ETH THROWING !ZON)) !(stu OR brs)]:		// also excludes Studded Leather, Breast Plate
-ItemDisplay[MAG EXC CLVL>59  ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xtu OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xth OR xul) OR (xuc OR xml OR xrg OR xpk OR xit OR xow OR xts) OR (xmg OR xtg OR xhg) OR (xmb OR xtb OR xhb) OR (zmb OR ztb OR zhb) OR (9ha OR 9la OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx) OR (!ETH THROWING !ZON))]:
-ItemDisplay[MAG ELT CLVL>79  ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (utu OR ung OR ucl OR uhn OR urs OR upl OR ult OR uld OR uth OR uul) OR (uuc OR uml OR urg OR upk OR uit OR uow OR uts) OR (umg OR utg OR uhg) OR (umb OR utb OR uhb) OR (umc OR utc OR uhc) OR (7ha OR 7la OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx) OR (!ETH THROWING !ZON)) !(ETH (WEAPON OR CHEST)) !(uap OR ult OR uth OR uul OR urg OR uit OR uow OR uts)]:		// also excludes eth weapons/chests, Shako, Hellforge Plate, Lacquered Plate, Shadow Plate, Hyperion, 4-socket-capable shields
-
+//ItemDisplay[MAG NORM CLVL>39 ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ful) OR (buc OR sml OR lrg OR spk OR kit OR tow OR gts) OR (mgl OR tgl OR hgl) OR (mbt OR tbt OR hbt) OR (mbl OR tbl OR hbl) OR (hax OR lax OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb) OR (!ETH THROWING !ZON)) !(stu OR brs)]:		// also excludes Studded Leather, Breast Plate
+//ItemDisplay[MAG EXC CLVL>59  ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xtu OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xth OR xul) OR (xuc OR xml OR xrg OR xpk OR xit OR xow OR xts) OR (xmg OR xtg OR xhg) OR (xmb OR xtb OR xhb) OR (zmb OR ztb OR zhb) OR (9ha OR 9la OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx) OR (!ETH THROWING !ZON))]:
+//ItemDisplay[MAG ELT CLVL>79  ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (utu OR ung OR ucl OR uhn OR urs OR upl OR ult OR uld OR uth OR uul) OR (uuc OR uml OR urg OR upk OR uit OR uow OR uts) OR (umg OR utg OR uhg) OR (umb OR utb OR uhb) OR (umc OR utc OR uhc) OR (7ha OR 7la OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx) OR (!ETH THROWING !ZON)) !(ETH (WEAPON OR CHEST)) !(uap OR ult OR uth OR uul OR urg OR uit OR uow OR uts)]:		// also excludes eth weapons/chests, Shako, Hellforge Plate, Lacquered Plate, Shadow Plate, Hyperion, 4-socket-capable shields
 // Hidden: Worst class items (non-eth staves that aren't elite or capable of 6 sockets) - level 40
-ItemDisplay[MAG CLVL>39 STAFF !ETH !(ELT OR wst OR 8ws)]:
+//ItemDisplay[MAG CLVL>39 STAFF !ETH !(ELT OR wst OR 8ws)]:
 
 // Catchall
 ItemDisplay[MAG ETH (crs OR 9cr OR (THROWING !ZON ELT)) ILVL>43]:	  %NAME%  %WHITE%		// Highlighting for: eth Crystal Sword, eth Dimensional Blade, eth elite throwing weapons
