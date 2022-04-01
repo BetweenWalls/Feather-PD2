@@ -1208,13 +1208,14 @@ ItemDisplay[RARE]: %NAME%%WHITE%
 
 // ... (lines added for craft league)
 // Hidden: Most bad non-class items at each tier
-ItemDisplay[MAG NORM CLVL>49 ((skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR plt OR fld OR gth OR ful) OR (buc OR sml OR spk OR tow OR gts) OR (mgl OR tgl OR hgl) OR (mbt OR tbt OR hbt) OR (mbl OR tbl OR hbl) OR (hax OR lax OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]:
-ItemDisplay[MAG EXC CLVL>69  ((xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xlt OR xld OR xth OR xul) OR (xuc OR xml OR xpk OR xow OR xts) OR (xmg OR xtg OR xhg) OR (xmb OR xtb OR xhb) OR (zmb OR ztb OR zhb) OR (9ha OR 9la OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]:
-//ItemDisplay[MAG ELT CLVL>89  ((ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR ult OR uld OR uth OR uul) OR (uuc OR uml OR upk OR uow OR uts) OR (umg OR utg OR uhg) OR (umb OR utb OR uhb) OR (umc OR utc OR uhc) OR (7ha OR 7la OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx)) !(ETH !(uuc OR uml OR DRU OR NEC OR 7ha OR 7ss OR 7sm OR 7sb OR 7fc OR 7dg OR 7di)) !(ult OR uth OR uul OR urg OR uit OR uow OR uts)]:
+ItemDisplay[MAG NORM CLVL>49 ((skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR plt OR fld OR gth OR ful) OR (buc OR sml OR spk OR tow OR gts) OR (mgl OR tgl OR hgl) OR (mbt OR tbt OR hbt) OR (mbl OR tbl OR hbl) OR (hax OR lax OR mac OR mst OR ssd OR scm OR sbr OR flc OR (!ETH (wsd OR 2hs OR clm OR gis OR bsw OR spr OR tri OR bar OR vou)) OR dgr OR dir OR bld OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb))]:
+ItemDisplay[MAG EXC CLVL>69  ((xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xlt OR xld OR xth OR xul) OR (xuc OR xml OR xpk OR xow OR xts) OR (xmg OR xtg OR xhg) OR (xmb OR xtb OR xhb) OR (zmb OR ztb OR zhb) OR (9ha OR 9la OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR (!ETH (9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9sr OR 9tr OR 9b7 OR 9vo)) OR 9dg OR 9di OR 9bl OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8))]:
+//ItemDisplay[MAG ELT CLVL>89  ((ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR ult OR uld OR uth OR uul) OR (uuc OR uml OR upk OR uow OR uts) OR (umg OR utg OR uhg) OR (umb OR utb OR uhb) OR (umc OR utc OR uhc) OR (7ha OR 7la OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR (!ETH (7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7sr OR 7tr OR 7o7 OR 7vo)) OR 7dg OR 7di OR 7bl OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7)) !(ETH !(uuc OR uml OR DRU OR NEC OR 7ha OR 7ss OR 7sm OR 7sb OR 7fc OR 7dg OR 7di)) !(ult OR uth OR uul OR urg OR uit OR uow OR uts)]:
 // Hidden: Non-eth throwing weapons
 ItemDisplay[MAG NORM !ETH THROWING !ZON CLVL>49]:
 ItemDisplay[MAG EXC !ETH THROWING !ZON CLVL>69]:
 //ItemDisplay[MAG ELT !ETH THROWING !ZON CLVL>89]:
+//ItemDisplay[MAG (NORM OR EXC) !ETH THROWING ZON CLVL>79]:
 
 // ... (lines disabled for craft league)
 // Hidden: Unworthy non-class items - level 90
