@@ -146,7 +146,7 @@ ItemDisplay[std]:	%DOT-53% %NAME% {Adds Heroic bonuses to Maps & Dungeons}%WHITE
 // +------+
 // ... (lines modified for craft league)
 // Hidden: Chipped, Flawed & standard gems - levels 30, 40, 60
-ItemDisplay[((GEMLEVEL=1 CLVL>39) OR (GEMLEVEL=2 CLVL>49) OR (GEMLEVEL=3 CLVL>69))]:
+ItemDisplay[((GEMLEVEL=1 CLVL>39) OR (GEMLEVEL=2 CLVL>49) OR (GEMLEVEL=3 CLVL>69 DIFF>1))]:
 
 // Descriptions for Stacked Gems (Socketed Effects)
 ItemDisplay[gzvs]: %NAME%{%WHITE%Shields: +24 Defense%NL%Armors: +8 to Strength%NL%Weapons: +100 to Attack Rating%NL%}%CONTINUE%
@@ -377,7 +377,7 @@ ItemDisplay[RARE ID ILVL>35 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MA
 ItemDisplay[RARE ID ILVL>35 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) BELT]:				%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%2%TAN%), %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%1%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%
 
 // Descriptions for Maximum Corruptable Sockets
-ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 (HELM OR CIRC OR CHEST OR SHIELD OR (WEAPON !THROWING))]: %NAME%{%NAME%%NL%}%CONTINUE%																																																								// Adds new line for items that already have something in their description (rare/craftd items with price)	// TODO: check if necessary
+ItemDisplay[(RARE OR CRAFT) ID SOCK=0 STAT360=0 (HELM OR CIRC OR CHEST OR SHIELD OR (WEAPON !THROWING))]: %NAME%{%NAME%%NL%}%CONTINUE%																																																								// Adds new line for items that already have something in their description (rare/craftd items with price)
 ItemDisplay[!NMAG !MAG ID SOCK=0 STAT360=0 (buc OR xuc OR dgr OR dir OR wnd OR ywn OR 9wn)]: %NAME%{%NAME%%WHITE%Max Corruptable Sockets: 1}%CONTINUE%																																																						// 1s (all ilvls)
 ItemDisplay[!NMAG !MAG ID SOCK=0 STAT360=0 (cap OR skp OR hlm OR fhl OR bhm OR xap OR xkp OR xlm OR xhl OR xh9 OR uap OR ukp OR ulm OR uhl OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR xui OR xea OR xla OR xtu OR sml OR spk OR bsh OR xml OR xpk OR xsh OR uuc OR uml OR (NEC NORM) OR hax OR clb OR spc OR mac OR 9sp OR 7sp OR ssd OR scm OR sbr OR flc OR bld OR 9dg OR 9di OR 9bl OR 7dg OR 7di OR 7bl OR sst OR (WAND !wnd !ywn !9wn) OR scp OR ktr OR wrb OR axf OR ces OR (SOR !ob5 !oba !obf))]: %NAME%{%NAME%%WHITE%Max Corruptable Sockets: 2}%CONTINUE%	// 2s (all ilvls)
 ItemDisplay[!NMAG !MAG ID SOCK=0 STAT360=0 (rng OR brs OR ltp OR gth OR ful OR aar OR (CHEST !NORM !xui !xea !xla !xtu) OR lrg OR kit OR tow OR gts OR xrg OR xit OR xow OR xts OR urg OR upk OR uit OR ush OR uow OR uts OR DIN OR 9ha OR 7ha OR mst OR 9cl OR 9ma OR 9mt OR 7cl OR 7ma OR 7mt OR wsd OR 2hs OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR spr OR 9sr OR 7sr OR bar OR sbw OR lxb OR lst OR 8ss OR 8ls OR 6ss OR 6ls OR gsc OR 9sc OR 9qs OR 7sc OR 7qs OR qf1 OR qf2)]: %NAME%{%NAME%%WHITE%Max Corruptable Sockets: 3}%CONTINUE%	// 3s (all ilvls)
