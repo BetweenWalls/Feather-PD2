@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	14 APRIL 2022
+//		Date Updated:	15 APRIL 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -296,7 +296,7 @@ ItemDisplay[MAG ID ((cm1 ALVL>46) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]:			%NAME%{
 //-¦ Amulets, Rings, Quivers ¦-------------------------------------------------------------------------------------------
 // +-------------------------+
 // Hidden: Regular Arrows/Bolts - level 5
-ItemDisplay[NMAG (aqv OR cqv) CLVL>4]:
+ItemDisplay[NMAG (aqv OR cqv) CLVL>4 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]:	// except in town
 
 // Hidden: Magic Arrows/Bolts - level 70, 90
 ItemDisplay[MAG (aqv OR cqv) !ID CLVL>69 !AMAZON]:				// level 70 - hides unid magic quivers for non-amazons
@@ -361,6 +361,11 @@ ItemDisplay[RW]: %NAME%{%NAME%}%WHITE%
 // Adds Price
 ItemDisplay[ID (RARE OR CRAFT)]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%
 
+// Descriptions for ilvl and alvl limit on some rare/crafted items
+ItemDisplay[RARE ID ((ci0 ILVL>86) OR (ci1 ILVL>81) OR (ci2 ILVL>76) OR (ci3 ILVL>71)) STAT360=0]: %NAME%{%NAME%%NL%%WHITE%Item Level: %ILVL%}%CONTINUE%							// adds ilvl to rare circlets if it's high enough to consider rerolling
+ItemDisplay[CRAFT (ALVL<71 OR (amu ALVL<90) OR (rin ALVL<77) OR (WEAPON !SOR !NEC ALVL<77) OR ((CHEST OR SHIELD) ALVL<85) OR (HELM ALVL<81))]: %NAME%{%NAME%%NL%%WHITE%Affix Level Limit: %ALVL%}%CONTINUE%	// adds alvl limit to crafted items if it's less than ideal
+ItemDisplay[CRAFT (amu OR rin) !((amu ALVL<90) OR (rin ALVL<77))]: %NAME%%WHITE%																// shows other crafted amulets/rings without price or alvl limit
+
 // Crafting Recipes Shown for Freshly-Found Rares									...TODO: Enable if rares can be used as crafting ingredients
 //ItemDisplay[RARE ID ILVL>35 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) (WEAPON OR (ARMOR !CIRC))]:															%NAME%{%NAME%%NL%%WHITE%Item Level: %ILVL%%NL%Crafted Affix Level Limit: }%CONTINUE%
 //ItemDisplay[RARE ID ILVL>35 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) (WEAPON OR (ARMOR !CIRC)) !(CRAFTALVL<71 OR (WEAPON !SOR !NEC CRAFTALVL<77) OR ((CHEST OR SHIELD) CRAFTALVL<85) OR (HELM CRAFTALVL<81))]:	%NAME%{%NAME%%TAN%}%CONTINUE%	// alvl limit colored tan if it's high enough to include all affixes
@@ -395,11 +400,6 @@ ItemDisplay[!NMAG !MAG ID SOCK=0 STAT360=0 ILVL>40 (bax OR btx OR 9la OR 9ba OR 
 ItemDisplay[!NMAG !MAG ID SOCK=0 STAT360=0 ILVL>25 ILVL<41 (wst OR 8ws OR 6ws)]: %NAME%{%NAME%%WHITE%Max Corruptable Sockets: 6}%CONTINUE%																																																							// 6s (ilvl 26-40)
 ItemDisplay[!NMAG !MAG ID SOCK=0 STAT360=0 ILVL>40 (gax OR gix OR 9ga OR 9gi OR 7ga OR 7gi OR (MACE 2H) OR gsd OR 9gd OR 7gd OR spt OR pik OR 9st OR 9p9 OR 7st OR 7p7 OR hal OR wsc OR 9h9 OR 9wc OR 7h7 OR 7wc OR lbb OR lwb OR 8l8 OR 8lw OR 6lb OR 6l7 OR 6lw OR hxb OR 8hx OR 6hx OR wst OR 8ws OR 6ws OR (ZON SPEAR !THROWING))]: %NAME%{%NAME%%WHITE%Max Corruptable Sockets: 6}%CONTINUE%																								// 6s (ilvl 41+)
 ItemDisplay[!NMAG !MAG ID SOCK=0 STAT360=0 (qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR xui OR xea OR xla OR xtu OR buc OR xuc OR spk OR xpk OR bsh OR xsh OR hax OR clb OR mac OR ssd OR scm OR sbr OR flc OR dgr OR dir OR sst OR wnd OR ywn OR 9wn OR scp OR (ILVL>25 ((NEC NORM) OR lax OR bar OR sbw OR lxb OR ktr OR wrb OR axf OR ces)) OR (ILVL>40 (bhm OR xh9 OR ci0 OR ci1)))]: %NAME%{%NAME% %GRAY%(upgrade for +1)}%CONTINUE%																	// Items that can gain more sockets if upgraded first
-
-// Descriptions for ilvl and alvl limit on some rare/crafted items
-ItemDisplay[RARE ID ((ci0 ILVL>86) OR (ci1 ILVL>81) OR (ci2 ILVL>76) OR (ci3 ILVL>71)) STAT360=0]: %NAME%{%NAME%%NL%%WHITE%Item Level: %ILVL%}%CONTINUE%							// adds ilvl to rare circlets if it's high enough to consider rerolling
-ItemDisplay[CRAFT (ALVL<71 OR (amu ALVL<90) OR (rin ALVL<77) OR (WEAPON !SOR !NEC ALVL<77) OR ((CHEST OR SHIELD) ALVL<85) OR (HELM ALVL<81))]: %NAME%{%NAME%%NL%%WHITE%Affix Level Limit: %ALVL%}%WHITE%	// adds alvl limit to crafted items if it's less than ideal
-ItemDisplay[CRAFT (amu OR rin)]: %NAME%%WHITE%																					// shows other crafted amulets/rings without price or alvl limit
 
 // Upgrading Recipes
 ItemDisplay[(UNI OR SET) ID ARMOR NORM SOCK=0 (qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR buc OR spk OR bsh OR (BELT !hbl) OR (ILVL>25 NEC) OR (ILVL>40 (bhm OR ci0 OR ci1)) OR (BOOTS ASSASSIN) OR (SHIELD !NEC PALADIN))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%13%TAN%)}%CONTINUE%				// Upgrade Unique/Set Armor (Normal)
