@@ -479,7 +479,7 @@ ItemDisplay[SET ID STAT91=-50 SOCK=0 STAT360=0 chn]: %NAME%{%NAME% %GRAY%(Str: 4
 //ItemDisplay[SET ID STAT91=-20 SOCK=0 STAT360=0 xrs]: %NAME%{%NAME% %GRAY%(Str: 95)}%CONTINUE%		// Haemosu's Adamant
 //ItemDisplay[SET ID STAT91=-20 zmb]: %NAME%{%NAME% %GRAY%(Str: 85)}%CONTINUE%				// Tal Rasha's Fine-Spun Cloth
 //ItemDisplay[SET ID STAT91=-40 SOCK=0 STAT360=0 xul]: %NAME%{%NAME% %GRAY%(Str: 138)}%CONTINUE%	// Trang-Oul's Scales
-//ItemDisplay[SET ID STAT91=-40 SOCK=0 STAT360=0 xar]: %NAME%{%NAME% %GRAY%(Str: 140)}%CONTINUE%	// Griswold's Heart
+//ItemDisplay[SET ID STAT91=-40 STAT360=0 xar]: %NAME%{%NAME% %GRAY%(Str: 140)}%CONTINUE%		// Griswold's Heart
 ItemDisplay[UNI !ETH ID STAT91=-10 SOCK=0 STAT360=0 fld]: %NAME%{%NAME% %GRAY%(Str: 93)}%CONTINUE%	// Rockfleece (normal)
 ItemDisplay[UNI ETH ID STAT91=-10 SOCK=0 STAT360=0 fld]: %NAME%{%NAME% %GRAY%(Str: 83)}%CONTINUE%	// Rockfleece (normal, eth)
 //ItemDisplay[UNI !ETH ID STAT91=-10 SOCK=0 STAT360=0 xld]: %NAME%{%NAME% %GRAY%(Str: 157)}%CONTINUE%	// Rockfleece (exceptional)
