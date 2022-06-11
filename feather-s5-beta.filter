@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II - Season 5 Beta
-//		Date Updated:	10 JUNE 2022
+//		Date Updated:	11 JUNE 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -20,7 +20,7 @@
 // +---------------+
 ItemDisplayFilterName[]:Low Strictness			// default
 ItemDisplayFilterName[]:Reference Info			// shows extra info like rune combinations for runewords, weapon speed/range, extra recipes, etc		...TODO: So far, only rune combos and 
-//ItemDisplayFilterName[]:Moderate Strictness		// planned version (no)
+//ItemDisplayFilterName[]:Moderate Strictness		// planned version
 //ItemDisplayFilterName[]:High Strictness		// planned version
 
 // +------------------+
@@ -118,9 +118,10 @@ ItemDisplay[rtmo !FILTLVL=2]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%
 ItemDisplay[rtmf !FILTLVL=2]:	%MAP-60%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone}%WHITE%				// Ancient Bone Fragments
 ItemDisplay[cwss !FILTLVL=2]:	%MAP-50%    %NAME%    {%NAME%}%WHITE%								// Tainted Worldstone Shard
 ItemDisplay[(rtp OR rid)]:	%BORDER-53%      %NAME%      %WHITE%								// Horadrim Navigator/Almanac
+ItemDisplay[rkey]:		%BORDER-50%%RED%     %NAME%     {%NAME%}%WHITE%							// Skeleton Key
 ItemDisplay[lsvl]:		%BORDER-50%%RED%       Vial of Lightsong       {%NAME%}%WHITE%					// Vial of Lightsong
 ItemDisplay[llmr]:		%BORDER-50%%RED%        Lilith's Mirror        {%NAME%}%WHITE%					// Lilith's Mirror
-ItemDisplay[(ubaa OR ubab OR ubac) !FILTLVL=2]:	%DOT-60%  %NAME%  {%NAME%}%WHITE%						// Sigil of Madawc/Talic/Korlic
+ItemDisplay[(ubaa OR ubab OR ubac) !FILTLVL=2]:	%DOT-60%  %NAME%  {%NAME%}%WHITE%						// Sigil of Madawc/Talic/Korlic (Uber Ancients ingredients)
 // Map Orbs
 ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%Raises Map Rarity from Common to Magic}%WHITE%										// Arcane Orb		(Common -> Magic)
 ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE%+%NL%%BLUE%Raises Map Rarity from Common to Rare}%WHITE%			// Zakarum Orb		(Common -> Rare)
@@ -132,7 +133,7 @@ ItemDisplay[scrb]:	%BORDER-53%    %NAME%    {Transforms a %DARK_GREEN%(%TAN%T3%D
 // Maps  (includes notifications)
 ItemDisplay[MAG  (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %BLUE%%MAP%%NAME% {%NAME%}%CONTINUE%	// maps - magic (adds blue minimap border)
 ItemDisplay[RARE (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %YELLOW%%MAP%%NAME% {%NAME%}%CONTINUE%	// maps - rare (adds yellow minimap border)
-ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19)]:	%MAP-77%%DOT-53%%NAME%%DARK_GREEN%(%GOLD%T1%DARK_GREEN%){%NAME%}%CONTINUE%		// maps - T1 (Ruins of Viz-Jun, Horazon's Memory, Bastion Keep, Royal Crypt, final map name unknown)
+ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19)]:	%MAP-77%%DOT-53%%NAME%%DARK_GREEN%(%GOLD%T1%DARK_GREEN%){%NAME%}%CONTINUE%		// maps - T1 (Ruins of Viz-Jun, Horazon's Memory, Bastion Keep, Royal Crypts, Sanatorium)
 ItemDisplay[(t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29)]:	%MAP-77%%DOT-53%%NAME%%DARK_GREEN%(%GOLD%T2%DARK_GREEN%){%NAME%}%CONTINUE%		// maps - T2 (Phlegethon, Torajan Jungle, Arreat Battlefield, Tomb of Zultan Kulle, Sewers of Harrogath, Shadows of Westmarch)
 ItemDisplay[(t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39)]:	%MAP-77%%DOT-53%%NAME%%DARK_GREEN%(%GOLD%T3%DARK_GREEN%){%NAME%}%CONTINUE%		// maps - T3 (River of Blood, Throne of Insanity, Lost Temple, Ancestral Trial, Blood Moon, Fall of Caldeum, Pandemonium Citadel, Canyon of Sescheron, Kehjistan Marketplace)
 ItemDisplay[(t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]:	%MAP-77%%DOT-53%%PX-50%%NAME%%DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%){%NAME%}%CONTINUE%	// dungeons  (Cathedral of Light, Plains of Torment, Sanctuary of Sin)
@@ -155,7 +156,7 @@ ItemDisplay[bey FILTLVL=2]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Mephisto's B
 ItemDisplay[mbr FILTLVL=2]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Diablo's Horn %BLUE%and %ORANGE%Baal's Eye %BLUE%to access Uber Tristram%NL%%GRAY%(Furnace of Pain)}%WHITE%								// Mephisto's Brain	(Uber Izual)
 ItemDisplay[wss FILTLVL=2]:	%DOT-50%  %NAME%  {Can also add corruption modifiers to maps%NL%Corrupts equipment, either adding a modifier or turning it into a random rare}%WHITE%								// Worldstone Shard
 ItemDisplay[lbox FILTLVL=2]:	%BORDER-50%        %NAME%        {Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%													// Larzuk's Puzzlebox
-ItemDisplay[lpp FILTLVL=2]:	%BORDER-50%     %NAME%     {Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%						// Larzuk's Puzzlepiece
+ItemDisplay[lpp FILTLVL=2]:	%BORDER-50%     %NAME%     {Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%													// Larzuk's Puzzlepiece
 ItemDisplay[uba FILTLVL=2]:	%MAP-60%  %NAME%  {%BLUE%Sends you and nearby allies to fight the Uber Ancients on Arreat Summit}%WHITE%													// Relic of the Ancients (Uber Ancients)
 ItemDisplay[ubtm FILTLVL=2]:	%MAP-60%  %NAME%  {%GOLD%The Fall of Tristram%NL%%BLUE%Sends you and nearby allies to fight the Uber Prime Evils in Tristram}%WHITE%										// Pandemonium Talisman (Uber Tristram)
 ItemDisplay[dcma FILTLVL=2]:	%MAP-60%  %NAME%  {%GOLD%Diablo Walks the Earth%NL%%BLUE%Sends you to and nearby allies to fight Diablo-Clone in the Pandemonium Fortress}%WHITE%								// Vision of Terror	(DClone)
@@ -167,9 +168,9 @@ ItemDisplay[rtmv FILTLVL=2]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%
 ItemDisplay[rtmo FILTLVL=2]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%BLUE%Combine with %ORANGE%Splinter of the Void %BLUE%and %GOLD%Hellfire Torch %BLUE%to access Rathma%NL%%GRAY%(Undead Enemies)}%WHITE%			// Trang-Oul's Jawbone	(Rathma ingredient)
 ItemDisplay[rtmf FILTLVL=2]:	%MAP-60%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone%NL%%WHITE%Jawbone Recipe: 2 %ORANGE%Ancient Bone Fragments %WHITE%+ %GOLD%Hellfire Torch}%WHITE%							// Ancient Bone Fragments
 ItemDisplay[cwss FILTLVL=2]:	%MAP-50%    %NAME%    {Adds a corruption modifier to %GOLD%Annihilus}%WHITE%																	// Tainted Worldstone Shard
-ItemDisplay[ubaa FILTLVL=2]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%maps to access Uber Ancients}%WHITE%					// Sigil of Madawc
-ItemDisplay[ubab FILTLVL=2]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%maps to access Uber Ancients}%WHITE%					// Sigil of Talic
-ItemDisplay[ubac FILTLVL=2]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %BLUE%maps to access Uber Ancients}%WHITE%					// Sigil of Korlic
+ItemDisplay[ubaa FILTLVL=2]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%maps to access Uber Ancients}%WHITE%				// Sigil of Madawc	 (Uber Ancients ingredient)
+ItemDisplay[ubab FILTLVL=2]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%maps to access Uber Ancients}%WHITE%				// Sigil of Talic	 (Uber Ancients ingredient)
+ItemDisplay[ubac FILTLVL=2]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %BLUE%maps to access Uber Ancients}%WHITE%				// Sigil of Korlic	 (Uber Ancients ingredient)
 
 // Miscellaneous
 //ItemDisplay[tbk]:	%NAME%%WHITE%								// Tome of Town Portal	(listed here for reference)
@@ -358,7 +359,7 @@ ItemDisplay[(amu OR rin) !ID RARE]:	%DOT-6D%  %NAME%  %WHITE%			// highlight uni
 //-¦ General Equipment ¦-------------------------------------------------------------------------------------------------
 // +-------------------+
 // Catchall - Non-Equipment
-ItemDisplay[!(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR jew OR jewf OR cm1 OR cm2 OR cm3 OR ram OR RUNE>0 OR GEMTYPE>0 OR rvs OR rvl OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5 OR yps OR wms OR vps OR bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR tbk OR ibk OR tsc OR isc OR key OR ear OR std OR wss OR lbox OR ubtm OR dcma OR rtma OR dcso OR dcho OR dcbl OR rtmv OR rtmo OR rtmf OR cwss OR rtp OR rid OR lsvl OR llmr OR uba OR ubaa OR ubab OR ubac OR imma OR imra OR upma OR scou OR rera OR upmp OR scrb OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %MAP%%NAME%{%NAME%}%WHITE%	// notifications for unknown items
+ItemDisplay[!(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR jew OR jewf OR cm1 OR cm2 OR cm3 OR ram OR RUNE>0 OR GEMTYPE>0 OR rvs OR rvl OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5 OR yps OR wms OR vps OR bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR tbk OR ibk OR tsc OR isc OR key OR ear OR std OR wss OR lbox OR ubtm OR dcma OR rtma OR dcso OR dcho OR dcbl OR rtmv OR rtmo OR rtmf OR cwss OR rtp OR rid OR lsvl OR llmr OR rkey OR uba OR ubaa OR ubab OR ubac OR imma OR imra OR upma OR scou OR rera OR upmp OR scrb OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49 OR t61 OR t62)]: %MAP%%NAME%{%NAME%}%WHITE%	// notifications for unknown items
 ItemDisplay[!(ARMOR OR (WEAPON !(opl OR opm OR ops OR gpl OR gpm OR gps)) OR ((amu OR rin) (UNI OR SET OR CRAFT)) OR ((jew OR cm1 OR cm2 OR cm3) UNI) OR ram)]: %NAME%{%NAME%}%WHITE%	// displays most non-equipment items as normal
 
 // Modification: Sockets (regular items are handled in their own category)
