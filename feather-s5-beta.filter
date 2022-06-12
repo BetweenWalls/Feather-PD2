@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II - Season 5 Beta
-//		Date Updated:	11 JUNE 2022
+//		Date Updated:	12 JUNE 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -149,7 +149,7 @@ ItemDisplay[FILTLVL>1 (hp3 OR mp3) CLVL>39 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR 
 ItemDisplay[FILTLVL>1 (hp4 OR mp4) CLVL>74 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}				// except in town
 
 // Hidden: Stamina Potion & Throwing Potions - level 15
-ItemDisplay[(vps OR opl OR opm OR ops OR gpl OR gpm OR gps) CLVL>14 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// except in town
+ItemDisplay[FILTLVL>1 (vps OR opl OR opm OR ops OR gpl OR gpm OR gps) CLVL>14 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// except in town
 
 // Hidden: Thawing Potion - level 30
 ItemDisplay[FILTLVL>1 wms CLVL>29 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}					// except in town
@@ -172,55 +172,61 @@ ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key)]: %NAME% %WHITE%×
 // Quest Items
 //ItemDisplay[(hdm OR msf OR vip OR hst OR g33 OR qf1 OR qf2 OR hfh)]: %NAME%{%NAME%}%CONTINUE%						// equipment	 (listed here for reference)
 //ItemDisplay[(bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2)]: %NAME%{%NAME%}	// non-equipment (listed here for reference)
+ItemDisplay[box FILTLVL=5]:	%NAME%{%GRAY%It is currently the same as Low Strictness%NL%The current filter level (High Strictness) is a work in progress}
+ItemDisplay[box FILTLVL=4]:	%NAME%{%GRAY%It is currently the same as Low Strictness%NL%The current filter level (Moderate Strictness) is a work in progress}
+ItemDisplay[box FILTLVL=3]:	%NAME%{%GRAY%Current filter level: Low Strictness (Extra Info)}
+ItemDisplay[box FILTLVL=2]:	%NAME%{%GRAY%Current filter level: Low Strictness}
+ItemDisplay[box FILTLVL=1]:	%NAME%{%GRAY%Current filter level: No Filtering (Fixed)}
+ItemDisplay[box FILTLVL=0]:	%NAME%{%GRAY%Current filter level: No Filtering}
 
 // Endgame Quest Items  (includes notifications)
-ItemDisplay[tes !FILTLVL=3]:	%DOT-60%  %NAME%  {%GRAY%(Andariel & Duriel)}%WHITE%						// Twisted Essence of Suffering
-ItemDisplay[ceh !FILTLVL=3]:	%DOT-60%  %NAME%  {%GRAY%(Mephisto)}%WHITE%							// Charged Essence of Hatred
-ItemDisplay[bet !FILTLVL=3]:	%DOT-60%  %NAME%  {%GRAY%(Diablo)}%WHITE%							// Burning Essence of Terror
-ItemDisplay[fed !FILTLVL=3]:	%DOT-60%  %NAME%  {%GRAY%(Baal)}%WHITE%								// Festering Essence of Destruction
-ItemDisplay[toa]:	%DOT-60%%ORANGE%  Token of Absolution  {%WHITE%Right-click to reset Stat/Skill Points}%WHITE%		// Token of Absolution
-ItemDisplay[pk1 !FILTLVL=3]:	%DOT-60%  %NAME%  {%GRAY%(Countess / Blood Raven)}%WHITE%					// Key of Terror
-ItemDisplay[pk2 !FILTLVL=3]:	%DOT-60%  %NAME%  {%GRAY%(Summoner / Bloodwitch)}%WHITE%					// Key of Hatred
-ItemDisplay[pk3 !FILTLVL=3]:	%DOT-60%  %NAME%  {%GRAY%(Nihlathak / Izual)}%WHITE%						// Key of Destruction
-ItemDisplay[dhn !FILTLVL=3]:	%DOT-60%  %NAME%  {%GRAY%(Matron's Den)}%WHITE%							// Diablo's Horn	(Lilith)
-ItemDisplay[bey !FILTLVL=3]:	%DOT-60%  %NAME%  {%GRAY%(Forgotten Sands)}%WHITE%						// Baal's Eye		(Uber Duriel)
-ItemDisplay[mbr !FILTLVL=3]:	%DOT-60%  %NAME%  {%GRAY%(Furnace of Pain)}%WHITE%						// Mephisto's Brain	(Uber Izual)
+ItemDisplay[tes !FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Andariel & Duriel)}%WHITE%						// Twisted Essence of Suffering
+ItemDisplay[ceh !FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Mephisto)}%WHITE%							// Charged Essence of Hatred
+ItemDisplay[bet !FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Diablo)}%WHITE%							// Burning Essence of Terror
+ItemDisplay[fed !FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Baal)}%WHITE%								// Festering Essence of Destruction
+ItemDisplay[toa]:	%DOT-60%%ORANGE%%TIER-9%  Token of Absolution  {%WHITE%Right-click to reset Stat/Skill Points}%WHITE%		// Token of Absolution
+ItemDisplay[pk1 !FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Countess / Blood Raven)}%WHITE%					// Key of Terror
+ItemDisplay[pk2 !FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Summoner / Bloodwitch)}%WHITE%					// Key of Hatred
+ItemDisplay[pk3 !FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Nihlathak / Izual)}%WHITE%						// Key of Destruction
+ItemDisplay[dhn !FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Matron's Den)}%WHITE%							// Diablo's Horn	(Lilith)
+ItemDisplay[bey !FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Forgotten Sands)}%WHITE%						// Baal's Eye		(Uber Duriel)
+ItemDisplay[mbr !FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Furnace of Pain)}%WHITE%						// Mephisto's Brain	(Uber Izual)
 
 // PD2 Items  (includes notifications)
-ItemDisplay[wss !FILTLVL=3]:	%DOT-50%  %NAME%  {%NAME%}%WHITE%								// Worldstone Shard
-ItemDisplay[lbox !FILTLVL=3]:	%BORDER-50%        %NAME%        {%NAME%}%WHITE%						// Larzuk's Puzzlebox
-ItemDisplay[lpp !FILTLVL=3]:	%BORDER-50%     %NAME%     {%NAME%}%WHITE%							// Larzuk's Puzzlepiece
-ItemDisplay[uba !FILTLVL=3]:	%MAP-60%  %NAME%  %WHITE%									// Relic of the Ancients (Uber Ancients)
-ItemDisplay[ubtm !FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%The Fall of Tristram}%WHITE%						// Pandemonium Talisman (Uber Tristram)
-ItemDisplay[dcma !FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%Diablo Walks the Earth}%WHITE%						// Vision of Terror	(DClone)
-ItemDisplay[rtma !FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%Rathma Awaits You}%WHITE%						// Voidstone		(Rathma)
-ItemDisplay[dcso !FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Diablo / Baal)}%WHITE%	// Prime Evil Soul	(DClone ingredient)
-ItemDisplay[dcho !FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Uber Tristram)}%WHITE%	// Black Soulstone	(DClone ingredient)
-ItemDisplay[dcbl !FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Map Bosses)}%WHITE%	// Pure Demonic Essence	(DClone ingredient)
-ItemDisplay[rtmv !FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Shadow of Mendeln)}%WHITE%		// Splinter of the Void (Rathma ingredient)
-ItemDisplay[rtmo !FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Undead Enemies)}%WHITE%		// Trang-Oul's Jawbone	(Rathma ingredient)
-ItemDisplay[rtmf !FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone}%WHITE%				// Ancient Bone Fragments
-ItemDisplay[cwss !FILTLVL=3]:	%MAP-50%    %NAME%    {%NAME%}%WHITE%								// Tainted Worldstone Shard
-ItemDisplay[(rtp OR rid)]:	%BORDER-53%     %NAME%     {%NAME%}%WHITE%							// Horadrim Navigator/Almanac
-ItemDisplay[rkey]:		%BORDER-53%     %NAME%     {%NAME%}%WHITE%							// Skeleton Key
-ItemDisplay[lsvl]:		%BORDER-50%%RED%       Vial of Lightsong       {%NAME%}%WHITE%					// Vial of Lightsong
-ItemDisplay[llmr]:		%BORDER-50%%RED%        Lilith's Mirror        {%NAME%}%WHITE%					// Lilith's Mirror
-ItemDisplay[(ubaa OR ubab OR ubac) !FILTLVL=3]:	%DOT-60%  %NAME%  {%NAME%}%WHITE%						// Sigil of Madawc/Talic/Korlic (Uber Ancients ingredients)
+ItemDisplay[wss !FILTLVL=3]:	%DOT-50%%TIER-9%  %NAME%  {%NAME%}%WHITE%								// Worldstone Shard
+ItemDisplay[lbox !FILTLVL=3]:	%BORDER-50%%TIER-9%        %NAME%        {%NAME%}%WHITE%						// Larzuk's Puzzlebox
+ItemDisplay[lpp !FILTLVL=3]:	%BORDER-50%%TIER-9%     %NAME%     {%NAME%}%WHITE%							// Larzuk's Puzzlepiece
+ItemDisplay[uba !FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  %WHITE%									// Relic of the Ancients (Uber Ancients)
+ItemDisplay[ubtm !FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Fall of Tristram}%WHITE%						// Pandemonium Talisman (Uber Tristram)
+ItemDisplay[dcma !FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Diablo Walks the Earth}%WHITE%						// Vision of Terror	(DClone)
+ItemDisplay[rtma !FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Rathma Awaits You}%WHITE%						// Voidstone		(Rathma)
+ItemDisplay[dcso !FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Diablo / Baal)}%WHITE%	// Prime Evil Soul	(DClone ingredient)
+ItemDisplay[dcho !FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Uber Tristram)}%WHITE%	// Black Soulstone	(DClone ingredient)
+ItemDisplay[dcbl !FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Map Bosses)}%WHITE%	// Pure Demonic Essence	(DClone ingredient)
+ItemDisplay[rtmv !FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Shadow of Mendeln)}%WHITE%		// Splinter of the Void (Rathma ingredient)
+ItemDisplay[rtmo !FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Undead Enemies)}%WHITE%		// Trang-Oul's Jawbone	(Rathma ingredient)
+ItemDisplay[rtmf !FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone}%WHITE%				// Ancient Bone Fragments
+ItemDisplay[cwss !FILTLVL=3]:	%MAP-50%%TIER-9%    %NAME%    {%NAME%}%WHITE%								// Tainted Worldstone Shard
+ItemDisplay[(rtp OR rid)]:	%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%							// Horadrim Navigator/Almanac
+ItemDisplay[rkey]:		%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%							// Skeleton Key
+ItemDisplay[lsvl]:		%BORDER-50%%TIER-9%%RED%       Vial of Lightsong       {%NAME%}%WHITE%					// Vial of Lightsong
+ItemDisplay[llmr]:		%BORDER-50%%TIER-9%%RED%        Lilith's Mirror        {%NAME%}%WHITE%					// Lilith's Mirror
+ItemDisplay[(ubaa OR ubab OR ubac) !FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {%NAME%}%WHITE%						// Sigil of Madawc/Talic/Korlic (Uber Ancients ingredients)
 // Map Orbs
 ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%Raises Map Rarity from Common to Magic}%WHITE%										// Arcane Orb		(Common -> Magic)
 ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE%+%NL%%BLUE%Raises Map Rarity from Common to Rare}%WHITE%			// Zakarum Orb		(Common -> Rare)
 ItemDisplay[upma]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ P%GRAY%.%WHITE%Skull + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE%+%NL%%BLUE%Raises Map Rarity from Magic to Rare}%WHITE%	// Angelic Orb		(Magic -> Rare)
 ItemDisplay[scou]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map%NL%%BLUE%Lowers Map Rarity to Common}%WHITE%											// Orb of Destruction	(Magic/Rare -> Common)
 ItemDisplay[rera]:	%NAME%{%GOLD%Orb %WHITE%+ %YELLOW%Map %WHITE%+ P%GRAY%.%WHITE%Gem + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE%+%NL%%BLUE%Rerolls Rare Map Affixes}%WHITE%		// Horadrim Orb		(Reroll Rare)
-ItemDisplay[upmp]:	%NAME%{Combines three maps to create one of a higher tier}%WHITE%													// Cartographer's Orb
-ItemDisplay[scrb]:	%BORDER-53%    %NAME%    {Transforms a %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%map into a %DARK_GREEN%(%TAN%Dungeon%DARK_GREEN%)}%WHITE%				// Horadrim Scarab
+ItemDisplay[upmp]:	%NAME%{Combines three maps to create one of a higher tier}%WHITE%													// Cartographer's Orb	(3 T1 Maps -> 1 T2 Map or 3 T2 Maps -> 1 T3 Map)
+ItemDisplay[scrb]:	%BORDER-53%%TIER-9%    %NAME%    {Transforms a %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%map into a %DARK_GREEN%(%TAN%Dungeon%DARK_GREEN%)}%WHITE%			// Horadrim Scarab	(Map -> Dungeon, notifications)
 // Maps  (includes notifications)
 ItemDisplay[MAG  (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %BLUE%%MAP%%NAME% {%NAME%}%CONTINUE%	// maps - magic (adds blue minimap border)
 ItemDisplay[RARE (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %YELLOW%%MAP%%NAME% {%NAME%}%CONTINUE%	// maps - rare (adds yellow minimap border)
-ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19)]:	%MAP-77%%DOT-53%%NAME%%DARK_GREEN%(%GOLD%T1%DARK_GREEN%){%NAME%}%CONTINUE%		// maps - T1 (Ruins of Viz-Jun, Horazon's Memory, Bastion Keep, Royal Crypts, Sanatorium)
-ItemDisplay[(t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29)]:	%MAP-77%%DOT-53%%NAME%%DARK_GREEN%(%GOLD%T2%DARK_GREEN%){%NAME%}%CONTINUE%		// maps - T2 (Phlegethon, Torajan Jungle, Arreat Battlefield, Tomb of Zultan Kulle, Sewers of Harrogath, Shadows of Westmarch)
-ItemDisplay[(t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39)]:	%MAP-77%%DOT-53%%NAME%%DARK_GREEN%(%GOLD%T3%DARK_GREEN%){%NAME%}%CONTINUE%		// maps - T3 (River of Blood, Throne of Insanity, Lost Temple, Ancestral Trial, Blood Moon, Fall of Caldeum, Pandemonium Citadel, Canyon of Sescheron, Kehjistan Marketplace)
-ItemDisplay[(t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]:	%MAP-77%%DOT-53%%PX-50%%NAME%%DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%){%NAME%}%CONTINUE%	// dungeons  (Cathedral of Light, Plains of Torment, Sanctuary of Sin)
+ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19)]:	%MAP-77%%DOT-53%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%T1%DARK_GREEN%){%NAME%}%CONTINUE%		// maps - T1 (Ruins of Viz-Jun, Horazon's Memory, Bastion Keep, Royal Crypts, Sanatorium)
+ItemDisplay[(t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29)]:	%MAP-77%%DOT-53%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%T2%DARK_GREEN%){%NAME%}%CONTINUE%		// maps - T2 (Phlegethon, Torajan Jungle, Arreat Battlefield, Tomb of Zultan Kulle, Sewers of Harrogath, Shadows of Westmarch)
+ItemDisplay[(t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39)]:	%MAP-77%%DOT-53%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%T3%DARK_GREEN%){%NAME%}%CONTINUE%		// maps - T3 (River of Blood, Throne of Insanity, Lost Temple, Ancestral Trial, Blood Moon, Fall of Caldeum, Pandemonium Citadel, Canyon of Sescheron, Kehjistan Marketplace)
+ItemDisplay[(t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]:	%MAP-77%%DOT-53%%PX-50%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%){%NAME%}%CONTINUE%	// dungeons  (Cathedral of Light, Plains of Torment, Sanctuary of Sin)
 ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19) !(RARE ID)]:	 %NAME% %WHITE%		// maps - T1 highlighting
 ItemDisplay[(t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29) !(RARE ID)]:	  %NAME%  %WHITE%	// maps - T2 highlighting
 ItemDisplay[(t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39) !(RARE ID)]:	   %NAME%   %WHITE%	// maps - T3 highlighting
@@ -228,33 +234,33 @@ ItemDisplay[(t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49) !(RARE
 //ItemDisplay[(t61 OR t62)]:	%NAME%{%NAME%}%WHITE%		// Desert/Moor Duel Arenas (listed here for reference)
 
 // Alternative Rules for "REFERENCE INFO" Filter Level: Endgame Quest Items and PD2 Items  (includes notifications)
-ItemDisplay[tes FILTLVL=3]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Essences %BLUE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Andariel & Duriel)}%WHITE%							// Twisted Essence of Suffering
-ItemDisplay[ceh FILTLVL=3]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Essences %BLUE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Mephisto)}%WHITE%									// Charged Essence of Hatred
-ItemDisplay[bet FILTLVL=3]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Essences %BLUE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Diablo)}%WHITE%									// Burning Essence of Terror
-ItemDisplay[fed FILTLVL=3]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Essences %BLUE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Baal)}%WHITE%									// Festering Essence of Destruction
-ItemDisplay[pk1 FILTLVL=3]:	%DOT-60%  %NAME%  {to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %BLUE%from the other Keybearers to open a portal%NL%%GRAY%(Countess / Blood Raven)}%WHITE%			// Key of Terror
-ItemDisplay[pk2 FILTLVL=3]:	%DOT-60%  %NAME%  {to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %BLUE%from the other Keybearers to open a portal%NL%%GRAY%(Summoner / Bloodwitch)}%WHITE%			// Key of Hatred
-ItemDisplay[pk3 FILTLVL=3]:	%DOT-60%  %NAME%  {to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %BLUE%from the other Keybearers to open a portal%NL%%GRAY%(Nihlathak / Izual)}%WHITE%			// Key of Destruction
-ItemDisplay[dhn FILTLVL=3]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Mephisto's Brain %BLUE%and %ORANGE%Baal's Eye %BLUE%to access Uber Tristram%NL%%GRAY%(Matron's Den)}%WHITE%								// Diablo's Horn	(Lilith)
-ItemDisplay[bey FILTLVL=3]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Mephisto's Brain %BLUE%and %ORANGE%Diablo's Horn %BLUE%to access Uber Tristram%NL%%GRAY%(Forgotten Sands)}%WHITE%							// Baal's Eye		(Uber Duriel)
-ItemDisplay[mbr FILTLVL=3]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Diablo's Horn %BLUE%and %ORANGE%Baal's Eye %BLUE%to access Uber Tristram%NL%%GRAY%(Furnace of Pain)}%WHITE%								// Mephisto's Brain	(Uber Izual)
-ItemDisplay[wss FILTLVL=3]:	%DOT-50%  %NAME%  {Can also add corruption modifiers to maps%NL%Corrupts equipment, either adding a modifier or turning it into a random rare}%WHITE%								// Worldstone Shard
-ItemDisplay[lbox FILTLVL=3]:	%BORDER-50%        %NAME%        {Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%													// Larzuk's Puzzlebox
-ItemDisplay[lpp FILTLVL=3]:	%BORDER-50%     %NAME%     {Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%													// Larzuk's Puzzlepiece
-ItemDisplay[uba FILTLVL=3]:	%MAP-60%  %NAME%  {%BLUE%Sends you and nearby allies to fight the Uber Ancients on Arreat Summit}%WHITE%													// Relic of the Ancients (Uber Ancients)
-ItemDisplay[ubtm FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%The Fall of Tristram%NL%%BLUE%Sends you and nearby allies to fight the Uber Prime Evils in Tristram}%WHITE%										// Pandemonium Talisman (Uber Tristram)
-ItemDisplay[dcma FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%Diablo Walks the Earth%NL%%BLUE%Sends you to and nearby allies to fight Diablo-Clone in the Pandemonium Fortress}%WHITE%								// Vision of Terror	(DClone)
-ItemDisplay[rtma FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%Rathma Awaits You%NL%%BLUE%Sends you and nearby allies to fight Rathma and his minions in the Necropolis}%WHITE%									// Voidstone		(Rathma)
-ItemDisplay[dcso FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%BLUE%Combine with %ORANGE%Black Soulstone %BLUE%and %ORANGE%Pure Demonic Essence %BLUE%to access Diablo-Clone%NL%%GRAY%(Diablo / Baal)}%WHITE%	// Prime Evil Soul	(DClone ingredient)
-ItemDisplay[dcho FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%BLUE%Combine with %ORANGE%Prime Evil Soul %BLUE%and %ORANGE%Pure Demonic Essence %BLUE%to access Diablo-Clone%NL%%GRAY%(Uber Tristram)}%WHITE%	// Black Soulstone	(DClone ingredient)
-ItemDisplay[dcbl FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%BLUE%Combine with %ORANGE%Black Soulstone %BLUE%and %ORANGE%Prime Evil Soul %BLUE%to access Diablo-Clone%NL%%GRAY%(Map Bosses)}%WHITE%		// Pure Demonic Essence	(DClone ingredient)
-ItemDisplay[rtmv FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%BLUE%Combine with %ORANGE%Trang-Oul's Jawbone %BLUE%and %GOLD%Hellfire Torch %BLUE%to access Rathma%NL%%GRAY%(Shadow of Mendeln)}%WHITE%			// Splinter of the Void (Rathma ingredient)
-ItemDisplay[rtmo FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%The Void Calls to You%NL%%BLUE%Combine with %ORANGE%Splinter of the Void %BLUE%and %GOLD%Hellfire Torch %BLUE%to access Rathma%NL%%GRAY%(Undead Enemies)}%WHITE%			// Trang-Oul's Jawbone	(Rathma ingredient)
-ItemDisplay[rtmf FILTLVL=3]:	%MAP-60%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone%NL%%WHITE%Jawbone Recipe: 2 %ORANGE%Ancient Bone Fragments %WHITE%+ %GOLD%Hellfire Torch}%WHITE%							// Ancient Bone Fragments
-ItemDisplay[cwss FILTLVL=3]:	%MAP-50%    %NAME%    {Corrupts %GOLD%Annihilus%BLUE%, either adding a modifier or turning it into a random magic small charm}%WHITE%																	// Tainted Worldstone Shard
-ItemDisplay[ubaa FILTLVL=3]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%maps to access Uber Ancients}%WHITE%				// Sigil of Madawc	 (Uber Ancients ingredient)
-ItemDisplay[ubab FILTLVL=3]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%maps to access Uber Ancients}%WHITE%				// Sigil of Talic	 (Uber Ancients ingredient)
-ItemDisplay[ubac FILTLVL=3]:	%DOT-60%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %BLUE%maps to access Uber Ancients}%WHITE%				// Sigil of Korlic	 (Uber Ancients ingredient)
+ItemDisplay[tes FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Essences %BLUE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Andariel & Duriel)}%WHITE%							// Twisted Essence of Suffering
+ItemDisplay[ceh FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Essences %BLUE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Mephisto)}%WHITE%									// Charged Essence of Hatred
+ItemDisplay[bet FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Essences %BLUE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Diablo)}%WHITE%									// Burning Essence of Terror
+ItemDisplay[fed FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Essences %BLUE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Baal)}%WHITE%									// Festering Essence of Destruction
+ItemDisplay[pk1 FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %BLUE%from the other Keybearers to open a portal%NL%%GRAY%(Countess / Blood Raven)}%WHITE%			// Key of Terror
+ItemDisplay[pk2 FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %BLUE%from the other Keybearers to open a portal%NL%%GRAY%(Summoner / Bloodwitch)}%WHITE%			// Key of Hatred
+ItemDisplay[pk3 FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %BLUE%from the other Keybearers to open a portal%NL%%GRAY%(Nihlathak / Izual)}%WHITE%			// Key of Destruction
+ItemDisplay[dhn FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Mephisto's Brain %BLUE%and %ORANGE%Baal's Eye %BLUE%to access Uber Tristram%NL%%GRAY%(Matron's Den)}%WHITE%								// Diablo's Horn	(Lilith)
+ItemDisplay[bey FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Mephisto's Brain %BLUE%and %ORANGE%Diablo's Horn %BLUE%to access Uber Tristram%NL%%GRAY%(Forgotten Sands)}%WHITE%							// Baal's Eye		(Uber Duriel)
+ItemDisplay[mbr FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Diablo's Horn %BLUE%and %ORANGE%Baal's Eye %BLUE%to access Uber Tristram%NL%%GRAY%(Furnace of Pain)}%WHITE%								// Mephisto's Brain	(Uber Izual)
+ItemDisplay[wss FILTLVL=3]:	%DOT-50%%TIER-9%  %NAME%  {Can also add corruption modifiers to maps%NL%Corrupts equipment, either adding a modifier or turning it into a random rare}%WHITE%								// Worldstone Shard
+ItemDisplay[lbox FILTLVL=3]:	%BORDER-50%%TIER-9%        %NAME%        {Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%													// Larzuk's Puzzlebox
+ItemDisplay[lpp FILTLVL=3]:	%BORDER-50%%TIER-9%     %NAME%     {Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%													// Larzuk's Puzzlepiece
+ItemDisplay[uba FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%BLUE%Sends you and nearby allies to fight the Uber Ancients on Arreat Summit}%WHITE%													// Relic of the Ancients (Uber Ancients)
+ItemDisplay[ubtm FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Fall of Tristram%NL%%BLUE%Sends you and nearby allies to fight the Uber Prime Evils in Tristram}%WHITE%										// Pandemonium Talisman (Uber Tristram)
+ItemDisplay[dcma FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Diablo Walks the Earth%NL%%BLUE%Sends you to and nearby allies to fight Diablo-Clone in the Pandemonium Fortress}%WHITE%								// Vision of Terror	(DClone)
+ItemDisplay[rtma FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Rathma Awaits You%NL%%BLUE%Sends you and nearby allies to fight Rathma and his minions in the Necropolis}%WHITE%									// Voidstone		(Rathma)
+ItemDisplay[dcso FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%BLUE%Combine with %ORANGE%Black Soulstone %BLUE%and %ORANGE%Pure Demonic Essence %BLUE%to access Diablo-Clone%NL%%GRAY%(Diablo / Baal)}%WHITE%	// Prime Evil Soul	(DClone ingredient)
+ItemDisplay[dcho FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%BLUE%Combine with %ORANGE%Prime Evil Soul %BLUE%and %ORANGE%Pure Demonic Essence %BLUE%to access Diablo-Clone%NL%%GRAY%(Uber Tristram)}%WHITE%	// Black Soulstone	(DClone ingredient)
+ItemDisplay[dcbl FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%BLUE%Combine with %ORANGE%Black Soulstone %BLUE%and %ORANGE%Prime Evil Soul %BLUE%to access Diablo-Clone%NL%%GRAY%(Map Bosses)}%WHITE%		// Pure Demonic Essence	(DClone ingredient)
+ItemDisplay[rtmv FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%BLUE%Combine with %ORANGE%Trang-Oul's Jawbone %BLUE%and %GOLD%Hellfire Torch %BLUE%to access Rathma%NL%%GRAY%(Shadow of Mendeln)}%WHITE%			// Splinter of the Void (Rathma ingredient)
+ItemDisplay[rtmo FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%BLUE%Combine with %ORANGE%Splinter of the Void %BLUE%and %GOLD%Hellfire Torch %BLUE%to access Rathma%NL%%GRAY%(Undead Enemies)}%WHITE%			// Trang-Oul's Jawbone	(Rathma ingredient)
+ItemDisplay[rtmf FILTLVL=3]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone%NL%%WHITE%Jawbone Recipe: 2 %ORANGE%Ancient Bone Fragments %WHITE%+ %GOLD%Hellfire Torch}%WHITE%							// Ancient Bone Fragments
+ItemDisplay[cwss FILTLVL=3]:	%MAP-50%%TIER-9%    %NAME%    {Corrupts %GOLD%Annihilus%BLUE%, either adding a modifier or turning it into a random magic small charm}%WHITE%																	// Tainted Worldstone Shard
+ItemDisplay[ubaa FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%maps to access Uber Ancients}%WHITE%				// Sigil of Madawc	 (Uber Ancients ingredient)
+ItemDisplay[ubab FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%maps to access Uber Ancients}%WHITE%				// Sigil of Talic	 (Uber Ancients ingredient)
+ItemDisplay[ubac FILTLVL=3]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %BLUE%maps to access Uber Ancients}%WHITE%				// Sigil of Korlic	 (Uber Ancients ingredient)
 
 // Miscellaneous
 //ItemDisplay[tbk]:	%NAME%%WHITE%								// Tome of Town Portal	(listed here for reference)
@@ -263,7 +269,7 @@ ItemDisplay[tsc]:	%BLUE%­ %WHITE%Portal{%WHITE%Scroll of Town Portal}%CONTINUE%	
 ItemDisplay[isc]:	%RED%­ %WHITE%Identify{%WHITE%Scroll of Identify}%CONTINUE%		// Scroll of Identify
 ItemDisplay[key]:	%GRAY%%NAME%%CONTINUE%							// Key
 ItemDisplay[ear]:	%GRAY%%NAME%%WHITE%							// Player Ear
-ItemDisplay[std]:	%DOT-53% %NAME% {Adds Heroic bonuses to Maps & Dungeons}%WHITE%		// Standard of Heroes (includes notifications)
+ItemDisplay[std]:	%DOT-53%%TIER-9% %NAME% {Adds Heroic bonuses to Maps & Dungeons}%WHITE%	// Standard of Heroes (includes notifications)
 
 // Hidden: Keys, Scrolls - level 20
 ItemDisplay[FILTLVL>1 key (ASSASSIN OR (CLVL>19 !MAPID=39)) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// except in town or in Cow Levels for non-assassins
@@ -294,7 +300,7 @@ ItemDisplay[GEMLEVEL=1]: *%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
 ItemDisplay[GEMLEVEL=2]: +%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
 ItemDisplay[GEMLEVEL=3]: ¤%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
 ItemDisplay[(GEMLEVEL=4 OR gzv OR glw OR glg OR glr OR glb OR gly OR skl)]: o%ORANGE%]  %WHITE%%NAME%{%NAME%}%CONTINUE%				// flawless
-ItemDisplay[(GEMLEVEL=5 OR gpv OR gpw OR gpg OR gpr OR gpb OR gpy OR skz)]: @%ORANGE%]  %WHITE%%NAME%%MAP-60%%DOT-20%{%NAME%}%CONTINUE%		// perfect (notifications)
+ItemDisplay[(GEMLEVEL=5 OR gpv OR gpw OR gpg OR gpr OR gpb OR gpy OR skz)]: @%ORANGE%]  %WHITE%%NAME%%MAP-60%%DOT-20%%TIER-9%{%NAME%}%CONTINUE%	// perfect (notifications)
 ItemDisplay[GEMTYPE=1]: %ORANGE%[%PURPLE%%NAME%{%NAME%}%CONTINUE%
 ItemDisplay[GEMTYPE=2]: %ORANGE%[%WHITE%%NAME%{%NAME%}%CONTINUE%
 ItemDisplay[GEMTYPE=3]: %ORANGE%[%GREEN%%NAME%{%NAME%}%CONTINUE%
@@ -310,8 +316,8 @@ ItemDisplay[FILTLVL>1 ((GEMLEVEL=1 CLVL>29) OR (GEMLEVEL=2 CLVL>39) OR (GEMLEVEL
 // +-------+
 //-¦ Runes ¦-------------------------------------------------------------------------------------------------------------
 // +-------+
-// Modification									(rune number appended above, before quantity)
-ItemDisplay[RUNE>0 RUNE<10 (CLVL<80 OR DIFF<2)]: %PX-60%%NAME%%CONTINUE%	// notifications for lowest runes when in Normal/Nightmare or below level 80
+// Modification										(rune number appended above, before quantity)
+ItemDisplay[RUNE>0 RUNE<10 (CLVL<80 OR DIFF<2)]: %PX-60%%TIER-9%%NAME%%CONTINUE%	// notifications for lowest runes when in Normal/Nightmare or below level 80
 
 // Descriptions for Stacked Runes
 ItemDisplay[r01s]: %NAME%{%WHITE%Others: +15 Defense, +1 to Light Radius%NL%Weapons: +50 to Attack Rating, +1 to Light Radius%NL%}%CONTINUE%
@@ -350,49 +356,49 @@ ItemDisplay[r33s]: %NAME%{%WHITE% Indestructible %NL%}%CONTINUE%
 
 // Highlighting: Individual Rules  (rules for runes #1-23 are disabled and covered collectively below, all enabled rules add notifications)
 //    Lowest Runes
-//ItemDisplay[RUNE=1]:	%PX-60%%NAME%{%NAME%}						// El
-//ItemDisplay[RUNE=2]:	%PX-60%%NAME%{%NAME%}						// Eld
-//ItemDisplay[RUNE=3]:	%PX-60%%NAME%{%NAME%}						// Tir
-//ItemDisplay[RUNE=4]:	%PX-60%%NAME%{%NAME%}						// Nef
-//ItemDisplay[RUNE=5]:	%PX-60%%NAME%{%NAME%}						// Eth
-//ItemDisplay[RUNE=6]:	%PX-60%%NAME%{%NAME%}						// Ith
-//ItemDisplay[RUNE=7]:	%PX-60%%NAME%{%NAME%}						// Tal
-//ItemDisplay[RUNE=8]:	%PX-60%%NAME%{%NAME%}						// Ral
-//ItemDisplay[RUNE=9]:	%PX-60%%NAME%{%NAME%}						// Ort
-//ItemDisplay[RUNE=10]:	%PX-60%%NAME%{%NAME%}						// Thul
-//ItemDisplay[RUNE=11]:	%PX-60%%NAME%{%NAME%}						// Amn
-//ItemDisplay[RUNE=12]:	%PX-60%%NAME%{%NAME%}						// Sol
-//ItemDisplay[RUNE=13]:	%PX-60%%NAME%{%NAME%}						// Shael
-//ItemDisplay[RUNE=14]:	%PX-60%%NAME%{%NAME%}						// Dol
+//ItemDisplay[RUNE=1]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// El
+//ItemDisplay[RUNE=2]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Eld
+//ItemDisplay[RUNE=3]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Tir
+//ItemDisplay[RUNE=4]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Nef
+//ItemDisplay[RUNE=5]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Eth
+//ItemDisplay[RUNE=6]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Ith
+//ItemDisplay[RUNE=7]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Tal
+//ItemDisplay[RUNE=8]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Ral
+//ItemDisplay[RUNE=9]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Ort
+//ItemDisplay[RUNE=10]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Thul
+//ItemDisplay[RUNE=11]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Amn
+//ItemDisplay[RUNE=12]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Sol
+//ItemDisplay[RUNE=13]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Shael
+//ItemDisplay[RUNE=14]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Dol
 //    Upper Low Runes
-//ItemDisplay[RUNE=15]:	%DOT-60% %NAME% {%NAME%}					// Hel
-//ItemDisplay[RUNE=16]:	%DOT-60% %NAME% {%NAME%}					// Io
-//ItemDisplay[RUNE=17]:	%DOT-60% %NAME% {%NAME%}					// Lum
-//ItemDisplay[RUNE=18]:	%DOT-60% %NAME% {%NAME%}					// Ko
-//ItemDisplay[RUNE=19]:	%DOT-60% %NAME% {%NAME%}					// Fal
+//ItemDisplay[RUNE=15]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Hel
+//ItemDisplay[RUNE=16]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Io
+//ItemDisplay[RUNE=17]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Lum
+//ItemDisplay[RUNE=18]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Ko
+//ItemDisplay[RUNE=19]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Fal
 //    Mid Runes
-//ItemDisplay[RUNE=20]:	%MAP-60%  %NAME%  {%NAME%}					// Lem
-//ItemDisplay[RUNE=21]:	%MAP-60%  %NAME%  {%NAME%}					// Pul
-//ItemDisplay[RUNE=22]:	%MAP-60%   %NAME%   {%NAME%}					// Um
-//ItemDisplay[RUNE=23]:	%MAP-60%   %NAME%   {%NAME%}					// Mal
-ItemDisplay[RUNE=24]:	%MAP-60%    %NAME%    {%NAME%}					// Ist
-ItemDisplay[RUNE=25]:	%MAP-60%     %NAME%     {%NAME%}				// Gul
+//ItemDisplay[RUNE=20]:	%MAP-60%%TIER-9%  %NAME%  {%NAME%}					// Lem
+//ItemDisplay[RUNE=21]:	%MAP-60%%TIER-9%  %NAME%  {%NAME%}					// Pul
+//ItemDisplay[RUNE=22]:	%MAP-60%%TIER-9%   %NAME%   {%NAME%}					// Um
+//ItemDisplay[RUNE=23]:	%MAP-60%%TIER-9%   %NAME%   {%NAME%}					// Mal
+ItemDisplay[RUNE=24]:	%MAP-60%%TIER-9%    %NAME%    {%NAME%}					// Ist
+ItemDisplay[RUNE=25]:	%MAP-60%%TIER-9%     %NAME%     {%NAME%}				// Gul
 //    High Runes
-ItemDisplay[RUNE=26]:	%BORDER-60%       %NAME%       {%NAME%}				// Vex
-ItemDisplay[RUNE=32]:	%BORDER-60%        %NAME%        {%NAME%}			// Cham
-ItemDisplay[RUNE=27]:	%BORDER-60%         %NAME%         {%NAME%}			// Ohm
-ItemDisplay[RUNE=33]:	%BORDER-60%          %NAME%          {%NAME%}			// Zod
-ItemDisplay[RUNE=28]:	%BORDER-60%           %NAME%           {%NAME%}			// Lo
-ItemDisplay[RUNE=29]:	%BORDER-60%             %NAME%             {%NAME%}		// Sur
-ItemDisplay[RUNE=31]:	%BORDER-60%              %NAME%              {%NAME%}		// Jah
-ItemDisplay[RUNE=30]:	%BORDER-60%                %NAME%                {%NAME%}	// Ber
+ItemDisplay[RUNE=26]:	%BORDER-60%%TIER-9%       %NAME%       {%NAME%}				// Vex
+ItemDisplay[RUNE=32]:	%BORDER-60%%TIER-9%        %NAME%        {%NAME%}			// Cham
+ItemDisplay[RUNE=27]:	%BORDER-60%%TIER-9%         %NAME%         {%NAME%}			// Ohm
+ItemDisplay[RUNE=33]:	%BORDER-60%%TIER-9%          %NAME%          {%NAME%}			// Zod
+ItemDisplay[RUNE=28]:	%BORDER-60%%TIER-9%           %NAME%           {%NAME%}			// Lo
+ItemDisplay[RUNE=29]:	%BORDER-60%%TIER-9%             %NAME%             {%NAME%}		// Sur
+ItemDisplay[RUNE=31]:	%BORDER-60%%TIER-9%              %NAME%              {%NAME%}		// Jah
+ItemDisplay[RUNE=30]:	%BORDER-60%%TIER-9%                %NAME%                {%NAME%}	// Ber
 
 // Highlighting: Collective Rules  (notifications for runes #10-23, higher runes are covered individually above)
 ItemDisplay[RUNE>0 RUNE<10]:		%NAME%{%NAME%}
-ItemDisplay[RUNE>9 RUNE<15]:		%PX-60%%NAME%{%NAME%}
-ItemDisplay[RUNE>14 RUNE<20]:		%DOT-60% %NAME% {%NAME%}
-ItemDisplay[(RUNE=20 OR RUNE=21)]:	%MAP-60%  %NAME%  {%NAME%}
-ItemDisplay[(RUNE=22 OR RUNE=23)]:	%MAP-60%   %NAME%   {%NAME%}
+ItemDisplay[RUNE>9 RUNE<15]:		%PX-60%%TIER-9%%NAME%{%NAME%}
+ItemDisplay[RUNE>14 RUNE<20]:		%DOT-60%%TIER-9% %NAME% {%NAME%}
+ItemDisplay[(RUNE=20 OR RUNE=21)]:	%MAP-60%%TIER-9%  %NAME%  {%NAME%}
+ItemDisplay[(RUNE=22 OR RUNE=23)]:	%MAP-60%%TIER-9%   %NAME%   {%NAME%}
 
 
 // +-----------------+
@@ -406,14 +412,14 @@ ItemDisplay[(jew OR jewf)]:	{%NAME%}%ORANGE%{%DARK_GREEN%O%ORANGE%} %NAME%%CONTI
 ItemDisplay[(cm1 OR cm2 OR cm3) MAG]: %PURPLE%%NAME%%CONTINUE%					// sets charm color
 
 // Highlighting
-ItemDisplay[MAG ID ((cm1 (LIFE>19 OR (MANA>16 FHR>0) OR RES>0 OR MFIND>6 OR FRES>10 OR CRES>10 OR LRES>10 OR PRES>10 OR (MAXDMG>1 AR>0) OR STAT58>205)) OR (cm2 ((MANA>33 FHR>0) OR STAT329>2 OR STAT330>2 OR STAT331>2 OR STAT332>2 OR RES>5 OR (MAXDMG>3 AR>0))) OR (cm3 ((MANA>51 FHR>0) OR TABSK0>0 OR TABSK1>0 OR TABSK2>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK32>0 OR TABSK33>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0 OR RES>8 OR (MAXDMG>6 AR>0))) OR (cm1 LVLREQ<31 LIFE>13 (MANA>4 OR FRES>4 OR CRES>4 OR LRES>4 OR PRES>4)) OR (cm2 LVLREQ<31 LIFE>18 (STAT329>1 OR STAT330>1 OR STAT331>1 OR STAT332>1 OR MANA>20 OR FRES>12 OR CRES>12 OR LRES>12 OR PRES>12)) OR (cm2 LVLREQ<10 LIFE>14 (MANA>4 OR FRES>4 OR CRES>4 OR LRES>4 OR PRES>4)) OR ((PREFIX=1461 OR PREFIX=1473 OR PREFIX=1485) (SUFFIX=705 OR SUFFIX=717 OR SUFFIX=729)) OR ((PREFIX=1496 OR PREFIX=1497) (SUFFIX=692 OR SUFFIX=693)))]:	%DOT-9B%   %NAME%   {%NAME%}%WHITE%		// valuable charms (also adds notifications)
-ItemDisplay[jew MAG ID (ED>29 OR MAXDMG>28 OR (IAS>0 (ED>9 OR STAT121>34 OR STAT122>44 OR MAXDMG>4 OR MINDMG>4 OR RES>0 OR FRES>15 OR CRES>15 OR LRES>15 OR PRES>15 OR MAEK>2 OR STAT86>2 OR AR>89)) OR ((RES>9 OR MAXDMG>14) (STR>8 OR DEX>8 OR STAT91=-15 OR FHR>0)) OR (LVLREQ<31 ((ED>19 (MINDMG>0 OR MAXDMG>0 OR STAT91=-15 OR STR>0 OR DEX>0 OR LIFE>4)) OR (MAXDMG>19 OR (MINDMG>4 MAXDMG>15)))))]:		%DOT-97%   %NAME%   {%NAME%}%WHITE%		// valuable jewels (also adds notifications)
+ItemDisplay[MAG ID ((cm1 (LIFE>19 OR (MANA>16 FHR>0) OR RES>0 OR MFIND>6 OR FRES>10 OR CRES>10 OR LRES>10 OR PRES>10 OR (MAXDMG>1 AR>0) OR STAT58>205)) OR (cm2 ((MANA>33 FHR>0) OR STAT329>2 OR STAT330>2 OR STAT331>2 OR STAT332>2 OR RES>5 OR (MAXDMG>3 AR>0))) OR (cm3 ((MANA>51 FHR>0) OR TABSK0>0 OR TABSK1>0 OR TABSK2>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK32>0 OR TABSK33>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0 OR RES>8 OR (MAXDMG>6 AR>0))) OR (cm1 LVLREQ<31 LIFE>13 (MANA>4 OR FRES>4 OR CRES>4 OR LRES>4 OR PRES>4)) OR (cm2 LVLREQ<31 LIFE>18 (STAT329>1 OR STAT330>1 OR STAT331>1 OR STAT332>1 OR MANA>20 OR FRES>12 OR CRES>12 OR LRES>12 OR PRES>12)) OR (cm2 LVLREQ<10 LIFE>14 (MANA>4 OR FRES>4 OR CRES>4 OR LRES>4 OR PRES>4)) OR ((PREFIX=1461 OR PREFIX=1473 OR PREFIX=1485) (SUFFIX=705 OR SUFFIX=717 OR SUFFIX=729)) OR ((PREFIX=1496 OR PREFIX=1497) (SUFFIX=692 OR SUFFIX=693)))]:	%DOT-9B%%TIER-9%   %NAME%   {%NAME%}%WHITE%		// valuable charms (also adds notifications)		...TODO: Add more charms
+ItemDisplay[jew MAG ID (ED>29 OR MAXDMG>28 OR (IAS>0 (ED>9 OR STAT121>34 OR STAT122>44 OR MAXDMG>4 OR MINDMG>4 OR RES>0 OR FRES>15 OR CRES>15 OR LRES>15 OR PRES>15 OR MAEK>2 OR STAT86>2 OR AR>89)) OR ((RES>9 OR MAXDMG>14) (STR>8 OR DEX>8 OR STAT91=-15 OR FHR>0)) OR (LVLREQ<31 ((ED>19 (MINDMG>0 OR MAXDMG>0 OR STAT91=-15 OR STR>0 OR DEX>0 OR LIFE>4)) OR (MAXDMG>19 OR (MINDMG>4 MAXDMG>15)))))]:		%DOT-97%%TIER-9%   %NAME%   {%NAME%}%WHITE%		// valuable jewels (also adds notifications)		...TODO: Add more jewels
 ItemDisplay[jew RARE !ID]:								%DOT-6D%  %NAME%  {%NAME%}%WHITE%			// unid rare jewels (also adds notifications)
 ItemDisplay[jew RARE ILVL>64]:								%YELLOW%%NAME%{%WHITE%Item Level: %ILVL%}%CONTINUE%	// adds ilvl description to rare jewels if high enough to consider rerolling
 ItemDisplay[MAG ID ((cm1 (ALVL=47 OR (ALVL>56 ALVL<63) OR ALVL>90)) OR (cm3 ALVL>90))]:	%NAME%{%WHITE%Item Level: %TAN%%ILVL%}%WHITE%		// charms (best ilvl for rerolling, colored tan)
 ItemDisplay[MAG ID ((cm1 ALVL>46) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]:			%NAME%{%WHITE%Item Level: %ILVL%}%WHITE%		// charms (okay ilvl for rerolling)
-//ItemDisplay[MAG !ID jew]: %DOT-97%%NAME%{%NAME%}%WHITE%											// enabling this rule will notify you of unidentified magic jewels 
-//ItemDisplay[MAG !ID ((cm1 ALVL>46) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]: %DOT-9B%%NAME%{%NAME%}%WHITE%						// enabling this rule will notify you of unidentified magic charms that are capable of getting okay affixes
+//ItemDisplay[MAG !ID jew]: %DOT-97%%TIER-9%%NAME%{%NAME%}%WHITE%										// enabling this rule will notify you of unidentified magic jewels 
+//ItemDisplay[MAG !ID ((cm1 ALVL>46) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]: %DOT-9B%%TIER-9%%NAME%{%NAME%}%WHITE%					// enabling this rule will notify you of unidentified magic charms that are capable of getting okay affixes
 
 
 // +-------------------------+
@@ -427,16 +433,16 @@ ItemDisplay[FILTLVL>1 MAG (aqv OR cqv) !ID CLVL>69 !AMAZON]:				// level 70 - hi
 ItemDisplay[FILTLVL>1 MAG (aqv OR cqv) !ID CLVL>89]:					// level 90 - hides unid magic quivers for all characters
 
 // Highlighting for Quivers
-ItemDisplay[RARE (aqv OR cqv) !ID AMAZON]:	%DOT-6D% %NAME% %WHITE%		// highlight unid rare quivers for amazons (with notifications)
+ItemDisplay[RARE (aqv OR cqv) !ID AMAZON]:	%DOT-6D%%TIER-9% %NAME% %WHITE%		// highlight unid rare quivers for amazons (with notifications)
 
 // Amulets/Rings
 ItemDisplay[rin ID !EQUIPPED ((MAG CRAFTALVL>76 ILVL>61) OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) CRAFTALVL>76))]:					%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%Affix Level if Crafted: %TAN%%CRAFTALVL%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%15%TAN%), %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%17%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%WHITE%	// crafting recipes for rings - can get all affixes, alvl colored tan
 ItemDisplay[rin ID !EQUIPPED ((MAG CRAFTALVL<77 ILVL>61) OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) CRAFTALVL<77))]:					%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%Affix Level if Crafted: %CRAFTALVL%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%15%TAN%), %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%17%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%WHITE%	// crafting recipes for rings
 ItemDisplay[amu ID !EQUIPPED ((MAG CRAFTALVL>89 ILVL>81 !(LVLREQ>44 PRICE>9000)) OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) CRAFTALVL>89))]:		%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%Affix Level if Crafted: %TAN%%CRAFTALVL%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%14%TAN%), %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%18%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%WHITE%	// crafting recipes for amulets - can get all affixes, alvl colored tan	(not shown on high-price amulets that require level 45+ such as +3 skill amulets)
 ItemDisplay[amu ID !EQUIPPED ((MAG CRAFTALVL<90 ILVL>81 !(LVLREQ>44 PRICE>9000)) OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) CRAFTALVL<90))]:		%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%Affix Level if Crafted: %CRAFTALVL%%NL%%ORANGE%[%RED%@%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%PURPLE%@%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%BLUE%@%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GREEN%@%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GRAY%@%ORANGE%]%TAN%(%WHITE%14%TAN%), %ORANGE%[%YELLOW%@%ORANGE%]%TAN%(%WHITE%18%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%WHITE%		// crafting recipes for amulets 						(not shown on high-price amulets that require level 45+ such as +3 skill amulets)
-ItemDisplay[amu ID MAG]:		%NAME%{%DARK_GREEN%$%PRICE%}%WHITE%		// shows price for other amulets
-ItemDisplay[amu !ID MAG ILVL>89]:	 %NAME% %WHITE%					// highlight unid ilvl 90+ amulets
-ItemDisplay[(amu OR rin) !ID RARE]:	%DOT-6D%  %NAME%  %WHITE%			// highlight unid rare amulets/rings (also adds notifications)
+ItemDisplay[amu ID MAG]:				%NAME%{%DARK_GREEN%$%PRICE%}%WHITE%	// shows price for other amulets
+ItemDisplay[amu !ID MAG ILVL>89]:			 %NAME% %WHITE%				// highlight unid ilvl 90+ amulets
+ItemDisplay[(amu OR rin) !ID RARE]:	%DOT-6D%%TIER-9%  %NAME%  %WHITE%			// highlight unid rare amulets/rings (also adds notifications)
 
 
 // +-------------------+
@@ -728,24 +734,24 @@ ItemDisplay[UNI (7o7 OR 7pa OR 8s8)]: %NAME% %GRAY%[2-4]%CONTINUE%						// 2-4s	
 ItemDisplay[((UNI xul) OR (SET 7ws))]: %NAME% %GRAY%[3-4]%CONTINUE%						// 3-4s	Black Hades, Griswold's Redemption
 ItemDisplay[UNI (72a OR 6hx)]: %NAME% %GRAY%[3-5]%CONTINUE%							// 3-5s	Rune Master, Hellrack
 
-// Highlighting & Notifications - Uniques				...reference table of highlights: https://tinyurl.com/d2filterhighlighting																																...Note: the notifying keywords here also apply to identified versions since these rules don't include !ID (keywords like %MAP-53% bypass the normal priority system)
-ItemDisplay[UNI ((ETH (xh9 OR (7gm ILVL>84) OR usk OR 7gd)) OR (!ETH (jew OR cm1 OR cm2 OR (uar ILVL>86) OR (7gm ILVL>84) OR xh9 OR uap OR usk OR ci3 OR baa OR dra OR xea OR ulc OR 6lw OR 7gw OR obf OR obc OR 7cr OR uhm OR urn OR 7gd)) OR utb OR uhl OR 7bs OR 7qr OR uth OR ((amu OR ram) ILVL=99 (!ID OR SOCK>0)) OR (utc OR rbe) OR (uhn OR rar))]:	%BORDER-53%         %NAME%         %WHITE%	// Highlighting - 9 spaces
-ItemDisplay[UNI ((ETH (7gw OR obc OR obf OR 6ws OR xhn OR uar OR 7wa)) OR (!ETH ((amu ILVL>83 (!ID OR AR>0)) OR (rin ILVL>83) OR pa9 OR xtb OR zhb OR nea OR ulm OR bae OR 6ws OR uui OR uit)))]:	%BORDER-53%       %NAME%       %WHITE%																					// Highlighting - 7 spaces
-ItemDisplay[UNI ((ETH (ama OR (7wh ILVL>82) OR 7s8 OR xrs OR 7wc)) OR (!ETH ((amu ILVL>79 (!ID OR (ALLSK>1 RES>10))) OR (rin ILVL>65) OR cm3 OR (7wh ILVL>82) OR (uar ILVL<87) OR dre OR uld OR oba OR bac OR xvb OR 6sw OR xhn OR xhb OR ztb)))]:	%MAP-53%     %NAME%     %WHITE%																// Highlighting - 5 spaces
-ItemDisplay[UNI ((ETH (amf OR (uhm ILVL>76) OR oba OR uvb OR 7pa OR 9bs OR 7kr OR 9gm OR am5 OR 9ar OR utp)) OR (!ETH ((amu ILVL>72 (!ID OR TABSK26>0 OR STAT363>0 OR STAT250>0)) OR (rin ILVL>38) OR (7gm ILVL<85) OR tgl OR xmb OR zlb OR zvb OR umc OR 7s8 OR xrs OR upl OR xsh OR uvb OR 7wa OR ama OR xtp OR nee OR 7wc)))]:	%MAP-53%    %NAME%    %WHITE%						// Highlighting - 4 spaces
-ItemDisplay[UNI ((ETH (ci3 OR (7fl ILVL>85) OR (7fl ILVL<86) OR 7bk OR ulc OR bae OR 7ws OR xtg OR uvg OR uvc OR xpl OR xld OR utu OR 9bs OR 8ls OR 7gi OR uul OR ztb OR ob6 OR 9gw OR 7b8 OR 7ts OR 7p7 OR 7fb OR ame OR 6bs OR 7qs OR 7tw)) OR (!ETH ((amu ILVL>54 (!ID OR STAT360>0 OR STAT57>1000 OR STAT362>0 OR FRW>20 OR ED>30 OR ALLSK>0)) OR (7fl ILVL>85) OR xhm OR utu OR uhb OR 9ws OR 7ws OR amf OR 6l7 OR 8hx OR 7gi OR am7 OR 8lw OR nef OR xpl OR ci2 OR drb OR drd OR uts OR pac OR hgl OR xlg OR umb OR xth OR uvg OR 7kr OR 6hx OR 9gm OR ne6 OR ba6 OR am5 OR pa3 OR 9ar OR ob6 OR dr2 OR 9gw OR xar OR utg OR ned OR 6bs OR 7qs OR baf OR utp OR drf)))]:	%DOT-53%   %NAME%   %WHITE%		// Highlighting - 3 spaces
-ItemDisplay[UNI ((ETH (uap OR (uhm ILVL<77) OR (7gm ILVL<85) OR (7wh ILVL<83) OR 7sc OR baa OR dra OR uui OR dgr OR 9fc OR 9ws OR xlt OR 7m7 OR 6cs OR 7cs OR ulm OR dre OR xea OR pa9 OR nea OR xtb OR 7s7 OR 7gl OR 7bw OR xsh OR xmg OR lbt OR tbt OR xlb OR xhb OR umb OR zlb OR zhb OR umc OR xrn OR rng OR scl OR gth OR ltp OR xui OR xul OR upl OR 9ta OR 7ha OR 7ga OR 9tw OR 7lw OR 9cr OR 7gs OR 9ga OR 92a OR 7wb OR 9st OR 9wh OR stu OR pac OR drd OR 9bw OR ne6 OR ba6 OR pa3 OR dr2 OR 9wc OR amd OR wsc OR xtp OR 7bt OR 7o7 OR 7bl OR nef OR 7sp OR 7ls OR 9fb OR utg OR ulb OR ned OR 7qs OR baf OR drf)) OR (!ETH (7sc OR (7wh ILVL<83) OR (7fl ILVL<86) OR umg OR uvc OR 8lb OR 9fc OR 7pa OR pae OR dgr OR tbl OR mgl OR uh9 OR bad OR plt OR ltp OR xui OR xow OR xts OR upk OR uow OR uhg OR 92a OR 9ga OR 7m7 OR 9ls OR 7gs OR 7b7 OR 7ts OR 8cb OR amb OR 8rx OR 6cs OR 9tw OR 7lw OR aar OR xvg OR xmg OR lbt OR tbt OR xlb OR 7ga OR 7dg OR 8ls OR 7bw OR xtg OR xrn OR xlt OR xld OR xul OR 9ax OR 7bk OR uul OR 9bw OR 9wc OR wsc OR xhg OR 7b8 OR 7o7 OR 7p7 OR lbl OR rng OR 7sp OR 7ls OR 9fb OR 8mx OR 7fb OR ame OR ulb OR 7tw)))]:	%DOT-53%  %NAME%  %WHITE%	// Highlighting - 2 spaces
+// Highlighting & Notifications - Uniques				...reference table of highlights: https://tinyurl.com/d2filterhighlighting																																	...Note: the notifying keywords here also apply to identified versions since these rules don't include !ID (keywords like %MAP-53% bypass the normal priority system)
+ItemDisplay[UNI ((ETH (xh9 OR (7gm ILVL>84) OR usk OR 7gd)) OR (!ETH (jew OR cm1 OR cm2 OR (uar ILVL>86) OR (7gm ILVL>84) OR xh9 OR uap OR usk OR ci3 OR baa OR dra OR xea OR ulc OR 6lw OR 7gw OR obf OR obc OR 7cr OR uhm OR urn OR 7gd)) OR utb OR uhl OR 7bs OR 7qr OR uth OR ((amu OR ram) ILVL=99 (!ID OR SOCK>0)) OR (utc OR rbe) OR (uhn OR rar))]:	%BORDER-53%%TIER-9%         %NAME%         %WHITE%	// Highlighting - 9 spaces
+ItemDisplay[UNI ((ETH (7gw OR obc OR obf OR 6ws OR xhn OR uar OR 7wa)) OR (!ETH ((amu ILVL>83 (!ID OR AR>0)) OR (rin ILVL>83) OR pa9 OR xtb OR zhb OR nea OR ulm OR bae OR 6ws OR uui OR uit)))]:	%BORDER-53%%TIER-9%       %NAME%       %WHITE%																					// Highlighting - 7 spaces
+ItemDisplay[UNI ((ETH (ama OR (7wh ILVL>82) OR 7s8 OR xrs OR 7wc)) OR (!ETH ((amu ILVL>79 (!ID OR (ALLSK>1 RES>10))) OR (rin ILVL>65) OR cm3 OR (7wh ILVL>82) OR (uar ILVL<87) OR dre OR uld OR oba OR bac OR xvb OR 6sw OR xhn OR xhb OR ztb)))]:	%MAP-53%%TIER-9%     %NAME%     %WHITE%																// Highlighting - 5 spaces
+ItemDisplay[UNI ((ETH (amf OR (uhm ILVL>76) OR oba OR uvb OR 7pa OR 9bs OR 7kr OR 9gm OR am5 OR 9ar OR utp)) OR (!ETH ((amu ILVL>72 (!ID OR TABSK26>0 OR STAT363>0 OR STAT250>0)) OR (rin ILVL>38) OR (7gm ILVL<85) OR tgl OR xmb OR zlb OR zvb OR umc OR 7s8 OR xrs OR upl OR xsh OR uvb OR 7wa OR ama OR xtp OR nee OR 7wc)))]:	%MAP-53%%TIER-9%    %NAME%    %WHITE%						// Highlighting - 4 spaces
+ItemDisplay[UNI ((ETH (ci3 OR (7fl ILVL>85) OR (7fl ILVL<86) OR 7bk OR ulc OR bae OR 7ws OR xtg OR uvg OR uvc OR xpl OR xld OR utu OR 9bs OR 8ls OR 7gi OR uul OR ztb OR ob6 OR 9gw OR 7b8 OR 7ts OR 7p7 OR 7fb OR ame OR 6bs OR 7qs OR 7tw)) OR (!ETH ((amu ILVL>54 (!ID OR STAT360>0 OR STAT57>1000 OR STAT362>0 OR FRW>20 OR ED>30 OR ALLSK>0)) OR (7fl ILVL>85) OR xhm OR utu OR uhb OR 9ws OR 7ws OR amf OR 6l7 OR 8hx OR 7gi OR am7 OR 8lw OR nef OR xpl OR ci2 OR drb OR drd OR uts OR pac OR hgl OR xlg OR umb OR xth OR uvg OR 7kr OR 6hx OR 9gm OR ne6 OR ba6 OR am5 OR pa3 OR 9ar OR ob6 OR dr2 OR 9gw OR xar OR utg OR ned OR 6bs OR 7qs OR baf OR utp OR drf)))]:	%DOT-53%%TIER-9%   %NAME%   %WHITE%		// Highlighting - 3 spaces
+ItemDisplay[UNI ((ETH (uap OR (uhm ILVL<77) OR (7gm ILVL<85) OR (7wh ILVL<83) OR 7sc OR baa OR dra OR uui OR dgr OR 9fc OR 9ws OR xlt OR 7m7 OR 6cs OR 7cs OR ulm OR dre OR xea OR pa9 OR nea OR xtb OR 7s7 OR 7gl OR 7bw OR xsh OR xmg OR lbt OR tbt OR xlb OR xhb OR umb OR zlb OR zhb OR umc OR xrn OR rng OR scl OR gth OR ltp OR xui OR xul OR upl OR 9ta OR 7ha OR 7ga OR 9tw OR 7lw OR 9cr OR 7gs OR 9ga OR 92a OR 7wb OR 9st OR 9wh OR stu OR pac OR drd OR 9bw OR ne6 OR ba6 OR pa3 OR dr2 OR 9wc OR amd OR wsc OR xtp OR 7bt OR 7o7 OR 7bl OR nef OR 7sp OR 7ls OR 9fb OR utg OR ulb OR ned OR 7qs OR baf OR drf)) OR (!ETH (7sc OR (7wh ILVL<83) OR (7fl ILVL<86) OR umg OR uvc OR 8lb OR 9fc OR 7pa OR pae OR dgr OR tbl OR mgl OR uh9 OR bad OR plt OR ltp OR xui OR xow OR xts OR upk OR uow OR uhg OR 92a OR 9ga OR 7m7 OR 9ls OR 7gs OR 7b7 OR 7ts OR 8cb OR amb OR 8rx OR 6cs OR 9tw OR 7lw OR aar OR xvg OR xmg OR lbt OR tbt OR xlb OR 7ga OR 7dg OR 8ls OR 7bw OR xtg OR xrn OR xlt OR xld OR xul OR 9ax OR 7bk OR uul OR 9bw OR 9wc OR wsc OR xhg OR 7b8 OR 7o7 OR 7p7 OR lbl OR rng OR 7sp OR 7ls OR 9fb OR 8mx OR 7fb OR ame OR ulb OR 7tw)))]:	%DOT-53%%TIER-9%  %NAME%  %WHITE%	// Highlighting - 2 spaces
 ItemDisplay[UNI ((ETH (9tk OR xkp OR xlm OR bac OR 9wn OR xhm OR zvb OR uhb OR xmb OR upk OR xvb OR 7ta OR bwn OR 9yw OR uh9 OR 72a OR uow OR tgl OR xlg OR xvg OR uhg OR brs OR plt OR fld OR aar OR xla OR xcl OR xth OR xar OR uts OR 9ma OR 9sp OR gma OR mau OR 9fl OR 9m9 OR 9gi OR 9qs OR gsd OR 9sb OR 9ls OR 92h OR 9gs OR 9kr OR 9s8 OR 9pa OR 7sr OR 7br OR am9 OR 8ws OR 9mt OR 7mp OR nee OR cst OR xhg)) OR (!ETH (amu OR rin OR skp OR xap OR xkp OR xlm OR xsk OR stu OR vgl OR 9gi OR mau OR 9sp OR 9m9 OR 9sb OR 7sr OR am9 OR 8ws OR 9wn OR 7wb OR 9gs OR 7b7 OR gma OR 9fl OR 9qs OR 9cr OR 9kr OR 9s8 OR 7bt OR 9pa OR 92h OR gsd OR 7br OR cap OR bhm OR crn OR scl OR spl OR xng OR kit OR xuc OR ush OR lgl OR vbt OR hbt OR vbl OR zmb OR 9ma OR amd OR 7s7 OR bwn OR 9yw OR gth OR tow OR xrg OR uml OR 9wh OR 9mt OR xhl OR 7mp OR cst OR lwb OR 9sr OR 6rx OR 8sw OR sbw)))]:	 %NAME% %CONTINUE%	// Highlighting - 1 space
 // Highlighting & Notifications - Sets
-ItemDisplay[SET (uar OR uth)]:	%BORDER-84%         %NAME%         %WHITE%																																									// Highlighting - 9 spaces
-ItemDisplay[SET ((amu ILVL>25 (!ID OR STAT360>0 OR ALLSK>0 OR CLSK1>0)) OR xhm OR xtb OR xmg OR 7m7)]:	%MAP-84%    %NAME%    %WHITE%																																		// Highlighting - 4 spaces
-ItemDisplay[SET (7qr OR xap OR ulg OR dr8 OR uul OR xar OR amc OR uld OR oba OR ne9)]:	%DOT-84%   %NAME%   %WHITE%																																				// Highlighting - 3 spaces
-ItemDisplay[SET ((rin ILVL>49 (!ID OR STAT360>0 OR ED>0)) OR ult OR xhb OR ci3 OR zvb OR xmb OR utc OR xsk OR (vbt ((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))) OR uts OR urn OR ucl OR xul OR stu OR paf OR ba5 OR 7ws OR 7gd OR 7fb OR xvg OR uhm OR 6cs OR 9mt OR zhb OR xhg OR xtg OR xh9 OR zmb OR uh9)]:	%DOT-84%  %NAME%  %WHITE%						// Highlighting - 2 spaces
-ItemDisplay[SET ((amu ILVL>16) OR xhl OR vbt OR dgr OR bwn OR 7ls OR ci0 OR xrs OR uui OR xlb OR ztb OR 7ma)]:	 %NAME% %CONTINUE%																																		// Highlighting - 1 space
+ItemDisplay[SET (uar OR uth)]:	%BORDER-84%%TIER-9%         %NAME%         %WHITE%																																									// Highlighting - 9 spaces
+ItemDisplay[SET ((amu ILVL>25 (!ID OR STAT360>0 OR ALLSK>0 OR CLSK1>0)) OR xhm OR xtb OR xmg OR 7m7)]:	%MAP-84%%TIER-9%    %NAME%    %WHITE%																																		// Highlighting - 4 spaces
+ItemDisplay[SET (7qr OR xap OR ulg OR dr8 OR uul OR xar OR amc OR uld OR oba OR ne9)]:	%DOT-84%%TIER-9%   %NAME%   %WHITE%																																				// Highlighting - 3 spaces
+ItemDisplay[SET ((rin ILVL>49 (!ID OR STAT360>0 OR ED>0)) OR ult OR xhb OR ci3 OR zvb OR xmb OR utc OR xsk OR (vbt ((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))) OR uts OR urn OR ucl OR xul OR stu OR paf OR ba5 OR 7ws OR 7gd OR 7fb OR xvg OR uhm OR 6cs OR 9mt OR zhb OR xhg OR xtg OR xh9 OR zmb OR uh9)]:	%DOT-84%%TIER-9%  %NAME%  %WHITE%						// Highlighting - 2 spaces
+ItemDisplay[SET ((amu ILVL>16) OR xhl OR vbt OR dgr OR bwn OR 7ls OR ci0 OR xrs OR uui OR xlb OR ztb OR 7ma)]:	 %NAME% %CONTINUE%																																			// Highlighting - 1 space
 
 // Catchall - Unique/Set Items
-ItemDisplay[UNI !ID (CLVL<70 OR DIFF<2)]: %PX-53%%NAME%%WHITE%		// notifications for all other unidentified uniques when in Normal/Nightmare or below level 70
-ItemDisplay[SET !ID (CLVL<70 OR DIFF<2)]: %PX-84%%NAME%%WHITE%		// notifications for all other unidentified sets when in Normal/Nightmare or below level 70
+ItemDisplay[UNI !ID (CLVL<70 OR DIFF<2)]: %PX-53%%TIER-9%%NAME%%WHITE%		// notifications for all other unidentified uniques when in Normal/Nightmare or below level 70
+ItemDisplay[SET !ID (CLVL<70 OR DIFF<2)]: %PX-84%%TIER-9%%NAME%%WHITE%		// notifications for all other unidentified sets when in Normal/Nightmare or below level 70
 ItemDisplay[(UNI OR SET)]: %NAME%%WHITE%
 
 
@@ -757,10 +763,10 @@ ItemDisplay[(UNI OR SET)]: %NAME%%WHITE%
 //ItemDisplay[RARE !ID ILVL>55 (rxb OR 8rx OR 6rx OR crs OR 9cr OR 7cr OR gax OR 9ga OR 7ga OR wsc OR 9wc OR 7wc OR brn OR 9br OR 7br)]:	 %NAME% %WHITE%		// enable this rule to highlight the highest-IAS-capable weapons (considering possible affixes and maximum sockets) - Demon Crossbow, Phase Blade, Champion Axe, Giant Thresher, Mancatcher (and normal/exceptional versions)
 
 // Highlighting
-ItemDisplay[RARE !ID ((GLOVES ILVL>42) OR (BOOTS ILVL>36))]:						 %NAME% %WHITE%		// gloves, boots
-ItemDisplay[RARE !ID ((ci0 ILVL>86) OR (ci1 ILVL>81) OR (ci2 ILVL>76) OR (ci3 ILVL>71))]:	%DOT-6D% %NAME% %WHITE%		// +2-skill-capable circlets (also adds notifications)
-ItemDisplay[RARE !ID (DRU OR BAR) ILVL>49]:								 %NAME% %WHITE%		// +2-skill-capable class helms
-ItemDisplay[RARE !ID ETH (crs OR 9cr OR (THROWING !ZON ELT) OR glv OR 9gl)]:			%DOT-6D% %NAME% %WHITE%		// eth Crystal Sword, eth Dimensional Blade, eth elite throwing weapons, eth Glaive, eth Spiculum (also adds notifications)
+ItemDisplay[RARE !ID ((GLOVES ILVL>42) OR (BOOTS ILVL>36))]:							 %NAME% %WHITE%		// gloves, boots
+ItemDisplay[RARE !ID ((ci0 ILVL>86) OR (ci1 ILVL>81) OR (ci2 ILVL>76) OR (ci3 ILVL>71))]:	%DOT-6D%%TIER-9% %NAME% %WHITE%		// +2-skill-capable circlets (also adds notifications)
+ItemDisplay[RARE !ID (DRU OR BAR) ILVL>49]:									 %NAME% %WHITE%		// +2-skill-capable class helms
+ItemDisplay[RARE !ID ETH (crs OR 9cr OR (THROWING !ZON ELT) OR glv OR 9gl)]:			%DOT-6D%%TIER-9% %NAME% %WHITE%		// eth Crystal Sword, eth Dimensional Blade, eth elite throwing weapons, eth Glaive, eth Spiculum (also adds notifications)
 
 // Catchall
 ItemDisplay[RARE]: %NAME%%WHITE%
@@ -787,8 +793,8 @@ ItemDisplay[FILTLVL>1 MAG ELT CLVL>79  ((uap OR ukp OR ulm OR uhl OR uhm OR urn)
 ItemDisplay[FILTLVL>1 MAG CLVL>39 STAFF !ETH !(ELT OR wst OR 8ws)]:
 
 // Highlighting
-ItemDisplay[MAG !ID ETH (crs OR 9cr) ILVL>43]:				%DOT-97%  %NAME%  %WHITE%	// eth Crystal Sword, eth Dimensional Blade (also adds notifications)
-ItemDisplay[MAG !ID ETH ((THROWING !ZON ELT) OR glv OR 9gl) ILVL>43]:		  %NAME%  %WHITE%	// eth elite throwing weapons, eth Glaive, eth Spiculum
+ItemDisplay[MAG !ID ETH (crs OR 9cr) ILVL>43]:				%DOT-97%%TIER-9%  %NAME%  %WHITE%	// eth Crystal Sword, eth Dimensional Blade (also adds notifications)
+ItemDisplay[MAG !ID ETH ((THROWING !ZON ELT) OR glv OR 9gl) ILVL>43]:			  %NAME%  %WHITE%	// eth elite throwing weapons, eth Glaive, eth Spiculum
 
 // Catchall
 ItemDisplay[MAG]: %NAME%%WHITE%
@@ -1000,11 +1006,11 @@ ItemDisplay[FILTLVL>1 NMAG EXC CLVL>59  !(ETH OR ED>0 OR SOCK>2) ((xap OR xkp OR
 ItemDisplay[FILTLVL>1 NMAG ELT CLVL>79  !(ETH OR ED>0 OR SOCK>2) ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (utu OR ung OR ucl OR uhn OR urs OR upl OR ult OR uld OR uth OR uul) OR (uuc OR uml OR urg OR upk OR uit OR uts) OR (7ha OR 7la OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx)) !(uap OR ult OR uth OR uul OR urg OR uit OR uow OR uts) !(DEF>479) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// also excludes Shako, Hellforge Plate, Lacquered Plate, Shadow Plate, Hyperion, 4-socket-capable shields, armor with 480+ defense
 
 // Highlighting
-ItemDisplay[NMAG !RW !ETH ((SOCK=5 ED>0 7cr) OR (SOCK=4 ED>0 6rx) OR (SOCK=4 ED>0 6hx) OR (SOCK=3 ED>0 utp))]:	%DOT-20%  %NAME%{%NAME%}  %WHITE%	// adds notifications for valuable non-eth bases: sup 5s Phase Blade, sup 4s Demon Crossbow, sup 4s Colossus Crossbow, sup 3s Archon Plate
-ItemDisplay[NMAG !RW ETH (((SOCK=2 OR SOCK=5) 7wa) OR (SOCK=5 ED>0 72a) OR (SOCK>4 7gi) OR ((SOCK=4 OR SOCK=6) 7p7) OR ((SOCK=0 OR SOCK=4) ED>0 7tr) OR (SOCK=4 ED>0 7br) OR ((SOCK=4 OR SOCK=5) 7s8) OR (SOCK=4 7wc) OR ((SOCK=2 OR SOCK>4) 7gm) OR (SOCK=2 ED>0 7m7))]:	%DOT-1D%  %NAME%{%NAME%}  %WHITE%	// adds notifications for valuable eth bases: 2/5s Berserker Axe, sup 5s Ettin Axe, 5/6s Glorious Axe, 4/6s War Pike, sup 0/4s Stygian Pike, sup 4s Mancatcher, 4/5s Thresher, 4s Giant Thresher, 2/5/6s Thunder Maul, sup 2s Ogre Maul		// TODO: Split this rule and add more items to be highlighted in a similar way
-ItemDisplay[NMAG CHEST ((DEF>749 !(utp OR urs OR ula OR uea OR uui)) OR (DEF>699 (utp OR urs OR ula OR uea OR uui)))]:	 %NAME% {%NAME%}%WHITE%		// eth body armor with high defense ("light" 700+, others 750+)
-ItemDisplay[NMAG ELT ETH ED>0 (AXE OR MACE OR SWORD OR POLEARM OR SPEAR) !THROWING !ZON !7cl !7sp]:	 %NAME% {%NAME%}%WHITE%				// sup & eth non-class elite melee weapons
-ItemDisplay[NMAG (((7s8 OR 7wc) ETH SOCK>3 SOCK<6) OR ((((7wa OR 7cr) (ETH OR ED>0)) OR (7gd ETH)) SOCK=5))]:	 %NAME% {%NAME%}%WHITE%			// 4-5s eth Thresher, 4-5s eth Giant Thresher, 5s sup/eth Berserker Axe, 5s sup Phase Blade, 5s eth Colossus Blade
+ItemDisplay[NMAG !RW !ETH ((SOCK=5 ED>0 7cr) OR (SOCK=4 ED>0 6rx) OR (SOCK=4 ED>0 6hx) OR (SOCK=3 ED>0 utp))]:	%DOT-20%%TIER-9%  %NAME%{%NAME%}  %WHITE%	// adds notifications for valuable non-eth bases: sup 5s Phase Blade, sup 4s Demon Crossbow, sup 4s Colossus Crossbow, sup 3s Archon Plate
+ItemDisplay[NMAG !RW ETH (((SOCK=2 OR SOCK=5) 7wa) OR (SOCK=5 ED>0 72a) OR (SOCK>4 7gi) OR ((SOCK=4 OR SOCK=6) 7p7) OR ((SOCK=0 OR SOCK=4) ED>0 7tr) OR (SOCK=4 ED>0 7br) OR ((SOCK=4 OR SOCK=5) 7s8) OR (SOCK=4 7wc) OR ((SOCK=2 OR SOCK>4) 7gm) OR (SOCK=2 ED>0 7m7))]:	%DOT-1D%%TIER-9%  %NAME%{%NAME%}  %WHITE%	// adds notifications for valuable eth bases: 2/5s Berserker Axe, sup 5s Ettin Axe, 5/6s Glorious Axe, 4/6s War Pike, sup 0/4s Stygian Pike, sup 4s Mancatcher, 4/5s Thresher, 4s Giant Thresher, 2/5/6s Thunder Maul, sup 2s Ogre Maul		// TODO: Split this rule and add more items to be highlighted in a similar way
+ItemDisplay[NMAG CHEST ((DEF>749 !(utp OR urs OR ula OR uea OR uui)) OR (DEF>699 (utp OR urs OR ula OR uea OR uui)))]:	 %NAME% {%NAME%}%WHITE%			// eth body armor with high defense ("light" 700+, others 750+)
+ItemDisplay[NMAG ELT ETH ED>0 (AXE OR MACE OR SWORD OR POLEARM OR SPEAR) !THROWING !ZON !7cl !7sp]:	 %NAME% {%NAME%}%WHITE%					// sup & eth non-class elite melee weapons
+ItemDisplay[NMAG (((7s8 OR 7wc) ETH SOCK>3 SOCK<6) OR ((((7wa OR 7cr) (ETH OR ED>0)) OR (7gd ETH)) SOCK=5))]:	 %NAME% {%NAME%}%WHITE%				// 4-5s eth Thresher, 4-5s eth Giant Thresher, 5s sup/eth Berserker Axe, 5s sup Phase Blade, 5s eth Colossus Blade
 ItemDisplay[NMAG !SUP !ETH ((usk DEF>151) OR (uh9 DEF>154) OR (uui DEF>461) OR (uea DEF>464) OR (ula DEF>468) OR (utu DEF>475) OR (urs DEF>495) OR (utp DEF>518) OR (uar DEF>594) OR (uit DEF>147) OR (upk DEF>162) OR (ush DEF>172))]:	 %NAME% {%NAME%}%WHITE%	// good elite armor with top 5% defense
 
 // Catchall - Regular Non-Class-Related Items
@@ -1089,8 +1095,8 @@ ItemDisplay[NMAG ((SK381>0 (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK
 
 // ADD CUSTOM RULES FOR REGULAR CLASS ITEMS HERE:
 // ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
-//ItemDisplay[NMAG !RW STAFF (SOCK=4 OR (SOCK=0 (cst OR 8cs OR 6cs OR bst OR 8bs OR 6bs OR wst OR 8ws OR 6ws))) SK58>2 (SK40>0 OR SK52>0 OR SK50>0 OR SK60>0 OR SK57>0)]:	%DOT-20%  %NAME%{%NAME%}  %WHITE%	// enabling this rule will notify you of 4-socket-capable staves with +3 Energy Shield and atleast +1 to any other prebuff skill (Cold Enchant, Enchant Fire, Shiver Armor, Chilling Armor, Thunder Storm)
-//ItemDisplay[NMAG !RW WAND !SOCK=1 !wnd !ywn !9wn SK84>2]:	%DOT-20%  %NAME%{%NAME%}  %WHITE%															// enabling this rule will notify you of 2-socket-capable wands with +3 Bone Spear
+//ItemDisplay[NMAG !RW STAFF (SOCK=4 OR (SOCK=0 (cst OR 8cs OR 6cs OR bst OR 8bs OR 6bs OR wst OR 8ws OR 6ws))) SK58>2 (SK40>0 OR SK52>0 OR SK50>0 OR SK60>0 OR SK57>0)]:	%DOT-20%%TIER-9%  %NAME%{%NAME%}  %WHITE%	// enabling this rule will notify you of 4-socket-capable staves with +3 Energy Shield and atleast +1 to any other prebuff skill (Cold Enchant, Enchant Fire, Shiver Armor, Chilling Armor, Thunder Storm)
+//ItemDisplay[NMAG !RW WAND !SOCK=1 !wnd !ywn !9wn SK84>2]:	%DOT-20%%TIER-9%  %NAME%{%NAME%}  %WHITE%															// enabling this rule will notify you of 2-socket-capable wands with +3 Bone Spear
 
 // Highlighting: Potentially Valuable Pointmod Items
 ItemDisplay[NMAG SIN !(ktr OR wrb OR axf OR ces) (SOCK>2 OR SOCK=0) (SK262>2 OR SK266>2 OR SK267>2 OR SK271>2 OR SK273>2 OR SK276>2 OR SK277>2 OR SK278>2)]:	  %NAME%  {%NAME%}%WHITE%				// Assassin	claws
