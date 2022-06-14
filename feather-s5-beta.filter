@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II - Season 5 Beta
-//		Date Updated:	13 JUNE 2022
+//		Date Updated:	14 JUNE 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -10,7 +10,7 @@
 //	File Settings: Courier New, 8-space tabs, no line wrapping, ANSI encoding (­×¤¹²³½)
 //	See the PD2 Wiki for filter syntax and codes: https://projectdiablo2.miraheze.org/wiki/Item_Filtering
 //	To simulate different items, checkout Filterbird: https://betweenwalls.github.io/filterbird/?v=PD2
-//	Valid Output Characters: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ÁÀÂÄÃÅáàâäãåÆæÉÈÊËéèêëÍÌÎÏíìîïÓÒÔÖÕóòôöõÚÙÛÜúùûüİıÿĞÇçÑñ~!?@#$%^&*=-+_"',.:;<>\|()[]{}µ¶ß¢£¥®©ØøŞş§ğ¿¡¯¨¬­¦«»÷×±ªº´`¤°¹²³¼½¾ (and "space")
+//	Valid Output Characters: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ÁÀÂÄÃÅáàâäãåÆæÉÈÊËéèêëÍÌÎÏíìîïÓÒÔÖÕóòôöõÚÙÛÜúùûüİıÿĞÇçÑñ ~!?@#$%^&*=-+_"',.:;<>\|()[]{}µ¶ß¢£¥®©ØøŞş§ğ¿¡¯¨¬­¦«»÷×±ªº´`¤°¹²³¼½¾
 //-----------------------------------------------------------------------------------------------------------------------
 
 
@@ -163,6 +163,7 @@ ItemDisplay[FILTLVL>0 yps CLVL>89 !(MAPID>160 MAPID<164) !(MAPID=1 OR MAPID=40 O
 // Modification
 ItemDisplay[wss]:	%RED%Worldstone Shard%CONTINUE%									// sets color for Worldstone Shard
 ItemDisplay[lbox]:	%RED%Larzuk's Puzzlebox%CONTINUE%								// sets color for Larzuk's Puzzlebox
+ItemDisplay[lpp]:	%RED%Larzuk's Puzzleprism%CONTINUE%								// sets color for Larzuk's Puzzlepiece (and name)
 ItemDisplay[cwss]:	%RED%Tainted Worldstone Shard%CONTINUE%								// sets color for Tainted Worldstone Shard
 ItemDisplay[RUNE>0]:	%NAME% %TAN%(%WHITE%%RUNENUM%%TAN%)%WHITE%%CONTINUE%						// appends rune number to runes
 ItemDisplay[jewf]:	%WHITE%Jewel Fragment%CONTINUE%									// changes name of Jewel Fragments from plural to singular
@@ -171,11 +172,9 @@ ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key)]: %NAME% %WHITE%×
 // Quest Items
 //ItemDisplay[(hdm OR msf OR vip OR hst OR g33 OR qf1 OR qf2 OR hfh)]: %NAME%{%NAME%}%CONTINUE%						// equipment	 (listed here for reference)
 //ItemDisplay[(bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2)]: %NAME%{%NAME%}	// non-equipment (listed here for reference)
-ItemDisplay[box FILTLVL=4]:	%NAME%{%GRAY%It is currently the same as Low Strictness%NL%The current filter level (High Strictness) is a work in progress}
-ItemDisplay[box FILTLVL=2]:	%NAME%{%GRAY%It is currently the same as Low Strictness%NL%The current filter level (Moderate Strictness) is a work in progress}
-ItemDisplay[box FILTLVL=2]:	%NAME%{%GRAY%Current filter level: Low Strictness (Extra Info)}
-ItemDisplay[box FILTLVL=1]:	%NAME%{%GRAY%Current filter level: Low Strictness}
-ItemDisplay[box FILTLVL=0]:	%NAME%{%GRAY%Current filter level: Show All Items}
+ItemDisplay[box FILTLVL=4]:	%NAME%{%GRAY%It is currently the same as Low Strictness%NL%The current filter level, High Strictness, is a work in progress%NL%%WHITE%Season 5 Beta}
+ItemDisplay[box FILTLVL=3]:	%NAME%{%GRAY%It is currently the same as Low Strictness%NL%The current filter level, Moderate Strictness, is a work in progress%NL%%WHITE%Season 5 Beta}
+ItemDisplay[box FILTLVL=2]:	%NAME%{%GRAY%More info will be added before the season begins%NL%The current filter level, Low Strictness (Extra Info), is a work in progress%NL%%WHITE%Season 5 Beta}
 
 // Endgame Quest Items  (includes notifications)
 ItemDisplay[tes !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Andariel & Duriel)}%WHITE%						// Twisted Essence of Suffering
@@ -186,30 +185,32 @@ ItemDisplay[toa]:	%DOT-60%%ORANGE%%TIER-9%  Token of Absolution  {%WHITE%Right-c
 ItemDisplay[pk1 !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Countess / Blood Raven)}%WHITE%					// Key of Terror
 ItemDisplay[pk2 !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Summoner / Bloodwitch)}%WHITE%					// Key of Hatred
 ItemDisplay[pk3 !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Nihlathak / Izual)}%WHITE%						// Key of Destruction
-ItemDisplay[dhn !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Matron's Den)}%WHITE%							// Diablo's Horn	(Lilith)
-ItemDisplay[bey !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Forgotten Sands)}%WHITE%						// Baal's Eye		(Uber Duriel)
-ItemDisplay[mbr !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Furnace of Pain)}%WHITE%						// Mephisto's Brain	(Uber Izual)
+ItemDisplay[dhn !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Matron's Den)}%WHITE%							// Diablo's Horn	 (Lilith)
+ItemDisplay[bey !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Forgotten Sands)}%WHITE%						// Baal's Eye		 (Uber Duriel)
+ItemDisplay[mbr !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Furnace of Pain)}%WHITE%						// Mephisto's Brain	 (Uber Izual)
 
 // PD2 Items  (includes notifications)
-ItemDisplay[wss !FILTLVL=2]:	%DOT-50%%TIER-9%  %NAME%  {%NAME%}%WHITE%								// Worldstone Shard
-ItemDisplay[lbox !FILTLVL=2]:	%BORDER-50%%TIER-9%        %NAME%        {%NAME%}%WHITE%						// Larzuk's Puzzlebox
-ItemDisplay[lpp !FILTLVL=2]:	%BORDER-50%%TIER-9%     %NAME%     {%NAME%}%WHITE%							// Larzuk's Puzzlepiece
+ItemDisplay[wss !FILTLVL=2]:	%DOT-50%%TIER-9% %NAME% {%NAME%}%WHITE%									// Worldstone Shard
+ItemDisplay[lbox !FILTLVL=2]:	%MAP-50%%TIER-9%        %NAME%        {%NAME%}%WHITE%							// Larzuk's Puzzlebox
+ItemDisplay[lpp !FILTLVL=2]:	%MAP-50%%TIER-9%     %NAME%     {%NAME%}%WHITE%								// Larzuk's Puzzlepiece
+ItemDisplay[ubtm !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Fall of Tristram}%WHITE%						// Pandemonium Talisman  (Uber Tristram)
 ItemDisplay[uba !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  %WHITE%									// Relic of the Ancients (Uber Ancients)
-ItemDisplay[ubtm !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Fall of Tristram}%WHITE%						// Pandemonium Talisman (Uber Tristram)
-ItemDisplay[dcma !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Diablo Walks the Earth}%WHITE%						// Vision of Terror	(DClone)
-ItemDisplay[rtma !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Rathma Awaits You}%WHITE%						// Voidstone		(Rathma)
-ItemDisplay[dcso !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Diablo / Baal)}%WHITE%	// Prime Evil Soul	(DClone ingredient)
-ItemDisplay[dcho !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Uber Tristram)}%WHITE%	// Black Soulstone	(DClone ingredient)
-ItemDisplay[dcbl !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Map Bosses)}%WHITE%	// Pure Demonic Essence	(DClone ingredient)
-ItemDisplay[rtmv !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Shadow of Mendeln)}%WHITE%		// Splinter of the Void (Rathma ingredient)
-ItemDisplay[rtmo !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Undead Enemies)}%WHITE%		// Trang-Oul's Jawbone	(Rathma ingredient)
-ItemDisplay[rtmf !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone}%WHITE%				// Ancient Bone Fragments
+ItemDisplay[ubaa FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(T1 Maps)}%WHITE%							// Sigil of Madawc	 (Uber Ancients ingredient)
+ItemDisplay[ubab FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(T2 Maps)}%WHITE%							// Sigil of Talic	 (Uber Ancients ingredient)
+ItemDisplay[ubac FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(T3 Maps)}%WHITE%							// Sigil of Korlic	 (Uber Ancients ingredient)
+ItemDisplay[dcma !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Diablo Walks the Earth}%WHITE%						// Vision of Terror	 (DClone)
+ItemDisplay[dcso !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Diablo / Baal)}%WHITE%	// Prime Evil Soul	 (DClone ingredient)
+ItemDisplay[dcho !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Uber Tristram)}%WHITE%	// Black Soulstone	 (DClone ingredient)
+ItemDisplay[dcbl !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Map Bosses)}%WHITE%	// Pure Demonic Essence	 (DClone ingredient)
+ItemDisplay[rtma !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Rathma Awaits You}%WHITE%						// Voidstone		 (Rathma)
+ItemDisplay[rtmv !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Shadow of Mendeln)}%WHITE%		// Splinter of the Void  (Rathma ingredient)
+ItemDisplay[rtmo !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Undead Enemies)}%WHITE%		// Trang-Oul's Jawbone	 (Rathma ingredient)
+ItemDisplay[rtmf !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone}%WHITE%				// Ancient Bone Fragments
 ItemDisplay[cwss !FILTLVL=2]:	%MAP-50%%TIER-9%    %NAME%    {%NAME%}%WHITE%								// Tainted Worldstone Shard
 ItemDisplay[(rtp OR rid)]:	%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%							// Horadrim Navigator/Almanac
 ItemDisplay[rkey]:		%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%							// Skeleton Key
 ItemDisplay[lsvl]:		%BORDER-50%%TIER-9%%RED%       Vial of Lightsong       {%NAME%}%WHITE%					// Vial of Lightsong
 ItemDisplay[llmr]:		%BORDER-50%%TIER-9%%RED%        Lilith's Mirror        {%NAME%}%WHITE%					// Lilith's Mirror
-ItemDisplay[(ubaa OR ubab OR ubac) !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%NAME%}%WHITE%						// Sigil of Madawc/Talic/Korlic (Uber Ancients ingredients)
 // Map Orbs
 ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%Raises Map Rarity from Common to Magic}%WHITE%										// Arcane Orb		(Common -> Magic)
 ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE%+%NL%%BLUE%Raises Map Rarity from Common to Rare}%WHITE%			// Zakarum Orb		(Common -> Rare)
@@ -217,7 +218,7 @@ ItemDisplay[upma]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ P%GRAY%.%WHITE%S
 ItemDisplay[scou]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map%NL%%BLUE%Lowers Map Rarity to Common}%WHITE%											// Orb of Destruction	(Magic/Rare -> Common)
 ItemDisplay[rera]:	%NAME%{%GOLD%Orb %WHITE%+ %YELLOW%Map %WHITE%+ P%GRAY%.%WHITE%Gem + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE%+%NL%%BLUE%Rerolls Rare Map Affixes}%WHITE%		// Horadrim Orb		(Reroll Rare)
 ItemDisplay[upmp]:	%NAME%{Combines three maps to create one of a higher tier}%WHITE%													// Cartographer's Orb	(3 T1 Maps -> 1 T2 Map or 3 T2 Maps -> 1 T3 Map)
-ItemDisplay[scrb]:	%BORDER-53%%TIER-9%    %NAME%    {Transforms a %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%map into a %DARK_GREEN%(%TAN%Dungeon%DARK_GREEN%)}%WHITE%			// Horadrim Scarab	(Map -> Dungeon, notifications)
+ItemDisplay[scrb]:	%MAP-53%%TIER-9%    %NAME%    {Transforms a %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%map into a %DARK_GREEN%(%TAN%Dungeon%DARK_GREEN%)}%WHITE%				// Horadrim Scarab	(Map -> Dungeon, notifications)
 // Maps  (includes notifications)
 ItemDisplay[MAG  (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %BLUE%%MAP%%NAME% {%NAME%}%CONTINUE%	// maps - magic (adds blue minimap border)
 ItemDisplay[RARE (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %YELLOW%%MAP%%NAME% {%NAME%}%CONTINUE%	// maps - rare (adds yellow minimap border)
@@ -231,7 +232,7 @@ ItemDisplay[(t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39) !(RARE
 ItemDisplay[(t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49) !(RARE ID)]:	    %NAME%    %WHITE%	// maps - T4 highlighting
 //ItemDisplay[(t61 OR t62)]:	%NAME%{%NAME%}%WHITE%		// Desert/Moor Duel Arenas (listed here for reference)
 
-// Alternative Rules for "REFERENCE INFO" Filter Level: Endgame Quest Items and PD2 Items  (includes notifications)
+// Alternative Rules for Endgame Quest Items (includes notifications)
 ItemDisplay[tes FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Essences %BLUE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Andariel & Duriel)}%WHITE%							// Twisted Essence of Suffering
 ItemDisplay[ceh FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Essences %BLUE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Mephisto)}%WHITE%									// Charged Essence of Hatred
 ItemDisplay[bet FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Essences %BLUE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Diablo)}%WHITE%									// Burning Essence of Terror
@@ -239,26 +240,27 @@ ItemDisplay[fed FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Esse
 ItemDisplay[pk1 FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %BLUE%from the other Keybearers to open a portal%NL%%GRAY%(Countess / Blood Raven)}%WHITE%			// Key of Terror
 ItemDisplay[pk2 FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %BLUE%from the other Keybearers to open a portal%NL%%GRAY%(Summoner / Bloodwitch)}%WHITE%			// Key of Hatred
 ItemDisplay[pk3 FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %BLUE%from the other Keybearers to open a portal%NL%%GRAY%(Nihlathak / Izual)}%WHITE%			// Key of Destruction
-ItemDisplay[dhn FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Mephisto's Brain %BLUE%and %ORANGE%Baal's Eye %BLUE%to access Uber Tristram%NL%%GRAY%(Matron's Den)}%WHITE%								// Diablo's Horn	(Lilith)
-ItemDisplay[bey FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Mephisto's Brain %BLUE%and %ORANGE%Diablo's Horn %BLUE%to access Uber Tristram%NL%%GRAY%(Forgotten Sands)}%WHITE%							// Baal's Eye		(Uber Duriel)
-ItemDisplay[mbr FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Diablo's Horn %BLUE%and %ORANGE%Baal's Eye %BLUE%to access Uber Tristram%NL%%GRAY%(Furnace of Pain)}%WHITE%								// Mephisto's Brain	(Uber Izual)
-ItemDisplay[wss FILTLVL=2]:	%DOT-50%%TIER-9%  %NAME%  {Can also add corruption modifiers to maps%NL%Corrupts equipment, either adding a modifier or turning it into a random rare}%WHITE%								// Worldstone Shard
-ItemDisplay[lbox FILTLVL=2]:	%BORDER-50%%TIER-9%        %NAME%        {Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%													// Larzuk's Puzzlebox
-ItemDisplay[lpp FILTLVL=2]:	%BORDER-50%%TIER-9%     %NAME%     {Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%													// Larzuk's Puzzlepiece
+ItemDisplay[dhn FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Mephisto's Brain %BLUE%and %ORANGE%Baal's Eye %BLUE%to access Uber Tristram%NL%%GRAY%(Matron's Den)}%WHITE%								// Diablo's Horn	 (Lilith)
+ItemDisplay[bey FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Mephisto's Brain %BLUE%and %ORANGE%Diablo's Horn %BLUE%to access Uber Tristram%NL%%GRAY%(Forgotten Sands)}%WHITE%							// Baal's Eye		 (Uber Duriel)
+ItemDisplay[mbr FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Diablo's Horn %BLUE%and %ORANGE%Baal's Eye %BLUE%to access Uber Tristram%NL%%GRAY%(Furnace of Pain)}%WHITE%								// Mephisto's Brain	 (Uber Izual)
+// Alternative Rules for PD2 Items  (includes notifications)
+ItemDisplay[wss FILTLVL=2]:	%DOT-50%%TIER-9% %NAME% {Can also add corruption modifiers to maps%NL%Corrupts equipment, either adding a modifier or turning it into a random rare}%WHITE%								// Worldstone Shard
+ItemDisplay[lbox FILTLVL=2]:	%MAP-50%%TIER-9%        %NAME%        {Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%													// Larzuk's Puzzlebox
+ItemDisplay[lpp FILTLVL=2]:	%MAP-50%%TIER-9%     %NAME%     {Cannot be used with unique or set items%NL%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%								// Larzuk's Puzzlepiece
+ItemDisplay[ubtm FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Fall of Tristram%NL%%BLUE%Sends you and nearby allies to fight the Uber Prime Evils in Tristram}%WHITE%										// Pandemonium Talisman  (Uber Tristram)
 ItemDisplay[uba FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%BLUE%Sends you and nearby allies to fight the Uber Ancients on Arreat Summit}%WHITE%													// Relic of the Ancients (Uber Ancients)
-ItemDisplay[ubtm FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Fall of Tristram%NL%%BLUE%Sends you and nearby allies to fight the Uber Prime Evils in Tristram}%WHITE%										// Pandemonium Talisman (Uber Tristram)
-ItemDisplay[dcma FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Diablo Walks the Earth%NL%%BLUE%Sends you to and nearby allies to fight Diablo-Clone in the Pandemonium Fortress}%WHITE%								// Vision of Terror	(DClone)
-ItemDisplay[rtma FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Rathma Awaits You%NL%%BLUE%Sends you and nearby allies to fight Rathma and his minions in the Necropolis}%WHITE%									// Voidstone		(Rathma)
-ItemDisplay[dcso FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%BLUE%Combine with %ORANGE%Black Soulstone %BLUE%and %ORANGE%Pure Demonic Essence %BLUE%to access Diablo-Clone%NL%%GRAY%(Diablo / Baal)}%WHITE%	// Prime Evil Soul	(DClone ingredient)
-ItemDisplay[dcho FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%BLUE%Combine with %ORANGE%Prime Evil Soul %BLUE%and %ORANGE%Pure Demonic Essence %BLUE%to access Diablo-Clone%NL%%GRAY%(Uber Tristram)}%WHITE%	// Black Soulstone	(DClone ingredient)
-ItemDisplay[dcbl FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%BLUE%Combine with %ORANGE%Black Soulstone %BLUE%and %ORANGE%Prime Evil Soul %BLUE%to access Diablo-Clone%NL%%GRAY%(Map Bosses)}%WHITE%		// Pure Demonic Essence	(DClone ingredient)
-ItemDisplay[rtmv FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%BLUE%Combine with %ORANGE%Trang-Oul's Jawbone %BLUE%and %GOLD%Hellfire Torch %BLUE%to access Rathma%NL%%GRAY%(Shadow of Mendeln)}%WHITE%			// Splinter of the Void (Rathma ingredient)
-ItemDisplay[rtmo FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%BLUE%Combine with %ORANGE%Splinter of the Void %BLUE%and %GOLD%Hellfire Torch %BLUE%to access Rathma%NL%%GRAY%(Undead Enemies)}%WHITE%			// Trang-Oul's Jawbone	(Rathma ingredient)
-ItemDisplay[rtmf FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone%NL%%WHITE%Jawbone Recipe: 2 %ORANGE%Ancient Bone Fragments %WHITE%+ %GOLD%Hellfire Torch}%WHITE%							// Ancient Bone Fragments
-ItemDisplay[cwss FILTLVL=2]:	%MAP-50%%TIER-9%    %NAME%    {Corrupts %GOLD%Annihilus%BLUE%, either adding a modifier or turning it into a random magic small charm}%WHITE%																	// Tainted Worldstone Shard
-ItemDisplay[ubaa FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%maps to access Uber Ancients}%WHITE%				// Sigil of Madawc	 (Uber Ancients ingredient)
-ItemDisplay[ubab FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%maps to access Uber Ancients}%WHITE%				// Sigil of Talic	 (Uber Ancients ingredient)
-ItemDisplay[ubac FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %BLUE%maps to access Uber Ancients}%WHITE%				// Sigil of Korlic	 (Uber Ancients ingredient)
+ItemDisplay[ubaa FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN% %BLUE%maps to access Uber Ancients%NL%%GRAY%(T1 Maps)}%WHITE%		// Sigil of Madawc	 (Uber Ancients ingredient)
+ItemDisplay[ubab FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %BLUE%maps to access Uber Ancients%NL%%GRAY%(T2 Maps)}%WHITE%		// Sigil of Talic	 (Uber Ancients ingredient)
+ItemDisplay[ubac FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {Combine with %ORANGE%Sigils %BLUE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %BLUE%& %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %BLUE%maps to access Uber Ancients%NL%%GRAY%(T3 Maps)}%WHITE%		// Sigil of Korlic	 (Uber Ancients ingredient)
+ItemDisplay[dcma FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Diablo Walks the Earth%NL%%BLUE%Sends you to and nearby allies to fight Diablo-Clone in the Pandemonium Fortress}%WHITE%								// Vision of Terror	 (DClone)
+ItemDisplay[dcso FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%BLUE%Combine with %ORANGE%Black Soulstone %BLUE%and %ORANGE%Pure Demonic Essence %BLUE%to access Diablo-Clone%NL%%GRAY%(Diablo / Baal)}%WHITE%	// Prime Evil Soul	 (DClone ingredient)
+ItemDisplay[dcho FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%BLUE%Combine with %ORANGE%Prime Evil Soul %BLUE%and %ORANGE%Pure Demonic Essence %BLUE%to access Diablo-Clone%NL%%GRAY%(Uber Tristram)}%WHITE%	// Black Soulstone	 (DClone ingredient)
+ItemDisplay[dcbl FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%BLUE%Combine with %ORANGE%Black Soulstone %BLUE%and %ORANGE%Prime Evil Soul %BLUE%to access Diablo-Clone%NL%%GRAY%(Map Bosses)}%WHITE%		// Pure Demonic Essence	 (DClone ingredient)
+ItemDisplay[rtma FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Rathma Awaits You%NL%%BLUE%Sends you and nearby allies to fight Rathma and his minions in the Necropolis}%WHITE%									// Voidstone		 (Rathma)
+ItemDisplay[rtmv FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%BLUE%Combine with %ORANGE%Trang-Oul's Jawbone %BLUE%and %GOLD%Hellfire Torch %BLUE%to access Rathma%NL%%GRAY%(Shadow of Mendeln)}%WHITE%			// Splinter of the Void  (Rathma ingredient)
+ItemDisplay[rtmo FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%BLUE%Combine with %ORANGE%Splinter of the Void %BLUE%and %GOLD%Hellfire Torch %BLUE%to access Rathma%NL%%GRAY%(Undead Enemies)}%WHITE%			// Trang-Oul's Jawbone	 (Rathma ingredient)
+ItemDisplay[rtmf FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone%NL%%WHITE%Jawbone Recipe: 2 %ORANGE%Ancient Bone Fragments %WHITE%+ %GOLD%Hellfire Torch}%WHITE%							// Ancient Bone Fragments
+ItemDisplay[cwss FILTLVL=2]:	%MAP-50%%TIER-9%    %NAME%    {Corrupts %GOLD%Annihilus%BLUE%, either adding a modifier or turning it into a random magic small charm}%WHITE%										// Tainted Worldstone Shard
 
 // Miscellaneous
 //ItemDisplay[tbk]:	%NAME%%WHITE%								// Tome of Town Portal	(listed here for reference)
@@ -416,8 +418,8 @@ ItemDisplay[jew RARE !ID]:								%DOT-6D%  %NAME%  {%NAME%}%WHITE%			// unid ra
 ItemDisplay[jew RARE ILVL>64]:								%YELLOW%%NAME%{%WHITE%Item Level: %ILVL%}%CONTINUE%	// adds ilvl description to rare jewels if high enough to consider rerolling
 ItemDisplay[MAG ID ((cm1 (ALVL=47 OR (ALVL>56 ALVL<63) OR ALVL>90)) OR (cm3 ALVL>90))]:	%NAME%{%WHITE%Item Level: %TAN%%ILVL%}%WHITE%		// charms (best ilvl for rerolling, colored tan)
 ItemDisplay[MAG ID ((cm1 ALVL>46) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]:			%NAME%{%WHITE%Item Level: %ILVL%}%WHITE%		// charms (okay ilvl for rerolling)
-//ItemDisplay[MAG !ID jew]: %DOT-97%%TIER-9%%NAME%{%NAME%}%WHITE%										// enabling this rule will notify you of unidentified magic jewels 
-//ItemDisplay[MAG !ID ((cm1 ALVL>46) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]: %DOT-9B%%TIER-9%%NAME%{%NAME%}%WHITE%					// enabling this rule will notify you of unidentified magic charms that are capable of getting okay affixes
+//ItemDisplay[MAG !ID jew]: %DOT-97%%NAME%{%NAME%}%WHITE%											// enabling this rule will notify you of unidentified magic jewels 
+//ItemDisplay[MAG !ID ((cm1 ALVL>46) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]: %DOT-9B%%NAME%{%NAME%}%WHITE%						// enabling this rule will notify you of unidentified magic charms that are capable of getting okay affixes
 
 
 // +-------------------------+
@@ -641,6 +643,10 @@ ItemDisplay[SET uvb ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 60 to 110
 ItemDisplay[SET umb ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 69 to 118}%CONTINUE%
 ItemDisplay[SET utb ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 50 to 145}%CONTINUE%
 ItemDisplay[SET uhb ID ASSASSIN]: %NAME%{%NAME%%NL%%WHITE%Kick Damage: 83 to 149}%CONTINUE%
+
+// Alternative Rules - Weapon Speed & Melee Range
+ItemDisplay[FILTLVL=2 !EQUIPPED !NMAG !MAG ID WEAPON !(BOW OR XBOW OR WAND OR SOR)]: %NAME%{%NAME%%NL%%WHITE%Melee Range: %RANGE%}%CONTINUE%
+ItemDisplay[FILTLVL=2 !EQUIPPED !NMAG !MAG ID WEAPON !(WAND OR SOR)]: %NAME%{%NAME%%NL%%WHITE%Weapon Speed: %WPNSPD%}%CONTINUE%
 
 // Catchall
 ItemDisplay[(UNI OR SET OR RARE OR CRAFT) ID]: %NAME%{%NAME%}%WHITE%
@@ -958,6 +964,10 @@ ItemDisplay[NMAG SOCK=0 ILVL>25 ILVL<41 ((AXE !THROWING !hax !axe !lax !9ha !9ax
 ItemDisplay[NMAG SOCK=0 ILVL>40 (2ax OR bax OR btx OR 92a OR 9la OR 9ba OR 9bt OR 72a OR 7la OR 7ba OR 7bt OR fla OR 9fl OR 7fl OR flb OR 9fb OR 7fb OR brn OR 9br OR 7br OR scy OR pax OR 9s8 OR 9pa OR 7s8 OR 7pa OR lbw OR sbb OR swb OR 8lb OR 8s8 OR 8sw OR 6s7 OR 6sw OR rxb OR 8rx OR 6rx OR wsp OR 9ws OR 7ws OR (ZON BOW))]: %NAME%{%NAME%%WHITE%Maximum Sockets: 5}%CONTINUE%																					// 5s (ilvl 41+)
 ItemDisplay[NMAG SOCK=0 ILVL>25 ILVL<41 (wst OR 8ws OR 6ws)]: %NAME%{%NAME%%WHITE%Maximum Sockets: 6}%CONTINUE%																																																						// 6s (ilvl 26-40)
 ItemDisplay[NMAG SOCK=0 ILVL>40 (mpi OR wax OR gax OR gix OR 9mp OR 9wa OR 9ga OR 9gi OR 7mp OR 7wa OR 7ga OR 7gi OR (MACE 2H) OR crs OR gsd OR 9cr OR 9gd OR 7cr OR 7gd OR spt OR pik OR 9st OR 9p9 OR 7st OR 7p7 OR hal OR wsc OR 9h9 OR 9wc OR 7h7 OR 7wc OR lbb OR lwb OR 8l8 OR 8lw OR 6lb OR 6l7 OR 6lw OR hxb OR 8hx OR 6hx OR wst OR 8ws OR 6ws OR (ZON SPEAR !THROWING))]: %NAME%{%NAME%%WHITE%Maximum Sockets: 6}%CONTINUE%															// 6s (ilvl 41+)
+
+// Alternative Rules - Weapon Speed & Melee Range
+ItemDisplay[FILTLVL=2 !EQUIPPED NMAG WEAPON !(BOW OR XBOW OR WAND OR SOR)]: %NAME%{%NAME%%NL%%WHITE%Melee Range: %RANGE%}%CONTINUE%
+ItemDisplay[FILTLVL=2 !EQUIPPED NMAG WEAPON !(WAND OR SOR)]: %NAME%{%NAME%%NL%%WHITE%Weapon Speed: %WPNSPD%}%CONTINUE%
 
 // Modification: Superior/Sockets
 ItemDisplay[ED=15 NMAG]: %NAME% %BLUE%+15{%NAME%}%CONTINUE%
