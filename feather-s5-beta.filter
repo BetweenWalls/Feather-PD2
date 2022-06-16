@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II - Season 5 Beta
-//		Date Updated:	14 JUNE 2022
+//		Date Updated:	15 JUNE 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -19,98 +19,98 @@
 //-¦ Filter Levels ¦-----------------------------------------------------------------------------------------------------
 // +---------------+
 ItemDisplayFilterName[]:Low Strictness			// default
-ItemDisplayFilterName[]:Low Strictness (Extra Info)	// shows extra info like rune combinations for runewords, weapon speed/range, extra recipes, etc		...TODO: So far, only rune combos and extended descriptions for non-equipment items have been added
+ItemDisplayFilterName[]:Low Strictness (Extra Info)	// shows extra info like rune combinations for runewords, weapon speed/range, extra recipes, etc
 ItemDisplayFilterName[]:Moderate Strictness		// planned version
 ItemDisplayFilterName[]:High Strictness			// planned version
 
 // +------------------+
 //-¦ Gold and Potions ¦--------------------------------------------------------------------------------------------------
 // +------------------+
-// Hidden: Gold based on area levels, amount = 4×level + level²/100																
-ItemDisplay[FILTLVL>0 GOLD<4 DIFF=0 (MAPID=2 OR MAPID=8)]:												// Area Level 1		
-ItemDisplay[FILTLVL>0 GOLD<8 DIFF=0 (MAPID=3 OR MAPID=9 OR MAPID=13)]:											// Area Level 2			
-ItemDisplay[FILTLVL>0 GOLD<12 DIFF=0 (MAPID=17 OR MAPID=18 OR MAPID=19)]:										// Area Level 3				
-ItemDisplay[FILTLVL>0 GOLD<16 DIFF=0 (MAPID=4 OR MAPID=10 OR MAPID=14)]:										// Area Level 4			
-ItemDisplay[FILTLVL>0 GOLD<20 DIFF=0 (MAPID=5 OR MAPID=11 OR MAPID=15)]:										// Area Level 5				
-ItemDisplay[FILTLVL>0 GOLD<24 DIFF=0 (MAPID=6 OR MAPID=38)]:												// Area Level 6		
-ItemDisplay[FILTLVL>0 GOLD<28 DIFF=0 (MAPID=12 OR MAPID=16 OR (MAPID>20 MAPID<26))]:									// Area Level 7					
-ItemDisplay[FILTLVL>0 GOLD<32 DIFF=0 (MAPID=7 OR MAPID=26)]:												// Area Level 8		
-ItemDisplay[FILTLVL>0 GOLD<36 DIFF=0 (MAPID=27 OR MAPID=28)]:												// Area Level 9		
-ItemDisplay[FILTLVL>0 GOLD<41 DIFF=0 (MAPID=29 OR MAPID=30 OR MAPID=31 OR MAPID=32)]:									// Area Level 10					
-ItemDisplay[FILTLVL>0 GOLD<45 DIFF=0 (MAPID=33 OR MAPID=34 OR MAPID=35)]:										// Area Level 11				
-ItemDisplay[FILTLVL>0 GOLD<49 DIFF=0 (MAPID=36 OR MAPID=37 OR MAPID=55 OR MAPID=56 OR MAPID=59)]:							// Area Level 12							
-ItemDisplay[FILTLVL>0 GOLD<53 DIFF=0 (MAPID=47 OR MAPID=48 OR MAPID=51 OR MAPID=52 OR MAPID=53 OR MAPID=54 OR MAPID=57 OR MAPID=60)]:			// Area Level 13											
-ItemDisplay[FILTLVL>0 GOLD<57 DIFF=0 (MAPID=41 OR MAPID=49 OR MAPID=58 OR MAPID=61 OR MAPID=74)]:							// Area Level 14							
+// Hidden: Gold based on area levels, amount = 4×level + level²/100	(doubled for maps since they often give extra gold find)
+ItemDisplay[FILTLVL>0 GOLD<4 DIFF=0 (MAPID=2 OR MAPID=8)]:												// Area Level 1
+ItemDisplay[FILTLVL>0 GOLD<8 DIFF=0 (MAPID=3 OR MAPID=9 OR MAPID=13)]:											// Area Level 2
+ItemDisplay[FILTLVL>0 GOLD<12 DIFF=0 (MAPID=17 OR MAPID=18 OR MAPID=19)]:										// Area Level 3
+ItemDisplay[FILTLVL>0 GOLD<16 DIFF=0 (MAPID=4 OR MAPID=10 OR MAPID=14)]:										// Area Level 4
+ItemDisplay[FILTLVL>0 GOLD<20 DIFF=0 (MAPID=5 OR MAPID=11 OR MAPID=15)]:										// Area Level 5
+ItemDisplay[FILTLVL>0 GOLD<24 DIFF=0 (MAPID=6 OR MAPID=38)]:												// Area Level 6
+ItemDisplay[FILTLVL>0 GOLD<28 DIFF=0 (MAPID=12 OR MAPID=16 OR (MAPID>20 MAPID<26))]:									// Area Level 7
+ItemDisplay[FILTLVL>0 GOLD<32 DIFF=0 (MAPID=7 OR MAPID=26)]:												// Area Level 8
+ItemDisplay[FILTLVL>0 GOLD<36 DIFF=0 (MAPID=27 OR MAPID=28)]:												// Area Level 9
+ItemDisplay[FILTLVL>0 GOLD<41 DIFF=0 (MAPID=29 OR MAPID=30 OR MAPID=31 OR MAPID=32)]:									// Area Level 10
+ItemDisplay[FILTLVL>0 GOLD<45 DIFF=0 (MAPID=33 OR MAPID=34 OR MAPID=35)]:										// Area Level 11
+ItemDisplay[FILTLVL>0 GOLD<49 DIFF=0 (MAPID=36 OR MAPID=37 OR MAPID=55 OR MAPID=56 OR MAPID=59)]:							// Area Level 12
+ItemDisplay[FILTLVL>0 GOLD<53 DIFF=0 (MAPID=47 OR MAPID=48 OR MAPID=51 OR MAPID=52 OR MAPID=53 OR MAPID=54 OR MAPID=57 OR MAPID=60)]:			// Area Level 13
+ItemDisplay[FILTLVL>0 GOLD<57 DIFF=0 (MAPID=41 OR MAPID=49 OR MAPID=58 OR MAPID=61 OR MAPID=74)]:							// Area Level 14
 ItemDisplay[FILTLVL>0 GOLD<62 DIFF=0 MAPID=42]:														// Area Level 15
-ItemDisplay[FILTLVL>0 GOLD<66 DIFF=0 (MAPID=43 OR MAPID=46)]:												// Area Level 16		
-ItemDisplay[FILTLVL>0 GOLD<70 DIFF=0 (MAPID=44 OR (MAPID>61 MAPID<74))]:										// Area Level 17				
+ItemDisplay[FILTLVL>0 GOLD<66 DIFF=0 (MAPID=43 OR MAPID=46)]:												// Area Level 16
+ItemDisplay[FILTLVL>0 GOLD<70 DIFF=0 (MAPID=44 OR (MAPID>61 MAPID<74))]:										// Area Level 17
 ItemDisplay[FILTLVL>0 GOLD<75 DIFF=0 MAPID=45]:														// Area Level 18
-ItemDisplay[FILTLVL>0 GOLD<88 DIFF=0 (MAPID=76 OR MAPID=77 OR MAPID=84 OR MAPID=85 OR MAPID=86 OR MAPID=87 OR MAPID=90)]:				// Area Level 21										
-ItemDisplay[FILTLVL>0 GOLD<92 DIFF=0 (MAPID=78 OR MAPID=79 OR MAPID=80 OR MAPID=88 OR MAPID=89 OR MAPID=91)]:						// Area Level 22								
-ItemDisplay[FILTLVL>0 GOLD<97 DIFF=0 (MAPID=81 OR MAPID=92 OR MAPID=94 OR MAPID=95 OR MAPID=96)]:							// Area Level 23							
-ItemDisplay[FILTLVL>0 GOLD<101 DIFF=0 (MAPID=82 OR MAPID=83 OR MAPID=93 OR MAPID=97 OR MAPID=98 OR MAPID=99 OR MAPID=110)]:				// Area Level 24										
-ItemDisplay[FILTLVL>0 GOLD<106 DIFF=0 (MAPID=100 OR MAPID=101 OR MAPID=102 OR MAPID=111)]:								// Area Level 25						
-ItemDisplay[FILTLVL>0 GOLD<110 DIFF=0 (MAPID=104 OR MAPID=105 OR MAPID=112)]:										// Area Level 26				
-ItemDisplay[FILTLVL>0 GOLD<115 DIFF=0 (MAPID=106 OR MAPID=107 OR MAPID=117)]:										// Area Level 27				
-ItemDisplay[FILTLVL>0 GOLD<119 DIFF=0 (MAPID=39 OR MAPID=108)]:												// Area Level 28		
-ItemDisplay[FILTLVL>0 GOLD<124 DIFF=0 (MAPID=113 OR MAPID=114 OR MAPID=115 OR MAPID=116 OR MAPID=118 OR MAPID=119)]:					// Area Level 29									
-ItemDisplay[FILTLVL>0 GOLD<138 DIFF=0 MAPID=121]:													// Area Level 32	
-ItemDisplay[FILTLVL>0 GOLD<142 DIFF=0 MAPID=122]:													// Area Level 33	
-ItemDisplay[FILTLVL>0 GOLD<147 DIFF=0 MAPID=123]:													// Area Level 34	
-ItemDisplay[FILTLVL>0 GOLD<156 ((DIFF=0 MAPID=124) OR (DIFF=1 (MAPID=2 OR MAPID=3 OR MAPID=8 OR MAPID=9 OR MAPID=17)))]:				// Area Level 36										
-ItemDisplay[FILTLVL>0 GOLD<161 ((DIFF=0 MAPID=120) OR (DIFF=1 (MAPID=4 OR MAPID=10 OR MAPID=13 OR MAPID=18 OR MAPID=19)))]:				// Area Level 37										
-ItemDisplay[FILTLVL>0 GOLD<166 DIFF=1 (MAPID=5 OR MAPID=6 OR MAPID=11 OR MAPID=14 OR MAPID=21)]:							// Area Level 38							
-ItemDisplay[FILTLVL>0 GOLD<171 ((DIFF=0 (MAPID>124 MAPID<129)) OR (DIFF=1 (MAPID=7 OR MAPID=12 OR MAPID=15 OR MAPID=22 OR MAPID=38)))]:			// Area Level 39											
-ItemDisplay[FILTLVL>0 GOLD<176 ((DIFF=0 MAPID=129) OR (DIFF=1 (MAPID=16 OR MAPID=23 OR MAPID=26 OR MAPID=27 OR MAPID=28)))]:				// Area Level 40										
-ItemDisplay[FILTLVL>0 GOLD<180 DIFF=1 (MAPID=24 OR MAPID=29 OR MAPID=30 OR MAPID=31 OR MAPID=32)]:							// Area Level 41							
-ItemDisplay[FILTLVL>0 GOLD<185 ((DIFF=0 MAPID=130) OR (DIFF=1 (MAPID=25 OR MAPID=33 OR MAPID=34 OR MAPID=35)))]:					// Area Level 42									
-ItemDisplay[FILTLVL>0 GOLD<190 ((DIFF=0 (MAPID=131 OR MAPID=132)) OR (DIFF=1 (MAPID=36 OR MAPID=37 OR MAPID=41 OR MAPID=47 OR MAPID=48)))]:		// Area Level 43												
-ItemDisplay[FILTLVL>0 GOLD<195 DIFF=1 (MAPID=42 OR MAPID=49 OR MAPID=55 OR MAPID=56 OR MAPID=59)]:							// Area Level 44							
-ItemDisplay[FILTLVL>0 GOLD<200 DIFF=1 (MAPID=43 OR MAPID=57 OR MAPID=60 OR MAPID=62 OR MAPID=63)]:							// Area Level 45							
-ItemDisplay[FILTLVL>0 GOLD<205 DIFF=1 (MAPID=44 OR MAPID=45 OR MAPID=64 OR MAPID=65)]:									// Area Level 46					
-ItemDisplay[FILTLVL>0 GOLD<210 DIFF=1 (MAPID=51 OR MAPID=52 OR MAPID=53 OR MAPID=58 OR MAPID=61)]:							// Area Level 47							
-ItemDisplay[FILTLVL>0 GOLD<215 DIFF=1 (MAPID=46 OR MAPID=54 OR MAPID=74)]:										// Area Level 48				
-ItemDisplay[FILTLVL>0 GOLD<220 DIFF=1 ((MAPID>65 MAPID<74) OR MAPID=76)]:										// Area Level 49				
-ItemDisplay[FILTLVL>0 GOLD<225 DIFF=1 (MAPID=77 OR MAPID=78 OR MAPID=84 OR MAPID=85)]:									// Area Level 50					
-ItemDisplay[FILTLVL>0 GOLD<230 DIFF=1 (MAPID>85 MAPID<92)]:												// Area Level 51		
-ItemDisplay[FILTLVL>0 GOLD<235 DIFF=1 (MAPID=79 OR MAPID=80 OR MAPID=81 OR MAPID=92)]:									// Area Level 52					
-ItemDisplay[FILTLVL>0 GOLD<240 DIFF=1 (MAPID=82 OR MAPID=93 OR MAPID=94 OR MAPID=95 OR MAPID=96)]:							// Area Level 53							
-ItemDisplay[FILTLVL>0 GOLD<245 DIFF=1 (MAPID=83 OR MAPID=97 OR MAPID=98 OR MAPID=99)]:									// Area Level 54					
-ItemDisplay[FILTLVL>0 GOLD<250 DIFF=1 (MAPID=100 OR MAPID=101 OR MAPID=102)]:										// Area Level 55				
-ItemDisplay[FILTLVL>0 GOLD<255 DIFF=1 (MAPID=104 OR MAPID=105)]:											// Area Level 56			
-ItemDisplay[FILTLVL>0 GOLD<260 DIFF=1 (MAPID=106 OR MAPID=107)]:											// Area Level 57			
-ItemDisplay[FILTLVL>0 GOLD<265 DIFF=1 (MAPID=108 OR MAPID=110)]:											// Area Level 58			
-ItemDisplay[FILTLVL>0 GOLD<270 DIFF=1 MAPID=111]:													// Area Level 59	
-ItemDisplay[FILTLVL>0 GOLD<276 DIFF=1 (MAPID=112 OR MAPID=117 OR MAPID=125)]:										// Area Level 60				
-ItemDisplay[FILTLVL>0 GOLD<281 DIFF=1 (MAPID=113 OR MAPID=114 OR MAPID=115 OR MAPID=116 OR MAPID=126)]:							// Area Level 61							
-ItemDisplay[FILTLVL>0 GOLD<286 DIFF=1 (MAPID=118 OR MAPID=119 OR MAPID=127)]:										// Area Level 62				
-ItemDisplay[FILTLVL>0 GOLD<291 DIFF=1 (MAPID=121 OR MAPID=122)]:											// Area Level 63			
-ItemDisplay[FILTLVL>0 GOLD<296 DIFF=1 (MAPID=39 OR MAPID=123 OR MAPID=124)]:										// Area Level 64				
-ItemDisplay[FILTLVL>0 GOLD<302 DIFF=1 (MAPID=128 OR MAPID=129)]:											// Area Level 65			
-ItemDisplay[FILTLVL>0 GOLD<307 DIFF=1 (MAPID=130 OR MAPID=131 OR MAPID=132)]:										// Area Level 66				
+ItemDisplay[FILTLVL>0 GOLD<88 DIFF=0 (MAPID=76 OR MAPID=77 OR MAPID=84 OR MAPID=85 OR MAPID=86 OR MAPID=87 OR MAPID=90)]:				// Area Level 21
+ItemDisplay[FILTLVL>0 GOLD<92 DIFF=0 (MAPID=78 OR MAPID=79 OR MAPID=80 OR MAPID=88 OR MAPID=89 OR MAPID=91)]:						// Area Level 22
+ItemDisplay[FILTLVL>0 GOLD<97 DIFF=0 (MAPID=81 OR MAPID=92 OR MAPID=94 OR MAPID=95 OR MAPID=96)]:							// Area Level 23
+ItemDisplay[FILTLVL>0 GOLD<101 DIFF=0 (MAPID=82 OR MAPID=83 OR MAPID=93 OR MAPID=97 OR MAPID=98 OR MAPID=99 OR MAPID=110)]:				// Area Level 24
+ItemDisplay[FILTLVL>0 GOLD<106 DIFF=0 (MAPID=100 OR MAPID=101 OR MAPID=102 OR MAPID=111)]:								// Area Level 25
+ItemDisplay[FILTLVL>0 GOLD<110 DIFF=0 (MAPID=104 OR MAPID=105 OR MAPID=112)]:										// Area Level 26
+ItemDisplay[FILTLVL>0 GOLD<115 DIFF=0 (MAPID=106 OR MAPID=107 OR MAPID=117)]:										// Area Level 27
+ItemDisplay[FILTLVL>0 GOLD<119 DIFF=0 (MAPID=39 OR MAPID=108)]:												// Area Level 28
+ItemDisplay[FILTLVL>0 GOLD<124 DIFF=0 (MAPID=113 OR MAPID=114 OR MAPID=115 OR MAPID=116 OR MAPID=118 OR MAPID=119)]:					// Area Level 29
+ItemDisplay[FILTLVL>0 GOLD<138 DIFF=0 MAPID=121]:													// Area Level 32
+ItemDisplay[FILTLVL>0 GOLD<142 DIFF=0 MAPID=122]:													// Area Level 33
+ItemDisplay[FILTLVL>0 GOLD<147 DIFF=0 MAPID=123]:													// Area Level 34
+ItemDisplay[FILTLVL>0 GOLD<156 ((DIFF=0 MAPID=124) OR (DIFF=1 (MAPID=2 OR MAPID=3 OR MAPID=8 OR MAPID=9 OR MAPID=17)))]:				// Area Level 36
+ItemDisplay[FILTLVL>0 GOLD<161 ((DIFF=0 MAPID=120) OR (DIFF=1 (MAPID=4 OR MAPID=10 OR MAPID=13 OR MAPID=18 OR MAPID=19)))]:				// Area Level 37
+ItemDisplay[FILTLVL>0 GOLD<166 DIFF=1 (MAPID=5 OR MAPID=6 OR MAPID=11 OR MAPID=14 OR MAPID=21)]:							// Area Level 38
+ItemDisplay[FILTLVL>0 GOLD<171 ((DIFF=0 (MAPID>124 MAPID<129)) OR (DIFF=1 (MAPID=7 OR MAPID=12 OR MAPID=15 OR MAPID=22 OR MAPID=38)))]:			// Area Level 39
+ItemDisplay[FILTLVL>0 GOLD<176 ((DIFF=0 MAPID=129) OR (DIFF=1 (MAPID=16 OR MAPID=23 OR MAPID=26 OR MAPID=27 OR MAPID=28)))]:				// Area Level 40
+ItemDisplay[FILTLVL>0 GOLD<180 DIFF=1 (MAPID=24 OR MAPID=29 OR MAPID=30 OR MAPID=31 OR MAPID=32)]:							// Area Level 41
+ItemDisplay[FILTLVL>0 GOLD<185 ((DIFF=0 MAPID=130) OR (DIFF=1 (MAPID=25 OR MAPID=33 OR MAPID=34 OR MAPID=35)))]:					// Area Level 42
+ItemDisplay[FILTLVL>0 GOLD<190 ((DIFF=0 (MAPID=131 OR MAPID=132)) OR (DIFF=1 (MAPID=36 OR MAPID=37 OR MAPID=41 OR MAPID=47 OR MAPID=48)))]:		// Area Level 43
+ItemDisplay[FILTLVL>0 GOLD<195 DIFF=1 (MAPID=42 OR MAPID=49 OR MAPID=55 OR MAPID=56 OR MAPID=59)]:							// Area Level 44
+ItemDisplay[FILTLVL>0 GOLD<200 DIFF=1 (MAPID=43 OR MAPID=57 OR MAPID=60 OR MAPID=62 OR MAPID=63)]:							// Area Level 45
+ItemDisplay[FILTLVL>0 GOLD<205 DIFF=1 (MAPID=44 OR MAPID=45 OR MAPID=64 OR MAPID=65)]:									// Area Level 46
+ItemDisplay[FILTLVL>0 GOLD<210 DIFF=1 (MAPID=51 OR MAPID=52 OR MAPID=53 OR MAPID=58 OR MAPID=61)]:							// Area Level 47
+ItemDisplay[FILTLVL>0 GOLD<215 DIFF=1 (MAPID=46 OR MAPID=54 OR MAPID=74)]:										// Area Level 48
+ItemDisplay[FILTLVL>0 GOLD<220 DIFF=1 ((MAPID>65 MAPID<74) OR MAPID=76)]:										// Area Level 49
+ItemDisplay[FILTLVL>0 GOLD<225 DIFF=1 (MAPID=77 OR MAPID=78 OR MAPID=84 OR MAPID=85)]:									// Area Level 50
+ItemDisplay[FILTLVL>0 GOLD<230 DIFF=1 (MAPID>85 MAPID<92)]:												// Area Level 51
+ItemDisplay[FILTLVL>0 GOLD<235 DIFF=1 (MAPID=79 OR MAPID=80 OR MAPID=81 OR MAPID=92)]:									// Area Level 52
+ItemDisplay[FILTLVL>0 GOLD<240 DIFF=1 (MAPID=82 OR MAPID=93 OR MAPID=94 OR MAPID=95 OR MAPID=96)]:							// Area Level 53
+ItemDisplay[FILTLVL>0 GOLD<245 DIFF=1 (MAPID=83 OR MAPID=97 OR MAPID=98 OR MAPID=99)]:									// Area Level 54
+ItemDisplay[FILTLVL>0 GOLD<250 DIFF=1 (MAPID=100 OR MAPID=101 OR MAPID=102)]:										// Area Level 55
+ItemDisplay[FILTLVL>0 GOLD<255 DIFF=1 (MAPID=104 OR MAPID=105)]:											// Area Level 56
+ItemDisplay[FILTLVL>0 GOLD<260 DIFF=1 (MAPID=106 OR MAPID=107)]:											// Area Level 57
+ItemDisplay[FILTLVL>0 GOLD<265 DIFF=1 (MAPID=108 OR MAPID=110)]:											// Area Level 58
+ItemDisplay[FILTLVL>0 GOLD<270 DIFF=1 MAPID=111]:													// Area Level 59
+ItemDisplay[FILTLVL>0 GOLD<276 DIFF=1 (MAPID=112 OR MAPID=117 OR MAPID=125)]:										// Area Level 60
+ItemDisplay[FILTLVL>0 GOLD<281 DIFF=1 (MAPID=113 OR MAPID=114 OR MAPID=115 OR MAPID=116 OR MAPID=126)]:							// Area Level 61
+ItemDisplay[FILTLVL>0 GOLD<286 DIFF=1 (MAPID=118 OR MAPID=119 OR MAPID=127)]:										// Area Level 62
+ItemDisplay[FILTLVL>0 GOLD<291 DIFF=1 (MAPID=121 OR MAPID=122)]:											// Area Level 63
+ItemDisplay[FILTLVL>0 GOLD<296 DIFF=1 (MAPID=39 OR MAPID=123 OR MAPID=124)]:										// Area Level 64
+ItemDisplay[FILTLVL>0 GOLD<302 DIFF=1 (MAPID=128 OR MAPID=129)]:											// Area Level 65
+ItemDisplay[FILTLVL>0 GOLD<307 DIFF=1 (MAPID=130 OR MAPID=131 OR MAPID=132)]:										// Area Level 66
 ItemDisplay[FILTLVL>0 GOLD<312 DIFF=0 MAPID=2]:														// Area Level 67
-ItemDisplay[FILTLVL>0 GOLD<318 ((DIFF=1 MAPID=120) OR (DIFF=2 (MAPID=3 OR MAPID=4 OR MAPID=5)))]:							// Area Level 68							
-ItemDisplay[FILTLVL>0 GOLD<323 DIFF=2 (MAPID=6 OR MAPID=7 OR MAPID=10)]:										// Area Level 69				
-ItemDisplay[FILTLVL>0 GOLD<329 DIFF=2 (MAPID=26 OR MAPID=27 OR MAPID=28)]:										// Area Level 70				
-ItemDisplay[FILTLVL>0 GOLD<334 DIFF=2 (MAPID=29 OR MAPID=30 OR MAPID=31)]:										// Area Level 71				
-ItemDisplay[FILTLVL>0 GOLD<339 DIFF=2 (MAPID=32 OR MAPID=33)]:												// Area Level 72		
-ItemDisplay[FILTLVL>0 GOLD<350 DIFF=2 (MAPID=47 OR MAPID=48)]:												// Area Level 74		
-ItemDisplay[FILTLVL>0 GOLD<356 DIFF=2 (MAPID=41 OR MAPID=49)]:												// Area Level 75		
-ItemDisplay[FILTLVL>0 GOLD<361 DIFF=2 (MAPID=42 OR MAPID=43)]:												// Area Level 76		
-ItemDisplay[FILTLVL>0 GOLD<367 DIFF=2 (MAPID=9 OR MAPID=44 OR MAPID=45)]:										// Area Level 77				
-ItemDisplay[FILTLVL>0 GOLD<372 DIFF=2 (MAPID=13 OR MAPID=51 OR MAPID=52 OR MAPID=53 OR MAPID=54)]:							// Area Level 78							
-ItemDisplay[FILTLVL>0 GOLD<378 DIFF=2 (MAPID=8 OR MAPID=56 OR MAPID=74 OR MAPID=76 OR MAPID=84 OR MAPID=85)]:						// Area Level 79								
-ItemDisplay[FILTLVL>0 GOLD<384 DIFF=2 (MAPID=34 OR MAPID=35 OR MAPID=46 OR MAPID=73 OR MAPID=77 OR MAPID=78 OR MAPID=79 OR MAPID=110)]:			// Area Level 80											
-ItemDisplay[FILTLVL>0 GOLD<389 DIFF=2 (MAPID=39 OR MAPID=80 OR MAPID=81 OR MAPID=82 OR MAPID=88 OR MAPID=111 OR MAPID=112 OR MAPID=117)]:		// Area Level 81												
-ItemDisplay[FILTLVL>0 GOLD<395 DIFF=2 (MAPID=21 OR MAPID=38 OR MAPID=57 OR (MAPID>65 MAPID<73) OR MAPID=83 OR MAPID=104 OR MAPID=113)]:			// Area Level 82											
-ItemDisplay[FILTLVL>0 GOLD<400 DIFF=2 (MAPID=14 OR MAPID=22 OR (MAPID>99 MAPID<103) OR MAPID=114 OR MAPID=115 OR MAPID=119 OR MAPID=121 OR MAPID=122)]:	// Area Level 83													
-ItemDisplay[FILTLVL>0 GOLD<406 DIFF=2 (MAPID=23 OR MAPID=106 OR MAPID=123 OR MAPID=124)]:								// Area Level 84						
-ItemDisplay[FILTLVL>0 GOLD<412 DIFF=2 (MAPID=11 OR MAPID=12 OR (MAPID>14 MAPID<20) OR MAPID=24 OR MAPID=25 OR MAPID=36 OR MAPID=37 OR MAPID=55 OR (MAPID>57 MAPID<66) OR MAPID=86 OR MAPID=87 OR (MAPID>88 MAPID<100) OR MAPID=105 OR MAPID=107 OR MAPID=108 OR MAPID=116 OR (MAPID>124 MAPID<136))]:		// Area Level 85												
-ItemDisplay[FILTLVL>0 GOLD<423 DIFF=2 (MAPID=120 OR MAPID=142 OR MAPID=143 OR MAPID=149 OR MAPID=167 OR MAPID=170)]:					// Area Level 87 (T1 Maps)									
-ItemDisplay[FILTLVL>0 GOLD<429 DIFF=2 (MAPID=139 OR MAPID=141 OR MAPID=145 OR MAPID=148 OR MAPID=151 OR MAPID=169)]:					// Area Level 88 (T2 Maps)									
-ItemDisplay[FILTLVL>0 GOLD<435 DIFF=2 (MAPID=144 OR MAPID=146 OR MAPID=147 OR MAPID=150 OR (MAPID>153 MAPID<157) OR MAPID=158 OR MAPID=160)]:		// Area Level 89 (T3 Maps)												
-ItemDisplay[FILTLVL>0 GOLD<441 DIFF=2 (MAPID=152 OR MAPID=153 OR MAPID=164 OR MAPID=165 OR MAPID=171 OR MAPID=172 OR MAPID=173)]:			// Area Level 90 (Dungeons)											
-ItemDisplay[FILTLVL>0 GOLD<494 DIFF=2 (MAPID=136 OR MAPID=137 OR MAPID=161 OR MAPID=162 OR MAPID=163 OR MAPID=168)]:					// Uber Areas									
+ItemDisplay[FILTLVL>0 GOLD<318 ((DIFF=1 MAPID=120) OR (DIFF=2 (MAPID=3 OR MAPID=4 OR MAPID=5)))]:							// Area Level 68
+ItemDisplay[FILTLVL>0 GOLD<323 DIFF=2 (MAPID=6 OR MAPID=7 OR MAPID=10)]:										// Area Level 69
+ItemDisplay[FILTLVL>0 GOLD<329 DIFF=2 (MAPID=26 OR MAPID=27 OR MAPID=28)]:										// Area Level 70
+ItemDisplay[FILTLVL>0 GOLD<334 DIFF=2 (MAPID=29 OR MAPID=30 OR MAPID=31)]:										// Area Level 71
+ItemDisplay[FILTLVL>0 GOLD<339 DIFF=2 (MAPID=32 OR MAPID=33)]:												// Area Level 72
+ItemDisplay[FILTLVL>0 GOLD<350 DIFF=2 (MAPID=47 OR MAPID=48)]:												// Area Level 74
+ItemDisplay[FILTLVL>0 GOLD<356 DIFF=2 (MAPID=41 OR MAPID=49)]:												// Area Level 75
+ItemDisplay[FILTLVL>0 GOLD<361 DIFF=2 (MAPID=42 OR MAPID=43)]:												// Area Level 76
+ItemDisplay[FILTLVL>0 GOLD<367 DIFF=2 (MAPID=9 OR MAPID=44 OR MAPID=45)]:										// Area Level 77
+ItemDisplay[FILTLVL>0 GOLD<372 DIFF=2 (MAPID=13 OR MAPID=51 OR MAPID=52 OR MAPID=53 OR MAPID=54)]:							// Area Level 78
+ItemDisplay[FILTLVL>0 GOLD<378 DIFF=2 (MAPID=8 OR MAPID=56 OR MAPID=74 OR MAPID=76 OR MAPID=84 OR MAPID=85)]:						// Area Level 79
+ItemDisplay[FILTLVL>0 GOLD<384 DIFF=2 (MAPID=34 OR MAPID=35 OR MAPID=46 OR MAPID=73 OR MAPID=77 OR MAPID=78 OR MAPID=79 OR MAPID=110)]:			// Area Level 80
+ItemDisplay[FILTLVL>0 GOLD<389 DIFF=2 (MAPID=39 OR MAPID=80 OR MAPID=81 OR MAPID=82 OR MAPID=88 OR MAPID=111 OR MAPID=112 OR MAPID=117)]:		// Area Level 81
+ItemDisplay[FILTLVL>0 GOLD<395 DIFF=2 (MAPID=21 OR MAPID=38 OR MAPID=57 OR (MAPID>65 MAPID<73) OR MAPID=83 OR MAPID=104 OR MAPID=113)]:			// Area Level 82
+ItemDisplay[FILTLVL>0 GOLD<400 DIFF=2 (MAPID=14 OR MAPID=22 OR (MAPID>99 MAPID<103) OR MAPID=114 OR MAPID=115 OR MAPID=119 OR MAPID=121 OR MAPID=122)]:	// Area Level 83
+ItemDisplay[FILTLVL>0 GOLD<406 DIFF=2 (MAPID=23 OR MAPID=106 OR MAPID=123 OR MAPID=124)]:								// Area Level 84
+ItemDisplay[FILTLVL>0 GOLD<412 DIFF=2 (MAPID=11 OR MAPID=12 OR (MAPID>14 MAPID<20) OR MAPID=24 OR MAPID=25 OR MAPID=36 OR MAPID=37 OR MAPID=55 OR (MAPID>57 MAPID<66) OR MAPID=86 OR MAPID=87 OR (MAPID>88 MAPID<100) OR MAPID=105 OR MAPID=107 OR MAPID=108 OR MAPID=116 OR (MAPID>124 MAPID<136))]:		// Area Level 85
+ItemDisplay[FILTLVL>0 GOLD<846 DIFF=2 (MAPID=120 OR MAPID=142 OR MAPID=143 OR MAPID=149 OR MAPID=167 OR MAPID=170)]:					// Area Level 87 (T1 Maps)
+ItemDisplay[FILTLVL>0 GOLD<858 DIFF=2 (MAPID=139 OR MAPID=141 OR MAPID=145 OR MAPID=148 OR MAPID=151 OR MAPID=169)]:					// Area Level 88 (T2 Maps)
+ItemDisplay[FILTLVL>0 GOLD<870 DIFF=2 (MAPID=144 OR MAPID=146 OR MAPID=147 OR MAPID=150 OR (MAPID>153 MAPID<157) OR MAPID=158 OR MAPID=160)]:		// Area Level 89 (T3 Maps)
+ItemDisplay[FILTLVL>0 GOLD<882 DIFF=2 (MAPID=152 OR MAPID=153 OR MAPID=164 OR MAPID=165 OR MAPID=171 OR MAPID=172 OR MAPID=173)]:			// Area Level 90 (Dungeons)
+ItemDisplay[FILTLVL>0 GOLD<988 DIFF=2 (MAPID=136 OR MAPID=137 OR MAPID=161 OR MAPID=162 OR MAPID=163 OR MAPID=168)]:					// Uber Areas
 
 // Gold (anything not hidden is displayed normally)
 ItemDisplay[GOLD>0]: %NAME%
@@ -174,7 +174,7 @@ ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key)]: %NAME% %WHITE%×
 //ItemDisplay[(bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2)]: %NAME%{%NAME%}	// non-equipment (listed here for reference)
 ItemDisplay[box FILTLVL=4]:	%NAME%{%GRAY%It is currently the same as Low Strictness%NL%The current filter level, High Strictness, is a work in progress%NL%%WHITE%Season 5 Beta}
 ItemDisplay[box FILTLVL=3]:	%NAME%{%GRAY%It is currently the same as Low Strictness%NL%The current filter level, Moderate Strictness, is a work in progress%NL%%WHITE%Season 5 Beta}
-ItemDisplay[box FILTLVL=2]:	%NAME%{%GRAY%More info will be added before the season begins%NL%The current filter level, Low Strictness (Extra Info), is a work in progress%NL%%WHITE%Season 5 Beta}
+ItemDisplay[box FILTLVL=2]:	%NAME%{%GRAY%The current filter level, Low Strictness (Extra Info), is a work in progress%NL%%WHITE%Season 5 Beta}
 
 // Endgame Quest Items  (includes notifications)
 ItemDisplay[tes !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Andariel & Duriel)}%WHITE%						// Twisted Essence of Suffering
@@ -299,7 +299,7 @@ ItemDisplay[skzs]: %NAME%{%WHITE%Shields: Attacker Takes Damage of 20%NL%Armors:
 ItemDisplay[GEMLEVEL=1]: *%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
 ItemDisplay[GEMLEVEL=2]: +%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
 ItemDisplay[GEMLEVEL=3]: ¤%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
-ItemDisplay[(GEMLEVEL=4 OR gzv OR glw OR glg OR glr OR glb OR gly OR skl)]: o%ORANGE%]  %WHITE%%NAME%{%NAME%}%CONTINUE%				// flawless
+ItemDisplay[(GEMLEVEL=4 OR gzv OR glw OR glg OR glr OR glb OR gly OR skl)]: o%ORANGE%]  %WHITE%%NAME%%PX-60%%TIER-0%{%NAME%}%CONTINUE%		// flawless (map icons without text notifications)
 ItemDisplay[(GEMLEVEL=5 OR gpv OR gpw OR gpg OR gpr OR gpb OR gpy OR skz)]: @%ORANGE%]  %WHITE%%NAME%%MAP-60%%DOT-20%%TIER-9%{%NAME%}%CONTINUE%	// perfect (notifications)
 ItemDisplay[GEMTYPE=1]: %ORANGE%[%PURPLE%%NAME%{%NAME%}%CONTINUE%
 ItemDisplay[GEMTYPE=2]: %ORANGE%[%WHITE%%NAME%{%NAME%}%CONTINUE%
@@ -394,7 +394,7 @@ ItemDisplay[RUNE=31]:	%BORDER-60%%TIER-9%              %NAME%              {%NAM
 ItemDisplay[RUNE=30]:	%BORDER-60%%TIER-9%                %NAME%                {%NAME%}	// Ber
 
 // Highlighting: Collective Rules  (notifications for runes #10-23, higher runes are covered individually above)
-ItemDisplay[RUNE>0 RUNE<10]:		%NAME%{%NAME%}
+ItemDisplay[RUNE>0 RUNE<10]:		%PX-60%%TIER-0%%NAME%{%NAME%}				// map icons without text notifications
 ItemDisplay[RUNE>9 RUNE<15]:		%PX-60%%TIER-9%%NAME%{%NAME%}
 ItemDisplay[RUNE>14 RUNE<20]:		%DOT-60%%TIER-9% %NAME% {%NAME%}
 ItemDisplay[(RUNE=20 OR RUNE=21)]:	%MAP-60%%TIER-9%  %NAME%  {%NAME%}
@@ -418,8 +418,8 @@ ItemDisplay[jew RARE !ID]:								%DOT-6D%  %NAME%  {%NAME%}%WHITE%			// unid ra
 ItemDisplay[jew RARE ILVL>64]:								%YELLOW%%NAME%{%WHITE%Item Level: %ILVL%}%CONTINUE%	// adds ilvl description to rare jewels if high enough to consider rerolling
 ItemDisplay[MAG ID ((cm1 (ALVL=47 OR (ALVL>56 ALVL<63) OR ALVL>90)) OR (cm3 ALVL>90))]:	%NAME%{%WHITE%Item Level: %TAN%%ILVL%}%WHITE%		// charms (best ilvl for rerolling, colored tan)
 ItemDisplay[MAG ID ((cm1 ALVL>46) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]:			%NAME%{%WHITE%Item Level: %ILVL%}%WHITE%		// charms (okay ilvl for rerolling)
-//ItemDisplay[MAG !ID jew]: %DOT-97%%NAME%{%NAME%}%WHITE%											// enabling this rule will notify you of unidentified magic jewels 
-//ItemDisplay[MAG !ID ((cm1 ALVL>46) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]: %DOT-9B%%NAME%{%NAME%}%WHITE%						// enabling this rule will notify you of unidentified magic charms that are capable of getting okay affixes
+ItemDisplay[MAG !ID jew]: %DOT-97%%TIER-0%%NAME%{%NAME%}%WHITE%											// map icons without text notifications for unidentified magic jewels 
+ItemDisplay[MAG !ID ((cm1 ALVL>46) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]: %DOT-9B%%TIER-0%%NAME%{%NAME%}%WHITE%					// map icons without text notifications for unidentified magic charms that are capable of getting okay affixes
 
 
 // +-------------------------+
@@ -455,7 +455,7 @@ ItemDisplay[!(ARMOR OR (WEAPON !(opl OR opm OR ops OR gpl OR gpm OR gps)) OR ((a
 ItemDisplay[(!NMAG OR leg) SOCK>0]: %NAME% %GRAY%[%SOCKETS%]%CONTINUE%
 
 // Modification: Ethereal
-ItemDisplay[STAT73>0 STAT72=0]: %RED%%NAME%%CONTINUE%			// broken items are red
+ItemDisplay[STAT73>0 STAT72=0]: %RED%%NAME%%CONTINUE%			// broken items are red like vanilla
 ItemDisplay[MAG ETH]: %BLUE%%NAME%%CONTINUE%
 ItemDisplay[UNI ETH]: %GOLD%%NAME%%CONTINUE%
 ItemDisplay[RARE ETH]: %YELLOW%%NAME%%CONTINUE%
