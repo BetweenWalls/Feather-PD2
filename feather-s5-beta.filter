@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
-//	"Feather" Item Filter for Project Diablo II - Season 5 Beta
-//		Date Updated:	15 JUNE 2022
+//	"Feather" Item Filter for Project Diablo II
+//		Date Updated:	20 JUNE 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -20,8 +20,8 @@
 // +---------------+
 ItemDisplayFilterName[]:Low Strictness			// default
 ItemDisplayFilterName[]:Low Strictness (Extra Info)	// shows extra info like rune combinations for runewords, weapon speed/range, extra recipes, etc
-ItemDisplayFilterName[]:Moderate Strictness		// planned version
-ItemDisplayFilterName[]:High Strictness			// planned version
+//ItemDisplayFilterName[]:Moderate Strictness		// planned version
+//ItemDisplayFilterName[]:High Strictness		// planned version
 
 // +------------------+
 //-¦ Gold and Potions ¦--------------------------------------------------------------------------------------------------
@@ -172,9 +172,6 @@ ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key)]: %NAME% %WHITE%×
 // Quest Items
 //ItemDisplay[(hdm OR msf OR vip OR hst OR g33 OR qf1 OR qf2 OR hfh)]: %NAME%{%NAME%}%CONTINUE%						// equipment	 (listed here for reference)
 //ItemDisplay[(bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2)]: %NAME%{%NAME%}	// non-equipment (listed here for reference)
-ItemDisplay[box FILTLVL=4]:	%NAME%{%GRAY%It is currently the same as Low Strictness%NL%The current filter level, High Strictness, is a work in progress%NL%%WHITE%Season 5 Beta}
-ItemDisplay[box FILTLVL=3]:	%NAME%{%GRAY%It is currently the same as Low Strictness%NL%The current filter level, Moderate Strictness, is a work in progress%NL%%WHITE%Season 5 Beta}
-ItemDisplay[box FILTLVL=2]:	%NAME%{%GRAY%The current filter level, Low Strictness (Extra Info), is a work in progress%NL%%WHITE%Season 5 Beta}
 
 // Endgame Quest Items  (includes notifications)
 ItemDisplay[tes !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Andariel & Duriel)}%WHITE%						// Twisted Essence of Suffering
