@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	20 JUNE 2022
+//		Date Updated:	22 JUNE 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -192,9 +192,9 @@ ItemDisplay[lbox !FILTLVL=2]:	%MAP-50%%TIER-9%        %NAME%        {%NAME%}%WHI
 ItemDisplay[lpp !FILTLVL=2]:	%MAP-50%%TIER-9%     %NAME%     {%NAME%}%WHITE%								// Larzuk's Puzzlepiece
 ItemDisplay[ubtm !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Fall of Tristram}%WHITE%						// Pandemonium Talisman  (Uber Tristram)
 ItemDisplay[uba !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  %WHITE%									// Relic of the Ancients (Uber Ancients)
-ItemDisplay[ubaa FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(T1 Maps)}%WHITE%							// Sigil of Madawc	 (Uber Ancients ingredient)
-ItemDisplay[ubab FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(T2 Maps)}%WHITE%							// Sigil of Talic	 (Uber Ancients ingredient)
-ItemDisplay[ubac FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(T3 Maps)}%WHITE%							// Sigil of Korlic	 (Uber Ancients ingredient)
+ItemDisplay[ubaa !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(T1 Maps)}%WHITE%							// Sigil of Madawc	 (Uber Ancients ingredient)
+ItemDisplay[ubab !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(T2 Maps)}%WHITE%							// Sigil of Talic	 (Uber Ancients ingredient)
+ItemDisplay[ubac !FILTLVL=2]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(T3 Maps)}%WHITE%							// Sigil of Korlic	 (Uber Ancients ingredient)
 ItemDisplay[dcma !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Diablo Walks the Earth}%WHITE%						// Vision of Terror	 (DClone)
 ItemDisplay[dcso !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Diablo / Baal)}%WHITE%	// Prime Evil Soul	 (DClone ingredient)
 ItemDisplay[dcho !FILTLVL=2]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Uber Tristram)}%WHITE%	// Black Soulstone	 (DClone ingredient)
