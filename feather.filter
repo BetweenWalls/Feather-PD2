@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	28 JUNE 2022
+//		Date Updated:	4 JULY 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -220,7 +220,7 @@ ItemDisplay[scrb]:	%MAP-53%%TIER-9%    %NAME%    {Transforms a %DARK_GREEN%(%TAN
 ItemDisplay[NMAG (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %WHITE%%NAME% %CONTINUE%		// maps - regular
 ItemDisplay[MAG  (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %BLUE%%MAP%%NAME% %CONTINUE%	// maps - magic (adds blue minimap border)
 ItemDisplay[RARE (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %YELLOW%%MAP%%NAME% %CONTINUE%	// maps - rare (adds yellow minimap border)
-ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19)]:	%MAP-77%%DOT-53%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%T1%DARK_GREEN%)%CONTINUE%		// maps - T1 (Ruins of Viz-Jun, Horazon's Memory, Bastion Keep, Royal Crypts, Sanatorium)
+ItemDisplay[(t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19)]:	%MAP-77%%DOT-53%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%T1%DARK_GREEN%)%CONTINUE%		// maps - T1 (Ruins of Viz-Jun, Horazon's Memory, Bastion Keep, Sanatorium, Royal Crypts)
 ItemDisplay[(t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29)]:	%MAP-77%%DOT-53%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%		// maps - T2 (Phlegethon, Torajan Jungle, Arreat Battlefield, Tomb of Zultan Kulle, Sewers of Harrogath, Shadows of Westmarch)
 ItemDisplay[(t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39)]:	%MAP-77%%DOT-53%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%		// maps - T3 (River of Blood, Throne of Insanity, Lost Temple, Ancestral Trial, Blood Moon, Fall of Caldeum, Pandemonium Citadel, Canyon of Sescheron, Kehjistan Marketplace)
 ItemDisplay[(t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]:	%MAP-77%%DOT-53%%PX-50%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%)%CONTINUE%	// dungeons  (Cathedral of Light, Plains of Torment, Sanctuary of Sin)
@@ -265,7 +265,7 @@ ItemDisplay[FILTLVL=2 t11]: %NAME%{%WHITE%Highest Immunes: %RED%145% %BLUE%160% 
 ItemDisplay[FILTLVL=2 t12]: %NAME%{%WHITE%Highest Immunes: %RED%135% %YELLOW%100% %GREEN%120%}%CONTINUE%
 ItemDisplay[FILTLVL=2 t13]: %NAME%{%WHITE%Highest Immunes: %RED%120% %YELLOW%135% %GREEN%120%}%CONTINUE%
 ItemDisplay[FILTLVL=2 t14]: %NAME%{%WHITE%Highest Immunes: %RED%130% %BLUE%130% %GREEN%140%}%CONTINUE%
-ItemDisplay[FILTLVL=2 t15]: %NAME%{%WHITE%Highest Immunes: %BLUE%120% %YELLOW%100% %GREEN%105% %GOLD%115% %ORANGE%150%}%CONTINUE%
+ItemDisplay[FILTLVL=2 t15]: %NAME%{%WHITE%Highest Immunes: %YELLOW%100% %GREEN%105% %GOLD%115% %ORANGE%150%}%CONTINUE%
 ItemDisplay[FILTLVL=2 t21]: %NAME%{%WHITE%Highest Immunes: %RED%140% %YELLOW%120% %GREEN%120%}%CONTINUE%
 ItemDisplay[FILTLVL=2 t22]: %NAME%{%WHITE%Highest Immunes: %BLUE%140% %YELLOW%105% %GREEN%100%}%CONTINUE%
 ItemDisplay[FILTLVL=2 t23]: %NAME%{%WHITE%Highest Immunes: %RED%130% %YELLOW%100% %GREEN%115%}%CONTINUE%
