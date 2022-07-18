@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	15 JULY 2022
+//		Date Updated:	18 JULY 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -19,9 +19,9 @@
 //-¦ Filter Levels ¦-----------------------------------------------------------------------------------------------------
 // +---------------+
 							// level 0 - show all items
-ItemDisplayFilterName[]:Min Strictness (Extra Info)	// level 1 - items include extra info like rune combinations for runewords, weapon speed/range, extra recipes, etc
-ItemDisplayFilterName[]:Minimum Strictness		// level 2 - default, notifies for more items, shows all magic equipment and most regular equipment (may show too many items to display them all simultaneously in some cases)
-ItemDisplayFilterName[]:Low Strictness			// level 3 - recommended
+ItemDisplayFilterName[]:Min Strictness (Extra Info)	// level 1 - same as "Minimum Strictness" but items include extra info like rune combinations for runewords, weapon speed/range, map immunities, extra recipes, etc
+ItemDisplayFilterName[]:Minimum Strictness		// level 2 - notifies for more items, shows all magic equipment and most regular equipment (may show too many items to display them all simultaneously in some cases)
+ItemDisplayFilterName[]:Low Strictness			// level 3 - same as original strictness (before filter levels were introduced)
 ItemDisplayFilterName[]:Moderate Strictness		// level 4 - hides larger gold piles and additional regular/magic items at level 80+
 ItemDisplayFilterName[]:High Strictness			// level 5 - hides larger gold piles and additional regular/magic items at level 80+ (even more)
 ItemDisplayFilterName[]:Maximum Strictness		// level 6 - hides larger gold piles, super potions, and additional regular/magic items at level 90+
@@ -509,7 +509,7 @@ ItemDisplay[!NMAG ETH  (REPAIR>0 OR STAT152>0 OR THROWING OR 7cr OR (UNI ((7ba L
 ItemDisplay[!NMAG ETH !(REPAIR>0 OR STAT152>0 OR THROWING OR 7cr OR (UNI ((7ba LVLREQ=74) OR (7bl LVLREQ=66) OR 7cs)) OR (UNI !ID (xla OR xpl OR uul OR uvb OR 9la OR 9cr OR 9st OR 7gd OR 7b7 OR 7p7 OR 7wh OR 7ba OR 7bl)))]: %GRAY%eth %NAME%%CONTINUE%	// Ethereal (not unbreakable)
 
 // Modification: Repair Recipe
-ItemDisplay[STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) !ETH ARMOR !(NMAG SOCK=0)]:			%NAME%{%WHITE%Repair Recipe: %ORANGE%Ral Rune%TAN%(%WHITE%8%TAN%)}%WHITE%
+ItemDisplay[STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) !ETH ARMOR]:					%NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%8%TAN%)}%WHITE%
 ItemDisplay[STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) !ETH WEAPON !THROWING !7cr !(NMAG SOCK=0)]:	%NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%9%TAN%)}%WHITE%
 ItemDisplay[STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) ETH !THROWING !7cr !(NMAG SOCK=0)]:		%NAME%{%WHITE%Repair Recipe: %ORANGE%[%GRAY%@%ORANGE%]%GRAY%+%TAN%(%WHITE%33%TAN%)}%WHITE%
 
@@ -1063,7 +1063,7 @@ ItemDisplay[FILTLVL>2 NMAG ELT CLVL>79  !(ETH OR ED>0 OR SOCK>2) ((uap OR ukp OR
 // Hidden: Additional regular non-class items for stricter filter levels - level 80
 ItemDisplay[FILTLVL>3 DIFF=2 NMAG ED=0 SOCK=0 !ETH !ELT CLVL>79 !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}		// filter level 4 - hides regular non-class normal/exceptional plain items
 ItemDisplay[FILTLVL>3 DIFF=2 NMAG CLVL>79 ((CIRC !ci3) OR (uit SOCK>0 SOCK<4)) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}															// filter level 4 - hides non-diadem circlets, monarchs without 0/4 sockets
-ItemDisplay[FILTLVL>4 DIFF=2 NMAG ED=0 SOCK=0 !ETH CLVL>79 !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}			// filter level 5 - hides regular non-class plain items
+ItemDisplay[FILTLVL>4 DIFF=2 NMAG ED=0 SOCK=0 !ETH CLVL>79 !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) !ci3 !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}		// filter level 5 - hides regular non-class plain items, except diadems (for imbuing)
 
 // Highlighting
 ItemDisplay[NMAG !RW !ETH ((SOCK=5 ED>0 7cr) OR (SOCK=4 ED>0 6rx) OR (SOCK=4 ED>0 6hx) OR (SOCK=3 ED>0 utp))]:	%DOT-20%%TIER-9%  %NAME%{%NAME%}  %WHITE%	// adds notifications for valuable non-eth bases: sup 5s Phase Blade, sup 4s Demon Crossbow, sup 4s Colossus Crossbow, sup 3s Archon Plate
