@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	18 JULY 2022
+//		Date Updated:	10 AUGUST 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -31,7 +31,7 @@ ItemDisplayFilterName[]:Maximum Strictness		// level 6 - hides larger gold piles
 //-¦ Gold and Potions ¦--------------------------------------------------------------------------------------------------
 // +------------------+
 // Hidden: Gold based on area levels, amount = 4×level + level²/100	(doubled for maps since they often give extra gold find)
-ItemDisplay[FILTLVL>0 GOLD<4 DIFF=0 (MAPID=2 OR MAPID=8)]:													// Area Level 1
+ItemDisplay[FILTLVL>0 GOLD>0 GOLD<4 DIFF=0 (MAPID=2 OR MAPID=8)]:												// Area Level 1
 ItemDisplay[FILTLVL>0 GOLD>0 GOLD<8 DIFF=0 (MAPID=3 OR MAPID=9 OR MAPID=13)]:											// Area Level 2
 ItemDisplay[FILTLVL>0 GOLD>0 GOLD<12 DIFF=0 (MAPID=17 OR MAPID=18 OR MAPID=19)]:										// Area Level 3
 ItemDisplay[FILTLVL>0 GOLD>0 GOLD<16 DIFF=0 (MAPID=4 OR MAPID=10 OR MAPID=14)]:											// Area Level 4
@@ -173,7 +173,7 @@ ItemDisplay[FILTLVL>0 yps CLVL>89 !(MAPID>160 MAPID<164) !(MAPID=1 OR MAPID=40 O
 // Modification
 ItemDisplay[wss]:	%RED%Worldstone Shard%CONTINUE%									// sets color for Worldstone Shard
 ItemDisplay[lbox]:	%RED%Larzuk's Puzzlebox%CONTINUE%								// sets color for Larzuk's Puzzlebox
-ItemDisplay[lpp]:	%RED%Larzuk's Puzzleprism%CONTINUE%								// sets color for Larzuk's Puzzlepiece (and name)
+ItemDisplay[lpp]:	%RED%Larzuk's Puzzlepyramid%CONTINUE%								// sets color for Larzuk's Puzzlepiece (and name)
 ItemDisplay[cwss]:	%RED%Tainted Worldstone Shard%CONTINUE%								// sets color for Tainted Worldstone Shard
 ItemDisplay[RUNE>0]:	%NAME% %TAN%(%WHITE%%RUNENUM%%TAN%)%WHITE%%CONTINUE%						// appends rune number to runes
 ItemDisplay[jewf]:	%WHITE%Jewel Fragment%CONTINUE%									// changes name of Jewel Fragments from plural to singular
@@ -492,6 +492,7 @@ ItemDisplay[(amu OR rin) !ID RARE]:	%DOT-6D%%TIER-9%  %NAME%  %WHITE%			// highl
 //-¦ General Equipment ¦-------------------------------------------------------------------------------------------------
 // +-------------------+
 // Catchall - Non-Equipment
+ItemDisplay[(ILVL>1 OR QTY>0 OR LVLREQ>1 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR jew OR jewf OR cm1 OR cm2 OR cm3 OR ram OR RUNE>0 OR GEMTYPE>0 OR rvs OR rvl OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5 OR yps OR wms OR vps OR bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR tbk OR ibk OR tsc OR isc OR key OR ear OR std OR wss OR lbox OR lpp OR ubtm OR dcma OR rtma OR dcso OR dcho OR dcbl OR rtmv OR rtmo OR rtmf OR cwss OR rtp OR rid OR lsvl OR llmr OR rkey OR uba OR ubaa OR ubab OR ubac OR imma OR imra OR upma OR scou OR rera OR upmp OR scrb OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49 OR t61 OR t62)]: %MAP%%NAME%{%NAME%}%WHITE%	// notifications for unknown items
 ItemDisplay[!(ARMOR OR (WEAPON !(opl OR opm OR ops OR gpl OR gpm OR gps)) OR ((amu OR rin) (UNI OR SET OR CRAFT)) OR ((jew OR cm1 OR cm2 OR cm3) UNI) OR ram)]: %NAME%{%NAME%}%WHITE%	// displays most non-equipment items as normal
 
 // Modification: Sockets (regular items are handled in their own category)
