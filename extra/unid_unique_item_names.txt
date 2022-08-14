@@ -1,0 +1,519 @@
+// Put these rules at the top of the "Unique/Set Items (unidentified)" category to make unidentified unique/set items appear with their identified names
+
+// Individual Names for Unidentified Unique Items
+ItemDisplay[UNI !ID ETH]:	%GRAY%eth %CONTINUE%
+ItemDisplay[UNI !ID !ETH]:	%CONTINUE%
+// ... Shared Bases
+ItemDisplay[UNI !ID uhm ILVL>76]:	%NAME%%GOLD%Spired Helm - Veil of Steel / Nightwing's Veil%WHITE%		// 
+ItemDisplay[UNI !ID uhm ILVL<77]:	%NAME%%GOLD%Spired Helm - Nightwing's Veil%CONTINUE%				// 
+ItemDisplay[UNI !ID uar (ILVL<87 OR ETH)]:	%NAME%%GOLD%Sacred Armor - Templar's Might%CONTINUE%			// 
+ItemDisplay[UNI !ID uar ILVL>86 !ETH]:	%NAME%%GOLD%Sacred Armor - Tyrael's Might / Templar's Might%WHITE%		// 
+ItemDisplay[UNI !ID 7fl ILVL<86]:	%NAME%%GOLD%Scourge - Horizon's Tornado%CONTINUE%				// 
+ItemDisplay[UNI !ID 7fl ILVL>85]:	%NAME%%GOLD%Scourge - Stormlash / Horizon's Tornado%WHITE%			// 
+ItemDisplay[UNI !ID 7wh ILVL<83]:	%NAME%%GOLD%Legendary Mallet - Stone Crusher%CONTINUE%				// 
+ItemDisplay[UNI !ID 7wh ILVL>82]:	%NAME%%GOLD%Legendary Mallet - Schaefer's Hammer / Stone Crusher%WHITE%		// 
+ItemDisplay[UNI !ID 7gm ILVL<85]:	%NAME%%GOLD%Thunder Maul - Earth Shifter%CONTINUE%				// 
+ItemDisplay[UNI !ID 7gm ILVL>84]:	%NAME%%GOLD%Thunder Maul - The Cranium Basher / Earth Shifter%WHITE%		// 
+ItemDisplay[UNI !ID 7cr ILVL<87]:	%NAME%%GOLD%Phase Blade - Lightsabre%CONTINUE%					// 
+ItemDisplay[UNI !ID 7cr ILVL>86]:	%NAME%%GOLD%Phase Blade - Azurewrath / Lightsabre%WHITE%			// 
+ItemDisplay[UNI !ID 7sc ILVL<80]:	%NAME%%GOLD%Mighty Scepter - Heaven's Light%CONTINUE%				// 
+ItemDisplay[UNI !ID 7sc ILVL>79]:	%NAME%%GOLD%Mighty Scepter - The Redeemer / Heaven's Light%WHITE%		// 
+// ... Helms
+ItemDisplay[UNI !ID cap]:	%NAME%%GOLD%Cap - Biggin's Bonnet%CONTINUE%				// 
+ItemDisplay[UNI !ID skp]:	%NAME%%GOLD%Skull Cap - Tarnhelm%CONTINUE%				// 
+ItemDisplay[UNI !ID hlm]:	%NAME%%GOLD%Helm - Coif of Glory%CONTINUE%				// 
+ItemDisplay[UNI !ID fhl]:	%NAME%%GOLD%Full Helm - Duskdeep%CONTINUE%				// 
+ItemDisplay[UNI !ID msk]:	%NAME%%GOLD%Mask - The Face of Horror%CONTINUE%				// 
+ItemDisplay[UNI !ID bhm]:	%NAME%%GOLD%Bone Helm - Wormskull%CONTINUE%				// 
+ItemDisplay[UNI !ID ghm]:	%NAME%%GOLD%Great Helm - Howltusk%CONTINUE%				// 
+ItemDisplay[UNI !ID crn]:	%NAME%%GOLD%Crown - Undead Crown%CONTINUE%				// 
+ItemDisplay[UNI !ID xap]:	%NAME%%GOLD%War hat - Peasant Crown%CONTINUE%				// 
+ItemDisplay[UNI !ID xkp]:	%NAME%%GOLD%Sallet - Rockstopper%CONTINUE%				// 
+ItemDisplay[UNI !ID xlm]:	%NAME%%GOLD%Casque - Stealskull%CONTINUE%				// 
+ItemDisplay[UNI !ID xhl]:	%NAME%%GOLD%Basinet - Darksight Helm%CONTINUE%				// 
+ItemDisplay[UNI !ID xsk]:	%NAME%%GOLD%Death Mask - Blackhorn's Face%CONTINUE%			// 
+ItemDisplay[UNI !ID xh9]:	%NAME%%GOLD%Grim Helm - Vampire Gaze%CONTINUE%				// 
+ItemDisplay[UNI !ID xhm]:	%NAME%%GOLD%Winged Helm - Valkyrie Wing%CONTINUE%			// 
+ItemDisplay[UNI !ID xrn]:	%NAME%%GOLD%Grand Crown - Crown of Thieves%CONTINUE%			// 
+ItemDisplay[UNI !ID uap]:	%NAME%%GOLD%Shako - Harlequin Crest%CONTINUE%				// 
+ItemDisplay[UNI !ID ulm]:	%NAME%%GOLD%Armet - Steel Shade%CONTINUE%				// 
+ItemDisplay[UNI !ID usk]:	%NAME%%GOLD%Demonhead - Andariels Visage%CONTINUE%			// 
+ItemDisplay[UNI !ID uh9]:	%NAME%%GOLD%Bone Visage - Giant Skull%CONTINUE%				// 
+ItemDisplay[UNI !ID urn]:	%NAME%%GOLD%Corona - Crown of Ages%CONTINUE%				// 
+ItemDisplay[UNI !ID uhl]:	%NAME%%GOLD%Giant Conch - Overlord's Helm%CONTINUE%			// NEW, exclusive (Diablo-Clone)
+ItemDisplay[UNI !ID ci2]:	%NAME%%GOLD%Tiara - Kira's Guardian%CONTINUE%				// 
+ItemDisplay[UNI !ID ci3]:	%NAME%%GOLD%Diadem - Griffon's Eye%CONTINUE%				// 
+ItemDisplay[UNI !ID baa]:	%NAME%%GOLD%Slayer Guard - Arreat's Face%CONTINUE%			// 
+ItemDisplay[UNI !ID bac]:	%NAME%%GOLD%Fury Visor - Wolfhowl%CONTINUE%				// 
+ItemDisplay[UNI !ID bad]:	%NAME%%GOLD%Destroyer Helm - Demonhorn's Edge%CONTINUE%			// 
+ItemDisplay[UNI !ID bae]:	%NAME%%GOLD%Conqueror Crown - Halaberd's Reign%CONTINUE%		// 
+ItemDisplay[UNI !ID ba6]:	%NAME%%GOLD%Jawbone Visor - Cyclopean Roar%CONTINUE%			// NEW
+ItemDisplay[UNI !ID baf]:	%NAME%%GOLD%Guardian Crown - Raekor's Virtue%CONTINUE%			// NEW
+ItemDisplay[UNI !ID dra]:	%NAME%%GOLD%Totemic Mask - Jalal's Mane%CONTINUE%			// 
+ItemDisplay[UNI !ID drb]:	%NAME%%GOLD%Blood Spirit - Cerebus' Bite%CONTINUE%			// 
+ItemDisplay[UNI !ID drd]:	%NAME%%GOLD%Earth Spirit - Spirit Keeper%CONTINUE%			// 
+ItemDisplay[UNI !ID dre]:	%NAME%%GOLD%Sky Spirit - Ravenlore%CONTINUE%				// 
+ItemDisplay[UNI !ID dr2]:	%NAME%%GOLD%Hawk Helm - Quetzalcoatl%CONTINUE%				// NEW
+ItemDisplay[UNI !ID drf]:	%NAME%%GOLD%Dream Spirit - Ursa's Nightmare%CONTINUE%			// NEW
+// ... Chests
+ItemDisplay[UNI !ID qui]:	%NAME%%GOLD%Quilted Armor - Greyform%CONTINUE%				// 
+ItemDisplay[UNI !ID lea]:	%NAME%%GOLD%Leather Armor - Blinkbat's Form%CONTINUE%			// 
+ItemDisplay[UNI !ID hla]:	%NAME%%GOLD%Hard Leather Armor - The Centurion%CONTINUE%		// 
+ItemDisplay[UNI !ID stu]:	%NAME%%GOLD%Studded Leather - Twitchthroe%CONTINUE%			// 
+ItemDisplay[UNI !ID rng]:	%NAME%%GOLD%Ring Mail - Darkglow%CONTINUE%				// 
+ItemDisplay[UNI !ID scl]:	%NAME%%GOLD%Scale Mail - Hawkmail%CONTINUE%				// 
+ItemDisplay[UNI !ID chn]:	%NAME%%GOLD%Chain Mail - Sparking Mail%CONTINUE%			// 
+ItemDisplay[UNI !ID brs]:	%NAME%%GOLD%Breast Plate - Venom Ward%CONTINUE%				// 
+ItemDisplay[UNI !ID spl]:	%NAME%%GOLD%Splint Mail - Iceblink%CONTINUE%				// 
+ItemDisplay[UNI !ID plt]:	%NAME%%GOLD%Plate Mail - Boneflesh%CONTINUE%				// 
+ItemDisplay[UNI !ID fld]:	%NAME%%GOLD%Field Plate - Rockfleece%CONTINUE%				// 
+ItemDisplay[UNI !ID gth]:	%NAME%%GOLD%Gothic Plate - Rattlecage%CONTINUE%				// 
+ItemDisplay[UNI !ID ful]:	%NAME%%GOLD%Full Plate Mail - Goldskin%CONTINUE%			// 
+ItemDisplay[UNI !ID aar]:	%NAME%%GOLD%Ancient Armor - Silks of the Victor%CONTINUE%		// 
+ItemDisplay[UNI !ID ltp]:	%NAME%%GOLD%Light Plate - Heavenly Garb%CONTINUE%			// 
+ItemDisplay[UNI !ID xui]:	%NAME%%GOLD%Ghost Armor - The Spirit Shroud%CONTINUE%			// 
+ItemDisplay[UNI !ID xea]:	%NAME%%GOLD%Serpentskin - Skin of the Vipermagi%CONTINUE%		// 
+ItemDisplay[UNI !ID xla]:	%NAME%%GOLD%Demonhide Armor - Skin of the Flayed One%CONTINUE%		// 
+ItemDisplay[UNI !ID xtu]:	%NAME%%GOLD%Trellised Armor - Iron Pelt%CONTINUE%			// 
+ItemDisplay[UNI !ID xng]:	%NAME%%GOLD%Linked Mail - Spirit Forge%CONTINUE%			// 
+ItemDisplay[UNI !ID xcl]:	%NAME%%GOLD%Tigulated Mail - Crow Caw%CONTINUE%				// 
+ItemDisplay[UNI !ID xhn]:	%NAME%%GOLD%Mesh Armor - Shaftstop%CONTINUE%				// 
+ItemDisplay[UNI !ID xrs]:	%NAME%%GOLD%Cuirass - Duriel's Shell%CONTINUE%				// 
+ItemDisplay[UNI !ID xpl]:	%NAME%%GOLD%Russet Armor - Skullder's Ire%CONTINUE%			// 
+ItemDisplay[UNI !ID xlt]:	%NAME%%GOLD%Templar Coat - Guardian Angel%CONTINUE%			// 
+ItemDisplay[UNI !ID xld]:	%NAME%%GOLD%Sharktooth Armor - Toothrow%CONTINUE%			// 
+ItemDisplay[UNI !ID xth]:	%NAME%%GOLD%Embossed Plate - Atma's Wail%CONTINUE%			// 
+ItemDisplay[UNI !ID xul]:	%NAME%%GOLD%Chaos Armor - Black Hades%CONTINUE%				// 
+ItemDisplay[UNI !ID xar]:	%NAME%%GOLD%Ornate Plate - Corpsemourn%CONTINUE%			// 
+ItemDisplay[UNI !ID xtp]:	%NAME%%GOLD%Mage Plate - Que-Hegan's Wisdom%CONTINUE%			// 
+ItemDisplay[UNI !ID uui]:	%NAME%%GOLD%Dusk Shroud - Ormus' Robes%CONTINUE%			// 
+ItemDisplay[UNI !ID utu]:	%NAME%%GOLD%Wire Fleece - The Gladiator's Bane%CONTINUE%		// 
+ItemDisplay[UNI !ID upl]:	%NAME%%GOLD%Balrog Skin - Arkaine's Valor%CONTINUE%			// 
+ItemDisplay[UNI !ID uld]:	%NAME%%GOLD%Kraken Shell - Leviathan%CONTINUE%				// 
+ItemDisplay[UNI !ID uul]:	%NAME%%GOLD%Shadow Plate - Steel Carapace%CONTINUE%			// 
+ItemDisplay[UNI !ID utp]:	%NAME%%GOLD%Archon Plate - Purgatory%CONTINUE%				// NEW
+ItemDisplay[UNI !ID rar]:	%NAME%%GOLD%Boneweave - Cage of the Unsullied%CONTINUE%			// NEW, exclusive (Rathma)
+ItemDisplay[UNI !ID uth]:	%NAME%%GOLD%Lacquered Plate - Dark Abyss%CONTINUE%			// NEW, exclusive (Diablo-Clone)
+// ... Shields
+ItemDisplay[UNI !ID buc]:	%NAME%%GOLD%Buckler - Pelta Lunata%CONTINUE%				// 
+ItemDisplay[UNI !ID sml]:	%NAME%%GOLD%Small Shield - Umbral Disk%CONTINUE%			// 
+ItemDisplay[UNI !ID lrg]:	%NAME%%GOLD%Large Shield - Stormguild%CONTINUE%				// 
+ItemDisplay[UNI !ID spk]:	%NAME%%GOLD%Spiked Shield - Swordback Hold%CONTINUE%			// 
+ItemDisplay[UNI !ID kit]:	%NAME%%GOLD%Kite Shield - Steelclash%CONTINUE%				// 
+ItemDisplay[UNI !ID bsh]:	%NAME%%GOLD%Bone Shield - Wall of the Eyeless%CONTINUE%			// 
+ItemDisplay[UNI !ID tow]:	%NAME%%GOLD%Tower Shield - Bverrit Keep%CONTINUE%			// 
+ItemDisplay[UNI !ID gts]:	%NAME%%GOLD%Gothic Shield - The Ward%CONTINUE%				// 
+ItemDisplay[UNI !ID xuc]:	%NAME%%GOLD%Defender - Visceratuant%CONTINUE%				// 
+ItemDisplay[UNI !ID xml]:	%NAME%%GOLD%Round Shield - Moser's Blessed Circle%CONTINUE%		// 
+ItemDisplay[UNI !ID xrg]:	%NAME%%GOLD%Scutum - Stormchaser%CONTINUE%				// 
+ItemDisplay[UNI !ID xpk]:	%NAME%%GOLD%Barbed Shield - Lance Guard%CONTINUE%			// 
+ItemDisplay[UNI !ID xit]:	%NAME%%GOLD%Dragon Shield - Tiamat's Rebuke%CONTINUE%			// 
+ItemDisplay[UNI !ID xsh]:	%NAME%%GOLD%Grim Shield - Lidless Wall%CONTINUE%			// 
+ItemDisplay[UNI !ID xow]:	%NAME%%GOLD%Pavise - Gerke's Sanctuary%CONTINUE%			// 
+ItemDisplay[UNI !ID xts]:	%NAME%%GOLD%Ancient Shield - Radament's Sphere%CONTINUE%		// 
+ItemDisplay[UNI !ID uml]:	%NAME%%GOLD%Luna - Blackoak Shield%CONTINUE%				// 
+ItemDisplay[UNI !ID upk]:	%NAME%%GOLD%Blade Barrier - Spike Thorn%CONTINUE%			// 
+ItemDisplay[UNI !ID uit]:	%NAME%%GOLD%Monarch - Stormshield%CONTINUE%				// 
+ItemDisplay[UNI !ID ush]:	%NAME%%GOLD%Troll Nest - Head Hunter's Glory%CONTINUE%			// 
+ItemDisplay[UNI !ID uow]:	%NAME%%GOLD%Aegis - Medusa's Gaze%CONTINUE%				// 
+ItemDisplay[UNI !ID uts]:	%NAME%%GOLD%Ward - Spirit Ward%CONTINUE%				// 
+ItemDisplay[UNI !ID pa9]:	%NAME%%GOLD%Gilded Shield - Herald of Zakarum%CONTINUE%			// 
+ItemDisplay[UNI !ID pac]:	%NAME%%GOLD%Sacred Rondache - Alma Negra%CONTINUE%			// 
+ItemDisplay[UNI !ID pae]:	%NAME%%GOLD%Zakarum Shield - Dragonscale%CONTINUE%			// 
+ItemDisplay[UNI !ID pa3]:	%NAME%%GOLD%Heraldic Shield - Sankekur's Fall%CONTINUE%			// NEW
+ItemDisplay[UNI !ID nea]:	%NAME%%GOLD%Heirophant Trophy - Homunculus%CONTINUE%			// 
+ItemDisplay[UNI !ID nee]:	%NAME%%GOLD%Succubae Skull - Boneflame%CONTINUE%			// 
+ItemDisplay[UNI !ID nef]:	%NAME%%GOLD%Bloodlord Skull - Darkforce Spawn%CONTINUE%			// 
+ItemDisplay[UNI !ID ne6]:	%NAME%%GOLD%Mummified Trophy - Kalan's Legacy%CONTINUE%			// NEW
+ItemDisplay[UNI !ID ned]:	%NAME%%GOLD%Overseer Skull - Martyrdom%CONTINUE%			// NEW
+// ... Gloves
+ItemDisplay[UNI !ID lgl]:	%NAME%%GOLD%Leather Gloves - The Hand of Broc%CONTINUE%			// 
+ItemDisplay[UNI !ID vgl]:	%NAME%%GOLD%Heavy Gloves - Bloodfist%CONTINUE%				// 
+ItemDisplay[UNI !ID mgl]:	%NAME%%GOLD%Chain Gloves - Chance Guards%CONTINUE%			// 
+ItemDisplay[UNI !ID tgl]:	%NAME%%GOLD%Light Gauntlets - Magefist%CONTINUE%			// 
+ItemDisplay[UNI !ID hgl]:	%NAME%%GOLD%Gauntlets - Frostburn%CONTINUE%				// 
+ItemDisplay[UNI !ID xlg]:	%NAME%%GOLD%Demonhide Gloves - Venom Grip%CONTINUE%			// 
+ItemDisplay[UNI !ID xvg]:	%NAME%%GOLD%Sharkskin Gloves - Gravepalm%CONTINUE%			// 
+ItemDisplay[UNI !ID xmg]:	%NAME%%GOLD%Heavy Bracers - Ghoulhide%CONTINUE%				// 
+ItemDisplay[UNI !ID xtg]:	%NAME%%GOLD%Battle Gauntlets - Lava Gout%CONTINUE%			// 
+ItemDisplay[UNI !ID xhg]:	%NAME%%GOLD%War Gauntlets - Hellmouth%CONTINUE%				// 
+ItemDisplay[UNI !ID uvg]:	%NAME%%GOLD%Vampirebone Gloves - Dracul's Grasp%CONTINUE%		// 
+ItemDisplay[UNI !ID umg]:	%NAME%%GOLD%Vambraces - Soul Drainer%CONTINUE%				// 
+ItemDisplay[UNI !ID uhg]:	%NAME%%GOLD%Ogre Gauntlets - Steelrend%CONTINUE%			// 
+ItemDisplay[UNI !ID utg]:	%NAME%%GOLD%Crusader Gauntlets - Occultist%CONTINUE%			// NEW
+// ... Boots
+ItemDisplay[UNI !ID lbt]:	%NAME%%GOLD%Boots - Hotspur%CONTINUE%					// 
+ItemDisplay[UNI !ID vbt]:	%NAME%%GOLD%Heavy Boots - Gorefoot%CONTINUE%				// 
+ItemDisplay[UNI !ID mbt]:	%NAME%%GOLD%Chain Boots - Treads of Cthon%CONTINUE%			// 
+ItemDisplay[UNI !ID tbt]:	%NAME%%GOLD%Light Plated Boots - Goblin Toe%CONTINUE%			// 
+ItemDisplay[UNI !ID hbt]:	%NAME%%GOLD%Greaves - Tearhaunch%CONTINUE%				// 
+ItemDisplay[UNI !ID xlb]:	%NAME%%GOLD%Demonhide Boots - Infernostride%CONTINUE%			// 
+ItemDisplay[UNI !ID xvb]:	%NAME%%GOLD%Sharkskin Boots - Waterwalk%CONTINUE%			// 
+ItemDisplay[UNI !ID xmb]:	%NAME%%GOLD%Mesh Boots - Silkweave%CONTINUE%				// 
+ItemDisplay[UNI !ID xtb]:	%NAME%%GOLD%Battle Boots - War Traveler%CONTINUE%			// 
+ItemDisplay[UNI !ID xhb]:	%NAME%%GOLD%War Boots - Gore Rider%CONTINUE%				// 
+ItemDisplay[UNI !ID uvb]:	%NAME%%GOLD%Scarabshell Boots - Sandstorm Trek%CONTINUE%		// 
+ItemDisplay[UNI !ID umb]:	%NAME%%GOLD%Boneweave Boots - Marrowwalk%CONTINUE%			// 
+ItemDisplay[UNI !ID uhb]:	%NAME%%GOLD%Myrmidon Greaves - Shadow Dancer%CONTINUE%			// 
+ItemDisplay[UNI !ID ulb]:	%NAME%%GOLD%Wyrmhide Boots - Merman's Socket%CONTINUE%			// NEW
+ItemDisplay[UNI !ID utb]:	%NAME%%GOLD%Mirrored Boots - Itherael's Path%CONTINUE%			// NEW, exclusive (Diablo-Clone)
+// ... Belts
+ItemDisplay[UNI !ID lbl]:	%NAME%%GOLD%Sash - Lenymo%CONTINUE%					// 
+ItemDisplay[UNI !ID vbl]:	%NAME%%GOLD%Light Belt - Snakecord%CONTINUE%				// 
+ItemDisplay[UNI !ID mbl]:	%NAME%%GOLD%Belt - Nightsmoke%CONTINUE%					// 
+ItemDisplay[UNI !ID tbl]:	%NAME%%GOLD%Heavy Belt - Goldwrap%CONTINUE%				// 
+ItemDisplay[UNI !ID hbl]:	%NAME%%GOLD%Plated Belt - Bladebuckle%CONTINUE%				// 
+ItemDisplay[UNI !ID zlb]:	%NAME%%GOLD%Demonhide Sash - String of Ears%CONTINUE%			// 
+ItemDisplay[UNI !ID zvb]:	%NAME%%GOLD%Sharkskin Belt - Razortail%CONTINUE%			// 
+ItemDisplay[UNI !ID zmb]:	%NAME%%GOLD%Mesh Belt - Gloom's Trap%CONTINUE%				// 
+ItemDisplay[UNI !ID ztb]:	%NAME%%GOLD%Battle Belt - Snowclash%CONTINUE%				// 
+ItemDisplay[UNI !ID zhb]:	%NAME%%GOLD%War Belt - Thundergod's Vigor%CONTINUE%			// 
+ItemDisplay[UNI !ID ulc]:	%NAME%%GOLD%Spiderweb Sash - Arachnid Mesh%CONTINUE%			// 
+ItemDisplay[UNI !ID uvc]:	%NAME%%GOLD%Vampirefang Belt - Nosferatu's Coil%CONTINUE%		// 
+ItemDisplay[UNI !ID umc]:	%NAME%%GOLD%Mithril Coil - Verdungo's Hearty Cord%CONTINUE%		// 
+ItemDisplay[UNI !ID rbe]:	%NAME%%GOLD%Troll Belt - Band of Skulls%CONTINUE%			// NEW, exclusive (Rathma)
+// ... Axes
+ItemDisplay[UNI !ID hax]:	%NAME%%GOLD%Hand Axe - The Gnasher%CONTINUE%				// 
+ItemDisplay[UNI !ID axe]:	%NAME%%GOLD%Axe - Deathspade%CONTINUE%					// 
+ItemDisplay[UNI !ID 2ax]:	%NAME%%GOLD%Double Axe - Bladebone%CONTINUE%				// 
+ItemDisplay[UNI !ID mpi]:	%NAME%%GOLD%Military Pick - Skull Splitter%CONTINUE%			// 
+ItemDisplay[UNI !ID wax]:	%NAME%%GOLD%War Axe - Rakescar%CONTINUE%				// 
+ItemDisplay[UNI !ID lax]:	%NAME%%GOLD%Large Axe - Axe of Fechmar%CONTINUE%			// 
+ItemDisplay[UNI !ID bax]:	%NAME%%GOLD%Broad Axe - Goreshovel%CONTINUE%				// 
+ItemDisplay[UNI !ID btx]:	%NAME%%GOLD%Battle Axe - The Chieftain%CONTINUE%			// 
+ItemDisplay[UNI !ID gas]:	%NAME%%GOLD%Great Axe - Brainhew%CONTINUE%				// 
+ItemDisplay[UNI !ID gix]:	%NAME%%GOLD%Giant Axe - Humongous%CONTINUE%				// 
+ItemDisplay[UNI !ID 9ha]:	%NAME%%GOLD%Hatchet - Coldkill%CONTINUE%				// 
+ItemDisplay[UNI !ID 9ax]:	%NAME%%GOLD%Cleaver - Butcher's Pupil%CONTINUE%				// 
+ItemDisplay[UNI !ID 92a]:	%NAME%%GOLD%Twin Axe - Islestrike%CONTINUE%				// 
+ItemDisplay[UNI !ID 9mp]:	%NAME%%GOLD%Crowbill - Pompeii's Wrath%CONTINUE%			// 
+ItemDisplay[UNI !ID 9wa]:	%NAME%%GOLD%Naga - Guardian Naga%CONTINUE%				// 
+ItemDisplay[UNI !ID 9la]:	%NAME%%GOLD%Military Axe - Warlord's Trust%CONTINUE%			// 
+ItemDisplay[UNI !ID 9ba]:	%NAME%%GOLD%Bearded Axe - Spellsteel%CONTINUE%				// 
+ItemDisplay[UNI !ID 9bt]:	%NAME%%GOLD%Tabar - Stormrider%CONTINUE%				// 
+ItemDisplay[UNI !ID 9ga]:	%NAME%%GOLD%Gothic Axe - Boneslayer Blade%CONTINUE%			// 
+ItemDisplay[UNI !ID 9gi]:	%NAME%%GOLD%Ancient Axe - The Minotaur%CONTINUE%			// 
+ItemDisplay[UNI !ID 7ha]:	%NAME%%GOLD%Tomahawk - Razor's Edge%CONTINUE%				// 
+ItemDisplay[UNI !ID 72a]:	%NAME%%GOLD%Ettin Axe - Rune Master%CONTINUE%				// 
+ItemDisplay[UNI !ID 7mp]:	%NAME%%GOLD%War Spike - Cranebeak%CONTINUE%				// 
+ItemDisplay[UNI !ID 7wa]:	%NAME%%GOLD%Berserker Axe - Death Cleaver%CONTINUE%			// 
+ItemDisplay[UNI !ID 7ba]:	%NAME%%GOLD%Silver-edged Axe - Ethereal Edge%CONTINUE%			// 
+ItemDisplay[UNI !ID 7bt]:	%NAME%%GOLD%Decapitator - Hellslayer%CONTINUE%				// 
+ItemDisplay[UNI !ID 7ga]:	%NAME%%GOLD%Champion Axe - Messerschmidt's Reaver%CONTINUE%		// 
+ItemDisplay[UNI !ID 7gi]:	%NAME%%GOLD%Glorious Axe - Executioner's Justice%CONTINUE%		// 
+// ... Maces
+ItemDisplay[UNI !ID clb]:	%NAME%%GOLD%Club - Felloak%CONTINUE%					// 
+ItemDisplay[UNI !ID spc]:	%NAME%%GOLD%Spiked Club - Stoutnail%CONTINUE%				// 
+ItemDisplay[UNI !ID mac]:	%NAME%%GOLD%Mace - Crushflange%CONTINUE%				// 
+ItemDisplay[UNI !ID mst]:	%NAME%%GOLD%Morning Star - Bloodrise%CONTINUE%				// 
+ItemDisplay[UNI !ID fla]:	%NAME%%GOLD%Flail - The General's Tan Do Li Ga%CONTINUE%		// 
+ItemDisplay[UNI !ID whm]:	%NAME%%GOLD%War Hammer - Ironstone%CONTINUE%				// 
+ItemDisplay[UNI !ID mau]:	%NAME%%GOLD%Maul - Bonesnap%CONTINUE%					// 
+ItemDisplay[UNI !ID gma]:	%NAME%%GOLD%Great Maul - Steeldriver%CONTINUE%				// 
+ItemDisplay[UNI !ID 9cl]:	%NAME%%GOLD%Cudgel - Dark Clan Crusher%CONTINUE%			// 
+ItemDisplay[UNI !ID 9sp]:	%NAME%%GOLD%Barbed Club - Fleshrender%CONTINUE%				// 
+ItemDisplay[UNI !ID 9ma]:	%NAME%%GOLD%Flanged Mace - Sureshrill Frost%CONTINUE%			// 
+ItemDisplay[UNI !ID 9mt]:	%NAME%%GOLD%Jagged Star - Moonfall%CONTINUE%				// 
+ItemDisplay[UNI !ID 9fl]:	%NAME%%GOLD%Knout - Baezil's Vortex%CONTINUE%				// 
+ItemDisplay[UNI !ID 9wh]:	%NAME%%GOLD%Battle Hammer - Earthshaker%CONTINUE%			// 
+ItemDisplay[UNI !ID 9m9]:	%NAME%%GOLD%War Club - Bloodtree Stump%CONTINUE%			// 
+ItemDisplay[UNI !ID 9gm]:	%NAME%%GOLD%Martel de Fer - The Gavel of Pain%CONTINUE%			// 
+ItemDisplay[UNI !ID 7cl]:	%NAME%%GOLD%Truncheon - Nord's Tenderizer%CONTINUE%			// 
+ItemDisplay[UNI !ID 7sp]:	%NAME%%GOLD%Tyrant Club - Demon Limb%CONTINUE%				// 
+ItemDisplay[UNI !ID 7mt]:	%NAME%%GOLD%Devil Star - Baranar's Star%CONTINUE%			// 
+ItemDisplay[UNI !ID 7m7]:	%NAME%%GOLD%Ogre Maul - Windhammer%CONTINUE%				// 
+// ... Swords
+ItemDisplay[UNI !ID ssd]:	%NAME%%GOLD%Short Sword - Rixot's Keen%CONTINUE%			// 
+ItemDisplay[UNI !ID scm]:	%NAME%%GOLD%Scimitar - Blood Crescent%CONTINUE%				// 
+ItemDisplay[UNI !ID sbr]:	%NAME%%GOLD%Saber - Skewer of Krintiz%CONTINUE%				// 
+ItemDisplay[UNI !ID flc]:	%NAME%%GOLD%Falchion - Gleamscythe%CONTINUE%				// 
+ItemDisplay[UNI !ID bsd]:	%NAME%%GOLD%Broad Sword - Griswold's Edge%CONTINUE%			// 
+ItemDisplay[UNI !ID lsd]:	%NAME%%GOLD%Long Sword - Hellplague%CONTINUE%				// 
+ItemDisplay[UNI !ID wsd]:	%NAME%%GOLD%War Sword - Culwen's Point%CONTINUE%			// 
+ItemDisplay[UNI !ID 2hs]:	%NAME%%GOLD%Two-handed Sword - Shadowfang%CONTINUE%			// 
+ItemDisplay[UNI !ID clm]:	%NAME%%GOLD%Claymore - Soulflay%CONTINUE%				// 
+ItemDisplay[UNI !ID gis]:	%NAME%%GOLD%Giant Sword - Kinemil's Awl%CONTINUE%			// 
+ItemDisplay[UNI !ID bsw]:	%NAME%%GOLD%Bastard Sword - Blacktongue%CONTINUE%			// 
+ItemDisplay[UNI !ID flb]:	%NAME%%GOLD%Flamberge - Ripsaw%CONTINUE%				// 
+ItemDisplay[UNI !ID gsd]:	%NAME%%GOLD%Great Sword - The Patriarch%CONTINUE%			// 
+ItemDisplay[UNI !ID 9ss]:	%NAME%%GOLD%Gladius - Bloodletter%CONTINUE%				// 
+ItemDisplay[UNI !ID 9sm]:	%NAME%%GOLD%Cutlass - Coldsteel Eye%CONTINUE%				// 
+ItemDisplay[UNI !ID 9sb]:	%NAME%%GOLD%Shamshir - Hexfire%CONTINUE%				// 
+ItemDisplay[UNI !ID 9fc]:	%NAME%%GOLD%Tulwar - Blade of Ali Baba%CONTINUE%			// 
+ItemDisplay[UNI !ID 9cr]:	%NAME%%GOLD%Dimensional Blade - Ginther's Rift%CONTINUE%		// 
+ItemDisplay[UNI !ID 9bs]:	%NAME%%GOLD%Battle Sword - Headstriker%CONTINUE%			// 
+ItemDisplay[UNI !ID 9ls]:	%NAME%%GOLD%Rune Sword - Plague Bearer%CONTINUE%			// 
+ItemDisplay[UNI !ID 9wd]:	%NAME%%GOLD%Ancient Sword - The Atlantean%CONTINUE%			// 
+ItemDisplay[UNI !ID 92h]:	%NAME%%GOLD%Espandon - Crainte Vomir%CONTINUE%				// 
+ItemDisplay[UNI !ID 9cm]:	%NAME%%GOLD%Dacian Falx - Bing Sz Wang%CONTINUE%			// 
+ItemDisplay[UNI !ID 9gs]:	%NAME%%GOLD%Tusk Sword - The Vile Husk%CONTINUE%			// 
+ItemDisplay[UNI !ID 9b9]:	%NAME%%GOLD%Gothic Sword - Cloudcrack%CONTINUE%				// 
+ItemDisplay[UNI !ID 9fb]:	%NAME%%GOLD%Zweihander - Todesfaelle Flamme%CONTINUE%			// 
+ItemDisplay[UNI !ID 9gd]:	%NAME%%GOLD%Executioner Sword - Swordguard%CONTINUE%			// 
+ItemDisplay[UNI !ID 7sm]:	%NAME%%GOLD%Ataghan - Djinn Slayer%CONTINUE%				// 
+ItemDisplay[UNI !ID 7sb]:	%NAME%%GOLD%Elegant Blade - Bloodmoon%CONTINUE%				// 
+ItemDisplay[UNI !ID 7ls]:	%NAME%%GOLD%Cryptic Sword - Frostwind%CONTINUE%				// 
+ItemDisplay[UNI !ID 7gs]:	%NAME%%GOLD%Balrog Blade - Flamebellow%CONTINUE%			// 
+ItemDisplay[UNI !ID 7b7]:	%NAME%%GOLD%Champion Sword - Doombringer%CONTINUE%			// 
+ItemDisplay[UNI !ID 7gd]:	%NAME%%GOLD%Colossus Blade - The Grandfather%CONTINUE%			// 
+ItemDisplay[UNI !ID 7fb]:	%NAME%%GOLD%Colossus Sword - Odium%CONTINUE%				// NEW
+ItemDisplay[UNI !ID 7bs]:	%NAME%%GOLD%Conquest Sword - Hadriel's Hand%CONTINUE%			// NEW, exclusive (Diablo-Clone)
+// ... Daggers
+ItemDisplay[UNI !ID dgr]:	%NAME%%GOLD%Dagger - Gull%CONTINUE%					// 
+ItemDisplay[UNI !ID dir]:	%NAME%%GOLD%Dirk - The Diggler%CONTINUE%				// 
+ItemDisplay[UNI !ID kri]:	%NAME%%GOLD%Kris - The Jade Tan Do%CONTINUE%				// 
+ItemDisplay[UNI !ID bld]:	%NAME%%GOLD%Blade - Spectral Shard%CONTINUE%				// 
+ItemDisplay[UNI !ID 9dg]:	%NAME%%GOLD%Poignard - Spineripper%CONTINUE%				// 
+ItemDisplay[UNI !ID 9di]:	%NAME%%GOLD%Rondel - Heart Carver%CONTINUE%				// 
+ItemDisplay[UNI !ID 9kr]:	%NAME%%GOLD%Cinquedeas - Blackbogs Sharp%CONTINUE%			// 
+ItemDisplay[UNI !ID 9bl]:	%NAME%%GOLD%Stilleto - Stormspike%CONTINUE%				// 
+ItemDisplay[UNI !ID 7dg]:	%NAME%%GOLD%Bone Knife - Wizardspike%CONTINUE%				// 
+ItemDisplay[UNI !ID 7kr]:	%NAME%%GOLD%Fanged Knife - Fleshripper%CONTINUE%			// 
+ItemDisplay[UNI !ID 7bl]:	%NAME%%GOLD%Legend Spike - Ghostflame%CONTINUE%				// 
+// ... Throwing
+ItemDisplay[UNI !ID 9ta]:	%NAME%%GOLD%Francisca - The Scalper%CONTINUE%				// 
+ItemDisplay[UNI !ID 9tk]:	%NAME%%GOLD%Battle Dart - Deathbit%CONTINUE%				// 
+ItemDisplay[UNI !ID 7ta]:	%NAME%%GOLD%Flying Axe - Gimmershred%CONTINUE%				// 
+ItemDisplay[UNI !ID 7bk]:	%NAME%%GOLD%Winged Knife - Warshrike%CONTINUE%				// 
+ItemDisplay[UNI !ID 7b8]:	%NAME%%GOLD%Winged Axe - Lacerator%CONTINUE%				// 
+ItemDisplay[UNI !ID 7s7]:	%NAME%%GOLD%Balrog Spear - Demon's Arch%CONTINUE%			// 
+ItemDisplay[UNI !ID 7gl]:	%NAME%%GOLD%Ghost Glaive - Wraith Flight%CONTINUE%			// 
+ItemDisplay[UNI !ID 7ts]:	%NAME%%GOLD%Winged Harpoon - Gargoyle's Bite%CONTINUE%			// 
+ItemDisplay[UNI !ID ama]:	%NAME%%GOLD%Ceremonial Javelin - Titan's Revenge%CONTINUE%		// Amazon Javelin
+ItemDisplay[UNI !ID amf]:	%NAME%%GOLD%Matriarchal Javelin - Thunderstroke%CONTINUE%		// Amazon Javelin
+ItemDisplay[UNI !ID am5]:	%NAME%%GOLD%Maiden Javelin - True Silver%CONTINUE%			// NEW, Amazon Javelin
+// ... Spears
+ItemDisplay[UNI !ID spr]:	%NAME%%GOLD%Spear - The Dragon Chang%CONTINUE%				// 
+ItemDisplay[UNI !ID tri]:	%NAME%%GOLD%Trident - Razortine%CONTINUE%				// 
+ItemDisplay[UNI !ID brn]:	%NAME%%GOLD%Brandistock - Bloodthief%CONTINUE%				// 
+ItemDisplay[UNI !ID spt]:	%NAME%%GOLD%Spetum - Lance of Yaggai%CONTINUE%				// 
+ItemDisplay[UNI !ID pik]:	%NAME%%GOLD%Pike - The Tannr Gorerod%CONTINUE%				// 
+ItemDisplay[UNI !ID 9sr]:	%NAME%%GOLD%War Spear - The Impaler%CONTINUE%				// 
+ItemDisplay[UNI !ID 9tr]:	%NAME%%GOLD%Fuscina - Kelpie Snare%CONTINUE%				// 
+ItemDisplay[UNI !ID 9br]:	%NAME%%GOLD%War Fork - Soulfeast Tine%CONTINUE%				// 
+ItemDisplay[UNI !ID 9st]:	%NAME%%GOLD%Yari - Hone Sundan%CONTINUE%				// 
+ItemDisplay[UNI !ID 9p9]:	%NAME%%GOLD%Lance - Spire of Honor%CONTINUE%				// 
+ItemDisplay[UNI !ID 7sr]:	%NAME%%GOLD%Hyperion Spear - Arioc's Needle%CONTINUE%			// 
+ItemDisplay[UNI !ID 7br]:	%NAME%%GOLD%Mancatcher - Viperfork%CONTINUE%				// 
+ItemDisplay[UNI !ID 7p7]:	%NAME%%GOLD%War Pike - Steel Pillar%CONTINUE%				// 
+ItemDisplay[UNI !ID am9]:	%NAME%%GOLD%Ceremonial Pike - Lycander's Flank%CONTINUE%		// Amazon Spear
+ItemDisplay[UNI !ID amd]:	%NAME%%GOLD%Matriarchal Spear - Stoneraven%CONTINUE%			// Amazon Spear
+ItemDisplay[UNI !ID ame]:	%NAME%%GOLD%Matriarchal Pike - Zerae's Resolve%CONTINUE%		// NEW, Amazon Spear
+// ... Polearms
+ItemDisplay[UNI !ID bar]:	%NAME%%GOLD%Bardiche - Dimoak's Hew%CONTINUE%				// 
+ItemDisplay[UNI !ID vou]:	%NAME%%GOLD%Voulge - Steelgoad%CONTINUE%				// 
+ItemDisplay[UNI !ID scy]:	%NAME%%GOLD%Scythe - Soul Harvest%CONTINUE%				// 
+ItemDisplay[UNI !ID pax]:	%NAME%%GOLD%Poleaxe - The Battlebranch%CONTINUE%			// 
+ItemDisplay[UNI !ID hal]:	%NAME%%GOLD%Halberd - Woestave%CONTINUE%				// 
+ItemDisplay[UNI !ID wsc]:	%NAME%%GOLD%War Scythe - The Grim Reaper%CONTINUE%			// 
+ItemDisplay[UNI !ID 9b7]:	%NAME%%GOLD%Lochaber Axe - The Meat Scraper%CONTINUE%			// 
+ItemDisplay[UNI !ID 9vo]:	%NAME%%GOLD%Bill - Blackleach Blade%CONTINUE%				// 
+ItemDisplay[UNI !ID 9s8]:	%NAME%%GOLD%Battle Scythe - Athena's Wrath%CONTINUE%			// 
+ItemDisplay[UNI !ID 9pa]:	%NAME%%GOLD%Partizan - Pierre Tombale Couant%CONTINUE%			// 
+ItemDisplay[UNI !ID 9h9]:	%NAME%%GOLD%Bec-de-Corbin - Husoldal Evo%CONTINUE%			// 
+ItemDisplay[UNI !ID 9wc]:	%NAME%%GOLD%Grim Scythe - Grim's Burning Dead%CONTINUE%			// 
+ItemDisplay[UNI !ID 7o7]:	%NAME%%GOLD%Ogre Axe - Bonehew%CONTINUE%				// 
+ItemDisplay[UNI !ID 7s8]:	%NAME%%GOLD%Thresher - The Reaper's Toll%CONTINUE%			// 
+ItemDisplay[UNI !ID 7pa]:	%NAME%%GOLD%Cryptic Axe - Tomb Reaver%CONTINUE%				// 
+ItemDisplay[UNI !ID 7wc]:	%NAME%%GOLD%Giant Thresher - Stormspire%CONTINUE%			// 
+// ... Bows
+ItemDisplay[UNI !ID sbw]:	%NAME%%GOLD%Short Bow - Pluckeye%CONTINUE%				// 
+ItemDisplay[UNI !ID hbw]:	%NAME%%GOLD%Hunter's Bow - Witherstring%CONTINUE%			// 
+ItemDisplay[UNI !ID lbw]:	%NAME%%GOLD%Long Bow - Raven Claw%CONTINUE%				// 
+ItemDisplay[UNI !ID cbw]:	%NAME%%GOLD%Composite Bow - Rogue's Bow%CONTINUE%			// 
+ItemDisplay[UNI !ID sbb]:	%NAME%%GOLD%Short Battle Bow - Stormstrike%CONTINUE%			// 
+ItemDisplay[UNI !ID lbb]:	%NAME%%GOLD%Long Battle Bow - Wizendraw%CONTINUE%			// 
+ItemDisplay[UNI !ID swb]:	%NAME%%GOLD%Short War Bow - Hellclap%CONTINUE%				// 
+ItemDisplay[UNI !ID lwb]:	%NAME%%GOLD%Long War Bow - Blastbark%CONTINUE%				// 
+ItemDisplay[UNI !ID 8sb]:	%NAME%%GOLD%Edge Bow - Skystrike%CONTINUE%				// 
+ItemDisplay[UNI !ID 8hb]:	%NAME%%GOLD%Razor Bow - Riphook%CONTINUE%				// 
+ItemDisplay[UNI !ID 8lb]:	%NAME%%GOLD%Cedar Bow - Kuko Shakaku%CONTINUE%				// 
+ItemDisplay[UNI !ID 8cb]:	%NAME%%GOLD%Double Bow - Endlesshail%CONTINUE%				// 
+ItemDisplay[UNI !ID 8s8]:	%NAME%%GOLD%Short Siege Bow - Witchwild String%CONTINUE%		// 
+ItemDisplay[UNI !ID 8l8]:	%NAME%%GOLD%Large Siege Bow - Cliffkiller%CONTINUE%			// 
+ItemDisplay[UNI !ID 8sw]:	%NAME%%GOLD%Rune Bow - Magewrath%CONTINUE%				// 
+ItemDisplay[UNI !ID 8lw]:	%NAME%%GOLD%Gothic Bow - Goldstrike Arch%CONTINUE%			// 
+ItemDisplay[UNI !ID 6l7]:	%NAME%%GOLD%Crusader Bow - Eaglehorn%CONTINUE%				// 
+ItemDisplay[UNI !ID 6sw]:	%NAME%%GOLD%Ward Bow - Widowmaker%CONTINUE%				// 
+ItemDisplay[UNI !ID 6lw]:	%NAME%%GOLD%Hydra Bow - Windforce%CONTINUE%				// 
+ItemDisplay[UNI !ID am7]:	%NAME%%GOLD%Ceremonial Bow - Lycander's Aim%CONTINUE%			// Amazon Bow
+ItemDisplay[UNI !ID amb]:	%NAME%%GOLD%Matriarchal Bow - Blood Raven's Charge%CONTINUE%		// Amazon Bow
+// ... Crossbows
+ItemDisplay[UNI !ID lxb]:	%NAME%%GOLD%Light Crossbow - Leadcrow%CONTINUE%				// 
+ItemDisplay[UNI !ID mxb]:	%NAME%%GOLD%Crossbow - Ichorsting%CONTINUE%				// 
+ItemDisplay[UNI !ID hxb]:	%NAME%%GOLD%Heavy Crossbow - Hellcast%CONTINUE%				// 
+ItemDisplay[UNI !ID rxb]:	%NAME%%GOLD%Repeating Crossbow - Doomslinger%CONTINUE%			// 
+ItemDisplay[UNI !ID 8lx]:	%NAME%%GOLD%Arbalest - Langer Briser%CONTINUE%				// 
+ItemDisplay[UNI !ID 8mx]:	%NAME%%GOLD%Siege Crossbow - Pus Spitter%CONTINUE%			// 
+ItemDisplay[UNI !ID 8hx]:	%NAME%%GOLD%Ballista - Buriza-Do Kyanon%CONTINUE%			// 
+ItemDisplay[UNI !ID 8rx]:	%NAME%%GOLD%Chu-Ko-Nu - Demon Machine%CONTINUE%				// 
+ItemDisplay[UNI !ID 6hx]:	%NAME%%GOLD%Colossus Crossbow - Hellrack%CONTINUE%			// 
+ItemDisplay[UNI !ID 6rx]:	%NAME%%GOLD%Demon Crossbow - Gut Siphon%CONTINUE%			// 
+// ... Staves
+ItemDisplay[UNI !ID sst]:	%NAME%%GOLD%Short Staff - Bane Ash%CONTINUE%				// 
+ItemDisplay[UNI !ID lst]:	%NAME%%GOLD%Long Staff - Serpent Lord%CONTINUE%				// 
+ItemDisplay[UNI !ID cst]:	%NAME%%GOLD%Gnarled Staff - Spire of Lazarus%CONTINUE%			// 
+ItemDisplay[UNI !ID bst]:	%NAME%%GOLD%Battle Staff - The Salamander%CONTINUE%			// 
+ItemDisplay[UNI !ID wst]:	%NAME%%GOLD%War Staff - The Iron Jang Bong%CONTINUE%			// 
+ItemDisplay[UNI !ID 8ss]:	%NAME%%GOLD%Jo Staff - Razorswitch%CONTINUE%				// 
+ItemDisplay[UNI !ID 8ls]:	%NAME%%GOLD%Quarterstaff - Ribcracker%CONTINUE%				// 
+ItemDisplay[UNI !ID 8cs]:	%NAME%%GOLD%Cedar Staff - Chromatic Ire%CONTINUE%			// 
+ItemDisplay[UNI !ID 8bs]:	%NAME%%GOLD%Gothic Staff - Warpspear%CONTINUE%				// 
+ItemDisplay[UNI !ID 8ws]:	%NAME%%GOLD%Rune Staff - Skull Collector%CONTINUE%			// 
+ItemDisplay[UNI !ID 6cs]:	%NAME%%GOLD%Elder Staff - Ondal's Wisdom%CONTINUE%			// 
+ItemDisplay[UNI !ID 6ws]:	%NAME%%GOLD%Archon Staff - Mang Song's Lesson%CONTINUE%			// 
+ItemDisplay[UNI !ID 6bs]:	%NAME%%GOLD%Shillelagh - Brimstone Rain%CONTINUE%			// NEW
+// ... Wands
+ItemDisplay[UNI !ID wnd]:	%NAME%%GOLD%Wand - Torch of Iro%CONTINUE%				// 
+ItemDisplay[UNI !ID ywn]:	%NAME%%GOLD%Yew Wand - Maelstrom%CONTINUE%				// 
+ItemDisplay[UNI !ID bwn]:	%NAME%%GOLD%Bone Wand - Gravenspine%CONTINUE%				// 
+ItemDisplay[UNI !ID gwn]:	%NAME%%GOLD%Grim Wand - Ume's Lament%CONTINUE%				// 
+ItemDisplay[UNI !ID 9wn]:	%NAME%%GOLD%Burnt Wand - Suicide Branch%CONTINUE%			// 
+ItemDisplay[UNI !ID 9yw]:	%NAME%%GOLD%Petrified Wand - Carin Shard%CONTINUE%			// 
+ItemDisplay[UNI !ID 9bw]:	%NAME%%GOLD%Tomb Wand - Arm of King Leoric%CONTINUE%			// 
+ItemDisplay[UNI !ID 9gw]:	%NAME%%GOLD%Grave Wand - Blackhand Key%CONTINUE%			// 
+ItemDisplay[UNI !ID 7bw]:	%NAME%%GOLD%Lich Wand - Boneshade%CONTINUE%				// 
+ItemDisplay[UNI !ID 7gw]:	%NAME%%GOLD%Unearthed Wand - Death's Web%CONTINUE%			// 
+// ... Scepters
+ItemDisplay[UNI !ID scp]:	%NAME%%GOLD%Scepter - Knell Striker%CONTINUE%				// 
+ItemDisplay[UNI !ID gsc]:	%NAME%%GOLD%Grand Scepter - Rusthandle%CONTINUE%			// 
+ItemDisplay[UNI !ID wsp]:	%NAME%%GOLD%War Scepter - Stormeye%CONTINUE%				// 
+ItemDisplay[UNI !ID 9sc]:	%NAME%%GOLD%Rune Scepter - Zakarum's Hand%CONTINUE%			// 
+ItemDisplay[UNI !ID 9qs]:	%NAME%%GOLD%Holy Water Sprinkler - The Fetid Sprinkler%CONTINUE%	// 
+ItemDisplay[UNI !ID 9ws]:	%NAME%%GOLD%Divine Scepter - Hand of Blessed Light%CONTINUE%		// 
+ItemDisplay[UNI !ID 7ws]:	%NAME%%GOLD%Caduceus - Astreon's Iron Ward%CONTINUE%			// 
+ItemDisplay[UNI !ID 7qs]:	%NAME%%GOLD%Seraph Rod - Akarat's Devotion%CONTINUE%			// NEW
+// ... Claws
+ItemDisplay[UNI !ID 9tw]:	%NAME%%GOLD%Greater Talons - Bartuc's Cut-Throat%CONTINUE%		// 
+ItemDisplay[UNI !ID 7wb]:	%NAME%%GOLD%Wrist Sword - Jade Talon%CONTINUE%				// 
+ItemDisplay[UNI !ID 7cs]:	%NAME%%GOLD%Battle Cestus - Shadow Killer%CONTINUE%			// 
+ItemDisplay[UNI !ID 7lw]:	%NAME%%GOLD%Feral Claws - Firelizard's Talons%CONTINUE%			// 
+ItemDisplay[UNI !ID 9ar]:	%NAME%%GOLD%Quhab - Mage Slayer%CONTINUE%				// NEW
+ItemDisplay[UNI !ID 7tw]:	%NAME%%GOLD%Runic Talons - Stalker's Cull%CONTINUE%			// NEW
+ItemDisplay[UNI !ID 7qr]:	%NAME%%GOLD%Scissors Suwayyah - Aidan's Scar%CONTINUE%			// NEW, exclusive (Diablo-Clone)
+// ... Orbs
+ItemDisplay[UNI !ID oba]:	%NAME%%GOLD%Swirling Crystal - The Oculus%CONTINUE%			// 
+ItemDisplay[UNI !ID obc]:	%NAME%%GOLD%Eldritch Orb - Eschuta's Temper%CONTINUE%			// 
+ItemDisplay[UNI !ID obf]:	%NAME%%GOLD%Dimensional Shard - Death's Fathom%CONTINUE%		// 
+ItemDisplay[UNI !ID ob6]:	%NAME%%GOLD%Glowing Orb - Tempest%CONTINUE%				// NEW
+// Individual Names for Unidentified Set Items
+// ... Shared Bases
+ItemDisplay[SET !ID crn ILVL<23]:	%GREEN%Crown - Iratha's Coil%CONTINUE%				// 
+ItemDisplay[SET !ID crn ILVL>22]:	%GREEN%Crown - Milabrega's Diadem / Iratha's Coil%WHITE%	// 
+ItemDisplay[SET !ID tgl ILVL<21]:	%GREEN%Light Gauntlets - Arctic Mitts%CONTINUE%			// 
+ItemDisplay[SET !ID tgl ILVL>20]:	%GREEN%Light Gauntlets - Iratha's Cuff / Arctic Mitts%WHITE%	// 
+ItemDisplay[SET !ID tbl ILVL<21]:	%GREEN%Heavy Belt - Infernal Sign%CONTINUE%			// 
+ItemDisplay[SET !ID tbl ILVL>20]:	%GREEN%Heavy Belt - Iratha's Cord / Infernal Sign%WHITE%	// 
+ItemDisplay[SET !ID cap ILVL<20]:	%GREEN%Cap - Infernal Cranium%CONTINUE%				// 
+ItemDisplay[SET !ID cap ILVL>19]:	%GREEN%Cap - Sander's Paragon / Infernal Cranium%WHITE%		// 
+ItemDisplay[SET !ID mbl ILVL<28]:	%GREEN%Belt - Hsarus' Iron Stay%CONTINUE%			// 
+ItemDisplay[SET !ID mbl ILVL>27]:	%GREEN%Belt - Hwanin's Blessing / Hsarus' Iron Stay%WHITE%	// 
+ItemDisplay[SET !ID vbt !((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))]:	%GREEN%Heavy Boots - Sander's Riprap%CONTINUE%			// 
+ItemDisplay[SET !ID vbt ((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))]:	%GREEN%Heavy Boots - Cow King's Hooves / Sander's Riprap%WHITE%		// can only be found in the cow level
+// ... Common Sets
+ItemDisplay[SET !ID rng]:	%GREEN%Ring Mail - Angelic Mantle%CONTINUE%			// 
+ItemDisplay[SET !ID sbr]:	%GREEN%Saber - Angelic Sickle%CONTINUE%				// 
+ItemDisplay[SET !ID skp]:	%GREEN%Skull Cap - Arcanna's Head%CONTINUE%			// 
+ItemDisplay[SET !ID ltp]:	%GREEN%Light Plate - Arcanna's Flesh%CONTINUE%			// 
+ItemDisplay[SET !ID wst]:	%GREEN%War Staff - Arcanna's Deathwand%CONTINUE%		// 
+ItemDisplay[SET !ID qui]:	%GREEN%Quilted Armor - Arctic Furs%CONTINUE%			// 
+ItemDisplay[SET !ID vbl]:	%GREEN%Light Belt - Arctic Binding%CONTINUE%			// 
+ItemDisplay[SET !ID swb]:	%GREEN%Short War Bow - Arctic Horn%CONTINUE%			// 
+ItemDisplay[SET !ID hlm]:	%GREEN%Helm - Berserker's Headgear%CONTINUE%			// 
+ItemDisplay[SET !ID spl]:	%GREEN%Splint Mail - Beserker's Hauberk%CONTINUE%		// 
+ItemDisplay[SET !ID 2ax]:	%GREEN%Double Axe - Berserker's Hatchet%CONTINUE%		// 
+ItemDisplay[SET !ID msk]:	%GREEN%Mask - Cathan's Visage%CONTINUE%				// 
+ItemDisplay[SET !ID chn]:	%GREEN%Chain Mail - Cathan's Mesh%CONTINUE%			// 
+ItemDisplay[SET !ID bst]:	%GREEN%Battle Staff - Cathan's Rule%CONTINUE%			// 
+ItemDisplay[SET !ID gsc]:	%GREEN%Grand Scepter - Civerb's Cudgel%CONTINUE%		// 
+ItemDisplay[SET !ID lrg]:	%GREEN%Large Shield - Civerb's Ward%CONTINUE%			// 
+ItemDisplay[SET !ID lsd]:	%GREEN%Long Sword - Cleglaw's Tooth%CONTINUE%			// 
+ItemDisplay[SET !ID mgl]:	%GREEN%Chain Gloves - Cleglaw's Pincers%CONTINUE%		// 
+ItemDisplay[SET !ID sml]:	%GREEN%Small Shield - Cleglaw's Claw%CONTINUE%			// 
+ItemDisplay[SET !ID wsd]:	%GREEN%War Sword - Death's Touch%CONTINUE%			// 
+ItemDisplay[SET !ID lgl]:	%GREEN%Leather Gloves - Death's Hand%CONTINUE%			// 
+ItemDisplay[SET !ID lbl]:	%GREEN%Sash - Death's Guard%CONTINUE%				// 
+ItemDisplay[SET !ID buc]:	%GREEN%Buckler - Hsarus' Iron Fist%CONTINUE%			// 
+ItemDisplay[SET !ID mbt]:	%GREEN%Chain Boots - Hsarus' Iron Heel%CONTINUE%		// 
+ItemDisplay[SET !ID dgr]:	%GREEN%Dagger - Infernal Spike%CONTINUE%			// 
+ItemDisplay[SET !ID bsd]:	%GREEN%Broad Sword - Isenhart's Lightbrand%CONTINUE%		// 
+ItemDisplay[SET !ID fhl]:	%GREEN%Full Helm - Isenhart's Horns%CONTINUE%			// 
+ItemDisplay[SET !ID brs]:	%GREEN%Breast Plate - Isenhart's Case%CONTINUE%			// 
+ItemDisplay[SET !ID gts]:	%GREEN%Gothic Shield - Isenhart's Parry%CONTINUE%		// 
+ItemDisplay[SET !ID aar]:	%GREEN%Ancient Armor - Milabrega's Robe%CONTINUE%		// 
+ItemDisplay[SET !ID kit]:	%GREEN%Kite Shield - Milabrega's Orb%CONTINUE%			// 
+ItemDisplay[SET !ID wsp]:	%GREEN%War Scepter - Milabrega's Rod%CONTINUE%			// 
+ItemDisplay[SET !ID ghm]:	%GREEN%Great Helm - Sigon's Visor%CONTINUE%			// 
+ItemDisplay[SET !ID gth]:	%GREEN%Gothic Plate - Sigon's Shelter%CONTINUE%			// 
+ItemDisplay[SET !ID hbt]:	%GREEN%Greaves - Sigon's Sabot%CONTINUE%			// 
+ItemDisplay[SET !ID tow]:	%GREEN%Tower Shield - Sigon's Guard%CONTINUE%			// 
+ItemDisplay[SET !ID hbl]:	%GREEN%Plated Belt - Sigon's Wrap%CONTINUE%			// 
+ItemDisplay[SET !ID hgl]:	%GREEN%Gauntlets - Sigon's Gage%CONTINUE%			// 
+ItemDisplay[SET !ID bhm]:	%GREEN%Bone Helm - Tancred's Skull%CONTINUE%			// 
+ItemDisplay[SET !ID ful]:	%GREEN%Full Plate Mail - Tancred's Spine%CONTINUE%		// 
+ItemDisplay[SET !ID lbt]:	%GREEN%Boots - Tancred's Hobnails%CONTINUE%			// 
+ItemDisplay[SET !ID mpi]:	%GREEN%Military Pick - Tancred's Crowbill%CONTINUE%		// 
+ItemDisplay[SET !ID lbb]:	%GREEN%Long Battle Bow - Vidala's Barb%CONTINUE%		// 
+ItemDisplay[SET !ID lea]:	%GREEN%Leather Armor - Vidala's Ambush%CONTINUE%		// 
+ItemDisplay[SET !ID tbt]:	%GREEN%Light Plated Boots - Vidala's Fetlock%CONTINUE%		// 
+// ... Uncommon Sets
+ItemDisplay[SET !ID bwn]:	%GREEN%Bone Wand - Sander's Superstition%CONTINUE%		// 
+ItemDisplay[SET !ID vgl]:	%GREEN%Heavy Gloves - Sander's Taboo%CONTINUE%			// 
+ItemDisplay[SET !ID xap]:	%GREEN%War Hat - Cow King's Horns%CONTINUE%			// 
+ItemDisplay[SET !ID stu]:	%GREEN%Studded Leather - Cow King's Hide%CONTINUE%		// 
+ItemDisplay[SET !ID xrn]:	%GREEN%Grand Crown - Hwanin's Splendor%CONTINUE%		// 
+ItemDisplay[SET !ID 9vo]:	%GREEN%Bill - Hwanin's Justice%CONTINUE%			// 
+ItemDisplay[SET !ID xcl]:	%GREEN%Tigulated Mail - Hwanin's Refuge%CONTINUE%		// 
+ItemDisplay[SET !ID xhl]:	%GREEN%Basinet - Sazabi's Mental Sheath%CONTINUE%		// 
+ItemDisplay[SET !ID 7ls]:	%GREEN%Cryptic Sword - Sazabi's Cobalt Redeemer%CONTINUE%	// 
+ItemDisplay[SET !ID upl]:	%GREEN%Balrog Skin - Sazabi's Ghost Liberator%CONTINUE%		// 
+ItemDisplay[SET !ID ci0]:	%GREEN%Circlet - Naj's Circlet%CONTINUE%			// 
+ItemDisplay[SET !ID ult]:	%GREEN%Hellforge Plate - Naj's Light Plate%CONTINUE%		// 
+ItemDisplay[SET !ID 6cs]:	%GREEN%Elder Staff - Naj's Puzzler%CONTINUE%			// 
+ItemDisplay[SET !ID 7gd]:	%GREEN%Colossus Blade - Bul-Kathos' Sacred Charge%CONTINUE%	// 
+ItemDisplay[SET !ID 7fb]:	%GREEN%Colossus Sword - Bul-Kathos' Tribal Guardian%CONTINUE%	// 
+ItemDisplay[SET !ID xrs]:	%GREEN%Cuirass - Haemosu's Adamant%CONTINUE%			// 
+ItemDisplay[SET !ID 7ma]:	%GREEN%Reinforced Mace - Dangoon's Teaching%CONTINUE%		// 
+ItemDisplay[SET !ID uts]:	%GREEN%Ward - Taebaek's Glory%CONTINUE%				// 
+ItemDisplay[SET !ID uhm]:	%GREEN%Spired Helm - Ondal's Almighty%CONTINUE%			// 
+ItemDisplay[SET !ID xhm]:	%GREEN%Winged Helm - Guillaume's Face%CONTINUE%			// 
+ItemDisplay[SET !ID xml]:	%GREEN%Round Shield - Whitstan's Guard%CONTINUE%		// 
+ItemDisplay[SET !ID xvg]:	%GREEN%Sharkskin Gloves - Magnus' Skin%CONTINUE%		// 
+ItemDisplay[SET !ID ztb]:	%GREEN%Battle Belt - Wilhelm's Pride%CONTINUE%			// 
+ItemDisplay[SET !ID ulg]:	%GREEN%Bramble Mitts - Laying of Hands%CONTINUE%		// 
+ItemDisplay[SET !ID uui]:	%GREEN%Dusk Shroud - Dark Adherent%CONTINUE%			// 
+ItemDisplay[SET !ID xlb]:	%GREEN%Demonhide Boots - Rite of Passage%CONTINUE%		// 
+ItemDisplay[SET !ID umc]:	%GREEN%Mithril Coil - Credendum%CONTINUE%			// 
+// ... Class-Focused Sets
+ItemDisplay[SET !ID dr8]:	%GREEN%Hunter's Guise - Aldur's Stony Gaze%CONTINUE%		// 
+ItemDisplay[SET !ID xtb]:	%GREEN%Battle Boots - Aldur's Advance%CONTINUE%			// 
+ItemDisplay[SET !ID uul]:	%GREEN%Shadow Plate - Aldur's Deception%CONTINUE%		// 
+ItemDisplay[SET !ID 9mt]:	%GREEN%Jagged Star - Aldur's Rhythm%CONTINUE%			// 
+ItemDisplay[SET !ID xar]:	%GREEN%Ornate Plate - Griswold's Heart%CONTINUE%		// 
+ItemDisplay[SET !ID urn]:	%GREEN%Corona - Griswold's Valor%CONTINUE%			// 
+ItemDisplay[SET !ID 7ws]:	%GREEN%Caduceus - Griswold's Redemption%CONTINUE%		// 
+ItemDisplay[SET !ID paf]:	%GREEN%Vortex Shield - Griswold's Honor%CONTINUE%		// 
+ItemDisplay[SET !ID ba5]:	%GREEN%Avenger Guard - Immortal King's Will%CONTINUE%		// 
+ItemDisplay[SET !ID 7m7]:	%GREEN%Ogre Maul - Immortal King's Stone Crusher%CONTINUE%	// 
+ItemDisplay[SET !ID uar]:	%GREEN%Sacred Armor - Immortal King's Soul Cage%CONTINUE%	// 
+ItemDisplay[SET !ID zhb]:	%GREEN%War Belt - Immortal King's Detail%CONTINUE%		// 
+ItemDisplay[SET !ID xhg]:	%GREEN%War Gauntlets - Immortal King's Forge%CONTINUE%		// 
+ItemDisplay[SET !ID xhb]:	%GREEN%War Boots - Immortal King's Pillar%CONTINUE%		// 
+ItemDisplay[SET !ID ci3]:	%GREEN%Diadem - M'avina's True Sight%CONTINUE%			// 
+ItemDisplay[SET !ID amc]:	%GREEN%Grand Matron Bow - M'avina's Caster%CONTINUE%		// 
+ItemDisplay[SET !ID uld]:	%GREEN%Kraken Shell - M'avina's Embrace%CONTINUE%		// 
+ItemDisplay[SET !ID xtg]:	%GREEN%Battle Gauntlets - M'avina's Icy Clutch%CONTINUE%	// 
+ItemDisplay[SET !ID zvb]:	%GREEN%Sharkskin Belt - M'avina's Tenet%CONTINUE%		// 
+ItemDisplay[SET !ID xh9]:	%GREEN%Grim Helm - Natalya's Totem%CONTINUE%			// 
+ItemDisplay[SET !ID 7qr]:	%GREEN%Scissors Suwayyah - Natalya's Mark%CONTINUE%		// 
+ItemDisplay[SET !ID ucl]:	%GREEN%Loricated Mail - Natalya's Shadow%CONTINUE%		// 
+ItemDisplay[SET !ID xmb]:	%GREEN%Mesh Boots - Natalya's Soul%CONTINUE%			// 
+ItemDisplay[SET !ID oba]:	%GREEN%Swirling Crystal - Tal Rasha's Lidless Eye%CONTINUE%	// 
+ItemDisplay[SET !ID xsk]:	%GREEN%Death Mask - Tal Rasha's Horadric Crest%CONTINUE%	// 
+ItemDisplay[SET !ID uth]:	%GREEN%Lacquered Plate - Tal Rasha's Guardianship%CONTINUE%	// 
+ItemDisplay[SET !ID zmb]:	%GREEN%Mesh Belt - Tal Rasha's Fine-Spun Cloth%CONTINUE%	// 
+ItemDisplay[SET !ID uh9]:	%GREEN%Bone Visage - Trang-Oul's Guise%CONTINUE%		// 
+ItemDisplay[SET !ID xul]:	%GREEN%Chaos Armor - Trang-Oul's Scales%CONTINUE%		// 
+ItemDisplay[SET !ID ne9]:	%GREEN%Cantor Trophy - Trang-Oul's Wing%CONTINUE%		// 
+ItemDisplay[SET !ID utc]:	%GREEN%Troll Belt - Trang-Oul's Girth%CONTINUE%			// 
+ItemDisplay[SET !ID xmg]:	%GREEN%Heavy Bracers - Trang-Oul's Claws%CONTINUE%		// 
