@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	16 AUGUST 2022
+//		Date Updated:	21 AUGUST 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -118,9 +118,9 @@ ItemDisplay[FILTLVL>0 GOLD>0 GOLD<882 DIFF=2 (MAPID=152 OR MAPID=153 OR MAPID=16
 ItemDisplay[FILTLVL>0 GOLD>0 GOLD<988 DIFF=2 (MAPID=136 OR MAPID=137 OR MAPID=161 OR MAPID=162 OR MAPID=163 OR MAPID=168)]:					// Uber Areas
 
 // Hidden (stricter): Gold based on character level
-ItemDisplay[FILTLVL>3 GOLD>0 GOLD<1000 DIFF=2 CLVL>79]:
-ItemDisplay[FILTLVL>4 GOLD>0 GOLD<1500 DIFF=2 CLVL>84]:
-ItemDisplay[FILTLVL>5 GOLD>0 GOLD<2000 DIFF=2 CLVL>89]:
+ItemDisplay[FILTLVL>3 GOLD>0 GOLD<1000 DIFF=2 CLVL>79 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]:
+ItemDisplay[FILTLVL>4 GOLD>0 GOLD<1500 DIFF=2 CLVL>84 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]:
+ItemDisplay[FILTLVL>5 GOLD>0 GOLD<2000 DIFF=2 CLVL>89 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]:
 
 // Gold (anything not hidden is displayed normally)
 ItemDisplay[GOLD>0]: %NAME%
@@ -1014,7 +1014,7 @@ ItemDisplay[ED=5 NMAG]: %NAME% %BLUE%+5{%NAME%}%CONTINUE%
 ItemDisplay[NMAG SOCK>0]: %NAME% %GRAY%[%SOCKETS%]{%NAME%}%CONTINUE%
 
 // Regular merchant items & Wirt's Leg
-ItemDisplay[NMAG (leg OR (SHOP DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14)) !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp))]: %NAME%{%NAME%}%WHITE%
+ItemDisplay[NMAG (leg OR (SHOP !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp)))]: %NAME%{%NAME%}%WHITE%
 
 // ADD CUSTOM RULES FOR REGULAR ITEMS HERE:
 // ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
