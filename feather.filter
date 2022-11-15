@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	14 NOVEMBER 2022
+//		Date Updated:	15 NOVEMBER 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -111,8 +111,8 @@ ItemDisplay[FILTLVL>0 GOLD>0 GOLD<395 DIFF=2 (MAPID=21 OR MAPID=38 OR MAPID=57 O
 ItemDisplay[FILTLVL>0 GOLD>0 GOLD<400 DIFF=2 (MAPID=14 OR MAPID=22 OR (MAPID>99 MAPID<103) OR MAPID=114 OR MAPID=115 OR MAPID=119 OR MAPID=121 OR MAPID=122)]:	// Zone Level 83
 ItemDisplay[FILTLVL>0 GOLD>0 GOLD<406 DIFF=2 (MAPID=23 OR MAPID=106 OR MAPID=123 OR MAPID=124)]:								// Zone Level 84
 ItemDisplay[FILTLVL>0 GOLD>0 GOLD<412 DIFF=2 (MAPID=11 OR MAPID=12 OR (MAPID>14 MAPID<20) OR MAPID=24 OR MAPID=25 OR MAPID=36 OR MAPID=37 OR MAPID=55 OR (MAPID>57 MAPID<66) OR MAPID=86 OR MAPID=87 OR (MAPID>88 MAPID<100) OR MAPID=105 OR MAPID=107 OR MAPID=108 OR MAPID=116 OR (MAPID>124 MAPID<136))]:		// Zone Level 85
-ItemDisplay[FILTLVL>0 GOLD>0 GOLD<846 DIFF=2 (MAPID=120 OR MAPID=139 OR MAPID=142 OR MAPID=145 OR MAPID=148 OR MMAPID=149 OR MAPID=158)]:			// Zone Level 87 (T1 Maps)
-ItemDisplay[FILTLVL>0 GOLD>0 GOLD<858 DIFF=2 (MAPID=143 OR MAPID=146 OR MAPID=155 OR MAPID=167 OR OR MAPID=169 OR MAPID=170)]:					// Zone Level 88 (T2 Maps)
+ItemDisplay[FILTLVL>0 GOLD>0 GOLD<846 DIFF=2 (MAPID=120 OR MAPID=139 OR MAPID=142 OR MAPID=145 OR MAPID=148 OR MAPID=149 OR MAPID=158)]:			// Zone Level 87 (T1 Maps)
+ItemDisplay[FILTLVL>0 GOLD>0 GOLD<858 DIFF=2 (MAPID=143 OR MAPID=146 OR MAPID=155 OR MAPID=167 OR MAPID=169 OR MAPID=170)]:					// Zone Level 88 (T2 Maps)
 ItemDisplay[FILTLVL>0 GOLD>0 GOLD<870 DIFF=2 (MAPID=141 OR MAPID=144 OR MAPID=147 OR MAPID=150 OR MAPID=151 OR MAPID=154 OR MAPID=156 OR MAPID=160)]:		// Zone Level 89 (T3 Maps)
 ItemDisplay[FILTLVL>0 GOLD>0 GOLD<882 DIFF=2 (MAPID=152 OR MAPID=153 OR MAPID=164 OR MAPID=165 OR MAPID=171 OR MAPID=172 OR MAPID=173)]:			// Zone Level 90 (Dungeons)
 ItemDisplay[FILTLVL>0 GOLD>0 GOLD<988 DIFF=2 (MAPID=136 OR MAPID=137 OR MAPID=161 OR MAPID=162 OR MAPID=163 OR MAPID=168)]:					// Ubers
@@ -389,14 +389,14 @@ ItemDisplay[r20s]: %NAME%{%WHITE%Others: 50% Extra Gold from Monsters%NL%Weapons
 ItemDisplay[r21s]: %NAME%{%WHITE%Others: +30% Enhanced Defense%NL%Weapons: +75% Damage & +100 Attack Rating vs. Demons%NL%}%CONTINUE%
 ItemDisplay[r22s]: %NAME%{%WHITE%Shields: All Resistances +22%NL%Armors: All Resistances +15%NL%Weapons: 25% Chance of Open Wounds%NL%}%CONTINUE%
 ItemDisplay[r23s]: %NAME%{%WHITE%Others: Magic Damage Taken Reduced by 7%NL%Weapons: Prevent Monster Heal%NL%}%CONTINUE%
-ItemDisplay[r24s]: %NAME%{%WHITE%Others: 25% Better Chance of Getting Magic Items%NL%Weapons: 30% Better Chance of Getting Magic Items%NL%}%CONTINUE%
+ItemDisplay[r24s]: %NAME%{%WHITE% 30% Better Chance of Getting Magic Items %NL%}%CONTINUE%
 ItemDisplay[r25s]: %NAME%{%WHITE%Others: +4% to Maximum Poison Resist%NL%Weapons: 20% Bonus to Attack Rating%NL%}%CONTINUE%
 ItemDisplay[r26s]: %NAME%{%WHITE%Others: +4% to Maximum Fire Resist%NL%Weapons: 7% Mana stolen per hit%NL%}%CONTINUE%
 ItemDisplay[r27s]: %NAME%{%WHITE%Others: +4% to Maximum Cold Resist%NL%Weapons: +50% Enhanced Damage%NL%}%CONTINUE%
 ItemDisplay[r28s]: %NAME%{%WHITE%Others: +4% to Maximum Lightning Resist%NL%Weapons: 20% Deadly Strike%NL%}%CONTINUE%
 ItemDisplay[r29s]: %NAME%{%WHITE%Shields: +50 to Mana%NL%Armors: Increase Maximum Mana 5%%NL%Weapons: +4 Life after Each Kill%NL%}%CONTINUE%
-ItemDisplay[r30s]: %NAME%{%WHITE%Others: Physical Damage Taken Reduced by 4%%NL%Weapons: 20% Chance of Crushing Blow%NL%}%CONTINUE%
-ItemDisplay[r31s]: %NAME%{%WHITE%Shields: +50 to Life%NL%Armors: Increase Maximum Life 5%%NL%Weapons: Ignore Target's Defense%NL%}%CONTINUE%
+ItemDisplay[r30s]: %NAME%{%WHITE%Others: Physical Damage Taken Reduced by 5%%NL%Weapons: 20% Chance of Crushing Blow%NL%}%CONTINUE%
+ItemDisplay[r31s]: %NAME%{%WHITE%Shields: +75 to Life%NL%Armors: Increase Maximum Life 5%%NL%Weapons: Ignore Target's Defense%NL%}%CONTINUE%
 ItemDisplay[r32s]: %NAME%{%WHITE%Others: Cannot Be Frozen%NL%Weapons: Freezes target +3%NL%}%CONTINUE%
 ItemDisplay[r33s]: %NAME%{%WHITE% Indestructible %NL%}%CONTINUE%
 
@@ -868,7 +868,7 @@ ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SIN SOCK=3]: %NAME%{%NAME%%NL%%GOLD%
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SCEPTER SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Neophyte, Strength, Wind}%CONTINUE%													// Scepter 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SCEPTER SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Lawbringer, Venom, Fury, Plague%NL%%WHITE%Runewords: %GOLD%Malice, King's Grace,}%CONTINUE%									// Scepter 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SCEPTER SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Rift, Fortitude, Phoenix, Hand of Justice%NL%%WHITE%Runewords: %GOLD%Holy Thunder, Insight, Passion,}%CONTINUE%						// Scepter 4s			...differences: Insight
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SCEPTER SOCK=5]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Honor, Call to Arms, Beast, Eternity}%CONTINUE%												// Scepter 5s
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SCEPTER SOCK=5]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Honor, Call to Arms, Beast, Eternity, Doom}%CONTINUE%											// Scepter 5s			...differences: Doom
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 STAFF SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Leaf, Neophyte, Strength, Wind}%CONTINUE%													// Staff 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 STAFF SOCK=3]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Malice, Venom, Fury, Plague}%CONTINUE%													// Staff 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 STAFF SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Fortitude, Infinity, Phoenix, Hand of Justice%NL%%WHITE%Runewords: %GOLD%Insight, Spirit, Memory, Rampage, Passion, Heart of the Oak,}%CONTINUE%		// Staff 4s			...differences: Spirit, Infinity
@@ -888,7 +888,7 @@ ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (SPEAR OR POLEARM) SOCK=5]: %NAME%{%
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (SPEAR OR POLEARM) SOCK=6]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Silence, Asylum, Breath of the Dying}%CONTINUE%										// Spear & Polearm 6s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Steel, Strength, Wind}%CONTINUE%														// Sword 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Crescent Moon, Venom, Fury, Plague%NL%%WHITE%Runewords: %GOLD%Malice, King's Grace, Lawbringer,}%CONTINUE%							// Sword 3s
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Kingslayer, Fortitude, Famine, Phoenix, Hand of Justice%NL%%WHITE%Runewords: %GOLD%Spirit, Passion, Voice of Reason, Oath,}%CONTINUE%				// Sword 4s			...differences: Famine
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Kingslayer, Fortitude, Famine, Phoenix, Hand of Justice%NL%%WHITE%Runewords: %GOLD%Spirit, Passion, Voice of Reason, Oath, Rift,}%CONTINUE%			// Sword 4s			...differences: Rift, Famine
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=5]: %NAME%{%NAME%%NL%%GOLD%Grief, Eternity, Destruction, Doom%NL%%WHITE%Runewords: %GOLD%Honor, Death, Call to Arms,}%CONTINUE%								// Sword 5s			...differences: Doom
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=6]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Unbending Will, Silence, Last Wish, Breath of the Dying}%CONTINUE%										// Sword 6s			...differences: Unbending Will (new, Fal+Io+Ith+Eld+El+Hel)
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 AXE SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Steel, Strength, Wind}%CONTINUE%														// Axe 2s
@@ -925,7 +925,7 @@ ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SIN SOCK=3]: %NAME%{%NAME%%NL%%GOLD%P
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SCEPTER SOCK=2]: %NAME%{%NAME%%NL%%GOLD%Wind %GRAY%Sur+El%NL%%GOLD%Strength %GRAY%Amn+Tir%NL%%GOLD%Neophyte %GRAY%Thul+Tir%NL%%WHITE%Possible Runewords:}%CONTINUE%																																														// Scepter 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SCEPTER SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Plague %GRAY%Cham+Fal+Um%NL%%GOLD%Fury %GRAY%Jah+Gul+Eth%NL%%GOLD%Venom %GRAY%Tal+Dol+Mal%NL%%GOLD%Lawbringer %GRAY%Amn+Lem+Ko%NL%%GOLD%King's Grace %GRAY%Amn+Ral+Thul%NL%%GOLD%Malice %GRAY%Ith+El+Eth%NL%%WHITE%Possible Runewords:}%CONTINUE%																															// Scepter 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SCEPTER SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Hand of Justice %GRAY%Sur+Cham+Amn+Lo%NL%%GOLD%Phoenix %GRAY%Vex+Vex+Lo+Jah%NL%%GOLD%Fortitude %GRAY%El+Sol+Dol+Lo%NL%%GOLD%Rift %GRAY%Hel+Ko+Lem+Gul%NL%%GOLD%Passion %GRAY%Dol+Ort+Eld+Lem%NL%%GOLD%Insight %GRAY%Ral+Tir+Tal+Sol%NL%%GOLD%Holy Thunder %GRAY%Eth+Ral+Ort+Tal%NL%%WHITE%Possible Runewords:}%CONTINUE%																						// Scepter 4s
-ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SCEPTER SOCK=5]: %NAME%{%NAME%%NL%%GOLD%Eternity %GRAY%Amn+Ber+Ist+Sol+Sur%NL%%GOLD%Beast %GRAY%Ber+Tir+Um+Mal+Lum%NL%%GOLD%Call to Arms %GRAY%Amn+Ral+Mal+Ist+Ohm%NL%%GOLD%Honor %GRAY%Amn+El+Ith+Tir+Sol%NL%%WHITE%Possible Runewords:}%CONTINUE%																																				// Scepter 5s
+ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SCEPTER SOCK=5]: %NAME%{%NAME%%NL%%GOLD%Doom %GRAY%Hel+Ohm+Um+Lo+Cham%NL%%GOLD%Eternity %GRAY%Amn+Ber+Ist+Sol+Sur%NL%%GOLD%Beast %GRAY%Ber+Tir+Um+Mal+Lum%NL%%GOLD%Call to Arms %GRAY%Amn+Ral+Mal+Ist+Ohm%NL%%GOLD%Honor %GRAY%Amn+El+Ith+Tir+Sol%NL%%WHITE%Possible Runewords:}%CONTINUE%																															// Scepter 5s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 STAFF SOCK=2]: %NAME%{%NAME%%NL%%GOLD%Wind %GRAY%Sur+El%NL%%GOLD%Strength %GRAY%Amn+Tir%NL%%GOLD%Neophyte %GRAY%Thul+Tir%NL%%GOLD%Leaf %GRAY%Tir+Ral%NL%%WHITE%Possible Runewords:}%CONTINUE%																																										// Staff 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 STAFF SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Plague %GRAY%Cham+Fal+Um%NL%%GOLD%Fury %GRAY%Jah+Gul+Eth%NL%%GOLD%Venom %GRAY%Tal+Dol+Mal%NL%%GOLD%Malice %GRAY%Ith+El+Eth%NL%%WHITE%Possible Runewords:}%CONTINUE%																																									// Staff 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 STAFF SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Hand of Justice %GRAY%Sur+Cham+Amn+Lo%NL%%GOLD%Phoenix %GRAY%Vex+Vex+Lo+Jah%NL%%GOLD%Infinity %GRAY%Ber+Mal+Ber+Ist%NL%%GOLD%Fortitude %GRAY%El+Sol+Dol+Lo%NL%%GOLD%Heart of the Oak %GRAY%Ko+Vex+Pul+Thul%NL%%GOLD%Passion %GRAY%Dol+Ort+Eld+Lem%NL%%GOLD%Rampage %GRAY%Shael+El+Ith+Eth%NL%%GOLD%Memory %GRAY%Lum+Io+Sol+Eth%NL%%GOLD%Spirit %GRAY%Tal+Thul+Ort+Amn%NL%%GOLD%Insight %GRAY%Ral+Tir+Tal+Sol%NL%%WHITE%Possible Runewords:}%CONTINUE%							// Staff 4s
@@ -945,7 +945,7 @@ ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 (SPEAR OR POLEARM) SOCK=5]: %NAME%{%N
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 (SPEAR OR POLEARM) SOCK=6]: %NAME%{%NAME%%NL%%GOLD%Breath of the Dying %GRAY%Vex+Hel+El+Eld+Zod+Eth%NL%%GOLD%Asylum %GRAY%Gul+Cham+Hel+Jah+Dol+Um%NL%%GOLD%Silence %GRAY%Dol+Eld+Hel+Ist+Tir+Vex%NL%%WHITE%Possible Runewords:}%CONTINUE%																																					// Spear & Polearm 6s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SWORD SOCK=2]: %NAME%{%NAME%%NL%%GOLD%Wind %GRAY%Sur+El%NL%%GOLD%Strength %GRAY%Amn+Tir%NL%%GOLD%Steel %GRAY%Tir+El%NL%%WHITE%Possible Runewords:}%CONTINUE%																																															// Sword 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SWORD SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Plague %GRAY%Cham+Fal+Um%NL%%GOLD%Fury %GRAY%Jah+Gul+Eth%NL%%GOLD%Venom %GRAY%Tal+Dol+Mal%NL%%GOLD%Crescent Moon %GRAY%Shael+Um+Tir%NL%%GOLD%Lawbringer %GRAY%Amn+Lem+Ko%NL%%GOLD%King's Grace %GRAY%Amn+Ral+Thul%NL%%GOLD%Malice %GRAY%Ith+El+Eth%NL%%WHITE%Possible Runewords:}%CONTINUE%																										// Sword 3s
-ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SWORD SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Hand of Justice %GRAY%Sur+Cham+Amn+Lo%NL%%GOLD%Phoenix %GRAY%Vex+Vex+Lo+Jah%NL%%GOLD%Famine %GRAY%Fal+Ohm+Ort+Jah%NL%%GOLD%Fortitude %GRAY%El+Sol+Dol+Lo%NL%%GOLD%Kingslayer %GRAY%Mal+Um+Gul+Fal%NL%%GOLD%Oath %GRAY%Shael+Pul+Mal+Lum%NL%%GOLD%Voice of Reason %GRAY%Lem+Ko+El+Eld%NL%%GOLD%Passion %GRAY%Dol+Ort+Eld+Lem%NL%%GOLD%Spirit %GRAY%Tal+Thul+Ort+Amn%NL%%WHITE%Possible Runewords:}%CONTINUE%												// Sword 4s
+ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SWORD SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Hand of Justice %GRAY%Sur+Cham+Amn+Lo%NL%%GOLD%Phoenix %GRAY%Vex+Vex+Lo+Jah%NL%%GOLD%Famine %GRAY%Fal+Ohm+Ort+Jah%NL%%GOLD%Fortitude %GRAY%El+Sol+Dol+Lo%NL%%GOLD%Kingslayer %GRAY%Mal+Um+Gul+Fal%NL%%GOLD%Rift %GRAY%Hel+Ko+Lem+Gul%NL%%GOLD%Oath %GRAY%Shael+Pul+Mal+Lum%NL%%GOLD%Voice of Reason %GRAY%Lem+Ko+El+Eld%NL%%GOLD%Passion %GRAY%Dol+Ort+Eld+Lem%NL%%GOLD%Spirit %GRAY%Tal+Thul+Ort+Amn%NL%%WHITE%Possible Runewords:}%CONTINUE%								// Sword 4s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SWORD SOCK=5]: %NAME%{%NAME%%NL%%GOLD%Doom %GRAY%Hel+Ohm+Um+Lo+Cham%NL%%GOLD%Destruction %GRAY%Vex+Lo+Ber+Jah+Ko%NL%%GOLD%Eternity %GRAY%Amn+Ber+Ist+Sol+Sur%NL%%GOLD%Grief %GRAY%Eth+Tir+Lo+Mal+Ral%NL%%GOLD%Call to Arms %GRAY%Amn+Ral+Mal+Ist+Ohm%NL%%GOLD%Death %GRAY%Hel+El+Vex+Ort+Gul%NL%%GOLD%Honor %GRAY%Amn+El+Ith+Tir+Sol%NL%%WHITE%Possible Runewords:}%CONTINUE%																				// Sword 5s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SWORD SOCK=6]: %NAME%{%NAME%%NL%%GOLD%Breath of the Dying %GRAY%Vex+Hel+El+Eld+Zod+Eth%NL%%GOLD%Last Wish %GRAY%Jah+Mal+Jah+Sur+Jah+Ber%NL%%GOLD%Silence %GRAY%Dol+Eld+Hel+Ist+Tir+Vex%NL%%GOLD%Unbending Will %GRAY%Fal+Io+Ith+Eld+El+Hel%NL%%WHITE%Possible Runewords:}%CONTINUE%																																// Sword 6s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 AXE SOCK=2]: %NAME%{%NAME%%NL%%GOLD%Wind %GRAY%Sur+El%NL%%GOLD%Strength %GRAY%Amn+Tir%NL%%GOLD%Steel %GRAY%Tir+El%NL%%WHITE%Possible Runewords:}%CONTINUE%																																															// Axe 2s
