@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	15 NOVEMBER 2022
+//		Date Updated:	18 NOVEMBER 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -274,39 +274,29 @@ ItemDisplay[FILTLVL=1 cwss]:	%MAP-50%%TIER-9%    %NAME%    {%WHITE%Corrupts %GOL
 ItemDisplay[FILTLVL=1 lsvl]:	%BORDER-50%%TIER-9%%RED%       Vial of Lightsong       {%WHITE%Cannot be used with set items or indestructible items}%WHITE%													// Vial of Lightsong
 ItemDisplay[FILTLVL=1 llmr]:	%BORDER-50%%TIER-9%%RED%        Lilith's Mirror        {%WHITE%Mirrored items cannot be used in any cube recipes}%WHITE%													// Lilith's Mirror
 // Alternative Rules for Maps (immunes)
-ItemDisplay[FILTLVL=1 t11]: %NAME%{%WHITE%Highest Immunes: %RED%145% %BLUE%160% %YELLOW%120% %GREEN%120% %ORANGE%100%}%CONTINUE%	// Ruins of Viz-Jun		T2
-ItemDisplay[FILTLVL=1 t12]: %NAME%{%WHITE%Highest Immunes: %RED%135% %GREEN%120%}%CONTINUE%						// Horazon's Memory		T1
-ItemDisplay[FILTLVL=1 t13]: %NAME%{%WHITE%Highest Immunes: %YELLOW%135% %GOLD%?}%CONTINUE%						// Bastion Keep			T1
-ItemDisplay[FILTLVL=1 t14]: %NAME%{%WHITE%Highest Immunes: %RED%130% %BLUE%130% %GREEN%140%}%CONTINUE%					// Sanatorium			T2
-ItemDisplay[FILTLVL=1 t15]: %NAME%{%WHITE%Highest Immunes: %YELLOW%100% %GREEN%105% %GOLD%105% %ORANGE%150%}%CONTINUE%			// Royal Crypts			T2
-ItemDisplay[FILTLVL=1 t16]: %NAME%{%WHITE%Highest Immunes: %BLUE%? %GREEN%? %ORANGE%?}%CONTINUE%					// Ruined Cistern		T1
-ItemDisplay[FILTLVL=1 t21]: %NAME%{%WHITE%Highest Immunes: %GREEN%120% %ORANGE%? %GOLD%?}%CONTINUE%					// Phlegethon			T1
+ItemDisplay[FILTLVL=1 t11]: %NAME%{%WHITE%Highest Immunes: %YELLOW%120% %GREEN%120%}%CONTINUE%						// Ruins of Viz-Jun		T2
+ItemDisplay[FILTLVL=1 t12]: %NAME%{%WHITE%Highest Immunes: %RED%135% %GREEN%120% %GRAY%(Lightning Spire %GREEN%1000%%GRAY%)}%CONTINUE%	// Horazon's Memory		T1
+ItemDisplay[FILTLVL=1 t13]: %NAME%{%WHITE%Highest Immunes: %YELLOW%135% %GOLD%110%}%CONTINUE%						// Bastion Keep			T1
+ItemDisplay[FILTLVL=1 t14]: %NAME%{%WHITE%Highest Immunes: %RED%130% %BLUE%130%}%CONTINUE%						// Sanatorium			T2
+ItemDisplay[FILTLVL=1 t15]: %NAME%{%WHITE%Highest Immunes: %YELLOW%100% %GREEN%105% %ORANGE%150%}%CONTINUE%				// Royal Crypts			T2
+ItemDisplay[FILTLVL=1 t16]: %NAME%{%WHITE%Highest Immunes: %BLUE%115% %GREEN%140% %ORANGE%125%}%CONTINUE%				// Ruined Cistern		T1
+ItemDisplay[FILTLVL=1 t21]: %NAME%{%WHITE%Highest Immunes: %RED%140% %GREEN%120%}%CONTINUE%						// Phlegethon			T1
 ItemDisplay[FILTLVL=1 t22]: %NAME%{%WHITE%Highest Immunes: %BLUE%140% %YELLOW%105%}%CONTINUE%						// Torajan Jungle		T1
-ItemDisplay[FILTLVL=1 t23]: %NAME%{%WHITE%Highest Immunes: %RED%130% %BLUE%?}%CONTINUE%							// Arreat Battlefield		T1
+ItemDisplay[FILTLVL=1 t23]: %NAME%{%WHITE%Highest Immunes: %RED%130% %YELLOW%100%}%CONTINUE%						// Arreat Battlefield		T1
 ItemDisplay[FILTLVL=1 t24]: %NAME%{%WHITE%Highest Immunes: %YELLOW%120% %GREEN%110% %GOLD%105%}%CONTINUE%				// Tomb of Zultan Kulle		T3
-ItemDisplay[FILTLVL=1 t25]: %NAME%{%WHITE%Highest Immunes: %RED%125% %YELLOW%135% %ORANGE%?}%CONTINUE%					// Sewers of Harrogath		T3
-ItemDisplay[FILTLVL=1 t26]: %NAME%{%WHITE%Highest Immunes: %RED%110% %BLUE%150% %GOLD%100% %ORANGE%120%}%CONTINUE%			// Shadows of Westmarch		T2
+ItemDisplay[FILTLVL=1 t25]: %NAME%{%WHITE%Highest Immunes: %RED%125% %YELLOW%135%}%CONTINUE%						// Sewers of Harrogath		T3
+ItemDisplay[FILTLVL=1 t26]: %NAME%{%WHITE%Highest Immunes: %RED%110% %BLUE%150% %GOLD%100%}%CONTINUE%					// Shadows of Westmarch		T2
 ItemDisplay[FILTLVL=1 t31]: %NAME%{%WHITE%Highest Immunes: %RED%125% %BLUE%180% %ORANGE%100%}%CONTINUE%					// River of Blood		T3
 ItemDisplay[FILTLVL=1 t32]: %NAME%{%WHITE%Highest Immunes: %RED%130% %GREEN%115%}%CONTINUE%						// Throne of Insanity		T3
 ItemDisplay[FILTLVL=1 t33]: %NAME%{%WHITE%Highest Immunes: %RED%120% %YELLOW%115%}%CONTINUE%						// Lost Temple			T1
-ItemDisplay[FILTLVL=1 t34]: %NAME%{%WHITE%Highest Immunes: %RED%120% %YELLOW%110% %GREEN%120% %GOLD%100%}%CONTINUE%			// Ancestral Trial		T2
+ItemDisplay[FILTLVL=1 t34]: %NAME%{%WHITE%Highest Immunes: %RED%120% %GREEN%120% %GOLD%100%}%CONTINUE%					// Ancestral Trial		T2
 //ItemDisplay[FILTLVL=1 t35]: %NAME%%CONTINUE%												// Blood Moon			T3
-ItemDisplay[FILTLVL=1 t36]: %NAME%{%WHITE%Highest Immunes: %BLUE%140% %YELLOW%100% %GREEN%110%}%CONTINUE%				// Fall of Caldeum		T2
+ItemDisplay[FILTLVL=1 t36]: %NAME%{%WHITE%Highest Immunes: %YELLOW%100%}%CONTINUE%							// Fall of Caldeum		T2
 ItemDisplay[FILTLVL=1 t37]: %NAME%{%WHITE%Highest Immunes: %RED%140% %BLUE%130% %GOLD%100%}%CONTINUE%					// Pandemonium Citadel		T3
 ItemDisplay[FILTLVL=1 t38]: %NAME%{%WHITE%Highest Immunes: %YELLOW%160% %GREEN%110%}%CONTINUE%						// Canyon of Sescheron		T3
-ItemDisplay[FILTLVL=1 t39]: %NAME%{%WHITE%Highest Immunes: %BLUE%? %GREEN%110%}%CONTINUE%						// Kehjistan Marketplace	T3
-ItemDisplay[FILTLVL=1 t3a]: %NAME%{%WHITE%Highest Immunes: %YELLOW%? %GREEN%? %ORANGE%?}%CONTINUE%					// Ashen Plains			T3
+ItemDisplay[FILTLVL=1 t39]: %NAME%{%WHITE%Highest Immunes: %BLUE%130% %GREEN%110% %GRAY%(Fire Tower %GREEN%1000%%GRAY%)}%CONTINUE%	// Kehjistan Marketplace	T3
+ItemDisplay[FILTLVL=1 t3a]: %NAME%{%WHITE%Highest Immunes: %YELLOW%145% %GREEN%130% %ORANGE%120%}%CONTINUE%				// Ashen Plains			T3
 ItemDisplay[FILTLVL=1 (t41 OR t42 OR t43)]: %NAME%{%WHITE%Highest Immunes: 180% %GRAY%(All Damage Types)}%CONTINUE%			// Dungeons			T4
-// Alternative Rules for Maps (extra immunes)
-ItemDisplay[FILTLVL=1 t35 (PREFIX=1567 OR PREFIX=1565 OR PREFIX=1569)]: %NAME%{%WHITE%Immunes:}%CONTINUE%
-ItemDisplay[FILTLVL=1 (t12 OR t39 OR ((t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t23 OR t25 OR t26 OR t27 OR t28 OR t29 OR t32 OR t33 OR t34 OR t35 OR t37 OR t39) PREFIX=1567) OR ((t16 OR t17 OR t18 OR t19 OR t22 OR t26 OR t27 OR t28 OR t29 OR t31 OR t35) PREFIX=1565) OR ((t15 OR t16 OR t17 OR t18 OR t19 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t35) PREFIX=1569))]: %NAME%{%NAME% %GRAY%(}%CONTINUE%
-ItemDisplay[FILTLVL=1 t12]: %NAME%{%NAME%Lightning Spire %GREEN%1000%%GRAY%}%CONTINUE%
-ItemDisplay[FILTLVL=1 t39]: %NAME%{%NAME%Fire Tower %GREEN%1000%%GRAY%}%CONTINUE%
-ItemDisplay[FILTLVL=1 (t12 OR t39) (((t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t23 OR t25 OR t26 OR t27 OR t28 OR t29 OR t32 OR t33 OR t34 OR t35 OR t37 OR t39) PREFIX=1567) OR ((t16 OR t17 OR t18 OR t19 OR t22 OR t26 OR t27 OR t28 OR t29 OR t31 OR t35) PREFIX=1565) OR ((t15 OR t16 OR t17 OR t18 OR t19 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t35) PREFIX=1569))]: %NAME%{%NAME%, }%CONTINUE%
-ItemDisplay[FILTLVL=1 (t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t23 OR t25 OR t26 OR t27 OR t28 OR t29 OR t32 OR t33 OR t34 OR t35 OR t37 OR t39) PREFIX=1567]: %NAME%{%NAME%Vampire Lords %BLUE%135%%GRAY%}%CONTINUE%
-ItemDisplay[FILTLVL=1 (t16 OR t17 OR t18 OR t19 OR t22 OR t26 OR t27 OR t28 OR t29 OR t31 OR t35) PREFIX=1565]: %NAME%{%NAME%Stygian Dolls %GREEN%105%%GRAY%}%CONTINUE%
-ItemDisplay[FILTLVL=1 (t15 OR t16 OR t17 OR t18 OR t19 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t35) PREFIX=1569]: %NAME%{%NAME%Reanimated Horde %GREEN%120%%GRAY%}%CONTINUE%
-ItemDisplay[FILTLVL=1 (t12 OR t39 OR ((t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t23 OR t25 OR t26 OR t27 OR t28 OR t29 OR t32 OR t33 OR t34 OR t35 OR t37 OR t39) PREFIX=1567) OR ((t16 OR t17 OR t18 OR t19 OR t22 OR t26 OR t27 OR t28 OR t29 OR t31 OR t35) PREFIX=1565) OR ((t15 OR t16 OR t17 OR t18 OR t19 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t35) PREFIX=1569))]: %NAME%{%NAME%)}%CONTINUE%
 
 // Miscellaneous
 //ItemDisplay[tbk]:	%NAME%%WHITE%									// Tome of Town Portal	(listed here for reference)
@@ -379,7 +369,7 @@ ItemDisplay[r10s]: %NAME%{%WHITE%Shields: Cold Resist +35%%NL%Armors: Cold Resis
 ItemDisplay[r11s]: %NAME%{%WHITE%Others: Attacker Takes Damage of 14%NL%Weapons: 7% Life stolen per hit%NL%}%CONTINUE%
 ItemDisplay[r12s]: %NAME%{%WHITE%Others: Physical Damage Taken Reduced by 7%NL%Weapons: +9 to Minimum Damage%NL%}%CONTINUE%
 ItemDisplay[r13s]: %NAME%{%WHITE%Shields: +20% Faster Block Rate%NL%Armors: +20% Faster Hit Recovery%NL%Weapons: +20% Increased Attack Speed%NL%}%CONTINUE%
-ItemDisplay[r14s]: %NAME%{%WHITE%Others: Replenish Life +10%NL%Weapons: +25% Enhanced Damage%NL%}%CONTINUE%
+ItemDisplay[r14s]: %NAME%{%WHITE%Others: Replenish Life +10%NL%Weapons: +20% Enhanced Damage%NL%}%CONTINUE%
 ItemDisplay[r15s]: %NAME%{%WHITE%Others: Requirements -15%%NL%Weapons: Requirements -20%%NL%}%CONTINUE%
 ItemDisplay[r16s]: %NAME%{%WHITE% +10 to Vitality %NL%}%CONTINUE%
 ItemDisplay[r17s]: %NAME%{%WHITE% +10 to Energy %NL%}%CONTINUE%
@@ -392,7 +382,7 @@ ItemDisplay[r23s]: %NAME%{%WHITE%Others: Magic Damage Taken Reduced by 7%NL%Weap
 ItemDisplay[r24s]: %NAME%{%WHITE% 30% Better Chance of Getting Magic Items %NL%}%CONTINUE%
 ItemDisplay[r25s]: %NAME%{%WHITE%Others: +4% to Maximum Poison Resist%NL%Weapons: 20% Bonus to Attack Rating%NL%}%CONTINUE%
 ItemDisplay[r26s]: %NAME%{%WHITE%Others: +4% to Maximum Fire Resist%NL%Weapons: 7% Mana stolen per hit%NL%}%CONTINUE%
-ItemDisplay[r27s]: %NAME%{%WHITE%Others: +4% to Maximum Cold Resist%NL%Weapons: +50% Enhanced Damage%NL%}%CONTINUE%
+ItemDisplay[r27s]: %NAME%{%WHITE%Others: +4% to Maximum Cold Resist%NL%Weapons: +40% Enhanced Damage%NL%}%CONTINUE%
 ItemDisplay[r28s]: %NAME%{%WHITE%Others: +4% to Maximum Lightning Resist%NL%Weapons: 20% Deadly Strike%NL%}%CONTINUE%
 ItemDisplay[r29s]: %NAME%{%WHITE%Shields: +50 to Mana%NL%Armors: Increase Maximum Mana 5%%NL%Weapons: +4 Life after Each Kill%NL%}%CONTINUE%
 ItemDisplay[r30s]: %NAME%{%WHITE%Others: Physical Damage Taken Reduced by 5%%NL%Weapons: 20% Chance of Crushing Blow%NL%}%CONTINUE%
@@ -761,13 +751,13 @@ ItemDisplay[!ID ((UNI ((uhm ILVL>76) OR (7fl ILVL>85) OR (7sc ILVL>79) OR (7wh I
 
 // Modification: Natural Sockets
 ItemDisplay[!ID ((UNI (xml OR xng)) OR (SET ba5))]: %NAME% %GRAY%[2]%CONTINUE%					// 2s	Moser's Blessed Circle, Spirit Forge, Immortal King's Will
-ItemDisplay[!ID UNI (9fc OR 9st)]: %NAME% %GRAY%[3]%CONTINUE%							// 3s	Blade of Ali Baba, Hone Sundan
+ItemDisplay[!ID UNI 9st]: %NAME% %GRAY%[3]%CONTINUE%								// 3s	Hone Sundan
 ItemDisplay[!ID UNI (7sm OR ne6)]: %NAME% %GRAY%[1-2]%CONTINUE%							// 1-2s	Djinn Slayer, Kalan's Legacy
 ItemDisplay[!ID ((UNI (urn OR ush OR (7sc ILVL<80))) OR (SET (ucl OR paf)))]: %NAME% %GRAY%[1-3]%CONTINUE%	// 1-3s	Crown of Ages, Head Hunter's Glory, Heaven's Light, Natalya's Shadow, Griswold's Honor
-ItemDisplay[!ID SET (9mt OR xar OR urn)]: %NAME% %GRAY%[2-3]%CONTINUE%						// 2-3s	Aldur's Rhythm, Griswold's Heart, Griswold's Valor
+ItemDisplay[!ID ((UNI 9fc) OR (SET (9mt OR xar OR urn)))]: %NAME% %GRAY%[2-3]%CONTINUE%				// 2-3s	Blade of Ali Baba, Aldur's Rhythm, Griswold's Heart, Griswold's Valor
 ItemDisplay[!ID UNI (7o7 OR 7pa OR 8s8)]: %NAME% %GRAY%[2-4]%CONTINUE%						// 2-4s	Bonehew, Tomb Reaver, Witchwild String
-ItemDisplay[!ID ((UNI xul) OR (SET 7ws))]: %NAME% %GRAY%[3-4]%CONTINUE%						// 3-4s	Black Hades, Griswold's Redemption
-ItemDisplay[!ID UNI (72a OR 6hx)]: %NAME% %GRAY%[3-5]%CONTINUE%							// 3-5s	Rune Master, Hellrack
+ItemDisplay[!ID UNI xul]: %NAME% %GRAY%[3-4]%CONTINUE%								// 3-4s	Black Hades
+ItemDisplay[!ID ((UNI (72a OR 6hx)) OR (SET 7ws))]: %NAME% %GRAY%[3-5]%CONTINUE%				// 3-5s	Rune Master, Hellrack, Griswold's Redemption
 
 // Highlighting & Notifications - Uniques				...reference table of highlights: https://tinyurl.com/d2filterhighlighting																																	...Note: the notifying keywords here also apply to identified versions since these rules don't include !ID (keywords like %MAP-53% bypass the normal priority system)
 ItemDisplay[UNI ((ETH (xh9 OR (7gm ILVL>84) OR usk OR 7gd)) OR (!ETH (jew OR cm1 OR cm2 OR (uar ILVL>86) OR (7gm ILVL>84) OR xh9 OR uap OR usk OR ci3 OR baa OR dra OR xea OR ulc OR 6lw OR 7gw OR obf OR obc OR 7cr OR uhm OR urn OR 7gd)) OR utb OR uhl OR 7bs OR 7qr OR uth OR ((amu OR ram) ILVL=99 (!ID OR SOCK>0)) OR (utc OR rbe) OR (uhn OR rar))]:	%BORDER-53%%TIER-9%         %NAME%         %WHITE%	// Highlighting - 9 spaces
@@ -775,8 +765,8 @@ ItemDisplay[UNI ((ETH (7gw OR obc OR obf OR 6ws OR xhn OR uar OR 7wa)) OR (!ETH 
 ItemDisplay[UNI ((ETH (ama OR (7wh ILVL>82) OR 7s8 OR xrs OR 7wc)) OR (!ETH ((amu ILVL>79 (!ID OR (ALLSK>1 RES>10))) OR (rin ILVL>65) OR cm3 OR (7wh ILVL>82) OR (uar ILVL<87) OR dre OR uld OR oba OR bac OR xvb OR 6sw OR xhn OR xhb OR ztb)))]:	%MAP-53%%TIER-9%     %NAME%     %WHITE%																// Highlighting - 5 spaces
 ItemDisplay[UNI ((ETH (amf OR (uhm ILVL>76) OR oba OR uvb OR 7pa OR 9bs OR 7kr OR 9gm OR am5 OR 9ar OR utp)) OR (!ETH ((amu ILVL>72 (!ID OR TABSK26>0 OR STAT363>0 OR STAT250>0)) OR (rin ILVL>38) OR (7gm ILVL<85) OR tgl OR xmb OR zlb OR zvb OR umc OR 7s8 OR xrs OR upl OR xsh OR uvb OR 7wa OR ama OR xtp OR nee OR 7wc)))]:	%MAP-53%%TIER-9%    %NAME%    %WHITE%						// Highlighting - 4 spaces
 ItemDisplay[UNI ((ETH (ci3 OR (7fl ILVL>85) OR (7fl ILVL<86) OR 7bk OR ulc OR bae OR 7ws OR xtg OR uvg OR uvc OR xpl OR xld OR utu OR 9bs OR 8ls OR 7gi OR uul OR ztb OR ob6 OR 9gw OR 7b8 OR 7ts OR 7p7 OR 7fb OR ame OR 6bs OR 7qs OR 7tw OR 8ws)) OR (!ETH ((amu ILVL>54 (!ID OR STAT360>0 OR STAT57>1000 OR STAT362>0 OR FRW>20 OR ED>30 OR ALLSK>0)) OR (7fl ILVL>85) OR xhm OR utu OR uhb OR 9ws OR 7ws OR amf OR 6l7 OR 8hx OR 7gi OR am7 OR 8lw OR nef OR xpl OR ci2 OR drb OR drd OR uts OR pac OR hgl OR xlg OR umb OR xth OR uvg OR 7kr OR 6hx OR 9gm OR ne6 OR ba6 OR am5 OR pa3 OR 9ar OR ob6 OR dr2 OR 9gw OR xar OR utg OR ned OR 6bs OR 7qs OR baf OR utp OR drf OR 8ws)))]:	%DOT-53%%TIER-9%   %NAME%   %WHITE%		// Highlighting - 3 spaces
-ItemDisplay[UNI ((ETH (uap OR (uhm ILVL<77) OR (7gm ILVL<85) OR (7wh ILVL<83) OR 7sc OR baa OR dra OR uui OR dgr OR 9fc OR 9ws OR xlt OR 7m7 OR 6cs OR 7cs OR ulm OR dre OR xea OR pa9 OR nea OR xtb OR 7s7 OR 7gl OR 7bw OR xsh OR xmg OR lbt OR tbt OR xlb OR xhb OR umb OR zlb OR zhb OR umc OR xrn OR rng OR scl OR gth OR ltp OR xui OR xul OR upl OR 9ta OR 7ha OR 7ga OR 9tw OR 7lw OR 9cr OR 7gs OR 9ga OR 92a OR 7wb OR 9st OR 9wh OR stu OR pac OR drd OR 9bw OR ne6 OR ba6 OR pa3 OR dr2 OR 9wc OR amd OR wsc OR xtp OR 7bt OR 7o7 OR 7bl OR nef OR 7sp OR 7ls OR 9fb OR utg OR ulb OR ned OR 7qs OR baf OR drf OR cst)) OR (!ETH (7sc OR (7wh ILVL<83) OR (7fl ILVL<86) OR umg OR uvc OR 8lb OR 9fc OR 7pa OR pae OR dgr OR tbl OR mgl OR uh9 OR bad OR plt OR ltp OR xui OR xow OR xts OR upk OR uow OR uhg OR 92a OR 9ga OR 7m7 OR 9ls OR 7gs OR 7b7 OR 7ts OR 8cb OR amb OR 8rx OR 6cs OR 9tw OR 7lw OR aar OR xvg OR xmg OR lbt OR tbt OR xlb OR 7ga OR 7dg OR 8ls OR 7bw OR xtg OR xrn OR xlt OR xld OR xul OR 9ax OR 7bk OR uul OR 9bw OR 9wc OR wsc OR xhg OR 7b8 OR 7o7 OR 7p7 OR lbl OR rng OR 7sp OR 7ls OR 9fb OR 8mx OR 7fb OR ame OR ulb OR 7tw OR cst)))]:	%DOT-53%%TIER-9%  %NAME%  %WHITE%	// Highlighting - 2 spaces
-ItemDisplay[UNI ((ETH (9tk OR xkp OR xlm OR bac OR 9wn OR xhm OR zvb OR uhb OR xmb OR upk OR xvb OR 7ta OR bwn OR 9yw OR uh9 OR 72a OR uow OR tgl OR xlg OR xvg OR uhg OR brs OR plt OR fld OR aar OR xla OR xcl OR xth OR xar OR uts OR 9ma OR 9sp OR gma OR mau OR 9fl OR 9m9 OR 9gi OR 9qs OR gsd OR 9sb OR 9ls OR 92h OR 9gs OR 9kr OR 9s8 OR 9pa OR 7sr OR 7br OR am9 OR 9mt OR 7mp OR nee OR xhg)) OR (!ETH (amu OR rin OR skp OR xap OR xkp OR xlm OR xsk OR stu OR vgl OR 9gi OR mau OR 9sp OR 9m9 OR 9sb OR 7sr OR am9 OR 9wn OR 7wb OR 9gs OR 7b7 OR gma OR 9fl OR 9qs OR 9cr OR 9kr OR 9s8 OR 7bt OR 9pa OR 92h OR gsd OR 7br OR cap OR bhm OR crn OR scl OR spl OR xng OR kit OR xuc OR ush OR lgl OR vbt OR hbt OR vbl OR zmb OR 9ma OR amd OR 7s7 OR bwn OR 9yw OR gth OR tow OR xrg OR uml OR 9wh OR 9mt OR xhl OR 7mp OR lwb OR 9sr OR 6rx OR 8sw OR sbw)))]:	 %NAME% %CONTINUE%	// Highlighting - 1 space
+ItemDisplay[UNI ((ETH (uap OR (uhm ILVL<77) OR (7gm ILVL<85) OR (7wh ILVL<83) OR 7sc OR baa OR dra OR uui OR dgr OR 9fc OR 9ws OR xlt OR 7m7 OR 6cs OR 7cs OR ulm OR dre OR xea OR pa9 OR nea OR xtb OR 7s7 OR 7gl OR 7bw OR xsh OR xmg OR lbt OR tbt OR xlb OR xhb OR umb OR zlb OR zhb OR umc OR xrn OR rng OR scl OR gth OR ltp OR xui OR xul OR upl OR 9ta OR 7ha OR 7ga OR 9tw OR 7lw OR 9cr OR 7gs OR 9ga OR 92a OR 7wb OR 9st OR 9wh OR stu OR pac OR drd OR 9bw OR ne6 OR ba6 OR pa3 OR dr2 OR 9wc OR amd OR wsc OR xtp OR 7bt OR 7o7 OR 7bl OR nef OR 7sp OR 7ls OR 9fb OR utg OR ulb OR ned OR 7qs OR baf OR drf OR cst)) OR (!ETH (7sc OR (7wh ILVL<83) OR (7fl ILVL<86) OR umg OR uvc OR 8lb OR 9fc OR 7pa OR pae OR dgr OR tbl OR mgl OR uh9 OR bad OR plt OR ltp OR xui OR xow OR xts OR upk OR uow OR uhg OR 92a OR 9ga OR 7m7 OR 9ls OR 7gs OR 7b7 OR 7ts OR 8cb OR amb OR 8rx OR 6cs OR 9tw OR 7lw OR aar OR xvg OR xmg OR lbt OR tbt OR xlb OR 7ga OR 7dg OR 8ls OR 7bw OR xtg OR xrn OR xlt OR xld OR xul OR 9ax OR 7bk OR uul OR 9bw OR 9wc OR wsc OR xhg OR 7b8 OR 7o7 OR 7p7 OR lbl OR rng OR 7sp OR 7ls OR 9fb OR 8mx OR 7fb OR ame OR ulb OR 7tw OR cst OR xcl)))]:	%DOT-53%%TIER-9%  %NAME%  %WHITE%	// Highlighting - 2 spaces
+ItemDisplay[UNI ((ETH (9tk OR xkp OR xlm OR bac OR 9wn OR xhm OR zvb OR uhb OR xmb OR upk OR xvb OR 7ta OR bwn OR 9yw OR uh9 OR 72a OR uow OR tgl OR xlg OR xvg OR uhg OR brs OR plt OR fld OR aar OR xla OR xcl OR xth OR xar OR uts OR 9ma OR 9sp OR gma OR mau OR 9fl OR 9m9 OR 9gi OR 9qs OR gsd OR 9sb OR 9ls OR 92h OR 9gs OR 9kr OR 9s8 OR 9pa OR 7sr OR 7br OR am9 OR 9mt OR 7mp OR nee OR xhg)) OR (!ETH (amu OR rin OR skp OR xap OR xkp OR xlm OR xsk OR stu OR vgl OR 9gi OR mau OR 9sp OR 9m9 OR 9sb OR 7sr OR am9 OR 9wn OR 7wb OR 9gs OR 7b7 OR gma OR 9fl OR 9qs OR 9cr OR 9kr OR 9s8 OR 7bt OR 9pa OR 92h OR gsd OR 7br OR cap OR bhm OR crn OR scl OR spl OR xng OR kit OR xuc OR ush OR lgl OR vbt OR hbt OR vbl OR zmb OR 9ma OR amd OR 7s7 OR bwn OR 9yw OR gth OR tow OR xrg OR uml OR 9wh OR 9mt OR xhl OR 7mp OR lwb OR 9sr OR 6rx OR 8sw OR sbw OR xtu)))]:	 %NAME% %CONTINUE%	// Highlighting - 1 space
 // Highlighting & Notifications - Sets
 ItemDisplay[SET (uar OR uth)]:	%BORDER-84%%TIER-9%         %NAME%         %WHITE%																																									// Highlighting - 9 spaces
 ItemDisplay[SET ((amu ILVL>25 (!ID OR STAT360>0 OR ALLSK>0 OR CLSK1>0)) OR xhm OR xtb OR xmg OR 7m7)]:	%MAP-84%%TIER-9%    %NAME%    %WHITE%																																		// Highlighting - 4 spaces
