@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	18 NOVEMBER 2022
+//		Date Updated:	25 NOVEMBER 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -201,6 +201,7 @@ ItemDisplay[mbr !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Furnace of Pain)}
 ItemDisplay[wss !FILTLVL=1]:	%DOT-50%%TIER-9% %NAME% {%NAME%}%WHITE%									// Worldstone Shard
 ItemDisplay[lbox !FILTLVL=1]:	%MAP-50%%TIER-9%        %NAME%        {%NAME%}%WHITE%							// Larzuk's Puzzlebox
 ItemDisplay[lpp !FILTLVL=1]:	%MAP-50%%TIER-9%     %NAME%     {%NAME%}%WHITE%								// Larzuk's Puzzlepiece
+//ItemDisplay[lmal]:		%NAME%{%NAME%}%WHITE%											// Larzuk's Malus
 ItemDisplay[ubtm !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Fall of Tristram}%WHITE%						// Pandemonium Talisman  (Uber Tristram)
 ItemDisplay[uba !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%NAME%}%WHITE%								// Relic of the Ancients (Uber Ancients)
 ItemDisplay[ubaa !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(T1 Maps)}%WHITE%							// Sigil of Madawc	 (Uber Ancients ingredient)
@@ -283,13 +284,13 @@ ItemDisplay[FILTLVL=1 t16]: %NAME%{%WHITE%Highest Immunes: %BLUE%115% %GREEN%140
 ItemDisplay[FILTLVL=1 t21]: %NAME%{%WHITE%Highest Immunes: %RED%140% %GREEN%120%}%CONTINUE%						// Phlegethon			T1
 ItemDisplay[FILTLVL=1 t22]: %NAME%{%WHITE%Highest Immunes: %BLUE%140% %YELLOW%105%}%CONTINUE%						// Torajan Jungle		T1
 ItemDisplay[FILTLVL=1 t23]: %NAME%{%WHITE%Highest Immunes: %RED%130% %YELLOW%100%}%CONTINUE%						// Arreat Battlefield		T1
-ItemDisplay[FILTLVL=1 t24]: %NAME%{%WHITE%Highest Immunes: %YELLOW%120% %GREEN%110% %GOLD%105%}%CONTINUE%				// Tomb of Zultan Kulle		T3
+ItemDisplay[FILTLVL=1 t24]: %NAME%{%WHITE%Highest Immunes: %BLUE%150% %YELLOW%120% %GREEN%110% %GOLD%105%}%CONTINUE%			// Tomb of Zultan Kulle		T3
 ItemDisplay[FILTLVL=1 t25]: %NAME%{%WHITE%Highest Immunes: %RED%125% %YELLOW%135%}%CONTINUE%						// Sewers of Harrogath		T3
 ItemDisplay[FILTLVL=1 t26]: %NAME%{%WHITE%Highest Immunes: %RED%110% %BLUE%150% %GOLD%100%}%CONTINUE%					// Shadows of Westmarch		T2
 ItemDisplay[FILTLVL=1 t31]: %NAME%{%WHITE%Highest Immunes: %RED%125% %BLUE%180% %ORANGE%100%}%CONTINUE%					// River of Blood		T3
 ItemDisplay[FILTLVL=1 t32]: %NAME%{%WHITE%Highest Immunes: %RED%130% %GREEN%115%}%CONTINUE%						// Throne of Insanity		T3
-ItemDisplay[FILTLVL=1 t33]: %NAME%{%WHITE%Highest Immunes: %RED%120% %YELLOW%115%}%CONTINUE%						// Lost Temple			T1
-ItemDisplay[FILTLVL=1 t34]: %NAME%{%WHITE%Highest Immunes: %RED%120% %GREEN%120% %GOLD%100%}%CONTINUE%					// Ancestral Trial		T2
+ItemDisplay[FILTLVL=1 t33]: %NAME%{%WHITE%Highest Immunes: %RED%120% %BLUE%110% %YELLOW%115%}%CONTINUE%					// Lost Temple			T1
+ItemDisplay[FILTLVL=1 t34]: %NAME%{%WHITE%Highest Immunes: %RED%120% %GREEN%120% %GOLD%110%}%CONTINUE%					// Ancestral Trial		T2
 //ItemDisplay[FILTLVL=1 t35]: %NAME%%CONTINUE%												// Blood Moon			T3
 ItemDisplay[FILTLVL=1 t36]: %NAME%{%WHITE%Highest Immunes: %YELLOW%100%}%CONTINUE%							// Fall of Caldeum		T2
 ItemDisplay[FILTLVL=1 t37]: %NAME%{%WHITE%Highest Immunes: %RED%140% %BLUE%130% %GOLD%100%}%CONTINUE%					// Pandemonium Citadel		T3
@@ -488,7 +489,7 @@ ItemDisplay[(amu OR rin) !ID RARE]:	%DOT-6D%%TIER-9%  %NAME%  %WHITE%			// highl
 //-¦ General Equipment ¦-------------------------------------------------------------------------------------------------
 // +-------------------+
 // Catchall - Non-Equipment
-ItemDisplay[(ILVL>1 OR QTY>0 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR jew OR jewf OR cm1 OR cm2 OR cm3 OR ram OR RUNE>0 OR GEMTYPE>0 OR rvs OR rvl OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5 OR yps OR wms OR vps OR bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR tbk OR ibk OR tsc OR isc OR key OR ear OR std OR wss OR lbox OR lpp OR ubtm OR dcma OR rtma OR dcso OR dcho OR dcbl OR rtmv OR rtmo OR rtmf OR cwss OR rtp OR rid OR lsvl OR llmr OR rkey OR uba OR ubaa OR ubab OR ubac OR imma OR imra OR upma OR scou OR rera OR upmp OR fort OR scrb OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t3a OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49 OR t61 OR t62)]: %BORDER-62%%TIER-9%%NAME%{%NAME%}%WHITE%	// notifications for unknown items (future-proofing)
+ItemDisplay[(ILVL>1 OR QTY>0 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR jew OR jewf OR cm1 OR cm2 OR cm3 OR ram OR RUNE>0 OR GEMTYPE>0 OR rvs OR rvl OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5 OR yps OR wms OR vps OR bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR tbk OR ibk OR tsc OR isc OR key OR ear OR std OR wss OR lbox OR lpp OR lmal OR ubtm OR dcma OR rtma OR dcso OR dcho OR dcbl OR rtmv OR rtmo OR rtmf OR cwss OR rtp OR rid OR lsvl OR llmr OR rkey OR uba OR ubaa OR ubab OR ubac OR imma OR imra OR upma OR scou OR rera OR upmp OR fort OR scrb OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t3a OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49 OR t61 OR t62)]: %BORDER-62%%TIER-9%%NAME%{%NAME%}%WHITE%	// notifications for unknown items (future-proofing)
 ItemDisplay[!(ARMOR OR (WEAPON !(opl OR opm OR ops OR gpl OR gpm OR gps)) OR ((amu OR rin) (UNI OR SET OR CRAFT)) OR ((jew OR cm1 OR cm2 OR cm3) UNI) OR ram)]: %NAME%{%NAME%}%WHITE%	// displays most non-equipment items as normal
 
 // Modification: Sockets (regular items are handled in their own category)
