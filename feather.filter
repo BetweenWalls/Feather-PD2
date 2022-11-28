@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	27 NOVEMBER 2022
+//		Date Updated:	28 NOVEMBER 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -1026,7 +1026,7 @@ ItemDisplay[FILTLVL>0 NMAG CLVL>14 INF SOCK=0 !(DRU OR BAR OR DIN OR NEC OR SIN 
 
 // Hidden: Regular non-class throwable weapons - level 50, 80
 ItemDisplay[FILTLVL>0 NMAG CLVL>49 THROWING !ZON !EQUIPPED !(7tk OR 7ta OR 7bk OR (ETH ELT)) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// non-class throwable weapons worth less than 5000 gold per inventory space, except elite eth versions (for imbuing)
-ItemDisplay[FILTLVL>0 NMAG CLVL>79 THROWING !ZON !EQUIPPED !(ETH (7gl OR 7ts)) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}			// all non-class throwable weapons, except eth Winged Harpoon & Ghost Glaive (for imbuing)
+ItemDisplay[FILTLVL>0 NMAG CLVL>79 THROWING !ZON !EQUIPPED !(ETH (7gl OR 7ts OR 7bk OR 7b8)) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// all non-class throwable weapons, except eth versions of the fastest/slowest elite bases: Ghost Glaive, Winged Harpoon, Winged Knife, Flying Axe (for imbuing)
 
 // Hidden (stricter): Regular non-class normal/exceptional plain items in high level areas (T3 maps) - level 90
 ItemDisplay[FILTLVL>2 NMAG ED=0 SOCK=0 !ETH !ELT ILVL>88 CLVL>89 !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}
