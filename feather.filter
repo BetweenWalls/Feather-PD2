@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	28 NOVEMBER 2022
+//		Date Updated:	29 NOVEMBER 2022
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -227,7 +227,7 @@ ItemDisplay[upma]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ P%GRAY%.%WHITE%S
 ItemDisplay[scou]:	%NAME%{%WHITE%Lowers Map Rarity to Common}%WHITE%																// Orb of Destruction	(Magic/Rare -> Common)
 ItemDisplay[rera]:	%NAME%{%GOLD%Orb %WHITE%+ %YELLOW%Map %WHITE%+ P%GRAY%.%WHITE%Gem + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%WHITE%Rerolls Rare Map Affixes}%WHITE%		// Horadrim Orb		(Reroll Rare)
 ItemDisplay[upmp]:	%NAME%{%WHITE%Combines three maps to create one of a higher tier}%WHITE%													// Cartographer's Orb	(3 T1 Maps -> 1 T2 Map or 3 T2 Maps -> 1 T3 Map)
-ItemDisplay[fort]:	%NAME%{%WHITE%Fortified monsters have doubled life and deal 20% extra damage%NL%Halves number of map monsters and doubles loot/experience gained from them}%WHITE%		// Orb of Fortification
+ItemDisplay[fort]:	%GOLD%%NAME%{%WHITE%Fortified monsters have doubled life and deal 20% extra damage%NL%Halves number of map monsters and doubles loot/experience gained from them}%WHITE%	// Orb of Fortification
 ItemDisplay[scrb]:	%MAP-53%%TIER-9%    %NAME%    {%WHITE%Transforms a %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %WHITE%map into a %DARK_GREEN%(%TAN%Dungeon%DARK_GREEN%)}%WHITE%				// Horadrim Scarab	(Map -> Dungeon, notifications)
 // Maps  (includes notifications)
 ItemDisplay[NMAG (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t3a OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %WHITE%%NAME% %CONTINUE%		// maps - regular
