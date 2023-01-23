@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	29 NOVEMBER 2022
+//		Date Updated:	22 JANUARY 2023
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Notes:
@@ -198,9 +198,9 @@ ItemDisplay[bey !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Forgotten Sands)}
 ItemDisplay[mbr !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Furnace of Pain)}%WHITE%						// Mephisto's Brain	 (Uber Izual)
 
 // PD2 Items  (includes notifications)
-ItemDisplay[wss !FILTLVL=1]:	%DOT-50%%TIER-9% %NAME% {%NAME%}%WHITE%									// Worldstone Shard
-ItemDisplay[lbox !FILTLVL=1]:	%MAP-50%%TIER-9%        %NAME%        {%NAME%}%WHITE%							// Larzuk's Puzzlebox
-ItemDisplay[lpp !FILTLVL=1]:	%MAP-50%%TIER-9%     %NAME%     {%NAME%}%WHITE%								// Larzuk's Puzzlepiece
+ItemDisplay[wss !FILTLVL=1]:	%DOT-62%%TIER-9% %NAME% {%NAME%}%WHITE%									// Worldstone Shard
+ItemDisplay[lbox !FILTLVL=1]:	%MAP-62%%TIER-9%        %NAME%        {%NAME%}%WHITE%							// Larzuk's Puzzlebox
+ItemDisplay[lpp !FILTLVL=1]:	%MAP-62%%TIER-9%     %NAME%     {%NAME%}%WHITE%								// Larzuk's Puzzlepiece
 //ItemDisplay[lmal]:		%NAME%{%NAME%}%WHITE%											// Larzuk's Malus
 ItemDisplay[ubtm !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Fall of Tristram}%WHITE%						// Pandemonium Talisman  (Uber Tristram)
 ItemDisplay[uba !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%NAME%}%WHITE%								// Relic of the Ancients (Uber Ancients)
@@ -215,11 +215,11 @@ ItemDisplay[rtma !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Rathma Awaits You
 ItemDisplay[rtmv !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Shadow of Mendeln)}%WHITE%		// Splinter of the Void  (Rathma ingredient)
 ItemDisplay[rtmo !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Undead Enemies)}%WHITE%		// Trang-Oul's Jawbone	 (Rathma ingredient)
 ItemDisplay[rtmf !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone}%WHITE%				// Ancient Bone Fragments (legacy item from season 4)
-ItemDisplay[cwss !FILTLVL=1]:	%MAP-50%%TIER-9%    %NAME%    {%NAME%}%WHITE%								// Tainted Worldstone Shard
+ItemDisplay[cwss !FILTLVL=1]:	%MAP-62%%TIER-9%    %NAME%    {%NAME%}%WHITE%								// Tainted Worldstone Shard
 ItemDisplay[(rtp OR rid)]:	%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%							// Horadrim Navigator/Almanac
 ItemDisplay[rkey]:		%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%							// Skeleton Key
-ItemDisplay[lsvl !FILTLVL=1]:	%BORDER-50%%TIER-9%%RED%       Vial of Lightsong       {%NAME%}%WHITE%					// Vial of Lightsong
-ItemDisplay[llmr !FILTLVL=1]:	%BORDER-50%%TIER-9%%RED%        Lilith's Mirror        {%NAME%}%WHITE%					// Lilith's Mirror
+ItemDisplay[lsvl !FILTLVL=1]:	%BORDER-62%%TIER-9%%RED%       Vial of Lightsong       {%NAME%}%WHITE%					// Vial of Lightsong
+ItemDisplay[llmr !FILTLVL=1]:	%BORDER-62%%TIER-9%%RED%        Lilith's Mirror        {%NAME%}%WHITE%					// Lilith's Mirror
 // Map Orbs
 ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%%WHITE%Raises Map Rarity from Common to Magic}%WHITE%										// Arcane Orb		(Common -> Magic)
 ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%WHITE%Raises Map Rarity from Common to Rare}%WHITE%		// Zakarum Orb		(Common -> Rare)
@@ -230,18 +230,18 @@ ItemDisplay[upmp]:	%NAME%{%WHITE%Combines three maps to create one of a higher t
 ItemDisplay[fort]:	%GOLD%%NAME%{%WHITE%Fortified monsters have doubled life and deal 20% extra damage%NL%Halves number of map monsters and doubles loot/experience gained from them}%WHITE%	// Orb of Fortification
 ItemDisplay[scrb]:	%MAP-53%%TIER-9%    %NAME%    {%WHITE%Transforms a %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %WHITE%map into a %DARK_GREEN%(%TAN%Dungeon%DARK_GREEN%)}%WHITE%				// Horadrim Scarab	(Map -> Dungeon, notifications)
 // Maps  (includes notifications)
-ItemDisplay[NMAG (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t3a OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %WHITE%%NAME% %CONTINUE%		// maps - regular
-ItemDisplay[MAG  (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t3a OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %BLUE%%MAP%%NAME% %CONTINUE%	// maps - magic (adds blue minimap border)
-ItemDisplay[RARE (t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t3a OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]: %YELLOW%%MAP%%NAME% %CONTINUE%	// maps - rare (adds yellow minimap border)
-ItemDisplay[(t21 OR t22 OR t23 OR t33 OR t12 OR t13 OR t16 OR t17 OR t18 OR t19)]:	%MAP-77%%DOT-53%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%T1%DARK_GREEN%)%CONTINUE%		// maps - T1 (Horazon's Memory, Bastion Keep, Ruined Cistern, Phlegethon, Torajan Jungle, Arreat Battlefield)
-ItemDisplay[(t11 OR t14 OR t15 OR t34 OR t36 OR t26 OR t27 OR t28 OR t29)]:		%MAP-77%%DOT-53%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%		// maps - T2 (Ruins of Viz-Jun, Sanatorium, Royal Crypts, Ancestral Trial, Fall of Caldeum, Shadows of Westmarch)
-ItemDisplay[(t24 OR t25 OR t31 OR t32 OR t35 OR t37 OR t38 OR t39 OR t3a)]:		%MAP-77%%DOT-53%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%		// maps - T3 (Tomb of Zultan Kulle, Sewers of Harrogath, River of Blood, Throne of Insanity, Lost Temple, Blood Moon, Pandemonium Citadel, Canyon of Sescheron, Kehjistan Marketplace)
-ItemDisplay[(t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49)]:		%MAP-77%%DOT-53%%PX-50%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%)%CONTINUE%	// dungeons  (Cathedral of Light, Plains of Torment, Sanctuary of Sin)
-ItemDisplay[(t21 OR t22 OR t23 OR t33 OR t12 OR t13 OR t16 OR t17 OR t18 OR t19) !(RARE ID)]:	 %NAME% %CONTINUE%		// maps - T1 highlighting
-ItemDisplay[(t11 OR t14 OR t15 OR t34 OR t36 OR t26 OR t27 OR t28 OR t29) !(RARE ID)]:		  %NAME%  %CONTINUE%		// maps - T2 highlighting
-ItemDisplay[(t24 OR t25 OR t31 OR t32 OR t35 OR t37 OR t38 OR t39 OR t3a) !(RARE ID)]:		   %NAME%   %CONTINUE%		// maps - T3 highlighting
-ItemDisplay[(t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49) !(RARE ID)]:		    %NAME%    %CONTINUE%	// maps - T4 highlighting
-//ItemDisplay[(t61 OR t62)]:	%NAME%{%NAME%}%WHITE%		// Desert/Moor Duel Arenas (listed here for reference)
+ItemDisplay[NMAG MAPTIER>0]:	%WHITE%%NAME% %CONTINUE%								// maps - regular
+ItemDisplay[MAG MAPTIER>0]:	%BLUE%%MAP%%NAME% %CONTINUE%								// maps - magic (adds blue minimap border)
+ItemDisplay[RARE MAPTIER>0]:	%YELLOW%%MAP%%NAME% %CONTINUE%								// maps - rare (adds yellow minimap border)
+ItemDisplay[MAPTIER=1]:		%MAP-77%%DOT-53%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%T1%DARK_GREEN%)%CONTINUE%		// maps - T1 (Horazon's Memory, Bastion Keep, Ruined Cistern, Phlegethon, Torajan Jungle, Arreat Battlefield)
+ItemDisplay[MAPTIER=2]:		%MAP-77%%DOT-53%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%		// maps - T2 (Ruins of Viz-Jun, Sanatorium, Royal Crypts, Ancestral Trial, Fall of Caldeum, Shadows of Westmarch)
+ItemDisplay[MAPTIER=3]:		%MAP-77%%DOT-53%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%		// maps - T3 (Tomb of Zultan Kulle, Sewers of Harrogath, River of Blood, Throne of Insanity, Lost Temple, Blood Moon, Pandemonium Citadel, Canyon of Sescheron, Kehjistan Marketplace, Ashen Plains)
+ItemDisplay[MAPTIER=4]:		%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME%%DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%)%CONTINUE%	// dungeons  (Cathedral of Light, Plains of Torment, Sanctuary of Sin)
+ItemDisplay[MAPTIER=1 !(RARE ID)]:	 %NAME% %CONTINUE%								// maps - T1 highlighting
+ItemDisplay[MAPTIER=2 !(RARE ID)]:	  %NAME%  %CONTINUE%								// maps - T2 highlighting
+ItemDisplay[MAPTIER=3 !(RARE ID)]:	   %NAME%   %CONTINUE%								// maps - T3 highlighting
+ItemDisplay[MAPTIER=4 !(RARE ID)]:	    %NAME%    %CONTINUE%							// maps - T4 highlighting
+//ItemDisplay[(t61 OR t62)]:	%NAME%{%NAME%}%WHITE%									// Desert/Moor Duel Arenas (listed here for reference)
 
 // Alternative Rules for Endgame Quest Items (includes notifications)
 ItemDisplay[FILTLVL=1 tes]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Andariel & Duriel)}%WHITE%							// Twisted Essence of Suffering
@@ -255,9 +255,9 @@ ItemDisplay[FILTLVL=1 dhn]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORAN
 ItemDisplay[FILTLVL=1 bey]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Mephisto's Brain %WHITE%and %ORANGE%Diablo's Horn %WHITE%to access Uber Tristram%NL%%GRAY%(Forgotten Sands)}%WHITE%							// Baal's Eye		 (Uber Duriel)
 ItemDisplay[FILTLVL=1 mbr]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Diablo's Horn %WHITE%and %ORANGE%Baal's Eye %WHITE%to access Uber Tristram%NL%%GRAY%(Furnace of Pain)}%WHITE%								// Mephisto's Brain	 (Uber Izual)
 // Alternative Rules for PD2 Items  (includes notifications)
-ItemDisplay[FILTLVL=1 wss]:	%DOT-50%%TIER-9% %NAME% {%WHITE%Can also add corruption modifiers to maps%NL%Corrupts equipment, either adding a modifier or turning it into a random rare}%WHITE%								// Worldstone Shard
-ItemDisplay[FILTLVL=1 lbox]:	%MAP-50%%TIER-9%        %NAME%        {%WHITE%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%													// Larzuk's Puzzlebox
-ItemDisplay[FILTLVL=1 lpp]:	%MAP-50%%TIER-9%     %NAME%     {%WHITE%Cannot be used with unique or set items%NL%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%								// Larzuk's Puzzlepiece
+ItemDisplay[FILTLVL=1 wss]:	%DOT-62%%TIER-9% %NAME% {%WHITE%Can also add corruption modifiers to maps%NL%Corrupts equipment, either adding a modifier or turning it into a random rare}%WHITE%								// Worldstone Shard
+ItemDisplay[FILTLVL=1 lbox]:	%MAP-62%%TIER-9%        %NAME%        {%WHITE%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%													// Larzuk's Puzzlebox
+ItemDisplay[FILTLVL=1 lpp]:	%MAP-62%%TIER-9%     %NAME%     {%WHITE%Cannot be used with unique or set items%NL%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%								// Larzuk's Puzzlepiece
 ItemDisplay[FILTLVL=1 ubtm]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Fall of Tristram%NL%%WHITE%Sends you and nearby allies to fight the Uber Prime Evils in Tristram}%WHITE%											// Pandemonium Talisman  (Uber Tristram)
 ItemDisplay[FILTLVL=1 uba]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Sends you and nearby allies to fight the Uber Ancients on Arreat Summit}%WHITE%														// Relic of the Ancients (Uber Ancients)
 ItemDisplay[FILTLVL=1 ubaa]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Sigils %WHITE%from %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %WHITE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %WHITE%maps to access Uber Ancients%NL%%GRAY%(T1 Maps)}%WHITE%		// Sigil of Madawc	 (Uber Ancients ingredient)
@@ -271,9 +271,9 @@ ItemDisplay[FILTLVL=1 rtma]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Rathma Awaits You%
 ItemDisplay[FILTLVL=1 rtmv]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%WHITE%Combine with %ORANGE%Trang-Oul's Jawbone %WHITE%and %GOLD%Hellfire Torch %WHITE%to access Rathma%NL%%GRAY%(Shadow of Mendeln)}%WHITE%				// Splinter of the Void  (Rathma ingredient)
 ItemDisplay[FILTLVL=1 rtmo]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%WHITE%Combine with %ORANGE%Splinter of the Void %WHITE%and %GOLD%Hellfire Torch %WHITE%to access Rathma%NL%%GRAY%(Undead Enemies)}%WHITE%				// Trang-Oul's Jawbone	 (Rathma ingredient)
 ItemDisplay[FILTLVL=1 rtmf]:	%DOT-60%%TIER-9%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone%NL%%WHITE%Jawbone Recipe: 2 %ORANGE%Ancient Bone Fragments %WHITE%+ %GOLD%Hellfire Torch}%WHITE%								// Ancient Bone Fragments (legacy)
-ItemDisplay[FILTLVL=1 cwss]:	%MAP-50%%TIER-9%    %NAME%    {%WHITE%Corrupts %GOLD%Annihilus%WHITE%, either adding a modifier or turning it into a random magic small charm}%WHITE%										// Tainted Worldstone Shard
-ItemDisplay[FILTLVL=1 lsvl]:	%BORDER-50%%TIER-9%%RED%       Vial of Lightsong       {%WHITE%Cannot be used with set items or indestructible items}%WHITE%													// Vial of Lightsong
-ItemDisplay[FILTLVL=1 llmr]:	%BORDER-50%%TIER-9%%RED%        Lilith's Mirror        {%WHITE%Mirrored items cannot be used in any cube recipes}%WHITE%													// Lilith's Mirror
+ItemDisplay[FILTLVL=1 cwss]:	%MAP-62%%TIER-9%    %NAME%    {%WHITE%Corrupts %GOLD%Annihilus%WHITE%, either adding a modifier or turning it into a random magic small charm}%WHITE%										// Tainted Worldstone Shard
+ItemDisplay[FILTLVL=1 lsvl]:	%BORDER-62%%TIER-9%%RED%       Vial of Lightsong       {%WHITE%Cannot be used with set items or indestructible items}%WHITE%													// Vial of Lightsong
+ItemDisplay[FILTLVL=1 llmr]:	%BORDER-62%%TIER-9%%RED%        Lilith's Mirror        {%WHITE%Mirrored items cannot be used in any cube recipes}%WHITE%													// Lilith's Mirror
 // Alternative Rules for Maps (immunes)
 ItemDisplay[FILTLVL=1 t11]: %NAME%{%WHITE%Highest Immunes: %YELLOW%120% %GREEN%120%}%CONTINUE%						// Ruins of Viz-Jun		T2
 ItemDisplay[FILTLVL=1 t12]: %NAME%{%WHITE%Highest Immunes: %RED%135% %GREEN%120% %GRAY%(Lightning Spire %GREEN%1000%%GRAY%)}%CONTINUE%	// Horazon's Memory		T1
@@ -333,11 +333,11 @@ ItemDisplay[skls]: %NAME%{%WHITE%Shields: Attacker Takes Damage of 16%NL%Armors:
 ItemDisplay[skzs]: %NAME%{%WHITE%Shields: Attacker Takes Damage of 20%NL%Armors: Regenerate Mana 19%, Replenish Life +5%NL%Weapons: 4% Life stolen per hit, 3% Mana stolen per hit%NL%}%CONTINUE%
 
 // Gem Icons
-ItemDisplay[GEMLEVEL=1]: *%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
-ItemDisplay[GEMLEVEL=2]: +%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
-ItemDisplay[GEMLEVEL=3]: ¤%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
-ItemDisplay[(GEMLEVEL=4 OR gzv OR glw OR glg OR glr OR glb OR gly OR skl)]: o%ORANGE%]  %WHITE%%NAME%%PX-60%%TIER-2%{%NAME%}%CONTINUE%		// flawless (map icons without text notifications)
-ItemDisplay[(GEMLEVEL=5 OR gpv OR gpw OR gpg OR gpr OR gpb OR gpy OR skz)]: @%ORANGE%]  %WHITE%%NAME%%MAP-60%%DOT-20%%TIER-9%{%NAME%}%CONTINUE%	// perfect (notifications)
+ItemDisplay[GEM=1]: *%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
+ItemDisplay[GEM=2]: +%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
+ItemDisplay[GEM=3]: ¤%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
+ItemDisplay[(GEM=4 OR gzv OR glw OR glg OR glr OR glb OR gly OR skl)]: o%ORANGE%]  %WHITE%%NAME%%PX-60%%TIER-2%{%NAME%}%CONTINUE%		// flawless (map icons without text notifications)
+ItemDisplay[(GEM=5 OR gpv OR gpw OR gpg OR gpr OR gpb OR gpy OR skz)]: @%ORANGE%]  %WHITE%%NAME%%MAP-60%%DOT-20%%TIER-9%{%NAME%}%CONTINUE%	// perfect (notifications)
 ItemDisplay[GEMTYPE=1]: %ORANGE%[%PURPLE%%NAME%{%NAME%}%CONTINUE%
 ItemDisplay[GEMTYPE=2]: %ORANGE%[%WHITE%%NAME%{%NAME%}%CONTINUE%
 ItemDisplay[GEMTYPE=3]: %ORANGE%[%GREEN%%NAME%{%NAME%}%CONTINUE%
@@ -453,7 +453,7 @@ ItemDisplay[MAG ID ((cm1 (LIFE>19 OR (MANA>16 FHR>0) OR RES>0 OR MFIND>6 OR FRES
 ItemDisplay[jew MAG ID (ED>29 OR MAXDMG>28 OR (IAS>0 (ED>9 OR STAT121>34 OR STAT122>44 OR MAXDMG>4 OR MINDMG>4 OR RES>0 OR FRES>15 OR CRES>15 OR LRES>15 OR PRES>15 OR MAEK>2 OR STAT86>2 OR AR>89)) OR ((RES>9 OR MAXDMG>14) (STR>8 OR DEX>8 OR STAT91=-15 OR FHR>0)) OR (LVLREQ<31 ((ED>19 (MINDMG>0 OR MAXDMG>0 OR STAT91=-15 OR STR>0 OR DEX>0 OR LIFE>4)) OR (MAXDMG>19 OR (MINDMG>4 MAXDMG>15)))))]:		%DOT-97%%TIER-9%   %NAME%   {%NAME%}%WHITE%		// valuable jewels (also adds notifications)		...TODO: Add more jewels
 ItemDisplay[jew RARE !ID]:								%DOT-6D%  %NAME%  {%NAME%}%WHITE%			// unid rare jewels (also adds notifications)
 ItemDisplay[jew RARE ILVL>64]:								%YELLOW%%NAME%{%WHITE%Item Level: %ILVL%}%CONTINUE%	// adds ilvl description to rare jewels if high enough to consider rerolling
-ItemDisplay[MAG ID ((cm1 ALVL>89) OR (cm1 ALVL>73) OR (cm3 ALVL>90))]:			%NAME%{%WHITE%Item Level: %TAN%%ILVL%}%WHITE%		// charms (top ilvl for rerolling - capable of getting any affix, colored tan)
+ItemDisplay[MAG ID ((cm1 ALVL>89) OR (cm2 ALVL>73) OR (cm3 ALVL>90))]:			%NAME%{%WHITE%Item Level: %TAN%%ILVL%}%WHITE%		// charms (top ilvl for rerolling - capable of getting any affix, colored tan)
 ItemDisplay[MAG ID ((cm1 ALVL>47) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]:			%NAME%{%WHITE%Item Level: %ILVL%}%WHITE%		// charms (okay ilvl for rerolling)
 ItemDisplay[MAG !ID jew]:								%DOT-97%%TIER-2%%NAME%{%NAME%}%WHITE%			// map icons without text notifications for unidentified magic jewels 
 ItemDisplay[MAG !ID ((cm1 ALVL>47) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]:			%DOT-9B%%TIER-2%%NAME%{%NAME%}%WHITE%			// map icons without text notifications for unidentified magic charms that are capable of getting okay affixes
@@ -489,7 +489,7 @@ ItemDisplay[(amu OR rin) !ID RARE]:	%DOT-6D%%TIER-9%  %NAME%  %WHITE%			// highl
 //-¦ General Equipment ¦-------------------------------------------------------------------------------------------------
 // +-------------------+
 // Catchall - Non-Equipment
-ItemDisplay[(ILVL>1 OR QTY>0 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR jew OR jewf OR cm1 OR cm2 OR cm3 OR ram OR RUNE>0 OR GEMTYPE>0 OR rvs OR rvl OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5 OR yps OR wms OR vps OR bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR tbk OR ibk OR tsc OR isc OR key OR ear OR std OR wss OR lbox OR lpp OR lmal OR ubtm OR dcma OR rtma OR dcso OR dcho OR dcbl OR rtmv OR rtmo OR rtmf OR cwss OR rtp OR rid OR lsvl OR llmr OR rkey OR uba OR ubaa OR ubab OR ubac OR imma OR imra OR upma OR scou OR rera OR upmp OR fort OR scrb OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t3a OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49 OR t61 OR t62)]: %BORDER-62%%TIER-9%%NAME%{%NAME%}%WHITE%	// notifications for unknown items (future-proofing)
+ItemDisplay[(ILVL>1 OR QTY>0 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR jew OR jewf OR cm1 OR cm2 OR cm3 OR ram OR RUNE>0 OR GEMTYPE>0 OR rvs OR rvl OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5 OR yps OR wms OR vps OR bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR tbk OR ibk OR tsc OR isc OR key OR ear OR std OR wss OR lbox OR lpp OR lmal OR ubtm OR dcma OR rtma OR dcso OR dcho OR dcbl OR rtmv OR rtmo OR rtmf OR cwss OR rtp OR rid OR lsvl OR llmr OR rkey OR uba OR ubaa OR ubab OR ubac OR imma OR imra OR upma OR scou OR rera OR upmp OR fort OR scrb OR MAPTIER>0 OR t61 OR t62)]: %BORDER-62%%TIER-9%%NAME%{%NAME%}%WHITE%	// notifications for unknown items (future-proofing)
 ItemDisplay[!(ARMOR OR (WEAPON !(opl OR opm OR ops OR gpl OR gpm OR gps)) OR ((amu OR rin) (UNI OR SET OR CRAFT)) OR ((jew OR cm1 OR cm2 OR cm3) UNI) OR ram)]: %NAME%{%NAME%}%WHITE%	// displays most non-equipment items as normal
 
 // Modification: Sockets (regular items are handled in their own category)
@@ -1181,44 +1181,5 @@ ItemDisplay[NMAG DIN (RES=42 OR RES=32 OR RES=22 OR RES=12)]: %NAME%2{%NAME%}%CO
 ItemDisplay[NMAG DIN (RES=41 OR RES=31 OR RES=21 OR RES=11)]: %NAME%1{%NAME%}%CONTINUE%									// Res _1
 ItemDisplay[NMAG DIN (RES=40 OR RES=30 OR RES=20 OR RES=10)]: %NAME%0{%NAME%}%CONTINUE%									// Res _0
 //    Enhanced Damage
-ItemDisplay[NMAG DIN STAT18>9 STAT18<66]: %NAME% %BLUE%+{%NAME%}%CONTINUE%										// ED Begin  (constructed digit-by-digit since there is no %STAT18% keyword)
-ItemDisplay[NMAG DIN STAT18>59 STAT18<66]: %NAME%6{%NAME%}%CONTINUE%											// ED 6_
-ItemDisplay[NMAG DIN STAT18>49 STAT18<60]: %NAME%5{%NAME%}%CONTINUE%											// ED 5_
-ItemDisplay[NMAG DIN STAT18>39 STAT18<50]: %NAME%4{%NAME%}%CONTINUE%											// ED 4_
-ItemDisplay[NMAG DIN STAT18>29 STAT18<40]: %NAME%3{%NAME%}%CONTINUE%											// ED 3_
-ItemDisplay[NMAG DIN STAT18>19 STAT18<30]: %NAME%2{%NAME%}%CONTINUE%											// ED 2_
-ItemDisplay[NMAG DIN STAT18>9 STAT18<20]: %NAME%1{%NAME%}%CONTINUE%											// ED 1_
-ItemDisplay[NMAG DIN (STAT18=59 OR STAT18=49 OR STAT18=39 OR STAT18=29 OR STAT18=19)]: %NAME%9{%NAME%}%CONTINUE%					// ED _9
-ItemDisplay[NMAG DIN (STAT18=58 OR STAT18=48 OR STAT18=38 OR STAT18=28 OR STAT18=18)]: %NAME%8{%NAME%}%CONTINUE%					// ED _8
-ItemDisplay[NMAG DIN (STAT18=57 OR STAT18=47 OR STAT18=37 OR STAT18=27 OR STAT18=17)]: %NAME%7{%NAME%}%CONTINUE%					// ED _7
-ItemDisplay[NMAG DIN (STAT18=56 OR STAT18=46 OR STAT18=36 OR STAT18=26 OR STAT18=16)]: %NAME%6{%NAME%}%CONTINUE%					// ED _6
-ItemDisplay[NMAG DIN (STAT18=65 OR STAT18=55 OR STAT18=45 OR STAT18=35 OR STAT18=25 OR STAT18=15)]: %NAME%5{%NAME%}%CONTINUE%				// ED _5
-ItemDisplay[NMAG DIN (STAT18=64 OR STAT18=54 OR STAT18=44 OR STAT18=34 OR STAT18=24 OR STAT18=14)]: %NAME%4{%NAME%}%CONTINUE%				// ED _4
-ItemDisplay[NMAG DIN (STAT18=63 OR STAT18=53 OR STAT18=43 OR STAT18=33 OR STAT18=23 OR STAT18=13)]: %NAME%3{%NAME%}%CONTINUE%				// ED _3
-ItemDisplay[NMAG DIN (STAT18=62 OR STAT18=52 OR STAT18=42 OR STAT18=32 OR STAT18=22 OR STAT18=12)]: %NAME%2{%NAME%}%CONTINUE%				// ED _2
-ItemDisplay[NMAG DIN (STAT18=61 OR STAT18=51 OR STAT18=41 OR STAT18=31 OR STAT18=21 OR STAT18=11)]: %NAME%1{%NAME%}%CONTINUE%				// ED _1
-ItemDisplay[NMAG DIN (STAT18=60 OR STAT18=50 OR STAT18=40 OR STAT18=30 OR STAT18=20 OR STAT18=10)]: %NAME%0{%NAME%}%CONTINUE%				// ED _0
-//    Attack Rating
-ItemDisplay[NMAG DIN AR>14 AR<122]: %NAME%/+{%NAME%}%CONTINUE%												// AR Begin  (constructed digit-by-digit since there is no %AR% keyword)
-ItemDisplay[NMAG DIN AR>99 AR<122]: %NAME%1{%NAME%}%CONTINUE%												// AR 1__
-ItemDisplay[NMAG DIN AR>89 AR<100]: %NAME%9{%NAME%}%CONTINUE%												// AR _9_
-ItemDisplay[NMAG DIN AR>79 AR<90]: %NAME%8{%NAME%}%CONTINUE%												// AR _8_
-ItemDisplay[NMAG DIN AR>69 AR<80]: %NAME%7{%NAME%}%CONTINUE%												// AR _7_
-ItemDisplay[NMAG DIN AR>59 AR<70]: %NAME%6{%NAME%}%CONTINUE%												// AR _6_
-ItemDisplay[NMAG DIN AR>49 AR<60]: %NAME%5{%NAME%}%CONTINUE%												// AR _5_
-ItemDisplay[NMAG DIN AR>39 AR<50]: %NAME%4{%NAME%}%CONTINUE%												// AR _4_
-ItemDisplay[NMAG DIN AR>29 AR<40]: %NAME%3{%NAME%}%CONTINUE%												// AR _3_
-ItemDisplay[NMAG DIN ((AR>119 AR<122) OR (AR>19 AR<30))]: %NAME%2{%NAME%}%CONTINUE%									// AR _2_
-ItemDisplay[NMAG DIN ((AR>109 AR<120) OR (AR>9 AR<20))]: %NAME%1{%NAME%}%CONTINUE%									// AR _1_
-ItemDisplay[NMAG DIN AR>99 AR<110]: %NAME%0{%NAME%}%CONTINUE%												// AR _0_
-ItemDisplay[NMAG DIN (AR=119 OR AR=109 OR AR=99 OR AR=89 OR AR=79 OR AR=69 OR AR=59 OR AR=49 OR AR=39 OR AR=29 OR AR=19)]: %NAME%9{%NAME%}%CONTINUE%	// AR __9
-ItemDisplay[NMAG DIN (AR=118 OR AR=108 OR AR=98 OR AR=88 OR AR=78 OR AR=68 OR AR=58 OR AR=48 OR AR=38 OR AR=28 OR AR=18)]: %NAME%8{%NAME%}%CONTINUE%	// AR __8
-ItemDisplay[NMAG DIN (AR=117 OR AR=107 OR AR=97 OR AR=87 OR AR=77 OR AR=67 OR AR=57 OR AR=47 OR AR=37 OR AR=27 OR AR=17)]: %NAME%7{%NAME%}%CONTINUE%	// AR __7
-ItemDisplay[NMAG DIN (AR=116 OR AR=106 OR AR=96 OR AR=86 OR AR=76 OR AR=66 OR AR=56 OR AR=46 OR AR=36 OR AR=26 OR AR=16)]: %NAME%6{%NAME%}%CONTINUE%	// AR __6
-ItemDisplay[NMAG DIN (AR=115 OR AR=105 OR AR=95 OR AR=85 OR AR=75 OR AR=65 OR AR=55 OR AR=45 OR AR=35 OR AR=25 OR AR=15)]: %NAME%5{%NAME%}%CONTINUE%	// AR __5
-ItemDisplay[NMAG DIN (AR=114 OR AR=104 OR AR=94 OR AR=84 OR AR=74 OR AR=64 OR AR=54 OR AR=44 OR AR=34 OR AR=24)]: %NAME%4{%NAME%}%CONTINUE%		// AR __4
-ItemDisplay[NMAG DIN (AR=113 OR AR=103 OR AR=93 OR AR=83 OR AR=73 OR AR=63 OR AR=53 OR AR=43 OR AR=33 OR AR=23)]: %NAME%3{%NAME%}%CONTINUE%		// AR __3
-ItemDisplay[NMAG DIN (AR=112 OR AR=102 OR AR=92 OR AR=82 OR AR=72 OR AR=62 OR AR=52 OR AR=42 OR AR=32 OR AR=22)]: %NAME%2{%NAME%}%CONTINUE%		// AR __2
-ItemDisplay[NMAG DIN (AR=121 OR AR=111 OR AR=101 OR AR=91 OR AR=81 OR AR=71 OR AR=61 OR AR=51 OR AR=41 OR AR=31 OR AR=21)]: %NAME%1{%NAME%}%CONTINUE%	// AR __1
-ItemDisplay[NMAG DIN (AR=120 OR AR=110 OR AR=100 OR AR=90 OR AR=80 OR AR=70 OR AR=60 OR AR=50 OR AR=40 OR AR=30 OR AR=20)]: %NAME%0{%NAME%}%CONTINUE%	// AR __0
+ItemDisplay[NMAG DIN STAT18>9 STAT18<66 AR>14 AR<122]: %NAME% %BLUE%+%STAT-18%/+%STAT-19%{%NAME%}%CONTINUE%						// ED & AR
 ItemDisplay[NMAG DIN]: %NAME%{%NAME%}%WHITE%
