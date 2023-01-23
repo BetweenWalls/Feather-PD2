@@ -347,7 +347,7 @@ ItemDisplay[GEMTYPE=6]: %ORANGE%[%YELLOW%%NAME%{%NAME%}%CONTINUE%
 ItemDisplay[GEMTYPE=7]: %ORANGE%[%GRAY%%NAME%{%NAME%}%CONTINUE%
 
 // Hidden: Chipped, Flawed, & Standard Gems - levels 30, 40, 60
-ItemDisplay[FILTLVL>0 ((GEMLEVEL=1 CLVL>29) OR (GEMLEVEL=2 CLVL>39) OR (GEMLEVEL=3 CLVL>59 DIFF>1 !MAPID=4 !MAPID=38 !MAPID=39)) DIFF>0 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// except in town or Normal, or (for standard gems) in Stony Field/Tristram/Cows or Nightmare
+ItemDisplay[FILTLVL>0 ((GEM=1 CLVL>29) OR (GEM=2 CLVL>39) OR (GEM=3 CLVL>59 DIFF>1 !MAPID=4 !MAPID=38 !MAPID=39)) DIFF>0 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// except in town or Normal, or (for standard gems) in Stony Field/Tristram/Cows or Nightmare
 
 
 // +-------+
