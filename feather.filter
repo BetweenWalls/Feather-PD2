@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	9 FEBRUARY 2023
+//		Date Updated:	18 FEBRUARY 2023
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Searchable Features:
@@ -425,12 +425,12 @@ ItemDisplay[RUNE=24]:	%MAP-60%%TIER-9%    %NAME%    {%NAME%}					// Ist
 ItemDisplay[RUNE=25]:	%MAP-60%%TIER-9%     %NAME%     {%NAME%}				// Gul
 //    High Runes
 ItemDisplay[RUNE=26]:	%BORDER-60%%TIER-9%       %NAME%       {%NAME%}				// Vex
-ItemDisplay[RUNE=32]:	%BORDER-60%%TIER-9%        %NAME%        {%NAME%}			// Cham
-ItemDisplay[RUNE=27]:	%BORDER-60%%TIER-9%         %NAME%         {%NAME%}			// Ohm
-ItemDisplay[RUNE=33]:	%BORDER-60%%TIER-9%          %NAME%          {%NAME%}			// Zod
-ItemDisplay[RUNE=28]:	%BORDER-60%%TIER-9%           %NAME%           {%NAME%}			// Lo
+ItemDisplay[RUNE=27]:	%BORDER-60%%TIER-9%        %NAME%        {%NAME%}			// Ohm
+ItemDisplay[RUNE=28]:	%BORDER-60%%TIER-9%          %NAME%          {%NAME%}			// Lo
+ItemDisplay[RUNE=31]:	%BORDER-60%%TIER-9%           %NAME%           {%NAME%}			// Jah
+ItemDisplay[RUNE=32]:	%BORDER-60%%TIER-9%            %NAME%            {%NAME%}		// Cham
 ItemDisplay[RUNE=29]:	%BORDER-60%%TIER-9%             %NAME%             {%NAME%}		// Sur
-ItemDisplay[RUNE=31]:	%BORDER-60%%TIER-9%              %NAME%              {%NAME%}		// Jah
+ItemDisplay[RUNE=33]:	%BORDER-60%%TIER-9%              %NAME%              {%NAME%}		// Zod
 ItemDisplay[RUNE=30]:	%BORDER-60%%TIER-9%                %NAME%                {%NAME%}	// Ber
 
 // Highlighting: Collective Rules  (notifications for runes #10-23, higher runes are covered individually above)
@@ -1032,8 +1032,8 @@ ItemDisplay[FILTLVL>0 NMAG CLVL>14 INF SOCK=0 !(DRU OR BAR OR DIN OR NEC OR SIN 
 //ItemDisplay[FILTLVL>0 NMAG CLVL>14 DAGGER !THROWING (SOCK=2 OR (SOCK=0 (ILVL<26 OR bld OR 9bl OR 7bl))) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}												// enable this rule to hide 2-socket daggers & daggers that can only get up to 2 sockets (only available Runewords are Strength/Wind)
 
 // Hidden: Regular non-class throwable weapons - level 50, 80
-ItemDisplay[FILTLVL>0 NMAG CLVL>49 THROWING !ZON !EQUIPPED !(7tk OR 7ta OR 7bk OR (ETH ELT)) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// non-class throwable weapons worth less than 5000 gold per inventory space, except elite eth versions (for imbuing)
-ItemDisplay[FILTLVL>0 NMAG CLVL>79 THROWING !ZON !EQUIPPED !(ETH (7gl OR 7ts OR 7bk OR 7b8)) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// all non-class throwable weapons, except eth versions of the fastest/slowest elite bases: Ghost Glaive, Winged Harpoon, Winged Knife, Flying Axe (for imbuing)
+ItemDisplay[FILTLVL>0 NMAG CLVL>49 THROWING !ZON !EQUIPPED !(7tk OR 7ta OR 7bk OR (ETH ELT)) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// non-class throwable weapons worth less than 5000 gold per inventory space, except elite eth versions (for imbuing)
+ItemDisplay[FILTLVL>0 NMAG CLVL>79 THROWING !ZON !EQUIPPED !(ETH (7gl OR 7ts OR 7bk OR 7b8)) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// all non-class throwable weapons, except eth versions of the fastest/slowest elite bases: Ghost Glaive, Winged Harpoon, Winged Knife, Flying Axe (for imbuing)
 
 // Hidden (stricter): Regular non-class normal/exceptional plain items in high level areas (T3 maps) - level 90
 ItemDisplay[FILTLVL>2 NMAG ED=0 SOCK=0 !ETH !ELT ILVL>88 CLVL>89 !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}
@@ -1094,7 +1094,7 @@ ItemDisplay[NMAG ZON (TABSK0=3 OR TABSK2=3)]: %NAME% %TAN%+3{%NAME%}%CONTINUE%
 ItemDisplay[NMAG ZON (TABSK0=2 OR TABSK2=2)]: %NAME% %TAN%+2{%NAME%}%CONTINUE%
 ItemDisplay[NMAG DIN ED>0 SOCK=0]: %NAME% %GRAY%­{%NAME%}%CONTINUE%						// Divider to help visually separate superior ED from automods (takes the place of the socket count when there are no sockets)
 ItemDisplay[NMAG DIN RES>4 RES<46 !GEMMED]: %NAME% %BLUE%+%STAT-45%{%NAME%}%CONTINUE%				// All Res  (no code refers to "All Resistances" directly, so %STAT-45% is used for "Poison Resist" which should be the same for any shield that isn't "gemmed")
-ItemDisplay[NMAG DIN STAT18>9 STAT18<66 AR>14 AR<122]: %NAME% %BLUE%+%STAT-18%/+%STAT-19%{%NAME%}%CONTINUE%	// ED & AR  (it's possible)
+ItemDisplay[NMAG DIN STAT18>9 STAT18<66 AR>14 AR<122]: %NAME% %BLUE%+%STAT-18%/+%STAT-19%{%NAME%}%CONTINUE%	// ED & AR
 
 // ADD CUSTOM RULES FOR REGULAR NON-POINTMOD CLASS ITEMS HERE:
 // ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
