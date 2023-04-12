@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II
-//		Date Updated:	18 FEBRUARY 2023
+//		Date Updated:	12 APRIL 2023
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Searchable Features:
@@ -508,7 +508,7 @@ ItemDisplay[RARE ETH]: %YELLOW%%NAME%%CONTINUE%
 ItemDisplay[CRAFT ETH]: %ORANGE%%NAME%%CONTINUE%
 ItemDisplay[NMAG !ETH]: %WHITE%%NAME%%CONTINUE%
 ItemDisplay[NMAG ETH]: %GRAY%%NAME%%CONTINUE%
-ItemDisplay[!NMAG ETH  (REPAIR>0 OR STAT152>0 OR THROWING OR 7cr OR (UNI ((7ba LVLREQ=74) OR (7bl LVLREQ=66) OR 7cs)) OR (UNI !ID (xla OR xpl OR uul OR uvb OR 9la OR 9cr OR 9st OR 7gd OR 7b7 OR 7p7 OR 7wh OR 7ba OR 7bl)))]: %GRAY%>>> %NAME%%CONTINUE%	// Ethereal (unbreakable)
+ItemDisplay[!NMAG ETH  (REPAIR>0 OR STAT152>0 OR THROWING OR 7cr OR (UNI ((7ba LVLREQ=74) OR (7bl LVLREQ=66) OR 7cs)) OR (UNI !ID (xla OR xpl OR uul OR uvb OR 9la OR 9cr OR 9st OR 7gd OR 7b7 OR 7p7 OR 7wh OR 7ba OR 7bl)))]: %WHITE%eth %NAME%%CONTINUE%	// Ethereal (unbreakable)
 ItemDisplay[!NMAG ETH !(REPAIR>0 OR STAT152>0 OR THROWING OR 7cr OR (UNI ((7ba LVLREQ=74) OR (7bl LVLREQ=66) OR 7cs)) OR (UNI !ID (xla OR xpl OR uul OR uvb OR 9la OR 9cr OR 9st OR 7gd OR 7b7 OR 7p7 OR 7wh OR 7ba OR 7bl)))]: %GRAY%eth %NAME%%CONTINUE%	// Ethereal (not unbreakable)
 
 // Modification: Repair Recipe
@@ -589,7 +589,7 @@ ItemDisplay[(RARE OR CRAFT) ID !EQUIPPED STAT486=0 ARMOR EXC]: %NAME%{%NAME%%NL%
 ItemDisplay[(RARE OR CRAFT) ID !EQUIPPED STAT486=0 WEAPON NORM !(SOR OR (WAND !(SOCK=0 (wnd OR ywn))))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%9%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%	// Upgrade Rare/Crafted Weapon (Normal)
 ItemDisplay[(RARE OR CRAFT) ID !EQUIPPED STAT486=0 WEAPON EXC !(SOR OR (WAND !(SOCK=0 9wn)))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%19%TAN%)%GRAY%+%TAN%(%WHITE%22%TAN%)}%CONTINUE%		// Upgrade Rare/Crafted Weapon (Exceptional)
 
-// Descriptions for Upgraded Item Requirements						...these lines were generated automatically based on wiki information																																						// excludes items which never have upgrade recipes shown (orbs, wands that don't need to be upgraded in order to get 2 sockets), and items which don't have increased requirements when upgraded (circlets, Jo Staff, exceptional wands)
+// Descriptions for Upgraded Item Requirements																																																				// excludes items which never have upgrade recipes shown (orbs, wands that don't need to be upgraded in order to get 2 sockets), and items which don't have increased requirements when upgraded (circlets, Jo Staff, exceptional wands)
 //    Strength																																																								
 ItemDisplay[!NMAG !MAG ID !EQUIPPED STAT486=0 STAT91=0 !(CIRC OR SOR OR (WAND !(SOCK=0 (wnd OR ywn))) OR 8ss OR leg) !ELT (ARMOR OR WEAPON)]: %NAME%{%NAME% %GRAY%(Str: }%CONTINUE%																																			// Str Begin  (constructed digit-by-digit since there is no %STR_UPGRADE% keyword)
 ItemDisplay[!NMAG !MAG ID !EQUIPPED STAT486=0 STAT91=0 !(CIRC OR SOR OR (WAND !(SOCK=0 (wnd OR ywn))) OR 8ss OR leg) (xth OR xul OR xar OR xow OR xhb OR 9m9 OR 9gm OR 9vo) !(ETH (xth OR xhb))]: %NAME%{%NAME%2}%CONTINUE%																														// Str 2__
@@ -741,8 +741,9 @@ ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED ((GLOVES (TABSK0>2 OR TABSK2>2 O
 ItemDisplay[!NMAG ID SHOP]: %NAME%%GRAY%	// removes description and makes price gray
 
 // Alternative Rules - Weapon Speed & Melee Range
-ItemDisplay[FILTLVL=1 !EQUIPPED !NMAG ID WEAPON !(BOW OR XBOW OR WAND OR SOR)]: %NAME%{%NAME%%NL%%WHITE%Melee Range: %RANGE%}%CONTINUE%
-ItemDisplay[FILTLVL=1 !EQUIPPED !NMAG ID WEAPON !(WAND OR SOR)]: %NAME%{%NAME%%NL%%WHITE%Weapon Speed: %WPNSPD%}%CONTINUE%
+ItemDisplay[FILTLVL=1 !EQUIPPED !NMAG ID WEAPON !(WAND OR SOR) !(ELT (UNI OR SET) (SOCK>0 OR THROWING))]: %NAME%{%NAME%%NL%}%CONTINUE%		// Adds new line for items that already have something in their description (everything except unique/set elite weapons that either have sockets or cannot gain sockets)
+ItemDisplay[FILTLVL=1 !EQUIPPED !NMAG ID WEAPON !(BOW OR XBOW OR WAND OR SOR)]: %NAME%{%NAME%%WHITE%Melee Range: %RANGE%%NL%}%CONTINUE%
+ItemDisplay[FILTLVL=1 !EQUIPPED !NMAG ID WEAPON !(WAND OR SOR)]: %NAME%{%NAME%%WHITE%Weapon Speed: %WPNSPD%}%CONTINUE%
 
 // Catchall - Identified Non-Regular Items
 ItemDisplay[!NMAG ID]: %NAME%{%NAME%}%WHITE%
@@ -980,7 +981,7 @@ ItemDisplay[NMAG !SHOP !EQUIPPED STAT486=0 ILVL>1 ILVL<36 (kri OR 9kr OR 7kr)]: 
 ItemDisplay[NMAG !SHOP !EQUIPPED STAT486=0 ((ILVL>1 ILVL<36) OR leg) WEAPON SOCK>0]: %NAME%{%NAME%%NL%%WHITE%Magic-Imbuing Recipe: 3 Standard Gems}%CONTINUE%
 
 // Descriptions for Maximum Possible Sockets
-ItemDisplay[NMAG SOCK=0 (HELM OR CIRC OR CHEST OR SHIELD OR (WEAPON !THROWING)) !SHOP !EQUIPPED]: %NAME%{%NAME%%NL%}%CONTINUE%																																																				// adds new line (separated from shop/equipped items since they don't have anything else in their description yet)
+ItemDisplay[NMAG SOCK=0 (HELM OR CIRC OR CHEST OR SHIELD OR (WEAPON !THROWING)) !SHOP !EQUIPPED]: %NAME%{%NAME%%NL%}%CONTINUE%																																																				// Adds new line (separated from shop/equipped items since they don't have anything else in their description yet)
 ItemDisplay[NMAG SOCK=0 (buc OR xuc OR dgr OR dir OR wnd OR ywn OR 9wn)]: %NAME%{%NAME%%WHITE%Maximum Sockets: 1}%CONTINUE%																																																				// 1s (all ilvls)
 ItemDisplay[NMAG SOCK=0 (cap OR skp OR hlm OR fhl OR bhm OR xap OR xkp OR xlm OR xhl OR xh9 OR uap OR ukp OR ulm OR uhl OR qui OR lea OR hla OR stu OR scl OR chn OR spl OR plt OR fld OR xui OR xea OR xla OR xtu OR sml OR spk OR bsh OR xml OR xpk OR xsh OR uuc OR uml OR (NEC NORM) OR hax OR clb OR spc OR mac OR ssd OR scm OR sbr OR flc OR bld OR 9dg OR 9di OR 9bl OR 7dg OR 7di OR 7bl OR sst OR (WAND !wnd !ywn !9wn) OR scp OR ktr OR wrb OR axf OR ces OR (SOR !ob5 !oba !obf))]: %NAME%{%NAME%%WHITE%Maximum Sockets: 2}%CONTINUE%	// 2s (all ilvls)
 ItemDisplay[NMAG SOCK=0 (rng OR brs OR ltp OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xtp OR lrg OR kit OR tow OR gts OR xrg OR xit OR xow OR xts OR urg OR upk OR ush OR 9ha OR 7ha OR mst OR 9cl OR 9sp OR 9ma OR 9mt OR 7cl OR 7sp OR 7ma OR 7mt OR wsd OR 2hs OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR spr OR 9sr OR 7sr OR bar OR sbw OR lxb OR lst OR 8ss OR 8ls OR 6ss OR 6ls OR gsc OR 9sc OR 9qs OR 7sc OR 7qs OR leg)]: %NAME%{%NAME%%WHITE%Maximum Sockets: 3}%CONTINUE%		// 3s (all ilvls)
