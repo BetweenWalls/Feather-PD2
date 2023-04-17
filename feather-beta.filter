@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II (beta version for season 7)
-//		Date Updated:	16 APRIL 2023
+//		Date Updated:	17 APRIL 2023
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Searchable Features:
@@ -124,6 +124,7 @@ ItemDisplay[FILTLVL>0 GOLD>0 GOLD<988 DIFF=2 (MAPID=136 OR MAPID=137 OR MAPID=16
 ItemDisplay[FILTLVL>3 GOLD>0 GOLD<1000 DIFF=2 CLVL>79 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]:
 ItemDisplay[FILTLVL>4 GOLD>0 GOLD<1500 DIFF=2 CLVL>84 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]:
 ItemDisplay[FILTLVL>5 GOLD>0 GOLD<2000 DIFF=2 CLVL>89 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]:
+//ItemDisplay[FILTLVL>2 GOLD>0 GOLD<5000 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) CHARSTAT15>4250000 CHARSTAT14>750000]:			// hides larger piles when the character has 5+ million gold
 
 // Gold (anything not hidden is displayed normally)
 ItemDisplay[GOLD>0]: %NAME%
@@ -176,8 +177,8 @@ ItemDisplay[FILTLVL>0 yps CLVL>89 !(MAPID>160 MAPID<164) !(MAPID=1 OR MAPID=40 O
 // +-------------------+
 // Modification
 ItemDisplay[wss]:	%RED%Worldstone Shard%CONTINUE%									// sets color for Worldstone Shard
-ItemDisplay[lbox]:	%RED%Larzuk's Puzzlebox%CONTINUE%								// sets color for Larzuk's Puzzlebox
-ItemDisplay[lpp]:	%RED%Larzuk's Puzzlepyramid%CONTINUE%								// sets color for Larzuk's Puzzlepiece (and name)
+ItemDisplay[lbox]:	%GOLD%Larzuk's Puzzlebox%CONTINUE%								// sets color for Larzuk's Puzzlebox
+ItemDisplay[lpp]:	%GOLD%Larzuk's Puzzlepyramid%CONTINUE%								// sets color for Larzuk's Puzzlepiece (and name)
 ItemDisplay[cwss]:	%RED%Tainted Worldstone Shard%CONTINUE%								// sets color for Tainted Worldstone Shard
 ItemDisplay[iwss]:	%GOLD%Catalyst Shard%CONTINUE%									// sets color for Catalyst Shard
 ItemDisplay[RUNE>0]:	%NAME% %TAN%(%WHITE%%RUNENUM%%TAN%)%WHITE%%CONTINUE%						// appends rune number to runes
@@ -202,10 +203,10 @@ ItemDisplay[bey !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Forgotten Sands)}
 ItemDisplay[mbr !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Furnace of Pain)}%WHITE%						// Mephisto's Brain	 (Uber Izual)
 
 // PD2 Items  (includes notifications)
-ItemDisplay[wss !FILTLVL=1]:	%DOT-62%%TIER-9% %NAME% {%NAME%}%WHITE%									// Worldstone Shard
-ItemDisplay[lbox !FILTLVL=1]:	%MAP-62%%TIER-9%        %NAME%        {%NAME%}%WHITE%							// Larzuk's Puzzlebox
-ItemDisplay[lpp !FILTLVL=1]:	%MAP-62%%TIER-9%    %NAME%    {%NAME%}%WHITE%								// Larzuk's Puzzlepiece
-//ItemDisplay[lmal]:		%NAME%{%NAME%}%WHITE%											// Larzuk's Malus
+ItemDisplay[wss]:		%DOT-62%%TIER-9% %NAME% {%WHITE%Can also add corruption modifiers to maps%NL%Corrupts equipment, either adding a modifier or turning it into a random rare}%WHITE%	// Worldstone Shard
+ItemDisplay[lbox]:		%MAP-53%%TIER-9%        %NAME%        {%WHITE%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%						// Larzuk's Puzzlebox
+ItemDisplay[lpp]:		%MAP-53%%TIER-9%    %NAME%    {%WHITE%Cannot be used with unique or set items%NL%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%		// Larzuk's Puzzlepiece
+ItemDisplay[cwss]:		%MAP-62%%TIER-9%    %NAME%    {%WHITE%Corrupts %GOLD%Annihilus%WHITE%, either adding a modifier or turning it into a random magic small charm}%WHITE%			// Tainted Worldstone Shard
 ItemDisplay[ubtm !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Witness the Fall of Tristram}%WHITE%					// Pandemonium Talisman  (Uber Tristram)
 ItemDisplay[uba !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%NAME%}%WHITE%								// Relic of the Ancients (Uber Ancients)
 ItemDisplay[ubaa !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(T1 Maps)}%WHITE%							// Sigil of Madawc	 (Uber Ancients ingredient)
@@ -219,15 +220,14 @@ ItemDisplay[rtma !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Rathma Awaits You
 ItemDisplay[rtmv !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Shadow of Mendeln)}%WHITE%		// Splinter of the Void  (Rathma ingredient)
 ItemDisplay[rtmo !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Undead Enemies)}%WHITE%		// Trang-Oul's Jawbone	 (Rathma ingredient)
 ItemDisplay[rtmf !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone}%WHITE%				// Ancient Bone Fragments (legacy item from season 4)
-ItemDisplay[cwss !FILTLVL=1]:	%MAP-62%%TIER-9%    %NAME%    {%NAME%}%WHITE%								// Tainted Worldstone Shard
 ItemDisplay[(rtp OR rid)]:	%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%							// Horadrim Navigator/Almanac
 ItemDisplay[rkey]:		%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%							// Skeleton Key
 ItemDisplay[lsvl !FILTLVL=1]:	%BORDER-62%%TIER-9%%RED%       Vial of Lightsong       {%NAME%}%WHITE%					// Vial of Lightsong
 ItemDisplay[llmr !FILTLVL=1]:	%BORDER-62%%TIER-9%%RED%        Lilith's Mirror        {%NAME%}%WHITE%					// Lilith's Mirror
 ItemDisplay[pvpp]:		%BLUE% = %WHITE%M {%WHITE%Dueling Mana Potion}%WHITE%							// Dueling Mana Potion
-ItemDisplay[cm2f]:		%GOLD%%MAP%  %NAME%  {%WHITE%Stackable %GOLD%Hellfire Torch %WHITE%ingredient which can be used in recipes}%WHITE%	// Hellfire Ashes
-ItemDisplay[iwss]:		%GOLD%%MAP%  %NAME%  {%WHITE%Gives a map 100% chance to have a map event}%WHITE%			// Catalyst Shard
-
+ItemDisplay[iwss]:		%DOT-53%%TIER-9% %NAME% {%WHITE%Gives a map 100% chance to have a map event}%WHITE%			// Catalyst Shard
+ItemDisplay[cm2f]:		%GOLD%%MAP%%TIER-9%  %NAME%  {%WHITE%Stackable %GOLD%Hellfire Torch %WHITE%ingredient which can be used in recipes}%WHITE%						// Hellfire Ashes
+//ItemDisplay[lmal]:		%NAME%{%NAME%}%WHITE%											// Larzuk's Malus
 // Map Orbs
 ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%%WHITE%Raises Map Rarity from Common to Magic}%WHITE%										// Arcane Orb		(Common -> Magic)
 ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%WHITE%Raises Map Rarity from Common to Rare}%WHITE%		// Zakarum Orb		(Common -> Rare)
@@ -268,10 +268,7 @@ ItemDisplay[FILTLVL=1 dhn]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORAN
 ItemDisplay[FILTLVL=1 bey]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Mephisto's Brain %WHITE%and %ORANGE%Diablo's Horn %WHITE%to access Uber Tristram%NL%%GRAY%(Forgotten Sands)}%WHITE%							// Baal's Eye		 (Uber Duriel)
 ItemDisplay[FILTLVL=1 mbr]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Diablo's Horn %WHITE%and %ORANGE%Baal's Eye %WHITE%to access Uber Tristram%NL%%GRAY%(Furnace of Pain)}%WHITE%								// Mephisto's Brain	 (Uber Izual)
 // Alternative Rules for PD2 Items  (includes notifications)
-ItemDisplay[FILTLVL=1 wss]:	%DOT-62%%TIER-9% %NAME% {%WHITE%Can also add corruption modifiers to maps%NL%Corrupts equipment, either adding a modifier or turning it into a random rare}%WHITE%								// Worldstone Shard
-ItemDisplay[FILTLVL=1 lbox]:	%MAP-62%%TIER-9%        %NAME%        {%WHITE%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%													// Larzuk's Puzzlebox
-ItemDisplay[FILTLVL=1 lpp]:	%MAP-62%%TIER-9%     %NAME%     {%WHITE%Cannot be used with unique or set items%NL%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%								// Larzuk's Puzzlepiece
-ItemDisplay[FILTLVL=1 ubtm]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Fall of Tristram%NL%%WHITE%Sends you and nearby allies to fight the Uber Prime Evils in Tristram}%WHITE%											// Pandemonium Talisman  (Uber Tristram)
+ItemDisplay[FILTLVL=1 ubtm]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Witness the Fall of Tristram%NL%%WHITE%Sends you and nearby allies to fight the Uber Prime Evils in Tristram}%WHITE%										// Pandemonium Talisman  (Uber Tristram)
 ItemDisplay[FILTLVL=1 uba]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Sends you and nearby allies to fight the Uber Ancients on Arreat Summit}%WHITE%														// Relic of the Ancients (Uber Ancients)
 ItemDisplay[FILTLVL=1 ubaa]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Sigils %WHITE%from %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %WHITE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %WHITE%maps to access Uber Ancients%NL%%GRAY%(T1 Maps)}%WHITE%		// Sigil of Madawc	 (Uber Ancients ingredient)
 ItemDisplay[FILTLVL=1 ubab]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Sigils %WHITE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %WHITE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %WHITE%maps to access Uber Ancients%NL%%GRAY%(T2 Maps)}%WHITE%		// Sigil of Talic	 (Uber Ancients ingredient)
@@ -284,7 +281,6 @@ ItemDisplay[FILTLVL=1 rtma]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Rathma Awaits You%
 ItemDisplay[FILTLVL=1 rtmv]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%WHITE%Combine with %ORANGE%Trang-Oul's Jawbone %WHITE%and %GOLD%Hellfire Torch %WHITE%to access Rathma%NL%%GRAY%(Shadow of Mendeln)}%WHITE%				// Splinter of the Void  (Rathma ingredient)
 ItemDisplay[FILTLVL=1 rtmo]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%WHITE%Combine with %ORANGE%Splinter of the Void %WHITE%and %GOLD%Hellfire Torch %WHITE%to access Rathma%NL%%GRAY%(Undead Enemies)}%WHITE%				// Trang-Oul's Jawbone	 (Rathma ingredient)
 ItemDisplay[FILTLVL=1 rtmf]:	%DOT-60%%TIER-9%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone%NL%%WHITE%Jawbone Recipe: 2 %ORANGE%Ancient Bone Fragments %WHITE%+ %GOLD%Hellfire Torch}%WHITE%								// Ancient Bone Fragments (legacy)
-ItemDisplay[FILTLVL=1 cwss]:	%MAP-62%%TIER-9%    %NAME%    {%WHITE%Corrupts %GOLD%Annihilus%WHITE%, either adding a modifier or turning it into a random magic small charm}%WHITE%										// Tainted Worldstone Shard
 ItemDisplay[FILTLVL=1 lsvl]:	%BORDER-62%%TIER-9%%RED%       Vial of Lightsong       {%WHITE%Cannot be used with set items or indestructible items}%WHITE%													// Vial of Lightsong
 ItemDisplay[FILTLVL=1 llmr]:	%BORDER-62%%TIER-9%%RED%        Lilith's Mirror        {%WHITE%Mirrored items cannot be used in any cube recipes}%WHITE%													// Lilith's Mirror
 // Alternative Rules for Maps (immunes)
@@ -1018,6 +1014,64 @@ ItemDisplay[NMAG SOCK=0 ILVL>40 (mpi OR wax OR gax OR gix OR 9mp OR 9wa OR 9ga O
 // Alternative Rules - Weapon Speed & Melee Range
 ItemDisplay[FILTLVL=1 !SHOP !EQUIPPED NMAG WEAPON !(BOW OR XBOW OR WAND OR SOR)]: %NAME%{%NAME%%NL%%WHITE%Melee Range: %RANGE%}%CONTINUE%
 ItemDisplay[FILTLVL=1 !SHOP !EQUIPPED NMAG WEAPON !(WAND OR SOR)]: %NAME%{%NAME%%NL%%WHITE%Weapon Speed: %WPNSPD%}%CONTINUE%
+
+// Descriptions for Base Defense (Chests/Helms/Shields)
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (CHEST OR HELM OR SHIELD)]: %NAME%{%NAME%%NL%%WHITE%Base Defense: %GRAY%}%CONTINUE%																														// Def Begin  (constructed digit-by-digit since there are no %MIN_DEF% or %MAX_DEF% keywords)
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ETH uar]: %NAME%{%NAME%6}%CONTINUE%																																				// Def 6__ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ETH (xar OR upl OR ult OR uld OR uth OR uul OR utp)]: %NAME%{%NAME%5}%CONTINUE%																														// Def 5__ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (xar OR upl OR ult OR uld OR uth OR uul OR uar OR utp)) OR (ETH (uui OR uea OR ula OR utu OR ung OR ucl OR uhn OR urs)))]: %NAME%{%NAME%4}%CONTINUE%																					// Def 4__ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (xul OR (!ETH (uui OR uea OR ula OR utu OR ung OR ucl OR uhn OR urs)) OR (ETH (xlt OR xld OR xth)))]: %NAME%{%NAME%3}%CONTINUE%																								// Def 3__ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (aar OR xpl OR xtp OR uow OR (!ETH (xlt OR xld OR xth)) OR (ETH (xcl OR xhn OR xrs OR uts OR pae OR paf)))]: %NAME%{%NAME%2}%CONTINUE%																							// Def 2__ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (plt OR fld OR gth OR ful OR xui OR xea OR xla OR xtu OR xng OR pa6 OR pa7 OR pa8 OR pa9 OR paa OR ukp OR ulm OR uhl OR uhm OR urn OR usk OR uh9 OR bab OR bac OR bad OR bae OR baf OR drb OR drd OR dre OR drf OR uml OR urg OR uit OR ush OR upk OR nee OR nef OR pab OR pac OR pad OR (!ETH (xcl OR xhn OR xrs OR uts OR pae OR paf)) OR (ETH (spl OR ltp OR xhm OR ba9 OR baa OR xts OR uap OR drc OR uuc OR neb OR neg OR ned)))]: %NAME%{%NAME%1}%CONTINUE%		// Def 1__ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (uhn OR urs OR (!ETH (spl OR ltp OR baa OR xhn OR uap OR drc OR ucl OR uuc OR neb OR neg OR ned)) OR (ETH (chn OR xhl OR xrn OR ba8 OR dra OR xng OR xul OR paa OR ush OR pad)))]: %NAME%{%NAME%9}%CONTINUE%															// Def _9_ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (xhm OR ba9 OR xrs OR xth OR xts OR ung OR uar OR uts OR paf)) OR (ETH (brs OR ful OR dr8 OR xpl OR xtp OR xow OR pa9 OR ucl OR upk)))]: %NAME%{%NAME%8}%CONTINUE%																			// Def _8_ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (chn OR xhl OR xrn OR ba8 OR dra OR xcl OR utu)) OR (ETH (scl OR aar OR xlm OR xh9 OR ba7 OR dr9 OR xtu OR xit OR xpk OR nea OR ung OR pac)))]: %NAME%{%NAME%7}%CONTINUE%																		// Def _7_ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (ula OR (!ETH (brs OR xlm OR xh9 OR ba7 OR dr8 OR xow OR uui OR uea OR pae)) OR (ETH (gth OR xkp OR xsk OR ba6 OR dr6 OR xrg OR xsh OR ne9 OR pa8 OR ci3 OR utu OR uit OR uow)))]: %NAME%{%NAME%6}%CONTINUE%															// Def _6_ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (scl OR ful OR xkp OR xsk OR ba6 OR dr6 OR dr9 OR xng OR xlt OR xrg OR xit OR xsh OR xpk OR ne9 OR nea OR paa OR ci3 OR ush OR pad)) OR (ETH (rng OR xap OR ci2 OR dr7 OR xla OR xth OR xuc OR xml OR ne7 OR ne8 OR uui OR uea OR uul OR pab)))]: %NAME%{%NAME%5}%CONTINUE%						// Def _5_ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (rng OR xap OR ci2 OR dr7 OR xld OR xuc OR xml OR ne7 OR ne8 OR pa9 OR uul OR upk)) OR (ETH (bhm OR ba5 OR stu OR xhn OR ne6 OR pa7 OR uhm OR bae OR baf OR uth OR urg)))]: %NAME%{%NAME%4}%CONTINUE%															// Def _4_ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (ghm OR ci1 OR ba4 OR gts OR pa5 OR (!ETH (bhm OR ba5 OR stu OR xtu OR ne6 OR uth OR uit OR pac)) OR (ETH (crn OR ba3 OR plt OR pa4 OR xea OR xrs OR ulm OR uhl OR urn OR bac OR bad OR drd OR drf OR uml)))]: %NAME%{%NAME%3}%CONTINUE%											// Def _3_ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (fhl OR ci0 OR dr5 OR hla OR tow OR ult OR (!ETH (crn OR ba3 OR gth OR pa4 OR xla OR xpl OR xtp OR pa8 OR pab)) OR (ETH (dr3 OR fld OR kit OR pa3 OR xui OR xcl OR xar OR pa6 OR uap OR ukp OR usk OR uh9 OR bab OR drb OR drc OR dre OR uld OR uts OR neg OR ned OR nee OR nef OR paf)))]: %NAME%{%NAME%2}%CONTINUE%	// Def _2_ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (hlm OR ba1 OR ba2 OR dr4 OR lea OR lrg OR bsh OR spk OR ne4 OR ne5 OR pa2 OR upl OR utp OR (!ETH (dr3 OR aar OR kit OR pa3 OR xea OR xul OR xar OR pa7 OR uhl OR uhm OR urn OR bad OR bae OR baf OR uld OR urg OR uow)) OR (ETH (skp OR msk OR dr1 OR qui OR spl OR ltp OR sml OR pa1 OR baa OR xlt OR uuc OR neb OR pae)))]: %NAME%{%NAME%1}%CONTINUE%		// Def _1_ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (plt OR fld OR xui OR pa6 OR ukp OR ulm OR usk OR uh9 OR bab OR bac OR drb OR drd OR dre OR drf OR uml OR nee OR nef)) OR (ETH (xhm OR ba9 OR xld OR xts OR uar)))]: %NAME%{%NAME%0}%CONTINUE%															// Def _0_ to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED !ETH (msk OR xit OR pa8 OR drf OR ula OR uhn OR urg OR pae)]: %NAME%{%NAME%9}%CONTINUE%																													// Def __9 to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (skp OR dr1 OR dr3 OR qui OR plt OR gth OR aar OR sml OR pa1 OR xrn OR ba8 OR dr9 OR xtu OR xng OR xhn OR xrs OR xow OR xpk OR ne6 OR nea OR uap OR drc OR uml OR ush OR ned OR pac)) OR (ETH (hlm OR fhl OR ba2 OR spk OR ne5 OR xlm OR ba6 OR ba7 OR xea OR xml OR urn OR bad OR dre OR utu OR ung OR uhn OR uar OR uuc OR urg OR uow OR uts OR neb OR nef)))]: %NAME%{%NAME%8}%CONTINUE%		// Def __8 to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (scl OR dr8 OR xar OR xml OR baf OR drd OR uld OR uar OR upk)) OR (ETH (ghm OR ci1 OR ba4 OR dr5 OR lea OR ful OR tow OR gts OR ne3 OR pa5 OR xrn OR xsk OR ba8 OR dr7 OR xui OR xng OR xhn OR ne6 OR uhl OR bab OR ucl OR uul OR ush OR pab OR paf)))]: %NAME%{%NAME%7}%CONTINUE%					// Def __7 to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (kit OR ne3 OR pa3 OR pa4 OR dr7 OR xcl OR paa OR uul OR neg OR pab)) OR (ETH (hla OR rng OR fld OR xap OR xhm OR ba9 OR baa OR xrg OR pa6 OR ukp OR usk OR baf OR drb OR drf OR ult OR uit)))]: %NAME%{%NAME%6}%CONTINUE%												// Def __6 to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (hlm OR crn OR ba2 OR ba3 OR ba5 OR rng OR brs OR spk OR ne5 OR xap OR xhl OR xhm OR ba6 OR ba9 OR xpl OR xul OR xtp OR ulm OR bac OR utu OR urs OR uuc OR uow OR neb)) OR (ETH (ci0 OR dr2 OR dr4 OR plt OR buc OR lrg OR ne2 OR xkp OR xh9 OR dr6 OR xrs OR xlt OR xow OR ne8 OR paa OR uh9 OR uea OR uml OR nee)))]: %NAME%{%NAME%5}%CONTINUE%		// Def __5 to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED !ETH (dr2 OR lea OR buc OR ne2 OR xsk OR ne8 OR pa9 OR uhm OR bae OR uea OR pad)]: %NAME%{%NAME%4}%CONTINUE%																											// Def __4 to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (cap OR (!ETH (fhl OR bhm OR xlm OR ba7 OR baa OR dra OR xrg OR pa7 OR dre OR ung OR uth OR uit OR uts OR nef)) OR (ETH (ba5 OR xhl OR dr8 OR xul OR xit OR drd OR urs OR upk)))]: %NAME%{%NAME%3}%CONTINUE%															// Def __3 to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (ne1 OR xla OR xld OR xth OR (!ETH (dr4 OR dr5 OR stu OR chn OR lrg OR tow OR xkp OR dr6 OR xui OR xlt OR bab OR paf)) OR (ETH (ba1 OR dr3 OR spl OR aar OR ltp OR bsh OR ne4 OR pa2 OR pa4 OR dr9 OR xtu OR xsh OR xpk OR ne9 OR nea OR uap OR uhm OR ci3 OR bae OR drc OR upl OR utp OR ned OR pac OR pad)))]: %NAME%{%NAME%2}%CONTINUE%		// Def __2 to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (xuc OR ne7 OR uui OR (!ETH (hla OR fld OR xea OR pa6 OR ukp OR urn OR usk OR bad OR drb OR ult)) OR (ETH (crn OR msk OR bhm OR ba3 OR scl OR brs OR dra OR xpl OR xar OR xtp OR pa7 OR pa8 OR ulm OR bac OR ula OR uld OR uth OR pae)))]: %NAME%{%NAME%1}%CONTINUE%								// Def __1 to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (ci2 OR xts OR (!ETH (ghm OR ci0 OR ci1 OR ba1 OR ba4 OR spl OR ful OR ltp OR gts OR bsh OR ne4 OR pa2 OR pa5 OR xh9 OR xsh OR ne9 OR uhl OR uh9 OR ci3 OR ucl OR upl OR utp OR nee)) OR (ETH (skp OR dr1 OR qui OR stu OR chn OR gth OR sml OR kit OR pa1 OR pa3 OR xcl OR pa9 OR neg)))]: %NAME%{%NAME%0}%CONTINUE%	// Def __0 to ___
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (CHEST OR HELM OR SHIELD)]: %NAME%{%NAME%-}%CONTINUE%																																	// Def Middle
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ETH uar]: %NAME%{%NAME%7}%CONTINUE%																																				// Def ___ to 7__
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH uar) OR (ETH (utu OR ung OR ucl OR uhn OR urs OR upl OR ult OR uld OR uth OR uul OR utp)))]: %NAME%{%NAME%6}%CONTINUE%																								// Def ___ to 6__
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (uhn OR urs OR upl OR ult OR uld OR uth OR uul OR utp)) OR (ETH (xar OR uui OR uea OR ula)))]: %NAME%{%NAME%5}%CONTINUE%																								// Def ___ to 5__
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (xar OR uui OR uea OR ula OR utu OR ung OR ucl)) OR (ETH xul))]: %NAME%{%NAME%4}%CONTINUE%																												// Def ___ to 4__
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (xth OR (!ETH xul) OR (ETH (xpl OR xlt OR xld OR xtp OR uow)))]: %NAME%{%NAME%3}%CONTINUE%																													// Def ___ to 3__
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (aar OR xhn OR xrs OR uts OR paf OR (!ETH (xpl OR xlt OR xld OR xtp OR uow)) OR (ETH (ful OR xng OR xcl OR pa9 OR paa OR urn OR baf OR ush OR upk OR pac OR pad OR pae)))]: %NAME%{%NAME%2}%CONTINUE%															// Def ___ to 2__
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (plt OR fld OR gth OR ltp OR xrn OR xh9 OR baa OR xui OR xea OR xla OR xtu OR xsh OR pa6 OR pa7 OR pa8 OR uap OR ukp OR ulm OR uhl OR uhm OR usk OR uh9 OR bab OR bac OR bad OR bae OR drb OR drc OR drd OR dre OR drf OR uuc OR uml OR urg OR uit OR neb OR neg OR ned OR nee OR nef OR pab OR (!ETH (ful OR xng OR xcl OR pa9 OR paa OR urn OR baf OR ush OR upk OR pac OR pad OR pae)) OR (ETH (spl OR xhl OR xhm OR xsk OR ba8 OR ba9 OR dr8 OR dr9 OR dra OR xts)))]: %NAME%{%NAME%1}%CONTINUE%		// Def ___ to 1__
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (spl OR xhm OR ba8 OR ba9 OR dra OR xcl OR xts OR ucl OR pae)) OR (ETH (chn OR aar OR xlm OR ba7 OR xtu OR xow OR xpk OR pa8 OR uhl OR uhm OR usk OR uh9 OR bad OR bae OR drd OR dre OR drf OR ula OR uul OR pab)))]: %NAME%{%NAME%9}%CONTINUE%									// Def ___ to _9_
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (xhl OR xsk OR dr8 OR dr9 OR paa OR utu OR ung)) OR (ETH (brs OR ba6 OR dr7 OR xit OR xsh OR ne9 OR nea OR ukp OR ulm OR bab OR bac OR drb OR drc OR uui OR uea OR uit OR nee OR nef OR paf)))]: %NAME%{%NAME%8}%CONTINUE%												// Def ___ to _8_
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (chn OR xlm OR ba7 OR xng OR xlt OR xow OR xpk OR nea OR uea OR ula OR ush OR pad)) OR (ETH (scl OR xkp OR dr6 OR xla OR xth OR xrg OR pa7 OR uap OR ci3 OR uth OR neb OR neg OR ned)))]: %NAME%{%NAME%7}%CONTINUE%													// Def ___ to _7_
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (scl OR brs OR ful OR xkp OR ba6 OR dr6 OR dr7 OR xtp OR xrg OR xit OR ne9 OR pa9 OR urn OR ci3 OR baf OR uui OR upk OR pac)) OR (ETH (ba5 OR rng OR gth OR xap OR ci2 OR xhn OR xar OR xuc OR xml OR ne6 OR ne7 OR ne8 OR ult OR urg)))]: %NAME%{%NAME%6}%CONTINUE%							// Def ___ to _6_
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (ba5 OR xap OR ci2 OR xtu OR xld OR xar OR xml OR xsh OR ne7 OR ne8 OR pa8 OR uhl OR uhm OR usk OR uh9 OR bac OR bad OR bae OR drd OR dre OR drf OR uul OR pab)) OR (ETH (crn OR ci1 OR pa5 OR xh9 OR baa OR xea OR xrs OR pa6 OR uld OR uar OR utp OR uml OR uts)))]: %NAME%{%NAME%5}%CONTINUE%			// Def ___ to _5_
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (crn OR ci1 OR rng OR pa5 OR xpl OR xul OR xuc OR ne6 OR uap OR ukp OR ulm OR bab OR drb OR drc OR uth OR uit OR uow OR neg OR ned OR nee OR nef)) OR (ETH (ghm OR bhm OR ba4 OR dr5 OR stu OR plt OR gts OR pa4 OR xrn OR xui OR xlt OR upl OR pae)))]: %NAME%{%NAME%4}%CONTINUE%					// Def ___ to _4_
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (ci0 OR ba3 OR bsh OR (!ETH (ghm OR bhm OR ba4 OR dr5 OR stu OR gth OR aar OR gts OR pa4 OR xla OR pa7 OR ult OR urg OR neb)) OR (ETH (fhl OR msk OR dr3 OR dr4 OR hla OR fld OR ltp OR tow OR spk OR pa3 OR xcl OR uhn OR uuc)))]: %NAME%{%NAME%3}%CONTINUE%								// Def ___ to _3_
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (ba2 OR ne5 OR (!ETH (fhl OR msk OR dr3 OR dr4 OR hla OR tow OR spk OR pa3 OR xh9 OR baa OR xea OR pa6 OR uld OR utp OR uml OR paf)) OR (ETH (hlm OR lea OR kit OR ne4 OR pa2 OR xhm OR ba9 OR dra OR xld OR xul OR xtp OR paa OR ucl OR urs)))]: %NAME%{%NAME%2}%CONTINUE%							// Def ___ to _2_
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (skp OR ba1 OR dr1 OR dr2 OR qui OR sml OR lrg OR ne3 OR pa1 OR (!ETH (hlm OR lea OR plt OR kit OR ne4 OR pa2 OR xrn OR xui OR xhn OR upl OR uuc)) OR (ETH (spl OR ne2 OR ba8 OR xng OR xts OR pa9 OR baf OR ung OR ush OR pad)))]: %NAME%{%NAME%1}%CONTINUE%								// Def ___ to _1_
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (fld OR ltp OR xrs OR xth OR uhn OR urs OR uar OR uts)) OR (ETH (ful OR xhl OR xsk OR dr8 OR dr9 OR xpl OR urn OR utu OR uow OR upk OR pac)))]: %NAME%{%NAME%0}%CONTINUE%																		// Def ___ to _0_
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED !ETH (xuc OR ulm OR uhm OR bae OR drf OR ung OR neb)]: %NAME%{%NAME%9}%CONTINUE%																														// Def ___ to __9
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (hlm OR dr4 OR rng OR brs OR kit OR ne2 OR pa2 OR xhm OR ba6 OR ba9 OR dr7 OR dra OR xld OR xow OR xpk OR ne6 OR pa9 OR baf OR uit OR nef OR pab)) OR (ETH (ba1 OR dr2 OR spl OR gth OR dr9 OR xth OR xml OR ne8 OR uhm OR bae OR drf OR urg OR uts)))]: %NAME%{%NAME%8}%CONTINUE%					// Def ___ to __8
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (msk OR lea OR ltp OR dr9 OR xui OR xit OR pa7 OR uh9 OR bab OR drc OR uui OR upl OR uul OR uts)) OR (ETH (ci0 OR ba3 OR buc OR lrg OR bsh OR xkp OR xsk OR dr6 OR xea OR xcl OR xul OR xow OR xsh OR xpk OR nea OR bac OR uea OR uuc OR ned OR pab)))]: %NAME%{%NAME%7}%CONTINUE%					// Def ___ to __7
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (fhl OR bhm OR plt OR buc OR ne4 OR pa3 OR pa4 OR xsk OR xea OR xla OR bad OR ucl OR nee)) OR (ETH (cap OR crn OR ne1 OR xap OR xh9 OR xui OR xhn OR xtp OR xrg OR xts OR pa6 OR paa OR uap OR ulm OR urn OR uh9 OR urs OR upl OR uth OR uul OR ush OR neg)))]: %NAME%{%NAME%6}%CONTINUE%				// Def ___ to __6
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED ((!ETH (cap OR ghm OR crn OR ba1 OR ba4 OR dr2 OR dr5 OR stu OR chn OR spl OR fld OR gth OR tow OR gts OR spk OR ne1 OR xh9 OR ba7 OR xml OR ne8 OR pa6 OR ukp OR urn OR drb OR dre OR uhn OR urg OR paf)) OR (ETH (bhm OR ba2 OR dr4 OR scl OR brs OR plt OR ne5 OR pa1 OR pa4 OR xhl OR ba6 OR dr7 OR xng OR ne7 OR ci3 OR bad OR utp OR uit OR nef OR pac OR pad)))]: %NAME%{%NAME%5}%CONTINUE%		// Def ___ to __5
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED !ETH (dr3 OR hla OR lrg OR xhl OR xlt OR ne9 OR uhl OR usk OR ula OR utp OR pac)]: %NAME%{%NAME%4}%CONTINUE%																											// Def ___ to __4
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (xpl OR uld OR uml OR upk OR (!ETH (aar OR xap OR xrn OR xtu OR xhn OR xth OR xts OR pa8 OR ush OR pae)) OR (ETH (skp OR ghm OR msk OR ba4 OR dr1 OR dr5 OR qui OR stu OR chn OR ltp OR gts OR ba7 OR xit OR bab OR drc OR dre OR uui OR neb)))]: %NAME%{%NAME%3}%CONTINUE%							// Def ___ to __3
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (xrs OR (!ETH (pa1 OR xkp OR xlm OR dr6 OR xng OR xul OR ne7 OR drd OR ned OR pad)) OR (ETH (hlm OR fhl OR ba5 OR sml OR kit OR ne3 OR pa2 OR pa3 OR xhm OR ci2 OR ba8 OR ba9 OR dra OR xlt OR xld OR xar OR uhl OR usk OR ula OR ult OR nee)))]: %NAME%{%NAME%2}%CONTINUE%							// Def ___ to __2
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (ful OR dr8 OR utu OR uow OR (!ETH (skp OR dr1 OR qui OR xtp OR xrg OR paa OR uap OR urs OR uth OR neg)) OR (ETH (lea OR fld OR aar OR tow OR spk OR xrn OR xtu OR xuc OR pa7 OR pa8 OR ukp OR drb OR ung OR uhn OR pae OR paf)))]: %NAME%{%NAME%1}%CONTINUE%								// Def ___ to __1
+ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (ci1 OR pa5 OR baa OR uar OR (!ETH (ci0 OR ba2 OR ba3 OR ba5 OR scl OR sml OR bsh OR ne3 OR ne5 OR ci2 OR ba8 OR xcl OR xar OR xsh OR nea OR ci3 OR bac OR uea OR ult OR uuc)) OR (ETH (dr3 OR hla OR rng OR ne2 OR ne4 OR xlm OR xla OR ne6 OR ne9 OR pa9 OR baf OR drd OR ucl)))]: %NAME%{%NAME%0}%CONTINUE%		// Def ___ to __0
+//ItemDisplay[NMAG ED=0 !INF !SHOP !EQUIPPED (CHEST OR HELM OR SHIELD)]: %NAME%{%NAME%}%CONTINUE%																																	// Def End
 
 // Modification: Superior/Sockets
 ItemDisplay[ED=15 NMAG]: %NAME% %BLUE%+15{%NAME%}%CONTINUE%
