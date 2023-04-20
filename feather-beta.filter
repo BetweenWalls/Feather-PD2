@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II (beta version for season 7)
-//		Date Updated:	17 APRIL 2023
+//		Date Updated:	20 APRIL 2023
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Searchable Features:
@@ -183,7 +183,7 @@ ItemDisplay[cwss]:	%RED%Tainted Worldstone Shard%CONTINUE%								// sets color 
 ItemDisplay[iwss]:	%GOLD%Catalyst Shard%CONTINUE%									// sets color for Catalyst Shard
 ItemDisplay[RUNE>0]:	%NAME% %TAN%(%WHITE%%RUNENUM%%TAN%)%WHITE%%CONTINUE%						// appends rune number to runes
 ItemDisplay[jewf]:	%WHITE%Jewel Fragment%CONTINUE%									// changes name of Jewel Fragments from plural to singular
-ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49 OR t51 OR t52 OR t53 OR t54 OR t55 OR t56 OR t57 OR t58 OR t59 OR t61 OR t62 OR t63 OR t64 OR t65 OR t66 OR t67 OR t68 OR t69)]: %NAME% %WHITE%×%QTY%%CONTINUE%		// appends quantity
+ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key OR MAPTIER>-1)]: %NAME% %WHITE%×%QTY%%CONTINUE%		// appends quantity
 
 // Quest Items
 //ItemDisplay[(hdm OR msf OR vip OR hst OR g33 OR qf1 OR qf2 OR hfh)]: %NAME%{%NAME%}%CONTINUE%						// equipment	 (listed here for reference)
@@ -225,7 +225,7 @@ ItemDisplay[rkey]:		%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%							// 
 ItemDisplay[lsvl !FILTLVL=1]:	%BORDER-62%%TIER-9%%RED%       Vial of Lightsong       {%NAME%}%WHITE%					// Vial of Lightsong
 ItemDisplay[llmr !FILTLVL=1]:	%BORDER-62%%TIER-9%%RED%        Lilith's Mirror        {%NAME%}%WHITE%					// Lilith's Mirror
 ItemDisplay[pvpp]:		%BLUE% = %WHITE%M {%WHITE%Dueling Mana Potion}%WHITE%							// Dueling Mana Potion
-ItemDisplay[iwss]:		%DOT-53%%TIER-9% %NAME% {%WHITE%Gives a map 100% chance to have a map event}%WHITE%			// Catalyst Shard
+ItemDisplay[iwss]:		%DOT-53%%TIER-9% %NAME% {%WHITE%Gives a map 100% chance to contain a map event}%WHITE%			// Catalyst Shard
 ItemDisplay[cm2f]:		%GOLD%%MAP%%TIER-9%  %NAME%  {%WHITE%Stackable %GOLD%Hellfire Torch %WHITE%ingredient which can be used in recipes}%WHITE%						// Hellfire Ashes
 //ItemDisplay[lmal]:		%NAME%{%NAME%}%WHITE%											// Larzuk's Malus
 // Map Orbs
@@ -245,10 +245,12 @@ ItemDisplay[MAPTIER=1]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T1%DA
 ItemDisplay[MAPTIER=2]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%		// maps - T2 (Ruins of Viz-Jun, Sanatorium, Royal Crypts, Ancestral Trial, Fall of Caldeum, Shadows of Westmarch)
 ItemDisplay[MAPTIER=3]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%		// maps - T3 (Tomb of Zultan Kulle, Sewers of Harrogath, River of Blood, Throne of Insanity, Lost Temple, Blood Moon, Pandemonium Citadel, Canyon of Sescheron, Kehjistan Marketplace, Ashen Plains)
 ItemDisplay[MAPTIER=4]:		%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%)%CONTINUE%	// dungeons  (Cathedral of Light, Plains of Torment, Sanctuary of Sin)
-ItemDisplay[t51 ID]:		Map%NL%Zhar's Sanctum%CONTINUE%								// unique map name
-ItemDisplay[t52 ID]:		Map%NL%Stygian Caverns%CONTINUE%							// unique map name
+ItemDisplay[t51]:		Zhar's Sanctum%CONTINUE%								// unique map name
+ItemDisplay[t52]:		Stygian Caverns%CONTINUE%								// unique map name
+ItemDisplay[(t51 OR t52) !ID]:	%NAME% Map%CONTINUE%									// unique map name
+ItemDisplay[(t51 OR t52) ID]:	Map%NL%%NAME%%CONTINUE%									// unique map name
 ItemDisplay[(t51 OR t52)]:%BORDER-53%%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%	// unique maps
-ItemDisplay[MAPTIER~0-4 QTY>1]:			%NAME% %WHITE%×%QTY%%CONTINUE%						// maps - appends quantity
+ItemDisplay[MAPTIER>-1 QTY>1]:			%NAME% %WHITE%×%QTY%%CONTINUE%						// maps - appends quantity
 ItemDisplay[MAPTIER=1 !(ID (RARE OR UNI))]:	 %NAME% %CONTINUE%							// maps - T1 highlighting
 ItemDisplay[MAPTIER=2 !(ID (RARE OR UNI))]:	  %NAME%  %CONTINUE%							// maps - T2 highlighting
 ItemDisplay[MAPTIER=3 !(ID (RARE OR UNI))]:	   %NAME%   %CONTINUE%							// maps - T3 highlighting
@@ -467,7 +469,7 @@ ItemDisplay[jew RARE ILVL>64 STAT477=0]:						%YELLOW%%NAME%{%WHITE%Item Level: 
 ItemDisplay[jew MAG !ID]:								%DOT-97%%TIER-2%%NAME%{%NAME%}%WHITE%			// map icons without text notifications for unidentified magic jewels 
 
 // Charms
-ItemDisplay[MAG ID ((cm1 (LIFE>19 OR (MANA>16 FHR>0) OR RES>0 OR MFIND>6 OR FRES>10 OR CRES>10 OR LRES>10 OR PRES>10 OR (MAXDMG>1 AR>0) OR STAT58>205)) OR (cm2 ((MANA>33 FHR>0) OR STAT329>2 OR STAT330>2 OR STAT331>2 OR STAT332>2 OR STAT357>2 OR RES>5 OR (MAXDMG>3 AR>0))) OR (cm3 ((MANA>51 FHR>0) OR TABSK0>0 OR TABSK1>0 OR TABSK2>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK32>0 OR TABSK33>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0 OR RES>8 OR (MAXDMG>6 AR>0))) OR (cm1 LVLREQ<31 LIFE>13 (MANA>4 OR FRES>4 OR CRES>4 OR LRES>4 OR PRES>4)) OR (cm2 LVLREQ<31 LIFE>18 (STAT329>1 OR STAT330>1 OR STAT331>1 OR STAT332>1 OR STAT357>1 OR MANA>20 OR FRES>12 OR CRES>12 OR LRES>12 OR PRES>12)) OR (cm2 LVLREQ<10 LIFE>14 (MANA>4 OR FRES>4 OR CRES>4 OR LRES>4 OR PRES>4)) OR ((PREFIX=1474 OR PREFIX=1486 OR PREFIX=1498) (SUFFIX=705 OR SUFFIX=717 OR SUFFIX=729)) OR ((PREFIX=1509 OR PREFIX=1510) (SUFFIX=692 OR SUFFIX=693)))]:	%DOT-9B%%TIER-9%   %NAME%   {%NAME%}%WHITE%		// valuable charms (also adds notifications)		...TODO: Add more charms	...TODO: adjust PREFIX values (they should shift according to how many suffixes get added)
+ItemDisplay[MAG ID ((cm1 (LIFE>19 OR (MANA>16 FHR>0) OR RES>0 OR MFIND>6 OR FRES>10 OR CRES>10 OR LRES>10 OR PRES>10 OR (MAXDMG>1 AR>0) OR STAT58>205)) OR (cm2 ((MANA>33 FHR>0) OR STAT329>2 OR STAT330>2 OR STAT331>2 OR STAT332>2 OR STAT357>2 OR RES>5 OR (MAXDMG>3 AR>0))) OR (cm3 ((MANA>51 FHR>0) OR TABSK0>0 OR TABSK1>0 OR TABSK2>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK32>0 OR TABSK33>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0 OR RES>8 OR (MAXDMG>6 AR>0))) OR (cm1 LVLREQ<31 LIFE>13 (MANA>4 OR FRES>4 OR CRES>4 OR LRES>4 OR PRES>4)) OR (cm2 LVLREQ<31 LIFE>18 (STAT329>1 OR STAT330>1 OR STAT331>1 OR STAT332>1 OR STAT357>1 OR MANA>20 OR FRES>12 OR CRES>12 OR LRES>12 OR PRES>12)) OR (cm2 LVLREQ<10 LIFE>14 (MANA>4 OR FRES>4 OR CRES>4 OR LRES>4 OR PRES>4)) OR ((PREFIX=1525 OR PREFIX=1537 OR PREFIX=1549) (SUFFIX=705 OR SUFFIX=717 OR SUFFIX=729)) OR ((PREFIX=1560 OR PREFIX=1561) (SUFFIX=692 OR SUFFIX=693)))]:	%DOT-9B%%TIER-9%   %NAME%   {%NAME%}%WHITE%		// valuable charms (also adds notifications)		...TODO: Add more charms	...TODO: adjust PREFIX values (they should shift according to how many suffixes get added)
 ItemDisplay[MAG ID ((cm1 ALVL>89) OR (cm2 ALVL>73) OR (cm3 ALVL>90))]:			%NAME%{%WHITE%Item Level: %TAN%%ILVL%}%WHITE%		// charms (top ilvl for rerolling - capable of getting any affix, colored tan)
 ItemDisplay[MAG ID ((cm1 ALVL>47) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]:			%NAME%{%WHITE%Item Level: %ILVL%}%WHITE%		// charms (okay ilvl for rerolling)
 ItemDisplay[MAG !ID ((cm1 ALVL>47) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]:			%DOT-9B%%TIER-2%%NAME%{%NAME%}%WHITE%			// map icons without text notifications for unidentified magic charms that are capable of getting okay affixes
@@ -503,7 +505,7 @@ ItemDisplay[(amu OR rin) !ID RARE]:	%DOT-6D%%TIER-9%  %NAME%  %WHITE%			// highl
 //-¦ General Equipment ¦-------------------------------------------------------------------------------------------------
 // +-------------------+
 // Catchall - Non-Equipment
-ItemDisplay[(ILVL>1 OR QTY>0 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR jew OR jewf OR cm1 OR cm2 OR cm3 OR ram OR RUNE>0 OR GEMTYPE>0 OR rvs OR rvl OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5 OR yps OR wms OR vps OR bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR tbk OR ibk OR tsc OR isc OR key OR ear OR std OR wss OR lbox OR lpp OR lmal OR ubtm OR dcma OR rtma OR dcso OR dcho OR dcbl OR rtmv OR rtmo OR rtmf OR cwss OR rtp OR rid OR lsvl OR llmr OR rkey OR uba OR ubaa OR ubab OR ubac OR imma OR imra OR upma OR scou OR rera OR upmp OR fort OR scrb OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49 OR t51 OR t52 OR t53 OR t54 OR t55 OR t56 OR t57 OR t58 OR t59 OR t61 OR t62 OR t63 OR t64 OR t65 OR t66 OR t67 OR t68 OR t69 OR pvpp OR iwss OR cm2f)]: %BORDER-62%%TIER-9%%NAME%{%NAME%}%WHITE%	// notifications for unknown items (future-proofing)
+ItemDisplay[(ILVL>1 OR QTY>0 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR jew OR jewf OR cm1 OR cm2 OR cm3 OR ram OR RUNE>0 OR GEMTYPE>0 OR rvs OR rvl OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5 OR yps OR wms OR vps OR bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR tbk OR ibk OR tsc OR isc OR key OR ear OR std OR wss OR lbox OR lpp OR lmal OR ubtm OR dcma OR rtma OR dcso OR dcho OR dcbl OR rtmv OR rtmo OR rtmf OR cwss OR rtp OR rid OR lsvl OR llmr OR rkey OR uba OR ubaa OR ubab OR ubac OR imma OR imra OR upma OR scou OR rera OR upmp OR fort OR scrb OR MAPTIER>-1 OR pvpp OR iwss OR cm2f)]: %BORDER-62%%TIER-9%%NAME%{%NAME%}%WHITE%	// notifications for unknown items (future-proofing)
 ItemDisplay[!(ARMOR OR (WEAPON !(opl OR opm OR ops OR gpl OR gpm OR gps)) OR ((amu OR rin) (UNI OR SET OR CRAFT)) OR ((jew OR cm1 OR cm2 OR cm3) UNI) OR ram)]: %NAME%{%NAME%}%WHITE%	// displays most non-equipment items as normal
 
 // Modification: Sockets (regular items are handled in their own category)
@@ -536,6 +538,8 @@ ItemDisplay[RW]: %NAME%{%NAME%}%WHITE%
 // +---------------------------------+
 // Descriptions for Price
 ItemDisplay[ID (MAG OR RARE OR CRAFT) !EQUIPPED]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%
+
+// TODO: Add indicator for pre-corrupted items found in the new unique map
 
 // Descriptions for ilvl and alvl on some rare/crafted items
 ItemDisplay[RARE ID !EQUIPPED ((ci0 ILVL>86) OR (ci1 ILVL>81) OR (ci2 ILVL>76) OR (ci3 ILVL>71)) STAT360=0 STAT486=0]: %NAME%{%NAME%%NL%%WHITE%Item Level: %ILVL%}%CONTINUE%					// adds ilvl to rare circlets if it's high enough to consider rerolling
@@ -867,38 +871,38 @@ ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 CHEST SOCK=4]: %NAME%{%NAME%%NL%%GOL
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SHIELD SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Rhyme, Splendor}%CONTINUE%															// Shield 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SHIELD SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Sanctuary, Dragon, Dream%NL%%WHITE%Runewords: %GOLD%Ancient's Pledge,}%CONTINUE%										// Shield 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SHIELD SOCK=4 !DIN]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Spirit, Exile, Phoenix}%CONTINUE%													// Shield 4s			...differences: Exile (was only Paladin shields)
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SHIELD SOCK=4 DIN]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Spirit, Exile, Phoenix, Shattered Wall}%CONTINUE%											// Shield 4s (Paladin)		...differences: Shattered Wall (new, Zod+Jah+Ral+Cham)
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SHIELD SOCK=4 DIN]: %NAME%{%NAME%%NL%%GOLD%Phoenix, Shattered Wall%NL%%WHITE%Runewords: %GOLD%Spirit, Exile,}%CONTINUE%										// Shield 4s (Paladin)		...differences: Shattered Wall (new, Zod+Jah+Ral+Cham)
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 WAND SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Strength, White, Wind, Dominion}%CONTINUE%													// Wand				...differences: Dominion (new, Cham+Ohm)
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SOR SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Neophyte}%CONTINUE%																// Orb 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SOR SOCK=3]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Venom, Plague}%CONTINUE%															// Orb 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SIN SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Steel, Strength, Wind}%CONTINUE%														// Claw 2s			...differences: Steel
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SIN SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Lawbringer, Crescent Moon, Venom, Chaos, Fury, Plague%NL%%WHITE%Runewords: %GOLD%Malice, Pattern, King's Grace, Black,}%CONTINUE%				// Claw 3s			...differences: King's Grace, Black, Lawbringer, Crescent Moon, Pattern (new, Tal+Ort+Tir)
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SIN SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Venom, Chaos, Fury, Plague%NL%Black, Lawbringer, Crescent Moon,%NL%%WHITE%Runewords: %GOLD%Malice, Pattern, King's Grace,}%CONTINUE%				// Claw 3s			...differences: King's Grace, Black, Lawbringer, Crescent Moon, Pattern (new, Tal+Ort+Tir)
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SCEPTER SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Neophyte, Strength, Wind}%CONTINUE%													// Scepter 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SCEPTER SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Lawbringer, Venom, Fury, Plague%NL%%WHITE%Runewords: %GOLD%Malice, King's Grace,}%CONTINUE%									// Scepter 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SCEPTER SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Rift, Fortitude, Phoenix, Hand of Justice%NL%%WHITE%Runewords: %GOLD%Holy Thunder, Insight, Passion,}%CONTINUE%						// Scepter 4s			...differences: Insight
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SCEPTER SOCK=5]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Honor, Call to Arms, Beast, Eternity, Doom}%CONTINUE%											// Scepter 5s			...differences: Doom
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SCEPTER SOCK=5]: %NAME%{%NAME%%NL%%GOLD%Beast, Eternity, Doom%NL%%WHITE%Runewords: %GOLD%Honor, Call to Arms,}%CONTINUE%										// Scepter 5s			...differences: Doom
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 STAFF SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Leaf, Neophyte, Strength, Wind}%CONTINUE%													// Staff 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 STAFF SOCK=3]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Malice, Venom, Fury, Plague}%CONTINUE%													// Staff 3s
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 STAFF SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Fortitude, Infinity, Phoenix, Hand of Justice, Pride %NL%%WHITE%Runewords: %GOLD%Insight, Spirit, Memory, Rampage, Passion, Heart of the Oak,}%CONTINUE%	// Staff 4s			...differences: Spirit, Infinity, Pride
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 STAFF SOCK=5]: %NAME%{%NAME%%NL%%GOLD%Eternity, Destruction, Doom, Zenith%NL%%WHITE%Runewords: %GOLD%Honor, Call to Arms, Beast,}%CONTINUE%									// Staff 5s			...differences: Beast, Destruction, Doom
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 STAFF SOCK=6]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Silence, Last Wish, Asylum, Obsession, Breath of the Dying}%CONTINUE%									// Staff 6s			...differences: Last Wish, Obsession (new, Zod+Ist+Lem+Lum+Io+Nef)
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 STAFF SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Infinity, Phoenix, Hand of Justice, Pride%NL%Passion, Heart of the Oak, Fortitude,%NL%%WHITE%Runewords: %GOLD%Insight, Spirit, Memory, Rampage,}%CONTINUE%	// Staff 4s			...differences: Spirit, Infinity, Pride
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 STAFF SOCK=5]: %NAME%{%NAME%%NL%%GOLD%Eternity, Destruction, Doom, Zenith%NL%%WHITE%Runewords: %GOLD%Honor, Call to Arms, Beast,}%CONTINUE%								// Staff 5s			...differences: Beast, Destruction, Doom
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 STAFF SOCK=6]: %NAME%{%NAME%%NL%%GOLD%Obsession, Breath of the Dying%NL%%WHITE%Runewords: %GOLD%Silence, Last Wish, Asylum,}%CONTINUE%								// Staff 6s			...differences: Last Wish, Obsession (new, Zod+Ist+Lem+Lum+Io+Nef)
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 DAGGER SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Strength, Wind}%CONTINUE%															// Dagger 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 DAGGER SOCK=3]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Malice, Venom, Fury, Plague}%CONTINUE%													// Dagger 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (BOW OR XBOW) SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Zephyr}%CONTINUE%															// Bow & Crossbow 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (BOW OR XBOW) SOCK=3]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Edge, Melody, Venom, Plague}%CONTINUE%												// Bow & Crossbow 3s
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (BOW OR XBOW) SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Wrath, Faith, Ice, Brand, Phoenix, Hand of Justice%NL%%WHITE%Runewords: %GOLD%Harmony, Passion, Voice of Reason, Fortitude,}%CONTINUE%		// Bow & Crossbow 4s		...differences: Voice of Reason
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (BOW OR XBOW) SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Brand, Phoenix, Hand of Justice%NL%Fortitude, Wrath, Faith, Ice,%NL%%WHITE%Runewords: %GOLD%Harmony, Passion, Voice of Reason,}%CONTINUE%		// Bow & Crossbow 4s		...differences: Voice of Reason
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (BOW OR XBOW) SOCK=5]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Call to Arms, Mist, Zenith}%CONTINUE%												// Bow & Crossbow 5s 		...differences: Mist (new, Cham+Shael+Gul+Thul+Ith)
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (BOW OR XBOW) SOCK=6]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Silence, Asylum, Breath of the Dying}%CONTINUE%											// Bow & Crossbow 6s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (SPEAR OR POLEARM) SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Strength, Wind}%CONTINUE%													// Spear & Polearm 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (SPEAR OR POLEARM) SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Venom, Fury, Plague%NL%%WHITE%Runewords: %GOLD%Malice, Crescent Moon,}%CONTINUE%									// Spear & Polearm 3s		...differences (for Spears): Crescent Moon
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (SPEAR OR POLEARM) SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Infinity, Phoenix, Hand of Justice, Pride%NL%%WHITE%Runewords: %GOLD%Insight, Rampage, Passion, Rift, Fortitude,}%CONTINUE%			// Spear & Polearm 4s		...differences (for Spears): Insight, Rift, Infinity, Pride
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (SPEAR OR POLEARM) SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Fortitude, Infinity, Phoenix, Hand of Justice, Pride%NL%%WHITE%Runewords: %GOLD%Insight, Rampage, Passion, Rift,}%CONTINUE%			// Spear & Polearm 4s		...differences (for Spears): Insight, Rift, Infinity, Pride
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (SPEAR OR POLEARM) SOCK=5]: %NAME%{%NAME%%NL%%GOLD%Eternity, Destruction, Doom, Zenith%NL%%WHITE%Runewords: %GOLD%Honor, Obedience, Call to Arms,}%CONTINUE%					// Spear & Polearm 5s		...differences (for Spears): Obedience, Destruction, Doom
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (SPEAR OR POLEARM) SOCK=6]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Silence, Asylum, Breath of the Dying}%CONTINUE%										// Spear & Polearm 6s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Steel, Strength, Wind}%CONTINUE%														// Sword 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Crescent Moon, Venom, Fury, Plague%NL%%WHITE%Runewords: %GOLD%Malice, King's Grace, Lawbringer,}%CONTINUE%							// Sword 3s
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Kingslayer, Fortitude, Famine, Phoenix, Hand of Justice%NL%%WHITE%Runewords: %GOLD%Spirit, Passion, Voice of Reason, Oath, Rift,}%CONTINUE%			// Sword 4s			...differences: Rift, Famine
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Famine, Phoenix, Hand of Justice%NL%Oath, Rift, Kingslayer, Fortitude,%NL%%WHITE%Runewords: %GOLD%Spirit, Passion, Voice of Reason,}%CONTINUE%		// Sword 4s			...differences: Rift, Famine
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=5]: %NAME%{%NAME%%NL%%GOLD%Grief, Eternity, Destruction, Doom%NL%%WHITE%Runewords: %GOLD%Honor, Death, Call to Arms,}%CONTINUE%								// Sword 5s			...differences: Doom
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=6]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Unbending Will, Silence, Last Wish, Breath of the Dying}%CONTINUE%										// Sword 6s			...differences: Unbending Will (new, Fal+Io+Ith+Eld+El+Hel)
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=6]: %NAME%{%NAME%%NL%%GOLD%Last Wish, Breath of the Dying%NL%%WHITE%Runewords: %GOLD%Unbending Will, Silence,}%CONTINUE%									// Sword 6s			...differences: Unbending Will (new, Fal+Io+Ith+Eld+El+Hel)
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 AXE SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Steel, Strength, Wind}%CONTINUE%														// Axe 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 AXE SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Venom, Fury, Plague%NL%%WHITE%Runewords: %GOLD%Malice, Crescent Moon,}%CONTINUE%										// Axe 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 AXE SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Fortitude, Famine, Phoenix, Hand of Justice%NL%%WHITE%Runewords: %GOLD%Passion, Oath, Kingslayer,}%CONTINUE%							// Axe 4s
@@ -913,7 +917,7 @@ ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (fla OR 9fl OR 7fl) SOCK=4]: %NAME%{
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 MACE !fla !9fl !7fl SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Famine, Phoenix, Hand of Justice%NL%%WHITE%Runewords: %GOLD%Passion, Fortitude,}%CONTINUE%							// Mace (Hammer) 4s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (fla OR 9fl OR 7fl) SOCK=5]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Honor, Call to Arms, Eternity}%CONTINUE%											// Mace (Pointed Mace) 5s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 MACE !fla !9fl !7fl SOCK=5]: %NAME%{%NAME%%NL%%GOLD%Call to Arms, Beast, Eternity, Doom%NL%%WHITE%Runewords: %GOLD%Honor, Obedience,}%CONTINUE%							// Mace (Hammer) 5s		...differences: Obedience
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 MACE SOCK=6]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Silence, Last Wish, Asylum, Breath of the Dying}%CONTINUE%											// Mace (Hammer) 6s
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 MACE SOCK=6]: %NAME%{%NAME%%NL%%GOLD%Asylum, Breath of the Dying%NL%%WHITE%Runewords: %GOLD%Silence, Last Wish,}%CONTINUE%										// Mace (Hammer) 6s
 
 // Alternative Rules - Detailed Descriptions for available Runewords
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 (HELM OR CIRC) SOCK=2]: %NAME%{%NAME%%NL%%GOLD%Lore %GRAY%Ort+Sol%NL%%GOLD%Nadir %GRAY%Nef+Tir%NL%%WHITE%Possible Runewords:}%CONTINUE%																																																	// Helm 2s
