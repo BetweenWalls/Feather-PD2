@@ -16,6 +16,13 @@ The filter's strictness is designed from the bottom up - the lowest filter level
 * shopping for valuable items made easier
 * a lot more... 
 
+### Filter Versions
+Some characters and colors only work if HD text is enabled - if you aren't using HD text for whatever reason, use **feather-old-text.filter**.
+| Version | Description |
+| --- | --- |
+| feather.filter | teal charms & "middle dot" characters for pointmod items
+| feather-old-text.filter | purple charms & "soft hyphen" characters for pointmod items
+
 ### Filter Levels
 | Level | Name | Description |
 | --- | --- | --- |
