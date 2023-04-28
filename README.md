@@ -17,7 +17,7 @@ The filter's strictness is designed from the bottom up - the lowest filter level
 * a lot more... 
 
 ### Filter Versions
-Some characters and colors only work if HD text is enabled - if you aren't using HD text for whatever reason, use **feather-old-text.filter**.
+Some characters and colors only work if HD text is enabled - if you have it disabled, use **feather-old-text.filter**.
 | Version | Description |
 | --- | --- |
 | feather.filter | teal charms & "middle dot" characters for pointmod items
