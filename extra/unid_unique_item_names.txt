@@ -1,8 +1,8 @@
-// Put these rules at the top of the "Unique/Set Items (unidentified)" category to make unidentified unique/set items appear with their identified names
+// Put these rules above other rules involving unidentified unique/set items to make unidentified unique/set items appear with their identified names
 
-// Individual Names for Unidentified Unique Items
-ItemDisplay[UNI !ID ETH]:	%GRAY%eth %CONTINUE%
-ItemDisplay[UNI !ID !ETH]:	%CONTINUE%
+// Individual Names for Unidentified Unique Equipment Items
+ItemDisplay[UNI !ID ETH (ARMOR OR WEAPON)]:	%GRAY%eth %CONTINUE%
+ItemDisplay[UNI !ID !ETH (ARMOR OR WEAPON)]:	%CONTINUE%
 // ... Shared Bases
 ItemDisplay[UNI !ID uhm ILVL>76]:	%NAME%%GOLD%Spired Helm - Veil of Steel / Nightwing's Veil%WHITE%		// 
 ItemDisplay[UNI !ID uhm ILVL<77]:	%NAME%%GOLD%Spired Helm - Nightwing's Veil%CONTINUE%				// 
@@ -181,7 +181,7 @@ ItemDisplay[UNI !ID wax]:	%NAME%%GOLD%War Axe - Rakescar%CONTINUE%				//
 ItemDisplay[UNI !ID lax]:	%NAME%%GOLD%Large Axe - Axe of Fechmar%CONTINUE%			// 
 ItemDisplay[UNI !ID bax]:	%NAME%%GOLD%Broad Axe - Goreshovel%CONTINUE%				// 
 ItemDisplay[UNI !ID btx]:	%NAME%%GOLD%Battle Axe - The Chieftain%CONTINUE%			// 
-ItemDisplay[UNI !ID gas]:	%NAME%%GOLD%Great Axe - Brainhew%CONTINUE%				// 
+ItemDisplay[UNI !ID gax]:	%NAME%%GOLD%Great Axe - Brainhew%CONTINUE%				// 
 ItemDisplay[UNI !ID gix]:	%NAME%%GOLD%Giant Axe - Humongous%CONTINUE%				// 
 ItemDisplay[UNI !ID 9ha]:	%NAME%%GOLD%Hatchet - Coldkill%CONTINUE%				// 
 ItemDisplay[UNI !ID 9ax]:	%NAME%%GOLD%Cleaver - Butcher's Pupil%CONTINUE%				// 
