@@ -1,23 +1,23 @@
 // Put these rules above other rules involving unidentified unique/set items to make unidentified unique/set items appear with their identified names
 
-// Individual Names for Unidentified Unique Equipment Items
+// Individual Names for Unidentified Unique Armor & Weapons
 ItemDisplay[UNI !ID ETH (ARMOR OR WEAPON)]:	%GRAY%eth %CONTINUE%
 ItemDisplay[UNI !ID !ETH (ARMOR OR WEAPON)]:	%CONTINUE%
 // ... Shared Bases
-ItemDisplay[UNI !ID uhm ILVL>76]:	%NAME%%GOLD%Spired Helm - Veil of Steel / Nightwing's Veil%WHITE%		// 
+ItemDisplay[UNI !ID uhm ILVL>76]:	%NAME%%GOLD%Spired Helm - Veil of Steel / Nightwing's Veil%CONTINUE%		// 
 ItemDisplay[UNI !ID uhm ILVL<77]:	%NAME%%GOLD%Spired Helm - Nightwing's Veil%CONTINUE%				// 
 ItemDisplay[UNI !ID uar (ILVL<87 OR ETH)]:	%NAME%%GOLD%Sacred Armor - Templar's Might%CONTINUE%			// 
-ItemDisplay[UNI !ID uar ILVL>86 !ETH]:	%NAME%%GOLD%Sacred Armor - Tyrael's Might / Templar's Might%WHITE%		// 
+ItemDisplay[UNI !ID uar ILVL>86 !ETH]:	%NAME%%GOLD%Sacred Armor - Tyrael's Might / Templar's Might%CONTINUE%		// 
 ItemDisplay[UNI !ID 7fl ILVL<86]:	%NAME%%GOLD%Scourge - Horizon's Tornado%CONTINUE%				// 
-ItemDisplay[UNI !ID 7fl ILVL>85]:	%NAME%%GOLD%Scourge - Stormlash / Horizon's Tornado%WHITE%			// 
+ItemDisplay[UNI !ID 7fl ILVL>85]:	%NAME%%GOLD%Scourge - Stormlash / Horizon's Tornado%CONTINUE%			// 
 ItemDisplay[UNI !ID 7wh ILVL<83]:	%NAME%%GOLD%Legendary Mallet - Stone Crusher%CONTINUE%				// 
-ItemDisplay[UNI !ID 7wh ILVL>82]:	%NAME%%GOLD%Legendary Mallet - Schaefer's Hammer / Stone Crusher%WHITE%		// 
+ItemDisplay[UNI !ID 7wh ILVL>82]:	%NAME%%GOLD%Legendary Mallet - Schaefer's Hammer / Stone Crusher%CONTINUE%	// 
 ItemDisplay[UNI !ID 7gm ILVL<85]:	%NAME%%GOLD%Thunder Maul - Earth Shifter%CONTINUE%				// 
-ItemDisplay[UNI !ID 7gm ILVL>84]:	%NAME%%GOLD%Thunder Maul - The Cranium Basher / Earth Shifter%WHITE%		// 
+ItemDisplay[UNI !ID 7gm ILVL>84]:	%NAME%%GOLD%Thunder Maul - The Cranium Basher / Earth Shifter%CONTINUE%		// 
 ItemDisplay[UNI !ID 7cr ILVL<87]:	%NAME%%GOLD%Phase Blade - Lightsabre%CONTINUE%					// 
-ItemDisplay[UNI !ID 7cr ILVL>86]:	%NAME%%GOLD%Phase Blade - Azurewrath / Lightsabre%WHITE%			// 
+ItemDisplay[UNI !ID 7cr ILVL>86]:	%NAME%%GOLD%Phase Blade - Azurewrath / Lightsabre%CONTINUE%			// 
 ItemDisplay[UNI !ID 7sc ILVL<80]:	%NAME%%GOLD%Mighty Scepter - Heaven's Light%CONTINUE%				// 
-ItemDisplay[UNI !ID 7sc ILVL>79]:	%NAME%%GOLD%Mighty Scepter - The Redeemer / Heaven's Light%WHITE%		// 
+ItemDisplay[UNI !ID 7sc ILVL>79]:	%NAME%%GOLD%Mighty Scepter - The Redeemer / Heaven's Light%CONTINUE%		// 
 // ... Helms
 ItemDisplay[UNI !ID cap]:	%NAME%%GOLD%Cap - Biggin's Bonnet%CONTINUE%				// 
 ItemDisplay[UNI !ID skp]:	%NAME%%GOLD%Skull Cap - Tarnhelm%CONTINUE%				// 
@@ -399,17 +399,17 @@ ItemDisplay[UNI !ID ob6]:	%NAME%%GOLD%Glowing Orb - Tempest%CONTINUE%				// NEW
 // Individual Names for Unidentified Set Items
 // ... Shared Bases
 ItemDisplay[SET !ID crn ILVL<23]:	%GREEN%Crown - Iratha's Coil%CONTINUE%				// 
-ItemDisplay[SET !ID crn ILVL>22]:	%GREEN%Crown - Milabrega's Diadem / Iratha's Coil%WHITE%	// 
+ItemDisplay[SET !ID crn ILVL>22]:	%GREEN%Crown - Milabrega's Diadem / Iratha's Coil%CONTINUE%	// 
 ItemDisplay[SET !ID tgl ILVL<21]:	%GREEN%Light Gauntlets - Arctic Mitts%CONTINUE%			// 
-ItemDisplay[SET !ID tgl ILVL>20]:	%GREEN%Light Gauntlets - Iratha's Cuff / Arctic Mitts%WHITE%	// 
+ItemDisplay[SET !ID tgl ILVL>20]:	%GREEN%Light Gauntlets - Iratha's Cuff / Arctic Mitts%CONTINUE%	// 
 ItemDisplay[SET !ID tbl ILVL<21]:	%GREEN%Heavy Belt - Infernal Sign%CONTINUE%			// 
-ItemDisplay[SET !ID tbl ILVL>20]:	%GREEN%Heavy Belt - Iratha's Cord / Infernal Sign%WHITE%	// 
+ItemDisplay[SET !ID tbl ILVL>20]:	%GREEN%Heavy Belt - Iratha's Cord / Infernal Sign%CONTINUE%	// 
 ItemDisplay[SET !ID cap ILVL<20]:	%GREEN%Cap - Infernal Cranium%CONTINUE%				// 
-ItemDisplay[SET !ID cap ILVL>19]:	%GREEN%Cap - Sander's Paragon / Infernal Cranium%WHITE%		// 
+ItemDisplay[SET !ID cap ILVL>19]:	%GREEN%Cap - Sander's Paragon / Infernal Cranium%CONTINUE%	// 
 ItemDisplay[SET !ID mbl ILVL<28]:	%GREEN%Belt - Hsarus' Iron Stay%CONTINUE%			// 
-ItemDisplay[SET !ID mbl ILVL>27]:	%GREEN%Belt - Hwanin's Blessing / Hsarus' Iron Stay%WHITE%	// 
+ItemDisplay[SET !ID mbl ILVL>27]:	%GREEN%Belt - Hwanin's Blessing / Hsarus' Iron Stay%CONTINUE%	// 
 ItemDisplay[SET !ID vbt !((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))]:	%GREEN%Heavy Boots - Sander's Riprap%CONTINUE%			// 
-ItemDisplay[SET !ID vbt ((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))]:	%GREEN%Heavy Boots - Cow King's Hooves / Sander's Riprap%WHITE%		// can only be found in the cow level
+ItemDisplay[SET !ID vbt ((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))]:	%GREEN%Heavy Boots - Cow King's Hooves / Sander's Riprap%CONTINUE%	// can only be found in the cow level
 // ... Common Sets
 ItemDisplay[SET !ID rng]:	%GREEN%Ring Mail - Angelic Mantle%CONTINUE%			// 
 ItemDisplay[SET !ID sbr]:	%GREEN%Saber - Angelic Sickle%CONTINUE%				// 
