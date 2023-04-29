@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II	(old text version)
-//		Date Updated:	27 APRIL 2023
+//		Date Updated:	29 APRIL 2023
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Searchable Features:
@@ -131,7 +131,7 @@ ItemDisplay[GOLD>0]: %NAME%
 
 // Rejuvenation
 ItemDisplay[rvs]:	%PURPLE%= %WHITE%r-{%WHITE%Rejuvenation Potion}			// Rejuvenation
-ItemDisplay[rvl]:	%PURPLE% = %WHITE%R {%WHITE%Full Rejuvenation Potion}		// Full Rejuvenation
+ItemDisplay[rvl]:	%PURPLE%  =  %WHITE%R {%WHITE%Full Rejuvenation Potion}		// Full Rejuvenation
 // Healing & Mana
 ItemDisplay[hp5]:	%RED% = %WHITE%H {%WHITE%Super Healing Potion}%CONTINUE%	// Super Healing
 ItemDisplay[mp5]:	%BLUE% = %WHITE%M {%WHITE%Super Mana Potion}%CONTINUE%		// Super Mana
@@ -199,9 +199,9 @@ ItemDisplay[ceh !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Mephisto)}%WHITE%
 ItemDisplay[bet !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Diablo)}%WHITE%							// Burning Essence of Terror
 ItemDisplay[fed !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Baal)}%WHITE%								// Festering Essence of Destruction
 ItemDisplay[toa]:	%DOT-60%%ORANGE%%TIER-9%  Token of Absolution  {%WHITE%Right-click to reset Stat/Skill Points}%WHITE%		// Token of Absolution
-ItemDisplay[pk1 !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Countess / Blood Raven)}%WHITE%					// Key of Terror
-ItemDisplay[pk2 !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Summoner / Bloodwitch)}%WHITE%					// Key of Hatred
-ItemDisplay[pk3 !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Nihlathak / Izual)}%WHITE%						// Key of Destruction
+ItemDisplay[pk1 !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Countess / Blood Raven)}%WHITE%				// Key of Terror
+ItemDisplay[pk2 !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Summoner / Bloodwitch)}%WHITE%				// Key of Hatred
+ItemDisplay[pk3 !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Nihlathak / Izual)}%WHITE%					// Key of Destruction
 ItemDisplay[dhn !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Matron's Den)}%WHITE%							// Diablo's Horn	 (Lilith)
 ItemDisplay[bey !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Forgotten Sands)}%WHITE%						// Baal's Eye		 (Uber Duriel)
 ItemDisplay[mbr !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Furnace of Pain)}%WHITE%						// Mephisto's Brain	 (Uber Izual)
@@ -264,9 +264,9 @@ ItemDisplay[FILTLVL=1 tes]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORAN
 ItemDisplay[FILTLVL=1 ceh]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Mephisto)}%WHITE%									// Charged Essence of Hatred
 ItemDisplay[FILTLVL=1 bet]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Diablo)}%WHITE%									// Burning Essence of Terror
 ItemDisplay[FILTLVL=1 fed]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Baal)}%WHITE%									// Festering Essence of Destruction
-ItemDisplay[FILTLVL=1 pk1]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %WHITE%from the other Keybearers to open a portal%NL%%GRAY%(Countess / Blood Raven)}%WHITE%			// Key of Terror
-ItemDisplay[FILTLVL=1 pk2]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %WHITE%from the other Keybearers to open a portal%NL%%GRAY%(Summoner / Bloodwitch)}%WHITE%			// Key of Hatred
-ItemDisplay[FILTLVL=1 pk3]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %WHITE%from the other Keybearers to open a portal%NL%%GRAY%(Nihlathak / Izual)}%WHITE%			// Key of Destruction
+ItemDisplay[FILTLVL=1 pk1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %WHITE%from the other Keybearers to open a portal%NL%%GRAY%(Countess / Blood Raven)}%WHITE%		// Key of Terror
+ItemDisplay[FILTLVL=1 pk2]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %WHITE%from the other Keybearers to open a portal%NL%%GRAY%(Summoner / Bloodwitch)}%WHITE%		// Key of Hatred
+ItemDisplay[FILTLVL=1 pk3]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %WHITE%from the other Keybearers to open a portal%NL%%GRAY%(Nihlathak / Izual)}%WHITE%		// Key of Destruction
 ItemDisplay[FILTLVL=1 dhn]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine any three %ORANGE%Organs %WHITE%with a %GRAY%Key %WHITE%to access Uber Tristram%NL%%GRAY%(Matron's Den)}%WHITE%									// Diablo's Horn	 (Lilith)
 ItemDisplay[FILTLVL=1 bey]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine any three %ORANGE%Organs %WHITE%with a %GRAY%Key %WHITE%to access Uber Tristram%NL%%GRAY%(Forgotten Sands)}%WHITE%									// Baal's Eye		 (Uber Duriel)
 ItemDisplay[FILTLVL=1 mbr]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine any three %ORANGE%Organs %WHITE%with a %GRAY%Key %WHITE%to access Uber Tristram%NL%%GRAY%(Furnace of Pain)}%WHITE%									// Mephisto's Brain	 (Uber Izual)
@@ -523,9 +523,9 @@ ItemDisplay[!NMAG ETH  (REPAIR>0 OR STAT152>0 OR THROWING OR 7cr OR (UNI ((7ba L
 ItemDisplay[!NMAG ETH !(REPAIR>0 OR STAT152>0 OR THROWING OR 7cr OR (UNI ((7ba LVLREQ=74) OR (7bl LVLREQ=66) OR 7cs)) OR (UNI !ID (xla OR xpl OR uul OR uvb OR 9la OR 9cr OR 9st OR 7gd OR 7b7 OR 7p7 OR 7wh OR 7ba OR 7bl)))]: %GRAY%eth %NAME%%CONTINUE%	// Ethereal (not unbreakable)
 
 // Modification: Repair Recipe
-ItemDisplay[STAT486=0 STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) !ETH ARMOR]:					%NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%8%TAN%)}%WHITE%
-ItemDisplay[STAT486=0 STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) !ETH WEAPON !THROWING !7cr !(NMAG SOCK=0)]:	%NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%9%TAN%)}%WHITE%
-ItemDisplay[STAT486=0 STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) ETH !THROWING !7cr !(NMAG SOCK=0)]:		%NAME%{%WHITE%Repair Recipe: %ORANGE%[%GRAY%O%ORANGE%]%GRAY%+%TAN%(%WHITE%33%TAN%)}%WHITE%
+ItemDisplay[STAT486=0 STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) !INF !ETH ARMOR]:					%NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%8%TAN%)}%WHITE%
+ItemDisplay[STAT486=0 STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) !INF !ETH WEAPON !THROWING !7cr !(NMAG SOCK=0)]:	%NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%9%TAN%)}%WHITE%
+ItemDisplay[STAT486=0 STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) !INF ETH !THROWING !7cr !(NMAG SOCK=0)]:		%NAME%{%WHITE%Repair Recipe: %ORANGE%[%GRAY%O%ORANGE%]%GRAY%+%TAN%(%WHITE%33%TAN%)}%WHITE%
 
 // Runewords
 ItemDisplay[FILTLVL=1 !SHOP !EQUIPPED RW WEAPON !(BOW OR XBOW OR WAND OR SOR)]: %NAME%{%NAME%%WHITE%Melee Range: %RANGE%%NL%}%CONTINUE%
