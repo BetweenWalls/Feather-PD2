@@ -1096,6 +1096,7 @@ ItemDisplay[NMAG !SUP !ETH ((usk DEF>151) OR (uh9 DEF>154) OR (uui DEF>461) OR (
 // Force Display
 ItemDisplay[NMAG leg]: %NAME%{%NAME%}%WHITE%	// displays Wirt's Leg here to prevent pointmod info from being added
 ItemDisplay[NMAG (EQUIPPED OR GEMMED OR SHOP OR MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp)]: %NAME%{%NAME%}%WHITE%		// always show regular non-class items when equipped, gemmed, or in town
+ItemDisplay[NMAG STAT360>0 (MAPID=181 OR MAPID=182) !(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR clb OR 9cl OR 7cl OR spc OR 9sp OR 7sp)]: %NAME%{%NAME%}%WHITE%										// always show pre-corrupted regular non-class items within Stygian Caverns
 
 // Hidden: Regular non-class items with little or no runeword useability - level 15
 ItemDisplay[FILTLVL>0 NMAG CLVL>14 (GLOVES OR BOOTS OR BELT)]: {%NAME%}																		// gloves, boots, belts
@@ -1216,6 +1217,7 @@ ItemDisplay[FILTLVL<4 NMAG CLVL<31 ((STAFF OR SCEPTER) SOCK=4) !DIFF=2 !(MAPID=1
 
 // Force Display
 ItemDisplay[NMAG (EQUIPPED OR GEMMED OR SHOP OR MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: %NAME%{%NAME%}%WHITE%		// always show regular class items when equipped, gemmed, or in town
+ItemDisplay[NMAG STAT360>0 (MAPID=181 OR MAPID=182)]: %NAME%{%NAME%}%WHITE%									// always show pre-corrupted regular non-class items within Stygian Caverns
 
 // Hidden: 1-socket items (excluding merchant items) - levels 30, 80
 ItemDisplay[FILTLVL>0 NMAG SOCK=1 CLVL>29 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14))) !(PRICE=35000 OR WAND OR sst OR 8ss OR 6ss OR (SCEPTER !wsp !9ws !7ws) OR SIN OR SOR OR (DIN (RES>9 OR EDAM>29)) OR (ZON (TABSK0>1 OR TABSK2>1)))]: {%NAME%}	// 1-socket items larger than 3 inventory spaces, except: items worth 35000 gold, paladin shields with 30+ ed or 10+ all res, amazon weapons with 2+ skills
