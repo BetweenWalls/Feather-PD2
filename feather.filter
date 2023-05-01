@@ -124,7 +124,7 @@ ItemDisplay[FILTLVL>0 GOLD>0 GOLD<988 DIFF=2 (MAPID=136 OR MAPID=137 OR MAPID=16
 ItemDisplay[FILTLVL>3 GOLD>0 GOLD<1000 DIFF=2 CLVL>79 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]:
 ItemDisplay[FILTLVL>4 GOLD>0 GOLD<1500 DIFF=2 CLVL>84 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]:
 ItemDisplay[FILTLVL>5 GOLD>0 GOLD<2000 DIFF=2 CLVL>89 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]:
-//ItemDisplay[FILTLVL>2 GOLD>0 GOLD<5000 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) CHARSTAT15>4250000 CHARSTAT14>750000]:			// hides larger piles when the character has 5+ million gold
+ItemDisplay[FILTLVL>2 GOLD>0 GOLD<5000 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) CHARSTAT15>4250000 CHARSTAT14>750000]:			// hides larger piles when the character has 5+ million gold
 
 // Gold (anything not hidden is displayed normally)
 ItemDisplay[GOLD>0]: %NAME%
@@ -195,11 +195,11 @@ ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key OR MAPTIER>-1)]: %
 //ItemDisplay[(bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2)]: %NAME%{%NAME%}	// non-equipment (listed here for reference)
 
 // Endgame Quest Items  (includes notifications)
-ItemDisplay[tes !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Andariel & Duriel)}%WHITE%						// Twisted Essence of Suffering
-ItemDisplay[ceh !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Mephisto)}%WHITE%							// Charged Essence of Hatred
-ItemDisplay[bet !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Diablo)}%WHITE%							// Burning Essence of Terror
-ItemDisplay[fed !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Baal)}%WHITE%								// Festering Essence of Destruction
-ItemDisplay[toa]:	%DOT-60%%ORANGE%%TIER-9%  Token of Absolution  {%WHITE%Right-click to reset Stat/Skill Points}%WHITE%		// Token of Absolution
+ItemDisplay[tes !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Andariel & Duriel)}%WHITE%					// Twisted Essence of Suffering
+ItemDisplay[ceh !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Mephisto)}%WHITE%						// Charged Essence of Hatred
+ItemDisplay[bet !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Diablo)}%WHITE%						// Burning Essence of Terror
+ItemDisplay[fed !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Baal)}%WHITE%							// Festering Essence of Destruction
+ItemDisplay[toa]:		%ORANGE%%DOT-60%%TIER-9%  Token of Absolution  {%WHITE%Right-click to reset Stat/Skill Points}%WHITE%	// Token of Absolution
 ItemDisplay[pk1 !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Countess / Blood Raven)}%WHITE%				// Key of Terror
 ItemDisplay[pk2 !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Summoner / Bloodwitch)}%WHITE%				// Key of Hatred
 ItemDisplay[pk3 !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Nihlathak / Izual)}%WHITE%					// Key of Destruction
@@ -261,10 +261,10 @@ ItemDisplay[(t51 OR t52) UNI !ID]:		         %NAME%         %CONTINUE%					// ma
 //ItemDisplay[(t61 OR t62)]:	%NAME%{%NAME%}%WHITE%									// Desert/Moor Duel Arenas (listed here for reference)
 
 // Alternative Rules for Endgame Quest Items (includes notifications)
-ItemDisplay[FILTLVL=1 tes]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Andariel & Duriel)}%WHITE%							// Twisted Essence of Suffering
-ItemDisplay[FILTLVL=1 ceh]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Mephisto)}%WHITE%									// Charged Essence of Hatred
-ItemDisplay[FILTLVL=1 bet]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Diablo)}%WHITE%									// Burning Essence of Terror
-ItemDisplay[FILTLVL=1 fed]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Baal)}%WHITE%									// Festering Essence of Destruction
+ItemDisplay[FILTLVL=1 tes]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Andariel & Duriel)}%WHITE%						// Twisted Essence of Suffering
+ItemDisplay[FILTLVL=1 ceh]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Mephisto)}%WHITE%								// Charged Essence of Hatred
+ItemDisplay[FILTLVL=1 bet]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Diablo)}%WHITE%								// Burning Essence of Terror
+ItemDisplay[FILTLVL=1 fed]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Baal)}%WHITE%								// Festering Essence of Destruction
 ItemDisplay[FILTLVL=1 pk1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %WHITE%from the other Keybearers to open a portal%NL%%GRAY%(Countess / Blood Raven)}%WHITE%		// Key of Terror
 ItemDisplay[FILTLVL=1 pk2]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %WHITE%from the other Keybearers to open a portal%NL%%GRAY%(Summoner / Bloodwitch)}%WHITE%		// Key of Hatred
 ItemDisplay[FILTLVL=1 pk3]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %WHITE%from the other Keybearers to open a portal%NL%%GRAY%(Nihlathak / Izual)}%WHITE%		// Key of Destruction
@@ -546,7 +546,7 @@ ItemDisplay[CRAFT !EQUIPPED (ALVL<71 OR (amu ALVL<90) OR (rin ALVL<77) OR (WEAPO
 ItemDisplay[CRAFT (amu OR rin) !((amu ALVL<90) OR (rin ALVL<77))]: %NAME%%WHITE%																// shows other crafted amulets/rings without price or alvl
 
 // Crafting Recipes Shown for Magic Items and Freshly-Found Rares
-ItemDisplay[ID !EQUIPPED !SHOP STAT486=0 (ILVL>35 OR leg) (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 (WEAPON OR (ARMOR !CIRC))]:	%NAME%{%NAME%%NL%%WHITE%Item Level: %ILVL%%NL%Affix Level if Crafted: }%CONTINUE%							// ilvl (and crafting alvl) shown alongside crafting recipes
+ItemDisplay[ID !EQUIPPED !SHOP STAT486=0 (ILVL>35 OR leg) (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 (WEAPON OR (ARMOR !CIRC))]:	%NAME%{%NAME%%NL%%WHITE%Item Level: %ILVL%%NL%Affix Level if Crafted: }%CONTINUE%							// ilvl (and crafting alvl) shown alongside crafting recipes				// TODO: remove crafting recipes for all corrupted items?
 ItemDisplay[ID !EQUIPPED !SHOP STAT486=0 (ILVL>35 OR leg) (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 (WEAPON OR (ARMOR !CIRC)) !(CRAFTALVL<71 OR (WEAPON !SOR !NEC CRAFTALVL<77) OR ((CHEST OR SHIELD) CRAFTALVL<85) OR (HELM CRAFTALVL<81))]:	%NAME%{%NAME%%TAN%}%CONTINUE%	// alvl colored tan if it's high enough for any affix
 ItemDisplay[ID !EQUIPPED !SHOP STAT486=0 (ILVL>35 OR leg) (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 WEAPON !(BOW OR XBOW)]:	%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%13%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%13%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%
 ItemDisplay[ID !EQUIPPED !SHOP STAT486=0 ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 (BOW OR XBOW)]:			%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%13%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%13%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%
