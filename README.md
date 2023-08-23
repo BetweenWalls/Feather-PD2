@@ -6,7 +6,7 @@ This filter is less strict than most and has all the usual improvements, so it's
 ### Design
 The game's original aesthetic is preserved as much as possible without sacrificing functionality - highlighting is accomplished with space rather than extra colors or symbols. Item tooltips only include extra info when it's especially relevant, and are otherwise kept relatively simple to reduce clutter and improve readability. Info which only needs to be referenced infrequently is only displayed when the "extra info" filter level is enabled - it can be quickly toggled on/off without adding clutter during regular gameplay.
 
-The filter's strictness is designed from the bottom up - the lowest filter levels are "minimally" strict and focus on hiding just enough items to prevent random items from disappearing due to the game's item limit. The choice of what to pick up is still largely in the hands of the player - the filter avoids making decisions about what is worthy and what isn't by hiding as few items as possible. Successive filter levels each expand the number of hidden items, and the highest level hides a surprising percentage of total items for how relaxed it still is. The slow increase in strictness between filter levels should make it easier for players to tune into their preferences as well as give them a strong foundation for gauging the strictness of other filters.
+The filter's strictness is designed from the bottom up - the lowest filter levels are "minimally" strict and focus on hiding just enough items to prevent random items from disappearing due to the game's item limit. The choice of what to pick up is still largely in the hands of the player - the filter avoids making decisions about what is worthy and what isn't by hiding as few items as possible. Successive filter levels each expand the number of hidden items, and the highest level hides a surprisingly large percentage of total items for how relaxed it still is. The slow increase in strictness between filter levels should make it easier for players to tune into their preferences as well as give them a strong foundation for gauging the strictness of other filters.
 
 ### Features
 * non-equipment more clearly distinguished from equipment (potions, gems, jewels, charms, maps)
@@ -26,20 +26,14 @@ Some characters and colors only work if HD text is enabled - if you have it disa
 ### Filter Levels
 | Level | Name | Description |
 | --- | --- | --- |
-| 1 | Min&nbsp;Strictness&nbsp;(Extra&nbsp;Info) | same as "Minimum Strictness" but items include extra info like rune combinations for runewords, weapon speed/range, map immunities, extra recipes, etc
-| 2 | Minimum Strictness | shows all magic equipment and most regular equipment, notifies for more items than higher levels
-| 3 | Low Strictness | same as original strictness (before filter levels were introduced)
-| 4 | Moderate Strictness | hides larger gold piles and additional regular/magic items at level 80+
-| 5 | High Strictness | hides larger gold piles and additional regular/magic items at level 80+ (even more)
-| 6 | Maximum Strictness | hides larger gold piles, super potions, and additional regular/magic items at level 90+
+| 1 | Min&nbsp;Strictness&nbsp;(Extra&nbsp;Info) | Same as "Minimum Strictness" but items include extra info like rune combinations for runewords, weapon speed/range, map immunities, extra recipes, etc
+| 2 | Minimum Strictness | Shows all magic equipment and most regular equipment, includes notifications for more items than higher filter levels<br>Hides tiny gold piles, low-level potions, low-level gems, scrolls, keys, and useless equipment: most regular items that can never be used for runewords, most regular skill-capable items that don't have skills, and some regular items with bottom-tier automods
+| 3 | Low Strictness | Hides many items which are only useful in very niche cases and are widely ignored: inferior items, magic quivers, the worst regular/magic bases, and many regular non-elite plain items in high-level zones
+| 4 | Moderate Strictness | Hides gold piles below 1000, most magic normal armor, and most regular non-elite plain items
+| 5 | High Strictness | Hides gold piles below 1500, magic normal/exceptional non-eth weapons, and most magic chests/shields
+| 6 | Maximum Strictness | Hides gold piles below 2000, super potions, nearly all regular plain items, and most regular/magic non-elite class items that don't match the character's class
 
-### Hidden Items
-Nothing is hidden at character level 1 - items become hidden as the character levels up. For a more thorough breakdown of which items are hidden, see the filter file itself - only a handful of rules actually hide anything and they each include a short explanation of which items are included and when the rule applies.
-* basic non-equipment: smaller gold piles, low-level potions, low-level gems, scrolls, keys
-* regular items that have zero use for runewords
-* most regular skill-capable items without skills
-* some of the worst regular/magic equipment bases (filter level 2+ only)
-* some off-class regular/magic items (filter levels 5+ only)
+Nothing is hidden at character level 1 - items become hidden as the character levels up and progresses through the game. Many items aren't hidden at all until level 70-80 in Hell difficulty, for example. Rare/set/unique items are never hidden, and same is also true for all identified items of magic rarity or higher. For a more thorough breakdown of which items are hidden, see the filter file itself - only a handful of rules actually hide anything and they each include a short explanation of which items are included and when the rule applies.
 
 ### Installation
 This filter is included in the [launcher](https://github.com/Project-Diablo-2/LootFilters#project-diablo-2-loot-filters) - just click and play. I recommend using these settings:
@@ -60,7 +54,7 @@ To use a local version that will preserve your own changes, either copy the file
 If you copy/paste the filter's *raw text*, some characters may be displayed incorrectly - the file uses ANSI encoding instead of standard UTF-8 encoding. Either download the file normally, [download everything](https://github.com/BetweenWalls/Feather-PD2/archive/main.zip) and extract the file, or copy/paste the [*encoded text*](https://github.com/BetweenWalls/Feather-PD2/blob/main/feather.filter) into a file that uses ANSI encoding.
 
 ### Feedback
-Feel free to leave feedback in PD2's #lootfilter discord channel. You can also reach me directly in discord (@BetweenWalls#2390) or in reddit ([BetweenWalls](https://www.reddit.com/message/compose/?to=BetweenWalls&subject=Feather-PD2)).
+Feel free to leave feedback in PD2's [#lootfilter](https://discord.com/channels/701658302085595158/771820538502971402) discord channel. You can also reach me directly on discord (@BetweenWalls) or on reddit ([BetweenWalls](https://www.reddit.com/message/compose/?to=BetweenWalls&subject=Feather-PD2)).
 
 ![_](/images/unidentified_highlighting.png)
 
