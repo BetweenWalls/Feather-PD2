@@ -33,7 +33,9 @@ Some characters and colors only work if HD text is enabled - if you have it disa
 | 5 | High Strictness | Hides gold piles below 1500, magic normal/exceptional non-eth weapons, and most magic chests/shields
 | 6 | Maximum Strictness | Hides gold piles below 2000, super potions, nearly all regular plain items, and most regular/magic non-elite class items that don't match the character's class
 
-Nothing is hidden at character level 1 - items become hidden as the character levels up and progresses through the game. Many items aren't hidden at all until level 70-80 in Hell difficulty, for example. Rare/set/unique items are never hidden, and same is also true for all identified items of magic rarity or higher. For a more thorough breakdown of which items are hidden, see the filter file itself - only a handful of rules actually hide anything and they each include a short explanation of which items are included and when the rule applies.
+Nothing is hidden at character level 1 - items become hidden as the character levels up and progresses through the game. Many items aren't hidden at all until level 70-80 in Hell difficulty, for example. Rare/set/unique items are never hidden, and the same is also true for all identified items of magic rarity or higher.
+
+For a more thorough breakdown of which items are hidden, see the filter file itself - only a handful of rules actually hide anything and they each include a short explanation of which items are included and when the rule applies.
 
 ### Installation
 This filter is included in the [launcher](https://github.com/Project-Diablo-2/LootFilters#project-diablo-2-loot-filters) - just click and play. I recommend using these settings:
