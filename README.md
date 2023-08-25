@@ -26,7 +26,7 @@ Some characters and colors only work if HD text is enabled - if you have it disa
 ### Filter Levels
 | Level | Name | Description |
 | --- | --- | --- |
-| 1 | Min&nbsp;Strictness&nbsp;(Extra&nbsp;Info) | Same as "Minimum Strictness" but items include extra info like rune combinations for runewords, weapon speed/range, map immunities, extra recipes, etc
+| 1 | Min&nbsp;Strictness&nbsp;(Extra&nbsp;Info) | Same as "Minimum Strictness" but items include extra info like rune combinations for runewords, set bonuses, weapon speed/range, map immunities, extra recipes, etc
 | 2 | Minimum Strictness | Shows all magic equipment and most regular equipment, includes notifications for more items than higher filter levels<br>Hides tiny gold piles, low-level potions, low-level gems, scrolls, keys, and useless equipment: most regular items that can never be used for runewords, most regular skill-capable items that don't have skills, and some regular items with bottom-tier automods
 | 3 | Low Strictness | Hides many items which are only useful in very niche cases and are widely ignored: inferior items, magic quivers, the worst regular/magic bases, and many regular non-elite plain items in high-level zones
 | 4 | Moderate Strictness | Hides gold piles below 1000, most magic normal armor, and most regular non-elite plain items
