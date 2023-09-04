@@ -18,6 +18,10 @@
 //-----------------------------------------------------------------------------------------------------------------------
 
 
+// TODO for Season 8:
+// 	Update set bonuses if any have changed
+// 	Check names of unique maps and remove redundant rules if possible
+// 	Review other patch note changes
 
 // +---------------+
 //-¦ Filter Levels ¦-----------------------------------------------------------------------------------------------------
@@ -144,32 +148,40 @@ ItemDisplay[mp2]:	%BLUE%= %GRAY%m²{%WHITE%Lesser Mana Potion}%CONTINUE%		// Less
 ItemDisplay[hp1]:	%RED%= %GRAY%h¹{%WHITE%Minor Healing Potion}%CONTINUE%		// Minor Healing
 ItemDisplay[mp1]:	%BLUE%= %GRAY%m¹{%WHITE%Minor Mana Potion}%CONTINUE%		// Minor Mana
 // Throwing
-ItemDisplay[opl]:	%DARK_GREEN%= %GRAY%f¹{%WHITE%Fulminating Potion}%CONTINUE%	// Fulminating
-ItemDisplay[opm]:	%DARK_GREEN%= %GRAY%f²{%WHITE%Exploding Potion}%CONTINUE%	// Exploding
-ItemDisplay[ops]:	%DARK_GREEN%= %GRAY%f³{%WHITE%Oil Potion}%CONTINUE%		// Oil
-ItemDisplay[gpl]:	%DARK_GREEN%= %GRAY%p¹{%WHITE%Strangling Potion}%CONTINUE%	// Strangling
-ItemDisplay[gpm]:	%DARK_GREEN%= %GRAY%p²{%WHITE%Choking Potion}%CONTINUE%		// Choking
-ItemDisplay[gps]:	%DARK_GREEN%= %GRAY%p³{%WHITE%Rancid Potion}%CONTINUE%		// Rancid
+ItemDisplay[tpfs]:	%DARK_GREEN%= %GRAY%f¹{%WHITE%Fulminating Potion}%CONTINUE%	// Fulminating
+ItemDisplay[tpfm]:	%DARK_GREEN%= %GRAY%f²{%WHITE%Exploding Potion}%CONTINUE%	// Exploding
+ItemDisplay[tpfl]:	%DARK_GREEN%= %GRAY%f³{%WHITE%Oil Potion}%CONTINUE%		// Oil
+ItemDisplay[tpgs]:	%DARK_GREEN%= %GRAY%p¹{%WHITE%Strangling Potion}%CONTINUE%	// Strangling
+ItemDisplay[tpgm]:	%DARK_GREEN%= %GRAY%p²{%WHITE%Choking Potion}%CONTINUE%		// Choking
+ItemDisplay[tpgl]:	%DARK_GREEN%= %GRAY%p³{%WHITE%Rancid Potion}%CONTINUE%		// Rancid
+ItemDisplay[tpcs]:	%DARK_GREEN%= %GRAY%c¹{%WHITE%Chilling Potion}%CONTINUE%	// Chilling
+ItemDisplay[tpcm]:	%DARK_GREEN%= %GRAY%c²{%WHITE%Frost Potion}%CONTINUE%		// Frost
+ItemDisplay[tpcl]:	%DARK_GREEN%= %GRAY%c³{%WHITE%Freezing Potion}%CONTINUE%	// Freezing
+ItemDisplay[tpls]:	%DARK_GREEN%= %GRAY%l¹{%WHITE%Charged Potion}%CONTINUE%		// Charged
+ItemDisplay[tplm]:	%DARK_GREEN%= %GRAY%l²{%WHITE%Static Potion}%CONTINUE%		// Static
+ItemDisplay[tpll]:	%DARK_GREEN%= %GRAY%l³{%WHITE%Shock Potion}%CONTINUE%		// Shock
 // Misc
 ItemDisplay[yps]:	%DARK_GREEN%= %GRAY%a{%WHITE%Antidote Potion}%CONTINUE%		// Antidote
 ItemDisplay[wms]:	%YELLOW%= %GRAY%t{%WHITE%Thawing Potion}%CONTINUE%		// Thawing
 ItemDisplay[vps]:	%WHITE%= %GRAY%s{%WHITE%Stamina Potion}%CONTINUE%		// Stamina
 
-// Hidden: Minor, Lesser, Standard, & Greater Potions - levels 18, 30, 40, 75
-ItemDisplay[FILTLVL>0 (hp1 OR mp1) CLVL>17 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}				// except in town
-ItemDisplay[FILTLVL>0 (hp2 OR mp2) CLVL>29 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}				// except in town
-ItemDisplay[FILTLVL>0 (hp3 OR mp3) CLVL>39 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}				// except in town
-ItemDisplay[FILTLVL>0 (hp4 OR mp4) CLVL>74 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}				// except in town
-ItemDisplay[FILTLVL>5 (hp5 OR mp5) CLVL>89 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}				// filter level 6 - hides super potions at level 90+ for stricter filter levels
+// Hidden: Minor, Lesser, Standard, & Greater Potions (not in town) - levels 18, 30, 40, 75
+ItemDisplay[FILTLVL>0 (hp1 OR mp1) CLVL>17 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}			
+ItemDisplay[FILTLVL>0 (hp2 OR mp2) CLVL>29 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}			
+ItemDisplay[FILTLVL>0 (hp3 OR mp3) CLVL>39 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}			
+ItemDisplay[FILTLVL>0 (hp4 OR mp4) CLVL>74 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}			
+ItemDisplay[FILTLVL>5 (hp5 OR mp5) CLVL>89 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}			// filter level 6 - hides super potions at level 90+ for stricter filter levels
 
-// Hidden: Stamina Potion & Throwing Potions - level 15
-ItemDisplay[FILTLVL>0 (vps OR opl OR opm OR ops OR gpl OR gpm OR gps) CLVL>14 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// except in town
+// Hidden: Throwing Potions (not in town) - levels 15, 30, 75
+ItemDisplay[FILTLVL>0 (tpfs OR tpgs OR tpcs OR tpls) CLVL>14 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	
+ItemDisplay[FILTLVL>0 (tpfm OR tpgm OR tpcm OR tplm) CLVL>29 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	
+ItemDisplay[FILTLVL>0 (tpfl OR tpgl OR tpcl OR tpll) CLVL>74 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	
+ItemDisplay[(opl OR gpl OR opm OR gpm OR ops OR gps)]:											// legacy potions (won't drop in the game after s7)	
 
-// Hidden: Thawing Potion - level 30
-ItemDisplay[FILTLVL>0 wms CLVL>29 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}					// except in town
-
-// Hidden: Antidote Potion - level 90
-ItemDisplay[FILTLVL>0 yps CLVL>89 !(MAPID>160 MAPID<164) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}		// except in town or Necropolis areas
+// Hidden: Stamina, Thawing, & Antidote Potions (not in town) - levels 15, 30, 90
+ItemDisplay[FILTLVL>0 vps CLVL>14 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}				
+ItemDisplay[FILTLVL>0 wms CLVL>29 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}				
+ItemDisplay[FILTLVL>0 yps CLVL>89 !(MAPID>160 MAPID<164) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// except in town or Necropolis areas
 
 
 // +-------------------+
@@ -185,8 +197,9 @@ ItemDisplay[RUNE>0]:	%NAME% %TAN%(%WHITE%%RUNENUM%%TAN%)%WHITE%%CONTINUE%						/
 ItemDisplay[jewf]:	%WHITE%Jewel Fragment%CONTINUE%									// changes name of Jewel Fragments from plural to singular
 ItemDisplay[t51]:	Zhar's Sanctum%CONTINUE%									// fixes name for "Zhar the Mad" unique map
 ItemDisplay[t52]:	Stygian Caverns%CONTINUE%									// fixes name for "Warlord of Blood" unique map
-ItemDisplay[(t51 OR t52) !ID]:	%NAME% Map%CONTINUE%									// standardizes fixed maps
-ItemDisplay[(t51 OR t52) ID]:	Map%NL%%NAME%%CONTINUE%									// standardizes fixed maps
+ItemDisplay[t53]:	Fallen Gardens%CONTINUE%									// fixes name for "Fallen Gardens" unique map
+ItemDisplay[(t51 OR t52 OR t53) !ID]:	%NAME% Map%CONTINUE%								// standardizes fixed maps
+ItemDisplay[(t51 OR t52 OR t53) ID]:	Map%NL%%NAME%%CONTINUE%								// standardizes fixed maps
 ItemDisplay[STAT360>0 (MAPID=181 OR MAPID=182)]: %NAME%%RED%*{%NAME%}%CONTINUE%						// marks pre-corrupted items within Stygian Caverns
 ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key OR MAPTIER>-1)]: %NAME% %WHITE%×%QTY%%CONTINUE%		// appends quantity
 
@@ -236,11 +249,15 @@ ItemDisplay[pvpp]:		%BLUE% = %WHITE%M {%WHITE%Dueling Mana Potion}%WHITE%							
 ItemDisplay[scrb]:		%MAP-53%%TIER-9%    %NAME%    {%WHITE%Transforms a %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %WHITE%map into a %DARK_GREEN%(%TAN%Dungeon%DARK_GREEN%)}%WHITE%			// Horadrim Scarab	  (Map -> Dungeon)
 ItemDisplay[iwss]:		%DOT-53%%TIER-9% %NAME% {%WHITE%Gives a map 100% chance to contain a map event}%WHITE%											// Catalyst Shard	  (Guarantees map event)
 // Map Orbs
-ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%%WHITE%Raises Map Rarity from Common to Magic}%WHITE%										// Arcane Orb		  (Common -> Magic)
-ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%WHITE%Raises Map Rarity from Common to Rare}%WHITE%		// Zakarum Orb		  (Common -> Rare)
-ItemDisplay[upma]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ P%GRAY%.%WHITE%Skull + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%WHITE%Raises Map Rarity from Magic to Rare}%WHITE%	// Angelic Orb		  (Magic -> Rare)
+ItemDisplay[(imma OR irma)]:	%NAME%{%WHITE%Raises Map Rarity from Common to Magic}%CONTINUE%														// Infused Arcane Orb
+ItemDisplay[(imra OR irra)]:	%NAME%{%WHITE%Raises Map Rarity from Common to Rare}%CONTINUE%														// Infused Zakarum Orb
+ItemDisplay[(upma OR rrra)]:	%NAME%{%WHITE%Raises Map Rarity from Magic to Rare}%CONTINUE%														// Infused Angelic Orb
+ItemDisplay[(rera OR urma)]:	%NAME%{%WHITE%Rerolls Rare Map Affixes}%CONTINUE%															// Infused Horadrim Orb
+ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%%NAME%}%WHITE%															// Arcane Orb		  (Common -> Magic)
+ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%NAME%}%WHITE%							// Zakarum Orb		  (Common -> Rare)
+ItemDisplay[upma]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ P%GRAY%.%WHITE%Skull + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%NAME%}%WHITE%					// Angelic Orb		  (Magic -> Rare)
+ItemDisplay[rera]:	%NAME%{%GOLD%Orb %WHITE%+ %YELLOW%Map %WHITE%+ P%GRAY%.%WHITE%Gem + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%NAME%}%WHITE%					// Horadrim Orb		  (Reroll Rare)
 ItemDisplay[scou]:	%NAME%{%WHITE%Lowers Map Rarity to Common}%WHITE%																// Orb of Destruction	  (Magic/Rare -> Common)
-ItemDisplay[rera]:	%NAME%{%GOLD%Orb %WHITE%+ %YELLOW%Map %WHITE%+ P%GRAY%.%WHITE%Gem + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%WHITE%Rerolls Rare Map Affixes}%WHITE%		// Horadrim Orb		  (Reroll Rare)
 ItemDisplay[upmp]:	%NAME%{%WHITE%Combines three maps to create one of a higher tier}%WHITE%													// Cartographer's Orb	  (3 T1 Maps -> 1 T2 Map or 3 T2 Maps -> 1 T3 Map)
 ItemDisplay[fort]:	%GOLD%%NAME%{%WHITE%Fortified monsters have doubled life and deal 20% extra damage%NL%Halves number of map monsters and doubles loot/experience gained from them}%WHITE%	// Orb of Fortification
 // Maps  (includes notifications)
@@ -251,13 +268,13 @@ ItemDisplay[MAPTIER=1]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T1%DA
 ItemDisplay[MAPTIER=2]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%		// maps - T2 (Ruins of Viz-Jun, Sanatorium, Royal Crypts, Ancestral Trial, Fall of Caldeum, Shadows of Westmarch)
 ItemDisplay[MAPTIER=3]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%		// maps - T3 (Tomb of Zultan Kulle, Sewers of Harrogath, River of Blood, Throne of Insanity, Lost Temple, Blood Moon, Pandemonium Citadel, Canyon of Sescheron, Kehjistan Marketplace, Ashen Plains)
 ItemDisplay[MAPTIER=4]:		%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%)%CONTINUE%	// dungeons  (Cathedral of Light, Plains of Torment, Sanctuary of Sin)
-ItemDisplay[(t51 OR t52)]:%BORDER-53%%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%	// maps - T3 uniques (Zhar's Sanctum, Stygian Caverns)
+ItemDisplay[MAPTIER=5]:	%BORDER-53%%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%	// maps - T3 uniques (Zhar's Sanctum, Stygian Caverns, Fallen Gardens)
 ItemDisplay[MAPTIER>-1 QTY>1]:			%NAME% %WHITE%×%QTY%%CONTINUE%						// maps - appends quantity
 ItemDisplay[MAPTIER=1 !(ID (RARE OR UNI))]:	 %NAME% %CONTINUE%							// maps - T1 highlighting
 ItemDisplay[MAPTIER=2 !(ID (RARE OR UNI))]:	  %NAME%  %CONTINUE%							// maps - T2 highlighting
 ItemDisplay[MAPTIER=3 !(ID (RARE OR UNI))]:	   %NAME%   %CONTINUE%							// maps - T3 highlighting
 ItemDisplay[MAPTIER=4 !(ID (RARE OR UNI))]:	    %NAME%    %CONTINUE%						// maps - T4 highlighting
-ItemDisplay[(t51 OR t52) UNI !ID]:		         %NAME%         %CONTINUE%					// maps - unique highlighting
+ItemDisplay[MAPTIER=5 UNI !ID]:			         %NAME%         %CONTINUE%					// maps - unique highlighting
 //ItemDisplay[(t61 OR t62)]:	%NAME%{%NAME%}%WHITE%									// Desert/Moor Duel Arenas (listed here for reference)
 
 // Alternative Rules for Endgame Quest Items (includes notifications)
@@ -506,7 +523,7 @@ ItemDisplay[(amu OR rin) !ID RARE]:	%DOT-6D%%TIER-9%  %NAME%  %WHITE%			// highl
 //-¦ General Equipment ¦-------------------------------------------------------------------------------------------------
 // +-------------------+
 // Catchall - Non-Equipment
-ItemDisplay[(ILVL>1 OR QTY>0 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR jew OR jewf OR cm1 OR cm2 OR cm3 OR ram OR RUNE>0 OR GEMTYPE>0 OR rvs OR rvl OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5 OR yps OR wms OR vps OR bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR tbk OR ibk OR tsc OR isc OR key OR ear OR std OR wss OR lbox OR lpp OR lmal OR ubtm OR dcma OR rtma OR dcso OR dcho OR dcbl OR rtmv OR rtmo OR rtmf OR cwss OR rtp OR rid OR lsvl OR llmr OR rkey OR uba OR ubaa OR ubab OR ubac OR imma OR imra OR upma OR scou OR rera OR upmp OR fort OR scrb OR MAPTIER>-1 OR pvpp OR iwss OR cm2f)]: %BORDER-62%%TIER-9%%NAME%{%NAME%}%WHITE%	// notifications for unknown items (future-proofing)
+ItemDisplay[(ILVL>1 OR QTY>0 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR jew OR jewf OR cm1 OR cm2 OR cm3 OR ram OR RUNE>0 OR GEMTYPE>0 OR rvs OR rvl OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5 OR yps OR wms OR vps OR bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR tbk OR ibk OR tsc OR isc OR key OR ear OR std OR wss OR lbox OR lpp OR lmal OR ubtm OR dcma OR rtma OR dcso OR dcho OR dcbl OR rtmv OR rtmo OR rtmf OR cwss OR rtp OR rid OR lsvl OR llmr OR rkey OR uba OR ubaa OR ubab OR ubac OR imma OR imra OR upma OR scou OR rera OR upmp OR fort OR scrb OR irma OR irra OR rrra OR urma OR MAPTIER>-1 OR pvpp OR iwss OR cm2f)]: %BORDER-62%%TIER-9%%NAME%{%NAME%}%WHITE%	// notifications for unknown items (future-proofing)
 ItemDisplay[!(ARMOR OR (WEAPON !(opl OR opm OR ops OR gpl OR gpm OR gps)) OR ((amu OR rin) (UNI OR SET OR CRAFT)) OR ((jew OR cm1 OR cm2 OR cm3) UNI) OR ram)]: %NAME%{%NAME%}%WHITE%	// displays most non-equipment items as normal
 
 // Modification: Sockets (regular items are handled in their own category)
@@ -952,7 +969,7 @@ ItemDisplay[UNI ((ETH (7gw OR obc OR obf OR 6ws OR xhn OR uar OR 7wa)) OR (!ETH 
 ItemDisplay[UNI ((ETH (ama OR (7wh ILVL>82) OR 7s8 OR xrs OR 7wc)) OR (!ETH ((amu ILVL>79 (!ID OR (ALLSK>1 RES>10))) OR (rin ILVL>65 !ID) OR cm3 OR (7wh ILVL>82) OR (uar ILVL<87) OR dre OR uld OR oba OR bac OR xvb OR 6sw OR xhn OR xhb OR ztb)))]:	%MAP-53%%TIER-9%     %NAME%     %WHITE%																// Highlighting - 5 spaces
 ItemDisplay[UNI ((ETH (amf OR (uhm ILVL>76) OR oba OR uvb OR 7pa OR 9bs OR 7kr OR 9gm OR am5 OR 9ar OR utp)) OR (!ETH ((amu ILVL>72 (!ID OR TABSK26>0 OR STAT363>0 OR STAT250>0)) OR (rin ILVL>38) OR (7gm ILVL<85) OR tgl OR xmb OR zlb OR zvb OR umc OR 7s8 OR xrs OR upl OR xsh OR uvb OR 7wa OR ama OR xtp OR nee OR 7wc)))]:	%MAP-53%%TIER-9%    %NAME%    %WHITE%						// Highlighting - 4 spaces
 ItemDisplay[UNI ((ETH (ci3 OR (7fl ILVL>85) OR (7fl ILVL<86) OR 7bk OR ulc OR bae OR 7ws OR xtg OR uvg OR uvc OR xpl OR xld OR utu OR 9bs OR 8ls OR 7gi OR uul OR ztb OR ob6 OR 9gw OR 7b8 OR 7ts OR 7p7 OR 7fb OR ame OR 6bs OR 7qs OR 7tw OR 8ws)) OR (!ETH ((amu ILVL>54 (!ID OR STAT360>0 OR STAT57>1000 OR STAT362>0 OR FRW>20 OR ED>30 OR ALLSK>0)) OR (7fl ILVL>85) OR xhm OR utu OR uhb OR 9ws OR 7ws OR amf OR 6l7 OR 8hx OR 7gi OR am7 OR 8lw OR nef OR xpl OR ci2 OR drb OR drd OR uts OR pac OR hgl OR xlg OR umb OR xth OR uvg OR 7kr OR 6hx OR 9gm OR ne6 OR ba6 OR am5 OR pa3 OR 9ar OR ob6 OR dr2 OR 9gw OR xar OR utg OR ned OR 6bs OR 7qs OR baf OR utp OR drf OR 8ws)))]:	%DOT-53%%TIER-9%   %NAME%   %WHITE%		// Highlighting - 3 spaces
-ItemDisplay[UNI ((ETH (uap OR (uhm ILVL<77) OR (7gm ILVL<85) OR (7wh ILVL<83) OR 7sc OR baa OR dra OR uui OR dgr OR 9fc OR 9ws OR xlt OR 7m7 OR 6cs OR 7cs OR ulm OR dre OR xea OR pa9 OR nea OR xtb OR 7s7 OR 7gl OR 7bw OR xsh OR xmg OR lbt OR tbt OR xlb OR xhb OR umb OR zlb OR zhb OR umc OR xrn OR rng OR scl OR gth OR ltp OR xui OR xul OR upl OR 9ta OR 7ha OR 7ga OR 9tw OR 7lw OR 9cr OR 7gs OR 9ga OR 92a OR 7wb OR 9st OR 9wh OR stu OR pac OR drd OR 9bw OR ne6 OR ba6 OR pa3 OR dr2 OR 9wc OR amd OR wsc OR xtp OR 7bt OR 7o7 OR 7bl OR nef OR 7sp OR 7ls OR 9fb OR utg OR ulb OR ned OR 7qs OR baf OR drf OR cst)) OR (!ETH (7sc OR (7wh ILVL<83) OR (7fl ILVL<86) OR umg OR uvc OR 8lb OR 9fc OR 7pa OR pae OR dgr OR tbl OR mgl OR uh9 OR bad OR plt OR ltp OR xui OR xow OR xts OR upk OR uow OR uhg OR 92a OR 9ga OR 7m7 OR 9ls OR 7gs OR 7b7 OR 7ts OR 8cb OR amb OR 8rx OR 6cs OR 9tw OR 7lw OR aar OR xvg OR xmg OR lbt OR tbt OR xlb OR 7ga OR 7dg OR 8ls OR 7bw OR xtg OR xrn OR xlt OR xld OR xul OR 9ax OR 7bk OR uul OR 9bw OR 9wc OR wsc OR xhg OR 7b8 OR 7o7 OR 7p7 OR lbl OR rng OR 7sp OR 7ls OR 9fb OR 8mx OR 7fb OR ame OR ulb OR 7tw OR cst OR xcl)))]:	%DOT-53%%TIER-9%  %NAME%  %WHITE%	// Highlighting - 2 spaces
+ItemDisplay[UNI ((ETH (uap OR (uhm ILVL<77) OR (7gm ILVL<85) OR (7wh ILVL<83) OR 7sc OR baa OR dra OR uui OR dgr OR 9fc OR 9ws OR xlt OR 7m7 OR 6cs OR 7cs OR ulm OR dre OR xea OR pa9 OR nea OR xtb OR 7s7 OR 7gl OR 7bw OR xsh OR xmg OR lbt OR tbt OR xlb OR xhb OR umb OR zlb OR zhb OR umc OR xrn OR rng OR scl OR gth OR ltp OR xui OR xul OR upl OR 9ta OR 7ha OR 7ga OR 9tw OR 7lw OR 9cr OR 7gs OR 9ga OR 92a OR 7wb OR 9st OR 9wh OR stu OR pac OR drd OR 9bw OR ne6 OR ba6 OR pa3 OR dr2 OR 9wc OR amd OR wsc OR xtp OR 7bt OR 7o7 OR 7bl OR nef OR 7sp OR 7ls OR 9fb OR utg OR ulb OR ned OR 7qs OR baf OR drf OR cst OR 7st)) OR (!ETH (7sc OR (7wh ILVL<83) OR (7fl ILVL<86) OR umg OR uvc OR 8lb OR 9fc OR 7pa OR pae OR dgr OR tbl OR mgl OR uh9 OR bad OR plt OR ltp OR xui OR xow OR xts OR upk OR uow OR uhg OR 92a OR 9ga OR 7m7 OR 9ls OR 7gs OR 7b7 OR 7ts OR 8cb OR amb OR 8rx OR 6cs OR 9tw OR 7lw OR aar OR xvg OR xmg OR lbt OR tbt OR xlb OR 7ga OR 7dg OR 8ls OR 7bw OR xtg OR xrn OR xlt OR xld OR xul OR 9ax OR 7bk OR uul OR 9bw OR 9wc OR wsc OR xhg OR 7b8 OR 7o7 OR 7p7 OR lbl OR rng OR 7sp OR 7ls OR 9fb OR 8mx OR 7fb OR ame OR ulb OR 7tw OR cst OR xcl OR 7st)))]:	%DOT-53%%TIER-9%  %NAME%  %WHITE%	// Highlighting - 2 spaces
 ItemDisplay[UNI ((ETH (9tk OR xkp OR xlm OR bac OR 9wn OR xhm OR zvb OR uhb OR xmb OR upk OR xvb OR 7ta OR bwn OR 9yw OR uh9 OR 72a OR uow OR tgl OR xlg OR xvg OR uhg OR brs OR plt OR fld OR aar OR xla OR xcl OR xth OR xar OR uts OR 9ma OR 9sp OR gma OR mau OR 9fl OR 9m9 OR 9gi OR 9qs OR gsd OR 9sb OR 9ls OR 92h OR 9gs OR 9kr OR 9s8 OR 9pa OR 7sr OR 7br OR am9 OR 9mt OR 7mp OR nee OR xhg)) OR (!ETH (amu OR rin OR skp OR xap OR xkp OR xlm OR xsk OR stu OR vgl OR 9gi OR mau OR 9sp OR 9m9 OR 9sb OR 7sr OR am9 OR 9wn OR 7wb OR 9gs OR 7b7 OR gma OR 9fl OR 9qs OR 9cr OR 9kr OR 9s8 OR 7bt OR 9pa OR 92h OR gsd OR 7br OR cap OR bhm OR crn OR scl OR spl OR xng OR kit OR xuc OR ush OR lgl OR vbt OR hbt OR vbl OR zmb OR 9ma OR amd OR 7s7 OR bwn OR 9yw OR gth OR tow OR xrg OR uml OR 9wh OR 9mt OR xhl OR 7mp OR lwb OR 9sr OR 6rx OR 8sw OR sbw OR xtu)))]:	 %NAME% %CONTINUE%	// Highlighting - 1 space
 // Highlighting & Notifications - Sets
 ItemDisplay[SET (uar OR uth)]:	%BORDER-84%%TIER-9%         %NAME%         %WHITE%																																									// Highlighting - 9 spaces
@@ -964,8 +981,8 @@ ItemDisplay[SET ((amu ILVL>16) OR xhl OR vbt OR dgr OR bwn OR 7ls OR ci0 OR xrs 
 // Catchall - Unique/Set Items
 ItemDisplay[UNI !ID !(CLVL>69 DIFF=2 FILTLVL>2)]: %PX-53%%TIER-9%%NAME%%WHITE%		// notifications for all other unidentified uniques except for level 70+ characters in Hell difficulty on stricter filter levels
 ItemDisplay[SET !ID !(CLVL>69 DIFF=2 FILTLVL>2)]: %PX-84%%TIER-9%%NAME%%WHITE%		// notifications for all other unidentified sets except for level 70+ characters in Hell difficulty on stricter filter levels
-ItemDisplay[UNI !ID (ukp OR uea OR ula OR ung OR ucl OR urs OR ult OR uuc OR urg OR ulg OR uhc OR ci0 OR ci1 OR dr1 OR dr3 OR dr4 OR dr5 OR dr6 OR dr7 OR dr8 OR dr9 OR drc OR ba1 OR ba2 OR ba3 OR ba4 OR ba5 OR ba7 OR ba8 OR ba9 OR bab OR pa1 OR pa2 OR pa4 OR pa5 OR pa6 OR pa7 OR pa8 OR paa OR pab OR pad OR paf OR ne1 OR ne2 OR ne3 OR ne4 OR ne5 OR ne7 OR ne8 OR ne9 OR neb OR neg OR 7ax OR 7la OR 7ma OR crs OR 7ss OR 7fc OR 7wd OR 72h OR 7cm OR 7di OR tkf OR tax OR bkf OR bal OR 9bk OR 9b8 OR 7tk OR jav OR pil OR ssp OR glv OR tsp OR 9ja OR 9pi OR 9s9 OR 9gl OR 9ts OR 7ja OR 7pi OR 7tr OR 7st OR 7vo OR 7h7 OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6lx OR 6mx OR 6ss OR 6ls OR 7wn OR 7yw OR ktr OR wrb OR axf OR ces OR clw OR btl OR skr OR 9wb OR 9xf OR 9cs OR 9lw OR 9qr OR 7ar OR 7xf OR ob1 OR ob2 OR ob3 OR ob4 OR ob5 OR ob7 OR ob8 OR ob9 OR obb OR obd OR obe OR am1 OR am2 OR am3 OR am4 OR am6 OR am8 OR amc)]:	%BORDER-53%%TIER-9%%NAME%%WHITE%	// notifications for unknown unique equipment items (future-proofing)
-ItemDisplay[SET !ID !(rin OR amu OR cap OR skp OR hlm OR fhl OR msk OR bhm OR ghm OR crn OR xap OR xhl OR xsk OR xh9 OR xhm OR xrn OR uh9 OR uhm OR urn OR qui OR lea OR stu OR rng OR chn OR brs OR spl OR gth OR ltp OR ful OR aar OR xcl OR xrs OR xul OR xar OR uui OR ucl OR upl OR ult OR uld OR uth OR uul OR uar OR buc OR sml OR lrg OR kit OR tow OR gts OR xml OR uts OR lgl OR vgl OR mgl OR tgl OR hgl OR xvg OR xmg OR xtg OR xhg OR ulg OR lbt OR vbt OR mbt OR tbt OR hbt OR xlb OR xmb OR xtb OR xhb OR zmb OR ztb OR zhb OR lbl OR vbl OR mbl OR tbl OR hbl OR zvb OR zmb OR ztb OR zhb OR umc OR utc OR ci0 OR ci3 OR dr8 OR ba5 OR paf OR ne9 OR 2ax OR mpi OR 9mt OR 7ma OR 7m7 OR sbr OR bsd OR lsd OR wsd OR 7ls OR 7fb OR 7gd OR dgr OR 9vo OR lbb OR swb OR bst OR wst OR 6cs OR bwn OR gsc OR wsp OR 7ws OR 7qr OR oba OR amc)]:	 %BORDER-84%%TIER-9%%NAME%%WHITE%												// notifications for unknown set equipment items (future-proofing)
+ItemDisplay[UNI !ID (ukp OR uea OR ula OR ung OR ucl OR urs OR ult OR uuc OR urg OR ulg OR uhc OR ci0 OR ci1 OR dr1 OR dr3 OR dr4 OR dr5 OR dr6 OR dr7 OR dr8 OR dr9 OR drc OR ba1 OR ba2 OR ba3 OR ba4 OR ba5 OR ba7 OR ba8 OR ba9 OR bab OR pa1 OR pa2 OR pa4 OR pa5 OR pa6 OR pa7 OR pa8 OR paa OR pab OR pad OR paf OR ne1 OR ne2 OR ne3 OR ne4 OR ne5 OR ne7 OR ne8 OR ne9 OR neb OR neg OR 7ax OR 7la OR 7ma OR crs OR 7ss OR 7fc OR 7wd OR 72h OR 7cm OR 7di OR tkf OR tax OR bkf OR bal OR 9bk OR 9b8 OR 7tk OR jav OR pil OR ssp OR glv OR tsp OR 9ja OR 9pi OR 9s9 OR 9gl OR 9ts OR 7ja OR 7pi OR 7tr OR 7vo OR 7h7 OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6lx OR 6mx OR 6ss OR 6ls OR 7wn OR 7yw OR ktr OR wrb OR axf OR ces OR clw OR btl OR skr OR 9wb OR 9xf OR 9cs OR 9lw OR 9qr OR 7ar OR 7xf OR ob1 OR ob2 OR ob3 OR ob4 OR ob5 OR ob7 OR ob8 OR ob9 OR obb OR obd OR obe OR am1 OR am2 OR am3 OR am4 OR am6 OR am8 OR amc)]:	%BORDER-53%%TIER-9%%NAME%%WHITE%	// notifications for unknown unique equipment items (future-proofing)
+ItemDisplay[SET !ID !(rin OR amu OR cap OR skp OR hlm OR fhl OR msk OR bhm OR ghm OR crn OR xap OR xhl OR xsk OR xh9 OR xhm OR xrn OR uh9 OR uhm OR urn OR qui OR lea OR stu OR rng OR chn OR brs OR spl OR gth OR ltp OR ful OR aar OR xcl OR xrs OR xul OR xar OR uui OR ucl OR upl OR ult OR uld OR uth OR uul OR uar OR buc OR sml OR lrg OR kit OR tow OR gts OR xml OR uts OR lgl OR vgl OR mgl OR tgl OR hgl OR xvg OR xmg OR xtg OR xhg OR ulg OR lbt OR vbt OR mbt OR tbt OR hbt OR xlb OR xmb OR xtb OR xhb OR zmb OR ztb OR zhb OR lbl OR vbl OR mbl OR tbl OR hbl OR zvb OR zmb OR ztb OR zhb OR umc OR utc OR ci0 OR ci3 OR dr8 OR ba5 OR paf OR ne9 OR 2ax OR mpi OR 9mt OR 7ma OR 7m7 OR sbr OR bsd OR lsd OR wsd OR 7ls OR 7fb OR 7gd OR dgr OR 9vo OR lbb OR swb OR bst OR wst OR 6cs OR bwn OR gsc OR wsp OR 7ws OR 7qr OR oba OR amc)]:	 %BORDER-84%%TIER-9%%NAME%%WHITE%											// notifications for unknown set equipment items (future-proofing)
 ItemDisplay[(UNI OR SET)]: %NAME%%WHITE%
 
 
@@ -1031,8 +1048,8 @@ ItemDisplay[NMAG !SHOP !EQUIPPED]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (HELM OR CIRC) SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Nadir, Lore}%CONTINUE%														// Helm 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (HELM OR CIRC) SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Flickering Flame, Dream, Ferocity%NL%%WHITE%Runewords: %GOLD%Radiance, Wisdom, Delirium,}%CONTINUE%							// Helm 3s			...differences: Ferocity (new, Zod+Cham+Shael), Wisdom (new, Pul+Ith+Eld), Flickering Flame (new, Nef+Pul+Vex)
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 CHEST SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Stealth, Smoke, Prudence}%CONTINUE%														// Armor 2s
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 CHEST SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Bone, Rain, Principle, Dragon, Enigma%NL%Wealth, Enlightenment, Duress, Gloom,%NL%%WHITE%Runewords: %GOLD%Peace, Myth, Lionheart, Treachery,}%CONTINUE%	// Armor 3s
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 CHEST SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Bramble, Chains of Honor%NL%%WHITE%Runewords: %GOLD%Stone, Fortitude,}%CONTINUE%										// Armor 4s
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 CHEST SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Gloom, Bone, Rain, Principle, Dragon, Enigma%NL%Treachery, Wealth, Enlightenment, Duress,%NL%%WHITE%Runewords: %GOLD%Peace, Myth, Hustle, Lionheart,}%CONTINUE%	// Armor 3s
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 CHEST SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Bramble, Chains of Honor, Innocence%NL%%WHITE%Runewords: %GOLD%Stone, Fortitude,}%CONTINUE%									// Armor 4s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SHIELD SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Rhyme, Splendor}%CONTINUE%															// Shield 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SHIELD SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Sanctuary, Dragon, Dream%NL%%WHITE%Runewords: %GOLD%Ancient's Pledge,}%CONTINUE%										// Shield 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SHIELD SOCK=4 !DIN]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Spirit, Exile, Phoenix}%CONTINUE%													// Shield 4s			...differences: Exile (was only Paladin shields)
@@ -1088,8 +1105,8 @@ ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 MACE SOCK=6]: %NAME%{%NAME%%NL%%GOLD
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 (HELM OR CIRC) SOCK=2]: %NAME%{%NAME%%NL%%GOLD%Lore %GRAY%Ort+Sol%NL%%GOLD%Nadir %GRAY%Nef+Tir%NL%%WHITE%Possible Runewords:}%CONTINUE%																																																	// Helm 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 (HELM OR CIRC) SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Ferocity %GRAY%Zod+Cham+Shael%NL%%GOLD%Dream %GRAY%Io+Jah+Pul%NL%%GOLD%Flickering Flame %GRAY%Nef+Pul+Vex%NL%%GOLD%Delirium %GRAY%Lem+Ist+Io%NL%%GOLD%Wisdom %GRAY%Pul+Ith+Eld%NL%%GOLD%Radiance %GRAY%Nef+Sol+Ith%NL%%WHITE%Possible Runewords:}%CONTINUE%																													// Helm 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 CHEST SOCK=2]: %NAME%{%NAME%%NL%%GOLD%Prudence %GRAY%Mal+Tir%NL%%GOLD%Smoke %GRAY%Nef+Lum%NL%%GOLD%Stealth %GRAY%Tal+Eth%NL%%WHITE%Possible Runewords:}%CONTINUE%																																														// Armor 2s
-ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 CHEST SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Enigma %GRAY%Jah+Ith+Ber%NL%%GOLD%Dragon %GRAY%Sur+Lo+Sol%NL%%GOLD%Principle %GRAY%Ral+Gul+Eld%NL%%GOLD%Rain %GRAY%Ort+Mal+Ith%NL%%GOLD%Bone %GRAY%Sol+Um+Um%NL%%GOLD%Gloom %GRAY%Fal+Um+Pul%NL%%GOLD%Duress %GRAY%Shael+Um+Thul%NL%%GOLD%Enlightenment %GRAY%Pul+Ral+Sol%NL%%GOLD%Wealth %GRAY%Lem+Ko+Tir%NL%%GOLD%Treachery %GRAY%Shael+Thul+Lem%NL%%GOLD%Lionheart %GRAY%Hel+Lum+Fal%NL%%GOLD%Myth %GRAY%Hel+Amn+Nef%NL%%GOLD%Peace %GRAY%Shael+Thul+Amn%NL%%WHITE%Possible Runewords:}%CONTINUE%	// Armor 3s
-ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 CHEST SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Chains of Honor %GRAY%Dol+Um+Ber+Ist%NL%%GOLD%Bramble %GRAY%Ral+Ohm+Sur+Eth%NL%%GOLD%Fortitude %GRAY%El+Sol+Dol+Lo%NL%%GOLD%Stone %GRAY%Shael+Um+Pul+Lum%NL%%WHITE%Possible Runewords:}%CONTINUE%																																					// Armor 4s
+ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 CHEST SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Enigma %GRAY%Jah+Ith+Ber%NL%%GOLD%Dragon %GRAY%Sur+Lo+Sol%NL%%GOLD%Principle %GRAY%Ral+Gul+Eld%NL%%GOLD%Rain %GRAY%Ort+Mal+Ith%NL%%GOLD%Bone %GRAY%Sol+Um+Um%NL%%GOLD%Gloom %GRAY%Fal+Um+Pul%NL%%GOLD%Duress %GRAY%Shael+Um+Thul%NL%%GOLD%Enlightenment %GRAY%Pul+Ral+Sol%NL%%GOLD%Wealth %GRAY%Lem+Ko+Tir%NL%%GOLD%Treachery %GRAY%Shael+Thul+Lem%NL%%GOLD%Lionheart %GRAY%Hel+Lum+Fal%NL%%GOLD%Hustle %GRAY%Shael+Ko+Eld%NL%%GOLD%Myth %GRAY%Hel+Amn+Nef%NL%%GOLD%Peace %GRAY%Shael+Thul+Amn%NL%%WHITE%Possible Runewords:}%CONTINUE%	// Armor 3s
+ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 CHEST SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Innocence %GRAY%Gul+Lem+Zod+Hel%NL%%GOLD%Chains of Honor %GRAY%Dol+Um+Ber+Ist%NL%%GOLD%Bramble %GRAY%Ral+Ohm+Sur+Eth%NL%%GOLD%Fortitude %GRAY%El+Sol+Dol+Lo%NL%%GOLD%Stone %GRAY%Shael+Um+Pul+Lum%NL%%WHITE%Possible Runewords:}%CONTINUE%																																// Armor 4s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SHIELD SOCK=2]: %NAME%{%NAME%%NL%%GOLD%Splendor %GRAY%Eth+Lum%NL%%GOLD%Rhyme %GRAY%Shael+Eth%NL%%WHITE%Possible Runewords:}%CONTINUE%																																																	// Shield 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SHIELD SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Dream %GRAY%Io+Jah+Pul%NL%%GOLD%Dragon %GRAY%Sur+Lo+Sol%NL%%GOLD%Sanctuary %GRAY%Ko+Ko+Mal%NL%%GOLD%Ancient's Pledge %GRAY%Ral+Ort+Tal%NL%%WHITE%Possible Runewords:}%CONTINUE%																																							// Shield 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SHIELD SOCK=4 !DIN]: %NAME%{%NAME%%NL%%GOLD%Phoenix %GRAY%Vex+Vex+Lo+Jah%NL%%GOLD%Exile %GRAY%Vex+Ohm+Ist+Dol%NL%%GOLD%Spirit %GRAY%Tal+Thul+Ort+Amn%NL%%WHITE%Possible Runewords:}%CONTINUE%																																										// Shield 4s
