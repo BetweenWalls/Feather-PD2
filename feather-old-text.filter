@@ -130,8 +130,8 @@ ItemDisplay[FILTLVL>2 GOLD>0 GOLD<5000 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPI
 ItemDisplay[GOLD>0]: %NAME%
 
 // Rejuvenation
-ItemDisplay[rvs]:	%PURPLE%= %WHITE%r-{%WHITE%Rejuvenation Potion}			// Rejuvenation
-ItemDisplay[rvl]:	%PURPLE%  =  %WHITE%R {%WHITE%Full Rejuvenation Potion}		// Full Rejuvenation
+ItemDisplay[rvs]:	%PURPLE% = %WHITE%r- {%WHITE%Rejuvenation Potion}		// Rejuvenation
+ItemDisplay[rvl]:	%PURPLE%  = %WHITE%R  {%WHITE%Full Rejuvenation Potion}		// Full Rejuvenation
 // Healing & Mana
 ItemDisplay[hp5]:	%RED% = %WHITE%H {%WHITE%Super Healing Potion}%CONTINUE%	// Super Healing
 ItemDisplay[mp5]:	%BLUE% = %WHITE%M {%WHITE%Super Mana Potion}%CONTINUE%		// Super Mana

@@ -133,10 +133,9 @@ ItemDisplay[FILTLVL>2 GOLD>0 GOLD<5000 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPI
 // Gold (anything not hidden is displayed normally)
 ItemDisplay[GOLD>0]: %NAME%
 
-// Rejuvenation
-ItemDisplay[rvs]:	%PURPLE%= %WHITE%r-{%WHITE%Rejuvenation Potion}			// Rejuvenation
-ItemDisplay[rvl]:	%PURPLE%  =  %WHITE%R {%WHITE%Full Rejuvenation Potion}		// Full Rejuvenation
-// Healing & Mana
+// Rejuvenation, Healing, Mana
+ItemDisplay[rvl]:	%PURPLE%  = %WHITE%R  {%WHITE%Full Rejuvenation Potion}		// Full Rejuvenation
+ItemDisplay[rvs]:	%PURPLE% = %WHITE%r- {%WHITE%Rejuvenation Potion}		// Rejuvenation
 ItemDisplay[hp5]:	%RED% = %WHITE%H {%WHITE%Super Healing Potion}%CONTINUE%	// Super Healing
 ItemDisplay[mp5]:	%BLUE% = %WHITE%M {%WHITE%Super Mana Potion}%CONTINUE%		// Super Mana
 ItemDisplay[hp4]:	%RED%= %WHITE%H-{%WHITE%Greater Healing Potion}%CONTINUE%	// Greater Healing
@@ -148,22 +147,25 @@ ItemDisplay[mp2]:	%BLUE%= %GRAY%m²{%WHITE%Lesser Mana Potion}%CONTINUE%		// Less
 ItemDisplay[hp1]:	%RED%= %GRAY%h¹{%WHITE%Minor Healing Potion}%CONTINUE%		// Minor Healing
 ItemDisplay[mp1]:	%BLUE%= %GRAY%m¹{%WHITE%Minor Mana Potion}%CONTINUE%		// Minor Mana
 // Throwing
-ItemDisplay[tpfs]:	%DARK_GREEN%= %GRAY%f¹{%WHITE%Fulminating Potion}%CONTINUE%	// Fulminating
-ItemDisplay[tpfm]:	%DARK_GREEN%= %GRAY%f²{%WHITE%Exploding Potion}%CONTINUE%	// Exploding
-ItemDisplay[tpfl]:	%DARK_GREEN%= %GRAY%f³{%WHITE%Oil Potion}%CONTINUE%		// Oil
-ItemDisplay[tpgs]:	%DARK_GREEN%= %GRAY%p¹{%WHITE%Strangling Potion}%CONTINUE%	// Strangling
-ItemDisplay[tpgm]:	%DARK_GREEN%= %GRAY%p²{%WHITE%Choking Potion}%CONTINUE%		// Choking
-ItemDisplay[tpgl]:	%DARK_GREEN%= %GRAY%p³{%WHITE%Rancid Potion}%CONTINUE%		// Rancid
-ItemDisplay[tpcs]:	%DARK_GREEN%= %GRAY%c¹{%WHITE%Chilling Potion}%CONTINUE%	// Chilling
-ItemDisplay[tpcm]:	%DARK_GREEN%= %GRAY%c²{%WHITE%Frost Potion}%CONTINUE%		// Frost
-ItemDisplay[tpcl]:	%DARK_GREEN%= %GRAY%c³{%WHITE%Freezing Potion}%CONTINUE%	// Freezing
-ItemDisplay[tpls]:	%DARK_GREEN%= %GRAY%l¹{%WHITE%Charged Potion}%CONTINUE%		// Charged
-ItemDisplay[tplm]:	%DARK_GREEN%= %GRAY%l²{%WHITE%Static Potion}%CONTINUE%		// Static
-ItemDisplay[tpll]:	%DARK_GREEN%= %GRAY%l³{%WHITE%Shock Potion}%CONTINUE%		// Shock
+ItemDisplay[tpfs]:	%SAGE%= %GRAY%f¹{%WHITE%Fulminating Potion}%CONTINUE%		// Fulminating
+ItemDisplay[tpfm]:	%SAGE%= %GRAY%f²{%WHITE%Exploding Potion}%CONTINUE%		// Exploding
+ItemDisplay[tpfl]:	%SAGE%= %GRAY%f³{%WHITE%Oil Potion}%CONTINUE%			// Oil
+ItemDisplay[tpgs]:	%SAGE%= %GRAY%p¹{%WHITE%Strangling Gas Potion}%CONTINUE%	// Strangling Gas
+ItemDisplay[tpgm]:	%SAGE%= %GRAY%p²{%WHITE%Choking Gas Potion}%CONTINUE%		// Choking Gas
+ItemDisplay[tpgl]:	%SAGE%= %GRAY%p³{%WHITE%Rancid Gas Potion}%CONTINUE%		// Rancid Gas
+ItemDisplay[tpcs]:	%SAGE%= %GRAY%c¹{%WHITE%Chilling Potion}%CONTINUE%		// Chilling
+ItemDisplay[tpcm]:	%SAGE%= %GRAY%c²{%WHITE%Frost Potion}%CONTINUE%			// Frost
+ItemDisplay[tpcl]:	%SAGE%= %GRAY%c³{%WHITE%Freezing Potion}%CONTINUE%		// Freezing
+ItemDisplay[tpls]:	%SAGE%= %GRAY%l¹{%WHITE%Charged Potion}%CONTINUE%		// Charged
+ItemDisplay[tplm]:	%SAGE%= %GRAY%l²{%WHITE%Static Potion}%CONTINUE%		// Static
+ItemDisplay[tpll]:	%SAGE%= %GRAY%l³{%WHITE%Shock Potion}%CONTINUE%			// Shock
 // Misc
-ItemDisplay[yps]:	%DARK_GREEN%= %GRAY%a{%WHITE%Antidote Potion}%CONTINUE%		// Antidote
-ItemDisplay[wms]:	%YELLOW%= %GRAY%t{%WHITE%Thawing Potion}%CONTINUE%		// Thawing
-ItemDisplay[vps]:	%WHITE%= %GRAY%s{%WHITE%Stamina Potion}%CONTINUE%		// Stamina
+ItemDisplay[yps !FILTLVL=1]:	%DARK_GREEN%= %GRAY%a{%WHITE%Antidote Potion}%CONTINUE%	// Antidote
+ItemDisplay[wms !FILTLVL=1]:	%YELLOW%= %GRAY%t{%WHITE%Thawing Potion}%CONTINUE%	// Thawing
+ItemDisplay[vps !FILTLVL=1]:	%WHITE%= %GRAY%s{%WHITE%Stamina Potion}%CONTINUE%	// Stamina
+ItemDisplay[yps FILTLVL=1]:	%GREEN%= %GRAY%a{%WHITE%Fire Resist +25% (30 seconds each)%NL%Antidote Potion}%CONTINUE%
+ItemDisplay[wms FILTLVL=1]:	%YELLOW%= %GRAY%t{%WHITE%Cold Resist +25% (30 seconds each)%NL%Thawing Potion}%CONTINUE%
+ItemDisplay[vps FILTLVL=1]:	%WHITE%= %GRAY%s{%WHITE%Unlimited Stamina (30 seconds each)%NL%Stamina Potion}%CONTINUE%
 
 // Hidden: Minor, Lesser, Standard, & Greater Potions (not in town) - levels 18, 30, 40, 75
 ItemDisplay[FILTLVL>0 (hp1 OR mp1) CLVL>17 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}			
@@ -251,8 +253,8 @@ ItemDisplay[iwss]:		%DOT-53%%TIER-9% %NAME% {%WHITE%Gives a map 100% chance to c
 // Map Orbs
 ItemDisplay[(imma OR irma)]:	%NAME%{%WHITE%Raises Map Rarity from Common to Magic}%CONTINUE%														// Infused Arcane Orb
 ItemDisplay[(imra OR irra)]:	%NAME%{%WHITE%Raises Map Rarity from Common to Rare}%CONTINUE%														// Infused Zakarum Orb
-ItemDisplay[(upma OR rrra)]:	%NAME%{%WHITE%Raises Map Rarity from Magic to Rare}%CONTINUE%														// Infused Angelic Orb
-ItemDisplay[(rera OR urma)]:	%NAME%{%WHITE%Rerolls Rare Map Affixes}%CONTINUE%															// Infused Horadrim Orb
+ItemDisplay[(upma OR urma)]:	%NAME%{%WHITE%Raises Map Rarity from Magic to Rare}%CONTINUE%														// Infused Angelic Orb
+ItemDisplay[(rera OR rrra)]:	%NAME%{%WHITE%Rerolls Rare Map Affixes}%CONTINUE%															// Infused Horadrim Orb
 ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%%NAME%}%WHITE%															// Arcane Orb		  (Common -> Magic)
 ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%NAME%}%WHITE%							// Zakarum Orb		  (Common -> Rare)
 ItemDisplay[upma]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ P%GRAY%.%WHITE%Skull + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%NAME%}%WHITE%					// Angelic Orb		  (Magic -> Rare)
