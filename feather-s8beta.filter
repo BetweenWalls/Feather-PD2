@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II	(HD text version)
-//		Date Updated:	4 SEPT 2023
+//		Date Updated:	8 SEPT 2023
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Searchable Features:
@@ -296,7 +296,7 @@ ItemDisplay[FILTLVL=1 uba]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Sends you and near
 ItemDisplay[FILTLVL=1 ubaa]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Sigils %WHITE%from %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %WHITE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %WHITE%maps to access Uber Ancients%NL%%GRAY%(T1 Maps)}%WHITE%			// Sigil of Madawc	 (Uber Ancients ingredient)
 ItemDisplay[FILTLVL=1 ubab]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Sigils %WHITE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %WHITE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %WHITE%maps to access Uber Ancients%NL%%GRAY%(T2 Maps)}%WHITE%			// Sigil of Talic	 (Uber Ancients ingredient)
 ItemDisplay[FILTLVL=1 ubac]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Sigils %WHITE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %WHITE%& %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %WHITE%maps to access Uber Ancients%NL%%GRAY%(T3 Maps)}%WHITE%			// Sigil of Korlic	 (Uber Ancients ingredient)
-ItemDisplay[FILTLVL=1 dcma]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Diablo Walks the Earth%NL%%WHITE%Sends you to and nearby allies to fight Diablo-Clone in the Pandemonium Fortress}%WHITE%										// Vision of Terror	 (DClone)
+ItemDisplay[FILTLVL=1 dcma]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Diablo Walks the Earth%NL%%WHITE%Sends you and nearby allies to fight Diablo-Clone in the Pandemonium Fortress}%WHITE%											// Vision of Terror	 (DClone)
 ItemDisplay[FILTLVL=1 dcso]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%WHITE%Combine with %ORANGE%Black Soulstone %WHITE%and %ORANGE%Pure Demonic Essence %WHITE%to access Diablo-Clone%NL%%GRAY%(Mephisto / Diablo / Baal)}%WHITE%	// Prime Evil Soul	 (DClone ingredient)
 ItemDisplay[FILTLVL=1 dcho]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%WHITE%Combine with %ORANGE%Prime Evil Soul %WHITE%and %ORANGE%Pure Demonic Essence %WHITE%to access Diablo-Clone%NL%%GRAY%(Uber Tristram)}%WHITE%		// Black Soulstone	 (DClone ingredient)
 ItemDisplay[FILTLVL=1 dcbl]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%WHITE%Combine with %ORANGE%Black Soulstone %WHITE%and %ORANGE%Prime Evil Soul %WHITE%to access Diablo-Clone%NL%%GRAY%(Map Bosses)}%WHITE%			// Pure Demonic Essence	 (DClone ingredient)
@@ -526,7 +526,7 @@ ItemDisplay[(amu OR rin) !ID RARE]:	%DOT-6D%%TIER-9%  %NAME%  %WHITE%			// highl
 // +-------------------+
 // Catchall - Non-Equipment
 ItemDisplay[(ILVL>1 OR QTY>0 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR jew OR jewf OR cm1 OR cm2 OR cm3 OR ram OR RUNE>0 OR GEMTYPE>0 OR rvs OR rvl OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5 OR yps OR wms OR vps OR bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR tbk OR ibk OR tsc OR isc OR key OR ear OR std OR wss OR lbox OR lpp OR lmal OR ubtm OR dcma OR rtma OR dcso OR dcho OR dcbl OR rtmv OR rtmo OR rtmf OR cwss OR rtp OR rid OR lsvl OR llmr OR rkey OR uba OR ubaa OR ubab OR ubac OR imma OR imra OR upma OR scou OR rera OR upmp OR fort OR scrb OR irma OR irra OR rrra OR urma OR MAPTIER>-1 OR pvpp OR iwss OR cm2f)]: %BORDER-62%%TIER-9%%NAME%{%NAME%}%WHITE%	// notifications for unknown items (future-proofing)
-ItemDisplay[!(ARMOR OR (WEAPON !(opl OR opm OR ops OR gpl OR gpm OR gps)) OR ((amu OR rin) (UNI OR SET OR CRAFT)) OR ((jew OR cm1 OR cm2 OR cm3) UNI) OR ram)]: %NAME%{%NAME%}%WHITE%	// displays most non-equipment items as normal
+ItemDisplay[!(ARMOR OR (WEAPON !(opl OR opm OR ops OR gpl OR gpm OR gps OR tpfs OR tpfm OR tpfl OR tpgs OR tpgm OR tpgl OR tpcs OR tpcm OR tpcl OR tpls OR tplm OR tpll)) OR ((amu OR rin) (UNI OR SET OR CRAFT)) OR ((jew OR cm1 OR cm2 OR cm3) UNI) OR ram)]: %NAME%{%NAME%}%WHITE%	// displays most non-equipment items as normal
 
 // Modification: Sockets (regular items are handled in their own category)
 ItemDisplay[!NMAG SOCK>0]: %NAME% %GRAY%[%SOCKETS%]%CONTINUE%
