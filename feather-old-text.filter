@@ -753,7 +753,7 @@ ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED ((GLOVES (TABSK0>2 OR TABSK2>2 O
 ItemDisplay[!NMAG ID SHOP]: %NAME%%GRAY%	// removes description and makes price gray
 
 // Alternative Rules - Weapon Speed & Melee Range
-ItemDisplay[FILTLVL=1 !EQUIPPED !NMAG ID WEAPON !(WAND OR SOR) STAT486=0 (NORM OR EXC OR (SOCK=0 STAT360=0) OR MAG OR RARE OR CRAFT)]: %NAME%{%NAME%%NL%}%CONTINUE%		// Adds new line for items that already have something in their description (everything except unique/set elite weapons that either have sockets or cannot gain sockets)
+ItemDisplay[FILTLVL=1 !EQUIPPED !NMAG ID WEAPON !(WAND OR SOR) STAT486=0 (NORM OR EXC OR (SOCK=0 STAT360=0 !THROWING) OR MAG OR RARE OR CRAFT)]: %NAME%{%NAME%%NL%}%CONTINUE%		// Adds new line for items that already have something in their description (everything except unique/set elite weapons that either have sockets or cannot gain sockets)
 ItemDisplay[FILTLVL=1 !EQUIPPED !NMAG ID WEAPON !(BOW OR XBOW OR WAND OR SOR)]: %NAME%{%NAME%%WHITE%Melee Range: %RANGE%%NL%}%CONTINUE%
 ItemDisplay[FILTLVL=1 !EQUIPPED !NMAG ID WEAPON !(WAND OR SOR)]: %NAME%{%NAME%%WHITE%Weapon Speed: %WPNSPD%}%CONTINUE%
 
