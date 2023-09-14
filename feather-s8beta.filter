@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II	(HD text version)
-//		Date Updated:	10 SEPT 2023
+//		Date Updated:	14 SEPT 2023
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Searchable Features:
@@ -18,9 +18,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 
 
-// TODO for Season 8:
-// 	Update set bonuses if any have changed
-// 	Review other patch note changes
 
 // +---------------+
 //-¦ Filter Levels ¦-----------------------------------------------------------------------------------------------------
@@ -201,7 +198,6 @@ ItemDisplay[t52]:	Stygian Caverns%CONTINUE%									// fixes name for "Warlord o
 ItemDisplay[t53]:	Fallen Gardens%CONTINUE%									// fixes name for "Fallen Gardens" unique map
 ItemDisplay[MAPTIER=5 !ID]:	%NAME% Map%CONTINUE%									// standardizes fixed maps
 ItemDisplay[MAPTIER=5 ID]:	Map%NL%%NAME%%CONTINUE%									// standardizes fixed maps
-ItemDisplay[STAT360>0 (MAPID=181 OR MAPID=182)]: %NAME%%RED%*{%NAME%}%CONTINUE%						// marks pre-corrupted items within Stygian Caverns
 ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key OR MAPTIER>-1)]: %NAME% %WHITE%×%QTY%%CONTINUE%		// appends quantity
 
 // Quest Items
@@ -871,7 +867,7 @@ ItemDisplay[FILTLVL=1 SET ID !EQUIPPED ((xrn REPLIFE>29 STAT43>36) OR (xcl !TABS
 //ItemDisplay[FILTLVL=1 SET ID !EQUIPPED xcl !TABSK49>1]:		%NAME%{%NAME%}%CONTINUE%																	// Hwanin's Refuge
 //ItemDisplay[FILTLVL=1 SET ID !EQUIPPED mbl STAT144>3]:		%NAME%{%NAME%}%CONTINUE%																	// Hwanin's Blessing
 ItemDisplay[FILTLVL=1 SET ID !EQUIPPED 9vo]:				%NAME%{%NL%%GREEN%20% Chance to cast level 16 Static Field on striking %GRAY%<2>%NAME%}%CONTINUE%								// Hwanin's Justice
-ItemDisplay[FILTLVL=1 SET ID !EQUIPPED ((xhm STAT136=35) OR (ztb STAT62>3) OR (xvg STAT156>19) OR (xml !STAT110>74))]: %NAME%{%NL%%GOLD%80% Better Chance of Getting Magic Items%NL%Attacker Takes Damage of 250 %GRAY%<3>%NL%%GOLD%All Resistances +30%NL%+35 to Life %GRAY%<2>%NL%%GOLD%+50 to Life%NL%+10 to Dexterity%NL%+20 to Strength%NL%+100 Defense%NL%%WHITE%Set Bonuses:%NL%%NAME%}%CONTINUE%	// Orphan's Call
+ItemDisplay[FILTLVL=1 SET ID !EQUIPPED ((xhm STAT136=35) OR (ztb STAT62>3) OR (xvg STAT156>19) OR (xml !STAT110>74))]: %NAME%{%NL%%GOLD%80% Better Chance of Getting Magic Items%NL%Attacker Takes Damage of 250 %GRAY%<3>%NL%%GOLD%All Resistances +30%NL%+35 to Life %GRAY%<2>%NL%%GOLD%+100 to Life%NL%+10 to Dexterity%NL%+20 to Strength%NL%+100 Defense%NL%%WHITE%Set Bonuses:%NL%%NAME%}%CONTINUE%	// Orphan's Call
 ItemDisplay[FILTLVL=1 SET ID !EQUIPPED xhm STAT136=35]:			%NAME%{%NL%%GREEN%-20% Target Defense %GRAY%<2>%NAME%}%CONTINUE%												// Guillaume's Face
 ItemDisplay[FILTLVL=1 SET ID !EQUIPPED ztb STAT62>3]:			%NAME%{%NL%%GREEN%+100% Damage to Demons %GRAY%<3>%NAME%}%CONTINUE%												// Wilhelm's Pride
 ItemDisplay[FILTLVL=1 SET ID !EQUIPPED xvg STAT156>19]:			%NAME%{%NL%%GREEN%+100% Damage to Undead %GRAY%<3>%NAME%}%CONTINUE%												// Magnus' Skin
@@ -896,8 +892,8 @@ ItemDisplay[FILTLVL=1 SET ID !EQUIPPED xrs STAT32>199]:			%NAME%{%NL%%GREEN%+20%
 ItemDisplay[FILTLVL=1 SET ID !EQUIPPED uts STAT224=0]:			%NAME%{%NL%%GREEN%+1 to All Skills %GRAY%<3>%NAME%}%CONTINUE%													// Taebaek's Glory
 ItemDisplay[FILTLVL=1 SET ID !EQUIPPED 7ma]:				%NAME%{%NL%%GREEN%+2 to All Skills %GRAY%<3>%NAME%}%CONTINUE%													// Dangoon's Teaching
 ItemDisplay[FILTLVL=1 SET ID !EQUIPPED (7gd OR 7fb OR (rin ED>14))]: %NAME%{%NL%%GOLD%+500 Defense%NL%25% Deadly Strike%NL%25% Chance of Crushing Blow%NL%+200 fire damage%NL%+200% Damage to Undead%NL%+200% Damage to Demons%NL%+200 to Attack Rating%NL%+2 to All Skills%NL%%WHITE%Set Bonuses:%NL%%NAME%}%CONTINUE%	// Bul-Kathos' Children
-//ItemDisplay[FILTLVL=1 SET ID !EQUIPPED 7gd]:				%NAME%{%NAME%}%CONTINUE%																	// Bul-Kathos' Sacred Charge
-//ItemDisplay[FILTLVL=1 SET ID !EQUIPPED 7fb]:				%NAME%{%NAME%}%CONTINUE%																	// Bul-Kathos' Tribal Guardian
+ItemDisplay[FILTLVL=1 SET ID !EQUIPPED 7gd]:				%NAME%{%NL%%GREEN%+30% Increased Attack Speed %GRAY%<2>%NAME%}%CONTINUE%											// Bul-Kathos' Sacred Charge
+ItemDisplay[FILTLVL=1 SET ID !EQUIPPED 7fb]:				%NAME%{%NL%%GREEN%+50% Enhanced Damage %GRAY%<2>%NAME%}%CONTINUE%												// Bul-Kathos' Tribal Guardian
 ItemDisplay[FILTLVL=1 SET ID !EQUIPPED rin ED>14]:			%NAME%{%NL%%GREEN%Cannot Be Frozen %GRAY%<2>%NAME%}%CONTINUE%													// Bul-Kathos' Death Band
 // ... Class-Focused Sets																										
 ItemDisplay[FILTLVL=1 SET ID !EQUIPPED (dr8 OR (uul TABSK41>0) OR (xtb STAT39>39) OR 9mt)]: %NAME%{%NL%%GOLD%50% Better Chance of Getting Magic Items %GRAY%<3>%NL%%GOLD%All Resistances +50%NL%+150 to Mana%NL%+15 to Energy%NL%+150 Defense%NL%10% Mana stolen per hit%NL%150% Bonus to Attack Rating %GRAY%<2>%NL%%GOLD%+350% Enhanced Damage%NL%+10% Faster Cast Rate %GRAY%<2>%NL%%GOLD%+20% Faster Cast Rate %GRAY%<3>%NL%%GOLD%+3 to Druid Skill Levels%NL%%WHITE%Set Bonuses:%NL%%NAME%}%CONTINUE%	// Aldur's Watchtower
@@ -910,7 +906,7 @@ ItemDisplay[FILTLVL=1 SET ID !EQUIPPED urn STAT234>0]:			%NAME%{%NL%%GREEN%+2 to
 ItemDisplay[FILTLVL=1 SET ID !EQUIPPED xar CLSK3>0]:			%NAME%{%NL%%GREEN%+30% Faster Cast Rate %GRAY%<2>%NAME%}%CONTINUE%												// Griswold's Heart
 //ItemDisplay[FILTLVL=1 SET ID !EQUIPPED paf]:				%NAME%{%NAME%}%CONTINUE%																	// Griswold's Honor
 ItemDisplay[FILTLVL=1 SET ID !EQUIPPED 7ws CLSK3=0]:			%NAME%{%NL%%GREEN%+2 to Combat Skills (Paladin Only) %GRAY%<2>%NL%%GREEN%Adds 10-20 damage %GRAY%<3>%NL%%GREEN%Adds 10-20 damage%NAME%}%CONTINUE%		// Griswold's Redemption
-ItemDisplay[FILTLVL=1 SET ID !EQUIPPED (ba5 OR (uar TABSK32>2) OR (xhb AR>89) OR (zhb STAT41>25) OR (xhg DEX>19) OR 7m7)]: %NAME%{%NL%%GOLD%Magic Damage Taken Reduced by 10%NL%All Resistances +50%NL%+150 to Life%NL%+50 to Attack Rating %GRAY%<2>%NL%%GOLD%+75 to Attack Rating %GRAY%<3>%NL%%GOLD%+125 to Attack Rating %GRAY%<4>%NL%%GOLD%+200 to Attack Rating %GRAY%<5>%NL%%GOLD%+3 to Barbarian Skill Levels%NL%%WHITE%Set Bonuses:%NL%%NAME%}%CONTINUE%	// Immortal King
+ItemDisplay[FILTLVL=1 SET ID !EQUIPPED (ba5 OR (uar TABSK32>2) OR (xhb AR>89) OR (zhb STAT41>25) OR (xhg DEX>19) OR 7m7)]: %NAME%{%NL%%GOLD%Magic Damage Taken Reduced by 10%NL%All Resistances +50%NL%+150 to Life%NL%+50 to Attack Rating %GRAY%<2>%NL%%GOLD%+75 to Attack Rating %GRAY%<3>%NL%%GOLD%+125 to Attack Rating %GRAY%<4>%NL%%GOLD%+200 to Attack Rating %GRAY%<5>%NL%%GOLD%+100% Enhanced Damage%NL%+3 to Barbarian Skill Levels%NL%%WHITE%Set Bonuses:%NL%%NAME%}%CONTINUE%	// Immortal King
 ItemDisplay[FILTLVL=1 SET ID !EQUIPPED ba5]:				%NAME%{%NL%%GREEN%Physical Damage Taken Reduced by 8% %GRAY%<3>%NAME%}%CONTINUE%										// Immortal King's Will
 ItemDisplay[FILTLVL=1 SET ID !EQUIPPED uar TABSK32>2]:			%NAME%{%NL%%GREEN%+25% Faster Hit Recovery %GRAY%<2>%NL%%GREEN%Cold Resist +40% %GRAY%<3>%NL%%GREEN%Fire Resist +40% %GRAY%<4>%NL%%GREEN%Lightning Resist +40% %GRAY%<5>%NL%%GREEN%+50% Enhanced Defense%NAME%}%CONTINUE%					// Immortal King's Soul Cage
 ItemDisplay[FILTLVL=1 SET ID !EQUIPPED xhb AR>89]:			%NAME%{%NL%%GREEN%25% Better Chance of Getting Magic Items %GRAY%<2>%NL%%GREEN%+2 to Combat Skills (Barbarian Only) %GRAY%<3>%NL%%GREEN%+160 Defense %GRAY%<4>%NL%%GREEN%Half Freeze Duration %GRAY%<5>%NAME%}%CONTINUE%					// Immortal King's Pillar
@@ -1045,7 +1041,7 @@ ItemDisplay[NMAG !ID]: %NAME%
 // Descriptions for item prices
 ItemDisplay[NMAG !SHOP !EQUIPPED]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%
 
-// Descriptions for available Runewords																										// ...New RWs that span multiple item types: Plague (3s weapons, Cham+Fal+Um), Rampage (4s polearms/spears/staves, Shael+El+Ith+Eth), Zenith (5s polearms/spears/staves/bows/crossbows, Jah+Zod+Ort+El+Ral), Neophyte (2s orbs/clubs/scepters/staves, Thul+Tir), Asylum (6s hammers/staves/polearms/spears/bows/crossbows, Gul+Cham+Hel+Jah+Dol+Um)
+// Descriptions for available Runewords																										// ...New RWs that span multiple item types: Plague (3s weapons, Cham+Fal+Um), Rampage (4s polearms/spears/staves, Shael+El+Ith+Eth), Zenith (5s polearms/spears/staves/bows/crossbows, Jah+Zod+Ort+El+Ral), Neophyte (2s orbs/clubs/scepters/staves, Thul+Tir), Asylum (6s hammers/two-handed-swords/staves/polearms/spears/bows/crossbows, Gul+Cham+Hel+Jah+Dol+Um)
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (HELM OR CIRC) SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Nadir, Lore}%CONTINUE%														// Helm 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (HELM OR CIRC) SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Flickering Flame, Dream, Ferocity%NL%%WHITE%Runewords: %GOLD%Radiance, Wisdom, Delirium,}%CONTINUE%							// Helm 3s			...differences: Ferocity (new, Zod+Cham+Shael), Wisdom (new, Pul+Ith+Eld), Flickering Flame (new, Nef+Pul+Vex)
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 CHEST SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Stealth, Smoke, Prudence}%CONTINUE%														// Armor 2s
@@ -1085,7 +1081,8 @@ ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=2]: %NAME%{%NAME%%NL%%WHI
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Crescent Moon, Venom, Fury, Plague%NL%%WHITE%Runewords: %GOLD%Malice, King's Grace, Lawbringer,}%CONTINUE%							// Sword 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Famine, Phoenix, Hand of Justice%NL%Oath, Rift, Kingslayer, Fortitude,%NL%%WHITE%Runewords: %GOLD%Spirit, Passion, Voice of Reason,}%CONTINUE%		// Sword 4s			...differences: Rift, Famine
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=5]: %NAME%{%NAME%%NL%%GOLD%Grief, Eternity, Destruction, Doom%NL%%WHITE%Runewords: %GOLD%Honor, Death, Call to Arms,}%CONTINUE%								// Sword 5s			...differences: Doom
-ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=6]: %NAME%{%NAME%%NL%%GOLD%Last Wish, Breath of the Dying%NL%%WHITE%Runewords: %GOLD%Unbending Will, Silence,}%CONTINUE%									// Sword 6s			...differences: Unbending Will (new, Fal+Io+Ith+Eld+El+Hel)
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=6 1H]: %NAME%{%NAME%%NL%%GOLD%Last Wish, Breath of the Dying%NL%%WHITE%Runewords: %GOLD%Unbending Will, Silence,}%CONTINUE%								// Sword 6s (1H)		...differences: Unbending Will (new, Fal+Io+Ith+Eld+El+Hel)
+ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 SWORD SOCK=6 2H]: %NAME%{%NAME%%NL%%GOLD%Last Wish, Asylum, Breath of the Dying%NL%%WHITE%Runewords: %GOLD%Unbending Will, Silence,}%CONTINUE%							// Sword 6s (2H)		...differences: Unbending Will (new, Fal+Io+Ith+Eld+El+Hel)
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 AXE SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Steel, Strength, Wind}%CONTINUE%														// Axe 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 AXE SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Venom, Fury, Plague%NL%%WHITE%Runewords: %GOLD%Malice, Crescent Moon,}%CONTINUE%										// Axe 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 AXE SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Fortitude, Famine, Phoenix, Hand of Justice%NL%%WHITE%Runewords: %GOLD%Passion, Oath, Kingslayer,}%CONTINUE%							// Axe 4s
@@ -1142,7 +1139,8 @@ ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SWORD SOCK=2]: %NAME%{%NAME%%NL%%GOLD
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SWORD SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Plague %GRAY%Cham+Fal+Um%NL%%GOLD%Fury %GRAY%Jah+Gul+Eth%NL%%GOLD%Venom %GRAY%Tal+Dol+Mal%NL%%GOLD%Crescent Moon %GRAY%Shael+Um+Tir%NL%%GOLD%Lawbringer %GRAY%Amn+Lem+Ko%NL%%GOLD%King's Grace %GRAY%Amn+Ral+Thul%NL%%GOLD%Malice %GRAY%Ith+El+Eth%NL%%WHITE%Possible Runewords:}%CONTINUE%																										// Sword 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SWORD SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Hand of Justice %GRAY%Sur+Cham+Amn+Lo%NL%%GOLD%Phoenix %GRAY%Vex+Vex+Lo+Jah%NL%%GOLD%Famine %GRAY%Fal+Ohm+Ort+Jah%NL%%GOLD%Fortitude %GRAY%El+Sol+Dol+Lo%NL%%GOLD%Kingslayer %GRAY%Mal+Um+Gul+Fal%NL%%GOLD%Rift %GRAY%Hel+Ko+Lem+Gul%NL%%GOLD%Oath %GRAY%Shael+Pul+Mal+Lum%NL%%GOLD%Voice of Reason %GRAY%Lem+Ko+El+Eld%NL%%GOLD%Passion %GRAY%Dol+Ort+Eld+Lem%NL%%GOLD%Spirit %GRAY%Tal+Thul+Ort+Amn%NL%%WHITE%Possible Runewords:}%CONTINUE%								// Sword 4s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SWORD SOCK=5]: %NAME%{%NAME%%NL%%GOLD%Doom %GRAY%Hel+Ohm+Um+Lo+Cham%NL%%GOLD%Destruction %GRAY%Vex+Lo+Ber+Jah+Ko%NL%%GOLD%Eternity %GRAY%Amn+Ber+Ist+Sol+Sur%NL%%GOLD%Grief %GRAY%Eth+Tir+Lo+Mal+Ral%NL%%GOLD%Call to Arms %GRAY%Amn+Ral+Mal+Ist+Ohm%NL%%GOLD%Death %GRAY%Hel+El+Vex+Ort+Gul%NL%%GOLD%Honor %GRAY%Amn+El+Ith+Tir+Sol%NL%%WHITE%Possible Runewords:}%CONTINUE%																				// Sword 5s
-ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SWORD SOCK=6]: %NAME%{%NAME%%NL%%GOLD%Breath of the Dying %GRAY%Vex+Hel+El+Eld+Zod+Eth%NL%%GOLD%Last Wish %GRAY%Jah+Mal+Jah+Sur+Jah+Ber%NL%%GOLD%Silence %GRAY%Dol+Eld+Hel+Ist+Tir+Vex%NL%%GOLD%Unbending Will %GRAY%Fal+Io+Ith+Eld+El+Hel%NL%%WHITE%Possible Runewords:}%CONTINUE%																																// Sword 6s
+ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SWORD SOCK=6 1H]: %NAME%{%NAME%%NL%%GOLD%Breath of the Dying %GRAY%Vex+Hel+El+Eld+Zod+Eth%NL%%GOLD%Last Wish %GRAY%Jah+Mal+Jah+Sur+Jah+Ber%NL%%GOLD%Silence %GRAY%Dol+Eld+Hel+Ist+Tir+Vex%NL%%GOLD%Unbending Will %GRAY%Fal+Io+Ith+Eld+El+Hel%NL%%WHITE%Possible Runewords:}%CONTINUE%																															// Sword 6s (1H)
+ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 SWORD SOCK=6 2H]: %NAME%{%NAME%%NL%%GOLD%Breath of the Dying %GRAY%Vex+Hel+El+Eld+Zod+Eth%NL%%GOLD%Asylum %GRAY%Gul+Cham+Hel+Jah+Dol+Um%NL%%GOLD%Last Wish %GRAY%Jah+Mal+Jah+Sur+Jah+Ber%NL%%GOLD%Silence %GRAY%Dol+Eld+Hel+Ist+Tir+Vex%NL%%GOLD%Unbending Will %GRAY%Fal+Io+Ith+Eld+El+Hel%NL%%WHITE%Possible Runewords:}%CONTINUE%																										// Sword 6s (2H)
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 AXE SOCK=2]: %NAME%{%NAME%%NL%%GOLD%Wind %GRAY%Sur+El%NL%%GOLD%Strength %GRAY%Amn+Tir%NL%%GOLD%Steel %GRAY%Tir+El%NL%%WHITE%Possible Runewords:}%CONTINUE%																																															// Axe 2s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 AXE SOCK=3]: %NAME%{%NAME%%NL%%GOLD%Plague %GRAY%Cham+Fal+Um%NL%%GOLD%Fury %GRAY%Jah+Gul+Eth%NL%%GOLD%Venom %GRAY%Tal+Dol+Mal%NL%%GOLD%Crescent Moon %GRAY%Shael+Um+Tir%NL%%GOLD%Malice %GRAY%Ith+El+Eth%NL%%WHITE%Possible Runewords:}%CONTINUE%																																				// Axe 3s
 ItemDisplay[NMAG !SHOP !EQUIPPED FILTLVL=1 AXE SOCK=4]: %NAME%{%NAME%%NL%%GOLD%Hand of Justice %GRAY%Sur+Cham+Amn+Lo%NL%%GOLD%Phoenix %GRAY%Vex+Vex+Lo+Jah%NL%%GOLD%Famine %GRAY%Fal+Ohm+Ort+Jah%NL%%GOLD%Fortitude %GRAY%El+Sol+Dol+Lo%NL%%GOLD%Kingslayer %GRAY%Mal+Um+Gul+Fal%NL%%GOLD%Oath %GRAY%Shael+Pul+Mal+Lum%NL%%GOLD%Passion %GRAY%Dol+Ort+Eld+Lem%NL%%WHITE%Possible Runewords:}%CONTINUE%																							// Axe 4s
