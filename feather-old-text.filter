@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II	(old text version)
-//		Date Updated:	17 SEPT 2023
+//		Date Updated:	20 SEPT 2023
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Searchable Features:
@@ -205,37 +205,37 @@ ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key OR MAPTIER>-1)]: %
 //ItemDisplay[(bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2)]: %NAME%{%NAME%}	// non-equipment (listed here for reference)
 
 // Endgame Quest Items  (includes notifications)
-ItemDisplay[tes !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Andariel & Duriel)}%WHITE%					// Twisted Essence of Suffering
-ItemDisplay[ceh !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Mephisto)}%WHITE%						// Charged Essence of Hatred
-ItemDisplay[bet !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Diablo)}%WHITE%						// Burning Essence of Terror
-ItemDisplay[fed !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Baal)}%WHITE%							// Festering Essence of Destruction
+ItemDisplay[tes !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Token ingredient%NL%%GRAY%(Andariel & Duriel)}%WHITE%		// Twisted Essence of Suffering
+ItemDisplay[ceh !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Token ingredient%NL%%GRAY%(Mephisto)}%WHITE%			// Charged Essence of Hatred
+ItemDisplay[bet !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Token ingredient%NL%%GRAY%(Diablo)}%WHITE%			// Burning Essence of Terror
+ItemDisplay[fed !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Token ingredient%NL%%GRAY%(Baal)}%WHITE%			// Festering Essence of Destruction
 ItemDisplay[toa]:		%ORANGE%%DOT-60%%TIER-9%  Token of Absolution  {%WHITE%Right-click to reset Stat/Skill Points}%WHITE%	// Token of Absolution
 ItemDisplay[pk1 !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Countess / Blood Raven)}%WHITE%				// Key of Terror
-ItemDisplay[pk2 !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Summoner / Bloodwitch)}%WHITE%				// Key of Hatred
+ItemDisplay[pk2 !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Summoner / Bloodwitch)}%WHITE%				// Key of Hate
 ItemDisplay[pk3 !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Nihlathak / Izual)}%WHITE%					// Key of Destruction
-ItemDisplay[dhn !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Matron's Den)}%WHITE%							// Diablo's Horn	 (Lilith)
-ItemDisplay[bey !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Forgotten Sands)}%WHITE%						// Baal's Eye		 (Uber Duriel)
-ItemDisplay[mbr !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Furnace of Pain)}%WHITE%						// Mephisto's Brain	 (Uber Izual)
+ItemDisplay[dhn !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Tristram ingredient%NL%%GRAY%(Matron's Den)}%WHITE%		// Diablo's Horn	 (Lilith)
+ItemDisplay[bey !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Tristram ingredient%NL%%GRAY%(Forgotten Sands)}%WHITE%		// Baal's Eye		 (Uber Duriel)
+ItemDisplay[mbr !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Tristram ingredient%NL%%GRAY%(Furnace of Pain)}%WHITE%		// Mephisto's Brain	 (Uber Izual)
 
 // PD2 Items  (includes notifications)
 ItemDisplay[wss]:		%DOT-62%%TIER-9% %NAME% {%WHITE%Can also add corruption modifiers to maps%NL%Corrupts equipment, either adding a modifier or turning it into a random rare}%WHITE%	// Worldstone Shard
 ItemDisplay[lbox]:		%MAP-53%%TIER-9%        %NAME%        {%WHITE%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%						// Larzuk's Puzzlebox
 ItemDisplay[lpp]:		%MAP-53%%TIER-9%    %NAME%    {%WHITE%Cannot be used with unique or set items%NL%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%		// Larzuk's Puzzlepiece
 ItemDisplay[cwss]:		%MAP-62%%TIER-9%    %NAME%    {%WHITE%Corrupts %GOLD%Annihilus%WHITE%, either adding a modifier or turning it into a random magic small charm}%WHITE%			// Tainted Worldstone Shard
-ItemDisplay[ubtm !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Witness the Fall of Tristram}%WHITE%													// Pandemonium Talisman   (Uber Tristram)
-ItemDisplay[uba !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%NAME%}%WHITE%																// Relic of the Ancients  (Uber Ancients)
-ItemDisplay[ubaa !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(T1 Maps)}%WHITE%															// Sigil of Madawc	  (Uber Ancients ingredient)
-ItemDisplay[ubab !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(T2 Maps)}%WHITE%															// Sigil of Talic	  (Uber Ancients ingredient)
-ItemDisplay[ubac !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%GRAY%(T3 Maps)}%WHITE%															// Sigil of Korlic	  (Uber Ancients ingredient)
-ItemDisplay[dcma !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Diablo Walks the Earth}%WHITE%														// Vision of Terror	  (DClone)
-ItemDisplay[dcso !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Mephisto / Diablo / Baal)}%WHITE%								// Prime Evil Soul	  (DClone ingredient)
-ItemDisplay[dcho !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Uber Tristram)}%WHITE%									// Black Soulstone	  (DClone ingredient)
-ItemDisplay[dcbl !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%GRAY%(Map Bosses)}%WHITE%									// Pure Demonic Essence	  (DClone ingredient)
-ItemDisplay[rtma !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Rathma Awaits You}%WHITE%														// Voidstone		  (Rathma)
-ItemDisplay[rtmv !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Shadow of Mendeln)}%WHITE%										// Splinter of the Void   (Rathma ingredient)
-ItemDisplay[rtmo !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%GRAY%(Undead Enemies)}%WHITE%										// Trang-Oul's Jawbone	  (Rathma ingredient)
-ItemDisplay[cm2f]:		%GOLD%%MAP%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%WHITE%Stackable %GOLD%Hellfire Torch %WHITE%ingredient}%WHITE%						// Hellfire Ashes	  (Rathma ingredient)
-ItemDisplay[rtmf]:		%DOT-60%%TIER-9%  %NAME%  {%GOLD%Fragments of Trang-Oul's Jawbone%NL%%WHITE%Jawbone Recipe: 2 %ORANGE%Ancient Bone Fragments %WHITE%+ %GOLD%Hellfire Torch}%WHITE%	// Ancient Bone Fragments (legacy item from season 4)
+ItemDisplay[ubtm !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Sends you to fight the Uber Prime Evils in Tristram}%WHITE%										// Pandemonium Talisman   (Uber Tristram)
+ItemDisplay[uba !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Sends you to fight the Uber Ancients}%WHITE%												// Relic of the Ancients  (Uber Ancients)
+ItemDisplay[ubaa !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Ancients ingredient%NL%%GRAY%(T1 Maps)}%WHITE%											// Sigil of Madawc	  (Uber Ancients ingredient)
+ItemDisplay[ubab !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Ancients ingredient%NL%%GRAY%(T2 Maps)}%WHITE%											// Sigil of Talic	  (Uber Ancients ingredient)
+ItemDisplay[ubac !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Ancients ingredient%NL%%GRAY%(T3 Maps)}%WHITE%											// Sigil of Korlic	  (Uber Ancients ingredient)
+ItemDisplay[dcma !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Diablo Walks the Earth%NL%%WHITE%Sends you to fight Diablo-Clone}%WHITE%								// Vision of Terror	  (DClone)
+ItemDisplay[dcso !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%WHITE%Diablo-Clone ingredient%NL%%GRAY%(Mephisto / Diablo / Baal)}%WHITE%			// Prime Evil Soul	  (DClone ingredient)
+ItemDisplay[dcho !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%WHITE%Diablo-Clone ingredient%NL%%GRAY%(Uber Tristram)}%WHITE%					// Black Soulstone	  (DClone ingredient)
+ItemDisplay[dcbl !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%WHITE%Diablo-Clone ingredient%NL%%GRAY%(Map Bosses)}%WHITE%					// Pure Demonic Essence	  (DClone ingredient)
+ItemDisplay[rtma !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Sends you to fight Rathma and his minions}%WHITE%											// Voidstone		  (Rathma)
+ItemDisplay[rtmv !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Rathma ingredient%NL%%GRAY%(Shadow of Mendeln)}%WHITE%										// Splinter of the Void   (Rathma ingredient)
+ItemDisplay[rtmo !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Rathma ingredient%NL%%GRAY%(Undead Enemies)}%WHITE%											// Trang-Oul's Jawbone	  (Rathma ingredient)
+ItemDisplay[cm2f]:		%GOLD%%MAP%%TIER-9%  %NAME%  {%WHITE%Stackable %GOLD%Hellfire Torch %WHITE%ingredient (Rathma)}%WHITE%									// Hellfire Ashes	  (Rathma ingredient)
+ItemDisplay[rtmf]:		%DOT-60%%TIER-9%  %NAME%  {%WHITE%Jawbone Recipe: 2 %ORANGE%Ancient Bone Fragments %WHITE%+ %GOLD%Hellfire Torch}%WHITE%						// Ancient Bone Fragments (legacy item from season 4)
 ItemDisplay[rtp]:		%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%															// Horadrim Navigator
 ItemDisplay[rid]:		%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%															// Horadrim Almanac
 ItemDisplay[rkey]:		%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%															// Skeleton Key
@@ -250,10 +250,10 @@ ItemDisplay[(imma OR irma)]:	%NAME%{%WHITE%Raises Map Rarity from Common to Magi
 ItemDisplay[(imra OR irra)]:	%NAME%{%WHITE%Raises Map Rarity from Common to Rare}%CONTINUE%														// Infused Zakarum Orb
 ItemDisplay[(upma OR urma)]:	%NAME%{%WHITE%Raises Map Rarity from Magic to Rare}%CONTINUE%														// Infused Angelic Orb
 ItemDisplay[(rera OR rrra)]:	%NAME%{%WHITE%Rerolls Rare Map Affixes}%CONTINUE%															// Infused Horadrim Orb
-ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%%NAME%}%WHITE%															// Arcane Orb		  (Common -> Magic)
-ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%NAME%}%WHITE%							// Zakarum Orb		  (Common -> Rare)
-ItemDisplay[upma]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ P%GRAY%.%WHITE%Skull + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%NAME%}%WHITE%					// Angelic Orb		  (Magic -> Rare)
-ItemDisplay[rera]:	%NAME%{%GOLD%Orb %WHITE%+ %YELLOW%Map %WHITE%+ P%GRAY%.%WHITE%Gem + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%NAME%}%WHITE%					// Horadrim Orb		  (Reroll Rare)
+ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%%NAME%}%CONTINUE%														// Arcane Orb		  (Common -> Magic)
+ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%NAME%}%CONTINUE%							// Zakarum Orb		  (Common -> Rare)
+ItemDisplay[upma]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ P%GRAY%.%WHITE%Skull + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%NAME%}%CONTINUE%					// Angelic Orb		  (Magic -> Rare)
+ItemDisplay[rera]:	%NAME%{%GOLD%Orb %WHITE%+ %YELLOW%Map %WHITE%+ P%GRAY%.%WHITE%Gem + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%NAME%}%CONTINUE%					// Horadrim Orb		  (Reroll Rare)
 ItemDisplay[scou]:	%NAME%{%WHITE%Lowers Map Rarity to Common}%WHITE%																// Orb of Destruction	  (Magic/Rare -> Common)
 ItemDisplay[upmp]:	%NAME%{%WHITE%Combines three maps to create one of a higher tier}%WHITE%													// Cartographer's Orb	  (3 T1 Maps -> 1 T2 Map or 3 T2 Maps -> 1 T3 Map)
 ItemDisplay[fort]:	%GOLD%%NAME%{%WHITE%Fortified monsters have doubled life and deal 20% extra damage%NL%Halves number of map monsters and doubles loot/experience gained from them}%WHITE%	// Orb of Fortification
@@ -280,13 +280,13 @@ ItemDisplay[FILTLVL=1 ceh]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine wi
 ItemDisplay[FILTLVL=1 bet]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Diablo)}%WHITE%									// Burning Essence of Terror
 ItemDisplay[FILTLVL=1 fed]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Baal)}%WHITE%									// Festering Essence of Destruction
 ItemDisplay[FILTLVL=1 pk1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %WHITE%from the other Keybearers to open a portal%NL%%GRAY%(Countess / Blood Raven)}%WHITE%			// Key of Terror
-ItemDisplay[FILTLVL=1 pk2]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %WHITE%from the other Keybearers to open a portal%NL%%GRAY%(Summoner / Bloodwitch)}%WHITE%			// Key of Hatred
+ItemDisplay[FILTLVL=1 pk2]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %WHITE%from the other Keybearers to open a portal%NL%%GRAY%(Summoner / Bloodwitch)}%WHITE%			// Key of Hate
 ItemDisplay[FILTLVL=1 pk3]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%to Matron's Den, Furnace of Pain, or Forgotten Sands%NL%Combine with %ORANGE%Keys %WHITE%from the other Keybearers to open a portal%NL%%GRAY%(Nihlathak / Izual)}%WHITE%			// Key of Destruction
 ItemDisplay[FILTLVL=1 dhn]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine any three %ORANGE%Organs %WHITE%with a %GRAY%Key %WHITE%to access Uber Tristram%NL%%GRAY%(Matron's Den)}%WHITE%										// Diablo's Horn	 (Lilith)
 ItemDisplay[FILTLVL=1 bey]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine any three %ORANGE%Organs %WHITE%with a %GRAY%Key %WHITE%to access Uber Tristram%NL%%GRAY%(Forgotten Sands)}%WHITE%										// Baal's Eye		 (Uber Duriel)
 ItemDisplay[FILTLVL=1 mbr]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine any three %ORANGE%Organs %WHITE%with a %GRAY%Key %WHITE%to access Uber Tristram%NL%%GRAY%(Furnace of Pain)}%WHITE%										// Mephisto's Brain	 (Uber Izual)
 // Alternative Rules for PD2 Items  (includes notifications)
-ItemDisplay[FILTLVL=1 ubtm]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Witness the Fall of Tristram%NL%%WHITE%Sends you and nearby allies to fight the Uber Prime Evils in Tristram}%WHITE%											// Pandemonium Talisman  (Uber Tristram)
+ItemDisplay[FILTLVL=1 ubtm]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Sends you and nearby allies to fight the Uber Prime Evils in Tristram}%WHITE%																// Pandemonium Talisman  (Uber Tristram)
 ItemDisplay[FILTLVL=1 uba]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Sends you and nearby allies to fight the Uber Ancients on Arreat Summit}%WHITE%															// Relic of the Ancients (Uber Ancients)
 ItemDisplay[FILTLVL=1 ubaa]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Sigils %WHITE%from %DARK_GREEN%(%TAN%T2%DARK_GREEN%) %WHITE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %WHITE%maps to access Uber Ancients%NL%%GRAY%(T1 Maps)}%WHITE%			// Sigil of Madawc	 (Uber Ancients ingredient)
 ItemDisplay[FILTLVL=1 ubab]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Sigils %WHITE%from %DARK_GREEN%(%TAN%T1%DARK_GREEN%) %WHITE%& %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %WHITE%maps to access Uber Ancients%NL%%GRAY%(T2 Maps)}%WHITE%			// Sigil of Talic	 (Uber Ancients ingredient)
@@ -295,34 +295,34 @@ ItemDisplay[FILTLVL=1 dcma]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Diablo Walks the E
 ItemDisplay[FILTLVL=1 dcso]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%WHITE%Combine with %ORANGE%Black Soulstone %WHITE%and %ORANGE%Pure Demonic Essence %WHITE%to access Diablo-Clone%NL%%GRAY%(Mephisto / Diablo / Baal)}%WHITE%	// Prime Evil Soul	 (DClone ingredient)
 ItemDisplay[FILTLVL=1 dcho]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%WHITE%Combine with %ORANGE%Prime Evil Soul %WHITE%and %ORANGE%Pure Demonic Essence %WHITE%to access Diablo-Clone%NL%%GRAY%(Uber Tristram)}%WHITE%		// Black Soulstone	 (DClone ingredient)
 ItemDisplay[FILTLVL=1 dcbl]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Stones of Jordan Sold to Merchants%NL%%WHITE%Combine with %ORANGE%Black Soulstone %WHITE%and %ORANGE%Prime Evil Soul %WHITE%to access Diablo-Clone%NL%%GRAY%(Map Bosses)}%WHITE%			// Pure Demonic Essence	 (DClone ingredient)
-ItemDisplay[FILTLVL=1 rtma]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%Rathma Awaits You%NL%%WHITE%Sends you and nearby allies to fight Rathma and his minions in the Necropolis}%WHITE%											// Voidstone		 (Rathma)
-ItemDisplay[FILTLVL=1 rtmv]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%WHITE%Combine with %ORANGE%Trang-Oul's Jawbone %WHITE%and %GOLD%Hellfire Torch %WHITE%to access Rathma%NL%%GRAY%(Shadow of Mendeln)}%WHITE%					// Splinter of the Void  (Rathma ingredient)
-ItemDisplay[FILTLVL=1 rtmo]:	%MAP-60%%TIER-9%  %NAME%  {%GOLD%The Void Calls to You%NL%%WHITE%Combine with %ORANGE%Splinter of the Void %WHITE%and %GOLD%Hellfire Torch %WHITE%to access Rathma%NL%%GRAY%(Undead Enemies)}%WHITE%					// Trang-Oul's Jawbone	 (Rathma ingredient)
+ItemDisplay[FILTLVL=1 rtma]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Sends you and nearby allies to fight Rathma and his minions in the Necropolis}%WHITE%															// Voidstone		 (Rathma)
+ItemDisplay[FILTLVL=1 rtmv]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Trang-Oul's Jawbone %WHITE%and %GOLD%Hellfire Torch %WHITE%to access Rathma%NL%%GRAY%(Shadow of Mendeln)}%WHITE%									// Splinter of the Void  (Rathma ingredient)
+ItemDisplay[FILTLVL=1 rtmo]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Splinter of the Void %WHITE%and %GOLD%Hellfire Torch %WHITE%to access Rathma%NL%%GRAY%(Undead Enemies)}%WHITE%									// Trang-Oul's Jawbone	 (Rathma ingredient)
 ItemDisplay[FILTLVL=1 lsvl]:	%BORDER-62%%TIER-9%%RED%       Vial of Lightsong       {%WHITE%Cannot be used with set items or indestructible items}%WHITE%														// Vial of Lightsong
 ItemDisplay[FILTLVL=1 llmr]:	%BORDER-62%%TIER-9%%RED%        Lilith's Mirror        {%WHITE%Mirrored items cannot be used in any cube recipes}%WHITE%														// Lilith's Mirror
+ItemDisplay[FILTLVL=1 (imma OR imra OR upma OR rera)]:	%NAME%{%WHITE%Can be Infused with non-map ingredients%NL%%NAME%}%WHITE%																		// Infuseable Orbs
 // Alternative Rules for Maps (immunes)
-ItemDisplay[FILTLVL=1 t11]: %NAME%{%WHITE%Highest Immunes: %YELLOW%120% %GREEN%120%}%CONTINUE%						// Ruins of Viz-Jun		T2
-ItemDisplay[FILTLVL=1 t12]: %NAME%{%WHITE%Highest Immunes: %RED%135% %GREEN%120% %GRAY%(Lightning Spire %GREEN%1000%%GRAY%)}%CONTINUE%	// Horazon's Memory		T1
-ItemDisplay[FILTLVL=1 t13]: %NAME%{%WHITE%Highest Immunes: %YELLOW%135% %GOLD%110%}%CONTINUE%						// Bastion Keep			T1
-ItemDisplay[FILTLVL=1 t14]: %NAME%{%WHITE%Highest Immunes: %RED%130% %BLUE%130%}%CONTINUE%						// Sanatorium			T2
-ItemDisplay[FILTLVL=1 t15]: %NAME%{%WHITE%Highest Immunes: %YELLOW%100% %GREEN%105% %ORANGE%150%}%CONTINUE%				// Royal Crypts			T2
-ItemDisplay[FILTLVL=1 t16]: %NAME%{%WHITE%Highest Immunes: %BLUE%115% %GREEN%140% %ORANGE%125%}%CONTINUE%				// Ruined Cistern		T1
-ItemDisplay[FILTLVL=1 t21]: %NAME%{%WHITE%Highest Immunes: %RED%140% %GREEN%120%}%CONTINUE%						// Phlegethon			T1
-ItemDisplay[FILTLVL=1 t22]: %NAME%{%WHITE%Highest Immunes: %BLUE%140% %YELLOW%105%}%CONTINUE%						// Torajan Jungle		T1
-ItemDisplay[FILTLVL=1 t23]: %NAME%{%WHITE%Highest Immunes: %RED%130% %YELLOW%100%}%CONTINUE%						// Arreat Battlefield		T1
-ItemDisplay[FILTLVL=1 t24]: %NAME%{%WHITE%Highest Immunes: %BLUE%150% %YELLOW%120% %GREEN%110% %GOLD%105%}%CONTINUE%			// Tomb of Zultan Kulle		T3
-ItemDisplay[FILTLVL=1 t25]: %NAME%{%WHITE%Highest Immunes: %RED%125% %YELLOW%135%}%CONTINUE%						// Sewers of Harrogath		T3
-ItemDisplay[FILTLVL=1 t26]: %NAME%{%WHITE%Highest Immunes: %RED%110% %BLUE%150% %GOLD%100%}%CONTINUE%					// Shadows of Westmarch		T2
-ItemDisplay[FILTLVL=1 t31]: %NAME%{%WHITE%Highest Immunes: %RED%125% %BLUE%180% %ORANGE%100%}%CONTINUE%					// River of Blood		T3
-ItemDisplay[FILTLVL=1 t32]: %NAME%{%WHITE%Highest Immunes: %RED%130% %GREEN%115%}%CONTINUE%						// Throne of Insanity		T3
-ItemDisplay[FILTLVL=1 t33]: %NAME%{%WHITE%Highest Immunes: %RED%120% %BLUE%110% %YELLOW%115%}%CONTINUE%					// Lost Temple			T1
-ItemDisplay[FILTLVL=1 t34]: %NAME%{%WHITE%Highest Immunes: %RED%120% %GREEN%120% %GOLD%110%}%CONTINUE%					// Ancestral Trial		T2
-//ItemDisplay[FILTLVL=1 t35]: %NAME%%CONTINUE%												// Blood Moon			T3
-ItemDisplay[FILTLVL=1 t36]: %NAME%{%WHITE%Highest Immunes: %YELLOW%100%}%CONTINUE%							// Fall of Caldeum		T2
-ItemDisplay[FILTLVL=1 t37]: %NAME%{%WHITE%Highest Immunes: %RED%140% %BLUE%130% %GOLD%100%}%CONTINUE%					// Pandemonium Citadel		T3
-ItemDisplay[FILTLVL=1 t38]: %NAME%{%WHITE%Highest Immunes: %YELLOW%160% %GREEN%110%}%CONTINUE%						// Canyon of Sescheron		T3
-ItemDisplay[FILTLVL=1 t39]: %NAME%{%WHITE%Highest Immunes: %BLUE%130% %GREEN%110% %GRAY%(Fire Tower %GREEN%1000%%GRAY%)}%CONTINUE%	// Kehjistan Marketplace	T3
-ItemDisplay[FILTLVL=1 t3a]: %NAME%{%WHITE%Highest Immunes: %YELLOW%145% %GREEN%130% %ORANGE%120%}%CONTINUE%				// Ashen Plains			T3
+ItemDisplay[FILTLVL=1 t11]: %NAME%{%WHITE%Highest Immunes: %YELLOW%120% %WHITE%Lightning, %GREEN%120% %WHITE%Poison}%CONTINUE%						// Ruins of Viz-Jun		T2
+ItemDisplay[FILTLVL=1 t12]: %NAME%{%WHITE%Highest Immunes: %RED%135% %WHITE%Fire, %GREEN%120% %WHITE%Poison %GRAY%(Lightning Spire %GREEN%1000% %GRAY%Poison)}%CONTINUE%	// Horazon's Memory		T1
+ItemDisplay[FILTLVL=1 t13]: %NAME%{%WHITE%Highest Immunes: %YELLOW%135% %WHITE%Lightning, %GOLD%110% %WHITE%Physical}%CONTINUE%						// Bastion Keep			T1
+ItemDisplay[FILTLVL=1 t14]: %NAME%{%WHITE%Highest Immunes: %RED%130% %WHITE%Fire, %BLUE%130% %WHITE%cold}%CONTINUE%						// Sanatorium			T2
+ItemDisplay[FILTLVL=1 t15]: %NAME%{%WHITE%Highest Immunes: %YELLOW%100% %WHITE%Lightning, %GREEN%105% %WHITE%Poison, %ORANGE%150% %WHITE%Magic}%CONTINUE%				// Royal Crypts			T2
+ItemDisplay[FILTLVL=1 t16]: %NAME%{%WHITE%Highest Immunes: %BLUE%115% %WHITE%cold, %GREEN%140% %WHITE%Poison, %ORANGE%125% %WHITE%Magic}%CONTINUE%				// Ruined Cistern		T1
+ItemDisplay[FILTLVL=1 t21]: %NAME%{%WHITE%Highest Immunes: %RED%140% %WHITE%Fire, %GREEN%120% %WHITE%Poison}%CONTINUE%						// Phlegethon			T1
+ItemDisplay[FILTLVL=1 t22]: %NAME%{%WHITE%Highest Immunes: %BLUE%140% %WHITE%cold, %YELLOW%105% %WHITE%Lightning}%CONTINUE%						// Torajan Jungle		T1
+ItemDisplay[FILTLVL=1 t23]: %NAME%{%WHITE%Highest Immunes: %RED%130% %WHITE%Fire, %YELLOW%100% %WHITE%Lightning}%CONTINUE%						// Arreat Battlefield		T1
+ItemDisplay[FILTLVL=1 t24]: %NAME%{%WHITE%Highest Immunes: %BLUE%150% %WHITE%cold, %YELLOW%120% %WHITE%Lightning, %GREEN%110% %WHITE%Poison, %GOLD%105% %WHITE%Physical}%CONTINUE%			// Tomb of Zultan Kulle		T3
+ItemDisplay[FILTLVL=1 t25]: %NAME%{%WHITE%Highest Immunes: %RED%125% %WHITE%Fire, %YELLOW%135% %WHITE%Lightning}%CONTINUE%						// Sewers of Harrogath		T3
+ItemDisplay[FILTLVL=1 t26]: %NAME%{%WHITE%Highest Immunes: %RED%110% %WHITE%Fire, %BLUE%150% %WHITE%cold, %GOLD%100% %WHITE%Physical}%CONTINUE%					// Shadows of Westmarch		T2
+ItemDisplay[FILTLVL=1 t31]: %NAME%{%WHITE%Highest Immunes: %RED%125% %WHITE%Fire, %BLUE%180% %WHITE%cold, %ORANGE%100% %WHITE%Magic}%CONTINUE%					// River of Blood		T3
+ItemDisplay[FILTLVL=1 t32]: %NAME%{%WHITE%Highest Immunes: %RED%130% %WHITE%Fire, %GREEN%115% %WHITE%Poison}%CONTINUE%						// Throne of Insanity		T3
+ItemDisplay[FILTLVL=1 t33]: %NAME%{%WHITE%Highest Immunes: %RED%120% %WHITE%Fire, %BLUE%110% %WHITE%cold, %YELLOW%115% %WHITE%Lightning}%CONTINUE%					// Lost Temple			T1
+ItemDisplay[FILTLVL=1 t34]: %NAME%{%WHITE%Highest Immunes: %RED%120% %WHITE%Fire, %GREEN%120% %WHITE%Poison, %GOLD%110% %WHITE%Physical}%CONTINUE%					// Ancestral Trial		T2
+ItemDisplay[FILTLVL=1 t36]: %NAME%{%WHITE%Highest Immunes: %YELLOW%100% %WHITE%Lightning}%CONTINUE%							// Fall of Caldeum		T2
+ItemDisplay[FILTLVL=1 t37]: %NAME%{%WHITE%Highest Immunes: %RED%140% %WHITE%Fire, %BLUE%130% %WHITE%cold, %GOLD%100% %WHITE%Physical}%CONTINUE%					// Pandemonium Citadel		T3
+ItemDisplay[FILTLVL=1 t38]: %NAME%{%WHITE%Highest Immunes: %YELLOW%160% %WHITE%Lightning, %GREEN%110% %WHITE%Poison}%CONTINUE%						// Canyon of Sescheron		T3
+ItemDisplay[FILTLVL=1 t39]: %NAME%{%WHITE%Highest Immunes: %BLUE%130% %WHITE%cold, %GREEN%110% %WHITE%Poison %GRAY%(Fire Tower %GREEN%1000% %GRAY%Poison)}%CONTINUE%	// Kehjistan Marketplace	T3
+ItemDisplay[FILTLVL=1 t3a]: %NAME%{%WHITE%Highest Immunes: %YELLOW%145% %WHITE%Lightning, %GREEN%130% %WHITE%Poison, %ORANGE%120% %WHITE%Magic}%CONTINUE%				// Ashen Plains			T3
 ItemDisplay[FILTLVL=1 (t41 OR t42 OR t43)]: %NAME%{%WHITE%Highest Immunes: 180% %GRAY%(All Damage Types)}%CONTINUE%			// Dungeons			T4
 
 // Miscellaneous
@@ -1026,7 +1026,7 @@ ItemDisplay[FILTLVL>2 MAG !ID CLVL>39 STAFF !ETH !(ELT OR wst OR 8ws)]:
 
 // Hidden (stricter): Additional magic items - level 80
 ItemDisplay[FILTLVL>3 MAG !ID DIFF=2 CLVL>79 NORM ARMOR !ETH !(DIN OR NEC OR BAR OR DRU)]:		// normal non-class non-eth armors (they can be purchased from merchants relatively easily)
-ItemDisplay[FILTLVL>5 MAG !ID DIFF=2 CLVL>79 !ELT !(ETH WEAPON !(SOR OR STAFF OR WAND)) ((ZON !AMAZON) OR (SIN !ASSASSIN) OR (BAR !BARBARIAN) OR ((DRU OR CLUB) !DRUID) OR ((NEC OR WAND) !NECROMANCER) OR ((DIN OR SCEPTER) !PALADIN) OR ((SOR OR STAFF) !SORCERESS))]:		// non-elite class items that don't match the character's class, except eth phys weapons
+ItemDisplay[FILTLVL>5 MAG !ID DIFF=2 CLVL>79 !ELT ((ZON !AMAZON) OR (SIN !ASSASSIN) OR (BAR !BARBARIAN) OR ((DRU OR CLUB) !DRUID) OR ((NEC OR WAND) !NECROMANCER) OR ((DIN OR SCEPTER) !PALADIN) OR ((SOR OR STAFF) !SORCERESS)) !(ETH WEAPON !(SOR OR STAFF OR WAND)) !((MAPID=181 OR MAPID=182) (CLASS OR STAFF OR WAND OR SCEPTER OR CLUB))]:		// non-elite class items that don't match the character's class, except eth phys weapons and pre-corrupted class-related items in Stygian Caverns
 
 // Catchall
 ItemDisplay[MAG]: %NAME%%WHITE%
@@ -1399,7 +1399,7 @@ ItemDisplay[FILTLVL<5 NMAG CLVL<31 ((STAFF OR SCEPTER) SOCK=4) !DIFF=2 !(MAPID=1
 
 // Force Display
 ItemDisplay[NMAG (EQUIPPED OR GEMMED OR SHOP OR MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: %NAME%{%NAME%}%WHITE%		// always show regular class items when equipped, gemmed, or in town
-ItemDisplay[NMAG STAT360>0 (MAPID=181 OR MAPID=182)]: %NAME%{%NAME%}%WHITE%									// always show pre-corrupted regular non-class items within Stygian Caverns
+//ItemDisplay[NMAG STAT360>0 (MAPID=181 OR MAPID=182)]: %NAME%{%NAME%}%WHITE%									// always show pre-corrupted regular non-class items within Stygian Caverns
 
 // Hidden: 1-socket items (excluding merchant items) - levels 30, 80
 ItemDisplay[FILTLVL>0 NMAG SOCK=1 CLVL>29 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14))) !(PRICE=35000 OR WAND OR sst OR 8ss OR 6ss OR (SCEPTER !wsp !9ws !7ws) OR SIN OR SOR OR (DIN (RES>9 OR EDAM>29)) OR (ZON (TABSK0>1 OR TABSK2>1)))]: {%NAME%}	// 1-socket items larger than 3 inventory spaces, except: items worth 35000 gold, paladin shields with 30+ ed or 10+ all res, amazon weapons with 2+ skills
