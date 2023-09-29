@@ -253,6 +253,7 @@ ItemDisplay[UNI !ID 9gd]:	%NAME%%GOLD%Executioner Sword - Swordguard%CONTINUE%		
 ItemDisplay[UNI !ID 7sm]:	%NAME%%GOLD%Ataghan - Djinn Slayer%CONTINUE%				// 
 ItemDisplay[UNI !ID 7sb]:	%NAME%%GOLD%Elegant Blade - Bloodmoon%CONTINUE%				// 
 ItemDisplay[UNI !ID 7ls]:	%NAME%%GOLD%Cryptic Sword - Frostwind%CONTINUE%				// 
+ItemDisplay[UNI !ID 7cm]:	%NAME%%GOLD%Highland Blade - Leoric's Mithril Bane%CONTINUE%		// NEW
 ItemDisplay[UNI !ID 7gs]:	%NAME%%GOLD%Balrog Blade - Flamebellow%CONTINUE%			// 
 ItemDisplay[UNI !ID 7b7]:	%NAME%%GOLD%Champion Sword - Doombringer%CONTINUE%			// 
 ItemDisplay[UNI !ID 7gd]:	%NAME%%GOLD%Colossus Blade - The Grandfather%CONTINUE%			// 
@@ -295,6 +296,7 @@ ItemDisplay[UNI !ID 9st]:	%NAME%%GOLD%Yari - Hone Sundan%CONTINUE%				//
 ItemDisplay[UNI !ID 9p9]:	%NAME%%GOLD%Lance - Spire of Honor%CONTINUE%				// 
 ItemDisplay[UNI !ID 7sr]:	%NAME%%GOLD%Hyperion Spear - Arioc's Needle%CONTINUE%			// 
 ItemDisplay[UNI !ID 7br]:	%NAME%%GOLD%Mancatcher - Viperfork%CONTINUE%				// 
+ItemDisplay[UNI !ID 7st]:	%NAME%%GOLD%Ghost Spear - Uldyssian's Awakening%CONTINUE%		// NEW
 ItemDisplay[UNI !ID 7p7]:	%NAME%%GOLD%War Pike - Steel Pillar%CONTINUE%				// 
 ItemDisplay[UNI !ID am9]:	%NAME%%GOLD%Ceremonial Pike - Lycander's Flank%CONTINUE%		// Amazon Spear
 ItemDisplay[UNI !ID amd]:	%NAME%%GOLD%Matriarchal Spear - Stoneraven%CONTINUE%			// Amazon Spear
