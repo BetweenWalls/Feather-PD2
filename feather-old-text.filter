@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II	(old text version)
-//		Date Updated:	20 SEPT 2023
+//		Date Updated:	2 OCT 2023
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Searchable Features:
@@ -265,7 +265,8 @@ ItemDisplay[MAPTIER=1]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T1%DA
 ItemDisplay[MAPTIER=2]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%		// maps - T2 (Ruins of Viz-Jun, Sanatorium, Royal Crypts, Ancestral Trial, Fall of Caldeum, Shadows of Westmarch)
 ItemDisplay[MAPTIER=3]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%		// maps - T3 (Tomb of Zultan Kulle, Sewers of Harrogath, River of Blood, Throne of Insanity, Lost Temple, Blood Moon, Pandemonium Citadel, Canyon of Sescheron, Kehjistan Marketplace, Ashen Plains)
 ItemDisplay[MAPTIER=4]:		%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%)%CONTINUE%	// dungeons  (Cathedral of Light, Plains of Torment, Sanctuary of Sin)
-ItemDisplay[MAPTIER=5]:	%BORDER-53%%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%	// maps - T3 uniques (Zhar's Sanctum, Stygian Caverns, Fallen Gardens)
+ItemDisplay[t53]:		%BORDER-53%%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%	// maps - T2 uniques (Fallen Gardens)
+ItemDisplay[(t51 OR t52)]:	%BORDER-53%%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%	// maps - T3 uniques (Zhar's Sanctum, Stygian Caverns)
 ItemDisplay[MAPTIER>-1 QTY>1]:			%NAME% %WHITE%×%QTY%%CONTINUE%						// maps - appends quantity
 ItemDisplay[MAPTIER=1 !(ID (RARE OR UNI))]:	 %NAME% %CONTINUE%							// maps - T1 highlighting
 ItemDisplay[MAPTIER=2 !(ID (RARE OR UNI))]:	  %NAME%  %CONTINUE%							// maps - T2 highlighting
@@ -1278,7 +1279,6 @@ ItemDisplay[NMAG !SUP !ETH ((usk DEF>151) OR (uh9 DEF>154) OR (uui DEF>461) OR (
 // Force Display
 ItemDisplay[NMAG leg]: %NAME%{%NAME%}%WHITE%	// displays Wirt's Leg here to prevent pointmod info from being added
 ItemDisplay[NMAG (EQUIPPED OR GEMMED OR SHOP OR MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) !(CLASS OR STAFF OR WAND OR SCEPTER OR CLUB)]: %NAME%{%NAME%}%WHITE%		// always show regular non-class items when equipped, gemmed, or in town
-ItemDisplay[NMAG STAT360>0 (MAPID=181 OR MAPID=182) !(CLASS OR STAFF OR WAND OR SCEPTER OR CLUB)]: %NAME%{%NAME%}%WHITE%								// always show pre-corrupted regular non-class items within Stygian Caverns
 
 // Hidden: Regular non-class items with little or no runeword useability - level 15
 ItemDisplay[FILTLVL>0 NMAG CLVL>14 (GLOVES OR BOOTS OR BELT)]: {%NAME%}									// gloves, boots, belts
@@ -1399,7 +1399,6 @@ ItemDisplay[FILTLVL<5 NMAG CLVL<31 ((STAFF OR SCEPTER) SOCK=4) !DIFF=2 !(MAPID=1
 
 // Force Display
 ItemDisplay[NMAG (EQUIPPED OR GEMMED OR SHOP OR MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: %NAME%{%NAME%}%WHITE%		// always show regular class items when equipped, gemmed, or in town
-//ItemDisplay[NMAG STAT360>0 (MAPID=181 OR MAPID=182)]: %NAME%{%NAME%}%WHITE%									// always show pre-corrupted regular non-class items within Stygian Caverns
 
 // Hidden: 1-socket items (excluding merchant items) - levels 30, 80
 ItemDisplay[FILTLVL>0 NMAG SOCK=1 CLVL>29 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14))) !(PRICE=35000 OR WAND OR sst OR 8ss OR 6ss OR (SCEPTER !wsp !9ws !7ws) OR SIN OR SOR OR (DIN (RES>9 OR EDAM>29)) OR (ZON (TABSK0>1 OR TABSK2>1)))]: {%NAME%}	// 1-socket items larger than 3 inventory spaces, except: items worth 35000 gold, paladin shields with 30+ ed or 10+ all res, amazon weapons with 2+ skills
