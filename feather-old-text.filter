@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II	(old text version)
-//		Date Updated:	17 OCT 2023
+//		Date Updated:	18 OCT 2023
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Searchable Features:
@@ -1317,7 +1317,7 @@ ItemDisplay[NMAG SOCK>0]: %NAME% %GRAY%[%SOCKETS%]{%NAME%}%CONTINUE%
 // Highlighting & Notifications
 ItemDisplay[NMAG !RW !ETH ((((SOCK=0 OR SOCK>3) ED>0) (7cr OR 7wa)) OR (SOCK=4 ED>0 6rx) OR (SOCK=4 ED>0 6hx) OR (SOCK=3 ED>0 utp) OR (7gm SOCK>4 ED>0))]:		%DOT-20%%TIER-9%  %NAME%{%NAME%}  %WHITE%	// valuable non-eth bases: sup 5s Phase Blade, sup 4s Demon Crossbow, sup 4s Colossus Crossbow, sup 3s Archon Plate...
 ItemDisplay[NMAG !RW ETH (((SOCK=5 OR (!SOCK=1 ED>0)) (7wa OR 72a)) OR ((SOCK>4 OR (SOCK=0 ED>0)) 2H ELT AXE))]:							%DOT-1D%%TIER-9%  %NAME%{%NAME%}  %WHITE%	// valuable eth bases: 5s Berserker Axe, sup 5s Ettin Axe, 5/6s Glorious Axe...
-ItemDisplay[NMAG !RW ETH (((SOCK=4 OR SOCK=6) 7p7) OR ((SOCK=0 OR SOCK=4) ED>0 7tr) OR (SOCK=4 ED>0 7br) OR ((SOCK=4 OR SOCK=5) (7s8 OR 7wc OR (7o7 ED>0)))]:		%DOT-1D%%TIER-9%  %NAME%{%NAME%}  %WHITE%	// valuable eth bases: 4/6s War Pike, sup 0/4s Stygian Pike, sup 4s Mancatcher, 4/5s Thresher, 4s Giant Thresher
+ItemDisplay[NMAG !RW ETH (((SOCK=4 OR SOCK=6) 7p7) OR ((SOCK=0 OR SOCK=4) ED>0 7tr) OR (SOCK=4 ED>0 7br) OR ((SOCK=4 OR SOCK=5) (7s8 OR 7wc OR (7o7 ED>0))))]:		%DOT-1D%%TIER-9%  %NAME%{%NAME%}  %WHITE%	// valuable eth bases: 4/6s War Pike, sup 0/4s Stygian Pike, sup 4s Mancatcher, 4/5s Thresher, 4s Giant Thresher
 ItemDisplay[NMAG !RW ETH (((SOCK>4 OR (!SOCK=1 ED>0)) (7gm OR 7m7)) OR (SOCK>4 ED>0 (7fb OR 7gd)))]:									%DOT-1D%%TIER-9%  %NAME%{%NAME%}  %WHITE%	// valuable eth bases: 2/5/6s Thunder Maul, sup 2s Ogre Maul, sup 5s Colossus Blade...
 ItemDisplay[NMAG !RW ((CLVL<31 DIFF<2 ((SWORD OR POLEARM OR SPEAR) SOCK=4)) OR (SOCK=5 7cr)) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]:		%PX-20%%TIER-4% %NAME% {%NAME%}%WHITE%		// 4s swords and 4s spears/polearms for characters below level 30 in normal/nightmare or 5s phase blades outside of town (only for less strict filter levels, not stricter levels)
 // TODO: Add more items to be highlighted and/or notified
