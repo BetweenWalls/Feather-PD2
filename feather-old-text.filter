@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 //	"Feather" Item Filter for Project Diablo II	(old text version)
-//		Date Updated:	18 OCT 2023
+//		Date Updated:	20 OCT 2023
 //		Info:		https://github.com/BetweenWalls/Feather-PD2
 //-----------------------------------------------------------------------------------------------------------------------
 // Searchable Features:
@@ -193,26 +193,29 @@ ItemDisplay[((FILTLVL>0 CLVL>89) OR (FILTLVL>4 CLVL>79) OR (FILTLVL>5 CLVL>69) O
 // +-------------------+
 //-¦ Other Basic Items ¦-------------------------------------------------------------------------------------------------
 // +-------------------+
-// Modification
-ItemDisplay[wss]:	%RED%Worldstone Shard%CONTINUE%									// sets color for Worldstone Shard
-ItemDisplay[lbox]:	%GOLD%Larzuk's Puzzlebox%CONTINUE%								// sets color for Larzuk's Puzzlebox
-ItemDisplay[lpp]:	%GOLD%Larzuk's Puzzlepyramid%CONTINUE%								// sets color for Larzuk's Puzzlepiece (and name)
-ItemDisplay[cwss]:	%RED%Tainted Worldstone Shard%CONTINUE%								// sets color for Tainted Worldstone Shard
-ItemDisplay[iwss]:	%GOLD%Catalyst Shard%CONTINUE%									// sets color for Catalyst Shard
-ItemDisplay[RUNE>0]:	%NAME% %TAN%(%WHITE%%RUNENUM%%TAN%)%WHITE%%CONTINUE%						// appends rune number to runes
-ItemDisplay[jewf]:	%WHITE%Jewel Fragment%CONTINUE%									// changes name of Jewel Fragments from plural to singular
-ItemDisplay[t51]:	Zhar's Sanctum%CONTINUE%									// fixes name for "Zhar's Sanctum" unique map
-ItemDisplay[t52]:	Stygian Caverns%CONTINUE%									// fixes name for "Warlord of Blood" unique map
-ItemDisplay[t53]:	Fallen Gardens%CONTINUE%									// fixes name for "Fallen Gardens" unique map
-ItemDisplay[MAPTIER=5 !ID]:	%NAME% Map%CONTINUE%									// standardizes fixed maps
-ItemDisplay[MAPTIER=5 ID]:	Map%NL%%NAME%%CONTINUE%									// standardizes fixed maps
-ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key OR MAPTIER>-1)]: %NAME% %WHITE%×%QTY%%CONTINUE%		// appends quantity
+// Name Modification
+ItemDisplay[wss]:	%RED%Worldstone Shard%CONTINUE%				// sets color for Worldstone Shard
+ItemDisplay[cwss]:	%RED%Tainted Worldstone Shard%CONTINUE%			// sets color for Tainted Worldstone Shard
+ItemDisplay[lbox]:	%GOLD%Larzuk's Puzzlebox%CONTINUE%			// sets color for Larzuk's Puzzlebox
+ItemDisplay[lpp]:	%GOLD%Larzuk's Puzzlepyramid%CONTINUE%			// sets color for Larzuk's Puzzlepiece (and name)
+ItemDisplay[iwss]:	%GOLD%Catalyst Shard%CONTINUE%				// sets color for Catalyst Shard
+ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key OR MAPTIER>-1 OR GEMLEVEL>0 OR RUNE>0 OR jewf)]: %NAME% %WHITE%×%QTY%%CONTINUE%	// appends quantity
 
-// Quest Items
-//ItemDisplay[(hdm OR msf OR vip OR hst OR g33 OR qf1 OR qf2 OR hfh)]: %NAME%{%NAME%}%CONTINUE%						// equipment	 (listed here for reference)
-//ItemDisplay[(bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2)]: %NAME%{%NAME%}	// non-equipment (listed here for reference)
+// Common Vanilla Items
+ItemDisplay[key]:	%GRAY%%NAME%%CONTINUE%								// Key
+ItemDisplay[tsc]:	%BLUE%- %WHITE%Portal{%WHITE%Scroll of Town Portal}%CONTINUE%			// Scroll of Town Portal
+ItemDisplay[isc]:	%RED%- %WHITE%Identify{%WHITE%Scroll of Identify}%CONTINUE%			// Scroll of Identify
+//ItemDisplay[tbk]:	%NAME%%WHITE%									// Tome of Town Portal	(listed here for reference)
+//ItemDisplay[ibk]:	%NAME%%WHITE%									// Tome of Identify	(listed here for reference)
+ItemDisplay[ear]:	%GRAY%%NAME%%WHITE%								// Player Ear
+//ItemDisplay[(hdm OR msf OR vip OR hst OR g33 OR qf1 OR qf2 OR hfh)]: %NAME%{%NAME%}%CONTINUE%						// Quest equipment	(listed here for reference)
+//ItemDisplay[(bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2)]: %NAME%{%NAME%}	// Quest non-equipment	(listed here for reference)
 
-// Endgame Quest Items  (includes notifications)
+// Hidden: Keys, Scrolls - level 20
+ItemDisplay[FILTLVL>0 key (ASSASSIN OR (CLVL>19 !MAPID=39) OR FILTLVL>4) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// except in town or in Cow Levels for non-assassins on lower filter levels
+ItemDisplay[FILTLVL>0 (tsc OR isc) CLVL>19 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}					// except in town
+
+// Endgame Vanilla Items  (includes notifications)
 ItemDisplay[tes !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Token ingredient%NL%%GRAY%(Andariel & Duriel)}%WHITE%		// Twisted Essence of Suffering
 ItemDisplay[ceh !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Token ingredient%NL%%GRAY%(Mephisto)}%WHITE%			// Charged Essence of Hatred
 ItemDisplay[bet !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Token ingredient%NL%%GRAY%(Diablo)}%WHITE%			// Burning Essence of Terror
@@ -224,12 +227,21 @@ ItemDisplay[pk3 !FILTLVL=1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Nihlathak
 ItemDisplay[dhn !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Tristram ingredient%NL%%GRAY%(Matron's Den)}%WHITE%		// Diablo's Horn	 (Lilith)
 ItemDisplay[bey !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Tristram ingredient%NL%%GRAY%(Forgotten Sands)}%WHITE%		// Baal's Eye		 (Uber Duriel)
 ItemDisplay[mbr !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Tristram ingredient%NL%%GRAY%(Furnace of Pain)}%WHITE%		// Mephisto's Brain	 (Uber Izual)
+ItemDisplay[std]:		%DOT-53%%TIER-9% %NAME% {%WHITE%Adds Heroic bonuses to Maps & Dungeons}%WHITE%				// Standard of Heroes
 
 // PD2 Items  (includes notifications)
 ItemDisplay[wss]:		%DOT-62%%TIER-9% %NAME% {%WHITE%Can also add corruption modifiers to maps%NL%Corrupts equipment, either adding a modifier or turning it into a random rare}%WHITE%	// Worldstone Shard
-ItemDisplay[lbox]:		%MAP-53%%TIER-9%        %NAME%        {%WHITE%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%						// Larzuk's Puzzlebox
-ItemDisplay[lpp]:		%MAP-53%%TIER-9%    %NAME%    {%WHITE%Cannot be used with unique or set items%NL%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%		// Larzuk's Puzzlepiece
 ItemDisplay[cwss]:		%MAP-62%%TIER-9%    %NAME%    {%WHITE%Corrupts %GOLD%Annihilus%WHITE%, either adding a modifier or turning it into a random magic small charm}%WHITE%			// Tainted Worldstone Shard
+ItemDisplay[lpp]:		%MAP-53%%TIER-9%    %NAME%    {%WHITE%Cannot be used with unique or set items%NL%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%		// Larzuk's Puzzlepiece
+ItemDisplay[lbox]:		%MAP-53%%TIER-9%        %NAME%        {%WHITE%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%						// Larzuk's Puzzlebox
+ItemDisplay[rtp]:		%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%															// Horadrim Navigator
+ItemDisplay[rid]:		%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%															// Horadrim Almanac
+ItemDisplay[rkey]:		%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%															// Skeleton Key
+ItemDisplay[lsvl !FILTLVL=1]:	%BORDER-62%%TIER-9%%RED%       Vial of Lightsong       {%NAME%}%WHITE%													// Vial of Lightsong
+ItemDisplay[llmr !FILTLVL=1]:	%BORDER-62%%TIER-9%%RED%        Lilith's Mirror        {%NAME%}%WHITE%													// Lilith's Mirror
+ItemDisplay[pvpp]:		%BLUE% = %WHITE%M {%WHITE%Dueling Mana Potion}%WHITE%															// Dueling Mana Potion
+//ItemDisplay[lmal]:		%NAME%{%NAME%}%WHITE%																			// Larzuk's Malus (listed here for reference)
+// Uber-Related  (includes notifications)
 ItemDisplay[ubtm !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Sends you to fight the Uber Prime Evils in Tristram}%WHITE%										// Pandemonium Talisman   (Uber Tristram)
 ItemDisplay[uba !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Sends you to fight the Uber Ancients}%WHITE%												// Relic of the Ancients  (Uber Ancients)
 ItemDisplay[ubaa !FILTLVL=1]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Ancients ingredient%NL%%GRAY%(T1 Maps)}%WHITE%											// Sigil of Madawc	  (Uber Ancients ingredient)
@@ -244,20 +256,13 @@ ItemDisplay[rtmv !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Rathma ingredien
 ItemDisplay[rtmo !FILTLVL=1]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Rathma ingredient%NL%%GRAY%(Undead Enemies)}%WHITE%											// Trang-Oul's Jawbone	  (Rathma ingredient)
 ItemDisplay[cm2f]:		%GOLD%%MAP%%TIER-9%  %NAME%  {%WHITE%Stackable %GOLD%Hellfire Torch %WHITE%ingredient (Rathma)}%WHITE%									// Hellfire Ashes	  (Rathma ingredient)
 ItemDisplay[rtmf]:		%DOT-60%%TIER-9%  %NAME%  {%WHITE%Jawbone Recipe: 2 %ORANGE%Ancient Bone Fragments %WHITE%+ %GOLD%Hellfire Torch}%WHITE%						// Ancient Bone Fragments (legacy item from season 4)
-ItemDisplay[rtp]:		%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%															// Horadrim Navigator
-ItemDisplay[rid]:		%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%															// Horadrim Almanac
-ItemDisplay[rkey]:		%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%															// Skeleton Key
-ItemDisplay[lsvl !FILTLVL=1]:	%BORDER-62%%TIER-9%%RED%       Vial of Lightsong       {%NAME%}%WHITE%													// Vial of Lightsong
-ItemDisplay[llmr !FILTLVL=1]:	%BORDER-62%%TIER-9%%RED%        Lilith's Mirror        {%NAME%}%WHITE%													// Lilith's Mirror
-ItemDisplay[pvpp]:		%BLUE% = %WHITE%M {%WHITE%Dueling Mana Potion}%WHITE%															// Dueling Mana Potion
-//ItemDisplay[lmal]:		%NAME%{%NAME%}%WHITE%																			// Larzuk's Malus
+// Map-Related  (includes notifications)
 ItemDisplay[scrb]:		%MAP-53%%TIER-9%    %NAME%    {%WHITE%Transforms a %DARK_GREEN%(%TAN%T3%DARK_GREEN%) %WHITE%map into a %DARK_GREEN%(%TAN%Dungeon%DARK_GREEN%)}%WHITE%			// Horadrim Scarab	  (Map -> Dungeon)
 ItemDisplay[iwss]:		%DOT-53%%TIER-9% %NAME% {%WHITE%Gives a map 100% chance to contain a map event}%WHITE%											// Catalyst Shard	  (Guarantees map event)
-// Map Orbs
-ItemDisplay[(imma OR irma)]:	%NAME%{%WHITE%Raises Map Rarity from Common to Magic}%CONTINUE%														// Infused Arcane Orb
-ItemDisplay[(imra OR irra)]:	%NAME%{%WHITE%Raises Map Rarity from Common to Rare}%CONTINUE%														// Infused Zakarum Orb
-ItemDisplay[(upma OR urma)]:	%NAME%{%WHITE%Raises Map Rarity from Magic to Rare}%CONTINUE%														// Infused Angelic Orb
-ItemDisplay[(rera OR rrra)]:	%NAME%{%WHITE%Rerolls Rare Map Affixes}%CONTINUE%															// Infused Horadrim Orb
+ItemDisplay[(imma OR irma)]:	%PX-53%%TIER-9%%NAME%{%WHITE%Raises Map Rarity from Common to Magic}%CONTINUE%												// Infused Arcane Orb
+ItemDisplay[(imra OR irra)]:	%PX-53%%TIER-9%%NAME%{%WHITE%Raises Map Rarity from Common to Rare}%CONTINUE%												// Infused Zakarum Orb
+ItemDisplay[(upma OR urma)]:	%PX-53%%TIER-9%%NAME%{%WHITE%Raises Map Rarity from Magic to Rare}%CONTINUE%												// Infused Angelic Orb
+ItemDisplay[(rera OR rrra)]:	%PX-53%%TIER-9%%NAME%{%WHITE%Rerolls Rare Map Affixes}%CONTINUE%													// Infused Horadrim Orb
 ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%%NAME%}%CONTINUE%														// Arcane Orb		  (Common -> Magic)
 ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%NAME%}%CONTINUE%							// Zakarum Orb		  (Common -> Rare)
 ItemDisplay[upma]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ P%GRAY%.%WHITE%Skull + %ORANGE%Rune %TAN%(%WHITE%10%TAN%)%ORANGE% or higher%NL%%NAME%}%CONTINUE%					// Angelic Orb		  (Magic -> Rare)
@@ -266,24 +271,25 @@ ItemDisplay[scou]:	%NAME%{%WHITE%Lowers Map Rarity to Common}%WHITE%												
 ItemDisplay[upmp]:	%NAME%{%WHITE%Combines three maps to create one of a higher tier}%WHITE%													// Cartographer's Orb	  (3 T1 Maps -> 1 T2 Map or 3 T2 Maps -> 1 T3 Map)
 ItemDisplay[fort]:	%GOLD%%NAME%{%WHITE%Fortified monsters have doubled life and deal 20% extra damage%NL%Halves number of map monsters and doubles loot/experience gained from them}%WHITE%	// Orb of Fortification
 // Maps  (includes notifications)
-ItemDisplay[MAPTIER>0 NMAG]:	%WHITE%%NAME%%CONTINUE%									// maps - regular
-ItemDisplay[MAPTIER>0 MAG]:	%BLUE%%MAP%%TIER-9%%NAME%%CONTINUE%							// maps - magic (adds blue minimap border)
-ItemDisplay[MAPTIER>0 RARE]:	%YELLOW%%MAP%%TIER-9%%NAME%%CONTINUE%							// maps - rare (adds yellow minimap border)
-ItemDisplay[MAPTIER=1]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T1%DARK_GREEN%)%CONTINUE%		// maps - T1 (Horazon's Memory, Bastion Keep, Ruined Cistern, Phlegethon, Torajan Jungle, Arreat Battlefield)
-ItemDisplay[MAPTIER=2]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%		// maps - T2 (Ruins of Viz-Jun, Sanatorium, Royal Crypts, Ancestral Trial, Fall of Caldeum, Shadows of Westmarch)
-ItemDisplay[MAPTIER=3]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%		// maps - T3 (Tomb of Zultan Kulle, Sewers of Harrogath, River of Blood, Throne of Insanity, Lost Temple, Blood Moon, Pandemonium Citadel, Canyon of Sescheron, Kehjistan Marketplace, Ashen Plains)
-ItemDisplay[MAPTIER=4]:		%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%)%CONTINUE%	// dungeons  (Cathedral of Light, Plains of Torment, Sanctuary of Sin)
-ItemDisplay[t53]:		%BORDER-53%%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%	// maps - T2 uniques (Fallen Gardens)
-ItemDisplay[(t51 OR t52)]:	%BORDER-53%%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%	// maps - T3 uniques (Zhar's Sanctum, Stygian Caverns)
-ItemDisplay[MAPTIER>-1 QTY>1]:			%NAME% %WHITE%×%QTY%%CONTINUE%						// maps - appends quantity
-ItemDisplay[MAPTIER=1 !(ID (RARE OR UNI))]:	 %NAME% %CONTINUE%							// maps - T1 highlighting
-ItemDisplay[MAPTIER=2 !(ID (RARE OR UNI))]:	  %NAME%  %CONTINUE%							// maps - T2 highlighting
-ItemDisplay[MAPTIER=3 !(ID (RARE OR UNI))]:	   %NAME%   %CONTINUE%							// maps - T3 highlighting
-ItemDisplay[MAPTIER=4 !(ID (RARE OR UNI))]:	    %NAME%    %CONTINUE%						// maps - T4 highlighting
-ItemDisplay[MAPTIER=5 UNI !ID]:			         %NAME%         %CONTINUE%					// maps - unique highlighting
-//ItemDisplay[(t61 OR t62)]:	%NAME%{%NAME%}%WHITE%									// Desert/Moor Duel Arenas (listed here for reference)
+ItemDisplay[t51]:		Zhar's Sanctum%CONTINUE%									// unique map standardization - sets name for "Zhar's Sanctum"
+ItemDisplay[t52]:		Stygian Caverns%CONTINUE%									// unique map standardization - sets name for "Warlord of Blood"
+ItemDisplay[t53]:		Fallen Gardens%CONTINUE%									// unique map standardization - sets name for "Fallen Gardens"
+ItemDisplay[MAPTIER=5 !ID]:	%NAME% Map%CONTINUE%										// unique map standardization - formatting (unid)
+ItemDisplay[MAPTIER=5 ID]:	Map%NL%%NAME%%CONTINUE%										// unique map standardization - formatting (id)
+ItemDisplay[MAPTIER=1]:		%MAP-77%%PX-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T1%DARK_GREEN%)%CONTINUE%			// maps - T1
+ItemDisplay[MAPTIER=2]:		%MAP-77%%PX-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%			// maps - T2
+ItemDisplay[MAPTIER=3]:		%MAP-77%%PX-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%			// maps - T3
+ItemDisplay[MAPTIER=4]:		%BORDER-77%%DOT-53%%PX-6D%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%)%CONTINUE%	// maps - Dungeons
+ItemDisplay[t53]:		%BORDER-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%		// maps - T2 uniques
+ItemDisplay[(t51 OR t52)]:	%BORDER-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%		// maps - T3 uniques
+ItemDisplay[MAPTIER>-1 QTY>1]:			%NAME% %WHITE%×%QTY%%CONTINUE%							// maps - appends quantity
+ItemDisplay[MAPTIER=1 !(ID (RARE OR UNI))]:	 %NAME% %CONTINUE%								// map highlighting - T1
+ItemDisplay[MAPTIER=2 !(ID (RARE OR UNI))]:	  %NAME%  %CONTINUE%								// map highlighting - T2
+ItemDisplay[MAPTIER=3 !(ID (RARE OR UNI))]:	   %NAME%   %CONTINUE%								// map highlighting - T3
+ItemDisplay[MAPTIER=5 UNI !ID]:			         %NAME%         %CONTINUE%						// map highlighting - Unique
+//ItemDisplay[(t61 OR t62)]:	%NAME%{%NAME%}%WHITE%										// Desert/Moor Duel Arenas (listed here for reference)
 
-// Alternative Rules for Endgame Quest Items (includes notifications)
+// Alternative Rules for Endgame Vanilla Items (includes notifications)
 ItemDisplay[FILTLVL=1 tes]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Andariel & Duriel)}%WHITE%							// Twisted Essence of Suffering
 ItemDisplay[FILTLVL=1 ceh]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Mephisto)}%WHITE%									// Charged Essence of Hatred
 ItemDisplay[FILTLVL=1 bet]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Combine with %ORANGE%Essences %WHITE%from the other Great Evils for a %ORANGE%Token of Absolution%NL%%GRAY%(Diablo)}%WHITE%									// Burning Essence of Terror
@@ -334,23 +340,25 @@ ItemDisplay[FILTLVL=1 t39]: %NAME%{%WHITE%Highest Immunes: %BLUE%130% %WHITE%col
 ItemDisplay[FILTLVL=1 t3a]: %NAME%{%WHITE%Highest Immunes: %YELLOW%145% %WHITE%Lightning, %GREEN%130% %WHITE%Poison, %ORANGE%120% %WHITE%Magic}%CONTINUE%				// Ashen Plains			T3
 ItemDisplay[FILTLVL=1 (t41 OR t42 OR t43)]: %NAME%{%WHITE%Highest Immunes: 180% %GRAY%(All Damage Types)}%CONTINUE%									// Dungeons			T4
 
-// Miscellaneous
-//ItemDisplay[tbk]:	%NAME%%WHITE%									// Tome of Town Portal	(listed here for reference)
-//ItemDisplay[ibk]:	%NAME%%WHITE%									// Tome of Identify	(listed here for reference)
-ItemDisplay[tsc]:	%BLUE%- %WHITE%Portal{%WHITE%Scroll of Town Portal}%CONTINUE%			// Scroll of Town Portal
-ItemDisplay[isc]:	%RED%- %WHITE%Identify{%WHITE%Scroll of Identify}%CONTINUE%			// Scroll of Identify
-ItemDisplay[key]:	%GRAY%%NAME%%CONTINUE%								// Key
-ItemDisplay[ear]:	%GRAY%%NAME%%WHITE%								// Player Ear
-ItemDisplay[std]:	%DOT-53%%TIER-9% %NAME% {%WHITE%Adds Heroic bonuses to Maps & Dungeons}%WHITE%	// Standard of Heroes (includes notifications)
-
-// Hidden: Keys, Scrolls - level 20
-ItemDisplay[FILTLVL>0 key (ASSASSIN OR (CLVL>19 !MAPID=39) OR FILTLVL>4) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// except in town or in Cow Levels for non-assassins on lower filter levels
-ItemDisplay[FILTLVL>0 (tsc OR isc) CLVL>19 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}					// except in town
-
 
 // +------+
 //-¦ Gems ¦--------------------------------------------------------------------------------------------------------------
 // +------+
+// Name Modification
+ItemDisplay[GEMLEVEL=1]: ~%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
+ItemDisplay[GEMLEVEL=2]: +%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
+ItemDisplay[GEMLEVEL=3]: ×%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
+ItemDisplay[GEMLEVEL=4]: Ø%ORANGE%]  %WHITE%%NAME%%PX-60%%TIER-2%%CONTINUE%		// flawless (map icons without text notifications)
+ItemDisplay[GEMLEVEL=5]: O%ORANGE%]  %WHITE%%NAME%%MAP-60%%DOT-20%%TIER-9%%CONTINUE%	// perfect (notifications)
+ItemDisplay[GEMTYPE=1]: %ORANGE%[%PURPLE%%NAME%%CONTINUE%
+ItemDisplay[GEMTYPE=2]: %ORANGE%[%WHITE%%NAME%%CONTINUE%
+ItemDisplay[GEMTYPE=3]: %ORANGE%[%GREEN%%NAME%%CONTINUE%
+ItemDisplay[GEMTYPE=4]: %ORANGE%[%RED%%NAME%%CONTINUE%
+ItemDisplay[GEMTYPE=5]: %ORANGE%[%BLUE%%NAME%%CONTINUE%
+ItemDisplay[GEMTYPE=6]: %ORANGE%[%YELLOW%%NAME%%CONTINUE%
+ItemDisplay[GEMTYPE=7]: %ORANGE%[%GRAY%%NAME%%CONTINUE%
+ItemDisplay[GEMLEVEL>0 QTY>1]: %NAME% %WHITE%×%QTY%%CONTINUE%				// appends quantity
+
 // Descriptions for Stacked Gems
 ItemDisplay[gzvs]: %NAME%{%WHITE%Shields: +24 Defense%NL%Armors: +8 to Strength%NL%Weapons: +100 to Attack Rating%NL%}%CONTINUE%
 ItemDisplay[gpvs]: %NAME%{%WHITE%Shields: +30 Defense%NL%Armors: +10 to Strength%NL%Weapons: +150 to Attack Rating%NL%}%CONTINUE%
@@ -367,20 +375,6 @@ ItemDisplay[gpys]: %NAME%{%WHITE%Shields: Lightning Resist +40%%NL%Armors: 24% B
 ItemDisplay[skls]: %NAME%{%WHITE%Shields: Attacker Takes Damage of 16%NL%Armors: Regenerate Mana 12%, Replenish Life +4%NL%Weapons: 3% Life stolen per hit, 3% Mana stolen per hit%NL%}%CONTINUE%
 ItemDisplay[skzs]: %NAME%{%WHITE%Shields: Attacker Takes Damage of 20%NL%Armors: Regenerate Mana 19%, Replenish Life +5%NL%Weapons: 4% Life stolen per hit, 3% Mana stolen per hit%NL%}%CONTINUE%
 
-// Gem Icons
-ItemDisplay[GEMLEVEL=1]: ~%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
-ItemDisplay[GEMLEVEL=2]: +%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
-ItemDisplay[GEMLEVEL=3]: ×%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
-ItemDisplay[GEMLEVEL=4]: Ø%ORANGE%]  %WHITE%%NAME%%PX-60%%TIER-2%{%NAME%}%CONTINUE%		// flawless (map icons without text notifications)
-ItemDisplay[GEMLEVEL=5]: O%ORANGE%]  %WHITE%%NAME%%MAP-60%%DOT-20%%TIER-9%{%NAME%}%CONTINUE%	// perfect (notifications)
-ItemDisplay[GEMTYPE=1]: %ORANGE%[%PURPLE%%NAME%{%NAME%}%CONTINUE%
-ItemDisplay[GEMTYPE=2]: %ORANGE%[%WHITE%%NAME%{%NAME%}%CONTINUE%
-ItemDisplay[GEMTYPE=3]: %ORANGE%[%GREEN%%NAME%{%NAME%}%CONTINUE%
-ItemDisplay[GEMTYPE=4]: %ORANGE%[%RED%%NAME%{%NAME%}%CONTINUE%
-ItemDisplay[GEMTYPE=5]: %ORANGE%[%BLUE%%NAME%{%NAME%}%CONTINUE%
-ItemDisplay[GEMTYPE=6]: %ORANGE%[%YELLOW%%NAME%{%NAME%}%CONTINUE%
-ItemDisplay[GEMTYPE=7]: %ORANGE%[%GRAY%%NAME%{%NAME%}%CONTINUE%
-
 // Hidden: Chipped, Flawed, & Standard Gems (not in town)
 ItemDisplay[((FILTLVL>0 CLVL>29 DIFF>0) OR (FILTLVL>4 CLVL>19)) GEMLEVEL=1 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// level 30 - hides chipped gems (also at lower levels for stricter filter levels)
 ItemDisplay[((FILTLVL>0 CLVL>39 DIFF>0) OR (FILTLVL>4 CLVL>29)) GEMLEVEL=2 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// level 40 - hides flawed gems (also at lower levels for stricter filter levels)
@@ -390,13 +384,14 @@ ItemDisplay[((FILTLVL>0 CLVL>59 DIFF>1) OR (FILTLVL>4 CLVL>39)) GEMLEVEL=3 !(MAP
 // +-------+
 //-¦ Runes ¦-------------------------------------------------------------------------------------------------------------
 // +-------+
-// Modification										(rune number appended above, before quantity)
-ItemDisplay[RUNE>0 RUNE<10 (CLVL<80 OR DIFF<2)]: %PX-60%%TIER-9%%NAME%%CONTINUE%	// notifications for lowest runes when in Normal/Nightmare or below level 80
+// Modification
+ItemDisplay[RUNE>0]: %NAME% %TAN%(%WHITE%%RUNENUM%%TAN%)%WHITE%%CONTINUE%	// appends rune number
+ItemDisplay[RUNE>0 QTY>1]: %NAME% %WHITE%×%QTY%%CONTINUE%			// appends quantity
 
 // Descriptions for Stacked Runes
 ItemDisplay[r01s]: %NAME%{%WHITE%Others: +15 Defense, +1 to Light Radius%NL%Weapons: +50 to Attack Rating, +1 to Light Radius%NL%}%CONTINUE%
 ItemDisplay[r02s]: %NAME%{%WHITE%Shields: +7% Increased Chance of Blocking%NL%Armors: 15% Slower Stamina Drain%NL%Weapons: +75% Damage to Undead, +50 to Attack Rating against Undead%NL%}%CONTINUE%
-ItemDisplay[r03s]: %NAME%{%WHITE% +2 to Mana after each Kill %NL%}%CONTINUE%
+ItemDisplay[r03s]: %NAME%{%WHITE%Items: +2 to Mana after each Kill%NL%}%CONTINUE%
 ItemDisplay[r04s]: %NAME%{%WHITE%Others: +30 Defense vs. Missile%NL%Weapons: Knockback%NL%}%CONTINUE%
 ItemDisplay[r05s]: %NAME%{%WHITE%Others: Regenerate Mana 15%%NL%Weapons: -25% Target Defense%NL%}%CONTINUE%
 ItemDisplay[r06s]: %NAME%{%WHITE%Others: 15% Damage Taken Gained as Mana when Hit%NL%Weapons: +9 to Maximum Damage%NL%}%CONTINUE%
@@ -409,15 +404,15 @@ ItemDisplay[r12s]: %NAME%{%WHITE%Others: Physical Damage Taken Reduced by 7%NL%W
 ItemDisplay[r13s]: %NAME%{%WHITE%Shields: +20% Faster Block Rate%NL%Armors: +20% Faster Hit Recovery%NL%Weapons: +20% Increased Attack Speed%NL%}%CONTINUE%
 ItemDisplay[r14s]: %NAME%{%WHITE%Others: Replenish Life +10%NL%Weapons: +20% Enhanced Damage%NL%}%CONTINUE%
 ItemDisplay[r15s]: %NAME%{%WHITE%Others: Requirements -15%%NL%Weapons: Requirements -20%%NL%}%CONTINUE%
-ItemDisplay[r16s]: %NAME%{%WHITE% +10 to Vitality %NL%}%CONTINUE%
-ItemDisplay[r17s]: %NAME%{%WHITE% +10 to Energy %NL%}%CONTINUE%
-ItemDisplay[r18s]: %NAME%{%WHITE% +10 to Dexterity %NL%}%CONTINUE%
-ItemDisplay[r19s]: %NAME%{%WHITE% +10 to Strength %NL%}%CONTINUE%
+ItemDisplay[r16s]: %NAME%{%WHITE%Items: +10 to Vitality%NL%}%CONTINUE%
+ItemDisplay[r17s]: %NAME%{%WHITE%Items: +10 to Energy%NL%}%CONTINUE%
+ItemDisplay[r18s]: %NAME%{%WHITE%Items: +10 to Dexterity%NL%}%CONTINUE%
+ItemDisplay[r19s]: %NAME%{%WHITE%Items: +10 to Strength%NL%}%CONTINUE%
 ItemDisplay[r20s]: %NAME%{%WHITE%Others: 50% Extra Gold from Monsters%NL%Weapons: 75% Extra Gold from Monsters%NL%}%CONTINUE%
 ItemDisplay[r21s]: %NAME%{%WHITE%Others: +30% Enhanced Defense%NL%Weapons: +75% Damage & +100 Attack Rating vs. Demons%NL%}%CONTINUE%
 ItemDisplay[r22s]: %NAME%{%WHITE%Shields: All Resistances +22%NL%Armors: All Resistances +15%NL%Weapons: 10% Chance of Open Wounds, +120 Open Wounds Damage per Second%NL%}%CONTINUE%
 ItemDisplay[r23s]: %NAME%{%WHITE%Others: Magic Damage Taken Reduced by 7%NL%Weapons: Prevent Monster Heal%NL%}%CONTINUE%
-ItemDisplay[r24s]: %NAME%{%WHITE% 30% Better Chance of Getting Magic Items %NL%}%CONTINUE%
+ItemDisplay[r24s]: %NAME%{%WHITE%Items: 30% Better Chance of Getting Magic Items%NL%}%CONTINUE%
 ItemDisplay[r25s]: %NAME%{%WHITE%Others: +4% to Maximum Poison Resist%NL%Weapons: 20% Bonus to Attack Rating%NL%}%CONTINUE%
 ItemDisplay[r26s]: %NAME%{%WHITE%Others: +4% to Maximum Fire Resist%NL%Weapons: 7% Mana stolen per hit%NL%}%CONTINUE%
 ItemDisplay[r27s]: %NAME%{%WHITE%Others: +4% to Maximum Cold Resist%NL%Weapons: +45% Enhanced Damage%NL%}%CONTINUE%
@@ -426,7 +421,7 @@ ItemDisplay[r29s]: %NAME%{%WHITE%Shields: +50 to Mana%NL%Armors: Increase Maximu
 ItemDisplay[r30s]: %NAME%{%WHITE%Others: Physical Damage Taken Reduced by 5%%NL%Weapons: 20% Chance of Crushing Blow%NL%}%CONTINUE%
 ItemDisplay[r31s]: %NAME%{%WHITE%Shields: +75 to Life%NL%Armors: Increase Maximum Life 5%%NL%Weapons: Ignore Target's Defense%NL%}%CONTINUE%
 ItemDisplay[r32s]: %NAME%{%WHITE%Others: Cannot Be Frozen%NL%Weapons: Freezes target +3%NL%}%CONTINUE%
-ItemDisplay[r33s]: %NAME%{%WHITE% Indestructible %NL%}%CONTINUE%
+ItemDisplay[r33s]: %NAME%{%WHITE%Items: Indestructible%NL%}%CONTINUE%
 
 // Highlighting: Individual Rules  (rules for runes #1-23 are disabled and covered collectively below, all enabled rules add notifications)
 //    Lowest Runes
@@ -439,12 +434,12 @@ ItemDisplay[r33s]: %NAME%{%WHITE% Indestructible %NL%}%CONTINUE%
 //ItemDisplay[RUNE=7]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Tal
 //ItemDisplay[RUNE=8]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Ral
 //ItemDisplay[RUNE=9]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Ort
-//ItemDisplay[RUNE=10]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Thul
-//ItemDisplay[RUNE=11]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Amn
-//ItemDisplay[RUNE=12]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Sol
-//ItemDisplay[RUNE=13]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Shael
-//ItemDisplay[RUNE=14]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Dol
 //    Upper Low Runes
+//ItemDisplay[RUNE=10]:	%DOT-60%%TIER-9%%NAME%{%NAME%}						// Thul
+//ItemDisplay[RUNE=11]:	%DOT-60%%TIER-9%%NAME%{%NAME%}						// Amn
+//ItemDisplay[RUNE=12]:	%DOT-60%%TIER-9%%NAME%{%NAME%}						// Sol
+//ItemDisplay[RUNE=13]:	%DOT-60%%TIER-9%%NAME%{%NAME%}						// Shael
+//ItemDisplay[RUNE=14]:	%DOT-60%%TIER-9%%NAME%{%NAME%}						// Dol
 //ItemDisplay[RUNE=15]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Hel
 //ItemDisplay[RUNE=16]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Io
 //ItemDisplay[RUNE=17]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Lum
@@ -468,20 +463,23 @@ ItemDisplay[RUNE=33]:	%BORDER-60%%TIER-9%              %NAME%              {%NAM
 ItemDisplay[RUNE=30]:	%BORDER-60%%TIER-9%                %NAME%                {%NAME%}	// Ber
 
 // Highlighting: Collective Rules  (notifications for runes #10-23, higher runes are covered individually above)
-ItemDisplay[RUNE>0 RUNE<10]:		%PX-60%%TIER-2%%NAME%{%NAME%}				// map icons without text notifications
-ItemDisplay[RUNE>9 RUNE<15]:		%PX-60%%TIER-9%%NAME%{%NAME%}
-ItemDisplay[RUNE>14 RUNE<20]:		%DOT-60%%TIER-9% %NAME% {%NAME%}
-ItemDisplay[(RUNE=20 OR RUNE=21)]:	%MAP-60%%TIER-9%  %NAME%  {%NAME%}
-ItemDisplay[(RUNE=22 OR RUNE=23)]:	%MAP-60%%TIER-9%   %NAME%   {%NAME%}
+ItemDisplay[RUNE>0 RUNE<10 (CLVL<80 OR DIFF<2)]:	%PX-60%%TIER-9%%NAME%{%NAME%}		// notifications for lowest runes when in Normal/Nightmare or below level 80
+ItemDisplay[RUNE>0 RUNE<10]:				%PX-60%%TIER-2%%NAME%{%NAME%}		// map icons without text notifications
+ItemDisplay[RUNE>9 RUNE<15]:				%DOT-60%%TIER-9%%NAME%{%NAME%}
+ItemDisplay[RUNE>14 RUNE<20]:				%DOT-60%%TIER-9% %NAME% {%NAME%}
+ItemDisplay[(RUNE=20 OR RUNE=21)]:			%MAP-60%%TIER-9%  %NAME%  {%NAME%}
+ItemDisplay[(RUNE=22 OR RUNE=23)]:			%MAP-60%%TIER-9%   %NAME%   {%NAME%}
 
 
 // +-----------------+
 //-¦ Jewels & Charms ¦---------------------------------------------------------------------------------------------------
 // +-----------------+
-// Modification											(jewel fragment changed from plural to singular above, before quantity)
+// Modification
 ItemDisplay[jew MAG]:		%BLUE%%NAME%%CONTINUE%						// sets jewel color (magic)
 ItemDisplay[jew RARE]:		%YELLOW%%NAME%%CONTINUE%					// sets jewel color (rare)
 ItemDisplay[jew UNI]:		%GOLD%%NAME%%CONTINUE%						// sets jewel color (unique)
+ItemDisplay[jewf]:		%WHITE%Jewel Fragment%CONTINUE%					// changes name of Jewel Fragments from plural to singular
+ItemDisplay[jewf QTY>1]:	%NAME% %WHITE%×%QTY%%CONTINUE%					// appends quantity
 ItemDisplay[jewf FILTLVL=1]:	%NAME%{%WHITE%Stackable %BLUE%Jewel %WHITE%ingredient}%CONTINUE%// description for jewel fragments (alternative rule)
 ItemDisplay[(jew OR jewf)]:	{%NAME%}%ORANGE%{%DARK_GREEN%O%ORANGE%} %NAME%%CONTINUE%	// prepends "jewel" symbol
 ItemDisplay[jew STAT477=4]:	%NAME%{%PURPLE%Black}%CONTINUE%					// marks mirrored "black" jewels
@@ -1466,7 +1464,7 @@ ItemDisplay[NMAG (EQUIPPED OR GEMMED OR SHOP OR MAPID=1 OR MAPID=40 OR MAPID=75 
 ItemDisplay[FILTLVL>0 CLVL>29 NMAG SOCK=1 !(PRICE=35000 OR WAND OR sst OR 8ss OR 6ss OR (SCEPTER !wsp !9ws !7ws) OR SIN OR SOR OR (DIN (RES>9 OR EDAM>29)) OR (ZON (TABSK0>1 OR TABSK2>1)))]: {%NAME%}	// 1-socket items larger than 3 inventory spaces, except: items worth 35000 gold, paladin shields with 30+ ed or 10+ all res, amazon weapons with 2+ skills
 ItemDisplay[((FILTLVL>0 CLVL>79) OR (FILTLVL>4 CLVL>69)) NMAG SOCK=1]: {%NAME%}																// all 1-socket items
 
-// Hidden: Skill-Capable Items without skills (excluding merchant items) - level 5 (ilvl 10+)
+// Hidden: Skill-Capable Items without skills - level 5 (ilvl 10+)
 ItemDisplay[FILTLVL>0 CLVL>4 NMAG ILVL>9 SIN !(ELT (SOCK=0 OR SOCK>1) (ETH OR ED>0)) (SK251=0 SK252=0 SK253=0 SK254=0 SK255=0 SK256=0 SK257=0 SK258=0 SK259=0 SK260=0 SK261=0 SK262=0 SK263=0 SK264=0 SK265=0 SK266=0 SK267=0 SK268=0 SK269=0 SK270=0 SK271=0 SK272=0 SK273=0 SK274=0 SK275=0 SK276=0 SK277=0 SK278=0 SK279=0 SK280=0 SK366=0)]: {%NAME%}					// Assassin	Claws		...except: 0/2+ socket eth/ed elite
 ItemDisplay[FILTLVL>0 CLVL>4 NMAG ILVL>9 BAR (SK126=0 SK127=0 SK128=0 SK129=0 SK130=0 SK131=0 SK132=0 SK133=0 SK134=0 SK135=0 SK136=0 SK137=0 SK138=0 SK139=0 SK140=0 SK141=0 SK142=0 SK143=0 SK144=0 SK145=0 SK146=0 SK147=0 SK148=0 SK149=0 SK150=0 SK151=0 SK152=0 SK153=0 SK154=0 SK155=0 SK368=0)]: {%NAME%}										// Barbarian	Helms
 ItemDisplay[FILTLVL>0 CLVL>4 NMAG ILVL>9 (DRU OR CLUB) !(SOCK>1 (7cl OR 7sp) (ETH OR ED>0)) (SK221=0 SK222=0 SK223=0 SK224=0 SK225=0 SK226=0 SK227=0 SK228=0 SK229=0 SK230=0 SK231=0 SK232=0 SK233=0 SK234=0 SK235=0 SK236=0 SK237=0 SK238=0 SK239=0 SK240=0 SK241=0 SK242=0 SK243=0 SK244=0 SK245=0 SK246=0 SK247=0 SK248=0 SK249=0 SK250=0 SK370=0)]: {%NAME%}				// Druid	Pelts & Clubs	...except: 2+ socket eth/ed elite clubs
