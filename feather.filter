@@ -931,7 +931,7 @@ ItemDisplay[RARE !ID ILVL>49 PALADIN DIN]:					%DOT-6D%%TIER-4% %NAME% %WHITE%		
 ItemDisplay[RARE !ID ILVL>49 SORCERESS SOR (ob5 OR oba OR obf)]:		%DOT-6D%%TIER-9% %NAME% %WHITE%		// Sorceress - orbs (versions that can get 3 sockets)
 ItemDisplay[RARE !ID ILVL>49 SORCERESS STAFF (wst OR 8ws OR 6ws)]:		%DOT-6D%%TIER-4% %NAME% %WHITE%		// Sorceress - staves (versions that can get 6 sockets)
 
-// Catchall
+// Catchall - Rare Items
 ItemDisplay[RARE]: %NAME%%WHITE%
 
 
@@ -984,7 +984,7 @@ ItemDisplay[FILTLVL>5 CLVL>69 DIFF=2 MAG !ID EXC THROWING !ETH !ZON]:			// hides
 ItemDisplay[FILTLVL>6 CLVL>79 DIFF=2 MAG !ID !ETH !ELT ((ZON !AMAZON !am2 !am7 !am1 !am6 !am5 !ama) OR (SIN !ASSASSIN !axf !9xf !btl !9tw) OR (BAR !BARBARIAN !ba1 !ba6) OR ((DRU OR CLUB) !DRUID !dr1 !dr6) OR ((NEC OR WAND) !NECROMANCER !gwn !9gw !ne1 !ne6) OR ((DIN OR SCEPTER) !PALADIN !wsp !9ws !pa1 !pa6) OR ((SOR OR STAFF) !SORCERESS !ob5 !oba !wst !8ws))]:		// hides non-elite non-eth class items that don't match the character's class except for a few of each type
 ItemDisplay[FILTLVL>6 CLVL>89 DIFF=2 MAG !ID ILVL<90 amu]:				// hides most unid magic amulets at level 90 (filter level 7+) in Hell
 
-// Catchall
+// Catchall - Magic Items
 ItemDisplay[MAG]: %NAME%%WHITE%
 
 
@@ -1004,12 +1004,12 @@ ItemDisplay[FILTLVL=1 !SHOP !EQUIPPED RW ELT]: %NAME%{%NAME%%WHITE%Tier: Elite}%
 // Runewords
 ItemDisplay[RW]: %NAME%{%NAME%}%WHITE%
 
-// Modification: Superior/Sockets
+// Name Modification: Superior/Sockets
 ItemDisplay[NMAG SUP ED>0]: %NAME% %BLUE%+%ED%{%NAME%}%CONTINUE%
 ItemDisplay[NMAG SOCK>0]: %NAME% %GRAY%[%SOCKETS%]{%NAME%}%CONTINUE%
 
 // Descriptions for Item Prices
-ItemDisplay[NMAG !SHOP !EQUIPPED]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%
+ItemDisplay[NMAG !EQUIPPED !SHOP !GEMMED !aqv !cqv]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%	// adds price
 
 // Descriptions for Available Runewords																										// ...New RWs that span multiple item types: Plague (3s weapons, Cham+Fal+Um), Rampage (4s polearms/spears/staves, Shael+El+Ith+Eth), Zenith (5s polearms/spears/staves/bows/crossbows, Jah+Zod+Ort+El+Ral), Neophyte (2s orbs/clubs/scepters/staves, Thul+Tir), Asylum (6s hammers/two-handed-swords/staves/polearms/spears/bows/crossbows, Gul+Cham+Hel+Jah+Dol+Um)
 ItemDisplay[NMAG !SHOP !EQUIPPED !FILTLVL=1 (HELM OR CIRC) SOCK=2]: %NAME%{%NAME%%NL%%WHITE%Runewords: %GOLD%Nadir, Lore}%CONTINUE%														// Helm 2s
