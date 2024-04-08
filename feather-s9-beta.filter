@@ -297,27 +297,27 @@ ItemDisplay[MAPTIER>0 MAPTIER<4]:		%MAP-77%%PX-53%%TIER-9%%NAME%{%NAME%}%CONTINU
 ItemDisplay[MAPTIER>3]:				%BORDER-77%%DOT-53%%PX-62%%TIER-9%%NAME%{%NAME%}%CONTINUE%		// map notifications - Uniques & Dungeons
 
 // Reference Descriptions for Highest Map Immunes
-ItemDisplay[FILTLVL=1 t11]: %NAME%{%WHITE%Highest Immunes: %RED%100+% %WHITE%Fire, %YELLOW%100+% %WHITE%Lightning}%CONTINUE%					// Ruins of Viz-Jun		T2
-ItemDisplay[FILTLVL=1 t12]: %NAME%{%WHITE%Highest Immunes: %RED%100+% %WHITE%Fire, %BLUE%100+% %WHITE%Cold %GRAY%(Lightning Spire %YELLOW%100% %GRAY%Lightning, %GREEN%1000% %GRAY%Poison)}%CONTINUE%	// Horazon's Memory	T1
-ItemDisplay[FILTLVL=1 t13]: %NAME%{%WHITE%Highest Immunes: %RED%100+% %WHITE%Fire, %BLUE%100+% %WHITE%Cold, %GOLD%100+% %WHITE%Physical}%CONTINUE%		// Bastion Keep			T2
-ItemDisplay[FILTLVL=1 t14]: %NAME%{%WHITE%Highest Immunes: %YELLOW%100+% %WHITE%Lightning, %GREEN%100+% %WHITE%Poison}%CONTINUE%				// Sanatorium			T3
-ItemDisplay[FILTLVL=1 t15]: %NAME%{%WHITE%Highest Immunes: %BLUE%100+% %WHITE%Cold, %GREEN%100+% %WHITE%Poison, %ORANGE%100+% %WHITE%Magic}%CONTINUE%		// Royal Crypts			T1
-ItemDisplay[FILTLVL=1 t16]: %NAME%{%WHITE%Highest Immunes: %RED%100+% %WHITE%Fire, %BLUE%100+% %WHITE%Cold, %ORANGE%100+% %WHITE%Magic}%CONTINUE%		// Ruined Cistern		T3
-ItemDisplay[FILTLVL=1 t21]: %NAME%{%WHITE%Highest Immunes: %RED%100+% %WHITE%Fire, %YELLOW%100+% %WHITE%Lightning}%CONTINUE%					// Phlegethon			T3
-ItemDisplay[FILTLVL=1 t22]: %NAME%{%WHITE%Highest Immunes: %RED%100+% %WHITE%Fire, %YELLOW%100+% %WHITE%Lightning}%CONTINUE%					// Torajan Jungle		T1
-ItemDisplay[FILTLVL=1 t23]: %NAME%{%WHITE%Highest Immunes: %RED%100+% %WHITE%Fire, %YELLOW%100+% %WHITE%Lightning}%CONTINUE%					// Arreat Battlefield		T1
-ItemDisplay[FILTLVL=1 t24]: %NAME%{%WHITE%Highest Immunes: %YELLOW%100+% %WHITE%Lightning, %GREEN%100+% %WHITE%Poison, %GOLD%100+% %WHITE%Physical}%CONTINUE%	// Tomb of Zultan Kulle		T2
-ItemDisplay[FILTLVL=1 t25]: %NAME%{%WHITE%Highest Immunes: %YELLOW%100+% %WHITE%Lightning, %GREEN%100+% %WHITE%Poison}%CONTINUE%				// Sewers of Harrogath		T1
-ItemDisplay[FILTLVL=1 t26]: %NAME%{%WHITE%Highest Immunes: %GREEN%100+% %WHITE%Poison, %GOLD%100+% %WHITE%Physical}%CONTINUE%					// Shadows of Westmarch		T1
-ItemDisplay[FILTLVL=1 t31]: %NAME%{%WHITE%Highest Immunes: %BLUE%100+% %WHITE%Cold, %GREEN%100+% %WHITE%Poison, %ORANGE%100+% %WHITE%Magic}%CONTINUE%		// River of Blood		T2
-ItemDisplay[FILTLVL=1 t32]: %NAME%{%WHITE%Highest Immunes: %BLUE%100+% %WHITE%Cold, %YELLOW%100+% %WHITE%Lightning}%CONTINUE%					// Throne of Insanity		T3
-ItemDisplay[FILTLVL=1 t33]: %NAME%{%WHITE%Highest Immunes: %RED%100+% %WHITE%Fire, %BLUE%100+% %WHITE%Cold}%CONTINUE%						// Lost Temple			T2
-ItemDisplay[FILTLVL=1 t34]: %NAME%{%WHITE%Highest Immunes: %YELLOW%100+% %WHITE%Lightning, %GREEN%100+% %WHITE%Poison}%CONTINUE%				// Ancestral Trial		T2
-ItemDisplay[FILTLVL=1 t36]: %NAME%{%WHITE%Highest Immunes: %BLUE%100+% %WHITE%Cold, %YELLOW%100+% %WHITE%Lightning}%CONTINUE%					// Fall of Caldeum		T1
-ItemDisplay[FILTLVL=1 t37]: %NAME%{%WHITE%Highest Immunes: %YELLOW%100+% %WHITE%Lightning, %GREEN%100+% %WHITE%Poison, %GOLD%100+% %WHITE%Physical}%CONTINUE%	// Pandemonium Citadel		T3
-ItemDisplay[FILTLVL=1 t38]: %NAME%{%WHITE%Highest Immunes: %RED%100+% %WHITE%Fire, %GREEN%100+% %WHITE%Poison, %GOLD%100+% %WHITE%Physical}%CONTINUE%		// Canyon of Sescheron		T3
-ItemDisplay[FILTLVL=1 t39]: %NAME%{%WHITE%Highest Immunes: %RED%100+% %WHITE%Fire, %BLUE%100+% %WHITE%Cold, %GREEN%100+% %WHITE%Poison %GRAY%(Fire Tower %GREEN%1000% %GRAY%Poison)}%CONTINUE%	// Kehjistan Marketplace	T3
-ItemDisplay[FILTLVL=1 t3a]: %NAME%{%WHITE%Highest Immunes: %BLUE%100+% %WHITE%Cold, %GREEN%100+% %WHITE%Poison, %ORANGE%100+% %WHITE%Magic}%CONTINUE%		// Ashen Plains			T3
+ItemDisplay[FILTLVL=1 t11]: %NAME%{%WHITE%Highest Immunes: %RED%130% %WHITE%Fire, %YELLOW%120% %WHITE%Lightning}%CONTINUE%					// Ruins of Viz-Jun		T2
+ItemDisplay[FILTLVL=1 t12]: %NAME%{%WHITE%Highest Immunes: %RED%135% %WHITE%Fire, %BLUE%130% %WHITE%Cold %GRAY%(Lightning Spire %YELLOW%100% %GRAY%Lightning, %GREEN%1000% %GRAY%Poison)}%CONTINUE%	// Horazon's Memory	T1
+ItemDisplay[FILTLVL=1 t13]: %NAME%{%WHITE%Highest Immunes: %RED%125% %WHITE%Fire, %BLUE%100% %WHITE%Cold, %GOLD%110% %WHITE%Physical}%CONTINUE%			// Bastion Keep			T2
+ItemDisplay[FILTLVL=1 t14]: %NAME%{%WHITE%Highest Immunes: %YELLOW%125% %WHITE%Lightning, %GREEN%130% %WHITE%Poison}%CONTINUE%					// Sanatorium			T3
+ItemDisplay[FILTLVL=1 t15]: %NAME%{%WHITE%Highest Immunes: %BLUE%125% %WHITE%Cold, %GREEN%105% %WHITE%Poison, %ORANGE%150% %WHITE%Magic}%CONTINUE%		// Royal Crypts			T1
+ItemDisplay[FILTLVL=1 t16]: %NAME%{%WHITE%Highest Immunes: %BLUE%115% %WHITE%Cold, %GREEN%140% %WHITE%Poison, %ORANGE%125% %WHITE%Magic}%CONTINUE%		// Ruined Cistern		T3
+ItemDisplay[FILTLVL=1 t21]: %NAME%{%WHITE%Highest Immunes: %RED%140% %WHITE%Fire, %YELLOW%125% %WHITE%Lightning}%CONTINUE%					// Phlegethon			T3
+ItemDisplay[FILTLVL=1 t22]: %NAME%{%WHITE%Highest Immunes: %RED%125% %WHITE%Fire, %YELLOW%105% %WHITE%Lightning}%CONTINUE%					// Torajan Jungle		T1
+ItemDisplay[FILTLVL=1 t23]: %NAME%{%WHITE%Highest Immunes: %RED%130% %WHITE%Fire, %YELLOW%100% %WHITE%Lightning}%CONTINUE%					// Arreat Battlefield		T1
+ItemDisplay[FILTLVL=1 t24]: %NAME%{%WHITE%Highest Immunes: %YELLOW%120% %WHITE%Lightning, %GREEN%110% %WHITE%Poison, %GOLD%105% %WHITE%Physical}%CONTINUE%	// Tomb of Zultan Kulle		T2
+ItemDisplay[FILTLVL=1 t25]: %NAME%{%WHITE%Highest Immunes: %YELLOW%135% %WHITE%Lightning, %GREEN%125% %WHITE%Poison}%CONTINUE%					// Sewers of Harrogath		T1
+ItemDisplay[FILTLVL=1 t26]: %NAME%{%WHITE%Highest Immunes: %GREEN%135% %WHITE%Poison, %GOLD%100% %WHITE%Physical}%CONTINUE%					// Shadows of Westmarch		T1
+ItemDisplay[FILTLVL=1 t31]: %NAME%{%WHITE%Highest Immunes: %BLUE%180% %WHITE%Cold, %GREEN%130% %WHITE%Poison, %ORANGE%100% %WHITE%Magic}%CONTINUE%		// River of Blood		T2
+ItemDisplay[FILTLVL=1 t32]: %NAME%{%WHITE%Highest Immunes: %BLUE%130% %WHITE%Cold, %YELLOW%130% %WHITE%Lightning}%CONTINUE%					// Throne of Insanity		T3
+ItemDisplay[FILTLVL=1 t33]: %NAME%{%WHITE%Highest Immunes: %RED%120% %WHITE%Fire, %BLUE%110% %WHITE%Cold}%CONTINUE%						// Lost Temple			T2
+ItemDisplay[FILTLVL=1 t34]: %NAME%{%WHITE%Highest Immunes: %YELLOW%130% %WHITE%Lightning, %GREEN%120% %WHITE%Poison}%CONTINUE%					// Ancestral Trial		T2
+ItemDisplay[FILTLVL=1 t36]: %NAME%{%WHITE%Highest Immunes: %BLUE%130% %WHITE%Cold, %YELLOW%100% %WHITE%Lightning}%CONTINUE%					// Fall of Caldeum		T1
+ItemDisplay[FILTLVL=1 t37]: %NAME%{%WHITE%Highest Immunes: %YELLOW%135% %WHITE%Lightning, %GREEN%130% %WHITE%Poison, %GOLD%100% %WHITE%Physical}%CONTINUE%	// Pandemonium Citadel		T3
+ItemDisplay[FILTLVL=1 t38]: %NAME%{%WHITE%Highest Immunes: %RED%130% %WHITE%Fire, %GREEN%110% %WHITE%Poison, %GOLD%120% %WHITE%Physical}%CONTINUE%		// Canyon of Sescheron		T3
+ItemDisplay[FILTLVL=1 t39]: %NAME%{%WHITE%Highest Immunes: %RED%125% %WHITE%Fire, %BLUE%130% %WHITE%Cold, %GREEN%?% %WHITE%Poison %GRAY%(Fire Tower %GREEN%1000% %GRAY%Poison)}%CONTINUE%	// Kehjistan Marketplace	T3
+ItemDisplay[FILTLVL=1 t3a]: %NAME%{%WHITE%Highest Immunes: %BLUE%130% %WHITE%Cold, %GREEN%130% %WHITE%Poison, %ORANGE%120% %WHITE%Magic}%CONTINUE%		// Ashen Plains			T3
 ItemDisplay[FILTLVL=1 (t41 OR t42 OR t43)]: %NAME%{%WHITE%Highest Immunes: 180% %GRAY%(All Damage Types)}%CONTINUE%						// Dungeons			T4
 
 
