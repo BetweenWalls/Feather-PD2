@@ -299,7 +299,7 @@ ItemDisplay[MAPTIER>3]:				%BORDER-77%%DOT-53%%PX-62%%TIER-9%%NAME%{%NAME%}%CONT
 // Reference Descriptions for Highest Map Immunes
 ItemDisplay[FILTLVL=1 t11]: %NAME%{%WHITE%Highest Immunes: %RED%130% %WHITE%Fire, %YELLOW%120% %WHITE%Lightning}%CONTINUE%					// Ruins of Viz-Jun		T2
 ItemDisplay[FILTLVL=1 t12]: %NAME%{%WHITE%Highest Immunes: %RED%135% %WHITE%Fire, %BLUE%130% %WHITE%Cold %GRAY%(Lightning Spire %YELLOW%100% %GRAY%Lightning, %GREEN%1000% %GRAY%Poison)}%CONTINUE%	// Horazon's Memory	T1
-ItemDisplay[FILTLVL=1 t13]: %NAME%{%WHITE%Highest Immunes: %RED%125% %WHITE%Fire, %BLUE%100% %WHITE%Cold, %GOLD%110% %WHITE%Physical}%CONTINUE%			// Bastion Keep			T2
+ItemDisplay[FILTLVL=1 t13]: %NAME%{%WHITE%Highest Immunes: %RED%125% %WHITE%Fire, %BLUE%130% %WHITE%Cold, %GOLD%110% %WHITE%Physical}%CONTINUE%			// Bastion Keep			T2
 ItemDisplay[FILTLVL=1 t14]: %NAME%{%WHITE%Highest Immunes: %YELLOW%125% %WHITE%Lightning, %GREEN%130% %WHITE%Poison}%CONTINUE%					// Sanatorium			T3
 ItemDisplay[FILTLVL=1 t15]: %NAME%{%WHITE%Highest Immunes: %BLUE%125% %WHITE%Cold, %GREEN%105% %WHITE%Poison, %ORANGE%150% %WHITE%Magic}%CONTINUE%		// Royal Crypts			T1
 ItemDisplay[FILTLVL=1 t16]: %NAME%{%WHITE%Highest Immunes: %BLUE%115% %WHITE%Cold, %GREEN%140% %WHITE%Poison, %ORANGE%125% %WHITE%Magic}%CONTINUE%		// Ruined Cistern		T3
@@ -316,7 +316,7 @@ ItemDisplay[FILTLVL=1 t34]: %NAME%{%WHITE%Highest Immunes: %YELLOW%130% %WHITE%L
 ItemDisplay[FILTLVL=1 t36]: %NAME%{%WHITE%Highest Immunes: %BLUE%130% %WHITE%Cold, %YELLOW%100% %WHITE%Lightning}%CONTINUE%					// Fall of Caldeum		T1
 ItemDisplay[FILTLVL=1 t37]: %NAME%{%WHITE%Highest Immunes: %YELLOW%135% %WHITE%Lightning, %GREEN%130% %WHITE%Poison, %GOLD%100% %WHITE%Physical}%CONTINUE%	// Pandemonium Citadel		T3
 ItemDisplay[FILTLVL=1 t38]: %NAME%{%WHITE%Highest Immunes: %RED%130% %WHITE%Fire, %GREEN%110% %WHITE%Poison, %GOLD%120% %WHITE%Physical}%CONTINUE%		// Canyon of Sescheron		T3
-ItemDisplay[FILTLVL=1 t39]: %NAME%{%WHITE%Highest Immunes: %RED%125% %WHITE%Fire, %BLUE%130% %WHITE%Cold, %GREEN%?% %WHITE%Poison %GRAY%(Fire Tower %GREEN%1000% %GRAY%Poison)}%CONTINUE%	// Kehjistan Marketplace	T3
+ItemDisplay[FILTLVL=1 t39]: %NAME%{%WHITE%Highest Immunes: %RED%125% %WHITE%Fire, %BLUE%130% %WHITE%Cold, %GREEN%105% %WHITE%Poison %GRAY%(Fire Tower %GREEN%1000% %GRAY%Poison)}%CONTINUE%	// Kehjistan Marketplace	T3
 ItemDisplay[FILTLVL=1 t3a]: %NAME%{%WHITE%Highest Immunes: %BLUE%130% %WHITE%Cold, %GREEN%130% %WHITE%Poison, %ORANGE%120% %WHITE%Magic}%CONTINUE%		// Ashen Plains			T3
 ItemDisplay[FILTLVL=1 (t41 OR t42 OR t43)]: %NAME%{%WHITE%Highest Immunes: 180% %GRAY%(All Damage Types)}%CONTINUE%						// Dungeons			T4
 
@@ -443,8 +443,7 @@ ItemDisplay[RUNE=33]:	%BORDER-60%%TIER-9%              %NAME%              {%NAM
 ItemDisplay[RUNE=30]:	%BORDER-60%%TIER-9%                %NAME%                {%NAME%}	// Ber
 
 // Highlighting: Collective Rules  (notifications for runes #1-23, higher runes are covered individually above)
-ItemDisplay[RUNE>0 RUNE<10 (CLVL<80 OR DIFF<2)]:	%PX-60%%TIER-9%%NAME%{%NAME%}		// notifications for lowest runes when in Normal/Nightmare or below level 80
-ItemDisplay[RUNE>0 RUNE<10]:				%PX-60%%TIER-4%%NAME%{%NAME%}		// minimap icons without text notifications above filter level 4
+ItemDisplay[RUNE>0 RUNE<10]:				%PX-60%%TIER-9%%NAME%{%NAME%}
 ItemDisplay[RUNE>9 RUNE<15]:				%DOT-60%%TIER-9%%NAME%{%NAME%}
 ItemDisplay[RUNE>14 RUNE<20]:				%DOT-60%%TIER-9% %NAME% {%NAME%}
 ItemDisplay[(RUNE=20 OR RUNE=21)]:			%MAP-60%%TIER-9%  %NAME%  {%NAME%}
