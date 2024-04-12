@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // "Feather" Item Filter for Project Diablo II	(HD text version)
-//	Date Updated:	2024 April 8
+//	Date Updated:	2024 April 12
 //	Info:		https://github.com/BetweenWalls/Feather-PD2
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Searchable Features:
@@ -482,7 +482,7 @@ ItemDisplay[MAG ID ((cm1 ALVL>89) OR (cm2 ALVL>73) OR (cm3 ALVL>90))]:	%NAME%{%W
 ItemDisplay[MAG ID ((cm1 ALVL<90) OR (cm2 ALVL<74) OR (cm3 ALVL<91))]:	%NAME%{%WHITE%Item Level: %ILVL%}%CONTINUE%		// adds ilvl
 
 // Highlighting & Notifying
-ItemDisplay[MAG ID ((cm1 (LIFE>19 OR (MANA>16 FHR>0) OR RES>0 OR MFIND>6 OR FRES>10 OR CRES>10 OR LRES>10 OR PRES>10 OR (MAXDMG>1 AR>0) OR STAT58>335)) OR (cm2 ((MANA>33 FHR>0) OR STAT329>2 OR STAT330>2 OR STAT331>2 OR STAT332>2 OR STAT357>2 OR RES>5 OR (MAXDMG>3 AR>0))) OR (cm3 ((MANA>51 FHR>0) OR TABSK0>0 OR TABSK1>0 OR TABSK2>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK32>0 OR TABSK33>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0 OR RES>8 OR (MAXDMG>6 AR>0))) OR (cm1 LVLREQ<31 LIFE>13 (MANA>4 OR FRES>4 OR CRES>4 OR LRES>4 OR PRES>4)) OR (cm2 LVLREQ<31 LIFE>18 (STAT329>1 OR STAT330>1 OR STAT331>1 OR STAT332>1 OR STAT357>1 OR MANA>20 OR FRES>12 OR CRES>12 OR LRES>12 OR PRES>12)) OR (cm2 LVLREQ<10 LIFE>14 (MANA>4 OR FRES>4 OR CRES>4 OR LRES>4 OR PRES>4)) OR ((PREFIX=625 OR PREFIX=637 OR PREFIX=649) (SUFFIX=709 OR SUFFIX=721 OR SUFFIX=733)) OR ((PREFIX=660 OR PREFIX=661) (SUFFIX=696 OR SUFFIX=697)))]:	%DOT-9F%%TIER-9%   %NAME%   {%NAME%}%WHITE%	// highlighting/notifications for some valuable charms
+ItemDisplay[MAG ID ((cm1 (LIFE>19 OR (MANA>16 FHR>0) OR RES>0 OR MFIND>6 OR FRES>10 OR CRES>10 OR LRES>10 OR PRES>10 OR (MAXDMG>1 AR>0) OR STAT58>335)) OR (cm2 ((MANA>33 FHR>0) OR STAT329>2 OR STAT330>2 OR STAT331>2 OR STAT332>2 OR STAT357>2 OR RES>5 OR (MAXDMG>3 AR>0))) OR (cm3 ((MANA>51 FHR>0) OR TABSK0>0 OR TABSK1>0 OR TABSK2>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK32>0 OR TABSK33>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0 OR RES>8 OR (MAXDMG>6 AR>0))) OR (cm1 LVLREQ<31 LIFE>13 (MANA>4 OR FRES>4 OR CRES>4 OR LRES>4 OR PRES>4)) OR (cm2 LVLREQ<31 LIFE>18 (STAT329>1 OR STAT330>1 OR STAT331>1 OR STAT332>1 OR STAT357>1 OR MANA>20 OR FRES>12 OR CRES>12 OR LRES>12 OR PRES>12)) OR (cm2 LVLREQ<10 LIFE>14 (MANA>4 OR FRES>4 OR CRES>4 OR LRES>4 OR PRES>4)) OR ((PREFIX=625 OR PREFIX=637 OR PREFIX=649) (SUFFIX=705 OR SUFFIX=717 OR SUFFIX=729)) OR ((PREFIX=660 OR PREFIX=661) (SUFFIX=692 OR SUFFIX=693)))]:	%DOT-9F%%TIER-9%   %NAME%   {%NAME%}%WHITE%	// highlighting/notifications for some valuable charms
 ItemDisplay[MAG !ID (cm1 OR cm2 OR cm3)]:	%DOT-9F%%TIER-2%%NAME%%WHITE%				// minimap icons without text notifications above filter level 2 for unidentified magic charms
 ItemDisplay[UNI !ID cm3]:			     %NAME%     %WHITE%					// highlighting for unid Gheed's Fortune
 ItemDisplay[UNI !ID (cm1 OR cm2)]:		         %NAME%         %WHITE%				// highlighting for unid Hellfire Torch and Annihilus
@@ -546,9 +546,9 @@ ItemDisplay[ID SHOP GLOVES (TABSK0>2 OR TABSK1>2 OR TABSK2>2 OR TABSK50>2) IAS>1
 ItemDisplay[ID SHOP 1H TABSK34>2]:							%NAME% %TAN%+3 Warcries{%TAN%##############################}	// 1-Handed Weapons with +3 Warcries
 ItemDisplay[ID SHOP SIN TABSK48>2]:							%NAME% %TAN%+3 Traps{%TAN%##############################}	// Claws with +3 Traps
 ItemDisplay[ID SHOP CLUB TABSK40>2]:							%NAME% %TAN%+3 Summoning{%TAN%##############################}	// Clubs with +3 Summoning
-ItemDisplay[ID SHOP WEAPON (SUFFIX=598 OR SUFFIX=599)]:					%NAME% %TAN%(Lower Resist){%TAN%##############################}	// Weapons with Lower Resist charges
-ItemDisplay[ID SHOP 1H (SUFFIX=582 OR SUFFIX=583)]:					%NAME% %TAN%(Life Tap){%TAN%##############################}	// 1-Handed Weapons with Life Tap charges
-ItemDisplay[ID SHOP STAFF (CHSK54>0 OR SUFFIX=536 OR SUFFIX=537)]:			%NAME% %TAN%(Teleport){%TAN%##############################}	// Staves with Teleport charges
+ItemDisplay[ID SHOP WEAPON (SUFFIX=594 OR SUFFIX=595)]:					%NAME% %TAN%(Lower Resist){%TAN%##############################}	// Weapons with Lower Resist charges
+ItemDisplay[ID SHOP 1H (SUFFIX=578 OR SUFFIX=579)]:					%NAME% %TAN%(Life Tap){%TAN%##############################}	// 1-Handed Weapons with Life Tap charges
+ItemDisplay[ID SHOP STAFF (CHSK54>0 OR SUFFIX=532 OR SUFFIX=533)]:			%NAME% %TAN%(Teleport){%TAN%##############################}	// Staves with Teleport charges
 //ItemDisplay[ID SHOP SHIELD SOCK=4 (FBR>0 OR FHR>10 OR LIFE>40)]:			%NAME% %TAN%+{%TAN%##############################}		// Jeweller's Monarch of Deflecting (JMoD) and similar
 //ItemDisplay[ID SHOP CHEST SOCK=4 LIFE>80]:						%NAME% %TAN%+{%TAN%##############################}		// Jeweller's Armor of the Whale
 //ItemDisplay[ID SHOP CIRC SOCK=3 (FRW>20 OR STAT34>15)]:				%NAME% %TAN%+{%TAN%##############################}		// Artisan's Circlet of Speed/Life Everlasting
