@@ -8,7 +8,7 @@
 //	Rules that add item notifications mention the word "notifications"
 //	Rules that only apply to higher filter levels mention the word "stricter"
 // About this Filter:
-//	File Settings: Courier New, 8-space tabs, no line wrapping, ANSI encoding (used for ­×¹²³)
+//	File Settings: Courier New, 8-space tabs, no line wrapping, ANSI encoding (used for ·×¹²³)
 //	Highlighting is done primarily with spaces and tabs, which can be seen in Notepad++ by selecting "View" -> "Show Symbol" -> "Show White Space and TAB"
 //	Highlighting reference for unique/set items: https://tinyurl.com/d2filterhighlighting
 // Resources:
@@ -216,22 +216,22 @@ ItemDisplay[FILTLVL>0 key (CLVL>19 OR ASSASSIN) !(MAPID=1 OR MAPID=40 OR MAPID=7
 ItemDisplay[FILTLVL>0 (tsc OR isc) CLVL>19 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}		// level 20 - hides scrolls
 
 // Uncommon General Items  (includes notifications)
-ItemDisplay[wss]:	%DOT-62% %NAME% {%WHITE%Can also add corruption modifiers to maps%NL%Corrupts equipment, either adding a modifier or turning it into a random rare}%WHITE%	// Worldstone Shard
-ItemDisplay[cwss]:	%MAP-62%  %NAME%  {%WHITE%Corrupts %GOLD%Annihilus%WHITE%, either adding a modifier or turning it into a random magic small charm}%WHITE%			// Tainted Worldstone Shard
-ItemDisplay[lpp]:	%MAP-53%  %NAME%  {%WHITE%Cannot be used with unique or set items%NL%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%		// Larzuk's Puzzlepiece
-ItemDisplay[lbox]:	%BORDER-53%      %NAME%      {%WHITE%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%	// Larzuk's Puzzlebox
-//ItemDisplay[lmal]:	%NAME%{%NAME%}%WHITE%													// Larzuk's Malus
-ItemDisplay[crfb]:	%MAP-60%%DOT-20%  %NAME%  {%NAME%}%WHITE%										// Blood Craft Infusion
-ItemDisplay[crfc]:	%MAP-60%%DOT-20%  %NAME%  {%NAME%}%WHITE%										// Caster Craft Infusion
-ItemDisplay[crfh]:	%MAP-60%%DOT-20%  %NAME%  {%NAME%}%WHITE%										// Hitpower Craft Infusion
-ItemDisplay[crfs]:	%MAP-60%%DOT-20%  %NAME%  {%NAME%}%WHITE%										// Safety Craft Infusion
-ItemDisplay[crfv]:	%MAP-60%%DOT-20%  %NAME%  {%NAME%}%WHITE%										// Vampiric Craft Infusion
-ItemDisplay[crfu]:	%MAP-60%%DOT-20%  %NAME%  {%NAME%}%WHITE%										// Bountiful Craft Infusion
-ItemDisplay[crfp]:	%MAP-60%%DOT-20%  %NAME%  {%NAME%}%WHITE%										// Brilliant Craft Infusion
-ItemDisplay[rtp]:	%BORDER-53%        %NAME%        {%NAME%}%WHITE%									// Horadrim Navigator
-ItemDisplay[rid]:	%BORDER-53%        %NAME%        {%NAME%}%WHITE%									// Horadrim Almanac
-ItemDisplay[rkey]:	%BORDER-53%        %NAME%        {%NAME%}%WHITE%									// Skeleton Key
-ItemDisplay[lsvl]:	%BORDER-62%        %RED%Vial of Lightsong        {%WHITE%Cannot be used with set items or indestructible items}%WHITE%	// Vial of Lightsong
+ItemDisplay[wss]:	%DOT-62% %NAME% {%NAME%}%WHITE%									// Worldstone Shard
+ItemDisplay[cwss]:	%MAP-62%  %NAME%  {%NAME%}%WHITE%								// Tainted Worldstone Shard
+ItemDisplay[lpp]:	%MAP-53%  %NAME%  {%NAME%}%WHITE%								// Larzuk's Puzzlepiece
+ItemDisplay[lbox]:	%BORDER-53%      %NAME%      {%NAME%}%WHITE%							// Larzuk's Puzzlebox
+//ItemDisplay[lmal]:	%NAME%{%NAME%}%WHITE%										// Larzuk's Malus
+ItemDisplay[crfb]:	%MAP-60%%DOT-20%  %NAME%  {%NAME%}%WHITE%							// Blood Craft Infusion
+ItemDisplay[crfc]:	%MAP-60%%DOT-20%  %NAME%  {%NAME%}%WHITE%							// Caster Craft Infusion
+ItemDisplay[crfh]:	%MAP-60%%DOT-20%  %NAME%  {%NAME%}%WHITE%							// Hitpower Craft Infusion
+ItemDisplay[crfs]:	%MAP-60%%DOT-20%  %NAME%  {%NAME%}%WHITE%							// Safety Craft Infusion
+ItemDisplay[crfv]:	%MAP-60%%DOT-20%  %NAME%  {%NAME%}%WHITE%							// Vampiric Craft Infusion
+ItemDisplay[crfu]:	%MAP-60%%DOT-20%  %NAME%  {%NAME%}%WHITE%							// Bountiful Craft Infusion
+ItemDisplay[crfp]:	%MAP-60%%DOT-20%  %NAME%  {%NAME%}%WHITE%							// Brilliant Craft Infusion
+ItemDisplay[rtp]:	%BORDER-53%        %NAME%        {%NAME%}%WHITE%						// Horadrim Navigator
+ItemDisplay[rid]:	%BORDER-53%        %NAME%        {%NAME%}%WHITE%						// Horadrim Almanac
+ItemDisplay[rkey]:	%BORDER-53%        %NAME%        {%NAME%}%WHITE%						// Skeleton Key
+ItemDisplay[lsvl]:	%BORDER-62%        %RED%Vial of Lightsong        {%WHITE%Cannot be used with indestructible items}%WHITE%		// Vial of Lightsong
 ItemDisplay[llmr]:	%BORDER-62%         %RED%Lilith's Mirror         {%WHITE%Mirrored items cannot be used in any cube recipes}%WHITE%	// Lilith's Mirror
 
 // Essences & Uber-Related Items  (includes notifications)
@@ -262,20 +262,20 @@ ItemDisplay[cm2f]:	%GOLD%%MAP%  %NAME%  {%WHITE%Stackable %GOLD%Hellfire Torch %
 ItemDisplay[rtmf]:	%DOT-60%%NAME%{%WHITE%Jawbone Recipe: 2 Ancient Bone Fragments + Hellfire Torch}%WHITE%		// Ancient Bone Fragment (legacy item, won't drop in the game anymore)
 
 // Map-Related Items  (includes notifications)
-ItemDisplay[std]:	%DOT-53%  %NAME%  {%WHITE%Adds Heroic bonuses to Maps & Dungeons}%WHITE%			// Standard of Heroes	 (Adds 20% Density, 20% MF/GF, 10% Experience; drops from Uber Tristram)
-ItemDisplay[iwss]:	%DOT-53%  %NAME%  {%WHITE%Gives a map 100% chance to contain a map event}%WHITE%		// Catalyst Shard	 (Guarantees map event; drops from map event)
-ItemDisplay[scrb]:	%DOT-53%  %NAME%  {%WHITE%Transforms a T3 map into a Dungeon)}%WHITE%				// Horadrim Scarab	 (Map -> Dungeon; drops from map bosses)
-//ItemDisplay[upmp]:	%PX-53%%TIER-2%%NAME%{%WHITE%Combines three maps to create one of a higher tier}%WHITE%		// Cartographer's Orb	 (3 T1/T2 Maps -> 1 T2/T3 Map)
-//ItemDisplay[scou]:	%PX-53%%TIER-2%%NAME%{%WHITE%Lowers Map Rarity to Common}%WHITE%				// Orb of Destruction	 (Magic/Rare -> Common)
-//ItemDisplay[irma]:	%PX-53%%TIER-9%%NAME%{%WHITE%Raises Map Rarity from Common to Magic}%WHITE%			// Infused Arcane Orb	 (Common -> Magic)
-//ItemDisplay[irra]:	%PX-53%%TIER-9%%NAME%{%WHITE%Raises Map Rarity from Common to Rare}%WHITE%			// Infused Zakarum Orb	 (Common -> Rare)
-//ItemDisplay[urma]:	%PX-53%%TIER-9%%NAME%{%WHITE%Raises Map Rarity from Magic to Rare}%WHITE%			// Infused Angelic Orb	 (Magic -> Rare)
-//ItemDisplay[rrra]:	%PX-53%%TIER-9%%NAME%{%WHITE%Rerolls Rare Map Affixes}%WHITE%					// Infused Horadrim Orb	 (Reroll Rare)
-//ItemDisplay[imma]:	%PX-53%%TIER-2%%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%%WHITE%Raises Map Rarity from Common to Magic}%WHITE%									// Arcane Orb	(Common -> Magic)
-//ItemDisplay[imra]:	%PX-53%%TIER-2%%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune%NL%%WHITE%Raises Map Rarity from Common to Rare}%WHITE%						// Zakarum Orb	(Common -> Rare)
-//ItemDisplay[upma]:	%PX-53%%TIER-2%%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ P%GRAY%.%WHITE%Skull + %ORANGE%Rune%NL%%WHITE%Raises Map Rarity from Magic to Rare}%WHITE%					// Angelic Orb	(Magic -> Rare)
-//ItemDisplay[rera]:	%PX-53%%TIER-2%%NAME%{%GOLD%Orb %WHITE%+ %YELLOW%Map %WHITE%+ P%GRAY%.%WHITE%Gem + %ORANGE%Rune%NL%%WHITE%Rerolls Rare Map Affixes}%WHITE%						// Horadrim Orb	(Reroll Rare)
-//ItemDisplay[fort]:	%PX-53%%TIER-2%%GOLD%%NAME%{%WHITE%Fortified monsters have doubled life and deal 20% extra damage%NL%Halves number of map monsters and doubles loot/experience gained from them}%WHITE%	// Orb of Fortification
+ItemDisplay[std]:	%DOT-53%  %NAME%  {%NAME%}%WHITE%								// Standard of Heroes	 (Adds 20% Density, 20% MF/GF, 10% Experience; drops from Uber Tristram)
+ItemDisplay[iwss]:	%DOT-53%  %NAME%  {%NAME%}%WHITE%								// Catalyst Shard	 (Guarantees map event; drops from map event)
+ItemDisplay[scrb]:	%DOT-53%  %NAME%  {%NAME%}%WHITE%								// Horadrim Scarab	 (Map -> Dungeon; drops from map bosses)
+ItemDisplay[upmp]:	%PX-53%%TIER-2%%NAME%{%NAME%}%WHITE%								// Cartographer's Orb	 (3 T1/T2 Maps -> 1 T2/T3 Map)
+ItemDisplay[scou]:	%PX-53%%TIER-2%%NAME%{%NAME%}%WHITE%								// Orb of Destruction	 (Magic/Rare -> Common)
+ItemDisplay[irma]:	%PX-53%%TIER-9%%NAME%{%NAME%}%WHITE%								// Infused Arcane Orb	 (Common -> Magic)
+ItemDisplay[irra]:	%PX-53%%TIER-9%%NAME%{%NAME%}%WHITE%								// Infused Zakarum Orb	 (Common -> Rare)
+ItemDisplay[urma]:	%PX-53%%TIER-9%%NAME%{%NAME%}%WHITE%								// Infused Angelic Orb	 (Magic -> Rare)
+ItemDisplay[rrra]:	%PX-53%%TIER-9%%NAME%{%NAME%}%WHITE%								// Infused Horadrim Orb	 (Reroll Rare)
+ItemDisplay[imma]:	%PX-53%%TIER-2%%NAME%{%NAME%}%WHITE%								// Arcane Orb	(Common -> Magic)
+ItemDisplay[imra]:	%PX-53%%TIER-2%%NAME%{%NAME%}%WHITE%								// Zakarum Orb	(Common -> Rare)
+ItemDisplay[upma]:	%PX-53%%TIER-2%%NAME%{%NAME%}%WHITE%								// Angelic Orb	(Magic -> Rare)
+ItemDisplay[rera]:	%PX-53%%TIER-2%%NAME%{%NAME%}%WHITE%								// Horadrim Orb	(Reroll Rare)
+ItemDisplay[fort]:	%PX-53%%TIER-2%%GOLD%%NAME%{%NAME%}%WHITE%							// Orb of Fortification
 
 // Maps
 ItemDisplay[t51]:				Zhar's Sanctum%CONTINUE%						// unique map standardization - sets name for "Zhar's Sanctum"
@@ -298,7 +298,7 @@ ItemDisplay[MAPTIER>3]:				%BORDER-77%%DOT-53%%PX-62%%TIER-9%%NAME%{%NAME%}%CONT
 
 // Reference Descriptions for Highest Map Immunes
 ItemDisplay[FILTLVL=1 t11]: %NAME%{%WHITE%Highest Immunes: %RED%130% %WHITE%Fire, %YELLOW%120% %WHITE%Lightning}%CONTINUE%					// Ruins of Viz-Jun		T2
-ItemDisplay[FILTLVL=1 t12]: %NAME%{%WHITE%Highest Immunes: %RED%135% %WHITE%Fire, %BLUE%130% %WHITE%Cold %GRAY%(Lightning Spire %YELLOW%100% %GRAY%Lightning, %GREEN%1000% %GRAY%Poison)}%CONTINUE%	// Horazon's Memory	T1
+ItemDisplay[FILTLVL=1 t12]: %NAME%{%WHITE%Highest Immunes: %RED%135% %WHITE%Fire, %BLUE%130% %WHITE%Cold %GRAY%(Lightning Spire: %YELLOW%100% %GRAY%Lightning, %GREEN%1000% %GRAY%Poison)}%CONTINUE%	// Horazon's Memory	T1
 ItemDisplay[FILTLVL=1 t13]: %NAME%{%WHITE%Highest Immunes: %RED%125% %WHITE%Fire, %BLUE%130% %WHITE%Cold, %GOLD%110% %WHITE%Physical}%CONTINUE%			// Bastion Keep			T2
 ItemDisplay[FILTLVL=1 t14]: %NAME%{%WHITE%Highest Immunes: %YELLOW%125% %WHITE%Lightning, %GREEN%130% %WHITE%Poison}%CONTINUE%					// Sanatorium			T3
 ItemDisplay[FILTLVL=1 t15]: %NAME%{%WHITE%Highest Immunes: %BLUE%125% %WHITE%Cold, %GREEN%105% %WHITE%Poison, %ORANGE%150% %WHITE%Magic}%CONTINUE%		// Royal Crypts			T1
@@ -316,9 +316,9 @@ ItemDisplay[FILTLVL=1 t34]: %NAME%{%WHITE%Highest Immunes: %YELLOW%130% %WHITE%L
 ItemDisplay[FILTLVL=1 t36]: %NAME%{%WHITE%Highest Immunes: %BLUE%130% %WHITE%Cold, %YELLOW%100% %WHITE%Lightning}%CONTINUE%					// Fall of Caldeum		T1
 ItemDisplay[FILTLVL=1 t37]: %NAME%{%WHITE%Highest Immunes: %YELLOW%135% %WHITE%Lightning, %GREEN%130% %WHITE%Poison, %GOLD%100% %WHITE%Physical}%CONTINUE%	// Pandemonium Citadel		T3
 ItemDisplay[FILTLVL=1 t38]: %NAME%{%WHITE%Highest Immunes: %RED%130% %WHITE%Fire, %GREEN%110% %WHITE%Poison, %GOLD%120% %WHITE%Physical}%CONTINUE%		// Canyon of Sescheron		T3
-ItemDisplay[FILTLVL=1 t39]: %NAME%{%WHITE%Highest Immunes: %RED%125% %WHITE%Fire, %BLUE%130% %WHITE%Cold, %GREEN%105% %WHITE%Poison %GRAY%(Fire Tower %GREEN%1000% %GRAY%Poison)}%CONTINUE%	// Kehjistan Marketplace	T3
+ItemDisplay[FILTLVL=1 t39]: %NAME%{%WHITE%Highest Immunes: %RED%125% %WHITE%Fire, %BLUE%130% %WHITE%Cold, %GREEN%105% %WHITE%Poison %GRAY%(Fire Tower: %GREEN%1000% %GRAY%Poison)}%CONTINUE%	// Kehjistan Marketplace	T3
 ItemDisplay[FILTLVL=1 t3a]: %NAME%{%WHITE%Highest Immunes: %BLUE%130% %WHITE%Cold, %GREEN%130% %WHITE%Poison, %ORANGE%120% %WHITE%Magic}%CONTINUE%		// Ashen Plains			T3
-ItemDisplay[FILTLVL=1 (t41 OR t42 OR t43)]: %NAME%{%WHITE%Highest Immunes: 180% %GRAY%(All Damage Types)}%CONTINUE%						// Dungeons			T4
+ItemDisplay[FILTLVL=1 MAPTIER=4]: %NAME%{%WHITE%Highest Immunes: 165% %GRAY%(All Damage Types)}%CONTINUE%							// Dungeons			T4
 
 
 // +------+
@@ -475,7 +475,7 @@ ItemDisplay[jew UNI]:		%BORDER-53%%TIER-9%%NAME%{%NAME%}%WHITE%				// notificati
 //-¦ Charms ¦-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // +--------+
 // Name Modification
-ItemDisplay[MAG (cm1 OR cm2 OR cm3)]:		%PURPLE%%NAME%%CONTINUE%				// sets color for magic charms
+ItemDisplay[MAG (cm1 OR cm2 OR cm3)]:		%PURPLE%%NAME%%CONTINUE%					// sets color for magic charms
 
 // Descriptions
 ItemDisplay[MAG ID ((cm1 ALVL>89) OR (cm2 ALVL>73) OR (cm3 ALVL>90))]:	%NAME%{%WHITE%Item Level: %TAN%%ILVL%}%CONTINUE%	// adds ilvl (top ilvl for rerolling - capable of getting any affix, colored tan)
@@ -567,17 +567,17 @@ ItemDisplay[ID RARE ((ci0 ILVL>86) OR (ci1 ILVL>81) OR (ci2 ILVL>76) OR ci3) STA
 ItemDisplay[CRAFT (ALVL<71 OR (WEAPON !SOR ALVL<77) OR ((CHEST OR SHIELD) ALVL<85) OR (HELM ALVL<81) OR (rin CRAFTALVL<77) OR (amu CRAFTALVL<90))]: %NAME%{%NAME%%CL%%WHITE%Affix Level: %ALVL%}%CONTINUE%	// adds alvl to crafted items if it's less than ideal
 
 // Descriptions - Crafting Info (ilvl, crafting alvl, crafting recipes) for Magic Items and Freshly-Found Rares
-ItemDisplay[ID (ILVL>35 OR leg) (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 (WEAPON OR ARMOR OR rin OR amu) !CIRC]:	%NAME%{%NAME%%CL%%WHITE%Item Level: %ILVL%%NL%Affix Level if Crafted: }%CONTINUE%													// ilvl (and crafting alvl) shown alongside crafting recipes
-ItemDisplay[ID (ILVL>35 OR leg) (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 (WEAPON OR ARMOR OR rin OR amu) !CIRC !(CRAFTALVL<71 OR (WEAPON !SOR !NEC CRAFTALVL<77) OR ((CHEST OR SHIELD) CRAFTALVL<85) OR (HELM CRAFTALVL<81) OR (rin CRAFTALVL<77) OR (amu CRAFTALVL<90))]:	%NAME%{%NAME%%TAN%}%CONTINUE%	// alvl colored tan if it's high enough for any affix																										...crafting alvl & recipes for:
-ItemDisplay[ID (ILVL>35 OR leg) (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 WEAPON]:	%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%13%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%13%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%12%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%	// weapons
-ItemDisplay[ID ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 SHIELD]:		%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%14%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%9%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%		// shields
-ItemDisplay[ID ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 HELM]:		%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%17%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%2%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%		// helms
-ItemDisplay[ID ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 CHEST]:		%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%2%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%1%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%		// chests
-ItemDisplay[ID ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 GLOVES]:		%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%16%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%15%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%13%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%		// gloves
-ItemDisplay[ID ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 BOOTS]:		%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%1%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%16%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%18%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%		// boots
-ItemDisplay[ID ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 BELT]:		%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%2%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%1%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%16%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%		// belts
-ItemDisplay[ID ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 rin]:			%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%15%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%17%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%15%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%	// rings
-ItemDisplay[ID ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 amu]:			%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%14%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%18%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%7%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%	// amulets
+ItemDisplay[FILTLVL=1 ID (ILVL>35 OR leg) (MAG OR RARE) !MAPID=181 !MAPID=182 (WEAPON OR ARMOR OR rin OR amu) !CIRC]:	%NAME%{%NAME%%CL%%WHITE%Item Level: %ILVL%%NL%Affix Level if Crafted: }%CONTINUE%													// ilvl (and crafting alvl) shown alongside crafting recipes
+ItemDisplay[FILTLVL=1 ID (ILVL>35 OR leg) (MAG OR RARE) !MAPID=181 !MAPID=182 (WEAPON OR ARMOR OR rin OR amu) !CIRC !(CRAFTALVL<71 OR (WEAPON !SOR !NEC CRAFTALVL<77) OR ((CHEST OR SHIELD) CRAFTALVL<85) OR (HELM CRAFTALVL<81) OR (rin CRAFTALVL<77) OR (amu CRAFTALVL<90))]:	%NAME%{%NAME%%TAN%}%CONTINUE%	// alvl colored tan if it's high enough for any affix																										...crafting alvl & recipes for:
+ItemDisplay[FILTLVL=1 ID (ILVL>35 OR leg) (MAG OR RARE) !MAPID=181 !MAPID=182 WEAPON]:	%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%13%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%13%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%12%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%	// weapons
+ItemDisplay[FILTLVL=1 ID ILVL>35 (MAG OR RARE) !MAPID=181 !MAPID=182 SHIELD]:		%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%14%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%9%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%		// shields
+ItemDisplay[FILTLVL=1 ID ILVL>35 (MAG OR RARE) !MAPID=181 !MAPID=182 HELM]:		%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%17%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%2%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%		// helms
+ItemDisplay[FILTLVL=1 ID ILVL>35 (MAG OR RARE) !MAPID=181 !MAPID=182 CHEST]:		%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%2%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%1%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%		// chests
+ItemDisplay[FILTLVL=1 ID ILVL>35 (MAG OR RARE) !MAPID=181 !MAPID=182 GLOVES]:		%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%16%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%15%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%13%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%		// gloves
+ItemDisplay[FILTLVL=1 ID ILVL>35 (MAG OR RARE) !MAPID=181 !MAPID=182 BOOTS]:		%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%1%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%16%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%18%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%		// boots
+ItemDisplay[FILTLVL=1 ID ILVL>35 (MAG OR RARE) !MAPID=181 !MAPID=182 BELT]:		%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%2%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%1%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%16%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%		// belts
+ItemDisplay[FILTLVL=1 ID ILVL>35 (MAG OR RARE) !MAPID=181 !MAPID=182 rin]:		%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%15%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%17%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%15%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%	// rings
+ItemDisplay[FILTLVL=1 ID ILVL>35 (MAG OR RARE) !MAPID=181 !MAPID=182 amu]:		%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%14%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%18%TAN%), %ORANGE%[%WHITE%O%ORANGE%]%TAN%(%WHITE%7%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%%LBRACE%%DARK_GREEN%O%ORANGE%%RBRACE% %WHITE%and:}%CONTINUE%	// amulets
 
 // Other Recipes for Magic Items
 ItemDisplay[ID MAG ILVL>1 ILVL<36 (kri OR 9kr OR 7kr)]: %NAME%{%NAME%%CL%%WHITE%Savage Recipe: Any Staff %GRAY%+ %WHITE%Any Belt %GRAY%+ %WHITE%Any Diamond}%CONTINUE%
@@ -676,7 +676,7 @@ ItemDisplay[ID SET utb ASSASSIN]: %NAME%{%NAME%%CL%%WHITE%Kick Damage: 50 to 145
 ItemDisplay[ID SET uhb ASSASSIN]: %NAME%{%NAME%%CL%%WHITE%Kick Damage: 83 to 149}%CONTINUE%
 
 // Alternative Rules - Weapon Speed & Melee Range (Magic+ Items)
-ItemDisplay[FILTLVL=1 ID !NMAG WEAPON !(BOW OR XBOW OR WAND OR SOR)]:	%NAME%{%NAME%%CL%%WHITE%Melee Range: %RANGE%%NL%}%CONTINUE%
+ItemDisplay[FILTLVL=1 ID !NMAG WEAPON !(BOW OR XBOW OR WAND OR SOR)]:	%NAME%{%NAME%%CL%%WHITE%Melee Range: %RANGE%%CL%}%CONTINUE%
 ItemDisplay[FILTLVL=1 ID !NMAG WEAPON !(WAND OR SOR)]:			%NAME%{%NAME%%CL%%WHITE%Weapon Speed: %WPNSPD%}%CONTINUE%
 
 // Alternative Rules - Item Tier (Magic+ Items)
