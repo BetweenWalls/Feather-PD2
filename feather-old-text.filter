@@ -507,6 +507,7 @@ ItemDisplay[ETH MAG]:		%BLUE%%NAME%%CONTINUE%
 ItemDisplay[ETH RARE]:		%YELLOW%%NAME%%CONTINUE%
 ItemDisplay[ETH CRAFT]:		%ORANGE%%NAME%%CONTINUE%
 ItemDisplay[ETH UNI]:		%GOLD%%NAME%%CONTINUE%
+ItemDisplay[ETH SET]:		%GREEN%%NAME%%CONTINUE%
 ItemDisplay[!NMAG SOCK>0]:	%NAME% %GRAY%[%SOCKETS%]%CONTINUE%	// adds sockets (regular items are handled in their own category)
 ItemDisplay[!NMAG ETH  (REPAIR>0 OR STAT152>0 OR THROWING OR 7cr OR (UNI !ID (xla OR xpl OR uul OR utp OR uvb OR 9la OR 9cr OR 9st OR 7gd OR 7b7 OR 7wh OR 7ba OR 7bl OR 7cs)) OR (SET 7m7))]: %WHITE%eth %NAME%%CONTINUE%	// labels ethereal magic+ items with white "eth" (unbreakable)
 ItemDisplay[!NMAG ETH !(REPAIR>0 OR STAT152>0 OR THROWING OR 7cr OR (UNI !ID (xla OR xpl OR uul OR utp OR uvb OR 9la OR 9cr OR 9st OR 7gd OR 7b7 OR 7wh OR 7ba OR 7bl OR 7cs)) OR (SET 7m7))]: %GRAY%eth %NAME%%CONTINUE%	// labels ethereal magic+ items with gray "eth" (not unbreakable)
